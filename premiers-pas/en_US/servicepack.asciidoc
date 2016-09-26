@@ -1,0 +1,27 @@
+If you purchased a Jeedom box then you receiving an email containing a code for your service pack.
+
+[IMPORTANT]
+Il est important de le renseigner car ce code vous donne accès à certains plugins gratuitement, ainsi qu'à des services exclusifs.
+
+[IMPORTANT]
+If you buy a service pack from the Jeedom Market you have nothing to do, it is automatically assigned to you.
+
+Note the service pack code you received in the email, go to the link:https://market.jeedom.fr[market Jeedom] and identify you.
+
+Then go on your profile page
+
+image::../images/premier-servicepack.png[]
+
+Then click on the tab "My Jeedoms"
+
+image::../images/premier-servicepack2.png[]
+
+Give your pack service number and validate :
+
+image::../images/premier-servicepack3.png[]
+
+Voilà votre service pack est enregistré, pour plus de details sur le market cliquez link:https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-market.html[ici]
+
+[icon="../images/plugin/tip.png"]
+[TIP]
+If you purchased a Jeedom box then you receiving an email containing a code for your service pack. If not please contact your receiler

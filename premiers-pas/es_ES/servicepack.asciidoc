@@ -1,0 +1,27 @@
+Si ha adquirido un equipo Jeedom entonces debería haber recibido un correo electrónico que contiene el codigo de su Service Pack
+
+[IMPORTANTE]
+Il est important de le renseigner car ce code vous donne accès à certains plugins gratuitement, ainsi qu'à des services exclusifs.
+
+[IMPORTANTE]
+Si compra un Service Pack desde el Market Jeedom, este se le asignará automaticamente sin que sea necesario intervencion por su parte.
+
+Una vez recuperado el código en el correo electrónico, simplemente vaya al enlace: https://market.jeedom.fr[market Jeedom] y registrese
+
+A continuación, vaya a su página de perfil:
+
+image::../images/premier-servicepack.png[]
+
+A continuación, haga clic en la pestaña "Mis Jeedoms"
+
+image::../images/premier-servicepack2.png[]
+
+introduzca su codigo de Service Pack y pulse validar:
+
+image::../images/premier-servicepack3.png[]
+
+Voilà votre service pack est enregistré, pour plus de details sur le market cliquez link:https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-market.html[ici]
+
+[icon="../images/plugin/tip.png"]
+[TIP]
+Si compró una caja oficial Jeedom, el número de service pack tiene que ser enviado por correo electrónico. Si no ha recibido nada, le agradeceríamos se pusiera en contacto con la tienda donde compró su caja.

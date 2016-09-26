@@ -1,0 +1,70 @@
+[IMPORTANTE]
+Attention nous partons ici du principe que vous maitrisez déjà docker
+
+Pour découvrir Jeedom vous pouvez aussi le faire tourner dans un conteneur Docker :
+
+[IMPORTANTE]
+Pré-requis : Avoir une machine ou une VM tournant sous Linux
+
+=== Etape 1 : Installation de docker
+
+docker est maintenant disponible sur toutes les distributions récentes. Pour l'installer sur une distribution
+
+* à base de rpm 
+----
+$ yum install docker
+----
+
+* à base de deb
+----
+$ apt-get update
+$ apt-get install docker
+$ apt-get install docker.io
+----
+
+=== Etape 2 : Installation d'une image mysql
+
+[NOTE]
+Vous pouvez aussi installer mysql directement sur la machine hote dans ce cas il faut sauter cette étape.
+
+J'utilise link:https://hub.docker.com/_/mysql/[celle-ci]. Pour l'installer : 
+
+----
+docker pull mysql:latest
+----
+
+Puis la lancer : 
+
+----
+docker run --name some-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+----
+
+[TIP]
+N'oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql voulu et some-mysql par le nom du docker mysql voulu
+
+=== Etape 3 : Installation d'une image Jeedom
+
+Installation de l'image : 
+
+----
+docker pull jeedom/jeedom
+----
+
+Puis lancer la : 
+
+----
+docker run --name some-jeedom --privileged -v /dev/tty*:/dev -v /my/jeedom/data:/var/www/html -e ROOT_PASSWORD=todo -p 9080:80 -p 9022:22 jeedom/jeedom
+----
+
+N'oubliez pas de changer la ligne de commande pour configurer : 
+
+- some-jeedom : nom du docker jeedom voulu
+- /my/jeedom/data : répertoire ou les données de Jeedom sont mise sur l'hôte
+- ROOT_PASSWORD : mot de passe root pour acceder à Jeedom en SSH
+- vous pouvez aussi changer la configuration des redirections de port
+
+Il vous faut ensuite installer Jeedom en allant sur : IP_DOCKER:9080 et entrer les informations de connexion vers mysql :
+
+image::../images/install_other.PNG[]
+
+Per il resto della documentazione è possibile accedere a https://www.jeedom.fr/doc/documentation/premiers-pas/en_US/doc-premiers-pas.html[Inizia con Jeedom]

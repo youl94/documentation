@@ -1,0 +1,61 @@
+Here is the step by step documentation to install Jeedom on  Raspberry pi 1 or 2
+
+[TIP]
+The name of the Jeedom image may be different from that of the catches made in this documentation
+
+
+=== Step 1 : Installation of win32diskimager
+
+You must download software win32diskimager link:http://sourceforge.net/projects/win32diskimager/[here] then install it on your PC
+
+=== Step 2 : Jeedom image recovery
+
+[IMPORTANT]
+Suite à des dysfonctionnements l'image pour Pi a été temporairement retiré, une nouvelle image est en cours de réalisation , en attendant pour installer Jeedom sur Pi veuillez suivre la procédure d'installation classique (manuel)
+
+Vous devez aller link:https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog[ici], puis dans le dossier Images récuperer l'image jeedom-rpi-*.rar
+
+image::../images/install_humming_1.PNG[]
+
+=== Step 3 : Jeedom image decompression
+
+Décompresser l'image de Jeedom (si vous n'avez rien pour le décompresser vous pouvez installer link:http://www.clubic.com/telecharger-fiche9632-winrar.html[winrar]), vous devez obtenir : 
+
+image::../images/install_humming_2.PNG[]
+
+image::../images/install_humming_8.PNG[]
+
+=== Step 4 : Writing image on SD card
+
+Insert your SD card into your computer and run the software win32diskimager : 
+
+image::../images/install_humming_3.PNG[]
+
+Check in "device" that is your SD card is selected and click the folder icon to specify the path of the image uploaded and uncompressed (step 2 and 3) : 
+
+image::../images/install_humming_4.PNG[]
+
+Click "Write" to write the image, confirm the warning : 
+
+image::../images/install_humming_5.PNG[]
+
+You can follow the progress of the writing of the image (ten minutes) : 
+
+image::../images/install_humming_6.PNG[]
+
+Once finished you will have this message :
+
+image::../images/install_humming_7.PNG[]
+
+You just have to put the SD card into the JRaspberry pi,, to connect the network and power, your will start Jeedom (5 min) and you should see it on the network.
+
+[TIP]
+SSH username/password are jeedom/Mjeedom96
+
+[IMPORTANT]
+Be careful if you have an SD card over 4GB remember to extend the partition with Raspi-config command ssh
+
+[IMPORTANT]
+If you are on rpi2 ESPECIALLY DO NOT OVERCLOCK under penalty of having an unstable system with large SD card corruption
+
+For the rest you can follow the documentation https://www.jeedom.fr/doc/documentation/premiers-pas/en_US/doc-premiers-pas.html[Getting Started with Jeedom]

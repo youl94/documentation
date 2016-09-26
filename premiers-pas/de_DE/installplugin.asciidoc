@@ -1,0 +1,22 @@
+Un plugin permet d'ajouter des fonctionalités à Jeedom, il en existe des centaines, certains peuvent être payants. Pour accéder à la page des plugins aller sur Général → Plugins
+
+image::../images/premier-plugin.png[]
+
+Dann klicken Sie einfach auf Markt :
+
+image::../images/premier-plugin2.png[]
+
+Vous allez ensuite avoir la liste de tous les plugins qu'il est possible d'installer.
+
+[IMPORTANT]
+Attention, certains sont officiels et d'autres non, en cas de souci avec un plugin non officiel l'équipe Jeedom ne pourra être tenue pour responsable.
+
+image::../images/premier-plugin3.png[]
+
+Auf ein Plugin klickend, erhalten Sie eine Karteikarte :
+
+image::../images/premier-plugin4.png[]
+
+Vous avez ici des boutons pour installer le plugin (la version stable est fortement recommandée) ainsi qu'une brève description et surtout un lien vers la documentation du plugin. Il est important de consulter cette documentation car beaucoup de problèmes que vous pourriez rencontrer sont expliqués dans celle-ci.
+
+Pour plus d'informations sur cette page cliquez link:https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-plugin.html[ici]

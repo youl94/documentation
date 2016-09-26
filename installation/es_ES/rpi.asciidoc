@@ -1,0 +1,61 @@
+Aquí encontrarás la documentación paso a paso para instalar Jeedom en una Raspberry pi 1 o 2
+
+[CONSEJO]
+El nombre de la imagen Jeedom puede ser diferente al de las fotos usadas en esta documentación
+
+
+=== Paso 1: Instalación de Win32diskimager
+
+Debe descargar el software win32diskimage link:http://sourceforge.net/projects/win32diskimager/[aquí] e instalarlo en su PC
+
+=== Paso 2: Descarga de la imagen de Jeedom
+
+[IMPORTANTE]
+A raíz de fallos de funcionamiento, la imagen de Pi fue temporalmente retirada, una nueva imagen está en curso realizarse, para instalar Jeedom en Pi siga el procedimiento de instalación típica (manual)
+
+Vous devez aller link:https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog[ici], puis dans le dossier Images récuperer l'image jeedom-rpi-*.rar
+
+image::../images/install_humming_1.PNG[]
+
+=== Paso 3: Descompresión de la imagen de Jeedom
+
+Descomprimir la imagen de Jeedom (si no tienes con que descomprimir puede instalar winrar desde el link: http://www.clubic.com/telecharger-fiche9632-winrar.html [winrar]), usted obtendrá: 
+
+imagen::../images/install_humming_2.PNG[]
+
+imagen::../images/install_humming_8.PNG[]
+
+=== Paso 4: Grabación de la imagen en la tarjeta SD
+
+Introduzca la tarjeta SD en su ordenador y ejecute el programa win32diskimager: 
+
+imagen::../images/install_humming_3.PNG[]
+
+Verifique que en "Device" esté seleccionada la unidad correcta de su tarjeta SD, haga clic en el icono carpeta para seleccionar la ruta de la imagen descargada y descomprimida (pasos 2.2 y 2.3) 
+
+image::../images/install_humming_4.PNG[]
+
+Haga clic en el botón "Write" para grabar la imagen y confirme la siguiente advertencia: 
+
+image::../images/install_humming_5.PNG[]
+
+Puede seguir el progreso de grabación de la imagen (unos 10 minutos aproximadamente): 
+
+image::../images/install_humming_6.PNG[]
+
+Una vez terminado aparecerá el siguiente mensaje:
+
+image::../images/install_humming_7.PNG[]
+
+Únicamente tendrá que insertar la tarjeta SD en su Raspberry pi, conectarlo a la red y a la alimentación y Jeedom comenzará a arrancar (unos 5 minutos).  Una vez haya iniciado,  debería poder verlo en la red.
+
+[CONSEJO]
+El usuario y contraseña de SSH es jeedom/Mjeedom96
+
+[IMPORTANTE]
+Si su tarjeta SD es de más de 4 Gigas, no olvide ampliar la partición con el comando "raspi-config" en SSH
+
+[IMPORTANTE]
+Si utiliza una Raspberry pi 2, ES IMPORTANTE NO HACER OVERCLOCKING, pues corre el riesgo de tener un sistema operativo muy instable con muchas posibilidades corrupción en la tarjeta SD
+
+Para el resto, puede seguir la documentación en la sección  https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Primeros pasos con Jeedom]

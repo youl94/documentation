@@ -1,0 +1,41 @@
+We can see here how to find/ask for help. For requests, it is possible to find answers in several places in Jeedom :
+
+=== In the doc
+
+You will find a complete documentation on link:https://jeedom.fr/doc[ici] :
+
+image::../images/premier-support1.png[]
+
+Celle-ci se décompose en plusieurs categories : une partie pour le "coeur" de jeedom, une partie sur les modules (zwave, mySensors, rfxcom) et une derniere partie pour la documentation des plugins
+
+=== The forum
+
+Available link:https://jeedom.fr/forum[here], the forum is very active and has hugely information. If you have a question, do not hesitate to ask, you will have an answer in less than an hour (on average)
+
+image::../images/premier-support3.png[]
+
+=== Support requests (or ticket)
+
+[IMPORTANT]
+Be careful  any support request requires having an account on the market.
+
+Si vous n'avez pas trouvé de solution à votre problème, vous pouvez en dernier recours faire une demande de support à l'équipe Jeedom : cette demande passe par un ticket. Il est possible d'en ouvrir un de plusieurs façons :
+
+- Directement à partir de Jeedom (méthode conseillée) : où que vous soyez dans Jeedom, il y a un point d'exclamation en haut à droite qui permet de faire une demande de support
+
+image::../images/premier-support4.png[]
+
+- Si pour une raison ou une autre vous n'avez pas accès à votre Jeedom, vous pouvez toujours ouvrir un ticket à partir du market : soit avec le point d'exclamation en haut à droite, soit en allant sur votre profil (cliquez ensuite sur le bouton "Ouvrir une demande de support")
+
+image::../images/premier-support5.png[]
+
+The rest of exchanges will be by email.
+
+.When Ticket opening, I get an error telling me that I've reached my quota::
+En effet, en fonction de votre service pack vous êtes limité à un certain nombre de demandes de support par mois :
+
+- Community (free) : 2 tickets/month
+- Power : 10 tickets/month
+- Pro : 100 tickets/month
+
+You can find the details of the service pack link:https://jeedom.fr/doc/documentation/core/en_US/doc-core-service_pack.html[here]

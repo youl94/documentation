@@ -1,0 +1,19 @@
+Wir werden hier sehen wie Ihr Jeedom mit Ihrem Markt Konto verbunden wird, einmal in ihre Jeedom eingeloggt, müssen sie auf Allgemein → Verwaltung → Konfiguration gehen
+
+image::../images/premier-linkmarket.png[]
+
+Klicken Sie dann auf "Market und Updates"
+
+image::../images/premier-linkmarket2.png[]
+
+Et remplir le champ "nom d'utilisateur" et mot de passe en fonction de vos identifants du Market (et bien du market et pas de Jeedom)
+
+image::../images/premier-linkmarket3.png[]
+
+Klicken danach auf "Testen"
+
+image::../images/premier-linkmarket4.png[]
+
+Eine Nachricht müsste Ihnen sagen, dass alles OK ist
+
+Für ausführliche Informationen der Konfigurationsseite klicken Sie link:https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-administration.html[hier]

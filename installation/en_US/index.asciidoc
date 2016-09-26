@@ -1,0 +1,23 @@
+= Installing Jeedom
+
+== Hardware
+include::hardware.asciidoc[]
+
+'''
+== On Raspberry pi 1 and 2 (mini)
+include::rpi.asciidoc[]
+
+'''
+== On Jeedomboard (hummingboard,mini+)
+include::jeedomboard.asciidoc[]
+
+'''
+== On Synology
+include::synology.asciidoc[]
+
+== Docker
+include::docker.asciidoc[]
+
+'''
+== Others
+include::other.asciidoc[]

@@ -1,0 +1,29 @@
+If you want you can also discover Jeedom virtualize on your computer, here are the steps to follow :
+
+=== Step 1 : Download and install VMware Player
+
+Download VMware Player link:https://download3.vmware.com/software/player/file/VMware-player-12.0.0-2985596.exe[here] then install it on your PC
+
+=== Step 2 : Download VM Jeedom
+
+You have to click  link:https://app.box.com/s/ijyxkntjjip9x4oue2xqdi53r4sh8ent[here], then in drive "Images" take the Jeedom's image jeedom-#x64#-X.xxx.rar or jeedom-#x86#-X.xxx.rar
+
+=== Step 3 : Decompress the VM image
+
+Decompress the VM image of Jeedom (if you have nothing to decompress you can install link:http://www.win-rar.com/download.html[winrar])
+
+=== Step 4 : Launching the VM
+
+Go to the image folder of the decompressed VM and run file "Jeedom.vmx" : 
+
+image::../images/installation_vmware1.jpg[]
+
+Click "Play Virtual Machine", answer yes to all questions (if he asks you if you just move or copy machine, tell moving), wait until the machine starts, you should have : 
+
+image::../images/installation_vmware2.jpg[]
+
+[TIP]
+SSH identifiers are jeedom/Mjeedom96 or root/Mjeedom96
+User root cannot be used for remote login
+
+For the rest you can follow the documentation https://www.jeedom.fr/doc/documentation/premiers-pas/en_US/doc-premiers-pas.html[Getting Started with Jeedom]
