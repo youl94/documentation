@@ -1,0 +1,73 @@
+= Tipps und Tricks für Debian
+
+== Nützliche Pakete
+
+Hier sind einige nützliche Pakete, die auf eine unberührte Installation nachinstalliert werden können :  
+
+----
+apt-get install -y vim fail2ban
+----
+
+Wenn Sie auf VMware sind : 
+
+----
+apt-get install -y open-vm-tools
+----
+
+== Eine farbige bashrc hinzufügen
+
+----
+rm -rf /root/.bashrc
+wget https://raw.githubusercontent.com/jeedom/core/stable/install/bashrc -O /root/.bashrc
+----
+
+== Eine root Verbindung in SSH erlauben 
+
+Man muss die Datei /etc/ssh/sshd_config editieren und ändern : 
+
+----
+PermitRootLogin without-password
+----
+
+Ändern in :
+
+----
+PermitRootLogin yes
+----
+
+== Monter un partage Samba
+
+cifs Paket installieren
+
+----
+apt-get install -y cifs-utils
+----
+
+Den Mount-Punkt erstellen : 
+
+----
+mkdir /mnt/mon_partage
+----
+
+[NOTE]
+Man muß mon_partage nach Ihren Bedürfnissen entsprechend anpassen
+
+Zusatz der Montage in /etc/fstab
+----
+//IP_SERVER_SAMBA/mon_partage /mnt/mon_partage cifs uid=0,rw,user=TODO,password=TODO 0 0
+----
+
+[NOTE]
+Vous devez changer les TODO pour user et password par rapport à votre configuration
+
+== Umstellung von Jessie in Stretch
+
+Man muß die /etc/apt/sources.list Datei editieren, alle "jessie" Wörter durch "stretch" ersetzen und danach folgendes machen : 
+
+---- 
+apt-get update
+apt-get dist-upgrade
+----
+
+[IMPORTANT]
+Stretch ist keine stabile Version von debian, bei Problemen kann das Jeedom-Team jede Supportanfrage ablehnen

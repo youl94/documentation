@@ -1,0 +1,73 @@
+= Installer un certificat HTTPS Letsencrypt
+
+== Installation de Letsencrypt
+
+Voici les commandes à lancer pour installer letsencrypt avant la génération :
+
+----
+apt-get install -y git
+cd /opt
+git clone https://github.com/letsencrypt/letsencrypt
+cd letsencrypt
+./letsencrypt-auto --help
+----
+
+Pour faire une demande de certificat vous devez posséder un nom de domaine pour lequel il sera générer.
+
+== Configuration d'Apache
+
+Cette commande n'est à utiliser que si vous disposez d'un serveur web Apache.
+
+----
+/opt/letsencrypt/letsencrypt-auto --apache --email email@domaine.com -d domaine.com
+----
+
+Vous devez remplacer les paramètres email et domaine par vos valeurs.
+
+Normalement les paramètres d'ajout du protocole https sont ajouter par le script dans Apache.
+
+== Configuration de Nginx
+
+Cette commande n'est à utiliser que si vous disposez d'un serveur web Nginx.
+
+----
+./letsencrypt-auto certonly --email email@domaine.com -d domaine.com -a webroot --webroot-path /usr/share/nginx/www/
+----
+
+Vous devez remplacer les paramètres email et domaine par vos valeurs, ainsi que le path du serveur
+
+Vous devez ajouter les deux lignes de configuration du https dans la configuration nginx.
+
+----
+vi /etc/nginx/sites-enabled/default
+----
+
+Ajouter les lignes suivantes, entre les lignes « server { »  et « root /usr/share/nginx/www ; » :
+
+----
+listen 80;
+
+listen 443 ssl;
+
+ssl_certificate /etc/nginx/ssl/ jeedom.chezmoi.fr.crt;
+
+ssl_certificate_key /etc/nginx/ssl/ jeedom.chezmoi.fr.key;
+
+ssl_session_timeout 5m;
+----
+
+Et enfin redémarrer le serveur
+
+----
+service nginx restart
+----
+
+== Renouvellement
+
+Le renouvellement se fait avec la commande :
+
+----
+/opt/letsencrypt/letsencrypt-auto --apache --renew-by-default  -d mondomaine.fr
+----
+
+Vous recevez un mail automatiquement à l'arrivée à échéance du certificat qui vous rappelera de passer la commande
