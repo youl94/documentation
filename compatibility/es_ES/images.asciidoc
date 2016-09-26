@@ -1,0 +1,16 @@
+Vous pouvez retrouver tous les images Jeedom link:https://app.box.com/s/ijyxkntjjip9x4oue2xqdi53r4sh8ent[ici], puis dans le dossier Images
+
+[NOTE]
+Une image netinstall va lors du premier démarrage installer la dernière version stable de Jeedom, ce démarrage est donc un peu plus long et necessite d'avoir accès à internet. Vous pouvez suivre l'avancement de celui-ci en allant sur l'IP de votre jeedom avec votre navigateur
+
+[cols="5*", options="header"] 
+|===
+|Images|Hardware|Etat|Accès SSH|Remarques
+|Jeedomboard netinstall|jeedomboard et hummingboard|Beta|root/Mjeedom96|
+|Odroid c2 netinstall|Odroid C2|Release candidat|root/Mjeedom96|
+|RPI|RPI1, RPI2 et RPI3|Non officiel/Stable|root/Mjeedom96|
+|RPI Netinstall|RPI1, RPI2 et RPI3|Officiel/Alpha|root/Mjeedom96|
+|Virtual Box|Virtual box|Non officiel/Stable|root/Mjeedom96|Non maintenu, il vaut mieux passer par l'installation manuel de jeedom pour tous ce qui est VM
+|Jeedomboard|jeedomboard et hummingboard|Stable|root/Mjeedom96|
+|Docker||Beta|root/Mjeedom96|
+|===
