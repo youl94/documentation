@@ -1,0 +1,40 @@
+Jeedom is composed of a central part, the core, responsible for the core functionalities.
+
+* _Scenario,_
+
+image::../images/doc-presentation-scenario.png[Page Scenario]
+
+* _History,_
+
+image::../images/doc-presentation-historique.png[Page History]
+
+* _Dashboard,_
+
+image::../images/doc-presentation-affichage.png[Page Dashboard]
+
+* _Interaction,_
+
+image::../images/doc-presentation-interaction.png[Page Interaction]
+
+* _Update and backup._
+
+image::../images/doc-presentation-maj.png[Page Update]
+
+image::../images/doc-presentation-sauvegarde.png[Page Backup]
+
+
+Around this core plugins of any kind can integrate:
+
+- home automation protocol (Z-Wave, RFXcom, EnOcean...),
+- other protocol IP (KNX, xPL...),
+- communicating objects (Nest, Netatmo, ...),
+- High level plugin (alarm, thermostat ...)
+- interface (widget),
+- organization (agenda, Google agenda),
+- development (script).
+
+These plugins can be installed via market and extend the possibilities of Jeedom.
+
+image::../images/doc-presentation-market.png[Page Market]
+
+Jeedom allows plugins to talk to each other in a normalized way. This allows for example to use the thermostat or alarm plugins with any home automation protocol or even an  IP plugin or communicating object ...

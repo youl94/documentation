@@ -1,0 +1,214 @@
+= Liste des équipements compatibles enOcean
+
+[cols="5*", options="header"] 
+|===
+|Nom|Fonctions OK|Fonctions NOK|Remarque|Lien
+
+|Ewattch Squid Sous-compteur electrique||||http://www.domadoo.fr/fr/suivi-energie/2859-ewattch-squid-sous-compteur-electrique-enocean-12-entrees-3770002148045.html[Acheter]
+
+|Ewattch Impulse capteur 2 en 1, téléinformation et impulsion||||http://www.domadoo.fr/fr/suivi-energie/2869-ewattch-impulse-capteur-2-en-1-teleinformation-et-impulsion-3770002148107.html[Acheter]
+
+|Contact radio de position, autogénérateur d'énergie FPE-1 ou FPE-2||||http://www.eltako.com/fileadmin/downloads/fr/Fiches_techniques/Fiche_technique_Eltako-radio_FPE.pdf[Notice] https://www.jeedom.com/forum/viewtopic.php?f=37&t=16944[forum]
+
+|Bouton-poussoir sonde radio FT4CH ou FT4F||||http://www.eltako.com/fileadmin/downloads/fr/_bedienung/FT4CH_30000222-3_franz.pdf[Notice] https://www.jeedom.com/forum/viewtopic.php?f=37&t=16877#p303628[forum]
+
+|Eltako Sonde d'humidité et de température pour montage extérieur FAFT60|Fonctionne correctement avec ajout de la formule corrective ((\#value# / (40/255))*(80/255))-20||| https://www.jeedom.fr/forum/viewtopic.php?f=37&t=12528[Forum] http://www.domadoo.fr/fr/peripheriques/1931-eltako-sonde-radio-humidite-et-temperature-montage-exterieur-faft60-4010312310120.html[Acheter]
+
+|Eltako Module de comptage d'énergie 16A||||http://www.domadoo.fr/fr/peripheriques/2836-eltako-module-de-comptage-d-energie-16a-4010312303184.html[Acheter]
+
+|Eltako Module de comptage d'énergie 65A||||http://www.domadoo.fr/fr/peripheriques/2837-eltako-module-de-comptage-d-energie-65a-4010312311059.html[Acheter]
+
+|Actionneur radio pour stores et rideaux à rouleaux ELTAKO FSB61NP-230V|Compatibilité complète avec retour d'état||Retour avec 3 états : Ouvert / Entre-Ouvert / Fermé| https://jeedom.fr/doc/documentation/enocean-modules/fr_FR/doc-enocean-modules-ELTAKO.FSB61NP-230V.html[Doc Jeedom] https://www.domadoo.fr/fr/index.php?controller=attachment&id_attachment=1378[Notice] http://www.domadoo.fr/fr/peripheriques/1935-eltako-actionneur-radio-commande-de-stores-et-rideaux-a-rouleaux-4010312300213.html[Acheter]
+
+|Nodon Soft Remote|||| https://jeedom.fr/doc/documentation/enocean-modules/fr_FR/doc-enocean-modules-nodon.soft_remotel.html[Doc Jeedom] http://www.domadoo.fr/fr/peripheriques/2625-nodon-soft-remote-enocean-cozy-grey-3700313920060.html[Acheter]
+
+|Nodon Capteur de température|OK|||http://www.domadoo.fr/fr/peripheriques/2627-nodon-capteur-de-temperature-sans-fils-et-sans-piles-blanc-3700313920183.html[Acheter]
+
+|Nodon Détecteur d'ouverture||||https://jeedom.fr/doc/documentation/enocean-modules/fr_FR/doc-enocean-modules-nodon.detecteur_douverture.html[Doc Jeedom] http://www.domadoo.fr/fr/peripheriques/2626-nodon-detecteur-d-ouverture-sans-fils-et-sans-piles-blanc-3700313920138.html[Acheter] 
+
+|Nodon Prise intelligente||||https://www.domadoo.fr/fr/index.php?controller=attachment&id_attachment=1323[Notice] http://www.domadoo.fr/fr/peripheriques/2630-nodon-prise-intelligente-enocean-schuko-3700313920015.html[Acheter]
+
+|Nodon Interrupteur mural|||| https://jeedom.fr/doc/documentation/enocean-modules/fr_FR/doc-enocean-modules-nodon.interrupteur_mural.html[Doc Jeedom] http://www.domadoo.fr/fr/peripheriques/2628-nodon-interrupteur-mural-enocean-cozi-grey-3700313920084.html[Acheter]
+
+|Trio2sys Capteur de contact de fenêtre O2line||||http://www.domadoo.fr/fr/peripheriques/2011-trio2sys-capteur-de-contact-de-fenetre-o2line-blanc.html[Acheter]
+
+|Trio2sys Capteur de température 0/40°C O2line||||http://www.domadoo.fr/fr/peripheriques/2012-trio2sys-capteur-de-temperature-0-40c-o2line-blanc-3662901000274.html[Acheter]
+
+|Ubiwizz Smart Plug EnOcean |retour conso : ok|Retour d'état : ok|| https://jeedom.fr/doc/documentation/enocean-modules/fr_FR/doc-enocean-modules-ubiwizz.smart_plug.html[Doc Jeedom] https://www.domadoo.fr/fr/index.php?controller=attachment&id_attachment=1072[Notice] http://www.domadoo.fr/fr/peripheriques/2667-ubiwizz-smart-plug-enocean.html[Acheter]
+
+|Ubiwizz Télécommande ubi'remote||||http://www.domadoo.fr/fr/peripheriques/2648-ubiwizz-telecommande-ubi-remote-blanc-3553740015966.html[Acheter]
+
+|Vimar Interrupteur double sans fil|OK|||http://www.domadoo.fr/fr/peripheriques/2164-vimar-interrupteur-double-blanc.html[Acheter]
+
+|Vimar Interrupteur sans fil 1 touche|OK|||http://www.domadoo.fr/fr/peripheriques/2169-vimar-interrupteur-blanc-1-touche-sans-plaque-support-transparent.html[Acheter]
+
+|===
+
+[NOTE]
+Cette liste est basée sur des retours utilisateurs, l'équipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionels.
+= Liste des equipements Z-Wave compatibles 
+:linkattrs:
+
+[green]*Actuellement Jeedom est compatible avec* [red]*13* [green]*marques de modules differentes, soit un total de* [red]*13* [green]*modules.*
+
+D'autres modules non presents sur cette liste peuvent etre compatibles. Pour une demande de compatibilite : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
+
+== A5-02
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-02||| | 
+// a5-02-05.json
+
+
+|===
+
+== A5-04
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-04||| | 
+// a5-04-02.json
+
+
+|===
+
+== A5-06
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-06||| | 
+// a5-06-01.json
+
+
+|===
+
+== A5-07
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-07||| | 
+// a5-07-01.json
+
+
+|===
+
+== A5-10
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-10||| | 
+// a5-10-06.json
+
+
+|===
+
+== A5-12
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-12||| | 
+// a5-12-01.json
+
+
+|===
+
+== A5-20
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||A5-20||| | 
+// a5-20-01.json
+
+
+|===
+
+== D2-01
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||D2-01||| | 
+// d2-01-09.json
+
+
+|===
+
+== D5-00
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||D5-00||| | 
+// d5-00-01.json
+
+
+|===
+
+== F6-02
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||F6-02||| | 
+// f6-02-01.json
+
+
+|===
+
+== F6-04
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||F6-04||| | 
+// f6-04-01.json
+
+
+|===
+
+== F6-05
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||F6-05||| | 
+// f6-05-01.json
+
+
+|===
+
+== Recepteur
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+||Recepteur||| | 
+// recepteur_1_canal.json
+
+
+|===
+
+
+[NOTE]
+Cette liste est basee sur des retours utilisateurs, l'equipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
