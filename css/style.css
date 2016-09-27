@@ -9,14 +9,21 @@
 nav ul a,
 nav {
   color: #444;
+  background-color: #fff;
 }
 
 p {
   line-height: 2rem;
 }
 
+.jeedomcolor {
+  background-color: #95C12B !important;
+}
+
+
+/*
 .button-collapse {
-  color: #26a69a;
+  color: rgb(0,0,0);
 }
 
 .parallax-container {
@@ -54,4 +61,4 @@ p {
 
 footer.page-footer {
   margin: 0;
-}
+}*/

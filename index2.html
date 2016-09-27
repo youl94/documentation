@@ -22,14 +22,15 @@
  </head>
 
  <body>
- 	<div>
- 		<nav>
+
+ 	<div class="navbar-fixed">
+
+ 		<nav class="white" role="navigation">
  			<div class="nav-wrapper container">
  				<a id="logo-container" href="https://www.jeedom.com/doc" class="brand-logo center"><img src="img/logo.png" style="height:50px;margin-top:5px"></a>
  				<ul class="left hide-on-med-and-down">
  					<li>Jeedom Documentation</li>
  				</ul>
- 				<a href="https://www.jeedom.com/doc" data-activates="nav-mobile" class="button-collapse btn-floating btn-large waves-effect waves-light jeedomcolor"><i class="material-icons">menu</i></a>
  				<ul class="right hide-on-med-and-down">
  					<li class="active"><a href="https://www.jeedom.com/site">Site</a></li>
  					<li><a href="https://www.jeedom.com/blog">Blog</a></li>
@@ -37,45 +38,24 @@
  					<li><a href="https://www.jeedom.com/market">Market</a></li>
  					<li><a href="https://www.jeedom.com/doc">Doc</a></li>
  				</ul>
- 				<ul class="side-nav" id="nav-mobile">
+
+ 				<ul id="nav-mobile" class="side-nav">
  					<li><a href="https://www.jeedom.com/blog">Blog</a></li>
  					<li><a href="https://www.jeedom.com/forum">Forum</a></li>
  					<li><a href="https://www.jeedom.com/market">Market</a></li>
  					<li><a href="https://www.jeedom.com/doc">Doc</a></li>
  				</ul>
+ 				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons" style="color:#96c927">Menu</i></a>
  			</div>
  		</nav>
+ 		
  	</div>
 
-
-
-
- 	<div class="container">
- 		<form>
- 			<div class="row">
- 				<div class="input-field col s12 m2">
- 					<select class="icons" id="sel_language">
- 						<option value="de_DE" data-icon="img/flag/flag_de.png" class="left circle">Deutsch</option>
- 						<option value="en_US" data-icon="img/flag/flag_en.png" class="left circle">English</option>
- 						<option value="es_ES" data-icon="img/flag/flag_es.png" class="left circle">Español</option>
- 						<option value="fr_FR" data-icon="img/flag/flag_fr.png" class="left circle" selected>Français</option>
- 					</select>
- 					<label>Choose your language</label>
- 				</div>
- 			</div>
- 		</form>
- 		<br>
- 		<!--	<span>Work in progress... Slowly but surely ;)</span>-->
- 		<ul class="collection" id='ul_listCategory'>
-
- 		</ul>
- 	</div>
-
+ 	Work in progress... Slowly but surely ;) 
  	<!--Import jQuery before materialize.js-->
  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
- 	<script type="text/javascript" src="js/init.js"></script>
  	<script type="text/javascript" src="js/materialize.min.js"></script>
-
+ 	<script type="text/javascript" src="js/init.js"></script>
 
  </body>
  </html>
