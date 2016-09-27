@@ -1,4 +1,4 @@
-= Liste des equipements Z-Wave compatibles 
+= Liste des equipements enocean compatibles 
 :linkattrs:
 
 [green]*Actuellement Jeedom est compatible avec* [red]*7* [green]*marques de modules differentes, soit un total de* [red]*53* [green]*modules.*
