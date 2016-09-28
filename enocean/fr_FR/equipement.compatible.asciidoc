@@ -1,9 +1,9 @@
 = Liste des equipements enocean compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*7* [green]*marques de modules differentes, soit un total de* [red]*53* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*7* [green]*marques de modules différentes, soit un total de* [red]*53* [green]*modules.*
 
-D'autres modules non presents sur cette liste peuvent etre compatibles.
+D'autres modules non présents sur cette liste peuvent être compatibles.
 
 == Eltako
 
@@ -257,4 +257,4 @@ _[small]#Piles : 1x3V CR1216#_|Mode inclusion auto et appui sur le bouton learn|
 
 
 [NOTE]
-Cette liste est basee sur des retours utilisateurs, l'equipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
+Cette liste est basee sur des retours utilisateurs, l'équipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels

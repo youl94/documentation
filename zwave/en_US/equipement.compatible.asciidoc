@@ -1,9 +1,9 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*42* [green]*marques de modules differentes, soit un total de* [red]*234* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*42* [green]*marques de modules différentes, soit un total de* [red]*234* [green]*modules.*
 
-D'autres modules non presents sur cette liste peuvent etre compatibles. Pour une demande de compatibilite : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
+D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
 == Aeotec
 
@@ -1208,4 +1208,4 @@ _[small]#Piles : 1X ER14250 3,6V#_| link:++http://www.domadoo.fr/fr/peripherique
 
 
 [NOTE]
-Cette liste est basee sur des retours utilisateurs, l'equipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
+Cette liste est basee sur des retours utilisateurs, l'équipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
