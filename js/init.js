@@ -7,14 +7,14 @@ $(function(){
 		DOC_CONFIG = data
 		generateCatSite(DOC_CONFIG);
 	});
-	//DOC_CONFIG = jQuery.parseJSON('{"categories":{"main":{"name":{"fr_FR":"Général","en_US":"Main"},"icon":"","docs":[{"name":"Installation","link":"installation/#language#/index.html"},{"name":"Compatibilité","link":"compatibility/#language#/index.html"}]},"howto":{"name":{"fr_FR":"Tutoriaux","en_US":"How to"},"icon":"","docs":[{"name":"Howto1","link":"installation/#language#/index.html"},{"name":"Howto2","link":"compatibility/#language#/index.html"}]},"plugins":{"name":{"fr_FR":"Plugins","en_US":"Plugins"},"icon":"","docs":[{"name":"plugin1","link":"installation/#language#/index.html"},{"name":"plugin2","link":"compatibility/#language#/index.html"},{"name":"plugin3","link":"compatibility/#language#/index.html"}]}}}')
+	//DOC_CONFIG = jQuery.parseJSON('{"main":{"name":{"fr_FR":"Général","en_US":"Main"},"icon":"","docs":[{"name":"Installation","link":"installation/#language#/index.html"},{"name":"Compatibilité","link":"compatibility/#language#/index.html"}]},"howto":{"name":{"fr_FR":"Tutoriaux","en_US":"How to"},"icon":"","docs":[{"name":"Howto1","link":"installation/#language#/index.html"},{"name":"Howto2","link":"compatibility/#language#/index.html"}]},"plugins":{"name":{"fr_FR":"Plugins","en_US":"Plugins"},"icon":"","docs":[{"name":"plugin1","link":"installation/#language#/index.html"},{"name":"plugin2","link":"compatibility/#language#/index.html"},{"name":"plugin3","link":"compatibility/#language#/index.html"}]}}')
 	generateCatSite(DOC_CONFIG);
 
 	$('#sel_language').on('change',function(){
 		generateCatSite(DOC_CONFIG);
 	})
 	$('#ul_listCategory').on('click','.collection-item',function(){
-		generateDocSite(DOC_CONFIG.categories[$(this).attr('data-key')]);
+		generateDocSite(DOC_CONFIG[$(this).attr('data-key')]);
 	})
 
 });
@@ -24,8 +24,8 @@ $(function(){
 function generateCatSite(data){
 	$('#ul_listCategory').empty();
 	$('#ul_listDoc').empty();
-	for(var i in data.categories){
-		$('#ul_listCategory').append('<a class="collection-item" data-key="'+i+'">'+data.categories[i].name[$('#sel_language').val()]+'<span class="badge">'+data.categories[i].docs.length+'</span>'+'</a>');
+	for(var i in data){
+		$('#ul_listCategory').append('<a class="collection-item" data-key="'+i+'">'+data[i].name[$('#sel_language').val()]+'<span class="badge">'+data[i].docs.length+'</span>'+'</a>');
 	}
 }
 
