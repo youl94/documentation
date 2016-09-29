@@ -5,7 +5,7 @@ $(function(){
 	DOC_CONFIG={}
 	$.getJSON("site.json",function(data){
 		DOC_CONFIG = data
-		generateDocSite(DOC_CONFIG);
+		generateCatSite(DOC_CONFIG);
 	});
 	//DOC_CONFIG = jQuery.parseJSON('{"categories":{"main":{"name":{"fr_FR":"Général","en_US":"Main"},"icon":"","docs":[{"name":"Installation","link":"installation/#language#/index.html"},{"name":"Compatibilité","link":"compatibility/#language#/index.html"}]},"howto":{"name":{"fr_FR":"Tutoriaux","en_US":"How to"},"icon":"","docs":[{"name":"Howto1","link":"installation/#language#/index.html"},{"name":"Howto2","link":"compatibility/#language#/index.html"}]},"plugins":{"name":{"fr_FR":"Plugins","en_US":"Plugins"},"icon":"","docs":[{"name":"plugin1","link":"installation/#language#/index.html"},{"name":"plugin2","link":"compatibility/#language#/index.html"},{"name":"plugin3","link":"compatibility/#language#/index.html"}]}}}')
 	generateCatSite(DOC_CONFIG);
