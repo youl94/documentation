@@ -22,14 +22,38 @@
 				"fr_FR" : "Tutoriaux",
 				"en_US" : "How to"
 			},
-			"icon" : ""
+			"icon" : "",
+			"docs" : [ 
+				{
+					"name":"Howto1",
+					"link":"installation/#language#/index.html"
+				},
+				{
+					"name":"Howto2",
+					"link":"compatibility/#language#/index.html"
+				}
+			]
 		},
 		"plugins" : {
 			"name" : {
 				"fr_FR" : "Plugins",
 				"en_US" : "Plugins"
 			},
-			"icon" : ""
+			"icon" : "",
+			"docs" : [ 
+				{
+					"name":"plugin1",
+					"link":"installation/#language#/index.html"
+				},
+				{
+					"name":"plugin2",
+					"link":"compatibility/#language#/index.html"
+				},
+				{
+					"name":"plugin3",
+					"link":"compatibility/#language#/index.html"
+				}
+			]
 		}
 	}
 

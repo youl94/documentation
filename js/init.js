@@ -3,28 +3,36 @@ $(function(){
 	$('.parallax').parallax();
 	$('select').material_select();
 	DOC_CONFIG={}
-	//$.getJSON("site_test.json",function(data){
-	//	DOC_CONFIG = data
-	//	generateDocSite(DOC_CONFIG);
-	//});
-	DOC_CONFIG = jQuery.parseJSON('{"categories":{"main":{"name":{"fr_FR":"Général","en_US":"Main"},"icon":"","docs":[{"name":"Installation","link":"installation/#language#/index.html"},{"name":"Compatibilité","link":"compatibility/#language#/index.html"}]},"howto":{"name":{"fr_FR":"Tutoriaux","en_US":"How to"},"icon":""},"plugins":{"name":{"fr_FR":"Plugins","en_US":"Plugins"},"icon":""}}}')
-	generateDocSite(DOC_CONFIG);
+	$.getJSON("site.json",function(data){
+		DOC_CONFIG = data
+		generateDocSite(DOC_CONFIG);
+	});
+	//DOC_CONFIG = jQuery.parseJSON('{"categories":{"main":{"name":{"fr_FR":"Général","en_US":"Main"},"icon":"","docs":[{"name":"Installation","link":"installation/#language#/index.html"},{"name":"Compatibilité","link":"compatibility/#language#/index.html"}]},"howto":{"name":{"fr_FR":"Tutoriaux","en_US":"How to"},"icon":"","docs":[{"name":"Howto1","link":"installation/#language#/index.html"},{"name":"Howto2","link":"compatibility/#language#/index.html"}]},"plugins":{"name":{"fr_FR":"Plugins","en_US":"Plugins"},"icon":"","docs":[{"name":"plugin1","link":"installation/#language#/index.html"},{"name":"plugin2","link":"compatibility/#language#/index.html"},{"name":"plugin3","link":"compatibility/#language#/index.html"}]}}}')
+	generateCatSite(DOC_CONFIG);
 
 	$('#sel_language').on('change',function(){
-		generateDocSite(DOC_CONFIG);
+		generateCatSite(DOC_CONFIG);
+	})
+	$('#ul_listCategory').on('click','.collection-item',function(){
+		generateDocSite(DOC_CONFIG.categories[$(this).attr('data-key')]);
 	})
 
 });
 
 
 
-function generateDocSite(data){
+function generateCatSite(data){
 	$('#ul_listCategory').empty();
-	console.log(data);
+	$('#ul_listDoc').empty();
 	for(var i in data.categories){
-		$('#ul_listCategory').append('<li class="collection-item">'+data.categories[i].name[$('#sel_language').val()]+'</li>');
-
-		
-	//	console.log(data.categories[i])
+		$('#ul_listCategory').append('<a class="collection-item" data-key="'+i+'">'+data.categories[i].name[$('#sel_language').val()]+'<span class="badge">'+data.categories[i].docs.length+'</span>'+'</a>');
+	}
 }
+
+function generateDocSite(data){
+	console.log(data);
+	$('#ul_listDoc').empty();
+	for(var i in data.docs){
+		$('#ul_listDoc').append('<a class="collection-item" target="_blank" href="'+data.docs[i].link.replace('#language#',$('#sel_language').val())+'">'+data.docs[i].name+'</a>');
+	}
 }
