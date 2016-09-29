@@ -861,7 +861,7 @@ _[small]#Piles : 1xER26500M#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 |image:../images/compatibility_list/qubino.zmnhsdx.jpg[width=150,align="center"]|Qubino|ZMNHSDx Din Dimmer|Rail-din| | link:++http://www.domadoo.fr/fr/peripheriques/3256-qubino-module-rail-din-variateur-z-wave-zmnhsd1-3830062070386.html++[Acheter^]
 // 345.1.82_zmnhsdx.din.dimmer.json
 
-|image:../images/compatibility_list/qubino.zmnhtdx.jpg[width=150,align="center"]|Qubino|ZMNHTDx Smart meter|Rail-din| | link:++http://www.domadoo.fr/fr/peripheriques/3251-qubino-module-rail-din-compteur-d-energie-z-wave-3830062070362.html++[Acheter^]
+|image:../images/compatibility_list/qubino.zmnhtdx.jpg[width=150,align="center"]|Qubino|ZMNHTDx Smart meter|Rail-din| Le module doit être inclus en mode sécurisé pour pouvoir contrôler les relais | link:++http://www.domadoo.fr/fr/peripheriques/3251-qubino-module-rail-din-compteur-d-energie-z-wave-3830062070362.html++[Acheter^]
 // 345.7.82_zmnhtdx.smart.meter.json
 
 |image:../images/compatibility_list/qubino.zmnhud1.jpg[width=150,align="center"]|Qubino|ZMNHUD1 DIN Pilot Wire|Rail-din| | link:++http://www.domadoo.fr/fr/peripheriques/3409-qubino-module-rail-din-fil-pilote-z-wave-zmnhud1.html++[Acheter^]
