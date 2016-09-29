@@ -426,12 +426,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_logs_nachrichten_konfiguration">8. Logs &amp; Nachrichten Konfiguration</a></li>
 <li><a href="#_ldap_konfiguration">9. LDAP Konfiguration</a></li>
 <li><a href="#_geräte_konfiguration">10. Geräte Konfiguration</a></li>
-<li><a href="#_update_und_dateien">11. Update und Dateien</a>
+<li><a href="#_mise_à_jour_et_fichiers">11. Mise à jour et fichiers</a>
 <ul class="sectlevel2">
-<li><a href="#_das_depot">11.1. Das Depot</a>
+<li><a href="#_les_dépots">11.1. Les dépots</a>
 <ul class="sectlevel3">
-<li><a href="#_markt">11.1.1. Markt</a></li>
-<li><a href="#_dateien">11.1.2. Dateien</a></li>
+<li><a href="#_market">11.1.1. Market</a></li>
+<li><a href="#_fichier">11.1.2. Fichier</a></li>
 <li><a href="#_github">11.1.3. Github</a></li>
 <li><a href="#_samba">11.1.4. Samba</a></li>
 <li><a href="#_url">11.1.5. URL</a></li>
@@ -484,7 +484,7 @@ Wenn sie nicht im Experten-Modus sind, sind möglicherweise einige Parameter nic
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Namen von Ihrem Jeedom</strong> : kann in den Szenarien wieder verwendet werden oder zum identifizieren eines Backups</p>
+<p><strong>Nom de votre Jeedom</strong> : peut etre réutilisé dans les scénarios ou permettre d&#8217;identifier un backup</p>
 </li>
 <li>
 <p><strong>API Schlüssel</strong> : Ihr API-Schlüssel, wird verwendet für jede Anfrage zur Jeedom-API</p>
@@ -496,7 +496,7 @@ Wenn sie nicht im Experten-Modus sind, sind möglicherweise einige Parameter nic
 <p><strong>Systeme</strong> : Zeigt den Hardwaretyp an</p>
 </li>
 <li>
-<p><strong>Installationsschlüssel</strong> : Hardware-Schlüssel von Ihrem Jeedom auf dem Markt. Wenn Ihr Jeedom nicht in der Liste Ihrer Jeedom auf dem Markt erscheint, ist es ratsam auf diese Schaltfläche zu klicken</p>
+<p><strong>Clef d&#8217;installation</strong> : clef hardware de votre Jeedom sur le market. Si votre Jeedom n&#8217;apparait pas dans la liste de vos Jeedom sur le market il est conseillé de cliquer sur ce bouton</p>
 </li>
 <li>
 <p><strong>Sprache</strong> : Ihre Sprache in Jeedom</p>
@@ -508,13 +508,13 @@ Wenn sie nicht im Experten-Modus sind, sind möglicherweise einige Parameter nic
 <p><strong>Datum und Uhrzeit</strong> : Ihre Zeitzone</p>
 </li>
 <li>
-<p><strong>Zeitserver optional</strong> : fügt einen optionalen Zeitserver hinzu (für Experten reserviert)</p>
+<p><strong>Serveur de temps optionnel</strong> : permet d&#8217;ajouter un serveur de temps optionnel (à réserver aux experts)</p>
 </li>
 <li>
-<p><strong>Die Überprüfung der Zeit ignorieren</strong> : Weist Jeedom an, nicht zu überprüfen, ob die Zeit übereinstimmt. Nützlich zum Beispiel, wenn Sie Jeedom nicht an das Internet angeschlossen haben und es keine RTC-Batterie hat.</p>
+<p><strong>Ignorer la vérification de l&#8217;heure</strong> : indique à Jeedom de ne pas vérifier si l&#8217;heure est cohérente. Utile par exemple si vous ne connectez pas Jeedom à internet et qu&#8217;il n&#8217;a pas de pile RTC</p>
 </li>
 <li>
-<p><strong>Modus</strong> : Ihr Jeedom-Modus Master oder Slave, Achtung beim Wechsel in den Slave-Modus : werden all Ihre Geräte, Szenarien, Designs… gelöscht.</p>
+<p><strong>Mode</strong> : Mode de votre Jeedom maître ou esclave, attention lors du passage en esclave : tous vos équipements, scénarios, design&#8230;&#8203; seront supprimés.</p>
 </li>
 </ul>
 </div>
@@ -637,14 +637,14 @@ Wenn sie nicht im Experten-Modus sind, sind möglicherweise einige Parameter nic
 </div>
 </li>
 <li>
-<p><strong>Markt Proxy</strong> : erlaubt einen entfernten Zugang zu Ihrem Jeedom ohne ein DNS, eine feste IP oder offene Ports auf Ihrem System</p>
+<p><strong>Proxy market</strong> : permet un accès distant à votre Jeedom sans avoir besoin d&#8217;un DNS, d&#8217;une IP fixe ou d&#8217;ouvrir les ports de votre box</p>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>Die Jeedom DNS benutzen</strong> : aktive Jeedom DNS (Achtung, das erfordert mindestens ein Servicepack)</p>
 </li>
 <li>
-<p><strong>DNS Status</strong> : der DNS-http-Status</p>
+<p><strong>Statut DNS</strong> : statut du DNS http</p>
 </li>
 <li>
 <p><strong>Verwaltung</strong> : ermöglicht das Beenden und Neustarten des DNS Dienstes</p>
@@ -711,7 +711,7 @@ Wenn Sie die DNS-Jeedom betreiben können, betrachten Sie die Konfiguration der 
 <p>Die farbliche Kennzeichnung der Widgets erfolgt entsprechend der Kategorie des Widgets, die in der Konfiguration der einzelnen Module definiert ist (siehe Plugin Z-Wave, RFXCOM&#8230;&#8203; etc.). Die Kategorien umfassen Heizung, Licht, Automation etc&#8230;&#8203;.</p>
 </div>
 <div class="paragraph">
-<p>Für jede Kategorie, können wir eine andere Farbe zwischen der Desktop-Version und Mobile-Version wählen. Außerdem gibt es zwei Arten von Farben, Widget Hintergrundfarben  und Befehls Farbe, wenn das Widget erfolgt schrittweise Typ, z.B. Beleuchtung, Jalousien, Temperaturen.</p>
+<p>Für jede Kategorie, können wir eine andere Farbe zwischen der Desktop-Version und Mobile-Version wählen. Außerdem gibt es zwei Arten von Farben, Widget Hintergrundfarben  und Befehls Farbe, wenn das Widget erfolgt schrittweise Typ, zB Beleuchtung, Jalousien, Temperaturen.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -727,7 +727,7 @@ Wenn Sie die DNS-Jeedom betreiben können, betrachten Sie die Konfiguration der 
 </div>
 </div>
 <div class="paragraph">
-<p>Sie können auch hier die Transparenz der Widgets allgemein konfigurieren (das wird die Standardvorgabe sein, es ist danach möglich, diesen Wert der Widget zu ändern</p>
+<p>Vous pouvez aussi configurer ici la transparence des widgets de maniere global (qui sera la valeur par défaut, il est possible ensuite de modifier cette valeur widget par widget)</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -855,7 +855,7 @@ Vergessen Sie nicht, nach jeder Veränderung zu speichern.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_update_und_dateien">11. Update und Dateien</h2>
+<h2 id="_mise_à_jour_et_fichiers">11. Mise à jour et fichiers</h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
@@ -865,23 +865,23 @@ Vergessen Sie nicht, nach jeder Veränderung zu speichern.
 <div class="ulist">
 <ul>
 <li>
-<p>Update Quelle :</p>
+<p>Source de mise à jour :</p>
 </li>
 <li>
-<p>Eine Sicherung vor der Aktualisierung erstellen</p>
+<p>Faire une sauvegarde avant la mise à jour</p>
 </li>
 <li>
-<p>Automatisch überprüfen, ob es Aktualisierungen gibt</p>
+<p>Vérifier automatiquement si il y a des mises à jour</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_das_depot">11.1. Das Depot</h3>
+<h3 id="_les_dépots">11.1. Les dépots</h3>
 <div class="paragraph">
-<p>Das Depot ist ein Internet-Speicherplatz (und Service), um Backups zu speichern, Plugins wiederherzustellen, den Jeedom Core wiederherstellen zu können….</p>
+<p>Les dépots sont des espaces de stockage (et de service) pour pouvoir mettre des backups, récuperer des plugins, récuperer le core de jeedom&#8230;&#8203;.</p>
 </div>
 <div class="sect3">
-<h4 id="_markt">11.1.1. Markt</h4>
+<h4 id="_market">11.1.1. Market</h4>
 <div class="paragraph">
 <p>Dépot servant à reliéer Jeedom au market, il est vivement conseillé d&#8217;utiliser ce dépot. Attention toute demande de support pourra être refusée si vous utilisé un autre de dépot que celui-ci.</p>
 </div>
@@ -905,9 +905,9 @@ Vergessen Sie nicht, nach jeder Veränderung zu speichern.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_dateien">11.1.2. Dateien</h4>
+<h4 id="_fichier">11.1.2. Fichier</h4>
 <div class="paragraph">
-<p>Depot aktivieren, zum versenden von Plugins als Dateien</p>
+<p>Dépot servant à activer l&#8217;envoi de plugin par des fichiers</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -918,7 +918,7 @@ Vergessen Sie nicht, nach jeder Veränderung zu speichern.
 <div class="sect3">
 <h4 id="_github">11.1.3. Github</h4>
 <div class="paragraph">
-<p>Depot, die dazu dient, Jeedom mit Github zu verbinden</p>
+<p>Dépot servant à relier Jeedom à Github</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -955,13 +955,13 @@ Vergessen Sie nicht, nach jeder Veränderung zu speichern.
 <div class="ulist">
 <ul>
 <li>
-<p><strong>[Backup] IP</strong> : IP des Samba Servers</p>
+<p><strong>[Backup] IP</strong> : IP du serveur Samba</p>
 </li>
 <li>
-<p><strong>[Backup] Benutzer</strong> : Benutzernamen für die Verbindung (anonyme Verbindungen sind nicht möglich)</p>
+<p><strong>[Backup] Utilisateur</strong> : Nom d&#8217;utilisateur pour la connexion (les connexions anonyme ne sont pas possible)</p>
 </li>
 <li>
-<p><strong>[Backup] Passwort</strong> : Benutzerpasswort</p>
+<p><strong>[Backup] Mot de passe</strong> : Mot de passe de l&#8217;utilisateur</p>
 </li>
 <li>
 <p><strong>[Backup] Partage</strong> : Chemin du partage (attention à bien s&#8217;arreter au niveau du partage)</p>
@@ -978,19 +978,7 @@ Vergessen Sie nicht, nach jeder Veränderung zu speichern.
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Es wir notwendig sein, das sie das smbclient Software-Paket installieren, damit das Depot funktioniert
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Jeedom doit être le seul à écrire dans ce dossier et il doit etre vide par defaut (c&#8217;est à dire avant la configuration et l&#8217;envoi du premier backup le dossier ne doit contenir aucun fichier ou dossier)
+Il vous faudra peut etre installer le package smbclient pour que le dépot fonctionne
 </td>
 </tr>
 </table>
@@ -1006,10 +994,10 @@ Jeedom doit être le seul à écrire dans ce dossier et il doit etre vide par de
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Jeedom Core URL</strong></p>
+<p><strong>URL core Jeedom</strong></p>
 </li>
 <li>
-<p><strong>Jeedom Core Version URL</strong></p>
+<p><strong>URL version core Jeedom</strong></p>
 </li>
 </ul>
 </div>

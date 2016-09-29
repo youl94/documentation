@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>2.4</title>
+<title>2.3</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,11 +412,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>2.4</h1>
+<h1>2.3</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel0">
-<li><a href="#_2_3">2.3</a></li>
 <li><a href="#_2_2">2.2</a></li>
 <li><a href="#_2_1">2.1</a></li>
 <li><a href="#_2_0">2.0</a></li>
@@ -426,65 +425,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Optimisation général</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Regroupement de requêtes SQL</p>
-</li>
-<li>
-<p>Suppression de requêtes inutiles</p>
-</li>
-<li>
-<p>Passage en cache du pid, état et dernier lancement des scénarios</p>
-</li>
-<li>
-<p>Passage en cache du pid, état et dernier lancement des crons</p>
-</li>
-<li>
-<p>Dans 99% des cas plus de requêtes d&#8217;écriture sur la base en fonctionnement nominal (donc hors configuration de jeedom, modifications, installation, mise à jour&#8230;&#8203;)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Suppression du fail2ban (car facilement passable en envoyant une fausse adresse ip), cela permet d’accélérer jeedom</p>
-</li>
-<li>
-<p>Ajout dans les interactions d&#8217;une option sans catégorie pour que l&#8217;on puisse générer des interactions sur des équipements sans catégorie</p>
-</li>
-<li>
-<p>Ajout dans les scénario d&#8217;un bouton de choix d&#8217;équipement sur les commandes de type slider</p>
-</li>
-<li>
-<p>Mise à jour de bootstrap en 2.3.7</p>
-</li>
-<li>
-<p>Ajout de la notion de résumé domotique (permet de connaitre d&#8217;un seul coup le nombre de lumière à on, les porte ouvert, les volets, les fenêtres, la puissance, les détections de mouvement&#8230;&#8203;). Tout cela se configure sur la page de gestion des objets</p>
-</li>
-<li>
-<p>Ajout de pre et post commande sur une commande. Permet de déclencher tout le temps une action avant ou après une autre action. Peux aussi permettre de synchroniser des équipements pour par exemple que 2 lumières s&#8217;allument toujours ensemble avec la même intensité.</p>
-</li>
-<li>
-<p>Optimisation des listenner</p>
-</li>
-<li>
-<p>Ajout de modal pour afficher les informations brutes (attribut de l&#8217;objet en base) d&#8217;un équipement ou d&#8217;une commande</p>
-</li>
-<li>
-<p>Possibilité de copier l&#8217;historique d&#8217;une commande sur une autre commande</p>
-</li>
-<li>
-<p>Possibilité de remplacer une commande par une autre dans tout jeedom (même si la commande à remplacer n&#8217;existe plus)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<h1 id="_2_3" class="sect0">2.3</h1>
 <div class="ulist">
 <ul>
 <li>
@@ -686,6 +626,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Ajout d&#8217;un tag <mark>begin_backup</mark>, <mark>end_backup</mark>, <mark>begin_update</mark>, <mark>end_update</mark>, <mark>begin_restore</mark>, <mark>end_restore</mark> dans les scénarios</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 <h1 id="_2_2" class="sect0">2.2</h1>
 <div class="ulist">
