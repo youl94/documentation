@@ -33,6 +33,6 @@ function generateDocSite(data){
 	console.log(data);
 	$('#ul_listDoc').empty();
 	for(var i in data.docs){
-		$('#ul_listDoc').append('<a class="collection-item" target="_blank" href="'+data.docs[i].link.replace('#language#',$('#sel_language').val())+'">'+data.docs[i].name+'</a>');
+		$('#ul_listDoc').append('<a class="collection-item" target="_blank" href="'+data.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+data.docs[i].name+'</a>');
 	}
 }
