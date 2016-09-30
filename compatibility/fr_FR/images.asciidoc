@@ -1,4 +1,4 @@
-Vous pouvez retrouver tous les images Jeedom link:https://app.box.com/s/ijyxkntjjip9x4oue2xqdi53r4sh8ent[ici], puis dans le dossier Images
+Vous pouvez retrouver tous les images Jeedom link:https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog[ici], puis dans le dossier Images
 
 [NOTE]
 Une image netinstall va lors du premier démarrage installer la dernière version stable de Jeedom, ce démarrage est donc un peu plus long et necessite d'avoir accès à internet. Vous pouvez suivre l'avancement de celui-ci en allant sur l'IP de votre jeedom avec votre navigateur
