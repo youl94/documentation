@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Sonos</title>
+<title>Administration</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,16 +412,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Sonos</h1>
+<h1>Administration</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_configuration_du_plugin">1. Configuration du plugin</a></li>
-<li><a href="#_configuration_des_équipements">2. Configuration des équipements</a></li>
-<li><a href="#_tts">3. TTS</a></li>
-<li><a href="#_widget">4. Widget</a></li>
-<li><a href="#_le_panel">5. Le panel</a></li>
-<li><a href="#_changelog">6. Changelog</a></li>
+<li><a href="#_configuration_générale">1. Configuration générale</a></li>
+<li><a href="#_composants_jeedom">2. Composants Jeedom</a></li>
+<li><a href="#_base_de_données">3. Base de données</a></li>
+<li><a href="#_configuration_réseau">4. Configuration réseau</a></li>
+<li><a href="#_configuration_des_couleurs">5. Configuration des couleurs</a></li>
+<li><a href="#_configuration_des_commandes">6. Configuration des commandes</a></li>
+<li><a href="#_configuration_des_intéractions">7. Configuration des intéractions</a></li>
+<li><a href="#_configuration_des_logs_messages">8. Configuration des logs &amp; messages</a></li>
+<li><a href="#_configuration_ldap">9. Configuration LDAP</a></li>
+<li><a href="#_configuration_des_équipements">10. Configuration des équipements</a></li>
+<li><a href="#_mise_à_jour_et_fichiers">11. Mise à jour et fichiers</a>
+<ul class="sectlevel2">
+<li><a href="#_les_dépots">11.1. Les dépots</a>
+<ul class="sectlevel3">
+<li><a href="#_market">11.1.1. Market</a></li>
+<li><a href="#_fichier">11.1.2. Fichier</a></li>
+<li><a href="#_github">11.1.3. Github</a></li>
+<li><a href="#_samba">11.1.4. Samba</a></li>
+<li><a href="#_url">11.1.5. URL</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -429,15 +446,213 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Le plugin Sonos permet de piloter les Sonos Play 1,3,5, Sonos Connect, Sonos Connect AMP et Sonos Playbar. Il va vous permettre de voir l&#8217;état du Sonos et d&#8217;effectuer des actions dessus (lecture, pause, suivant, précédent, volume, choix d&#8217;une playlist&#8230;&#8203;)</p>
+<p>C’est ici que se trouvent la plupart des paramètres de configuration. Bien que nombreux, ils sont pré-configurés par défaut.</p>
+</div>
+<div class="paragraph">
+<p>La page est accessible par Administration &#8594; Configuration :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration.png" alt="administration">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Si vous n&#8217;êtes pas en mode expert certains paramètres peuvent ne pas être visibles.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration_du_plugin">1. Configuration du plugin</h2>
+<h2 id="_configuration_générale">1. Configuration générale</h2>
 <div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration1.png" alt="administration1">
+</div>
+</div>
 <div class="paragraph">
-<p>La configuration est très simple, après téléchargement du plugin, il vous suffit de l&#8217;activer et c&#8217;est tout. Le plugin va rechercher les Sonos sur votre réseau et créer les équipements automatiquement. De plus, si il y a une correspondance entre les objets Jeedom et les pièces du Sonos, Jeedom affectera automatiquement les Sonos dans les bonnes pièces.</p>
+<p>Dans cet onglet on retrouve des informations générales sur Jeedom :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Nom de votre Jeedom</strong> : peut etre réutilisé dans les scénarios ou permettre d&#8217;identifier un backup</p>
+</li>
+<li>
+<p><strong>Clef API</strong> : votre clef API, à utiliser pour toute requête vers l&#8217;API Jeedom</p>
+</li>
+<li>
+<p><strong>Clef API Pro</strong> : utilisé pour communiquer avec le systeme de gestion de parc</p>
+</li>
+<li>
+<p><strong>Système</strong> : type de votre hardware</p>
+</li>
+<li>
+<p><strong>Clef d&#8217;installation</strong> : clef hardware de votre Jeedom sur le market. Si votre Jeedom n&#8217;apparait pas dans la liste de vos Jeedom sur le market il est conseillé de cliquer sur ce bouton</p>
+</li>
+<li>
+<p><strong>Langue</strong> : Langue de votre Jeedom</p>
+</li>
+<li>
+<p><strong>Durée de vie des sessions (heure)</strong> : durée de vie des sessions PHP, il est conseillé de ne pas y toucher</p>
+</li>
+<li>
+<p><strong>Date et heure</strong> : votre fuseau horaire</p>
+</li>
+<li>
+<p><strong>Serveur de temps optionnel</strong> : permet d&#8217;ajouter un serveur de temps optionnel (à réserver aux experts)</p>
+</li>
+<li>
+<p><strong>Ignorer la vérification de l&#8217;heure</strong> : indique à Jeedom de ne pas vérifier si l&#8217;heure est cohérente. Utile par exemple si vous ne connectez pas Jeedom à internet et qu&#8217;il n&#8217;a pas de pile RTC</p>
+</li>
+<li>
+<p><strong>Mode</strong> : Mode de votre Jeedom maître ou esclave, attention lors du passage en esclave : tous vos équipements, scénarios, design&#8230;&#8203; seront supprimés.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_composants_jeedom">2. Composants Jeedom</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration12.png" alt="administration12">
+</div>
+</div>
+<div class="paragraph">
+<p>Cette partie permet d&#8217;activer/désactiver certains composants du core jeedom :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Droits avancés</strong> : permet de désactiver la gestion des droits avancés (si vous ne vous en servez pas cela peut rendre jeedom plus réactif)</p>
+</li>
+<li>
+<p><strong>Sécurité</strong> : permet d&#8217;activer ou non la sécurité anti-piratage de Jeedom (brute force sur le mot de passe).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_base_de_données">3. Base de données</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration2.png" alt="administration2">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Accès à l&#8217;interface d&#8217;administration</strong> : permet d&#8217;accèder à une interface d&#8217;administration de la base, les informations à renseigner sont en-dessous</p>
+</li>
+<li>
+<p><strong>Machine (hostname)</strong> : localisation de la base</p>
+</li>
+<li>
+<p><strong>Utilisateur</strong> : nom d&#8217;utilisateur utilisé par Jeedom</p>
+</li>
+<li>
+<p><strong>Mot de passe</strong> : mot de passe d&#8217;accès à la base utilisé par Jeedom</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_réseau">4. Configuration réseau</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration3.png" alt="administration3">
+</div>
+</div>
+<div class="paragraph">
+<p>Partie très importante dans Jeedom, il faut absolument la configurer correctement sinon beaucoup de plugins risquent d&#8217;être non fonctionnels</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Accès interne</strong> : information pour joindre Jeedom à partir d&#8217;un équipement sur le même réseau</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Protocole</strong> : le protocole à utiliser, souvent HTTP</p>
+</li>
+<li>
+<p><strong>Adresse URL ou IP</strong> : IP de Jeedom, à renseigner</p>
+</li>
+<li>
+<p><strong>Complément (exemple : /jeedom)</strong> : le fragment d&#8217;URL complémentaire (type /jeedom). Pour savoir si vous avez besoin de définir une valeur ici, regardez si quand vous vous connectez à Jeedom vous devez renseigner /jeedom après l&#8217;IP</p>
+</li>
+<li>
+<p><strong>Port</strong> : le port, en général 80. Attention changer le port ici ne change pas le port réel de Jeedom qui restera le même</p>
+</li>
+<li>
+<p><strong>Statut</strong> : Indique si la configuration réseau interne est correcte</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Accès externe</strong> : information pour joindre Jeedom de l&#8217;extérieur. A ne remplir que si vous n&#8217;utilisez pas le DNS Jeedom</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Protocole</strong> : protocole utilisé pour l&#8217;accès extérieur</p>
+</li>
+<li>
+<p><strong>Adresse URL ou IP</strong> : adresse ou ip externe si fixe</p>
+</li>
+<li>
+<p><strong>Complément (exemple : /jeedom)</strong> :  le fragment d&#8217;URL complémentaire (type /jeedom). Pour savoir si vous avez besoin de définir une valeur ici, regardez si quand vous vous connectez à Jeedom vous devez renseigner /jeedom après l&#8217;IP</p>
+</li>
+<li>
+<p><strong>Port</strong> : le port, en général 80. Attention changer le port ici ne change pas le port réel de Jeedom qui restera le même</p>
+</li>
+<li>
+<p><strong>Statut</strong> : Indique si la configuration réseau externe est correcte</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Gestion avancée</strong> : peut ne pas apparaitre en fonction de la compatibilité avec votre matériel</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Désactiver la gestion du réseaux par Jeedom</strong> : indique à Jeedom de ne pas monitorer le réseau (à activer si jeedom n&#8217;est connecté à aucun réseau)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Proxy market</strong> : permet un accès distant à votre Jeedom sans avoir besoin d&#8217;un DNS, d&#8217;une IP fixe ou d&#8217;ouvrir les ports de votre box</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Utiliser les DNS Jeedom</strong> : active les DNS Jeedom (attention cela nécessite au moins un service pack)</p>
+</li>
+<li>
+<p><strong>Statut DNS</strong> : statut du DNS http</p>
+</li>
+<li>
+<p><strong>Gestion</strong> : permet d&#8217;arrêter et relancer le service DNS</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -446,40 +661,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Ce plugin nécessite que les Sonos soit alimentés (même en mode veille) pour ne pas provoquer d&#8217;erreur.
+Si vous êtes en HTTPS le port est le 443 (par défaut) et en HTTP le port est par défaut le 80
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Si plus tard vous ajoutez un Sonos, vous pouvez soit créer un équipement Sonos en donnant l&#8217;IP à Jeedom ou cliquer sur "Rechercher les équipements Sonos" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos1.PNG" alt="sonos1">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Voix</strong> : choix de la voix lors du TTS</p>
-</li>
-<li>
-<p><strong>Partage</strong> : nom du partage ainsi que le chemin du dossier</p>
-</li>
-<li>
-<p><strong>Nom d&#8217;utilisateur pour le partage</strong> : nom d&#8217;utilisateur pour acceder au partage</p>
-</li>
-<li>
-<p><strong>Mot de passe du partage</strong> : mot de passe du partage</p>
-</li>
-<li>
-<p><strong>Découverte</strong> : decouvre automatiquement les sonos (ne marche pas sur une installation de type docker ou il faut creer à la main chaque sonos)</p>
-</li>
-<li>
-<p><strong>Dépendance Sonos</strong> : installer les dépendances sonos pour le TTS</p>
-</li>
-</ul>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -488,153 +673,10 @@ Ce plugin nécessite que les Sonos soit alimentés (même en mode veille) pour n
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Les messages trop long ne peuvent etre transmis en TTS (la limite depend du fournisseurs de TTS, en général environ 100 caractères)
+Cette partie est juste là pour expliquer à Jeedom son environnement : une modification du port ou de l&#8217;IP ici ne changera pas le port ou l&#8217;IP de Jeedom. Pour cela il faut se connecter en SSH et éditer le fichier /etc/network/interfaces pour l&#8217;IP et les fichiers etc/nginx/sites-available/default et etc/nginx/sites-available/default_ssl (pour le HTTPS). En cas de mauvaise manipulation de votre Jeedom, l&#8217;équipe Jeedom ne pourra être tenue responsable et pourra refuser toute demande de support.
 </td>
 </tr>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_configuration_des_équipements">2. Configuration des équipements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>La configuration des équipements Sonos est accessible à partir du menu plugin :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos2.PNG" alt="sonos2">
-</div>
-</div>
-<div class="paragraph">
-<p>Voilà à quoi ressemble la page du plugin Sonos (ici avec déjà 3 équipements) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos3.PNG" alt="sonos3">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous retrouvez ici la liste de vos Sonos avec une image en fonction du modèle. Une fois que vous cliquez sur un équipement vous obtenez :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos4.PNG" alt="sonos4">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous retrouvez ici toute la configuration de votre équipement :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Nom de l&#8217;équipement Sonos</strong> : nom de votre équipement Sonos</p>
-</li>
-<li>
-<p><strong>Objet parent</strong> : indique l&#8217;objet parent auquel appartient l&#8217;équipement</p>
-</li>
-<li>
-<p><strong>Activer</strong> : permet de rendre votre équipement actif</p>
-</li>
-<li>
-<p><strong>Visible</strong> : le rend visible sur le dashboard</p>
-</li>
-<li>
-<p><strong>Modèle</strong> : le modèle de votre Sonos (à ne changer que si ce n&#8217;est pas le bon)</p>
-</li>
-<li>
-<p><strong>IP</strong> : l&#8217;IP de votre Sonos, peut être utile si votre Sonos change d&#8217;IP ou si vous le remplacez</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>En dessous vous retrouvez la liste des commandes :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Nom</strong> : nom de la commande</p>
-</li>
-<li>
-<p><strong>Configuration avancée (petites roues crantées)</strong> : permet d&#8217;afficher la configuration avancée de la commande (méthode d&#8217;historisation, widget&#8230;&#8203;)</p>
-</li>
-<li>
-<p><strong>Tester</strong> : permet de tester la commande</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Comme commande vous retrouverez :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Jouer playlist</strong> : commande de type message permettant de lancer une playlist, il suffit dans le titre de mettre le nom de la playlist. Vous pouvez mettre "random" dans message pour mélanger la playlist avant la lecture.</p>
-</li>
-<li>
-<p><strong>Jouer une radio</strong> : commande de type message permettant de lancer une radio, il suffit dans le titre de mettre le nom de la radio (ATTENTION celle ci doit etre dans les radio favorites).</p>
-</li>
-<li>
-<p><strong>Ajout un haut parleur</strong> : permet d&#8217;ajouter à haut parleur (un sonos) au haut parleur courant (pour associer 2 sonos par exemple). Il faut mettre le nom de la piece du sonos à ajouter dans le titre (le champs message n&#8217;est pas utilisé ici).</p>
-</li>
-<li>
-<p><strong>Supprimer un haut parleur</strong> : permet de supprimer un haut parleur (un sonos) au haut parleur courant (pour associer 2 sonos par exemple). Il faut mettre le nom de la piece du sonos à supprimer dans le titre (le champs message n&#8217;est pas utilisé ici).</p>
-</li>
-<li>
-<p><strong>Aléatoire statut</strong> : indique si on est en mode aléatoire ou non</p>
-</li>
-<li>
-<p><strong>Aléatoire</strong> : inverse le statut du mode aléatoire</p>
-</li>
-<li>
-<p><strong>Répéter statut</strong> : indique si on est en mode répété ou non</p>
-</li>
-<li>
-<p><strong>Répéter</strong> : inverse le statut du mode "répéter"</p>
-</li>
-<li>
-<p><strong>Image</strong> : lien vers l&#8217;image de l&#8217;album</p>
-</li>
-<li>
-<p><strong>Album</strong> : nom de l&#8217;album en cours de lecture</p>
-</li>
-<li>
-<p><strong>Artiste</strong> : nom de l&#8217;artiste en cours de lecture</p>
-</li>
-<li>
-<p><strong>Piste</strong> : nom de la piste en cours de lecture</p>
-</li>
-<li>
-<p><strong>Muet</strong> : passe en muet</p>
-</li>
-<li>
-<p><strong>Précédent</strong> : piste précédente</p>
-</li>
-<li>
-<p><strong>Suivant</strong> : piste suivante</p>
-</li>
-<li>
-<p><strong>Lecture</strong> : passer en lecture</p>
-</li>
-<li>
-<p><strong>Pause</strong> : mettre en pause</p>
-</li>
-<li>
-<p><strong>Stop</strong> : arrêter la lecture</p>
-</li>
-<li>
-<p><strong>Volume</strong> : modifier le volume (de 0 à 100)</p>
-</li>
-<li>
-<p><strong>Volume statut</strong> : niveau du volume</p>
-</li>
-<li>
-<p><strong>Statut</strong> : statut (pause, lecture, transition&#8230;&#8203;)</p>
-</li>
-<li>
-<p><strong>Dire</strong> : permet de lire un texte sur le sonos (voir partie TTS). Dans le titre vous pouvez mettre le volume et dans le message, le message à lire</p>
-</li>
-</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -643,27 +685,7 @@ Les messages trop long ne peuvent etre transmis en TTS (la limite depend du four
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pour la lecture des playlists vous pouvez mettre des options (dans la case option). Pour lancer la playlist en lecture aléatoire il faut mettre dedans "random"
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tts">3. TTS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Le TTS (text-to-speech) vers le Sonos necessite d&#8217;avoir un partage Windows (Samba) sur le réseaux (imposé par Sonos, pas moyen de faire autrement). Il faut vous donc un NAS sur le reseaux. La configuration est assez simple il faut mettre le nom ou l&#8217;ip du nas (attention à bien mettre la même chose que ce qui est déclaré sur sonos) et le chemain (relatif), le nom d&#8217;utilisateur et le mot de passe (attention l&#8217;utilisateur doit avoir les droits en écriture)</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Il faut absolument mettre un mot de passe pour que cela marche
+Vous pouvez voir <a href="http://blog.domadoo.fr/2014/10/15/acceder-depuis-lexterieur-jeedom-en-https">ici</a> un tutoriel pour mettre en place un certificat HTTPS auto-signé
 </td>
 </tr>
 </table>
@@ -675,135 +697,323 @@ Il faut absolument mettre un mot de passe pour que cela marche
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Il faut aussi absolument un sous repertoire pour que le fichier vocal soit correctement créé.
+Si vous n&#8217;arrivez pas à faire fonctionner le DNS Jeedom, regardez la configuration du pare-feu et filtre parental de votre box (sur livebox il faut par exemple le pare-feu en moyen)
 </td>
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_des_couleurs">5. Configuration des couleurs</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<div class="title">Voici un exemple de configuration (merci @masterfion) :</div>
-<p>Côté NAS, voici ma config :</p>
+<p>La colorisation des widgets est effectuée en fonction de la catégorie d&#8217;appartenance du widget qui est définie dans la configuration de chaque module (voir plugin Z-Wave, RFXCOM&#8230;&#8203;etc). Parmi les catégories on retrouve le chauffage, les lumières, les automatismes etc&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Pour chaque catégorie, on pourra choisir une couleur différente entre la version desktop et la version mobile. Il y a également 2 types de couleurs, les couleurs de fond des widgets, et les couleurs des commandes lorsque le widget est de type graduel, par exemple les lumières, les volets, les températures.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/display6.png" alt="display6">
+</div>
+</div>
+<div class="paragraph">
+<p>En cliquant sur la couleur une fenêtre s&#8217;ouvre, permettant de choisir sa couleur.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/display7.png" alt="display7">
+</div>
+</div>
+<div class="paragraph">
+<p>Vous pouvez aussi configurer ici la transparence des widgets de maniere global (qui sera la valeur par défaut, il est possible ensuite de modifier cette valeur widget par widget)</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+N&#8217;oubliez pas de sauvegarder après toute modification
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_des_commandes">6. Configuration des commandes</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration4.png" alt="administration4">
+</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>le dossier Jeedom est partagé</p>
+<p><strong>Historique</strong> : voir <a href="https://jeedom.com/doc/documentation/core/fr_FR/doc-core-history.html#_configuration_général_de_l_historique">ici</a></p>
 </li>
 <li>
-<p>l&#8217;utilisateur Sonos a un accès Lecture/Ecriture (nécessaire pour Jeedom)</p>
-</li>
+<p><strong>Push</strong></p>
+<div class="ulist">
+<ul>
 <li>
-<p>l&#8217;utilisateur guest a un accès en Lecture seule (nécessaire pour les Sonos)</p>
+<p><strong>URL de push globale</strong> :  permet de rajouter une URL à appeler en cas de mise à jour d&#8217;une commande. Vous pouvez utiliser les tags suivant : #value# pour la valeur de la commande, #cmd_name# pour le nom de la commande, #cmd_id# pour l&#8217;identifiant unique de la commande, #humanname# pour le nom complet de la commande (ex : #[Salle de bain][Hydrometrie][Humidité]#)</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Côté Plugin Sono, voici ma config :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Partage :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Champ 1 : 192.168.xxx.yyy</p>
-</li>
-<li>
-<p>Champ 2 : Jeedom/TTS</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Nom d&#8217;utilisateur : Sonos et son mot de passe&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Côté Bibliothèque Sonos (appli PC)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le chemin est : //192.168.xxx.yyy/Jeedom/TTS</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_widget">4. Widget</h2>
+<h2 id="_configuration_des_intéractions">7. Configuration des intéractions</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Sur le dashboard vous retrouverez le widget suivant :</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/sonos5.PNG" alt="sonos5">
+<img src="../images/administration5.png" alt="administration5">
 </div>
 </div>
 <div class="paragraph">
-<p>A partir de ce widget (et seulement en version desktop), vous pouvez voir les musiques dans la file d&#8217;attente et les playlists disponibles pour lancer leur lecture, gerer la sortie sur different sonos et les radios favorites.</p>
+<p>Voir <a href="https://jeedom.com/doc/documentation/core/fr_FR/doc-core-interact.html#_configuration_2">ici</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_le_panel">5. Le panel</h2>
+<h2 id="_configuration_des_logs_messages">8. Configuration des logs &amp; messages</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Le plugin Sonos met aussi à disposition un panel qui rassemble tout vos Sonos. Disponible a partir du menu Accueil &#8594; Sonos Controller :</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/sonos7.PNG" alt="sonos7">
+<img src="../images/administration7.png" alt="administration7">
 </div>
 </div>
 <div class="paragraph">
-<p>Cela permet d&#8217;avoir ce genre de vue synthétique :</p>
+<p>Voir <a href="https://jeedom.com/doc/documentation/core/fr_FR/doc-core-log.html#_configuration">ici</a></p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos8.PNG" alt="sonos8">
-</div>
-</div>
-<div class="paragraph">
-<p>Il existe aussi une version mobile du panel, accessible à partir de Plugins &#8594; Sonos controller :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos9.PNG" alt="sonos9">
-</div>
-</div>
-<div class="paragraph">
-<p>Il vous permet comme en version bureau d&#8217;avoir une vue synthetique de vos Sonos :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos10.PNG" alt="sonos10">
-</div>
-</div>
-<hr>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
+<h2 id="_configuration_ldap">9. Configuration LDAP</h2>
 <div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration8.png" alt="administration8">
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Mise à jour de librairie de communication avec les sonos</p>
+<p><strong>Activer l&#8217;authentification LDAP</strong> : active l&#8217;authentification à travers un AD (LDAP)</p>
 </li>
 <li>
-<p>Optimisation du chargement des playlists</p>
+<p><strong>Hôte</strong> : serveur hébergeant l&#8217;AD</p>
 </li>
 <li>
-<p>Ajout de picotts pour la génération du TTS en locale</p>
+<p><strong>Domaine</strong> : domaine de votre AD</p>
 </li>
 <li>
-<p>Correction du bouton play/pause lors de la mise à jour du widget</p>
+<p><strong>Base DN</strong> : base DN de votre AD</p>
+</li>
+<li>
+<p><strong>Nom d&#8217;utilisateur</strong> : nom d&#8217;utilisateur pour que Jeedom se connecte à l&#8217;AD</p>
+</li>
+<li>
+<p><strong>Mot de passe</strong> : mot de passe pour que Jeedom se connecte à l&#8217;AD</p>
+</li>
+<li>
+<p><strong>Filtre (optionnel)</strong> : filtre sur l&#8217;AD (pour la gestion des groupes par exemple)</p>
+</li>
+<li>
+<p><strong>Autoriser REMOTE_USER</strong> : Active le REMOTE_USER (utilisé en SSO par exemple)</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_des_équipements">10. Configuration des équipements</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration9.png" alt="administration9">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Nombre d&#8217;échecs avant désactivation de l&#8217;équipement</strong> : nombre d&#8217;échecs de communication avec l&#8217;équipement avant desactivation de celui-ci (un message vous préviendra si cela arrive)</p>
+</li>
+<li>
+<p><strong>Seuils des piles</strong> : permet de gérer les seuils d&#8217;alertes globaux sur les piles</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mise_à_jour_et_fichiers">11. Mise à jour et fichiers</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration10.png" alt="administration10">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Source de mise à jour :</p>
+</li>
+<li>
+<p>Faire une sauvegarde avant la mise à jour</p>
+</li>
+<li>
+<p>Vérifier automatiquement si il y a des mises à jour</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_les_dépots">11.1. Les dépots</h3>
+<div class="paragraph">
+<p>Les dépots sont des espaces de stockage (et de service) pour pouvoir mettre des backups, récuperer des plugins, récuperer le core de jeedom&#8230;&#8203;.</p>
+</div>
+<div class="sect3">
+<h4 id="_market">11.1.1. Market</h4>
+<div class="paragraph">
+<p>Dépot servant à reliéer Jeedom au market, il est vivement conseillé d&#8217;utiliser ce dépot. Attention toute demande de support pourra être refusée si vous utilisé un autre de dépot que celui-ci.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration17.png" alt="administration17">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Adresse</strong> : adresse du market</p>
+</li>
+<li>
+<p><strong>Nom d&#8217;utilisateur</strong> : votre nom d&#8217;utilisateur sur le market</p>
+</li>
+<li>
+<p><strong>Mot de passe</strong> : votre mot de passe du market</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fichier">11.1.2. Fichier</h4>
+<div class="paragraph">
+<p>Dépot servant à activer l&#8217;envoi de plugin par des fichiers</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration15.png" alt="administration15">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_github">11.1.3. Github</h4>
+<div class="paragraph">
+<p>Dépot servant à relier Jeedom à Github</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration16.png" alt="administration16">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Token</strong> : Token pour l&#8217;accès au dépot privé</p>
+</li>
+<li>
+<p><strong>Utilisateur ou organisation du dépot pour le core Jeedom</strong></p>
+</li>
+<li>
+<p><strong>Nom du dépôt pour le core Jeedom</strong></p>
+</li>
+<li>
+<p><strong>Branche pour le core Jeedom</strong></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_samba">11.1.4. Samba</h4>
+<div class="paragraph">
+<p>Dépot permettant d&#8217;envoyer automatique un backup de jeedom sur un partage samba (ex NAS Synology)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration18.png" alt="administration18">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>[Backup] IP</strong> : IP du serveur Samba</p>
+</li>
+<li>
+<p><strong>[Backup] Utilisateur</strong> : Nom d&#8217;utilisateur pour la connexion (les connexions anonyme ne sont pas possible)</p>
+</li>
+<li>
+<p><strong>[Backup] Mot de passe</strong> : Mot de passe de l&#8217;utilisateur</p>
+</li>
+<li>
+<p><strong>[Backup] Partage</strong> : Chemin du partage (attention à bien s&#8217;arreter au niveau du partage)</p>
+</li>
+<li>
+<p><strong>[Backup] Chemin</strong> : Chemin dans le partage (à mettre en relatif), celui-ci doit exister</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Il vous faudra peut etre installer le package smbclient pour que le dépot fonctionne
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Jeedom doit être le seul à écrire dans ce dossier et il doit etre vide par defaut (c&#8217;est à dire avant la configuration et l&#8217;envoi du premier backup le dossier ne doit contenir aucun fichier ou dossier)
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_url">11.1.5. URL</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/administration19.png" alt="administration19">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>URL core Jeedom</strong></p>
+</li>
+<li>
+<p><strong>URL version core Jeedom</strong></p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>

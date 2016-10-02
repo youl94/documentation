@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Sonos</title>
+<title>Batteries</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,32 +412,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Sonos</h1>
+<h1>Batteries</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
-<ul class="sectlevel1">
-<li><a href="#_configuration_du_plugin">1. Configuration du plugin</a></li>
-<li><a href="#_configuration_des_équipements">2. Configuration des équipements</a></li>
-<li><a href="#_tts">3. TTS</a></li>
-<li><a href="#_widget">4. Widget</a></li>
-<li><a href="#_le_panel">5. Le panel</a></li>
-<li><a href="#_changelog">6. Changelog</a></li>
-</ul>
+
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
-<p>Le plugin Sonos permet de piloter les Sonos Play 1,3,5, Sonos Connect, Sonos Connect AMP et Sonos Playbar. Il va vous permettre de voir l&#8217;état du Sonos et d&#8217;effectuer des actions dessus (lecture, pause, suivant, précédent, volume, choix d&#8217;une playlist&#8230;&#8203;)</p>
+<p>La page Batteries vous permet de voir d&#8217;un seul coup le statut de tous vos équipements. Elle est accessible par le menu Analyse &#8594; Batteries :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/battery.PNG" alt="battery">
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuration_du_plugin">1. Configuration du plugin</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>La configuration est très simple, après téléchargement du plugin, il vous suffit de l&#8217;activer et c&#8217;est tout. Le plugin va rechercher les Sonos sur votre réseau et créer les équipements automatiquement. De plus, si il y a une correspondance entre les objets Jeedom et les pièces du Sonos, Jeedom affectera automatiquement les Sonos dans les bonnes pièces.</p>
+<p>Une fois dessus vous obtenez :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/battery2.PNG" alt="battery2">
+</div>
+</div>
+<div class="paragraph">
+<p>Vous pouvez voir sur cette page la liste de vos modules sur batterie, le niveau restant (la couleur de la tuile dépend de ce niveau), le type et le nombre de piles qu&#8217;il faut mettre dans le module, le type du module ainsi que la date où l&#8217;information du niveau de batterie a été mise à jour.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -446,366 +445,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Ce plugin nécessite que les Sonos soit alimentés (même en mode veille) pour ne pas provoquer d&#8217;erreur.
+Les seuils d&#8217;alerte/warning sur les niveaux de batteries sont configurables de manière globale dans la configuration de Jeedom (Administration &#8594; Configuration puis partie "Configuration des équipements"), ou par équipement sur la page de configuration avancée de ceux-ci.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Si plus tard vous ajoutez un Sonos, vous pouvez soit créer un équipement Sonos en donnant l&#8217;IP à Jeedom ou cliquer sur "Rechercher les équipements Sonos" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos1.PNG" alt="sonos1">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Voix</strong> : choix de la voix lors du TTS</p>
-</li>
-<li>
-<p><strong>Partage</strong> : nom du partage ainsi que le chemin du dossier</p>
-</li>
-<li>
-<p><strong>Nom d&#8217;utilisateur pour le partage</strong> : nom d&#8217;utilisateur pour acceder au partage</p>
-</li>
-<li>
-<p><strong>Mot de passe du partage</strong> : mot de passe du partage</p>
-</li>
-<li>
-<p><strong>Découverte</strong> : decouvre automatiquement les sonos (ne marche pas sur une installation de type docker ou il faut creer à la main chaque sonos)</p>
-</li>
-<li>
-<p><strong>Dépendance Sonos</strong> : installer les dépendances sonos pour le TTS</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Les messages trop long ne peuvent etre transmis en TTS (la limite depend du fournisseurs de TTS, en général environ 100 caractères)
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_configuration_des_équipements">2. Configuration des équipements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>La configuration des équipements Sonos est accessible à partir du menu plugin :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos2.PNG" alt="sonos2">
-</div>
-</div>
-<div class="paragraph">
-<p>Voilà à quoi ressemble la page du plugin Sonos (ici avec déjà 3 équipements) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos3.PNG" alt="sonos3">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous retrouvez ici la liste de vos Sonos avec une image en fonction du modèle. Une fois que vous cliquez sur un équipement vous obtenez :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos4.PNG" alt="sonos4">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous retrouvez ici toute la configuration de votre équipement :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Nom de l&#8217;équipement Sonos</strong> : nom de votre équipement Sonos</p>
-</li>
-<li>
-<p><strong>Objet parent</strong> : indique l&#8217;objet parent auquel appartient l&#8217;équipement</p>
-</li>
-<li>
-<p><strong>Activer</strong> : permet de rendre votre équipement actif</p>
-</li>
-<li>
-<p><strong>Visible</strong> : le rend visible sur le dashboard</p>
-</li>
-<li>
-<p><strong>Modèle</strong> : le modèle de votre Sonos (à ne changer que si ce n&#8217;est pas le bon)</p>
-</li>
-<li>
-<p><strong>IP</strong> : l&#8217;IP de votre Sonos, peut être utile si votre Sonos change d&#8217;IP ou si vous le remplacez</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>En dessous vous retrouvez la liste des commandes :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Nom</strong> : nom de la commande</p>
-</li>
-<li>
-<p><strong>Configuration avancée (petites roues crantées)</strong> : permet d&#8217;afficher la configuration avancée de la commande (méthode d&#8217;historisation, widget&#8230;&#8203;)</p>
-</li>
-<li>
-<p><strong>Tester</strong> : permet de tester la commande</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Comme commande vous retrouverez :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Jouer playlist</strong> : commande de type message permettant de lancer une playlist, il suffit dans le titre de mettre le nom de la playlist. Vous pouvez mettre "random" dans message pour mélanger la playlist avant la lecture.</p>
-</li>
-<li>
-<p><strong>Jouer une radio</strong> : commande de type message permettant de lancer une radio, il suffit dans le titre de mettre le nom de la radio (ATTENTION celle ci doit etre dans les radio favorites).</p>
-</li>
-<li>
-<p><strong>Ajout un haut parleur</strong> : permet d&#8217;ajouter à haut parleur (un sonos) au haut parleur courant (pour associer 2 sonos par exemple). Il faut mettre le nom de la piece du sonos à ajouter dans le titre (le champs message n&#8217;est pas utilisé ici).</p>
-</li>
-<li>
-<p><strong>Supprimer un haut parleur</strong> : permet de supprimer un haut parleur (un sonos) au haut parleur courant (pour associer 2 sonos par exemple). Il faut mettre le nom de la piece du sonos à supprimer dans le titre (le champs message n&#8217;est pas utilisé ici).</p>
-</li>
-<li>
-<p><strong>Aléatoire statut</strong> : indique si on est en mode aléatoire ou non</p>
-</li>
-<li>
-<p><strong>Aléatoire</strong> : inverse le statut du mode aléatoire</p>
-</li>
-<li>
-<p><strong>Répéter statut</strong> : indique si on est en mode répété ou non</p>
-</li>
-<li>
-<p><strong>Répéter</strong> : inverse le statut du mode "répéter"</p>
-</li>
-<li>
-<p><strong>Image</strong> : lien vers l&#8217;image de l&#8217;album</p>
-</li>
-<li>
-<p><strong>Album</strong> : nom de l&#8217;album en cours de lecture</p>
-</li>
-<li>
-<p><strong>Artiste</strong> : nom de l&#8217;artiste en cours de lecture</p>
-</li>
-<li>
-<p><strong>Piste</strong> : nom de la piste en cours de lecture</p>
-</li>
-<li>
-<p><strong>Muet</strong> : passe en muet</p>
-</li>
-<li>
-<p><strong>Précédent</strong> : piste précédente</p>
-</li>
-<li>
-<p><strong>Suivant</strong> : piste suivante</p>
-</li>
-<li>
-<p><strong>Lecture</strong> : passer en lecture</p>
-</li>
-<li>
-<p><strong>Pause</strong> : mettre en pause</p>
-</li>
-<li>
-<p><strong>Stop</strong> : arrêter la lecture</p>
-</li>
-<li>
-<p><strong>Volume</strong> : modifier le volume (de 0 à 100)</p>
-</li>
-<li>
-<p><strong>Volume statut</strong> : niveau du volume</p>
-</li>
-<li>
-<p><strong>Statut</strong> : statut (pause, lecture, transition&#8230;&#8203;)</p>
-</li>
-<li>
-<p><strong>Dire</strong> : permet de lire un texte sur le sonos (voir partie TTS). Dans le titre vous pouvez mettre le volume et dans le message, le message à lire</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Pour la lecture des playlists vous pouvez mettre des options (dans la case option). Pour lancer la playlist en lecture aléatoire il faut mettre dedans "random"
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tts">3. TTS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Le TTS (text-to-speech) vers le Sonos necessite d&#8217;avoir un partage Windows (Samba) sur le réseaux (imposé par Sonos, pas moyen de faire autrement). Il faut vous donc un NAS sur le reseaux. La configuration est assez simple il faut mettre le nom ou l&#8217;ip du nas (attention à bien mettre la même chose que ce qui est déclaré sur sonos) et le chemain (relatif), le nom d&#8217;utilisateur et le mot de passe (attention l&#8217;utilisateur doit avoir les droits en écriture)</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Il faut absolument mettre un mot de passe pour que cela marche
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Il faut aussi absolument un sous repertoire pour que le fichier vocal soit correctement créé.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<div class="title">Voici un exemple de configuration (merci @masterfion) :</div>
-<p>Côté NAS, voici ma config :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le dossier Jeedom est partagé</p>
-</li>
-<li>
-<p>l&#8217;utilisateur Sonos a un accès Lecture/Ecriture (nécessaire pour Jeedom)</p>
-</li>
-<li>
-<p>l&#8217;utilisateur guest a un accès en Lecture seule (nécessaire pour les Sonos)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Côté Plugin Sono, voici ma config :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Partage :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Champ 1 : 192.168.xxx.yyy</p>
-</li>
-<li>
-<p>Champ 2 : Jeedom/TTS</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Nom d&#8217;utilisateur : Sonos et son mot de passe&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Côté Bibliothèque Sonos (appli PC)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le chemin est : //192.168.xxx.yyy/Jeedom/TTS</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_widget">4. Widget</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Sur le dashboard vous retrouverez le widget suivant :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos5.PNG" alt="sonos5">
-</div>
-</div>
-<div class="paragraph">
-<p>A partir de ce widget (et seulement en version desktop), vous pouvez voir les musiques dans la file d&#8217;attente et les playlists disponibles pour lancer leur lecture, gerer la sortie sur different sonos et les radios favorites.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_le_panel">5. Le panel</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Le plugin Sonos met aussi à disposition un panel qui rassemble tout vos Sonos. Disponible a partir du menu Accueil &#8594; Sonos Controller :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos7.PNG" alt="sonos7">
-</div>
-</div>
-<div class="paragraph">
-<p>Cela permet d&#8217;avoir ce genre de vue synthétique :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos8.PNG" alt="sonos8">
-</div>
-</div>
-<div class="paragraph">
-<p>Il existe aussi une version mobile du panel, accessible à partir de Plugins &#8594; Sonos controller :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos9.PNG" alt="sonos9">
-</div>
-</div>
-<div class="paragraph">
-<p>Il vous permet comme en version bureau d&#8217;avoir une vue synthetique de vos Sonos :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/sonos10.PNG" alt="sonos10">
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Mise à jour de librairie de communication avec les sonos</p>
-</li>
-<li>
-<p>Optimisation du chargement des playlists</p>
-</li>
-<li>
-<p>Ajout de picotts pour la génération du TTS en locale</p>
-</li>
-<li>
-<p>Correction du bouton play/pause lors de la mise à jour du widget</p>
-</li>
-</ul>
-</div>
-</div>
+<p>En mettant votre souris tout à gauche vous avez accès à un menu de filtre avancé pour rechercher précisément un type de module, une alerte&#8230;&#8203;.</p>
 </div>
 </div>
 <div id="footer">
