@@ -15,7 +15,7 @@ $(function(){
 	//	THIRD_CONFIG = data
 	//	generateCatSite(THIRD_CONFIG);
 	//});
-	THIRD_CONFIG = jQuery.parseJSON('{"third_plugin": {"docs": [{"url": "third_plugin/ecowatt/#language#/index.html", "name": "eco-2-watt"}], "name": {"en_US": "Third plugins", "fr_FR": "Plugins tierces"}}}')
+	THIRD_CONFIG = jQuery.parseJSON('{"third_plugin":{"docs":[{"url":"third_plugin/ecowatt/#language#/index.html","name":"Eco-2-watt"},{"url":"third_plugin/ecowatt/#language#/index.html","name":"Test1"},{"url":"third_plugin/ecowatt/#language#/index.html","name":"Test2"},{"url":"third_plugin/ecowatt/#language#/index.html","name":"Test3"}],"name":{"en_US":"Thierd plugins","fr_FR":"Plugins tierces"}}}')
 	generateThirdSite(THIRD_CONFIG);
 
 	$('#sel_language').on('change',function(){
@@ -42,7 +42,6 @@ function generateCatSite(data){
 }
 
 function generateDocSite(data){
-	console.log(data);
 	$('#ul_listDoc').empty();
 	for(var i in data.docs){
 		$('#ul_listDoc').append('<a class="collection-item" target="_blank" href="'+data.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+convertCase(data.docs[i].name)+'</a>');
@@ -50,8 +49,9 @@ function generateDocSite(data){
 }
 
 function generateThirdSite(data){
-	console.log(data);
 	$('#ul_listThird').empty();
+	nb_third=data.third_plugin.docs.length;
+	alert(nb_third);
 	for(var i in data.third_plugin.docs){
 		$('#ul_listThird').append('<a class="collection-item" target="_blank" href="'+data.third_plugin.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+convertCase(data.third_plugin.docs[i].name)+'</a>');
 	}
