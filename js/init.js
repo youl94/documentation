@@ -49,10 +49,11 @@ function generateDocSite(data){
 }
 
 function generateThirdSite(data){
-	$('#ul_listThird').empty();
-	nb_third=data.third_plugin.docs.length;
-	//alert(nb_third);
+	$('#ul_listThird0').empty();
+	$('#ul_listThird1').empty();
+	$('#ul_listThird2').empty();
 	for(var i in data.third_plugin.docs){
-		$('#ul_listThird').append('<a class="collection-item" target="_blank" href="'+data.third_plugin.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+convertCase(data.third_plugin.docs[i].name)+'</a>');
+		colNb=i % 3;
+		$('#ul_listThird'+colNb).append('<a class="collection-item" target="_blank" href="'+data.third_plugin.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+convertCase(data.third_plugin.docs[i].name)+'</a>');
 	}
 }
