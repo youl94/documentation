@@ -16,10 +16,16 @@ p {
   line-height: 2rem;
 }
 
-.jeedomcolor {
+.jeedomcolorbg {
   background-color: #95C12B !important;
 }
 
+.jeedomcolor {
+  color: #95C12B !important;
+}
+.collection a.collection-item {
+  color: #85a835 !important;
+}
 
 /*
 .button-collapse {
