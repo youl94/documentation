@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*42* [green]*marques de modules différentes, soit un total de* [red]*234* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*43* [green]*marques de modules différentes, soit un total de* [red]*234* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -474,6 +474,15 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/27
 
 |image:../images/compatibility_list/fibaro.fgwpe101.jpg[width=150,align="center"]|Fibaro|FGWPE/FGWPF Wall Plug|Prise| |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgwpe101_-_Wall_Plug.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/2934-fibaro-module-prise-commutateur-z-wave-avec-mesure-d-energie-fgwpf-102-schuko-5902020528302.html++[Acheter^]
 // 271.1536.4096_fgwpe.wall.plug.json
+
+
+|===
+
+== Firstalert
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
 
 
 |===
@@ -1187,6 +1196,9 @@ _[small]#Piles : Cellule solaire#_| link:++http://www.domadoo.fr/fr/peripherique
 
 _[small]#Piles : 1X ER14250 3,6V#_| link:++http://www.domadoo.fr/fr/peripheriques/3701-fibaro-bouton-de-commande-the-button-z-wave-blanc--5902020528968.html++[Acheter^]
 // 271.3841.4096_fgpb101.button.json
+
+|image:../images/compatibility_list/firstalert.zcombo.jpg[width=150,align="center"]|Firstalert|ZCombo Smoke and Carbon Monoxide Detector|Fumée| _[small]#Piles : 1x9V#_| 
+// 312.1.2_zcombo.json
 
 |image:../images/compatibility_list/kwikset.smartcode912.jpg[width=150,align="center"]|Kwikset|Electronic Deadbolt Smartcode|Serrure| | 
 // 144.1.1_smartcode912.json
