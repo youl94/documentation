@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*43* [green]*marques de modules différentes, soit un total de* [red]*234* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*43* [green]*marques de modules différentes, soit un total de* [red]*237* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -178,6 +178,9 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 
 |image:../images/compatibility_list/benext.panicbutton.jpg[width=150,align="center"]|Benext|Panic Button|Télécommande| _[small]#Piles : 1x3V CR2032#_| link:++http://www.domadoo.fr/fr/peripheriques/2349-benext-telecommande-bouton-d-urgence-z-wave-0632181493731.html++[Acheter^]
 // 138.20.257_panic.button.json
+
+|image:../images/compatibility_list/benext.panicwatch.jpg[width=150,align="center"]|Benext|Panic Watch|Télécommande| _[small]#Piles : 1x3V CR2032#_| link:++http://www.domadoo.fr/fr/peripheriques/2350-benext-bracelet-bouton-d-urgence-z-wave-0632181493748.html++[Acheter^]
+// 138.21.257_panic.watch.json
 
 |image:../images/compatibility_list/benext.plugin-dimmer.jpg[width=150,align="center"]|Benext|Plug In Dimmer|Prise| | link:++http://www.domadoo.fr/fr/peripheriques/2347-benext-module-prise-variateur-z-wave-avec-mesure-d-energie-0632181493779.html++[Acheter^]
 // 138.24.256_plug.in.dimmer.json
@@ -858,8 +861,14 @@ _[small]#Piles : 1xER26500M#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 |image:../images/compatibility_list/qubino.zmnhjd1.jpg[width=150,align="center"]|Qubino|ZMNHJD1 Fil Pilote|Micromodule| | link:++http://www.domadoo.fr/fr/peripheriques/3210-qubino-module-fil-pilote-encastrable-z-wave-zmnhjd1.html++[Acheter^]
 // 345.4.81_zmnhjd1.flush.dimmer.fil.pilote.json
 
+|image:../images/compatibility_list/qubino.zmnhkdx.jpg[width=150,align="center"]|Qubino|ZMNHKDx Heat and Cool Thermostat Z-Wave+|Micromodule| | link:++http://www.domadoo.fr/fr/peripheriques/2948-qubino-micromodule-thermostat-chaud-froid-encastrable-z-wave-zmnhka2.html++[Acheter^]
+// 345.5.82_zmnhkdx.heatcool.thermostat.json
+
 |image:../images/compatibility_list/qubino.zmnhlax.jpg[width=150,align="center"]|Qubino|ZMNHLAx PWM Thermostat|Micromodule| | link:++http://www.domadoo.fr/fr/peripheriques/2941-qubino-micromodule-thermostat-pwm-encastrable-z-wave-zmnhla2-3830062070065.html++[Acheter^]
 // 345.5.3_zmnhlax.pwm.thermostat.json
+
+|image:../images/compatibility_list/qubino.zmnhldx.jpg[width=150,align="center"]|Qubino|ZMNHLDx PWM Thermostat Z-Wave+|Micromodule| | link:++http://www.domadoo.fr/fr/peripheriques/2949-qubino-micromodule-thermostat-pwm-encastrable-z-wave-zmnhld1.html++[Acheter^]
+// 345.5.83_zmnhldx.pwm.thermostat.json
 
 |image:../images/compatibility_list/qubino.zmnhndx.jpg[width=150,align="center"]|Qubino|ZMNHNDx Contact sec Z-Wave+|Micromodule| | link:++http://www.domadoo.fr/fr/peripheriques/2950-qubino-micromodule-contact-sec-z-wave-zmnhnd1-3830062070072.html++[Acheter^]
 // 345.2.83_zmnhndx.flush.1d.relay.json
