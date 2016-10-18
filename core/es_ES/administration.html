@@ -425,17 +425,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_configuración_de_logs_y_mensajes">7. Configuración de logs y mensajes</a></li>
 <li><a href="#_configuración_ldap">8. Configuración LDAP</a></li>
 <li><a href="#_configuración_de_dispositivos">9. Configuración de dispositivos</a></li>
-<li><a href="#_mise_à_jour_et_fichiers">10. Mise à jour et fichiers</a>
-<ul class="sectlevel2">
-<li><a href="#_les_dépots">10.1. Les dépots</a>
+<li><a href="#_actualización_y_ficheros">10. Actualización y ficheros</a></li>
+<li><a href="#_depósitos">11. Depósitos</a>
 <ul class="sectlevel3">
-<li><a href="#_market">10.1.1. Market</a></li>
-<li><a href="#_fichier">10.1.2. Fichier</a></li>
-<li><a href="#_github">10.1.3. Github</a></li>
-<li><a href="#_samba">10.1.4. Samba</a></li>
-<li><a href="#_url">10.1.5. URL</a></li>
-</ul>
-</li>
+<li><a href="#_market">11.1. Market</a></li>
+<li><a href="#_archivo">11.2. Archivo</a></li>
+<li><a href="#_github">11.3. Github</a></li>
+<li><a href="#_samba">11.4. Samba</a></li>
+<li><a href="#_url">11.5. URL</a></li>
 </ul>
 </li>
 </ul>
@@ -474,19 +471,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Nom de votre Jeedom</strong> : peut etre réutilisé dans les scénarios ou permettre d&#8217;identifier un backup</p>
+<p>* Nombre de su Jeedom *: pueden ser reutilizados en escenarios o permite identificar una copia de seguridad</p>
 </li>
 <li>
 <p>* * Clave API: la clave de la API a utilizar para cualquier aplicación en la API de Jeedom</p>
 </li>
 <li>
-<p><strong>Clef API Pro</strong> : utilisé pour communiquer avec le systeme de gestion de parc</p>
+<p><strong>Clave API Pro</strong> : utilizado para conectar con el sistema de gestión de Parque</p>
 </li>
 <li>
 <p><strong>Sistema</strong>: modelo de hardware</p>
 </li>
 <li>
-<p><strong>Clef d&#8217;installation</strong> : clef hardware de votre Jeedom sur le market. Si votre Jeedom n&#8217;apparait pas dans la liste de vos Jeedom sur le market il est conseillé de cliquer sur ce bouton</p>
+<p><strong>Clave de instalación</strong> : clave de hardware de su Jeedom en el market. Si tu Jeedom no aparece en la lista de tus Jeedom en el market, es recomendable hacer clic en este botón</p>
 </li>
 <li>
 <p><strong>Idioma</strong> : Idioma de su Jeedom</p>
@@ -498,13 +495,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>Fecha y hora</strong>: Su zona horaria</p>
 </li>
 <li>
-<p><strong>Serveur de temps optionnel</strong> : permet d&#8217;ajouter un serveur de temps optionnel (à réserver aux experts)</p>
+<p><strong>Servidor de tiempo opcional</strong> : permite añadir un servidor de tiempo opcional (reservado para expertos)</p>
 </li>
 <li>
 <p><strong>Ignorar la verificación de tiempo</strong>: Jeedom no verificará si el tiempo es coherente. Es útil por ejemplo si Jeedom no va a estar conectado a internet ni dispone de batería RTC.</p>
 </li>
 <li>
-<p><strong>Mode</strong> : Mode de votre Jeedom maître ou esclave, attention lors du passage en esclave : tous vos équipements, scénarios, design&#8230;&#8203; seront supprimés.</p>
+<p><strong>Modo</strong>: Modo de Jeedom, maestro o esclavo. Atención, al pasar a esclavo, todos los dispositivos, escenas, diseños&#8230;&#8203; serán eliminados</p>
 </li>
 </ul>
 </div>
@@ -625,14 +622,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p><strong>Proxy market</strong> : permet un accès distant à votre Jeedom sans avoir besoin d&#8217;un DNS, d&#8217;une IP fixe ou d&#8217;ouvrir les ports de votre box</p>
+<p><strong>Proxy market</strong> : permite el acceso remoto a su Jeedom sin necesidad de un servidor DNS, una IP fija o puertos abiertos en su dispositivo</p>
 <div class="ulist">
 <ul>
 <li>
 <p><strong>Usar DNS Jeedom</strong>: Activars DNS Jeedom (se requiere disponer de un service pack)</p>
 </li>
 <li>
-<p><strong>Statut DNS</strong> : statut du DNS http</p>
+<p>Estado DNS* : estado de http DNS</p>
 </li>
 <li>
 <p><strong>Gestión</strong>: Permite detener y reiniciar el servicio DNS</p>
@@ -688,7 +685,7 @@ Si accede a través de HTTPS, el puerto por defecto es el 443 y si lo hace a tra
 </div>
 </div>
 <div class="paragraph">
-<p>Vous pouvez aussi configurer ici la transparence des widgets de maniere global (qui sera la valeur par défaut, il est possible ensuite de modifier cette valeur widget par widget)</p>
+<p>También puede ajustar la transparencia de los widgets en una forma global (que será el valor por defecto, es posible entonces cambiar este valor del widget por widget)</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -820,7 +817,7 @@ No olvide guardar los cambios después de hacer modificaciones
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mise_à_jour_et_fichiers">10. Mise à jour et fichiers</h2>
+<h2 id="_actualización_y_ficheros">10. Actualización y ficheros</h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
@@ -830,25 +827,28 @@ No olvide guardar los cambios después de hacer modificaciones
 <div class="ulist">
 <ul>
 <li>
-<p>Source de mise à jour :</p>
+<p>Fuente de actualización :</p>
 </li>
 <li>
-<p>Faire une sauvegarde avant la mise à jour</p>
+<p>Hacer una copia de seguridad antes de la actualización</p>
 </li>
 <li>
-<p>Vérifier automatiquement si il y a des mises à jour</p>
+<p>Comprueba automáticamente si hay actualizaciones</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_les_dépots">10.1. Les dépots</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_depósitos">11. Depósitos</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Les dépots sont des espaces de stockage (et de service) pour pouvoir mettre des backups, récuperer des plugins, récuperer le core de jeedom&#8230;&#8203;.</p>
+<p>Los depósitos son espacios de almacenamiento (y servicio) para poder poner copias de seguridad, obtener plugins, recuperar la base de jeedom&#8230;&#8203;</p>
 </div>
 <div class="sect3">
-<h4 id="_market">10.1.1. Market</h4>
+<h4 id="_market">11.1. Market</h4>
 <div class="paragraph">
-<p>Dépot servant à reliéer Jeedom au market, il est vivement conseillé d&#8217;utiliser ce dépot. Attention toute demande de support pourra être refusée si vous utilisé un autre de dépot que celui-ci.</p>
+<p>Servidor de repositiorios conectados al market de Jeedom, es recomendable utilizar este repositorio. Atención cualquier solicitud de soporte podrá ser denegada si usted utiliza otro repositorio diferente a este.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -870,9 +870,9 @@ No olvide guardar los cambios después de hacer modificaciones
 </div>
 </div>
 <div class="sect3">
-<h4 id="_fichier">10.1.2. Fichier</h4>
+<h4 id="_archivo">11.2. Archivo</h4>
 <div class="paragraph">
-<p>Dépot servant à activer l&#8217;envoi de plugin par des fichiers</p>
+<p>Depósito para activar el  envio de ficheros de plugin</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -881,9 +881,9 @@ No olvide guardar los cambios después de hacer modificaciones
 </div>
 </div>
 <div class="sect3">
-<h4 id="_github">10.1.3. Github</h4>
+<h4 id="_github">11.3. Github</h4>
 <div class="paragraph">
-<p>Dépot servant à relier Jeedom à Github</p>
+<p>Depósito utilizado para conectar Jeedom a Github</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -893,24 +893,24 @@ No olvide guardar los cambios después de hacer modificaciones
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Token</strong> : Token pour l&#8217;accès au dépot privé</p>
+<p><strong>Token</strong> : Token para el acceso al depositivo privada</p>
 </li>
 <li>
-<p><strong>Utilisateur ou organisation du dépot pour le core Jeedom</strong></p>
+<p>*Usuario u organización del repositorio para el core de Jeedom *.</p>
 </li>
 <li>
-<p><strong>Nom du dépôt pour le core Jeedom</strong></p>
+<p>*Nombre del repositorio para el core de Jeedom *.</p>
 </li>
 <li>
-<p><strong>Branche pour le core Jeedom</strong></p>
+<p><strong>Branch para el core de jedoom</strong></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_samba">10.1.4. Samba</h4>
+<h4 id="_samba">11.4. Samba</h4>
 <div class="paragraph">
-<p>Dépot permettant d&#8217;envoyer automatique un backup de jeedom sur un partage samba (ex NAS Synology)</p>
+<p>Repositorio para enviar un backup automático de jeedom en un recurso compartido de samba (ej. NAS Synology)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -920,28 +920,31 @@ No olvide guardar los cambios después de hacer modificaciones
 <div class="ulist">
 <ul>
 <li>
-<p><strong>[Backup] IP</strong> : IP du serveur Samba</p>
+<p><strong>[Backup] IP</strong> : IP del servidor Samba</p>
 </li>
 <li>
-<p><strong>[Backup] Utilisateur</strong> : Nom d&#8217;utilisateur pour la connexion (les connexions anonyme ne sont pas possible)</p>
+<p>*[Usuario backup] *: Nombre de usuario para la conexión (conexiones anónimas no son posibles)</p>
 </li>
 <li>
-<p><strong>[Backup] Mot de passe</strong> : Mot de passe de l&#8217;utilisateur</p>
+<p><strong>[Contraseña backup]</strong> : contraseña del usuario</p>
 </li>
 <li>
-<p><strong>[Backup] Partage</strong> : Chemin du partage (attention à bien s&#8217;arreter au niveau du partage)</p>
+<p><strong>[Backup] recurso</strong> : La ruta del recurso compartido (Asegúrese de indicar la ruta compartida correcta)</p>
 </li>
 <li>
-<p><strong>[Backup] Chemin</strong> : Chemin dans le partage (à mettre en relatif), celui-ci doit exister</p>
+<p>*[Ruta Backup] *: Ruta para compartirr (para ser relativa),  debe existir</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Il vous faudra peut etre installer le package smbclient pour que le dépot fonctionne</p>
+<p>Tal vez necesite instalar el paquete smbclient para que repositorio funcione</p>
+</div>
+<div class="paragraph">
+<p>Jeedom debe poder escribir en esta carpeta, y debe estar vacía por defecto (es decir, que antes de hacer la configuración y enviar el primer Backup, la carpeta no puede contener ningún archivo o carpeta)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_url">10.1.5. URL</h4>
+<h4 id="_url">11.5. URL</h4>
 <div class="imageblock">
 <div class="content">
 <img src="../images/administration19.png" alt="administration19">
@@ -956,7 +959,6 @@ No olvide guardar los cambios después de hacer modificaciones
 <p><strong>URL version core Jeedom</strong></p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>
