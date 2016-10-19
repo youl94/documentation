@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.3.dev">
+<title>Migration mode esclave Jeedom vers JeeLink</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove the comments around the @import statement below when using this as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+#map_canvas img,#map_canvas embed,#map_canvas object,.map_canvas img,.map_canvas embed,.map_canvas object{max-width:none!important}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+.antialiased,body{-webkit-font-smoothing:antialiased}
+img{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{display:inline-block;color:rgba(0,0,0,.8);font-size:.75em;line-height:1.4;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:-.15em .15em 0 .15em;padding:.2em .6em .2em .5em;vertical-align:middle;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.05em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.spread{width:100%}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1{padding-right:.75em;font-weight:bold}
+td.hdlist1,td.hdlist2{vertical-align:top}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none}
+span.footnote,span.footnoteref{vertical-align:super;font-size:.875em}
+span.footnote a,span.footnoteref a{text-decoration:none}
+span.footnote a:active,span.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em;line-height:1.3;font-size:.875em;margin-left:1.2em;text-indent:-1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+h1,h2{letter-spacing:-.01em}
+dt,th.tableblock,td.content{text-rendering:optimizeLegibility}
+p,td.content{letter-spacing:-.01em}
+p strong,td.content strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img{page-break-inside:avoid}
+thead{display:table-header-group}
+img{max-width:100%!important}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Migration mode esclave Jeedom vers JeeLink</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#_préparation_avant_migration">1. Préparation avant migration</a>
+<ul class="sectlevel2">
+<li><a href="#_mises_à_jour_et_vérification_de_la_configuration">1.1. Mises à jour et Vérification de la Configuration</a></li>
+<li><a href="#_rassemblement_des_informations_utiles">1.2. Rassemblement des informations utiles</a>
+<ul class="sectlevel3">
+<li><a href="#_plugin_zwave">1.2.1. Plugin Zwave</a></li>
+<li><a href="#_plugin_rfxcom">1.2.2. Plugin RFXcom</a></li>
+</ul>
+</li>
+<li><a href="#_sauvegardes_préventives">1.3. Sauvegardes préventives</a></li>
+</ul>
+</li>
+<li><a href="#_migration">2. Migration</a>
+<ul class="sectlevel2">
+<li><a href="#_installer_et_activer_le_plugin_jeedom_link_sur_le_strong_jeedom_cible_strong_ancien_maître">2.1. Installer et activer le plugin "Jeedom Link" sur le <strong>Jeedom Cible</strong> (ancien Maître).</a></li>
+<li><a href="#_installation_du_strong_jeedom_source_strong">2.2. Installation du <strong>Jeedom Source</strong> :</a></li>
+<li><a href="#_configuration_du_jeedom_source">2.3. Configuration du Jeedom Source</a></li>
+<li><a href="#_configuration_des_équipements_sur_le_strong_jeedom_source_strong">2.4. Configuration des équipements sur le <strong>Jeedom Source</strong></a>
+<ul class="sectlevel3">
+<li><a href="#_plugin_zwave_2">2.4.1. Plugin Zwave :</a></li>
+<li><a href="#_plugin_rfxcom_2">2.4.2. Plugin Rfxcom :</a></li>
+</ul>
+</li>
+<li><a href="#_configuration_du_plugin_jeedom_link">2.5. Configuration du plugin "Jeedom Link"</a></li>
+<li><a href="#_récupération_des_historiques">2.6. Récupération des historiques</a></li>
+<li><a href="#_remplacement_des_anciens_équipements_esclaves_dans_les_scénarios_virtuels">2.7. Remplacement des anciens équipements esclaves dans les Scénarios/virtuels/&#8230;&#8203;</a></li>
+<li><a href="#_récupération_des_configurations_d_affichage_avancées_des_commandes">2.8. Récupération des configurations d&#8217;affichage avancées des commandes</a></li>
+<li><a href="#_recopie_des_configurations_avancées_des_commandes">2.9. Recopie des configurations avancées des commandes</a></li>
+</ul>
+</li>
+<li><a href="#_ménage_sur_le_strong_jeedom_cible_strong">3. Ménage sur le <strong>Jeedom Cible</strong></a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nous allons voir ici comment migrer une installation avec Jeedom en mode esclave vers un Jeedom avec le plugin "Jeedom Link".
+Le mode esclave Jeedom étant abandonné au passage de Jeedom à la version 2.5, il est nécessaire de procéder avant à la migration vers le nouveau mode de fonctionnement.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_préparation_avant_migration">1. Préparation avant migration</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Il est important de lire l&#8217;intégralité de cette documentation avant de vous lancer dans la migration. Des informations importantes concernant les prérequis de mise à jour, la sauvegarde et la récupération d&#8217;informations sont indispensables à la bonne compréhension de l&#8217;opération à mener. Vous abstenir de lire cette documentation peut entrainer des opérations destructives sur votre installation. Si vous ne comprenez pas un point, n&#8217;hésitez pas à poser des questions sur le forum avant de commencer la procédure !
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Faites bien attention à ne pas faire de boucle d&#8217;équipement en configurant le plugin "Jeedom Link". Par exemple ne pas faire un Equipement-X dans un Jeedom1 qui remonte dans un Jeedom2 puis remonte à nouveau dans le Jeedom1. Cela pourrait faire tomber vos Jeedoms !
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Pour une meilleure lecture et compréhension de ce tutoriel, voici les termes utilisés :<br>
+ <br>
+- <strong>Jeedom Cible</strong> : Serveur (votre ancien Jeedom Maître) qui centralise les équipements du/des <strong>Jeedom(s) Source(s)</strong><br>
+   Les copies d&#8217;écran sur fond noir correspondent au <strong>Jeedom Cible</strong>.<br>
+  <br>
+- <strong>Jeedom Source</strong> : Serveur (votre/vos ancien(s) Jeedom Esclave(s)) qui remonte vos équipements sur le <strong>Jeedom Cible</strong>.<br>
+  <br>
+- Les notions de <strong>Jeedom Maître</strong> et <strong>Jeedom Esclave</strong> ne sont plus d&#8217;actualité. Le nouveau mode de fonctionnement de synchronisation d&#8217;équipements entre plusieurs Jeedoms peut être bidirectionnel. Un serveur Jeedom peut être désormais <strong>Source</strong> et <strong>Cible</strong> alors que l&#8217;ancien mode ne permettait que la remontée des équipements de <strong>l&#8217;Esclave</strong> vers <strong>le Maître</strong>. Avec le nouveau mode il est aussi possible d&#8217;avoir plusieurs <strong>Jeedom Cibles</strong> pour un même <strong>Jeedom Source</strong>. La communication entre les Jeedoms peut désormais aussi s&#8217;éffectuer à distance via internet (DNS Jeedom ou autre).<br>
+ <br>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration9.png" alt="jeelink.migration9">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mises_à_jour_et_vérification_de_la_configuration">1.1. Mises à jour et Vérification de la Configuration</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Mettre à jour le <strong>Jeedom Maître</strong> à la dernière version (même si aucune mise à jour ne vous est proposée).</p>
+</li>
+<li>
+<p>Mettre à jour les plugins du <strong>Jeedom Maître</strong> aux dernières versions disponibles.</p>
+</li>
+<li>
+<p>Vérifier dans la page Santé que la configuration réseau interne du <strong>Jeedom Maître</strong> est OK (Et externe si vos <strong>Jeedoms Sources</strong> seront distants).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rassemblement_des_informations_utiles">1.2. Rassemblement des informations utiles</h3>
+<div class="paragraph">
+<p>En fonction des plugins installés sur votre <strong>Jeedom Esclave</strong>, il est nécessaire de récupérer les informations suivantes :</p>
+</div>
+<div class="sect3">
+<h4 id="_plugin_zwave">1.2.1. Plugin Zwave</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Dans la page santé du plugin zwave sur le <strong>Jeedom Maître</strong>, choisir votre <strong>Esclave</strong> dans le menu déroulant et faire une copie d&#8217;écran, ceci afin de disposer d&#8217;une liste des équipements qui viennent de celui-ci.</p>
+</li>
+<li>
+<p>Noter pour chaque équipement venant de <strong>l&#8217;Esclave</strong> : l&#8217;objet parent, le nom, l&#8217;ID (Node), le modèle.</p>
+</li>
+<li>
+<p>Récupérer le fichier Zwcfg : <em>Plugins &#8658; Gestion des Plugins &#8658; Z-wave</em>. Cliquer sur le bouton rouge <em>Zwcfg</em> et copier le contenu dans un fichier texte sur votre ordinateur.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_plugin_rfxcom">1.2.2. Plugin RFXcom</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Noter pour chaque équipement venant de <strong>l&#8217;Esclave</strong> : l&#8217;objet parent, le nom, l&#8217;ID (Logique), Le type, Le modèle.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Une fiche non exhaustive des informations à noter pour la migration est disponible <a href="../images/MemoMigration.xls">ici</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sauvegardes_préventives">1.3. Sauvegardes préventives</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Faire une <a href="https://www.jeedom.com/doc/documentation/core/fr_FR/doc-core-backup.html">sauvegarde Jeedom</a> de votre <strong>Jeedom Maître</strong> et de votre (vos) <strong>Jeedom Esclave(s)</strong> et récupérer celle(s)-ci sur votre PC/NAS&#8230;&#8203;.</p>
+</li>
+<li>
+<p>Faire une <a href="https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-sauvegarde.comment_faire.html#_sauvegarde_restauration_de_la_carte_microsd">sauvegarde SD/Disque</a> de votre <strong>Jeedom Maître</strong> et de votre (vos) <strong>Jeedom Esclave(s)</strong> et les récupérer sur votre PC/NAS&#8230;&#8203;.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_migration">2. Migration</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ne pas supprimer pour l&#8217;instant les anciens équipements de <strong>l&#8217;Esclave</strong> sur <strong>le Maître</strong>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_installer_et_activer_le_plugin_jeedom_link_sur_le_strong_jeedom_cible_strong_ancien_maître">2.1. Installer et activer le plugin "Jeedom Link" sur le <strong>Jeedom Cible</strong> (ancien Maître).</h3>
+<div class="paragraph">
+<p>Sur votre <strong>Jeedom Cible</strong>, <em>Plugins &#8658; Gestion des plugins</em> :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration1.png" alt="jeelink.migration1">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_du_strong_jeedom_source_strong">2.2. Installation du <strong>Jeedom Source</strong> :</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+si vous disposez d&#8217;un RaspberryPi supplémentaire et d&#8217;une autre carte SD, vous pouvez procéder à une migration un protocole après l&#8217;autre en installant un nouveau <strong>Jeedom Source</strong> en parallèle sans avoir à toucher à votre <strong>Jeedom Esclave</strong> existant. En déplaçant évidemment au fur et à mesure les éventuels contrôleurs de l&#8217;un à l&#8217;autre.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Si vous utiliser votre RaspberryPi existant, veuillez être certain d&#8217;avoir suivi le chapitre sauvegarde de cette documentation.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+si vous utilisez le RaspberryPi existant qui est actuellement un <strong>Jeedom Esclave</strong>, nous vous conseillons d&#8217;utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Installer un nouveau Jeedom sur une nouvelle carte SD (Que cela soit pour mettre dans votre <strong>Jeedom Esclave</strong> existant ou pour un nouveau RaspberryPi) en suivant la <a href="https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html">documentation d&#8217;installation</a>.</p>
+</li>
+<li>
+<p>Mettre à jour le <strong>Jeedom Source</strong> à la dernière version (même si aucune mise à jour ne vous est proposée).</p>
+</li>
+<li>
+<p>Vérifier dans la page Santé que la configuration réseau interne (et externe si besoin) du <strong>Jeedom Source</strong> est OK.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_du_jeedom_source">2.3. Configuration du Jeedom Source</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Changer le mot de passe de l&#8217;utilisateur admin ou/et configurer un nouvel utilisateur.</p>
+</li>
+<li>
+<p>Configurer votre compte Jeedom Market (<em>Configuration &#8658; Mises à jour et fichiers &#8658; onglet "Market"</em>). Cliquer sur tester après avoir sauvegardé, pour valider la saisie de vos identifiants Jeedom Market).</p>
+</li>
+<li>
+<p>Installation et activation du plugin "Jeedom Link" sur le nouveau <strong>Jeedom Source</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration2.png" alt="jeelink.migration2">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Installation et activation des plugins que vous souhaitez utiliser. (Il est conseillé de les faire un par un, en vérifiant bien à chaque fois que les dépendances et les démons éventuels sont OK).</p>
+</li>
+<li>
+<p>Recréer l&#8217;arborescence des objets (juste ceux qui vont vous être utiles) du <strong>Jeedom Cible</strong> (Ancien Maître) sur votre nouveau <strong>Jeedom Source</strong> (Ancien Esclave).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_des_équipements_sur_le_strong_jeedom_source_strong">2.4. Configuration des équipements sur le <strong>Jeedom Source</strong></h3>
+<div class="paragraph">
+<p>Pour procéder à l&#8217;envoi d&#8217;un équipement présent sur le <strong>Jeedom Source</strong> vers le <strong>Jeedom Cible</strong> via le plugin "Jeedom Link", il est nécessaire que ce dernier soit déjà opérationnel sur votre nouveau <strong>Jeedom Source</strong>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Penser au fur et à mesure à désactiver l&#8217;historisation des commandes info de chaque équipement se trouvant sur le <strong>Jeedom Source</strong> afin d&#8217;économiser la carte SD de celui-ci (L&#8217;historisation se fera sur le <strong>Jeedom Cible</strong>).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Vous pouvez aussi au fur et à mesure assigner les équipements aux objets recréés sur le <strong>Jeedom Source</strong> afin qu&#8217;ils soient plus tard mis automatiquement dans le bon objet sur le <strong>Jeedom Cible</strong> lors de la déclaration dans le plugin "Jeedom Link". En cas de doublon de nom avec un équipement déjà présent dans les objets du <strong>Jeedom Cible</strong>, le plugin ajoutera "remote XXXX" au nom de l&#8217;équipement.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_plugin_zwave_2">2.4.1. Plugin Zwave :</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Cliquer sur le bouton "Synchroniser" afin de récupérer les modules associés à votre contrôleur. (Ils sont gardés dans la mémoire de celui-ci)</p>
+</li>
+<li>
+<p>Remplacer le fichier <em>Zwcfg</em> : <em>Plugins &#8658; Gestion des Plugins &#8658; Z-wave</em>. Cliquer sur le bouton rouge <em>Zwcfg</em> et coller le contenu du fichier texte précédement créé sur votre ordinateur. <em>Sauvegarder les changements</em>.</p>
+</li>
+<li>
+<p>Renommer vos modules et les placer dans les objets souhaités en vous aidant de votre mémo de migration.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_plugin_rfxcom_2">2.4.2. Plugin Rfxcom :</h4>
+<div class="sect4">
+<h5 id="_sondes_capteurs_détecteurs">Sondes, capteurs, détecteurs,&#8230;&#8203; :</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Passer le plugin en mode inclusion.</p>
+</li>
+<li>
+<p>Recommencer l&#8217;inclusion jusqu&#8217;à obtenir tous vos équipements de ce type.</p>
+</li>
+<li>
+<p>Renommer vos équipements et les placer dans les objets souhaités en vous aidant de votre mémo de migration.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_actionneurs_prises">Actionneurs, prises, &#8230;&#8203;. :</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Ajouter un nouvel équipement.</p>
+</li>
+<li>
+<p>Définir le nom, l&#8217;ID, l&#8217;objet parent, le type d&#8217;équipement et le modèle en vous aidant de votre mémo de migration.</p>
+</li>
+<li>
+<p>Recommencer pour tous vos équipements de ce type.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_du_plugin_jeedom_link">2.5. Configuration du plugin "Jeedom Link"</h3>
+<div class="paragraph">
+<p>Le plugin "Jeedom Link" installé sur le <strong>Jeedom Source</strong> permettra la remontée des équipements sur le <strong>Jeedom Cible</strong> (Votre ancien Maître).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Rappel, pour une meilleure lecture et compréhension de ce tutoriel :<br>
+  <br>
+   Les copies d&#8217;écran sur fond noir correspondent au <strong>Jeedom Cible</strong>.<br>
+  <br>
+   Les copies d&#8217;écran sur fond blanc correspondent au <strong>Jeedom Source</strong>.<br>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Sur le <strong>Jeedom Source</strong>, <a href="https://www.jeedom.com/doc/documentation/plugins/jeelink/fr_FR/jeelink">configurer</a> le plugin "Jeedom Link" en spécifiant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le nom du <strong>Jeedom Cible</strong>.</p>
+</li>
+<li>
+<p>L&#8217;adresse IP ou le nom DNS du <strong>Jeedom Cible</strong>.</p>
+</li>
+<li>
+<p>La clé API du <strong>Jeedom Cible</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Et sauvegarder la configuration.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration3.png" alt="jeelink.migration3">
+</div>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;onglet <em>Affectation</em>, ajouter les équipements que vous désirez remonter vers le <strong>Jeedom Cible</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration4.png" alt="jeelink.migration4">
+</div>
+</div>
+<div class="paragraph">
+<p>Cliquer sur <em>Ajouter un équipement</em>
+Sélectionner l&#8217;objet et l&#8217;équipement à ajouter :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration5.png" alt="jeelink.migration5">
+</div>
+</div>
+<div class="paragraph">
+<p>Après avoir rafraîchit la page <em>Mes JeeLinks</em> du <strong>Jeedom Cible</strong>, vous devez constater la création automatique de l&#8217;équipement :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration6.png" alt="jeelink.migration6">
+</div>
+</div>
+<div class="paragraph">
+<p>Comme tout équipement Jeedom, vous pouvez activer/désactiver et afficher ou non l&#8217;équipement, ses commandes,&#8230;&#8203; ou changer la catégorie :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration7.png" alt="jeelink.migration7">
+</div>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;onglet <em>Commandes</em>, vous accédez à tous les paramètres des commandes de l&#8217;équipement :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/jeelink.migration8.png" alt="jeelink.migration8">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_récupération_des_historiques">2.6. Récupération des historiques</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut récupérer l&#8217;historique.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Aller dans la configuration de la commande (<em>Roue crantée à droite</em>).</p>
+</li>
+<li>
+<p>Aller dans l&#8217;onglet <em>Configuration Avancée</em>.</p>
+</li>
+<li>
+<p>Cliquer sur le bouton <em>Copier l&#8217;historique de cette commande sur une autre commande</em>.</p>
+</li>
+<li>
+<p>Chercher la commande correspondante du nouvel équipement JeeLink correspondant et valider.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_remplacement_des_anciens_équipements_esclaves_dans_les_scénarios_virtuels">2.7. Remplacement des anciens équipements esclaves dans les Scénarios/virtuels/&#8230;&#8203;</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info/action des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut remplacer les occurrences dans les scénarios/virtuels/&#8230;&#8203;.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Aller dans la configuration de la commande (<em>Roue crantée à droite</em>).</p>
+</li>
+<li>
+<p>Aller dans l&#8217;onglet <em>Informations</em>.</p>
+</li>
+<li>
+<p>Cliquer sur le bouton <em>Remplacer cette commande par la commande</em>.</p>
+</li>
+<li>
+<p>Chercher la commande correspondante du nouvel équipement JeeLink correspondant et valider.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_récupération_des_configurations_d_affichage_avancées_des_commandes">2.8. Récupération des configurations d&#8217;affichage avancées des commandes</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info/action des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut récupérer les paramètres d&#8217;affichage avancés.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Aller dans la configuration de la commande (<em>Roue crantée à droite</em>).</p>
+</li>
+<li>
+<p>Cliquer sur le bouton <em>appliquer à</em>.</p>
+</li>
+<li>
+<p>Chercher et sélectionner la commande correspondante du nouvel équipement JeeLink correspondant et valider.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_recopie_des_configurations_avancées_des_commandes">2.9. Recopie des configurations avancées des commandes</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info/action des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut récupérer la configuration avancée.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Pas de solution facile à ce niveau, il faudra avoir deux onglets/fenêtres d&#8217;ouverts sur votre navigateur.</p>
+</li>
+<li>
+<p>Ouvrir les commandes des équipements de l&#8217;ancien <strong>Esclave</strong> dans un onglet (Jeedom Cible).</p>
+</li>
+<li>
+<p>Ouvrir les commandes des équipements jeeLink dans l&#8217;autre onglet (Jeedom Cible).</p>
+</li>
+<li>
+<p>Et recopier à la main les paramètres voulus.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Afin d&#8217;éviter de revenir plusieurs fois sur la même commande, les opérations 2.6&#8594;2.9 peuvent être réalisées à la suite sur une même commande avant de passer aux suivantes.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Les interactions sur le <strong>Jeedom Cible</strong> ne pourront pas être lancées par le biais d&#8217;équipements d&#8217;un <strong>Jeedom Source</strong> tranférés via le plugin "Jeedom Link".
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ménage_sur_le_strong_jeedom_cible_strong">3. Ménage sur le <strong>Jeedom Cible</strong></h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Après avoir bien validé que vos équipements/scénarios/interactions/virtuels/&#8230;&#8203;. fonctionnent bien avec le nouveau système jeelink, vous pouvez procéder au ménage.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Supprimer les équipements résiduels de l&#8217;ancien <strong>Jeedom Esclave</strong>.</p>
+</li>
+<li>
+<p>Désactiver et supprimer les plugins qui ne vous sont plus utiles (Ceux dont vous n&#8217;aviez que des équipements sur l&#8217;Esclave).</p>
+</li>
+<li>
+<p>Dans le plugin "Jeedom Link", renommer les équipements qui pourraient avoir un nom finissant par "remote XXXX".</p>
+</li>
+<li>
+<p>Dans la page Réseau Jeedom, supprimer l&#8217;ancien <strong>Jeedom Esclave</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+</div>
+</div>
+</body>
+</html>
