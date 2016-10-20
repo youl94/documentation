@@ -1,4 +1,4 @@
-= OpenGarage avec Jeedom
+= OpenGarage with Jeedom
 
 OpenGarage est un objet de type DIY mais aussi disponible monté sur commande et qui sert dans le garage.
 
@@ -10,9 +10,9 @@ http://opengarage.io/
 
 Afin de récupérer l'état du relais et du capteur de distance, l'url a utilisé est :
 
-----
+---
 http://addropengarage/jc
-----
+---
 
 Le résultat est un json. Il faut donc utiliser un equipement de type Script et une commande info de type json
 
@@ -24,13 +24,13 @@ Pour le capteur de distance : dist
 
 L'adresse pour l'activation du relais est :
 
-----
+---
 http://addropengarage/cc?dkey=xxxx&click=1
-----
+---
 
 dkey est la clef de l'api, par défaut c'est opendoor
 
-== Plus d'infos
+== More informations
 
 La documentation complète de l'API est disponible sur github :
 
