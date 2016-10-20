@@ -1,12 +1,12 @@
 = Migration mode esclave Jeedom vers JeeLink
 
 Nous allons voir ici comment migrer une installation avec Jeedom en mode esclave vers un Jeedom avec le plugin "Jeedom Link".
-Le mode esclave Jeedom étant abandonné au passage de Jeedom à la version 2.5, il est nécessaire de procéder avant à la migration vers le nouveau mode de fonctionnement.
+Le mode esclave Jeedom étant abandonné au passage de Jeedom à la version 3.0, il est nécessaire de procéder avant à la migration vers le nouveau mode de fonctionnement.
 
 
 == Préparation avant migration
 
-WARNING: Il est important de lire l'intégralité de cette documentation avant de vous lancer dans la migration. Des informations importantes concernant les prérequis de mise à jour, la sauvegarde et la récupération d'informations sont indispensables à la bonne compréhension de l'opération à mener. Vous abstenir de lire cette documentation peut entrainer des opérations destructives sur votre installation. Si vous ne comprenez pas un point, n'hésitez pas à poser des questions sur le forum avant de commencer la procédure !
+WARNING: Il est important de lire l'intégralité de cette documentation avant de vous lancer dans la migration. Des informations importantes concernant les prérequis de mise à jour, la sauvegarde et la récupération d'informations sont indispensables à la bonne compréhension de l'opération à mener. Vous abstenir de lire cette documentation peut entraîner des opérations destructives sur votre installation. Si vous ne comprenez pas un point, n'hésitez pas à poser des questions sur le forum avant de commencer la procédure !
 
 IMPORTANT: Faites bien attention à ne pas faire de boucle d'équipement en configurant le plugin "Jeedom Link". Par exemple ne pas faire un Equipement-X dans un Jeedom1 qui remonte dans un Jeedom2 puis remonte à nouveau dans le Jeedom1. Cela pourrait faire tomber vos Jeedoms !
 
