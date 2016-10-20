@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>OpenGarage avec Jeedom</title>
+<title>OpenGarage with Jeedom</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,13 +412,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>OpenGarage avec Jeedom</h1>
+<h1>OpenGarage with Jeedom</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
 <li><a href="#_lecture_des_états_du_opengarage">1. Lecture des états du OpenGarage</a></li>
 <li><a href="#_action_sur_le_opengarage">2. Action sur le OpenGarage</a></li>
-<li><a href="#_plus_d_infos">3. Plus d&#8217;infos</a></li>
+<li><a href="#_more_informations">3. More informations</a></li>
 </ul>
 </div>
 </div>
@@ -442,10 +442,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Afin de récupérer l&#8217;état du relais et du capteur de distance, l&#8217;url a utilisé est :</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>http://addropengarage/jc</pre>
-</div>
+<hr>
+<div class="paragraph">
+<p><a href="http://addropengarage/jc" class="bare">http://addropengarage/jc</a>
+---</p>
 </div>
 <div class="paragraph">
 <p>Le résultat est un json. Il faut donc utiliser un equipement de type Script et une commande info de type json</p>
@@ -464,10 +464,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>L&#8217;adresse pour l&#8217;activation du relais est :</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>http://addropengarage/cc?dkey=xxxx&amp;click=1</pre>
-</div>
+<hr>
+<div class="paragraph">
+<p><a href="http://addropengarage/cc?dkey=xxxx&amp;click=1" class="bare">http://addropengarage/cc?dkey=xxxx&amp;click=1</a>
+---</p>
 </div>
 <div class="paragraph">
 <p>dkey est la clef de l&#8217;api, par défaut c&#8217;est opendoor</p>
@@ -475,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_plus_d_infos">3. Plus d&#8217;infos</h2>
+<h2 id="_more_informations">3. More informations</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La documentation complète de l&#8217;API est disponible sur github :</p>
