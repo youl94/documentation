@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Migration mode esclave Jeedom vers JeeLink</title>
+<title>EmonCMS avec Jeedom</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,41 +412,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Migration mode esclave Jeedom vers JeeLink</h1>
+<h1>EmonCMS avec Jeedom</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_préparation_avant_migration">1. Préparation avant migration</a>
-<ul class="sectlevel2">
-<li><a href="#_mises_à_jour_et_vérification_de_la_configuration">1.1. Mises à jour et Vérification de la Configuration</a></li>
-<li><a href="#_rassemblement_des_informations_utiles">1.2. Rassemblement des informations utiles</a>
-<ul class="sectlevel3">
-<li><a href="#_plugin_zwave">1.2.1. Plugin Zwave</a></li>
-<li><a href="#_plugin_rfxcom">1.2.2. Plugin RFXcom</a></li>
-</ul>
-</li>
-<li><a href="#_sauvegardes_préventives">1.3. Sauvegardes préventives</a></li>
-</ul>
-</li>
-<li><a href="#_migration">2. Migration</a>
-<ul class="sectlevel2">
-<li><a href="#_installer_et_activer_le_plugin_jeedom_link_sur_le_strong_jeedom_cible_strong_ancien_maître">2.1. Installer et activer le plugin "Jeedom Link" sur le <strong>Jeedom Cible</strong> (ancien Maître).</a></li>
-<li><a href="#_installation_du_strong_jeedom_source_strong">2.2. Installation du <strong>Jeedom Source</strong> :</a></li>
-<li><a href="#_configuration_du_jeedom_source">2.3. Configuration du Jeedom Source</a></li>
-<li><a href="#_configuration_des_équipements_sur_le_strong_jeedom_source_strong">2.4. Configuration des équipements sur le <strong>Jeedom Source</strong></a>
-<ul class="sectlevel3">
-<li><a href="#_plugin_zwave_2">2.4.1. Plugin Zwave :</a></li>
-<li><a href="#_plugin_rfxcom_2">2.4.2. Plugin Rfxcom :</a></li>
-</ul>
-</li>
-<li><a href="#_configuration_du_plugin_jeedom_link">2.5. Configuration du plugin "Jeedom Link"</a></li>
-<li><a href="#_récupération_des_historiques">2.6. Récupération des historiques</a></li>
-<li><a href="#_remplacement_des_anciens_équipements_esclaves_dans_les_scénarios_virtuels">2.7. Remplacement des anciens équipements esclaves dans les Scénarios/virtuels/&#8230;&#8203;</a></li>
-<li><a href="#_récupération_des_configurations_d_affichage_avancées_des_commandes">2.8. Récupération des configurations d&#8217;affichage avancées des commandes</a></li>
-<li><a href="#_recopie_des_configurations_avancées_des_commandes">2.9. Recopie des configurations avancées des commandes</a></li>
-</ul>
-</li>
-<li><a href="#_ménage_sur_le_strong_jeedom_cible_strong">3. Ménage sur le <strong>Jeedom Cible</strong></a></li>
+<li><a href="#_envoyer_une_valeur_de_jeedom_vers_emoncms">1. Envoyer une valeur de Jeedom vers EmonCMS</a></li>
+<li><a href="#_notification_vers_jeedom_ou_récupération_depuis_jeedom">2. Notification vers Jeedom ou récupération depuis Jeedom</a></li>
+<li><a href="#_mémo_pour_l_installation_emoncms">3. Mémo pour l&#8217;installation EmonCMS</a></li>
+<li><a href="#_configuration_nginx">4. Configuration Nginx</a></li>
 </ul>
 </div>
 </div>
@@ -454,592 +427,145 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Nous allons voir ici comment migrer une installation avec Jeedom en mode esclave vers un Jeedom avec le plugin "Jeedom Link".
-Le mode esclave Jeedom étant abandonné au passage de Jeedom à la version 3.0, il est nécessaire de procéder avant à la migration vers le nouveau mode de fonctionnement.</p>
+<p>EmonCMS est une application PHP de supervision de l&#8217;énergie (Emon : Energy Monitor)</p>
+</div>
+<div class="paragraph">
+<p>Pour ce qui concerne le partage de données entre Jeedom et EmonCMS (dans un sens ou l&#8217;autre), vous trouverez dans cette documentation les moyens de la mettre en oeuvre.</p>
+</div>
+<div class="paragraph">
+<p>Un bref mémo pour installer emoncms est également proposé (cette installation n&#8217;est actuellement pas proposé en natif dans Jeedom)</p>
+</div>
+<div class="paragraph">
+<p>EmonCMS peut être installé à côté de Jeedom ou ailleurs. Vous pouvez meme utiliser l&#8217;instance emoncms.org</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_préparation_avant_migration">1. Préparation avant migration</h2>
+<h2 id="_envoyer_une_valeur_de_jeedom_vers_emoncms">1. Envoyer une valeur de Jeedom vers EmonCMS</h2>
 <div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Il est important de lire l&#8217;intégralité de cette documentation avant de vous lancer dans la migration. Des informations importantes concernant les prérequis de mise à jour, la sauvegarde et la récupération d&#8217;informations sont indispensables à la bonne compréhension de l&#8217;opération à mener. Vous abstenir de lire cette documentation peut entraîner des opérations destructives sur votre installation. Si vous ne comprenez pas un point, n&#8217;hésitez pas à poser des questions sur le forum avant de commencer la procédure !
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Faites bien attention à ne pas faire de boucle d&#8217;équipement en configurant le plugin "Jeedom Link". Par exemple ne pas faire un Equipement-X dans un Jeedom1 qui remonte dans un Jeedom2 puis remonte à nouveau dans le Jeedom1. Cela pourrait faire tomber vos Jeedoms !
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Pour une meilleure lecture et compréhension de ce tutoriel, voici les termes utilisés :<br>
- <br>
-- <strong>Jeedom Cible</strong> : Serveur (votre ancien Jeedom Maître) qui centralise les équipements du/des <strong>Jeedom(s) Source(s)</strong><br>
-   Les copies d&#8217;écran sur fond noir correspondent au <strong>Jeedom Cible</strong>.<br>
-  <br>
-- <strong>Jeedom Source</strong> : Serveur (votre/vos ancien(s) Jeedom Esclave(s)) qui remonte vos équipements sur le <strong>Jeedom Cible</strong>.<br>
-  <br>
-- Les notions de <strong>Jeedom Maître</strong> et <strong>Jeedom Esclave</strong> ne sont plus d&#8217;actualité. Le nouveau mode de fonctionnement de synchronisation d&#8217;équipements entre plusieurs Jeedoms peut être bidirectionnel. Un serveur Jeedom peut être désormais <strong>Source</strong> et <strong>Cible</strong> alors que l&#8217;ancien mode ne permettait que la remontée des équipements de <strong>l&#8217;Esclave</strong> vers <strong>le Maître</strong>. Avec le nouveau mode il est aussi possible d&#8217;avoir plusieurs <strong>Jeedom Cibles</strong> pour un même <strong>Jeedom Source</strong>. La communication entre les Jeedoms peut désormais aussi s&#8217;éffectuer à distance via internet (DNS Jeedom ou autre).<br>
- <br>
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration9.png" alt="jeelink.migration9">
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mises_à_jour_et_vérification_de_la_configuration">1.1. Mises à jour et Vérification de la Configuration</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Mettre à jour le <strong>Jeedom Maître</strong> à la dernière version (même si aucune mise à jour ne vous est proposée).</p>
-</li>
-<li>
-<p>Mettre à jour les plugins du <strong>Jeedom Maître</strong> aux dernières versions disponibles.</p>
-</li>
-<li>
-<p>Vérifier dans la page Santé que la configuration réseau interne du <strong>Jeedom Maître</strong> est OK (Et externe si vos <strong>Jeedoms Sources</strong> seront distants).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_rassemblement_des_informations_utiles">1.2. Rassemblement des informations utiles</h3>
 <div class="paragraph">
-<p>En fonction des plugins installés sur votre <strong>Jeedom Esclave</strong>, il est nécessaire de récupérer les informations suivantes :</p>
+<p>Pour envoyer une valeur de Jeedom à EmonCMS, la solution la plus simple puisqu&#8217;elle est disponible nativement est d&#8217;utiliser l&#8217;URL de Push d&#8217;une information</p>
 </div>
-<div class="sect3">
-<h4 id="_plugin_zwave">1.2.1. Plugin Zwave</h4>
+<div class="paragraph">
+<p>Dans Jeedom, on peut accéder aux paramètres avancés en cliquant sur la roue crantée sur la droite.</p>
+</div>
+<div class="paragraph">
+<p>Ensuite dans "Configuration avancée", on trouve le dernier paramètre Push URL, il faut le remplir avec l&#8217;adresse d&#8217;API EmonCMS pour la feed qu&#8217;on veut remplir</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;url de push est de la forme :</p>
+</div>
+<div class="paragraph">
+<p><a href="https://serveur/emoncms/input/post.json?json={power:#value#}&amp;apikey=xxx" class="bare">https://serveur/emoncms/input/post.json?json={power:#value#}&amp;apikey=xxx</a></p>
+</div>
+<div class="paragraph">
+<p>Avec les paramètres :</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Dans la page santé du plugin zwave sur le <strong>Jeedom Maître</strong>, choisir votre <strong>Esclave</strong> dans le menu déroulant et faire une copie d&#8217;écran, ceci afin de disposer d&#8217;une liste des équipements qui viennent de celui-ci.</p>
+<p>id : l&#8217;id de la feed qu&#8217;on trouve sur emoncms</p>
 </li>
 <li>
-<p>Noter pour chaque équipement venant de <strong>l&#8217;Esclave</strong> : l&#8217;objet parent, le nom, l&#8217;ID (Node), le modèle.</p>
+<p>apikey : la clef api de read&amp;write pour emoncms</p>
 </li>
 <li>
-<p>Récupérer le fichier Zwcfg : <em>Plugins &#8658; Gestion des Plugins &#8658; Z-wave</em>. Cliquer sur le bouton rouge <em>Zwcfg</em> et copier le contenu dans un fichier texte sur votre ordinateur.</p>
+<p>value : il faut bien laisser <mark>value</mark> pour que Jeedom envoie la valeur de l&#8217;info</p>
+</li>
+<li>
+<p>power : c&#8217;est à modifier pour</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_plugin_rfxcom">1.2.2. Plugin RFXcom</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Noter pour chaque équipement venant de <strong>l&#8217;Esclave</strong> : l&#8217;objet parent, le nom, l&#8217;ID (Logique), Le type, Le modèle.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Une fiche non exhaustive des informations à noter pour la migration est disponible <a href="../images/MemoMigration.xls">ici</a>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sauvegardes_préventives">1.3. Sauvegardes préventives</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Faire une <a href="https://www.jeedom.com/doc/documentation/core/fr_FR/doc-core-backup.html">sauvegarde Jeedom</a> de votre <strong>Jeedom Maître</strong> et de votre (vos) <strong>Jeedom Esclave(s)</strong> et récupérer celle(s)-ci sur votre PC/NAS&#8230;&#8203;.</p>
-</li>
-<li>
-<p>Faire une <a href="https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-sauvegarde.comment_faire.html#_sauvegarde_restauration_de_la_carte_microsd">sauvegarde SD/Disque</a> de votre <strong>Jeedom Maître</strong> et de votre (vos) <strong>Jeedom Esclave(s)</strong> et les récupérer sur votre PC/NAS&#8230;&#8203;.</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_migration">2. Migration</h2>
+<h2 id="_notification_vers_jeedom_ou_récupération_depuis_jeedom">2. Notification vers Jeedom ou récupération depuis Jeedom</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Ne pas supprimer pour l&#8217;instant les anciens équipements de <strong>l&#8217;Esclave</strong> sur <strong>le Maître</strong>.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_installer_et_activer_le_plugin_jeedom_link_sur_le_strong_jeedom_cible_strong_ancien_maître">2.1. Installer et activer le plugin "Jeedom Link" sur le <strong>Jeedom Cible</strong> (ancien Maître).</h3>
 <div class="paragraph">
-<p>Sur votre <strong>Jeedom Cible</strong>, <em>Plugins &#8658; Gestion des plugins</em> :</p>
+<p>Pour prendre une donnée de emoncms dans Jeedom, il y a deux possibilités :</p>
 </div>
-<div class="imageblock">
+<div class="ulist">
+<ul>
+<li>
+<p>La première est de créer une info via le plugin script dans Jeedom et d&#8217;utiliser l&#8217;URL API de la feed.
+Cette méthode oblige à récupérer la valeur régulièrement ou via scénario par exemple et normalement non utile car les données ont leur source dans jeedom_setting</p>
+<div class="literalblock">
 <div class="content">
-<img src="../images/jeelink.migration1.png" alt="jeelink.migration1">
+<pre>https://serveur/emoncms/feed/value.json?id=1&amp;apikey=xxx</pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_installation_du_strong_jeedom_source_strong">2.2. Installation du <strong>Jeedom Source</strong> :</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-si vous disposez d&#8217;un RaspberryPi supplémentaire et d&#8217;une autre carte SD, vous pouvez procéder à une migration un protocole après l&#8217;autre en installant un nouveau <strong>Jeedom Source</strong> en parallèle sans avoir à toucher à votre <strong>Jeedom Esclave</strong> existant. En déplaçant évidemment au fur et à mesure les éventuels contrôleurs de l&#8217;un à l&#8217;autre.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Si vous utiliser votre RaspberryPi existant, veuillez être certain d&#8217;avoir suivi le chapitre sauvegarde de cette documentation.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-si vous utilisez le RaspberryPi existant qui est actuellement un <strong>Jeedom Esclave</strong>, nous vous conseillons d&#8217;utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Installer un nouveau Jeedom sur une nouvelle carte SD (Que cela soit pour mettre dans votre <strong>Jeedom Esclave</strong> existant ou pour un nouveau RaspberryPi) en suivant la <a href="https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html">documentation d&#8217;installation</a>.</p>
 </li>
 <li>
-<p>Mettre à jour le <strong>Jeedom Source</strong> à la dernière version (même si aucune mise à jour ne vous est proposée).</p>
-</li>
-<li>
-<p>Vérifier dans la page Santé que la configuration réseau interne (et externe si besoin) du <strong>Jeedom Source</strong> est OK.</p>
+<p>La deuxième possibilité est d&#8217;utiliser le plugin Event d&#8217;emoncms pour déclencher une action sur certaines conditions
+Cette méthode pourrait être utile si on a une donnée qui est calculé ou directement récupérer par emoncms (par exemple OpenBEM)
+Avec l&#8217;avantage de ne notifier que quand besoin, par contre le plugin event ne permet pas de faire de push et il faudra passer par MQTT pour la connexion Jeedom</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuration_du_jeedom_source">2.3. Configuration du Jeedom Source</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Changer le mot de passe de l&#8217;utilisateur admin ou/et configurer un nouvel utilisateur.</p>
-</li>
-<li>
-<p>Configurer votre compte Jeedom Market (<em>Configuration &#8658; Mises à jour et fichiers &#8658; onglet "Market"</em>). Cliquer sur tester après avoir sauvegardé, pour valider la saisie de vos identifiants Jeedom Market).</p>
-</li>
-<li>
-<p>Installation et activation du plugin "Jeedom Link" sur le nouveau <strong>Jeedom Source</strong>.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration2.png" alt="jeelink.migration2">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Installation et activation des plugins que vous souhaitez utiliser. (Il est conseillé de les faire un par un, en vérifiant bien à chaque fois que les dépendances et les démons éventuels sont OK).</p>
-</li>
-<li>
-<p>Recréer l&#8217;arborescence des objets (juste ceux qui vont vous être utiles) du <strong>Jeedom Cible</strong> (Ancien Maître) sur votre nouveau <strong>Jeedom Source</strong> (Ancien Esclave).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuration_des_équipements_sur_le_strong_jeedom_source_strong">2.4. Configuration des équipements sur le <strong>Jeedom Source</strong></h3>
-<div class="paragraph">
-<p>Pour procéder à l&#8217;envoi d&#8217;un équipement présent sur le <strong>Jeedom Source</strong> vers le <strong>Jeedom Cible</strong> via le plugin "Jeedom Link", il est nécessaire que ce dernier soit déjà opérationnel sur votre nouveau <strong>Jeedom Source</strong>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Penser au fur et à mesure à désactiver l&#8217;historisation des commandes info de chaque équipement se trouvant sur le <strong>Jeedom Source</strong> afin d&#8217;économiser la carte SD de celui-ci (L&#8217;historisation se fera sur le <strong>Jeedom Cible</strong>).
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Vous pouvez aussi au fur et à mesure assigner les équipements aux objets recréés sur le <strong>Jeedom Source</strong> afin qu&#8217;ils soient plus tard mis automatiquement dans le bon objet sur le <strong>Jeedom Cible</strong> lors de la déclaration dans le plugin "Jeedom Link". En cas de doublon de nom avec un équipement déjà présent dans les objets du <strong>Jeedom Cible</strong>, le plugin ajoutera "remote XXXX" au nom de l&#8217;équipement.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_plugin_zwave_2">2.4.1. Plugin Zwave :</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Cliquer sur le bouton "Synchroniser" afin de récupérer les modules associés à votre contrôleur. (Ils sont gardés dans la mémoire de celui-ci)</p>
-</li>
-<li>
-<p>Remplacer le fichier <em>Zwcfg</em> : <em>Plugins &#8658; Gestion des Plugins &#8658; Z-wave</em>. Cliquer sur le bouton rouge <em>Zwcfg</em> et coller le contenu du fichier texte précédement créé sur votre ordinateur. <em>Sauvegarder les changements</em>.</p>
-</li>
-<li>
-<p>Renommer vos modules et les placer dans les objets souhaités en vous aidant de votre mémo de migration.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_plugin_rfxcom_2">2.4.2. Plugin Rfxcom :</h4>
-<div class="sect4">
-<h5 id="_sondes_capteurs_détecteurs">Sondes, capteurs, détecteurs,&#8230;&#8203; :</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Passer le plugin en mode inclusion.</p>
-</li>
-<li>
-<p>Recommencer l&#8217;inclusion jusqu&#8217;à obtenir tous vos équipements de ce type.</p>
-</li>
-<li>
-<p>Renommer vos équipements et les placer dans les objets souhaités en vous aidant de votre mémo de migration.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_actionneurs_prises">Actionneurs, prises, &#8230;&#8203;. :</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Ajouter un nouvel équipement.</p>
-</li>
-<li>
-<p>Définir le nom, l&#8217;ID, l&#8217;objet parent, le type d&#8217;équipement et le modèle en vous aidant de votre mémo de migration.</p>
-</li>
-<li>
-<p>Recommencer pour tous vos équipements de ce type.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuration_du_plugin_jeedom_link">2.5. Configuration du plugin "Jeedom Link"</h3>
-<div class="paragraph">
-<p>Le plugin "Jeedom Link" installé sur le <strong>Jeedom Source</strong> permettra la remontée des équipements sur le <strong>Jeedom Cible</strong> (Votre ancien Maître).</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Rappel, pour une meilleure lecture et compréhension de ce tutoriel :<br>
-  <br>
-   Les copies d&#8217;écran sur fond noir correspondent au <strong>Jeedom Cible</strong>.<br>
-  <br>
-   Les copies d&#8217;écran sur fond blanc correspondent au <strong>Jeedom Source</strong>.<br>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Sur le <strong>Jeedom Source</strong>, <a href="https://www.jeedom.com/doc/documentation/plugins/jeelink/fr_FR/jeelink">configurer</a> le plugin "Jeedom Link" en spécifiant :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Le nom du <strong>Jeedom Cible</strong>.</p>
-</li>
-<li>
-<p>L&#8217;adresse IP ou le nom DNS du <strong>Jeedom Cible</strong>.</p>
-</li>
-<li>
-<p>La clé API du <strong>Jeedom Cible</strong>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Et sauvegarder la configuration.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration3.png" alt="jeelink.migration3">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans l&#8217;onglet <em>Affectation</em>, ajouter les équipements que vous désirez remonter vers le <strong>Jeedom Cible</strong>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration4.png" alt="jeelink.migration4">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquer sur <em>Ajouter un équipement</em>
-Sélectionner l&#8217;objet et l&#8217;équipement à ajouter :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration5.png" alt="jeelink.migration5">
-</div>
-</div>
-<div class="paragraph">
-<p>Après avoir rafraîchit la page <em>Mes JeeLinks</em> du <strong>Jeedom Cible</strong>, vous devez constater la création automatique de l&#8217;équipement :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration6.png" alt="jeelink.migration6">
-</div>
-</div>
-<div class="paragraph">
-<p>Comme tout équipement Jeedom, vous pouvez activer/désactiver et afficher ou non l&#8217;équipement, ses commandes,&#8230;&#8203; ou changer la catégorie :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration7.png" alt="jeelink.migration7">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans l&#8217;onglet <em>Commandes</em>, vous accédez à tous les paramètres des commandes de l&#8217;équipement :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/jeelink.migration8.png" alt="jeelink.migration8">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_récupération_des_historiques">2.6. Récupération des historiques</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut récupérer l&#8217;historique.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Aller dans la configuration de la commande (<em>Roue crantée à droite</em>).</p>
-</li>
-<li>
-<p>Aller dans l&#8217;onglet <em>Configuration Avancée</em>.</p>
-</li>
-<li>
-<p>Cliquer sur le bouton <em>Copier l&#8217;historique de cette commande sur une autre commande</em>.</p>
-</li>
-<li>
-<p>Chercher la commande correspondante du nouvel équipement JeeLink correspondant et valider.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_remplacement_des_anciens_équipements_esclaves_dans_les_scénarios_virtuels">2.7. Remplacement des anciens équipements esclaves dans les Scénarios/virtuels/&#8230;&#8203;</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info/action des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut remplacer les occurrences dans les scénarios/virtuels/&#8230;&#8203;.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Aller dans la configuration de la commande (<em>Roue crantée à droite</em>).</p>
-</li>
-<li>
-<p>Aller dans l&#8217;onglet <em>Informations</em>.</p>
-</li>
-<li>
-<p>Cliquer sur le bouton <em>Remplacer cette commande par la commande</em>.</p>
-</li>
-<li>
-<p>Chercher la commande correspondante du nouvel équipement JeeLink correspondant et valider.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_récupération_des_configurations_d_affichage_avancées_des_commandes">2.8. Récupération des configurations d&#8217;affichage avancées des commandes</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info/action des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut récupérer les paramètres d&#8217;affichage avancés.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Aller dans la configuration de la commande (<em>Roue crantée à droite</em>).</p>
-</li>
-<li>
-<p>Cliquer sur le bouton <em>appliquer à</em>.</p>
-</li>
-<li>
-<p>Chercher et sélectionner la commande correspondante du nouvel équipement JeeLink correspondant et valider.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_recopie_des_configurations_avancées_des_commandes">2.9. Recopie des configurations avancées des commandes</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A faire sur le <strong>Jeedom Cible</strong> (Ancien Maître) pour chaque commande info/action des équipements de l&#8217;ancien <strong>Esclave</strong> dont on veut récupérer la configuration avancée.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Pas de solution facile à ce niveau, il faudra avoir deux onglets/fenêtres d&#8217;ouverts sur votre navigateur.</p>
-</li>
-<li>
-<p>Ouvrir les commandes des équipements de l&#8217;ancien <strong>Esclave</strong> dans un onglet (Jeedom Cible).</p>
-</li>
-<li>
-<p>Ouvrir les commandes des équipements jeeLink dans l&#8217;autre onglet (Jeedom Cible).</p>
-</li>
-<li>
-<p>Et recopier à la main les paramètres voulus.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Afin d&#8217;éviter de revenir plusieurs fois sur la même commande, les opérations 2.6&#8594;2.9 peuvent être réalisées à la suite sur une même commande avant de passer aux suivantes.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Les interactions sur le <strong>Jeedom Cible</strong> ne pourront pas être lancées par le biais d&#8217;équipements d&#8217;un <strong>Jeedom Source</strong> tranférés via le plugin "Jeedom Link".
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ménage_sur_le_strong_jeedom_cible_strong">3. Ménage sur le <strong>Jeedom Cible</strong></h2>
+<h2 id="_mémo_pour_l_installation_emoncms">3. Mémo pour l&#8217;installation EmonCMS</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Après avoir bien validé que vos équipements/scénarios/interactions/virtuels/&#8230;&#8203;. fonctionnent bien avec le nouveau système jeelink, vous pouvez procéder au ménage.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>L&#8217;installation est décrite sur cette page github :</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Supprimer les équipements résiduels de l&#8217;ancien <strong>Jeedom Esclave</strong>.</p>
-</li>
-<li>
-<p>Désactiver et supprimer les plugins qui ne vous sont plus utiles (Ceux dont vous n&#8217;aviez que des équipements sur l&#8217;Esclave).</p>
-</li>
-<li>
-<p>Dans le plugin "Jeedom Link", renommer les équipements qui pourraient avoir un nom finissant par "remote XXXX".</p>
-</li>
-<li>
-<p>Dans la page Réseau Jeedom, supprimer l&#8217;ancien <strong>Jeedom Esclave</strong>.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><a href="https://github.com/emoncms/emoncms/blob/master/docs/LinuxInstall.md" class="bare">https://github.com/emoncms/emoncms/blob/master/docs/LinuxInstall.md</a></p>
+</div>
+<div class="paragraph">
+<p>A noter que certains plugins semblent obsolète avec la dernière version EmonCMS (v9 à fin 2015)</p>
+</div>
+<div class="paragraph">
+<p>Si on les installe, il y a des problèmes avec les menus. De toute facon, on a besoin à priori uniquement de :</p>
+</div>
+<div class="paragraph">
+<p>git clone <a href="https://github.com/emoncms/event.git" class="bare">https://github.com/emoncms/event.git</a> (C&#8217;est lui qui pourra permettre de créer des réactions sur évènement dans emoncms pour notifier Jeedom)</p>
+</div>
+<div class="paragraph">
+<p>git clone <a href="https://github.com/emoncms/openbem.git" class="bare">https://github.com/emoncms/openbem.git</a> (C&#8217;est un plugin pour faire un suivi des consommations énergétiques de la maison)</p>
+</div>
+<div class="paragraph">
+<p>git clone <a href="https://github.com/emoncms/energy.git" class="bare">https://github.com/emoncms/energy.git</a></p>
+</div>
+<div class="paragraph">
+<p>git clone <a href="https://github.com/emoncms/report.git" class="bare">https://github.com/emoncms/report.git</a></p>
+</div>
+<div class="paragraph">
+<p>git clone <a href="https://github.com/elyobelyob/mqtt.git" class="bare">https://github.com/elyobelyob/mqtt.git</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_nginx">4. Configuration Nginx</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Voici une configuration en exemple pour Nginx. Pour Apache il n&#8217;y a pas besoin de conf particulière un répertoire classique</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>location /emoncms {
+       alias /var/www/emoncms/;
+       index index.php;
+        try_files = $uri $uri/ @missing;
+
+   location ~ [^/]\.php(/|$) {
+           fastcgi_split_path_info ^(.+?\.php)(/.*)$;
+           fastcgi_pass unix:/var/run/php5-fpm.sock;
+           fastcgi_index index.php;
+           include fastcgi_params;
+           fastcgi_param   REMOTE_USER   $remote_user;
+           fastcgi_param  PATH_INFO $fastcgi_path_info;
+           fastcgi_param SCRIPT_FILENAME /var/www/emoncms/index.php;
+       }
+
+}
+
+location @missing {
+        rewrite ^/emoncms/(.*)$ /emoncms/index.php?q=$1&amp;$args last;
+}</pre>
+</div>
 </div>
 </div>
 </div>
