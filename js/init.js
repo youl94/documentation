@@ -48,6 +48,13 @@ function generateCatSite(data){
 
 function generateDocSite(data){
 	$('#ul_listDoc').empty();
+	data.sort(function (a, b) {
+	    if (a.name > b.name)
+	      return 1;
+	    if (a.name < b.name)
+	      return -1;
+	    return 0;
+	});
 	for(var i in data.docs){
 		$('#ul_listDoc').append('<a class="collection-item waves-effect waves-jeedom" target="_blank" href="'+data.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+convertCase(data.docs[i].name)+'</a>');
 	}
@@ -57,6 +64,13 @@ function generateThirdSite(data){
 	$('#ul_listThird0').empty();
 	$('#ul_listThird1').empty();
 	$('#ul_listThird2').empty();
+	data.third_plugin.docs.sort(function (a, b) {
+	    if (a.name > b.name)
+	      return 1;
+	    if (a.name < b.name)
+	      return -1;
+	    return 0;
+	});
 	for(var i in data.third_plugin.docs){
 		colNb=i % 3;
 		$('#ul_listThird'+colNb).append('<a class="collection-item waves-effect waves-jeedom" target="_blank" href="'+data.third_plugin.docs[i].url.replace('#language#',$('#sel_language').val())+'">'+convertCase(data.third_plugin.docs[i].name)+'</a>');
