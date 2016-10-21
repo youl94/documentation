@@ -48,7 +48,7 @@ function generateCatSite(data){
 
 function generateDocSite(data){
 	$('#ul_listDoc').empty();
-	data.sort(function (a, b) {
+	data.docs.sort(function (a, b) {
 	    if (a.name > b.name)
 	      return 1;
 	    if (a.name < b.name)
