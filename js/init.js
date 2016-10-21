@@ -41,7 +41,7 @@ function convertCase(_string){
 function generateCatSite(data){
 	$('#ul_listCategory').empty();
 	$('#ul_listDoc').empty();
-	data.docs.sort(function (a, b) {
+	data.sort(function (a, b) {
 	    if (a.name[$('#sel_language').val()] > b.name[$('#sel_language').val()])
 	      return 1;
 	    if (a.name[$('#sel_language').val()] < b.name[$('#sel_language').val()])
