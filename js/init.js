@@ -41,6 +41,13 @@ function convertCase(_string){
 function generateCatSite(data){
 	$('#ul_listCategory').empty();
 	$('#ul_listDoc').empty();
+	data.docs.sort(function (a, b) {
+	    if (a.name[$('#sel_language').val()] > b.name[$('#sel_language').val()])
+	      return 1;
+	    if (a.name[$('#sel_language').val()] < b.name[$('#sel_language').val()])
+	      return -1;
+	    return 0;
+	});
 	for(var i in data){
 		$('#ul_listCategory').append('<a class="collection-item waves-effect waves-jeedom" data-key="'+i+'">'+convertCase(data[i].name[$('#sel_language').val()])+'<span class="badge">'+data[i].docs.length+'</span>'+'</a>');
 	}
