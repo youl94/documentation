@@ -10,10 +10,7 @@ Vous devez télécharger le logicel win32diskimager link:http://sourceforge.net/
 
 === Etape 2 : Récupération de l'image de Jeedom
 
-[IMPORTANTE]
-Suite à des dysfonctionnements l'image pour Pi a été temporairement retiré, une nouvelle image est en cours de réalisation , en attendant pour installer Jeedom sur Pi veuillez suivre la procédure d'installation classique (manuel)
-
-Vous devez aller link:https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog[ici], puis dans le dossier Images récuperer l'image jeedom-rpi-*.rar
+Vous devez aller link:https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog[ici], puis dans le dossier Images récuperer l'image Raspberry...netinstall.zip
 
 image::../images/install_humming_1.PNG[]
 
@@ -50,7 +47,7 @@ image::../images/install_humming_7.PNG[]
 Vous n'avez plus qu'à mettre la carte SD dans le Raspberry pi, à brancher le réseau et l'alimentation, votre Jeedom va démarrer (5 min) et vous devriez le voir sur le réseau.
 
 [TIP]
-Les identifiants SSH sont jeedom/Mjeedom96
+Les identifiants SSH sont root/Mjeedom96
 
 [IMPORTANTE]
 Attention si vous avez une carte SD de plus de 4go n'oubliez pas d'étendre la partition avec la commande raspi-config en ssh
