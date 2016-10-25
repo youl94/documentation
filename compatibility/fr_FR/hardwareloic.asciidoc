@@ -13,12 +13,12 @@
 |===
 |Nom|Remarques
 |Clef Aeon Gen 5|
-|Zipato Mini Keypad RFID| Attention pas d'information sur le badge qui vient d'etre lu
+|Zipato Mini Keypad RFID| Attention pas d'information sur le badge qui vient d'être lu
 |Fibaro FGWPE/FGWPF Wall Plug|
 |Fibaro FGRGB-101 RGBW|
 |FGMS-001 Motion Sensor|
 |FGD-211 Dimmer|
-|FGFS-101 ZW5 Flood Sensor 1| Attention lors du redemarrage du réseaux le module envoi une alerte alors que ce n'est pas le cas
+|FGFS-101 ZW5 Flood Sensor 1| Attention lors du redemarrage du réseau le module envoie une alerte alors que ce n'est pas le cas
 |===
 
 === enOcean
@@ -28,8 +28,8 @@
 |Nom|Remarques
 |Clef USB EnOcean USB300|
 |Nodon detecteur d'ouverture de porte|
-|Interrupteur double| Necessite un fort appui pour marcher
-|Soft remote| Etanche avec un aimant parfaite
+|Interrupteur double| Nécessite un fort appui pour marcher
+|Soft remote| Etanche avec un aimant
 |Eltako Transmetter IR| Un peu cher mais bien pratique
 |===
 
@@ -40,7 +40,7 @@
 |Nom|Remarques
 |Télécommande e-Trendy|
 |Interrupteur 5 boutons|
-|Detecteur d'ouverture| Semble avoir quelque raté de temps en temps (peut être un soucis de pile)
+|Detecteur d'ouverture| Semble avoir quelques ratés de temps en temps (peut-être un soucis de pile)
 |===
 
 === Rfxcom
@@ -50,7 +50,7 @@
 |Nom|Remarques
 |Télécommande DIO|
 |Capteur de température et d'humidité Oregon|
-|Prise DIO| A quelques raté de temps en temps
+|Prise DIO| A quelques ratés de temps en temps
 |===
 
 === Multimedia
@@ -61,7 +61,7 @@
 |Sonos Play 5|
 |Sonos connect|
 |Sonos Play 1|
-|Nvidia TV Shield| Bien pratique avec Kodi, attention quand meme la transmission des flux audio HD marche pas toujours
+|Nvidia TV Shield| Bien pratique avec Kodi, attention quand même la transmission des flux audio HD ne marche pas toujours
 |===
 
 === Caméra
@@ -82,5 +82,5 @@
 |HUAWEI E220| Jamais eu un seul soucis
 |Kartoz|
 |Greenmomit| Bon thermostat connecté
-|Denon 3200| Très bonne amplis
+|Denon 3200| Très bon ampli
 |===
