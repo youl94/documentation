@@ -617,25 +617,25 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 <h2 id="_installer_mettre_à_jour_l_esxi_embedded_host_client">4. Installer/Mettre à jour l&#8217;ESXi Embedded Host Client</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ESXi Embedded Host Client est une interface web (en HTML5) de l&#8217;ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par defaut à partie de la version 6.0 update 2 (mais en version 1.0, il est vivement conseillé de la mettre à jour).</p>
+<p>ESXi Embedded Host Client est une interface web (en HTML5) de l&#8217;ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par défaut dans la version 6.0 update 2, mais en version 1.0, il est vivement conseillé de la mettre à jour.</p>
 </div>
 <div class="paragraph">
 <p>Vous trouverez toutes les information <a href="https://labs.vmware.com/flings/esxi-embedded-host-client">ici</a></p>
 </div>
 <div class="paragraph">
-<p>Pour voir si vous l&#8217;avez il suffit d&#8217;aller avec votre navigateur sur IP_ESXI/ui si vous n&#8217;avez rien il vous faut l&#8217;installer, il faut d&#8217;abord se connecter en SSH sur l&#8217;ESXI puis faire :</p>
+<p>Pour voir si vous disposez de l&#8217;interface web, il suffit d&#8217;aller avec votre navigateur sur IP_ESXI/ui si vous n&#8217;avez rien il faut l&#8217;installer, il faut d&#8217;abord se connecter en SSH sur l&#8217;ESXI puis faire :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib</pre>
+<pre>esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-latest.vib</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Si vous l&#8217;avez déjà pour le mettre à jour il faut :</p>
+<p>Si vous l&#8217;avez déjà, pour la mettre à jour il faut faire :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib</pre>
+<pre>esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-latest.vib</pre>
 </div>
 </div>
 </div>
