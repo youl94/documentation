@@ -91,20 +91,20 @@ image::../images/vmware.tips15.PNG[]
 
 == Installer/Mettre à jour l'ESXi Embedded Host Client
 
-ESXi Embedded Host Client est une interface web (en HTML5) de l'ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par defaut à partie de la version 6.0 update 2 (mais en version 1.0, il est vivement conseillé de la mettre à jour).
+ESXi Embedded Host Client est une interface web (en HTML5) de l'ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par défaut dans la version 6.0 update 2, mais en version 1.0, il est vivement conseillé de la mettre à jour.
 
 Vous trouverez toutes les information https://labs.vmware.com/flings/esxi-embedded-host-client[ici]
 
-Pour voir si vous l'avez il suffit d'aller avec votre navigateur sur IP_ESXI/ui si vous n'avez rien il vous faut l'installer, il faut d'abord se connecter en SSH sur l'ESXI puis faire : 
+Pour voir si vous disposez de l'interface web, il suffit d'aller avec votre navigateur sur IP_ESXI/ui si vous n'avez rien il faut l'installer, il faut d'abord se connecter en SSH sur l'ESXI puis faire : 
 
 ----
-esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
+esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-latest.vib
 ----
 
-Si vous l'avez déjà pour le mettre à jour il faut : 
+Si vous l'avez déjà, pour la mettre à jour il faut faire : 
 
 ----
-esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-3976049.vib
+esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-latest.vib
 ----
 
 == Installation du client lourd
