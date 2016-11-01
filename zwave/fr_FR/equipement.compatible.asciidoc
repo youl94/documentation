@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*43* [green]*marques de modules différentes, soit un total de* [red]*237* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*44* [green]*marques de modules différentes, soit un total de* [red]*237* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -647,6 +647,15 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 
 |===
 
+== Neocoolcam
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+
+|===
+
 == Nodon
 
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
@@ -1220,6 +1229,9 @@ _[small]#Piles : 1X ER14250 3,6V#_| link:++http://www.domadoo.fr/fr/peripherique
 
 |image:../images/compatibility_list/mco.mhs412.jpg[width=150,align="center"]|Mco|MH-S412 Double|Interrupteur| |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-mco.MH-S412_Double_-_Interrupteur.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/2889-mcohome-interrupteur-tactile-en-verre-z-wave-2-charges-blanc.html++[Acheter^]
 // 351.16642.514_mco.home.mh-s412.double.json
+
+||Neocoolcam|Smart Power Plug NAS-WR01ZE|Prise| | 
+// 600.3.4231_nas.wr01ze.power.plug.json
 
 |image:../images/compatibility_list/vitrum.zwe060.jpg[width=150,align="center"]|Vitrum|ZWE060 6 boutons|Interrupteur| | 
 // 266.5120.26112_vitrum.vitrum.zwe060.json
