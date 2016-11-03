@@ -9,11 +9,11 @@
 			"docs" : [ 
 				{
 					"name":"Installation",
-					"link":"installation/#language#/index.html"
+					"url":"installation/#language#/index.html"
 				},
 				{
 					"name":"Compatibilité",
-					"link":"compatibility/#language#/index.html"
+					"url":"compatibility/#language#/index.html"
 				}
 			]
 		},
@@ -26,11 +26,11 @@
 			"docs" : [ 
 				{
 					"name":"Howto1",
-					"link":"installation/#language#/index.html"
+					"url":"installation/#language#/index.html"
 				},
 				{
 					"name":"Howto2",
-					"link":"compatibility/#language#/index.html"
+					"url":"compatibility/#language#/index.html"
 				}
 			]
 		},
@@ -43,15 +43,15 @@
 			"docs" : [ 
 				{
 					"name":"plugin1",
-					"link":"installation/#language#/index.html"
+					"url":"installation/#language#/index.html"
 				},
 				{
 					"name":"plugin2",
-					"link":"compatibility/#language#/index.html"
+					"url":"compatibility/#language#/index.html"
 				},
 				{
 					"name":"plugin3",
-					"link":"compatibility/#language#/index.html"
+					"url":"compatibility/#language#/index.html"
 				}
 			]
 		}

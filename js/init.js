@@ -42,7 +42,11 @@ function generateCatSite(data){
 	$('#ul_listCategory').empty();
 	$('#ul_listDoc').empty();
 	for(var i in data){
-		$('#ul_listCategory').append('<a class="collection-item waves-effect waves-jeedom" data-key="'+i+'">'+convertCase(data[i].name[$('#sel_language').val()])+'<span class="badge">'+data[i].docs.length+'</span>'+'</a>');
+		var name = data[i].name[$('#sel_language').val()];
+		if(name == undefined){
+			name = data[i].name['en_US'];
+		}
+		$('#ul_listCategory').append('<a class="collection-item waves-effect waves-jeedom" data-key="'+i+'">'+convertCase(name)+'<span class="badge">'+data[i].docs.length+'</span>'+'</a>');
 	}
 }
 
