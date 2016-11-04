@@ -7,6 +7,7 @@ Pas vraiment un howto ici mais plus un recueils de trucs et astuces sur MySQL
 Editez le fichier /etc/mysql/mysql.conf.d/mysqld.cnf et ajoutez dedans : 
 
 ----
+[mysqld]
 performance_schema=OFF
 ----
 
