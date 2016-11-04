@@ -7,6 +7,7 @@ Das ist nicht wirklich ein Howto hier, sondern eher eine Sammlung von Tipps und 
 Die Datei /etc/mysql/mysql.conf.d/mysqld.cnf editieren und in ihr hinzufügen : 
 
 ----
+[mysqld]
 performance_schema=OFF
 ----
 
