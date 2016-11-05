@@ -3,41 +3,41 @@
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
-|Intel NUC Gen6 i5 avec 16go de ram, 240go de SSD le tout sous Vmware| Super hardware, performant et pas trop consommateur
+|Name|Bemerkungen
+|Intel NUC Gen6 i5 mit 16 GB Ram, 240GB SSD alles unter VmWare|Super Hardware, die leistungsfähig ist und nicht zuviel Verbrauch hat
 |===
 
 === Zwave
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
-|Clef Aeon Gen 5|
-|Zipato Mini Keypad RFID| Attention pas d'information sur le badge qui vient d'être lu
-|Fibaro FGWPE/FGWPF Wall Plug|
+|Name|Bemerkungen
+|Aeon-Stick Gen5|
+|Zipato Mini Keypad RFID| Achtung, keine Information über das Typenschild, das soeben gelesen wurde
+|Fibaro FGWPE/FGWPF Wall Plug (Steckdosenstecker)|
 |Fibaro FGRGB-101 RGBW|
-|FGMS-001 Motion Sensor|
+|FGMS-001 Motion Sensor (Bewegungsmelder)|
 |FGD-211 Dimmer|
-|FGFS-101 ZW5 Flood Sensor 1| Attention lors du redemarrage du réseau le module envoie une alerte alors que ce n'est pas le cas
+|FGFS-101 ZW5 Flood Sensor(Überflutungsensor) 1| Achtung, bei der Wiederbelebung des Netzes sendet das Modul einen Alarm, obwohl das nicht der Fall ist.
 |===
 
 === enOcean
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
-|Clef USB EnOcean USB300|
-|Nodon detecteur d'ouverture de porte|
-|Interrupteur double| Nécessite un fort appui pour marcher
-|Soft remote| Etanche avec un aimant
-|Eltako Transmetter IR| Un peu cher mais bien pratique
+|Name|Bemerkungen
+|USB-Stick EnOcean USB300|
+|Nodon Türöffnung Sensor|
+|Doppelschalter| Erfordern eine starke Unterstützung, um zu funktionieren
+|Fernbedienung| Wasserdicht, mit einem Magneten
+|Eltako IR Sender| Ein wenig teuer, aber praktisch
 |===
 
 === Edisio
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
+|Name|Bemerkungen
 |Télécommande e-Trendy|
 |Interrupteur 5 boutons|
 |Detecteur d'ouverture| Semble avoir quelques ratés de temps en temps (peut-être un soucis de pile)
@@ -47,7 +47,7 @@
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
+|Name|Bemerkungen
 |Télécommande DIO|
 |Capteur de température et d'humidité Oregon|
 |Prise DIO| A quelques ratés de temps en temps
@@ -57,26 +57,26 @@
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
+|Name|Bemerkungen
 |Sonos Play 5|
 |Sonos connect|
 |Sonos Play 1|
 |Nvidia TV Shield| Bien pratique avec Kodi, attention quand même la transmission des flux audio HD ne marche pas toujours
 |===
 
-=== Caméra
+=== Kamera
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
+|Name|Bemerkungen
 |Foscam C1| Pour le meilleur rapport qualité/prix
 |===
 
-=== Autres
+=== Andere
 
 [cols="2*", options="header"] 
 |===
-|Nom|Remarques
+|Name|Bemerkungen
 |Neato Connected| Bonne aspirateur mais la fonction connectée n'apporte pas tant que ca
 |Dotti| Afficheur LED en bluetooth, vraiment sympa
 |HUAWEI E220| Jamais eu un seul soucis
