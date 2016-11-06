@@ -38,9 +38,9 @@
 [cols="2*", options="header"] 
 |===
 |Name|Bemerkungen
-|Télécommande e-Trendy|
-|Interrupteur 5 boutons|
-|Detecteur d'ouverture| Semble avoir quelques ratés de temps en temps (peut-être un soucis de pile)
+|e-Trendy Fernbedienung|
+|5 Tasten Schalter|
+|Öffnungsdetektor| Scheint einige Versager von Zeit zu Zeit zu haben (vielleicht probleme mit der Batterie)
 |===
 
 === Rfxcom
@@ -48,9 +48,9 @@
 [cols="2*", options="header"] 
 |===
 |Name|Bemerkungen
-|Télécommande DIO|
-|Capteur de température et d'humidité Oregon|
-|Prise DIO| A quelques ratés de temps en temps
+|DiO  Fernbedienung|
+|Oregon Luftfeuchtigkeit und Temperatur Sensor|
+|DiO Stecker| Mit ein paar Problemchen von Zeit zu Zeit 
 |===
 
 === Multimedia
@@ -61,7 +61,7 @@
 |Sonos Play 5|
 |Sonos connect|
 |Sonos Play 1|
-|Nvidia TV Shield| Bien pratique avec Kodi, attention quand même la transmission des flux audio HD ne marche pas toujours
+|Nvidia TV Shield| Praktisch mit Kodi, Achtung, trotzdem geht die Audio-Übertragung der HD-Streams nicht immer
 |===
 
 === Kamera
@@ -69,7 +69,7 @@
 [cols="2*", options="header"] 
 |===
 |Name|Bemerkungen
-|Foscam C1| Pour le meilleur rapport qualité/prix
+|Foscam C1| Für das beste Preis-Qualität-Verhältnis
 |===
 
 === Andere
@@ -78,9 +78,9 @@
 |===
 |Name|Bemerkungen
 |Neato Connected| Bonne aspirateur mais la fonction connectée n'apporte pas tant que ca
-|Dotti| Afficheur LED en bluetooth, vraiment sympa
-|HUAWEI E220| Jamais eu un seul soucis
+|Dotti| LED-Anzeige in Bluetooth, wirklich nett
+|HUAWEI E220| Hatt kein einziges Problem
 |Kartoz|
-|Greenmomit| Bon thermostat connecté
-|Denon 3200| Très bon ampli
+|Greenmomit| Gut vernetztes Thermostat
+|Denon 3200| Sehr guter Verstärker
 |===
