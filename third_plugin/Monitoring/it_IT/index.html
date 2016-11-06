@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>ssaOrvibo allOne</title>
+<title>Monitoring</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,24 +415,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_ssaorvibo_allone">1. ssaOrvibo allOne</a>
+<li><a href="#_monitoring">1. Monitoring</a>
 <ul class="sectlevel2">
-<li><a href="#_description">1.1. Description</a></li>
-<li><a href="#_installation">1.2. Installation</a></li>
-<li><a href="#_configuration">1.3. Configuration</a>
+<li><a href="#_présentation">1.1. Présentation</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_du_allone">1.3.1. Configuration du AllOne</a></li>
-<li><a href="#_installation_de_wiwo_sur_son_portable_ou_sa_tablette">1.3.2. Installation de wiwo sur son portable ou sa tablette</a></li>
-<li><a href="#_aller_sur_la_page_ap_configuration">1.3.3. Aller sur la page "Ap Configuration"</a></li>
-<li><a href="#_passer_le_allone_en_en_mode_ap">1.3.4. Passer le AllOne en  en mode AP</a></li>
-<li><a href="#_attendre_la_fin_de_la_configuration">1.3.5. Attendre la fin de la configuration</a></li>
-<li><a href="#_configuration_du_plugin">1.3.6. Configuration du plugin</a></li>
-<li><a href="#_configuration_d_un_objet_etape_1">1.3.7. Configuration d&#8217;un objet : etape 1</a></li>
-<li><a href="#_configuration_d_un_objet_etape_2">1.3.8. Configuration d&#8217;un objet : etape 2</a></li>
+<li><a href="#_compatibilité">1.1.1. Compatibilité :</a></li>
+<li><a href="#_données_visibles_sur_le_dashboard">1.1.2. Données visibles sur le Dashboard :</a></li>
 </ul>
 </li>
-<li><a href="#_faq">1.4. FAQ</a></li>
-<li><a href="#_devellopeur">1.5. Devellopeur</a></li>
+<li><a href="#_installation_configuration">1.2. Installation/Configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_choix_déporté">1.2.1. Choix déporté</a></li>
+</ul>
+</li>
+<li><a href="#_coloration_des_valeurs">1.3. Coloration des valeurs</a></li>
+<li><a href="#_historiser">1.4. Historiser</a></li>
+<li><a href="#_exemples_de_scénario">1.5. Exemples de scénario</a>
+<ul class="sectlevel3">
+<li><a href="#_scénario_pour_recevoir_un_mail_en_cas_de_dépassement_de_température">1.5.1. Scénario pour recevoir un mail en cas de dépassement de température</a></li>
+<li><a href="#_scénario_pour_recevoir_un_mail_en_cas_de_connexion_ssh_ko_en_mode_déporté">1.5.2. Scénario pour recevoir un mail en cas de connexion SSH KO en mode déporté</a></li>
+</ul>
+</li>
+<li><a href="#_action_redémarrage_et_extinction_de_l_équipemnt">1.6. Action redémarrage et extinction de l&#8217;équipemnt</a>
+<ul class="sectlevel3">
+<li><a href="#_mode_local">1.6.1. Mode local</a></li>
+<li><a href="#_mode_déporté">1.6.2. Mode déporté</a></li>
+</ul>
+</li>
+<li><a href="#_quelques_captures">1.7. Quelques captures</a></li>
+<li><a href="#_faq">1.8. FAQ</a></li>
+<li><a href="#_changelog">1.9. Changelog</a></li>
 </ul>
 </li>
 </ul>
@@ -440,227 +452,409 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_ssaorvibo_allone">1. ssaOrvibo allOne</h2>
+<h2 id="_monitoring">1. Monitoring</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_description">1.1. Description</h3>
+<h3 id="_présentation">1.1. Présentation</h3>
 <div class="paragraph">
-<p>Ce plugin permet de piloter le  Orvibo : AllOne</p>
-</div>
-<div class="paragraph">
-<p>Les AllOne etant  des passerrelles  permettant de piloter des appareils infrarouge (TV, climatiseur, etc&#8230;&#8203;).</p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_installation">1.2. Installation</h3>
-<hr>
-<div class="paragraph">
-<p>Il n&#8217;y a pas d&#8217;actions particuliere lors  de l&#8217;installation du plugin.
-Il faut bien penser à configurer les AllOne</p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_configuration">1.3. Configuration</h3>
-<hr>
-<div class="sect3">
-<h4 id="_configuration_du_allone">1.3.1. Configuration du AllOne</h4>
-<div class="paragraph">
-<p>Pour etre reconu par le plugin, le AllOne doit déjà etre configuré sur votre réseau wifi.</p>
+<p>Ce plugin permet de récupérer des données système et de les afficher sur le Dashboard.</p>
 </div>
 <div class="paragraph">
-<p>voici comment procéder :</p>
-</div>
+<p>Initialement, ce plugin a été créé pour monitorer seulement Jeedom Mini et Jeedom Mini+. Mais pour répondre à une forte demande, il a été rendu compatible avec un Jeedom installé sur une VM (Machine Virtuelle) ou un NAS Synology ou etc&#8230;&#8203;</p>
 </div>
 <div class="sect3">
-<h4 id="_installation_de_wiwo_sur_son_portable_ou_sa_tablette">1.3.2. Installation de wiwo sur son portable ou sa tablette</h4>
+<h4 id="_compatibilité">1.1.1. Compatibilité :</h4>
 <div class="paragraph">
-<p>Il faut se rendre sur le PlayStore ou l’Appstore afin de télécharger l’application Wiwo nécessaire à l’utilisation du AllOne.
-Il faudra taper Wiwo puis télécharger l’application.</p>
+<p>A ma connaissance, voici une liste non exhautive des hardware/distribution compatible:</p>
 </div>
-<div class="imageblock">
+<div class="ulist">
+<ul>
+<li>
+<p>Jeedom Mini, Mini+ (surement la Center/Pro)</p>
+</li>
+<li>
+<p>Raspberry Pi</p>
+</li>
+<li>
+<p>Cubieboard</p>
+</li>
+<li>
+<p>Banana Pi</p>
+</li>
+<li>
+<p>Machine Virtuelle (VM)</p>
+</li>
+<li>
+<p>NAS Synology</p>
+</li>
+<li>
+<p>Linux (devrait être compatible avec beaucoup de distribution Linux)</p>
+</li>
+<li>
+<p>Distributions spécifiques : OpenELEC, LibreElec, RasPlex et OSMC</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_données_visibles_sur_le_dashboard">1.1.2. Données visibles sur le Dashboard :</h4>
+<div class="ulist horizontal">
+<ul class="horizontal">
+<li>
+<p><strong>Distribution</strong> : Nom et version du système d&#8217;exploitation Linux, architecture 32 ou 64 bits, et le type microprocesseur</p>
+</li>
+<li>
+<p><strong>Démarré depuis uptime</strong> : informe depuis combien de temps Jeedom est démarré</p>
+</li>
+<li>
+<p><strong>Charge système</strong> : Load average (plus d&#8217;information voir FAQ)</p>
+</li>
+<li>
+<p><strong>Mémoire</strong> : mémoire vive total et utilisée</p>
+</li>
+<li>
+<p><strong>Réseau</strong> : taux en MiB des données transmises et reçues</p>
+</li>
+<li>
+<p><strong>Espace disque total et utilisé</strong> : l&#8217;espace disque de la carte SD ou du disque dur pour les VM et NAS Synology</p>
+</li>
+<li>
+<p><strong>CPU</strong> : nombre de cœur, la fréquence associée et la température (température seulement si compatible)</p>
+</li>
+<li>
+<p><strong>Commandes personnalisées</strong> : permet de saisir des commandes personnalisées est d&#8217;afficher/historiser les résultats</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/wiwo.jpg" alt="wiwo">
+<img src="../images/Monitoring.png" alt="Monitoring">
 </div>
 </div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_configuration">1.2. Installation/Configuration</h3>
+<div class="paragraph">
+<p>Nous allons maintenant paramétrer un équipement. Pour se faire, cliquer sur <strong>Plugins / Jeedom Box / Monitoring</strong></p>
+</div>
+<div class="paragraph">
+<p>Puis cliquer sur le bouton en haut à gauche <strong>Ajouter un équipement</strong></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring1.png" alt="Monitoring1">
+</div>
+</div>
+<div class="paragraph">
+<p>Puis saisir le nom de l&#8217;équipement (ex. Jeedom Mini)</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring2.png" alt="Monitoring2">
+</div>
+</div>
+<div class="paragraph">
+<p>Puis définir :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Objet parent</p>
+</li>
+<li>
+<p>Catégorie (optionnelle)</p>
+</li>
+<li>
+<p>Activer (à cocher, sinon l’équipement ne sera pas utilisable)</p>
+</li>
+<li>
+<p>Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring3.png" alt="Monitoring3">
+</div>
+</div>
+<div class="paragraph">
+<p>Et sélectionner si Jeedom est local ou déporté</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring9.png" alt="Monitoring9">
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Local
+</td>
+<td class="hdlist2">
+<p>permet de surveiller le Jeedom sur lequel est installé le plugin (localement)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Déporté
+</td>
+<td class="hdlist2">
+<p>permet de monitorer un Jeedom distant (installé sur une autre machine)</p>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect3">
-<h4 id="_aller_sur_la_page_ap_configuration">1.3.3. Aller sur la page "Ap Configuration"</h4>
+<h4 id="_choix_déporté">1.2.1. Choix déporté</h4>
 <div class="paragraph">
-<p>C’est dans cette page que tout va se faire.
-il faut entrer son  mot de passe Wi-Fi,et cliquer sur OK.</p>
+<p>Après avoir sélectionné ce mode, 4 champs supplémentaires s&#8217;affichent :</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Adresse IP
+</td>
+<td class="hdlist2">
+<p>saisir l&#8217;adresse IP de la machine distante</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Port SSH
+</td>
+<td class="hdlist2">
+<p>saisir le numéro du port SSH (par défaut il s&#8217;agit du port 22)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Identifiant
+</td>
+<td class="hdlist2">
+<p>saisir le nom d&#8217;utilisateur qui sera utilisé pour lancer les commandes Linux</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Mot de passe
+</td>
+<td class="hdlist2">
+<p>saisir le mot de passe qui est associé au nom d&#8217;utilisateur</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring4.png" alt="Monitoring4">
 </div>
 </div>
-<div class="sect3">
-<h4 id="_passer_le_allone_en_en_mode_ap">1.3.4. Passer le AllOne en  en mode AP</h4>
-<div class="paragraph">
-<p>Appuyez 5 secondes sur le bouton du Orvibo, il va se mettre à clignoter en orange
-Appuyer de nouveau  5 sec. Le Orvibo clignotera en bleu, ce qui indiquera qu’il est en mode pairage.</p>
-</div>
-<div class="admonitionblock tip">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Par défaut l’objet non configuré arrive avec la LED rouge clignotante.
-C’est le mode avec LED  bleue clignotante rapidement.
+Vous devez choisir un identifiant avec les droits nécessaires pour lancer les commandes (en général le login "root").
+Pour un NAS Synology, il faut utiliser le login disposant des droits administrateur.
 </td>
 </tr>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_attendre_la_fin_de_la_configuration">1.3.5. Attendre la fin de la configuration</h4>
+</div>
+<div class="sect2">
+<h3 id="_coloration_des_valeurs">1.3. Coloration des valeurs</h3>
 <div class="paragraph">
-<p>A cette étape, il n&#8217;y rien à faire,
-il faut attendre que la configuration se fasse.
-Une fois finie, on retouve dans le menu "Device" un device nommé AllOne.</p>
+<p>Pour mettre en avant des valeurs, il est possible de coloriser certaines valeurs.</p>
 </div>
 <div class="paragraph">
-<p>Le AllOne est configuré, il n&#8217;y a plus qu&#8217;a configurer le plugin</p>
+<p>Les valeurs doivent correspondre à une valeur visible sur le Dashboard. Exemple : 55°C, 12% etc&#8230;&#8203; Il faudra saisir seulement la valeur chiffré, sans le signe %, °C etc&#8230;&#8203;</p>
 </div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="_configuration_du_plugin">1.3.6. Configuration du plugin</h4>
-<div class="paragraph">
-<p>Apres le  telechargement du plugin, il vous suffit juste d&#8217;activer celui-ci, il n&#8217;y a aucune configuration a ce niveau.</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/plugin.png" alt="plugin">
+<img src="../images/Monitoring5.png" alt="Monitoring5">
 </div>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="_configuration_d_un_objet_etape_1">1.3.7. Configuration d&#8217;un objet : etape 1</h4>
-<div class="paragraph">
-<p>La configuration des Equipements tableau est accessible a partir du menu plugin :
-il vous suffit de cliquer sur le bouton "ajouter"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plugin2.png" alt="plugin2">
-</div>
-</div>
-<div class="paragraph">
-<p>La premiere étape est de renseigner l&#8217;adresse Ip de sa passerelle dans le champ "adresse IP".
-Vous trouverez cette adresse sur l&#8217;interface de gestion de votre box internet.
-Dans une prochaine version du pluging j&#8217;ajouterai une option de recherche.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plugin3.png" alt="plugin3">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois l&#8217;adresse IP renseigné, cliqué sur le bouton "recherche équipement". Le champ "adresse mac" devrait se mettre à jour.</p>
-</div>
-<div class="paragraph">
-<p>Sauvergarder votre équipement</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="_configuration_d_un_objet_etape_2">1.3.8. Configuration d&#8217;un objet : etape 2</h4>
-<div class="paragraph">
-<p>La deuxieme étapes de configuration consite en l&#8217;ajout des commandes de votre Orvibo.
-Pour cela cliquez sur le bouton "ajouter une commande"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plugin4.png" alt="plugin4">
-</div>
-</div>
-<div class="paragraph">
-<p>Une nouvelle commande apparait. Le champs "Identifiant" est vide.
-Donner un nom à votre commande.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plugin5.png" alt="plugin5">
-</div>
-</div>
-<div class="paragraph">
-<p>Passons maintenant à l&#8217;apprentissage de la commande :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>cliquez sur le bouton "apprentisage"</p>
-</li>
-<li>
-<p>le cercle lumineux de l&#8217;orbivo passe au rouge</p>
-</li>
-<li>
-<p>diriger votre telécommande vers l&#8217;orvibo et appuyer sur une touche</p>
-</li>
-<li>
-<p>le cercle lumineux de l&#8217;orbivo passe au bleu</p>
-</li>
-<li>
-<p>un tres long code s&#8217;affiche dans le champ "CodeIr"</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plugin6.png" alt="plugin6">
-</div>
-</div>
-<div class="paragraph">
-<p>Bravo l&#8217;apprentissage est terminée.</p>
-</div>
-<div class="paragraph">
-<p>Sauvegarder maintenant.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-si vous connaissez déjà le code infrarouge de la commande, vous pouvez le saisir directement dans le champsCodeIr.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-L&#8217;absence de du champs Identifiant signifis que la commande n&#8217;a pas été sauvegardé.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Sauvergarder votre équipement !
-Maintenant vous pouvez utiliser le bouton "test"</p>
-</div>
-<hr>
-<hr>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_faq">1.4. FAQ</h3>
-<hr>
+<h3 id="_historiser">1.4. Historiser</h3>
 <div class="paragraph">
-<p>Pas de questions pour le moment.</p>
+<p>Pour certaines valeurs, il est possible d&#8217;activer "historiser" pour représenter, par une courbe, les variations de différentes valeurs.</p>
+</div>
+<div class="paragraph">
+<p>Historiser est possible pour :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Charge système (Load average)</p>
+</li>
+<li>
+<p>Mémoire libre (pourcentage)</p>
+</li>
+<li>
+<p>Espace disque libre (porcentage)</p>
+</li>
+<li>
+<p>Température CPU (seulement avec Jeedom Mini)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring6.png" alt="Monitoring6">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemples_de_scénario">1.5. Exemples de scénario</h3>
+<div class="sect3">
+<h4 id="_scénario_pour_recevoir_un_mail_en_cas_de_dépassement_de_température">1.5.1. Scénario pour recevoir un mail en cas de dépassement de température</h4>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring7.png" alt="Monitoring7">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- Nom du scénario : 333
+- Mode du scénario : provoke
+    - Evènement : #[Bureau][Raspberry Pi][Température CPU]#
+
+    SI #[Bureau][Raspberry Pi][Température CPU]#&gt;55
+    ALORS
+     #[Appart][TestMail][Jeedom]# - Options : Array
+    (
+        [title] =&gt; Test - Jeedom
+        [message] =&gt; Température dépassé : #[Bureau][Raspberry Pi][Température CPU]#
+    )
+
+    SINON</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scénario_pour_recevoir_un_mail_en_cas_de_connexion_ssh_ko_en_mode_déporté">1.5.2. Scénario pour recevoir un mail en cas de connexion SSH KO en mode déporté</h4>
+<div class="listingblock">
+<div class="content">
+<pre>- Nom du scénario : 333
+- Mode du scénario : provoke
+    - Evènement : #1198#
+    SI #[Bureau][LVM][Statut cnx SSH]#="KO"
+    ALORS
+     #[Appart][TestMail][Jeedom]# - Options : Array
+    (
+        [title] =&gt; Test - Jeedom
+        [message] =&gt; Connexion SSH KO de LVM
+    )
+    SINON</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_action_redémarrage_et_extinction_de_l_équipemnt">1.6. Action redémarrage et extinction de l&#8217;équipemnt</h3>
+<div class="sect3">
+<h4 id="_mode_local">1.6.1. Mode local</h4>
+<div class="paragraph">
+<p>Il est nécessaire de donner les droits à l&#8217;utilisateur "www-data" de lancer les commandes "reboot" et "poweroff". Pour ce faire, deux méthodes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit donner les droits "root" à l&#8217;utilisateur "www-data" (solution préconisée par Jeedom)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo su -
+echo "www-data ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit donner à l&#8217;utilisateur "www-data" les droits "root" seulement pour les commandes "reboot" et "poweroff"</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo su -
+echo "www-data ALL=NOPASSWD:/sbin/reboot" | (EDITOR="tee -a" visudo) &amp;&amp; echo "www-data ALL=NOPASSWD:/sbin/poweroff" | (EDITOR="tee -a" visudo)</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mode_déporté">1.6.2. Mode déporté</h4>
+<div class="paragraph">
+<p>Il suffit, lors de la configuration de l&#8217;équipement, de choisir un identifiant et mot de passe SSH avec suffisamment de droit pour lancer les deux commandes "reboot" et "poweroff"</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quelques_captures">1.7. Quelques captures</h3>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring8.png" alt="Monitoring8">
+</div>
 </div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_devellopeur">1.5. Devellopeur</h3>
+<h3 id="_faq">1.8. FAQ</h3>
+<div class="openblock panel">
+<div class="title">Quelle est la fréquence de rafraichissement des informations ?</div><div class="content">
+<div class="paragraph">
+<p>Le plugin actualise les informations toutes les 15min (00, 15, 30 et 45).</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Quelle est la signification de Charge système (Load average) ?</div><div class="content">
+<div class="paragraph">
+<p>Pour plus d&#8217;information : <a href="http://fr.wikipedia.org/wiki/Load_average">Wikipédia</a></p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Est-il possible de Monitorer VMware ESXi ?</div><div class="content">
+<div class="paragraph">
+<p>A ce jour non, ESXi n&#8217;utilise pas les commandes linux classiques. Si une forte demande se fait ressentir, pourquoi pas&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Pendant la mise à jour du plugin, j&#8217;obtiens une erreur :</div><div class="content">
+<div class="paragraph">
+<p>cat: /sys/devices/platform/sunxi-i2c.0/i2c-0/0-0034/temp1_input: No such file or directory
+Si vous avez Jeedom Cubieboard. Ne pas tenir compte de cette erreur, elle permet de capter la température du Banana Pi (qui est reconnu comme un Cubieboard).
+Aucun problème sur le fonctionnement du plugin</p>
+</div>
+</div>
+</div>
 <hr>
+</div>
+<div class="sect2">
+<h3 id="_changelog">1.9. Changelog</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>correction bug avec l&#8217;affichage avancé</p>
+</li>
+<li>
+<p>suppression bootstrapdwitch
+'''</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
