@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*44* [green]*marques de modules différentes, soit un total de* [red]*237* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*44* [green]*marques de modules différentes, soit un total de* [red]*240* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -1021,6 +1021,11 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/26
 _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/3150-zipato-detecteur-z-wave-plus-4-en-1-3858890732931.html++[Acheter^]
 // 265.8223.7952_zd2201.multisensor.4in1.json
 
+|image:../images/compatibility_list/vision.zd2301.jpg[width=150,align="center"]|Vision Security|ZD2301 Multisensor 4in1|Ouverture|Vendu aussi sous la marque Zipato. 
+
+_[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/3823-zipato-detecteur-z-wave-plus-4-en-1-3858890732153.html++[Acheter^]
+// 265.8223.7968_zd2301.multisensor.4in1.json
+
 |image:../images/compatibility_list/vision.zg8101.jpg[width=150,align="center"]|Vision Security|ZG8101|Ouverture| _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2434-vision-security-detecteur-de-porte-de-garage-z-wave-zg8101-0696859123412.html.html++[Acheter^]
 // 265.8202.2562_zg8101.garage.door.detector.json
 
@@ -1037,6 +1042,16 @@ _[small]#Piles : 4x1.5V AAA#_|
 
 |image:../images/compatibility_list/vision.zm1602.jpg[width=150,align="center"]|Vision Security|ZM1602|Sirène| | link:++http://www.domadoo.fr/fr/peripheriques/2436-vision-security-sirene-z-wave-zm1602-alimentee-sur-secteur.html++[Acheter^]
 // 265.8201.2307_zm1602.json
+
+|image:../images/compatibility_list/vision.zm1701.jpg[width=150,align="center"]|Vision Security|ZM1701 Door Lock without Handle|Serrure|Inclusion en mode sécurisé 
+
+_[small]#Piles : 4x1.5V AA#_| 
+// 265.8198.1552_zw1701_doorlock.json
+
+|image:../images/compatibility_list/vision.zm1702.jpg[width=150,align="center"]|Vision Security|ZM1702 Door Lock|Serrure|Inclusion en mode sécurisé 
+
+_[small]#Piles : 4x1.5V AA#_| 
+// 265.8198.1568_zm1702.electronic.deadbolt.door.lock.json
 
 |image:../images/compatibility_list/vision.zp3102.jpg[width=150,align="center"]|Vision Security|ZP3102|Multicapteurs|Vendu aussi sous la marque Zipato. 
 
