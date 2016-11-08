@@ -430,13 +430,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_configuration_d_un_objet">1.3.2. Configuration d&#8217;un objet</a></li>
 </ul>
 </li>
-<li><a href="#_guide">1.4. Guide</a>
+<li><a href="#_la_configuration_du_thermostat_s_effectue_en_3_étapes">1.4. La configuration du Thermostat s&#8217;effectue en 3 étapes :</a></li>
+<li><a href="#_pilote">1.5. Pilote</a></li>
+<li><a href="#_temperature_par_defaut">1.6. Temperature par defaut</a>
 <ul class="sectlevel3">
-<li><a href="#_mode_d_emplois_du_thermostat">1.4.1. Mode d&#8217;emplois du thermostat.</a></li>
+<li><a href="#_gestion_des_plages">1.6.1. Gestion des plages</a></li>
 </ul>
 </li>
-<li><a href="#_faq">1.5. FAQ</a></li>
-<li><a href="#_devellopeur">1.6. Devellopeur</a></li>
+<li><a href="#_guide">1.7. Guide</a>
+<ul class="sectlevel3">
+<li><a href="#_mode_d_emplois_du_thermostat">1.7.1. Mode d&#8217;emplois du thermostat.</a></li>
+</ul>
+</li>
+<li><a href="#_faq">1.8. FAQ</a></li>
+<li><a href="#_developpeur">1.9. Developpeur</a></li>
 </ul>
 </li>
 </ul>
@@ -570,33 +577,229 @@ Cette étape permet de définir, l&#8217;objet parent, l&#8217;activation et la 
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<div class="title">La configuration du Thermostat s&#8217;effectue en 3 étapes :</div>
-<ol class="arabic">
-<li>
-<p>Configuration du pilotage  (<a href="pilote.asciidoc">doc</a>)</p>
-</li>
-<li>
-<p>Configuration de la temperature par defaut (<a href="temperature.asciidoc">doc</a>)</p>
-</li>
-<li>
-<p>Configuration des plages du planning de chauffe (<a href="planning.asciidoc">doc</a>)</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Le thermosatat proposes, par defaut, 7 commandes.
-Vous ne pouvez pas modifier ces commandes. Elles permettent d&#8217;interagir avec</p>
-</div>
-<hr>
-<hr>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_guide">1.4. Guide</h3>
+<h3 id="_la_configuration_du_thermostat_s_effectue_en_3_étapes">1.4. La configuration du Thermostat s&#8217;effectue en 3 étapes :</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_pilote">1.5. Pilote</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/pilote.png" alt="pilote">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+il s&#8217;agit dans cette section de configurer les commandes qui vont permettrent au Thermostat d&#8217;interagir avec votre domotique.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Ces  commandes sont :</div>
+<ol class="arabic">
+<li>
+<p>Sonde</p>
+<div class="literalblock">
+<div class="content">
+<pre>La sonde de température permet d'indiquer au Thermostat la commande qui va lui permetre de relever la température d'ambiance de votre piece.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Commande ON</p>
+<div class="literalblock">
+<div class="content">
+<pre>Cette commande permet d'indiquer au Thermostat la commande à utiliser pour mettre en route votre chaudiere ou radiateur</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Commande Off</p>
+<div class="literalblock">
+<div class="content">
+<pre>Cette commande permet d'indiquer au thermostat la commande à utiliser pour arreter votre chaudiere ou radiateur</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Pour configurer une commande, il faut utiliser le bouton "Rechercher un équipement".
+Les commandes disponible pour la Sonde sont des commandes de type "Info".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_temperature_par_defaut">1.6. Temperature par defaut</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/default.png" alt="default">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+il s&#8217;agit dans cette section de configurer les Consignes de température par defaut du thermostat. Ces consignes sont utilisées lorsque qu l&#8217;on est pas dans une plage de fonctionnement definis ou lorsque le mode hors gel est activé.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_gestion_des_plages">1.6.1. Gestion des plages</h4>
+<div class="paragraph">
+<p>Le plungin Thermostat offre la possibilité de créer des plages spécifiques de controle.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plage.png" alt="plage">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Imaginons que vous ayez definis une temprétaure par défaut de 19°c mais que tous les matins vous avez besoins d&#8217;une température différente. Les plages sont la pour ça !
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Pour créer une plage, il faut cliquer sur le bouton "Créer une plage".  Cela ajoute alors une plage vide dans la liste des plages.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_configuration_2">Configuration</h5>
+<div class="paragraph">
+<p>Rien de plus simple. commencez par donner un nom à votre plage et fixez les différents parametres</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_heure_de_début_fin_de_la_plage">Heure de début/fin de la plage</h5>
+<div class="paragraph">
+<p>L&#8217;heure de début ou de fin d&#8217;une plage se définit grace à cette fenetre.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/horaire.png" alt="horaire">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Vous pouvez utilisez les bouton + ou - pour dimineur l&#8217;heure et les minutes ou les entrer directement à l&#8217;aide de votre clavier.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Heure de début de la plage</p>
+<div class="literalblock">
+<div class="content">
+<pre>Permet de définir l'heure de début d'une plage.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Heure de fin de la plage</p>
+<div class="literalblock">
+<div class="content">
+<pre>Permet de définir l'heure de fin d'une plage.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+l&#8217;Heure de fin est focément supérieure à l&#8217;heure de début.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_température_de_consigne">Température de consigne</h5>
+<div class="literalblock">
+<div class="content">
+<pre>Ce parametre  permet d'indiquer au thermostat la température de consigne à utiliser pour cette plage</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_jour_d_application">Jour d&#8217;application</h5>
+<div class="literalblock">
+<div class="content">
+<pre>il sagit ici d'un planning d'application de la plage. Vous pouvez choisir d'ppliquer votre consigne le lundi, le samedi ou les jours ferié.</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Vous pouvez créer une multitude de plage correspondant à vos besoins. Choisir la températured e consigne au reveil les jour de semaine ou de decider de chauffer moins pendant votre absence.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Le thermosatat proposes, par defaut, 7 commandes.
+Vous ne pouvez pas modifier ces commandes. Elles permettent d&#8217;interagir l&#8217;IHM</p>
+</div>
+<hr>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_guide">1.7. Guide</h3>
 <hr>
 <div class="sect3">
-<h4 id="_mode_d_emplois_du_thermostat">1.4.1. Mode d&#8217;emplois du thermostat.</h4>
+<h4 id="_mode_d_emplois_du_thermostat">1.7.1. Mode d&#8217;emplois du thermostat.</h4>
 <div class="paragraph">
 <p>L&#8217;utilisaion du themostat est simple et intuitif. Le Thermosat dispose de deux boutons "mode -" et "mode +".<br>
 Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</p>
@@ -749,7 +952,7 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_faq">1.5. FAQ</h3>
+<h3 id="_faq">1.8. FAQ</h3>
 <hr>
 <div class="paragraph">
 <p>Pas de questions pour le moment.</p>
@@ -757,8 +960,11 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_devellopeur">1.6. Devellopeur</h3>
+<h3 id="_developpeur">1.9. Developpeur</h3>
 <hr>
+<div class="paragraph">
+<p>974steph</p>
+</div>
 </div>
 </div>
 </div>
