@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Caldav Kalender</title>
+<title>Gestions des volets</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,15 +412,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>Gestions des volets</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_caldav_kalender">1. Caldav Kalender</a>
-<ul class="sectlevel2">
-<li><a href="#_beschreibung">1.1. Beschreibung</a></li>
-<li><a href="#_konfiguration">1.2. Konfiguration</a></li>
-<li><a href="#_faq">1.3. FAQ</a></li>
-<li><a href="#_Änderungsprotokoll">1.4. Änderungsprotokoll</a></li>
+<li><a href="#_description">1. Description</a></li>
+<li><a href="#_paramétrage">2. Paramétrage</a>
+<ul class="sectlevel3">
+<li><a href="#_parametre_général">2.1. Parametre Général</a></li>
+<li><a href="#_créer_une_zone">2.2. Créer une Zone</a></li>
+<li><a href="#_definition_de_la_zone">2.3. Definition de la Zone</a></li>
+<li><a href="#_configuration">2.4. Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -428,61 +430,116 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_caldav_kalender">1. Caldav Kalender</h2>
+<h2 id="_description">1. Description</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_beschreibung">1.1. Beschreibung</h3>
 <div class="paragraph">
-<p>Le plugin agenda permet de récupérer les événements d&#8217;un agenda caldav. Il gère les multiples évènements en les séparant par une virgule (“,”) il ne reste plus qu’à tester la présence de l’évènement dans un scénario pour déclencher une action (il existe dans les scénarios l’opérateur ~ pour savoir si une chaîne de caractères en contient une autre)</p>
+<p>Ce plugin permet de gérer facilement vos volets.
+Celui-ci est entirement basé sur le plugin Heliotrope qui est un prérequis pour l&#8217;utilisation de ce plugin.</p>
 </div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_konfiguration">1.2. Konfiguration</h3>
 <div class="paragraph">
-<p>Pour le configurer c’est très simple il suffit de créer un équipement par agenda puis de lui associer des patterns d&#8217;isolation d&#8217;event.</p>
+<p>Vous avez la possibilité de fermer vos volets a la tomber de la nuit et de les ré-ouvrir au levé du soleil.
+Vous avez egalement la possibilité de gérer vos volets pour qu&#8217;il se ferme si le soleil est dans l&#8217;azimute de votre feunetre</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_paramétrage">2. Paramétrage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Comme pour tous les plugins, nous allons commancer par cree un groupe de zone avec le bouton ajouter.
+Apres avoir nomée ce groupe nous allons pouvoir commencer a mettre en place nos zon
+==== Configuration Général Jeedom</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/caldav_config1.jpg" alt="caldav config1">
+<img src="../images/ConfigurationGeneral.jpg" alt="ConfigurationGeneral">
 </div>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nom  : Le nom a déjà été paramétrée mais vous avez la possibilité de la changer</p>
+</li>
+<li>
+<p>Objet parent : Ce paramétré permet d&#8217;ajouter l&#8217;équipement dans un objet Jeedom</p>
+</li>
+<li>
+<p>Catégorie : Déclare l&#8217;équipement dans une catégorie</p>
+</li>
+<li>
+<p>Visible : Permet de rendre l&#8217;équipement visible dans le Dashboard</p>
+</li>
+<li>
+<p>Activer : Permet d&#8217;activer l&#8217;équipement</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_parametre_général">2.1. Parametre Général</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ConfigurationParametre.jpg" alt="ConfigurationParametre">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Héliotrope : Choisir l&#8217;equipement héliotrope a prendre en compte pour ce groupe de zone</p>
+</li>
+<li>
+<p>Activation de la gestion par rayonnement : permet d&#8217;activer le gestion du rayonnement solaire</p>
+</li>
+<li>
+<p>Activation de la gestion jours nuit : permet d&#8217;activer si vous voulez ouvrir et fermé vos volet avec le jours et la nuit</p>
+</li>
+<li>
+<p>Delais apres le levée du jours : Delais ajouté a l&#8217;heure du levé du jours</p>
+</li>
+<li>
+<p>Delais avant la tombée de la nuit : Delais retirer a l&#8217;heure du levé de la tombée de la nuit</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_créer_une_zone">2.2. Créer une Zone</h4>
 <div class="paragraph">
-<p>Dans la case pattern, il est possible de mettre une pattern pour filtrer/extraire un évènement.</p>
+<p>Nous alons créer une zone en cliquant sur l&#8217;onglet ajouter.
+Celui ci va nous demander de le nomer.
+Une fois fait, un nouvelle onglet vas etre créer</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_definition_de_la_zone">2.3. Definition de la Zone</h4>
 <div class="paragraph">
-<p>Exemple de pattern : !^Arrière-cuisine (.*)$!</p>
+<p>La zone cree, nous avons besoin de definir ou est notre feunetre, ou zone de fenetre.
+Pour cela il suffit de deplacé les marqueur droite et gauche de la fenetre sur le carte</p>
 </div>
-<div class="paragraph">
-<p>Si l&#8217;évènement est "Arrière-cuisine 15", la valeur retournée sera 15. Ce qui permet de gérer des températures pour une programmation.</p>
-</div>
-<div class="paragraph">
-<p><a href="http://perldoc.perl.org/perlre.html" class="bare">http://perldoc.perl.org/perlre.html</a></p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_faq">1.3. FAQ</h3>
-<div class="openblock panel">
-<div class="title">Peut on avoir les futurs evenements</div><div class="content">
-<div class="paragraph">
-<p>Non ce n&#8217;est pas possible le plugin ne donne que les évenements en cours</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ConfigurationMap.jpg" alt="ConfigurationMap">
 </div>
 </div>
 </div>
-<div class="openblock">
-<div class="title">Quelle est la fréquence de rafraichissement des informations ?</div><div class="content">
-<div class="paragraph">
-<p>Par défaut c&#8217;est toutes les minutes.</p>
+<div class="sect3">
+<h4 id="_configuration">2.4. Configuration</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ConfigurationConditionAction.jpg" alt="ConfigurationConditionAction">
 </div>
 </div>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_Änderungsprotokoll">1.4. Änderungsprotokoll</h3>
-<div class="paragraph">
-<p>Unresolved directive in index.asciidoc - include::changelog.asciidoc[]</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Angle d&#8217;ensoleillement de la Zone : est un indicateur de l&#8217;angle du droit de votre feunetre par rapport au nord</p>
+</li>
+<li>
+<p>Ajouter vos conditions</p>
+</li>
+<li>
+<p>Ajouter vos actions</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
