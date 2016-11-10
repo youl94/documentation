@@ -149,4 +149,4 @@ image::../images/installation.vmware.nuc18.jpg[]
 
 Voilà VMware est installé (en plus il est sympa il vous donne son IP) , plus qu'à jouer avec !!!
 
-Pour la suite voici un https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[tutoriel] pour la création de votre première VM. Et vous trouverez https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html[ici] un tutoriel de trucs et astuces (pour par exemple mettre votre licence vmware)
+Pour la suite voici un https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[tutoriel] pour la création de votre première VM. Et vous trouverez https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html[ici] un tutoriel de trucs et astuces (pour par exemple mettre votre licence vmware)

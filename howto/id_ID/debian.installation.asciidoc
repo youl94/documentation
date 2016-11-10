@@ -23,7 +23,7 @@ Il ne vous reste plus qu'a cliquer sur démarrer, puis mettre la clef USB sur la
 
 === Sur une VM
 
-La manipulation est assez simple, vous creez une nouvelle machine virtuel, vous branché mettez un lecteur CD virtuel dessus qui pointe vers l'iso (pensez bien à la connecter) et vous lancer la machine. Voir https://www.jeedom.com/doc/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[ici] pour plus de détails.
+La manipulation est assez simple, vous creez une nouvelle machine virtuel, vous branché mettez un lecteur CD virtuel dessus qui pointe vers l'iso (pensez bien à la connecter) et vous lancer la machine. Voir https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[ici] pour plus de détails.
 
 == Installation
 
@@ -169,4 +169,4 @@ Il faut ensuite redemarrer le machine :
 sudo reboot
 ----
 
-Il ne vous reste plus qu'a installer jeedom en suivant https://www.jeedom.com/doc/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
+Il ne vous reste plus qu'a installer jeedom en suivant https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
