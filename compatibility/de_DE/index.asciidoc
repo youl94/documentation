@@ -45,23 +45,23 @@ Z-Wave Controller :
 
 '''
 == Zwave Module
-Sie finden die Liste https://jeedom.github.io/documentation/zwave-modules/fr_FR/doc-zwave-modules-equipement.compatible.html[hier]
+Vous trouverez la liste https://jeedom.github.io/documentation/zwave/fr_FR/equipement.compatible.html[ici]
 
 '''
 == EnOcean Module
-Sie finden die Liste https://jeedom.github.io/documentation/enocean-modules/fr_FR/doc-enocean-modules-equipement.compatible.html[hier]
+Vous trouverez la liste https://jeedom.github.io/documentation/enocean/fr_FR/equipement.compatible.html[ici]
 
 '''
 == Edisio Module
-Sie finden die Liste https://jeedom.github.io/documentation/edisio-modules/fr_FR/doc-edisio-modules-equipement.compatible.html[hier]
+Vous trouverez la liste https://jeedom.github.io/documentation/edisio/fr_FR/-equipement.compatible.html[ici]
 
 '''
 == RFXcom Module
-Sie finden die Liste https://jeedom.github.io/documentation/rfxcom-modules/fr_FR/doc-rfxcom-modules-equipement.compatible.html[hier]
+Vous trouverez la liste https://jeedom.github.io/documentation/rfxcom/fr_FR/equipement.compatible.html[ici]
 
 '''
 == Kameras
-Sie finden die Liste https://jeedom.github.io/documentation/camera-modules/fr_FR/doc-camera-modules-equipement.compatible.html[hier]
+Vous trouverez la liste https://jeedom.github.io/documentation/camera/fr_FR/equipement.compatible.html[ici]
 
 == Empfohlene Hardware-Plattform
 
