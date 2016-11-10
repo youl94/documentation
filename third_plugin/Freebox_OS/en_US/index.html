@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>FreeboxOS</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,108 +415,125 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
+<li><a href="#_freeboxos">1. FreeboxOS</a>
+<ul class="sectlevel2">
+<li><a href="#_description">1.1. Description</a></li>
+<li><a href="#_installation_et_configuration">1.2. Installation et Configuration</a>
 <ul class="sectlevel3">
-<li><a href="#_gestion_de_stock">1.1. Gestion de stock</a></li>
+<li><a href="#_appairage">1.2.1. Appairage</a></li>
+<li><a href="#_validation_sur_la_freebox">1.2.2. Validation sur la freebox</a></li>
+<li><a href="#_validation_jeedom">1.2.3. Validation Jeedom</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
-<ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_faq">1.3. FAQ</a></li>
+<li><a href="#_changelog">1.4. Changelog</a></li>
 </ul>
 </li>
-<li><a href="#_faq">3. FAQ</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_freeboxos">1. FreeboxOS</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_gestion_de_stock">1.1. Gestion de stock</h4>
+<div class="sect2">
+<h3 id="_description">1.1. Description</h3>
 <div class="paragraph">
-<p>Ce plugin permet de suivre vos stocks, la consommation et le coût associé.</p>
-</div>
-<div class="paragraph">
-<p>Son but est d&#8217;assurer une gestion la plus générique possible afin de permettre une utilisation sur le plus grand nombre de types de stock possible : pelets, buches, fioul, cuve de récupération d&#8217;eau de pluie voir stock de conserves etc &#8230;&#8203;</p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
-<div class="paragraph">
-<p>Le plugin ne comporte pas de configuration générale.</p>
+<p>Ce plugin permet de récupérer les informations de votre freeboxOS (Serveur Freebox Revolution ou 4K).</p>
 </div>
 <div class="paragraph">
-<p>Lorsque l&#8217;on créer un équipement on doit fournir les éléments suivant :</p>
+<p>Les informations disponibles de votre Freebox Serveur sur Jeedom sont:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Taille du stock</p>
+<p>Les informations système</p>
 </li>
 <li>
-<p>Jour du début de la semaine</p>
+<p>Le nombre d&#8217;appels en absences</p>
 </li>
 <li>
-<p>Commande de notification</p>
+<p>Le nombre d&#8217;appels passés</p>
 </li>
 <li>
-<p>Seuils de notification pour la consommation journalière, hebdomadaire, mensuelle</p>
+<p>Le nombre d&#8217;appels reçus</p>
 </li>
 <li>
-<p>Commande de seuil</p>
+<p>Les débits internet</p>
 </li>
 <li>
-<p>Seuil d&#8217;activation de la commande</p>
+<p>L&#8217;état de votre connexion</p>
+</li>
+<li>
+<p>La place disponible dans vos disques connectés à la Freebox Serveur.</p>
+</li>
+<li>
+<p>L’état de chaque équipement DHCP</p>
+</li>
+<li>
+<p>Couper le wifi</p>
+</li>
+<li>
+<p>Redemarrer votre freebox</p>
 </li>
 </ul>
 </div>
 <hr>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">3. FAQ</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Puis-je lier 2 stocks pour simuler par exemple un stock à la maison et un stock chez le fournisseur déjà acheté ?</div><div class="content">
+<div class="sect2">
+<h3 id="_installation_et_configuration">1.2. Installation et Configuration</h3>
 <div class="paragraph">
-<p>Oui, il faudra alors 2 équipements Stock. Puis les lier via un scénario.</p>
+<p>Un fois, le plugin installé et activé, nous devons procéder à un appairage du serveur jeedom sur la freebox.</p>
 </div>
-<div class="paragraph">
-<p>Deux possibilités :</p>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Freebox_OS_screenshot_configuration.jpg" alt="Freebox OS screenshot configuration">
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>utiliser un virtuel qui enlèvera du stock "fournisseur" et ajoutera au stock "local" la même quantité.</p>
-</li>
-<li>
-<p>directement utiliser les commandes du stock fournisseur pour déclencher l&#8217;ajout au stock local (ne pas oublier les 2 commandes Enlever 1 et Enlever X, attention dans ce cas il ne faudra pas utiliser Définir le stock)</p>
-</li>
-</ul>
 </div>
 <div class="paragraph">
-<p>Le scénario devra aussi basculer le nouveau prix si besoin sur le stock local.</p>
+<p>Sur la page de configuration vous avez la possibilité de personnaliser les options de connexion, mais seules celles par défaut ont été validées</p>
 </div>
+<div class="sect3">
+<h4 id="_appairage">1.2.1. Appairage</h4>
 <div class="paragraph">
-<p>Une bonne solution peut être d&#8217;utiliser une fonction ask pour que jeedom vous demande si il y a eu un mouvement du stock fournisseur vers le stock local.</p>
+<p>Pour cela il suffit de cliquer sur le bouton "Appairer" dans votre interface de configuration
+Vous allez à ce moment avoir un message comme ceci.
+Ne valider surtout pas maintenant, attendez les étapes suivantes</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/MessageValidation.jpg" alt="MessageValidation">
 </div>
 </div>
 </div>
-<div class="openblock panel">
-<div class="title">Je me suis trompé dans le prix unitaire et je souhaite réinitialiser</div><div class="content">
+<div class="sect3">
+<h4 id="_validation_sur_la_freebox">1.2.2. Validation sur la freebox</h4>
 <div class="paragraph">
-<p>Vous pouvez le faire en saisissant 0 en prix unitaire, puis en saisissant le tarif souhaité</p>
+<p>Vous avez donc demandé a votre freebox une nouvelle connexion par l&#8217;api, et il faut l&#8217;autoriser.
+Pour cela rien de plus simple, il vous faut donc aller valider cette connexion directement sur votre freebox en appuyant sur la flèche de droite pour répondre "oui"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/EcranFreebox.jpeg" alt="EcranFreebox">
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_validation_jeedom">1.2.3. Validation Jeedom</h4>
+<div class="paragraph">
+<p>Vous pouvez donc maintenant retourner sur votre pc pour valider le message laissé en attente précédement.
+L&#8217;état de fonctionnement de la liaison va alors être testé.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_faq">1.3. FAQ</h3>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_changelog">1.4. Changelog</h3>
+
 </div>
 </div>
 </div>

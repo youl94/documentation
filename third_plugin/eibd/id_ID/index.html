@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>EIB - KNX</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,109 +412,491 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>EIB - KNX</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
-<ul class="sectlevel3">
-<li><a href="#_gestion_de_stock">1.1. Gestion de stock</a></li>
+<li><a href="#_description">1. Description</a></li>
+<li><a href="#_installation_et_configuration">2. Installation et configuration</a>
+<ul class="sectlevel2">
+<li><a href="#_installation_des_dépendance">2.1. Installation des dépendance</a></li>
+<li><a href="#_configuration_du_plugin_et_de_ses_dépendances">2.2. Configuration du plugin et de ses dépendances</a></li>
+<li><a href="#_utilisation_du_mode_auto_implementation">2.3. Utilisation du mode auto-implementation</a></li>
+<li><a href="#_utilisation_de_mode_initialisation_au_démarrage">2.4. Utilisation de mode initialisation au démarrage</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
+<li><a href="#_paramétrage_des_equipements_et_des_commandes">3. Paramétrage des equipements et des commandes</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_Équipement">3.1. Équipement</a></li>
+<li><a href="#_commande">3.2. Commande</a></li>
+<li><a href="#_utilisation_de_dpt_spécifique_multi_objet_235_000">3.3. Utilisation de dpt spécifique multi objet (235.000)</a>
+<ul class="sectlevel3">
+<li><a href="#_présentation">3.3.1. Présentation</a></li>
+<li><a href="#_composition_du_dpt_235_001">3.3.2. Composition du DPT 235.001</a></li>
+<li><a href="#_confiugration_des_commandes">3.3.3. Confiugration des commandes</a></li>
 </ul>
 </li>
-<li><a href="#_faq">3. FAQ</a></li>
+<li><a href="#_exemple_config_actionneur_on_off">3.4. Exemple config actionneur ON/OFF :</a>
+<ul class="sectlevel3">
+<li><a href="#_créer_un_équipement_correspondant_à_votre_actionneur_knx">3.4.1. Créer un équipement correspondant à votre actionneur KNX :</a></li>
+<li><a href="#_créer_un_équipement_qui_se_comportera_comme_un_intérrupteur_knx">3.4.2. Créer un équipement qui se comportera comme un intérrupteur KNX :</a></li>
+</ul>
+</li>
+<li><a href="#_exemple_config_actionneur_dimmer">3.5. Exemple config actionneur Dimmer :</a>
+<ul class="sectlevel3">
+<li><a href="#_créer_un_équipement_correspondant_à_votre_dimmer_knx">3.5.1. Créer un équipement correspondant à votre dimmer KNX :</a></li>
+<li><a href="#_créer_la_commande_pour_dimmer_votre_lumière">3.5.2. Créer la commande pour dimmer votre lumière :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_utilisation_du_bus_monitor">4. Utilisation du Bus Monitor</a></li>
+<li><a href="#_utilisation_de_la_passerelle_jeedom_knx">5. Utilisation de la passerelle Jeedom/KNX</a></li>
+<li><a href="#_utilisation_du_parser_ets">6. Utilisation du parser ETS</a></li>
+<li><a href="#_faq">7. FAQ</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_description">1. Description</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_gestion_de_stock">1.1. Gestion de stock</h4>
 <div class="paragraph">
-<p>Ce plugin permet de suivre vos stocks, la consommation et le coût associé.</p>
-</div>
-<div class="paragraph">
-<p>Son but est d&#8217;assurer une gestion la plus générique possible afin de permettre une utilisation sur le plus grand nombre de types de stock possible : pelets, buches, fioul, cuve de récupération d&#8217;eau de pluie voir stock de conserves etc &#8230;&#8203;</p>
-</div>
-<hr>
+<p>Ce plugin permet de communiquer entre Jeedom avec votre installation KNX.
+Jeedom deviendra donc un equipement de votre installation
+Des fonction d&#8217;auto-configuration (auto-include, parser ETS4) ont été implémenté pour permettre une mise en place rapide</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
+<h2 id="_installation_et_configuration">2. Installation et configuration</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<div class="sect2">
+<h3 id="_installation_des_dépendance">2.1. Installation des dépendance</h3>
 <div class="paragraph">
-<p>Le plugin ne comporte pas de configuration générale.</p>
+<p>Pour faciliter la mise en place des dépendances, jeedom vas gérer seul l&#8217;installation de la suite logiciele EIBD.</p>
 </div>
 <div class="paragraph">
-<p>Lorsque l&#8217;on créer un équipement on doit fournir les éléments suivant :</p>
+<p>Dans la cadre réservé aux dépendances, vous allez avoir le statut de l&#8217;installation.
+Nous avons aussi la possibilité de consulter le log d&#8217;installation en temps réel
+L&#8217;installation d&#8217;EIBD peux être longue en fonction des performances de la machine qui l&#8217;exécute.
+Attention, la compilation est gourmande en ressource et peux entrainer des ralentissements dans votre jeedom</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Installation_dependance.jpg" alt="Installation dependance">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_du_plugin_et_de_ses_dépendances">2.2. Configuration du plugin et de ses dépendances</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/eibd_screenshot_Configuration.jpg" alt="eibd screenshot Configuration">
+</div>
+</div>
+<div class="paragraph">
+<p>Pendant ou après l&#8217;installation des dépendances, nous pouvons configurer le plugin et la connexion EIBD à notre passerelle.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Taille du stock</p>
+<p>Indiquez l&#8217;adresse IP de la machine sur lequel tourne EIBD (En local 127.0.0.1).</p>
 </li>
 <li>
-<p>Jour du début de la semaine</p>
+<p>Indiquez le port de connexion EIBD (Par défaut 6720)</p>
 </li>
 <li>
-<p>Commande de notification</p>
+<p>Indiquez le type de passerelle</p>
 </li>
 <li>
-<p>Seuils de notification pour la consommation journalière, hebdomadaire, mensuelle</p>
+<p>Indiquez l&#8217;adresse de la passerelle</p>
 </li>
 <li>
-<p>Commande de seuil</p>
+<p>Personnalisez l&#8217;adresse physique du démon sur votre réseau KNX</p>
 </li>
 <li>
-<p>Seuil d&#8217;activation de la commande</p>
+<p>Choisissez si vos GAD sont à 2 ou 3 niveaux</p>
+</li>
+<li>
+<p>Vous avez le choix de laisser Jeedom détecter et ajouter vos équipements et commandes</p>
+</li>
+<li>
+<p>Vous avez le choix de laisser Jeedom interroger le bus pour initialiser les valeurs des informations</p>
+</li>
+<li>
+<p>Enfin pensez à sauvegarder.</p>
 </li>
 </ul>
 </div>
-<hr>
+<div class="paragraph">
+<p>Nous pouvons voir le status de configuration et d&#8217;activation d&#8217;EIBD dans le cadre "Démon"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Status_Demon.jpg" alt="Status Demon">
+</div>
+</div>
+<div class="paragraph">
+<p>Si tous les voyants sont au vert, nous pouvons passer a la suite</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utilisation_du_mode_auto_implementation">2.3. Utilisation du mode auto-implementation</h3>
+<div class="paragraph">
+<p>En validant cette option, jeedom créera automatiquement les commandes qu&#8217;il voit passé sur le bus et qui n&#8217;existe pas.
+Un moteur de détéction de dpt et de type de commande est mis en place afin d&#8217;obtenir une configuration fonctionnelle sans intervention.</p>
+</div>
+<div class="paragraph">
+<p>La creation d&#8217;une commande avec ce mode sera toujours une commande de type "info" avec un DPT générique.</p>
+</div>
+<div class="paragraph">
+<p>Il sera donc toujours important de verifier et personalisé la configuration de ces commandes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utilisation_de_mode_initialisation_au_démarrage">2.4. Utilisation de mode initialisation au démarrage</h3>
+<div class="paragraph">
+<p>En validant cette option, Jeedom interrogera tous les équipements configurés avec une demande d&#8217;initialisation</p>
+</div>
+<div class="paragraph">
+<p>Attention:
+Il est important que toutes les Adresses de groupe initialisées aient un objet avec le Flag READ</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq">3. FAQ</h2>
+<h2 id="_paramétrage_des_equipements_et_des_commandes">3. Paramétrage des equipements et des commandes</h2>
 <div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Puis-je lier 2 stocks pour simuler par exemple un stock à la maison et un stock chez le fournisseur déjà acheté ?</div><div class="content">
 <div class="paragraph">
-<p>Oui, il faudra alors 2 équipements Stock. Puis les lier via un scénario.</p>
+<p>Si vous avez activé l&#8217;ajout automatique ou l&#8217;import ETS4, les equipements et les commandes ont été créer, mais il reste certain parametre a configurer.
+La suite de ce paragraphe va vous etre utiles.</p>
+</div>
+<div class="sect3">
+<h4 id="_Équipement">3.1. Équipement</h4>
+<div class="paragraph">
+<p>Dans un premier temps, il faut créer un nouvelle équipement et le nommé.
+Comme dans tous les plugins Jeedom vous avez un bouton ajouté un equipement sur la gauche de votre fenetre.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Configuration_equipement.jpg" alt="Configuration equipement">
+</div>
 </div>
 <div class="paragraph">
-<p>Deux possibilités :</p>
+<p>Ce nouvelle équipement a besoin d&#8217;être paramétré.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>utiliser un virtuel qui enlèvera du stock "fournisseur" et ajoutera au stock "local" la même quantité.</p>
+<p>Nom de l&#8217;équipement KNX : Le nom a déjà été paramétrée mais vous avez la possibilité de la changer</p>
 </li>
 <li>
-<p>directement utiliser les commandes du stock fournisseur pour déclencher l&#8217;ajout au stock local (ne pas oublier les 2 commandes Enlever 1 et Enlever X, attention dans ce cas il ne faudra pas utiliser Définir le stock)</p>
+<p>Adresse Physique de l&#8217;équipement : cette element n&#8217;est pas tres important et peut etre laissé vide</p>
+</li>
+<li>
+<p>Objet parent : Ce paramétré permet d&#8217;ajouter l&#8217;équipement dans un objet Jeedom</p>
+</li>
+<li>
+<p>Catégorie : Déclare l&#8217;équipement dans une catégorie</p>
+</li>
+<li>
+<p>Visible : Permet de rendre l&#8217;équipement visible dans le Dashboard</p>
+</li>
+<li>
+<p>Activer : Permet d&#8217;activer l&#8217;équipement</p>
+</li>
+<li>
+<p>Délai max entre 2 messages: ce champs permet est utile pour les equipements qui fonctionne sur batterie, il indique a jeedom le delais qu&#8217;il doit laissé entre 2 messages avant de vous informé d&#8217;un risque de panne.</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_commande">3.2. Commande</h4>
 <div class="paragraph">
-<p>Le scénario devra aussi basculer le nouveau prix si besoin sur le stock local.</p>
+<p>Maintenant que votre équipement est crée et configurée, on vas pouvoir y ajouter des commandes.</p>
 </div>
 <div class="paragraph">
-<p>Une bonne solution peut être d&#8217;utiliser une fonction ask pour que jeedom vous demande si il y a eu un mouvement du stock fournisseur vers le stock local.</p>
+<p>Exemple de configuration</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Configuration_commande.jpg" alt="Configuration commande">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nom : Nommée votre commande de manière a la retrouve facilement dans Jeedom</p>
+</li>
+<li>
+<p>Data Point Type : ce champs est important et indispensable pour l&#8217;encodage et décodage de la valeur.</p>
+</li>
+<li>
+<p>Groupe d&#8217;addresse : ce champs identifi la commande sur le bus et sur jeedom</p>
+</li>
+<li>
+<p>Retour d&#8217;état : Ce paramètre est visible pour une commande de type action, elle permet a jeedom de liée une info a une action
+Paramètre :</p>
+</li>
+<li>
+<p>Type : Une action pour faire un Write et une info pour un retour d&#8217;état</p>
+</li>
+<li>
+<p>Sous Type : Choisissez le sous type le plus adaptée a la valeur transmis ou a transmettre</p>
+</li>
+<li>
+<p>Valeur : Ce champs apparaitra uniquement quand vous êtes en Action &#8594; Defaut. Si elle est la valeur est défini jeedom transmettera que cette valeur sur le bus, autrement, il alternera automatiquement</p>
+</li>
+<li>
+<p>Initialiser: ce parmettre permet de déterminer quel paramettre on souhait initialisé lors d&#8217;un redémararge du plugin</p>
+</li>
+<li>
+<p>Evenement: ce paramettre détermine la maniere dont est mis a jour la valeur de la commande. Activé, c&#8217;est un evenement qui se produira sur le bus. Désactivé, une requet de lecture sera emise sur le bus.</p>
+</li>
+<li>
+<p>Visible : Permet de rendre visible votre commande sur le dashboard</p>
+</li>
+<li>
+<p>Historiser : Permet d&#8217;enregistrer la valeur</p>
+</li>
+<li>
+<p>Transmetre : Permet a jeedom d&#8217;envoyer une reponse a une requet read. Si Activé, il faudra déterminé un objets jeedom qui contient la valeur</p>
+</li>
+<li>
+<p>Inverser : Cette commande permet d&#8217;inverser la logique</p>
+</li>
+<li>
+<p>Enfin pensez sauvegarder.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utilisation_de_dpt_spécifique_multi_objet_235_000">3.3. Utilisation de dpt spécifique multi objet (235.000)</h3>
+<div class="sect3">
+<h4 id="_présentation">3.3.1. Présentation</h4>
+<div class="paragraph">
+<p>Ce DPT permet l&#8217;emission ou réception des informations "Choix de tarif" et "Energie réactive". Il est utiliser pour récupérer l&#8217;index du compteur ainsi que les états HP/HC &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Les valeurs renvoyé dans le tarif sont les suivantes :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/valeur_objet_tarif.PNG" alt="valeur objet tarif">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_composition_du_dpt_235_001">3.3.2. Composition du DPT 235.001</h4>
+<div class="paragraph">
+<p>Il est sur 6 octets découpé comme suit :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Entier signé 32 bits Active energy measured in the tariff indicated in the field Tariff (13.010) (Wh)</p>
+</li>
+<li>
+<p>Entier non signé 8 bits Tariff associated to the energy indicated in the field ActiveElectricalEnergy</p>
+</li>
+<li>
+<p>Binaire 8 bits b0 =0 si Tarif valide b1=0 si Active energy valide le reste est réservé.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/presentation_dpt.PNG" alt="presentation dpt">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_confiugration_des_commandes">3.3.3. Confiugration des commandes</h4>
+<div class="paragraph">
+<p>Créer un équipement (Lien vers doc)</p>
+</div>
+<div class="paragraph">
+<p>Cliquer sur "Ajouter un commande knx" et completer la commande comme ci dessous.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Commande_jeedom.PNG" alt="Commande jeedom">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemple_config_actionneur_on_off">3.4. Exemple config actionneur ON/OFF :</h3>
+<div class="sect3">
+<h4 id="_créer_un_équipement_correspondant_à_votre_actionneur_knx">3.4.1. Créer un équipement correspondant à votre actionneur KNX :</h4>
+<div class="paragraph">
+<p>L&#8217;Adresse KNX ( elle doit être identique à votre actionneur )
+Notre retour d&#8217;état : La Groupe Adresse choisie dans l&#8217;exemple : 0/1/0 ( A adapter à votre configuration).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Eibd_Exemple_ListenerONOFF.jpg" alt="Eibd Exemple ListenerONOFF">
+</div>
+</div>
+<div class="paragraph">
+<p>Exemple de config ETS de l&#8217;actionneur :
+Objet status ( Retour d&#8217;Etat ) doit avoir au minimum les flags C R et T, comme ci-dessous.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Eibd_Exemple_ETS_actionneur_onoff.jpg" alt="Eibd Exemple ETS actionneur onoff">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_créer_un_équipement_qui_se_comportera_comme_un_intérrupteur_knx">3.4.2. Créer un équipement qui se comportera comme un intérrupteur KNX :</h4>
+<div class="paragraph">
+<p>son Adresse KNX ( elle peut être identique à un vrai intérrupteur KNX qui remplira les même fonctions)</p>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;exemple ci-dessous : l&#8217;actionneur devra réagir sur l&#8217;adresse de groupe 0/0/1 ( A adapter à votre configuration)</p>
+</div>
+<div class="paragraph">
+<p>Lumière ON/OFF est notre action qui fera la bascule (visible coché : sera affiché sur le dashboard)</p>
+</div>
+<div class="paragraph">
+<p>(Optionel) Lumière ON est une commande qui impose ON (visible décoché : utilisé uniquement via un scénario)</p>
+</div>
+<div class="paragraph">
+<p>(Optionel) Lumière OFF est une commande qui impose OFF (visible décoché : sert uniquement via un scénario)</p>
+</div>
+<div class="paragraph">
+<p>Important : Ne pas oublier de choisir dans le champs Retour d&#8217;Etat la commande crée précédemment.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Eibd_Exemple_LumONOFF.jpg" alt="Eibd Exemple LumONOFF">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemple_config_actionneur_dimmer">3.5. Exemple config actionneur Dimmer :</h3>
+<div class="sect3">
+<h4 id="_créer_un_équipement_correspondant_à_votre_dimmer_knx">3.5.1. Créer un équipement correspondant à votre dimmer KNX :</h4>
+<div class="paragraph">
+<p>L&#8217;Adresse KNX ( elle doit être identique à votre actionneur dimmer )</p>
+</div>
+<div class="paragraph">
+<p>Etablir un retour Etat 0/0/11 ( A adapter à votre configuration)</p>
+</div>
+<div class="paragraph">
+<p>Attention au paramètre type "Numérique".</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Eibd_Exemple_Actionneur_dimmer.jpg" alt="Eibd Exemple Actionneur dimmer">
+</div>
+</div>
+<div class="paragraph">
+<p>Exemple de config ETS de l&#8217;actionneur dimmer :</p>
+</div>
+<div class="paragraph">
+<p>Objet 0/0/11 Status Brightness value ( Retour d&#8217;Etat ) doit avoir au minimum les flags C R et T, comme ci-dessous ( de longeur 1 byte).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Eibd_Exemple_ETS_dimmer.jpg" alt="Eibd Exemple ETS dimmer">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_créer_la_commande_pour_dimmer_votre_lumière">3.5.2. Créer la commande pour dimmer votre lumière :</h4>
+<div class="paragraph">
+<p>La commande Write brightness 5.001 0/0/10 doit avoir le paramètre "Slider" et comme retour état la commande créée précédemment "brightness value"</p>
+</div>
+<div class="paragraph">
+<p>La commande Diming 3.007 est uniquement là pour que jeedom reconnaissance des variations faites depuis des interrupteurs poussoir KNX.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Eibd_Exemple_dimmer.jpg" alt="Eibd Exemple dimmer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utilisation_du_bus_monitor">4. Utilisation du Bus Monitor</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En cliquant sur cette icône ci dessous, vous allez pouvoir visualiser l&#8217;activité qui se passe sur votre bus.
+Pour le débugage d&#8217;une configuration défaillante, il est aussi possible de filtrer les messages enregistrés en mémoire cache.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/eibd_screenshot_BusMonitor.jpg" alt="eibd screenshot BusMonitor">
+</div>
+</div>
+<div class="paragraph">
+<p>Avec le bus monitor vous allez pouvoir analyser ce qui se passe sur votre bus et ce que comprend Jeedom au bus.</p>
+</div>
+<div class="paragraph">
+<p>Le bus monitor affiche l&#8217;adresse physique de l’équipement, l&#8217;adresse de groupe, la data en hexa et sa conversion</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utilisation_de_la_passerelle_jeedom_knx">5. Utilisation de la passerelle Jeedom/KNX</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jeedom ce comporte donc comme un equipement a part entiere de votre installation KNX.
+Il est donc possible de luis demandé d&#8217;envoyé sur le bus KNX des informations issus de jeedom et donc d&#8217;autre protocole</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utilisation_du_parser_ets">6. Utilisation du parser ETS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Téléchargez votre projet ETS et jeedom se chargera de configurer au maximum vos commandes.
+L&#8217;utilisation du parser ne donne pas une configuration complète car elle est limitée aux informations saisies dans votre installation.
+Il est toujours nécessaire de verifier et compléter sa configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq">7. FAQ</h2>
+<div class="sectionbody">
+<div class="openblock panel">
+<div class="title">Comment créer une commande pour allumer la lumière alors que physiquement, je n&#8217;ai pas d’interrupteur ?</div><div class="content">
+<div class="paragraph">
+<p>Sous jeedom, nous pouvons créer des interrupteurs virtuels en configurant une commande de type action.
+Les éléments importants pour envoyer des informations sur le bus avec jeedom sont :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adresse de groupe</p>
+</li>
+<li>
+<p>Le DPT pour son encodage
+On verra apparaitre sur le bus monitor la commande envoyée avec l&#8217;adresse physique d&#8217;eibd</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="openblock panel">
-<div class="title">Je me suis trompé dans le prix unitaire et je souhaite réinitialiser</div><div class="content">
+<div class="title">Je n&#8217;arrive pas a émetre une information avec ma passerelle Hager th102 ?</div><div class="content">
 <div class="paragraph">
-<p>Vous pouvez le faire en saisissant 0 en prix unitaire, puis en saisissant le tarif souhaité</p>
+<p>Le script de démarage fonctionne mal avec cette passerelle.
+Il faut utiliser cette ligne pour lancer eibd</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>eibd -D -S -T -t1023 -i usb:1:6:1:0:0 -e 1.1.128 -R -u</code></pre>
+</div>
 </div>
 </div>
 </div>

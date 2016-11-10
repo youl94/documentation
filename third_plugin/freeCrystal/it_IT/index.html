@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>Freebox Crystal</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,107 +415,69 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
-<ul class="sectlevel3">
-<li><a href="#_gestion_de_stock">1.1. Gestion de stock</a></li>
+<li><a href="#_freebox_crystal">1. Freebox Crystal</a>
+<ul class="sectlevel2">
+<li><a href="#_description">1.1. Description</a></li>
+<li><a href="#_installation_présence_dhcp">1.2. Installation : Présence DHCP</a></li>
+<li><a href="#_installation_redémarrage_des_freebox">1.3. Installation : Redémarrage des freebox</a></li>
+<li><a href="#_faq">1.4. FAQ</a></li>
+<li><a href="#_changelog">1.5. Changelog</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
-<ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
-</ul>
-</li>
-<li><a href="#_faq">3. FAQ</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_freebox_crystal">1. Freebox Crystal</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_gestion_de_stock">1.1. Gestion de stock</h4>
+<div class="sect2">
+<h3 id="_description">1.1. Description</h3>
 <div class="paragraph">
-<p>Ce plugin permet de suivre vos stocks, la consommation et le coût associé.</p>
-</div>
-<div class="paragraph">
-<p>Son but est d&#8217;assurer une gestion la plus générique possible afin de permettre une utilisation sur le plus grand nombre de types de stock possible : pelets, buches, fioul, cuve de récupération d&#8217;eau de pluie voir stock de conserves etc &#8230;&#8203;</p>
+<p>Ce plugin permet de récupérer les informations de votre freebox crystal.
+Certain élément sont redu actif par jeedom (Redémarrage des freebox, présence DHCP) mais nécécite une installation supplémentaire sur votre serveur</p>
 </div>
 <hr>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<div class="sect2">
+<h3 id="_installation_présence_dhcp">1.2. Installation : Présence DHCP</h3>
 <div class="paragraph">
-<p>Le plugin ne comporte pas de configuration générale.</p>
+<p>Pour que le service de verification de présence des adresse DHCP fonctionne il est necessaire d&#8217;installer arp-scan
+Dans un terminal :</p>
 </div>
-<div class="paragraph">
-<p>Lorsque l&#8217;on créer un équipement on doit fournir les éléments suivant :</p>
+<div class="listingblock">
+<div class="content">
+<pre># sudo apt-get install arp-scan  #installation du paquet permetant de scanner le réseaux
+# sudo visudo -s
+# Ajouter la ligne :
+# www-data ALL=NOPASSWD: /usr/bin/arp-scan</pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Taille du stock</p>
-</li>
-<li>
-<p>Jour du début de la semaine</p>
-</li>
-<li>
-<p>Commande de notification</p>
-</li>
-<li>
-<p>Seuils de notification pour la consommation journalière, hebdomadaire, mensuelle</p>
-</li>
-<li>
-<p>Commande de seuil</p>
-</li>
-<li>
-<p>Seuil d&#8217;activation de la commande</p>
-</li>
-</ul>
 </div>
 <hr>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">3. FAQ</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Puis-je lier 2 stocks pour simuler par exemple un stock à la maison et un stock chez le fournisseur déjà acheté ?</div><div class="content">
+<div class="sect2">
+<h3 id="_installation_redémarrage_des_freebox">1.3. Installation : Redémarrage des freebox</h3>
 <div class="paragraph">
-<p>Oui, il faudra alors 2 équipements Stock. Puis les lier via un scénario.</p>
+<p>Pour le redemarage des freebox (serveur et Player) il est nécessaire de donné les droit au script</p>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre>#sudo chmod -R 777 /usr/share/nginx/www/jeedom/plugins/freeCrystal/ressources/</pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_faq">1.4. FAQ</h3>
 <div class="paragraph">
-<p>Deux possibilités :</p>
+<p>Unresolved directive in index.asciidoc - include::faq.asciidoc[]</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>utiliser un virtuel qui enlèvera du stock "fournisseur" et ajoutera au stock "local" la même quantité.</p>
-</li>
-<li>
-<p>directement utiliser les commandes du stock fournisseur pour déclencher l&#8217;ajout au stock local (ne pas oublier les 2 commandes Enlever 1 et Enlever X, attention dans ce cas il ne faudra pas utiliser Définir le stock)</p>
-</li>
-</ul>
+<hr>
 </div>
+<div class="sect2">
+<h3 id="_changelog">1.5. Changelog</h3>
 <div class="paragraph">
-<p>Le scénario devra aussi basculer le nouveau prix si besoin sur le stock local.</p>
-</div>
-<div class="paragraph">
-<p>Une bonne solution peut être d&#8217;utiliser une fonction ask pour que jeedom vous demande si il y a eu un mouvement du stock fournisseur vers le stock local.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">Je me suis trompé dans le prix unitaire et je souhaite réinitialiser</div><div class="content">
-<div class="paragraph">
-<p>Vous pouvez le faire en saisissant 0 en prix unitaire, puis en saisissant le tarif souhaité</p>
-</div>
+<p>Unresolved directive in index.asciidoc - include::changelog.asciidoc[]</p>
 </div>
 </div>
 </div>

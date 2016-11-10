@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>Plex</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,107 +415,173 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
-<ul class="sectlevel3">
-<li><a href="#_gestion_de_stock">1.1. Gestion de stock</a></li>
+<li><a href="#_plex">1. Plex</a>
+<ul class="sectlevel2">
+<li><a href="#_description">1.1. Description</a></li>
+<li><a href="#_configuration_du_serveur_plex">1.2. Configuration du serveur Plex</a></li>
+<li><a href="#_configuration_des_clients_plex">1.3. Configuration des clients Plex</a></li>
+<li><a href="#_utilisation_du_widget">1.4. Utilisation du widget</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
-<ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
-</ul>
-</li>
-<li><a href="#_faq">3. FAQ</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_plex">1. Plex</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_gestion_de_stock">1.1. Gestion de stock</h4>
+<div class="sect2">
+<h3 id="_description">1.1. Description</h3>
 <div class="paragraph">
-<p>Ce plugin permet de suivre vos stocks, la consommation et le coût associé.</p>
+<p>Contrôler vos clients plex grâce a votre domotique.
+Créer des réveil, musical grâce a l&#8217;association de plex et de jeedom.</p>
 </div>
 <div class="paragraph">
-<p>Son but est d&#8217;assurer une gestion la plus générique possible afin de permettre une utilisation sur le plus grand nombre de types de stock possible : pelets, buches, fioul, cuve de récupération d&#8217;eau de pluie voir stock de conserves etc &#8230;&#8203;</p>
+<p>Qu&#8217;est ce que PLEX?
+Plex organise vidéo, musique et photos à partir de bibliothèques de médias personnels et les cours d&#8217;eau pour les téléviseurs intelligents, des boîtes en streaming et les appareils mobiles. Il est un système de lecteur multimédia et suite logicielle composée de plusieurs applications de lecture pour les interfaces utilisateur.</p>
 </div>
 <hr>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<div class="sect2">
+<h3 id="_configuration_du_serveur_plex">1.2. Configuration du serveur Plex</h3>
 <div class="paragraph">
-<p>Le plugin ne comporte pas de configuration générale.</p>
+<p>La premiere chose a réaliser est de connecter Jeedom au serveur plex.</p>
 </div>
 <div class="paragraph">
-<p>Lorsque l&#8217;on créer un équipement on doit fournir les éléments suivant :</p>
+<p>Juste apres l&#8217;activation, nous avons les champs de parametrage du serveur.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_configuration3.jpg" alt="plex screenshot configuration3">
+</div>
+</div>
+<div class="paragraph">
+<p>Remplisser donc bien les 3 champs</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Taille du stock</p>
+<p>Adresse ip du serveur</p>
 </li>
 <li>
-<p>Jour du début de la semaine</p>
+<p>Le port de connexion</p>
 </li>
 <li>
-<p>Commande de notification</p>
-</li>
-<li>
-<p>Seuils de notification pour la consommation journalière, hebdomadaire, mensuelle</p>
-</li>
-<li>
-<p>Commande de seuil</p>
-</li>
-<li>
-<p>Seuil d&#8217;activation de la commande</p>
+<p>Son nom, attention de bien respecter la casse de se parametre</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Pour connaitre les informations liée a votre installation Plex je vous conseill d&#8217;ouvrir la page de configuration de votre server Plex</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_ServeurConfiguration.jpg" alt="plex screenshot ServeurConfiguration">
+</div>
+</div>
+<div class="paragraph">
+<p>Nota:</p>
+</div>
+<div class="paragraph">
+<p>Des indicateur de demon sont egalement présente sur cette page de configuration.
+Le demon permet de scruter l&#8217;etat de media en cours et determine si une pause et etablie sur le player.</p>
+</div>
 <hr>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">3. FAQ</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Puis-je lier 2 stocks pour simuler par exemple un stock à la maison et un stock chez le fournisseur déjà acheté ?</div><div class="content">
+<div class="sect2">
+<h3 id="_configuration_des_clients_plex">1.3. Configuration des clients Plex</h3>
 <div class="paragraph">
-<p>Oui, il faudra alors 2 équipements Stock. Puis les lier via un scénario.</p>
+<p>Nous allons nous rendre sur la page de parametrage des client plex Plugins &gt; Multimedia &gt; Plex
+Arriver sur cette page nous allons pouvoir acceder a nos clients deja configurer, ou en ajouter un.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_configuration1.jpg" alt="plex screenshot configuration1">
+</div>
 </div>
 <div class="paragraph">
-<p>Deux possibilités :</p>
+<p>Vous l&#8217;aurez deviné, pour ajouté un client, il suffit de cliquer sur le bouton "Ajouter" et de nomer l&#8217;equipement dans la fenetre qui va apparaitre</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_configuration2.jpg" alt="plex screenshot configuration2">
+</div>
+</div>
+<div class="paragraph">
+<p>Commencer par personnalisé les paramettre général (activer, visisble, parent)
+N&#8217;oublier pas d&#8217;activer l&#8217;option "Heartbeat" pour que le demon serveille votre client.</p>
+</div>
+<div class="paragraph">
+<p>Dans la partie configuration, le plugin detecte automatiquement tous les client compatible (Aujourd&#8217;hui teste Rasplex et plex <strong>home theater.
+Vos clients doivent imperativement etre lancer et connecte au serveur plex</strong></p>
+</div>
+<div class="paragraph">
+<p>Ajouté un increment pour le volume.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_utilisation_du_widget">1.4. Utilisation du widget</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_widget_principal.jpg" alt="plex screenshot widget principal">
+</div>
+</div>
+<div class="paragraph">
+<p>L&#8217;ecran principal du widget permet les fonction de base</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>utiliser un virtuel qui enlèvera du stock "fournisseur" et ajoutera au stock "local" la même quantité.</p>
+<p>Saut arriere</p>
 </li>
 <li>
-<p>directement utiliser les commandes du stock fournisseur pour déclencher l&#8217;ajout au stock local (ne pas oublier les 2 commandes Enlever 1 et Enlever X, attention dans ce cas il ne faudra pas utiliser Définir le stock)</p>
+<p>Saut avant</p>
+</li>
+<li>
+<p>Reculer</p>
+</li>
+<li>
+<p>Avancer</p>
+</li>
+<li>
+<p>Affichage du menu</p>
+</li>
+<li>
+<p>Lecture / Pause</p>
+</li>
+<li>
+<p>Stop</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Le scénario devra aussi basculer le nouveau prix si besoin sur le stock local.</p>
+<p>Mais aussi de choisir le media en cliquant sur les affiche arrier
+Il permet egalment d&#8217;acceder aux diferents menus</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_widget_Télécommande.jpg" alt="plex screenshot widget Télécommande">
+</div>
 </div>
 <div class="paragraph">
-<p>Une bonne solution peut être d&#8217;utiliser une fonction ask pour que jeedom vous demande si il y a eu un mouvement du stock fournisseur vers le stock local.</p>
+<p>A droite la télécommande qui permet de naviger directemetn sur votre ecran</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_widget_Liste.jpg" alt="plex screenshot widget Liste">
 </div>
 </div>
-</div>
-<div class="openblock panel">
-<div class="title">Je me suis trompé dans le prix unitaire et je souhaite réinitialiser</div><div class="content">
 <div class="paragraph">
-<p>Vous pouvez le faire en saisissant 0 en prix unitaire, puis en saisissant le tarif souhaité</p>
+<p>Le menu de gauche permet des selectioner une librairie et leur media associé.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plex_screenshot_widget_Detail.jpg" alt="plex screenshot widget Detail">
+</div>
+</div>
+<div class="paragraph">
+<p>Mais aussi le detail du media</p>
 </div>
 </div>
 </div>
