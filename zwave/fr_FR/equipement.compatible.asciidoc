@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*44* [green]*marques de modules différentes, soit un total de* [red]*240* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*44* [green]*marques de modules différentes, soit un total de* [red]*241* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -499,8 +499,11 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/27
 |image:../images/compatibility_list/fortrezz.wv01.jpg[width=150,align="center"]|Fortrezz|Automated Water Shut-Off Valve (WV-01)|Valve| | link:++http://www.domadoo.fr/fr/peripheriques/2957-fortrezz-vanne-d-arret-d-eau-34-z-wave-661799486057.html++[Acheter^]
 // 132.577.768_wv01_water_valve.json
 
+|image:../images/compatibility_list/fortrezz.ssa01.jpg[width=150,align="center"]|Fortrezz|SSA-01|Sirène| | link:++http://www.domadoo.fr/fr/peripheriques/979-fortrezz-sirene-z-wave-flash-clair-ssa1-0661799486033.html++[Acheter^]
+// 132.785.265_ssa1.json
+
 |image:../images/compatibility_list/fortrezz.ssa02.jpg[width=150,align="center"]|Fortrezz|SSA-02|Sirène| | link:++http://www.domadoo.fr/fr/peripheriques/980-fortrezz-sirene-z-wave-flash-rouge-ssa2-0661799486026.html++[Acheter^]
-// 132.785.265_ssa2.json
+// 132.785.267_ssa2.json
 
 |image:../images/compatibility_list/fortrezz.ssa03.jpg[width=150,align="center"]|Fortrezz|SSA-03|Sirène| | link:++http://www.domadoo.fr/fr/peripheriques/978-fortrezz-sirene-exterieure-ip54-z-wave-flash-ssa-03-0661799563277.html++[Acheter^]
 // 132.817.267_ssa3.json
