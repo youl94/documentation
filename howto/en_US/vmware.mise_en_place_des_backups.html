@@ -428,23 +428,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il est important d&#8217;avoir des backups de ses VMs et c&#8217;est un point à ne surtout pas negliger, sans meme parler de pannes matériels vous pouvez un jour avoir besoin de revenir à un backup suite à une mauvaise manipulation ou un probleme suite à une mise à jour. Attention ici on parle d&#8217;image complete des VMs, ce n&#8217;est pas juste un backup applicatif, il aura donc une taille assez importante.</p>
+<p>Il est important d’avoir des backups de ses VMs et c’est un point à ne surtout pas négliger, sans même parler de pannes matérielles vous pouvez un jour avoir besoin de revenir à un backup suite à une mauvaise manipulation ou un problème suite à une mise à jour. Attention ici on parle d’image complète des VMs, ce n’est pas juste un backup applicatif, il aura donc une taille assez importante.</p>
 </div>
 <div class="paragraph">
-<p>Une des contrainte pour faire un backup sous vmware et d&#8217;avoir absolument 2 datastores. Pour cela vous avez plusieurs choix :</p>
+<p>Une des contrainte pour faire un backup sous VMware est d&#8217;avoir absolument 2 datastores. Pour cela vous avez plusieurs choix :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>2 disque dur/ssd avec un datastore sur chaque</p>
+<p>2 disques durs/SSD avec un datastore sur chaque</p>
 </li>
 <li>
-<p>un NAS (type synology) qui partage un montage NFS. Dans ce cas il faut ajouter un systeme de fichier réseaux à VMware pour qu&#8217;il voit celui-ci comme un datastore</p>
+<p>un NAS (type Synology) qui partage un montage NFS. Dans ce cas il faut ajouter un système de fichier réseaux à VMware pour qu’il voit celui-ci comme un datastore</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Pour faire les backups des vm (à chaud en plus donc pas d&#8217;arret de celle-ci), nous allons utiliser ghettoVCB qui permet de le faire et en plus est gratuit</p>
+<p>Pour ce tuto je vais utiliser l’interface Web de l’ESXi qui est disponible soit par l’installation d’un vib soit à partir de la version 6.0 update 2. Pour rappel, pour accéder à cette interface il suffit d’aller sur IP_ESXI/ui</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -464,7 +464,7 @@ Pour ce tuto je vais utiliser l&#8217;interface Web de l&#8217;esxi qui est disp
 <h2 id="_installation_de_ghettovcb">1. Installation de ghettoVCB</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il faut recuperer ce <a href="https://raw.githubusercontent.com/lamw/ghettoVCB/master/ghettoVCB.sh">script</a> et le transferer vers l&#8217;ESXi (sur le meme datastore que celui qui va accueillir les backups par exemple).</p>
+<p>Il faut récupérer ce <a href="https://raw.githubusercontent.com/lamw/ghettoVCB/master/ghettoVCB.sh">script</a> et le transférer vers l&#8217;ESXi (sur le même datastore que celui qui va accueillir les backups par exemple).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -473,7 +473,7 @@ Pour ce tuto je vais utiliser l&#8217;interface Web de l&#8217;esxi qui est disp
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Dans la suite de ce tuto je considerais que vous avaez mis le script ghettoVCB.sh dans /vmfs/volumes/Backup/ghettoVCB.sh. A vous d&#8217;adapter en fonction de votre configuration les commandes/scripts fournis.
+Dans la suite de ce tuto je considère que vous avez mis le script ghettoVCB.sh dans /vmfs/volumes/Backup/ghettoVCB.sh. A vous d’adapter en fonction de votre configuration les commandes/scripts fournis.
 </td>
 </tr>
 </table>
@@ -484,7 +484,7 @@ Dans la suite de ce tuto je considerais que vous avaez mis le script ghettoVCB.s
 <h2 id="_connexion_en_ssh">2. Connexion en ssh</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il va falloir vous connecter en SSH sur l&#8217;esxi, pour se faire il faut a partir de l&#8217;interface</p>
+<p>Il va falloir vous connecter en SSH sur l’ESXi, pour ce faire il faut à partir de l’interface</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -492,7 +492,7 @@ Dans la suite de ce tuto je considerais que vous avaez mis le script ghettoVCB.s
 </div>
 </div>
 <div class="paragraph">
-<p>Ensuite avec putty ou kitty connectez vous dessus en mettant l&#8217;ip de votre ESXI et en utilisant vos identifiants de celui-ci</p>
+<p>Ensuite avec putty ou kitty connectez-vous dessus en mettant l’IP de votre ESXI et en utilisant vos identifiants de celui-ci</p>
 </div>
 </div>
 </div>
@@ -512,7 +512,7 @@ Pour toute la suite de ce tuto je considère que votre datastore de backup à po
 </table>
 </div>
 <div class="paragraph">
-<p>Sur le datastore de backup il faut creer un fichier ghettoVCB.conf qui contient :</p>
+<p>Sur le datastore de backup il faut créer un fichier ghettoVCB.conf qui contient :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -565,7 +565,7 @@ VM_STARTUP_ORDER=</pre>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Vous pouvez consulter <a href="https://communities.vmware.com/docs/DOC-8760">ici</a> la documentation complete de ghettoVCB avec une description de chaque paramètre
+Vous pouvez consulter <a href="https://communities.vmware.com/docs/DOC-8760">ici</a> la documentation complète de ghettoVCB avec une description de chaque paramètre
 </td>
 </tr>
 </table>
@@ -577,7 +577,7 @@ Vous pouvez consulter <a href="https://communities.vmware.com/docs/DOC-8760">ici
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Attention à bien mettre le / final pour le parametre VM_BACKUP_VOLUME sinon le script sera en erreur
+Attention à bien mettre le / final pour le paramètre VM_BACKUP_VOLUME sinon le script sera en erreur
 </td>
 </tr>
 </table>
@@ -588,7 +588,7 @@ Attention à bien mettre le / final pour le parametre VM_BACKUP_VOLUME sinon le 
 <h2 id="_test_de_backup">4. Test de backup</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Nous allons ici lancer un premier backup initial de tous les VMs pour voir si tout est ok, par la suite nous le planifierons en automatique. Retourner sur l&#8217;esxi en SSH (reconnectez vous si necessaire) et faites :</p>
+<p>Nous allons ici lancer un premier backup initial de tous les VMs pour voir si tout est ok, par la suite nous le planifierons en automatique. Retourner sur l&#8217;esxi en SSH (reconnectez-vous si nécessaire) et faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -664,7 +664,7 @@ Attention à bien mettre le / final pour le parametre VM_BACKUP_VOLUME sinon le 
 <h2 id="_lancement_automatique_des_backups">5. Lancement automatique des backups</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il faut ajouter la ligne de commande à la crontab mais sous vmware la crontab est un peu spécial et surtout écrasée à chaque démarrage, pour eviter cela il faut donc ajouter un petit script qui mettra à jour la crontab au boot (vous inquietez pas c&#8217;est assez simple et rapide), en ssh sur l&#8217;esxi faire :</p>
+<p>Il faut ajouter la ligne de commande à la crontab mais sous vmware la crontab est un peu spéciale et surtout écrasée à chaque démarrage. Pour éviter cela il faut donc ajouter un petit script qui mettra à jour la crontab au boot (ne vous inquiétez pas c&#8217;est assez simple et rapide), en ssh sur l&#8217;esxi faire :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -688,7 +688,7 @@ Attention à bien mettre le / final pour le parametre VM_BACKUP_VOLUME sinon le 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Ici je demande un backup tout les 1er du mois, vous pouvez changer cela en modifiant : 0 0 1 * *
+Ici je demande un backup tous les 1er du mois, vous pouvez changer cela en modifiant : 0 0 1 * *
 </td>
 </tr>
 </table>
@@ -700,7 +700,7 @@ Ici je demande un backup tout les 1er du mois, vous pouvez changer cela en modif
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Ici je fais un backup de toute les vms, vous pouvez adapter cela en remplacant le -a par -m ma_vm, attention si vous voulez mettre plusieurs vm il faut dupliquer la ligne "/bin/echo "0 0 1 * * /vmfs/volumes/Backup/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf &gt;/dev/null 2&gt;&amp;1" &gt;&gt; /var/spool/cron/crontabs/root" et en mettre une par VM à backuper
+Ici je fais un backup de toute les VMs, vous pouvez adapter cela en remplaçant le -a par -m ma_vm, attention si vous voulez mettre plusieurs VMs il faut dupliquer la ligne "/bin/echo "0 0 1 * * /vmfs/volumes/Backup/ghettoVCB.sh -a -g /vmfs/volumes/Backup/ghettoVCB.conf &gt;/dev/null 2&gt;&amp;1" &gt;&gt; /var/spool/cron/crontabs/root" et en mettre une par VM à backuper
 </td>
 </tr>
 </table>
@@ -718,7 +718,7 @@ N&#8217;oubliez pas d&#8217;adapter le chemin vers le fichier de configuration d
 </table>
 </div>
 <div class="paragraph">
-<p>Derniere étape il faut redemarrer votre ESXi pour que le cron soit pris en compte, vous pouvez voir le resultat en faisant (toujours en ssh) :</p>
+<p>Dernière étape il faut redémarrer votre ESXi pour que le cron soit pris en compte, vous pouvez voir le résultat en faisant (toujours en SSH) :</p>
 </div>
 <div class="listingblock">
 <div class="content">
