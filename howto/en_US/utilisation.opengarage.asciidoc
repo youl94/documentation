@@ -8,7 +8,7 @@ http://opengarage.io/
 
 == Lecture des états du OpenGarage
 
-Afin de récupérer l'état du relais et du capteur de distance, l'url a utilisé est :
+Afin de récupérer l'état du relais et du capteur de distance, l'url à utiliser est :
 
 ---
 http://addropengarage/jc

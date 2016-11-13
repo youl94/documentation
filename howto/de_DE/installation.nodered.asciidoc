@@ -16,7 +16,7 @@ Pour obtenir Nodejs vous pouvez installer un des plugins jeedom qui s'en charge.
 
 == Démarrage automatique de Nodered
 
-Il est possible de déclarer Nodered comme un service pour qu'il soit démarrer automatiquement au boot de la box. Un exemple ici :
+Il est possible de déclarer Nodered comme un service pour qu'il soit démarré automatiquement au boot de la box. Un exemple ici :
 
 https://gist.github.com/bigmonkeyboy/9962293
 

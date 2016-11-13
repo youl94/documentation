@@ -17,7 +17,7 @@ NOTE: Pour une meilleure lecture et compréhension de ce tutoriel, voici les ter
    +
 - *Jeedom Source* : Serveur (votre/vos ancien(s) Jeedom Esclave(s)) qui remonte vos équipements sur le *Jeedom Cible*. +
    +
-- Les notions de *Jeedom Maître* et *Jeedom Esclave* ne sont plus d'actualité. Le nouveau mode de fonctionnement de synchronisation d'équipements entre plusieurs Jeedoms peut être bidirectionnel. Un serveur Jeedom peut être désormais *Source* et *Cible* alors que l'ancien mode ne permettait que la remontée des équipements de *l'Esclave* vers *le Maître*. Avec le nouveau mode il est aussi possible d'avoir plusieurs *Jeedom Cibles* pour un même *Jeedom Source*. La communication entre les Jeedoms peut désormais aussi s'éffectuer à distance via internet (DNS Jeedom ou autre). +
+- Les notions de *Jeedom Maître* et *Jeedom Esclave* ne sont plus d'actualité. Le nouveau mode de fonctionnement de synchronisation d'équipements entre plusieurs Jeedoms peut être bidirectionnel. Un serveur Jeedom peut être désormais *Source* et *Cible* alors que l'ancien mode ne permettait que la remontée des équipements de *l'Esclave* vers *le Maître*. Avec le nouveau mode il est aussi possible d'avoir plusieurs *Jeedom Cibles* pour un même *Jeedom Source*. La communication entre les Jeedoms peut désormais aussi s'effectuer à distance via internet (DNS Jeedom ou autre). +
   +
 
 image::../images/jeelink.migration9.png[]
@@ -31,7 +31,7 @@ image::../images/jeelink.migration9.png[]
 En fonction des plugins installés sur votre *Jeedom Esclave*, il est nécessaire de récupérer les informations suivantes :
 
 ==== Plugin Zwave
-* Dans la page santé du plugin zwave sur le *Jeedom Maître*, choisir votre *Esclave* dans le menu déroulant et faire une copie d'écran, ceci afin de disposer d'une liste des équipements qui viennent de celui-ci.
+* Dans la page santé du plugin Zwave sur le *Jeedom Maître*, choisir votre *Esclave* dans le menu déroulant et faire une copie d'écran, ceci afin de disposer d'une liste des équipements qui viennent de celui-ci.
 * Noter pour chaque équipement venant de *l'Esclave* : l'objet parent, le nom, l'ID (Node), le modèle.
 * Récupérer le fichier Zwcfg : __Plugins => Gestion des Plugins => Z-wave__. Cliquer sur le bouton rouge __Zwcfg__ et copier le contenu dans un fichier texte sur votre ordinateur.
 
@@ -57,13 +57,13 @@ image::../images/jeelink.migration1.png[]
 
 === Installation du *Jeedom Source* :
 
-NOTE: si vous disposez d'un RaspberryPi supplémentaire et d'une autre carte SD, vous pouvez procéder à une migration un protocole après l'autre en installant un nouveau *Jeedom Source* en parallèle sans avoir à toucher à votre *Jeedom Esclave* existant. En déplaçant évidemment au fur et à mesure les éventuels contrôleurs de l'un à l'autre.
+NOTE: si vous disposez d'un Raspberry Pi supplémentaire et d'une autre carte SD, vous pouvez procéder à une migration un protocole après l'autre en installant un nouveau *Jeedom Source* en parallèle sans avoir à toucher à votre *Jeedom Esclave* existant. En déplaçant évidemment au fur et à mesure les éventuels contrôleurs de l'un à l'autre.
 
 WARNING: Si vous utiliser votre RaspberryPi existant, veuillez être certain d'avoir suivi le chapitre sauvegarde de cette documentation.
 
-NOTE: si vous utilisez le RaspberryPi existant qui est actuellement un *Jeedom Esclave*, nous vous conseillons d'utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
+NOTE: si vous utilisez le Raspberry Pi existant qui est actuellement un *Jeedom Esclave*, nous vous conseillons d'utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
 
-* Installer un nouveau Jeedom sur une nouvelle carte SD (Que cela soit pour mettre dans votre *Jeedom Esclave* existant ou pour un nouveau RaspberryPi) en suivant la https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html[documentation d'installation].
+* Installer un nouveau Jeedom sur une nouvelle carte SD (Que cela soit pour mettre dans votre *Jeedom Esclave* existant ou pour un nouveau Raspberry Pi) en suivant la https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html[documentation d'installation].
 * Mettre à jour le *Jeedom Source* à la dernière version (même si aucune mise à jour ne vous est proposée).
 * Vérifier dans la page Santé que la configuration réseau interne (et externe si besoin) du *Jeedom Source* est OK.
 
@@ -90,7 +90,7 @@ NOTE: Vous pouvez aussi au fur et à mesure assigner les équipements aux objets
 ==== Plugin Zwave :
 
 * Cliquer sur le bouton "Synchroniser" afin de récupérer les modules associés à votre contrôleur. (Ils sont gardés dans la mémoire de celui-ci)
-* Remplacer le fichier __Zwcfg__ : __Plugins => Gestion des Plugins => Z-wave__. Cliquer sur le bouton rouge __Zwcfg__ et coller le contenu du fichier texte précédement créé sur votre ordinateur. __Sauvegarder les changements__.
+* Remplacer le fichier __Zwcfg__ : __Plugins => Gestion des Plugins => Z-wave__. Cliquer sur le bouton rouge __Zwcfg__ et coller le contenu du fichier texte précédemment créé sur votre ordinateur. __Sauvegarder les changements__.
 * Renommer vos modules et les placer dans les objets souhaités en vous aidant de votre mémo de migration.
 
 ==== Plugin Rfxcom :
@@ -183,7 +183,7 @@ WARNING: Les interactions sur le *Jeedom Cible* ne pourront pas être lancées p
 
 == Ménage sur le *Jeedom Cible*
 
-NOTE: Après avoir bien validé que vos équipements/scénarios/interactions/virtuels/.... fonctionnent bien avec le nouveau système jeelink, vous pouvez procéder au ménage.
+NOTE: Après avoir validé avec certitude que vos équipements/scénarios/interactions/virtuels/.... fonctionnent correctement avec le nouveau système jeelink, vous pouvez procéder au ménage.
 
 * Supprimer les équipements résiduels de l'ancien *Jeedom Esclave*.
 * Désactiver et supprimer les plugins qui ne vous sont plus utiles (Ceux dont vous n'aviez que des équipements sur l'Esclave).

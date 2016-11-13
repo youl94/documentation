@@ -24,7 +24,7 @@ Cette commande n'est à utiliser que si vous disposez d'un serveur web Apache.
 
 Vous devez remplacer les paramètres email et domaine par vos valeurs.
 
-Normalement les paramètres d'ajout du protocole https sont ajouter par le script dans Apache.
+Normalement les paramètres d'ajout du protocole https sont ajoutés par le script dans Apache.
 
 == Configuration de Nginx
 
@@ -70,4 +70,4 @@ Le renouvellement se fait avec la commande :
 /opt/letsencrypt/letsencrypt-auto --apache --renew-by-default  -d mondomaine.fr
 ----
 
-Vous recevez un mail automatiquement à l'arrivée à échéance du certificat qui vous rappelera de passer la commande
+Vous recevez un mail automatiquement à l'arrivée à échéance du certificat qui vous rappellera de passer la commande

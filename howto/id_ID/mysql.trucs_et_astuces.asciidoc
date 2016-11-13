@@ -1,6 +1,6 @@
 = Trucs et astuces sur MySQL
 
-Pas vraiment un howto ici mais plus un recueils de trucs et astuces sur MySQL
+Pas vraiment un howto ici mais plus un recueil de trucs et astuces sur MySQL
 
 == Désactiver le performance schéma
 
@@ -14,7 +14,7 @@ performance_schema=OFF
 == Optimiser MySQL
 
 [IMPORTANT]
-Cette méthode est à vos risques et perils. En cas de soucis aucun support ne sera possible
+Cette méthode est à vos risques et périls. En cas de soucis aucun support ne sera possible.
 
 Arrêt de MySQL et suppression des fichiers de log :
 

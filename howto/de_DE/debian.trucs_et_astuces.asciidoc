@@ -8,7 +8,7 @@ Hier sind einige nützliche Pakete, die auf eine unberührte Installation nachin
 apt-get install -y vim fail2ban
 ----
 
-Wenn Sie auf VMware sind : 
+Si vous êtes sur VMware : 
 
 ----
 apt-get install -y open-vm-tools
@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/jeedom/core/stable/install/bashrc -O /roo
 
 == Eine root Verbindung in SSH erlauben 
 
-Man muss die Datei /etc/ssh/sshd_config editieren und ändern : 
+Il faut éditer le fichier /etc/ssh/sshd_config et changer : 
 
 ----
 PermitRootLogin without-password
@@ -62,7 +62,7 @@ Vous devez changer les TODO pour user et password par rapport à votre configura
 
 == Umstellung von Jessie in Stretch
 
-Man muß die /etc/apt/sources.list Datei editieren, alle "jessie" Wörter durch "stretch" ersetzen und danach folgendes machen : 
+Il faut éditer le fichier /etc/apt/sources.list et remplacer tous les jessie par stretch, puis faire : 
 
 ---- 
 apt-get update
@@ -70,4 +70,4 @@ apt-get dist-upgrade
 ----
 
 [IMPORTANT]
-Stretch ist keine stabile Version von debian, bei Problemen kann das Jeedom-Team jede Supportanfrage ablehnen
+Stretch n'est pas une version stable de Debian, en cas de soucis l'équipe Jeedom pourra refuser toute demande de support
