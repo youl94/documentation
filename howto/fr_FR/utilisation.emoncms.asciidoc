@@ -39,9 +39,9 @@ Pour prendre une donnée de emoncms dans Jeedom, il y a deux possibilités :
 
   https://serveur/emoncms/feed/value.json?id=1&apikey=xxx
 
-  * La deuxième possibilité est d'utiliser le plugin Event d'emoncms pour déclencher une action sur certaines conditions
-  Cette méthode pourrait être utile si on a une donnée qui est calculé ou directement récupérer par emoncms (par exemple OpenBEM)
-  Avec l'avantage de ne notifier que quand besoin, par contre le plugin event ne permet pas de faire de push et il faudra passer par MQTT pour la connexion Jeedom
+  * La deuxième possibilité est d'utiliser le plugin Event d'emoncms pour déclencher une action sur certaines conditions.
+  Cette méthode pourrait être utile si on a une donnée qui est calculée ou directement récupérée par emoncms (par exemple OpenBEM)
+  Avec l'avantage de ne notifier qu'en cas de besoin, par contre le plugin event ne permet pas de faire de push et il faudra passer par MQTT pour la connexion Jeedom
 
 == Mémo pour l'installation EmonCMS
 
@@ -49,9 +49,9 @@ L'installation est décrite sur cette page github :
 
 https://github.com/emoncms/emoncms/blob/master/docs/LinuxInstall.md
 
-A noter que certains plugins semblent obsolète avec la dernière version EmonCMS (v9 à fin 2015)
+A noter que certains plugins semblent obsolètes avec la dernière version EmonCMS (v9 à fin 2015)
 
-Si on les installe, il y a des problèmes avec les menus. De toute facon, on a besoin à priori uniquement de :
+Si on les installe, il y a des problèmes avec les menus. De toute façon, on a besoin à priori uniquement de :
 
 git clone https://github.com/emoncms/event.git (C'est lui qui pourra permettre de créer des réactions sur évènement dans emoncms pour notifier Jeedom)
 
