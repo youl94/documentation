@@ -1,8 +1,8 @@
 = Monit avec Jeedom
 
-Monit est un service de supervision de services. Il se charge de vérification qu'un service est toujours démarré
+Monit est un service de supervision de services. Il se charge de vérifier qu'un service est toujours démarré.
 
-Pour cela on lui indique les critères d'évaluation et les actions à prendre
+Pour cela on lui indique les critères d'évaluation et les actions à prendre.
 
 == Installation de Monit
 
