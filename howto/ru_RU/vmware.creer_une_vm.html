@@ -427,7 +427,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Nous allons voir ici comment créer une VM sous vmware.</p>
+<p>Nous allons voir ici comment créer une VM sous VMware.</p>
 </div>
 <div class="paragraph">
 <p>Il y a avant une petit chose importante à savoir sur VMware, il y a 2 moyen de le manager :</p>
@@ -435,7 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>l&#8217;interface web (présente par défaut en 6.0 update 2, ou par le biais d&#8217;un vib pour les autres version), on y accede par IP_ESXI/ui</p>
+<p>l&#8217;interface web (présente par défaut en 6.0 update 2, ou par le biais d&#8217;un vib pour les autres versions), on y accède par IP_ESXI/ui</p>
 </li>
 <li>
 <p>le client lourd et historique de VMware (vSphere client)</p>
@@ -443,10 +443,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>Ici j&#8217;utiliserais principalement l&#8217;interface web car je pense que c&#8217;est l&#8217;avenir de vmware qui délaisse de plus en plus le client lourd (d&#8217;ailleurs toute les nouveautée depuis la 5.1 ne sont pas utilisable avec le client lourd).</p>
+<p>Ici j&#8217;utiliserai principalement l&#8217;interface web car je pense que c&#8217;est l&#8217;avenir de VMware qui délaisse de plus en plus le client lourd (d&#8217;ailleurs toutes les nouveautées depuis la 5.1 ne sont pas utilisables avec le client lourd).</p>
 </div>
 <div class="paragraph">
-<p>A noter aussi que l&#8217;interface web est toujours en cours de mise en place chez vmware, en effet vous allez surement rencontrer quelques bugs ou ralentissement avec mais un petit rafrachissement de la page et ca repart sans soucis.</p>
+<p>A noter aussi que l&#8217;interface web est toujours en cours de mise en place chez VMware, en effet vous allez surement rencontrer quelques bugs ou ralentissements avec mais un petit rafrachissement de la page et ça repart sans soucis.</p>
 </div>
 </div>
 </div>
@@ -468,7 +468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Si vous n&#8217;avez rien je vous conseil de faire l&#8217;installation de l&#8217;interface web, toute les informations <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html">ici</a>
+Si vous n&#8217;avez rien je vous conseille de faire l&#8217;installation de l&#8217;interface web, toutes les informations <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html">ici</a>
 </td>
 </tr>
 </table>
@@ -482,24 +482,24 @@ Si vous n&#8217;avez rien je vous conseil de faire l&#8217;installation de l&#82
 </div>
 </div>
 <div class="paragraph">
-<p>Comme vous pouvez le voir l&#8217;interface est plutot sympa et permet de faire pas mal de chose, je ne rentrerais pas dans les détails mais vous pouvez déja à partir de cette écran :</p>
+<p>Comme vous pouvez le voir l&#8217;interface est plutôt sympa et permet de faire pas mal de choses, je ne rentrerai pas dans les détails mais vous pouvez déja à partir de cette écran :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>arreter/redémarrer l&#8217;ESXI</p>
+<p>arrêter/redémarrer l&#8217;ESXi</p>
 </li>
 <li>
 <p>voir l&#8217;utilisation des ressources (CPU,mémoire et disque)</p>
 </li>
 <li>
-<p>avoir des informations sur votre système (temps de fonctionnement, version de vmware, version du bios, affichage des datastores)</p>
+<p>avoir des informations sur votre système (temps de fonctionnement, version de VMware, version du bios, affichage des datastores)</p>
 </li>
 <li>
-<p>bouton pour créer une vm (on va s&#8217;en servir juste après)</p>
+<p>bouton pour créer une VM (on va s&#8217;en servir juste après)</p>
 </li>
 <li>
-<p>un bouton action qui permet en autre de passer en mode maintenance (pratique si vous avez un cluster d&#8217;ESXI sinon vous ne vous en servirez jamais), activer/désactiver le service SSH (est utilisé dans le tutoriel de configuration des backups)</p>
+<p>un bouton action qui permet en autre de passer en mode maintenance (pratique si vous avez un cluster d&#8217;ESXi sinon vous ne vous en servirez jamais), activer/désactiver le service SSH (est utilisé dans le tutoriel de configuration des backups)</p>
 </li>
 </ul>
 </div>
@@ -509,7 +509,7 @@ Si vous n&#8217;avez rien je vous conseil de faire l&#8217;installation de l&#82
 <h2 id="_envoi_de_l_iso_d_installation">2. Envoi de l&#8217;iso d&#8217;installation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Après avoir télécharger votre iso d&#8217;installation (<a href="http://cdimage.debian.org/debian-cd/8.5.0/amd64/iso-cd/debian-8.5.0-amd64-netinst.iso">ici</a> par exemple pour debian 8.5 en netinstall), il vous faut le mettre sur votre datastore.</p>
+<p>Après avoir téléchargé votre iso d&#8217;installation (<a href="http://cdimage.debian.org/debian-cd/8.5.0/amd64/iso-cd/debian-8.5.0-amd64-netinst.iso">ici</a> par exemple pour debian 8.5 en netinstall), il vous faut le mettre sur votre datastore.</p>
 </div>
 <div class="paragraph">
 <p>Pour cela cliquez sur datastore :</p>
@@ -520,7 +520,7 @@ Si vous n&#8217;avez rien je vous conseil de faire l&#8217;installation de l&#82
 </div>
 </div>
 <div class="paragraph">
-<p>Selectionnez votre datastore (en general il s&#8217;appel datastore1) :</p>
+<p>Selectionnez votre datastore (en general il s&#8217;appelle datastore1) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -544,7 +544,7 @@ Si vous n&#8217;avez rien je vous conseil de faire l&#8217;installation de l&#82
 </div>
 </div>
 <div class="paragraph">
-<p>Selectionnez l&#8217;iso precedement téléchargé et validez :</p>
+<p>Selectionnez l&#8217;iso précédement téléchargé et validez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -619,7 +619,7 @@ Si vous n&#8217;avez rien je vous conseil de faire l&#8217;installation de l&#82
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Tous ces paramètres sont modifiable après coup sans soucis, à noter tout de meme qu&#8217;il n&#8217;est pas vraiment possible de réduire la taille d&#8217;un disque dur, on peut l&#8217;augmenter (mais il faut savoir gerer ca au niveau de l&#8217;OS ensuite) mais pas la réduire.
+Tous ces paramètres sont modifiable après coup sans soucis, à noter tout de meme qu&#8217;il n&#8217;est pas vraiment possible de réduire la taille d&#8217;un disque dur, on peut l&#8217;augmenter (mais il faut savoir gérer ça au niveau de l&#8217;OS ensuite) mais pas la réduire.
 </td>
 </tr>
 </table>
@@ -633,7 +633,7 @@ Tous ces paramètres sont modifiable après coup sans soucis, à noter tout de m
 </div>
 </div>
 <div class="paragraph">
-<p>Selectionner ensuite l&#8217;emplacement ou est stocké votre ISO (voir chapitre précedent) et validez :</p>
+<p>Sélectionner ensuite l&#8217;emplacement où est stocké votre ISO (voir chapitre précedent) et validez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -673,7 +673,7 @@ Tous ces paramètres sont modifiable après coup sans soucis, à noter tout de m
 </div>
 </div>
 <div class="paragraph">
-<p>Vous devez avoir une page de ce type, cliquer sur le bouton lecture :</p>
+<p>Vous devez avoir une page de ce type, cliquez sur le bouton lecture :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -695,7 +695,7 @@ Tous ces paramètres sont modifiable après coup sans soucis, à noter tout de m
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Un fois votre machine installer il faut ABSOLUMENT installer les vmware tools (ca permet à vmware d&#8217;avoir des informations sur votre VM et d&#8217;eteindre celle-ci proprement). Sous debian il suffit de faire "sudo apt-get -y install open-vm-tools".
+Un fois votre machine installée il faut ABSOLUMENT installer les VMware tools (ça permet à VMware d&#8217;avoir des informations sur votre VM et d&#8217;éteindre celle-ci proprement). Sous debian il suffit de faire "sudo apt-get -y install open-vm-tools".
 </td>
 </tr>
 </table>
@@ -715,13 +715,13 @@ Un fois votre machine installer il faut ABSOLUMENT installer les vmware tools (c
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Si vous n&#8217;avez pas les options ci-dessous c&#8217;est qu&#8217;il faut mettre à jour l&#8217;ESXi Embedded Host Client , toute les informations <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html">ici</a>
+Si vous n&#8217;avez pas les options ci-dessous c&#8217;est qu&#8217;il faut mettre à jour l&#8217;ESXi Embedded Host Client , toutes les informations <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html">ici</a>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>C&#8217;est un besoin assez rare, mais j&#8217;ai du m&#8217;en servir pour Jeedom, en effet j&#8217;ai sur mon ESXI les clefs Zwave, RFXcom, edisio, enOcean et GSM de branchés et il me fallait les relier à ma VM Jeedom pour pouvoir m&#8217;en servir.</p>
+<p>C&#8217;est un besoin assez rare, mais j&#8217;ai dû m&#8217;en servir pour Jeedom, en effet j&#8217;ai sur mon ESXi les clefs Zwave, RFXcom, edisio, enOcean et GSM de branchées et il me fallait les relier à ma VM Jeedom pour pouvoir m&#8217;en servir.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -730,7 +730,7 @@ Si vous n&#8217;avez pas les options ci-dessous c&#8217;est qu&#8217;il faut met
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pour Zwave, RFXcom, edisio et enOcean il n&#8217;y a aucun soucis, pour les clefs GSM il vous suivre ce <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-gsm.huawei_mode_modem.html">tutoriel</a> avant pour forcer la clef en mode modem seulement sinon celle-ci n&#8217;est pas vu correctement sur l&#8217;esxi.
+Pour Zwave, RFXcom, edisio et enOcean il n&#8217;y a aucun soucis, pour les clefs GSM il vous faut suivre ce <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-gsm.huawei_mode_modem.html">tutoriel</a> avant pour forcer la clef en mode modem seulement sinon celle-ci n&#8217;est pas vue correctement sur l&#8217;ESXi.
 </td>
 </tr>
 </table>
@@ -758,13 +758,13 @@ Pour Zwave, RFXcom, edisio et enOcean il n&#8217;y a aucun soucis, pour les clef
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Le&#8217;étape qui suis devra être repété pour chaque péripherique USB que vous voulez connecter
+L&#8217;étape qui suit devra être repétée pour chaque périphérique USB que vous voulez connecter
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Enregistrez, refaite "Modifier les paramètres", puis "Ajouter un autre périphérique" et "USB device" :</p>
+<p>Enregistrez, refaites "Modifier les paramètres", puis "Ajouter un autre périphérique" et "USB device" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -772,7 +772,7 @@ Le&#8217;étape qui suis devra être repété pour chaque péripherique USB que 
 </div>
 </div>
 <div class="paragraph">
-<p>Choisissez votre péripherique USB dans la liste déroulante :</p>
+<p>Choisissez votre périphérique USB dans la liste déroulante :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -780,7 +780,7 @@ Le&#8217;étape qui suis devra être repété pour chaque péripherique USB que 
 </div>
 </div>
 <div class="paragraph">
-<p>Et voila votre péripherique est branché sur votre VM. A chaque redemarrage il sera automatique rebranché sur le VM et si vous le deconnectez/connectez physiquement alors celui-ci sera rebanché sur votre VM. En d&#8217;autre terme l&#8217;utilisation est maintenant totalement transparente.</p>
+<p>Et voilà votre périphérique est branché sur votre VM. A chaque redémarrage il sera automatique rebranché sur la VM et si vous le deconnectez/connectez physiquement alors celui-ci sera rebranché sur votre VM. En d&#8217;autres termes l&#8217;utilisation est maintenant totalement transparente.</p>
 </div>
 </div>
 </div>

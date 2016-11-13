@@ -416,7 +416,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_récuperation_des_sources">1. Récuperation des sources</a></li>
+<li><a href="#_récupération_des_sources">1. Récupération des sources</a></li>
 <li><a href="#_lancement_de_l_installation">2. Lancement de l&#8217;installation</a>
 <ul class="sectlevel2">
 <li><a href="#_sur_une_machine_physique">2.1. Sur une machine physique</a></li>
@@ -429,7 +429,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_ajouter_vim_et_sudo">4.1. Ajouter vim et sudo</a></li>
 <li><a href="#_ajouter_fail2ban">4.2. Ajouter fail2ban</a></li>
 <li><a href="#_ajouter_les_open_vmware_tools">4.3. Ajouter les Open VMware Tools</a></li>
-<li><a href="#_mettre_tmp_en_ram">4.4. Mettre /tmp en ram</a></li>
 </ul>
 </li>
 </ul>
@@ -439,15 +438,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Nous allons voir ici comment installer une Debian, aussi bien en tant que VM ou en installation direct sur une machine physique</p>
+<p>Nous allons voir ici comment installer une Debian, aussi bien en tant que VM ou en installation directe sur une machine physique</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_récuperation_des_sources">1. Récuperation des sources</h2>
+<h2 id="_récupération_des_sources">1. Récupération des sources</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Vous pouvez trouver la derniere version Debian en netinstall (taille minimal mais besoin d&#8217;internet pour l&#8217;installation) <a href="https://www.debian.org/CD/netinst">ici</a> (il faut prendre l&#8217;image en amd64) ou cliquer directement <a href="http://cdimage.debian.org/debian-cd/8.5.0/amd64/iso-cd/debian-8.5.0-amd64-netinst.iso">ici</a> pour télécharger l&#8217;iso.</p>
+<p>Vous pouvez trouver la dernière version Debian en netinstall (taille minimale mais besoin d&#8217;internet pour l&#8217;installation) <a href="https://www.debian.org/CD/netinst">ici</a> (il faut prendre l&#8217;image en amd64) ou cliquer directement <a href="http://cdimage.debian.org/debian-cd/8.5.0/amd64/iso-cd/debian-8.5.0-amd64-netinst.iso">ici</a> pour télécharger l&#8217;iso.</p>
 </div>
 </div>
 </div>
@@ -457,10 +456,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_sur_une_machine_physique">2.1. Sur une machine physique</h3>
 <div class="paragraph">
-<p>Il faut soit graver l&#8217;iso sur un CD et mettre le CD dans la machine, mais de nos jour les lecteurs CD sont de plus en plus rare&#8230;&#8203; Ou alors faire une clef USB bootable.</p>
+<p>Il faut soit graver l&#8217;iso sur un CD et mettre le CD dans la machine, mais de nos jour les lecteurs CD sont de plus en plus rares&#8230;&#8203; Ou alors faire une clef USB bootable.</p>
 </div>
 <div class="paragraph">
-<p>Pour la clef USB bootable il faut télécharger rufus <a href="http://rufus.akeo.ie/downloads/rufus-2.9.exe">la</a>, le lancer et le configurer comme ca :</p>
+<p>Pour la clef USB bootable il faut télécharger rufus <a href="http://rufus.akeo.ie/downloads/rufus-2.9.exe">là</a>, le lancer et le configurer comme ça :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -474,19 +473,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste avant
+Pensez bien à sélectionner votre fichier ISO que vous avez téléchargé juste avant
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Il ne vous reste plus qu&#8217;a cliquer sur démarrer, puis mettre la clef USB sur la machine et la faire booter dessus.</p>
+<p>Il ne vous reste plus qu&#8217;à cliquer sur démarrer, puis mettre la clef USB sur la machine et la faire booter dessus.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_sur_une_vm">2.2. Sur une VM</h3>
 <div class="paragraph">
-<p>La manipulation est assez simple, vous creez une nouvelle machine virtuel, vous branché mettez un lecteur CD virtuel dessus qui pointe vers l&#8217;iso (pensez bien à la connecter) et vous lancer la machine. Voir <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html">ici</a> pour plus de détails.</p>
+<p>La manipulation est assez simple, vous créez une nouvelle machine virtuelle, vous branchez mettez un lecteur CD virtuel dessus qui pointe vers l&#8217;iso (pensez bien à la connecter) et vous lancez la machine. Voir <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html">ici</a> pour plus de détails.</p>
 </div>
 </div>
 </div>
@@ -503,7 +502,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Choissiez "French" et validez par la touche entrée</p>
+<p>Choisissez "French" et validez par la touche entrée</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -511,7 +510,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Ici il faut choisir "Francais"</p>
+<p>Ici il faut choisir "French" (Français)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -551,7 +550,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Remettez le même :</p>
+<p>Remettez-le même :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -575,7 +574,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Mettez un mot de passe, je vous en conseil un simple ici (comme oooo), il pourra être changer plus tard (commande passwd) :</p>
+<p>Mettez un mot de passe, je vous en conseille un simple ici (comme oooo), il pourra être changé plus tard (commande passwd) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -631,7 +630,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Choissiez "France" et validez :</p>
+<p>Choisissez "France" et validez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -663,7 +662,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>La plus compliqué il faut déselectionner "environnement de bureau Debian" en appuyant sur la touche espace et selectionner "serveur SSH" en appuyant sur espace (il faut se deplacer avec les flèeches du clavier), puis valider en appuyant sur entrée :</p>
+<p>Là plus compliqué, il faut désélectionner "environnement de bureau Debian" en appuyant sur la touche espace et sélectionner "serveur SSH" en appuyant sur espace (il faut se déplacer avec les flèches du clavier), puis valider en appuyant sur entrée :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -679,7 +678,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Il faut choissir /dev/sda puis valider :</p>
+<p>Il faut choisir /dev/sda puis valider :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -687,7 +686,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>La vous avez juste à retirer la clef USB, le cdrom ou le cdrom virtuel et à appuyer sur entrée :</p>
+<p>Là vous avez juste à retirer la clef USB, le cdrom ou le cdrom virtuel et à appuyer sur entrée :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -695,7 +694,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 </div>
 </div>
 <div class="paragraph">
-<p>Voila votre installation de debian est finie. Vous pouvez arretez le tuto la si vous le voulez ou suivre les étapes suivantes pour quelques modification du systeme (utile surtout pour jeedom)</p>
+<p>Voilà votre installation de debian est finie. Vous pouvez arrêter le tuto là si vous le voulez ou suivre les étapes suivantes pour quelques modifications du système (utile surtout pour jeedom).</p>
 </div>
 </div>
 </div>
@@ -703,7 +702,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 <h2 id="_optimisation_pour_jeedom">4. Optimisation pour Jeedom</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pour préparer l&#8217;installation de Jeedom vous pouvez faire quelques optimisation :</p>
+<p>Pour préparer l&#8217;installation de Jeedom vous pouvez faire quelques optimisations :</p>
 </div>
 <div class="sect2">
 <h3 id="_ajouter_vim_et_sudo">4.1. Ajouter vim et sudo</h3>
@@ -716,7 +715,7 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 <div class="sect2">
 <h3 id="_ajouter_fail2ban">4.2. Ajouter fail2ban</h3>
 <div class="paragraph">
-<p>Fail2ban est un logiciel qui permet de sécuriser l&#8217;accès à votre debian, en cas d&#8217;un trop grand nombre d&#8217;echec de connexion il bloque l&#8217;accès à l&#8217;IP en question (donc pas à tout le monde seulement à l&#8217;attaquant) un certain temps.</p>
+<p>Fail2ban est un logiciel qui permet de sécuriser l&#8217;accès à votre debian, en cas d&#8217;un trop grand nombre d&#8217;échecs de connexion il bloque l&#8217;accès à l&#8217;IP en question (donc pas à tout le monde seulement à l&#8217;attaquant) un certain temps.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -727,30 +726,11 @@ Pensez bien à selectionner votre fichier ISO que vous avez téléchargé juste 
 <div class="sect2">
 <h3 id="_ajouter_les_open_vmware_tools">4.3. Ajouter les Open VMware Tools</h3>
 <div class="paragraph">
-<p>Les Open VMware Tools install les drivers spécifiques au système d&#8217;exploitation installé et apportent les optimisations de cet OS hébergé sur un hyperviseur ESXi.</p>
+<p>Les Open VMware Tools installent les drivers spécifiques au système d&#8217;exploitation installé et apportent les optimisations de cet OS hébergé sur un hyperviseur ESXi.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>sudo apt-get install -y open-vm-tools</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mettre_tmp_en_ram">4.4. Mettre /tmp en ram</h3>
-<div class="paragraph">
-<p>Jeedom utilise /tmp comme systeme de cache le mettre en ram permet donc d&#8217;alleger les écritures sur disque et d&#8217;accelerer Jeedom :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo echo "tmpfs	/tmp tmpfs  defaults,size=128M	0 0" &gt;&gt; /etc/fstab</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Il faut ensuite redemarrer le machine :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo reboot</pre>
 </div>
 </div>
 <div class="paragraph">

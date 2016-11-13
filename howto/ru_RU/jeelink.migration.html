@@ -500,7 +500,7 @@ Pour une meilleure lecture et compréhension de ce tutoriel, voici les termes ut
   <br>
 - <strong>Jeedom Source</strong> : Serveur (votre/vos ancien(s) Jeedom Esclave(s)) qui remonte vos équipements sur le <strong>Jeedom Cible</strong>.<br>
   <br>
-- Les notions de <strong>Jeedom Maître</strong> et <strong>Jeedom Esclave</strong> ne sont plus d&#8217;actualité. Le nouveau mode de fonctionnement de synchronisation d&#8217;équipements entre plusieurs Jeedoms peut être bidirectionnel. Un serveur Jeedom peut être désormais <strong>Source</strong> et <strong>Cible</strong> alors que l&#8217;ancien mode ne permettait que la remontée des équipements de <strong>l&#8217;Esclave</strong> vers <strong>le Maître</strong>. Avec le nouveau mode il est aussi possible d&#8217;avoir plusieurs <strong>Jeedom Cibles</strong> pour un même <strong>Jeedom Source</strong>. La communication entre les Jeedoms peut désormais aussi s&#8217;éffectuer à distance via internet (DNS Jeedom ou autre).<br>
+- Les notions de <strong>Jeedom Maître</strong> et <strong>Jeedom Esclave</strong> ne sont plus d&#8217;actualité. Le nouveau mode de fonctionnement de synchronisation d&#8217;équipements entre plusieurs Jeedoms peut être bidirectionnel. Un serveur Jeedom peut être désormais <strong>Source</strong> et <strong>Cible</strong> alors que l&#8217;ancien mode ne permettait que la remontée des équipements de <strong>l&#8217;Esclave</strong> vers <strong>le Maître</strong>. Avec le nouveau mode il est aussi possible d&#8217;avoir plusieurs <strong>Jeedom Cibles</strong> pour un même <strong>Jeedom Source</strong>. La communication entre les Jeedoms peut désormais aussi s&#8217;effectuer à distance via internet (DNS Jeedom ou autre).<br>
  <br>
 </td>
 </tr>
@@ -537,7 +537,7 @@ Pour une meilleure lecture et compréhension de ce tutoriel, voici les termes ut
 <div class="ulist">
 <ul>
 <li>
-<p>Dans la page santé du plugin zwave sur le <strong>Jeedom Maître</strong>, choisir votre <strong>Esclave</strong> dans le menu déroulant et faire une copie d&#8217;écran, ceci afin de disposer d&#8217;une liste des équipements qui viennent de celui-ci.</p>
+<p>Dans la page santé du plugin Zwave sur le <strong>Jeedom Maître</strong>, choisir votre <strong>Esclave</strong> dans le menu déroulant et faire une copie d&#8217;écran, ceci afin de disposer d&#8217;une liste des équipements qui viennent de celui-ci.</p>
 </li>
 <li>
 <p>Noter pour chaque équipement venant de <strong>l&#8217;Esclave</strong> : l&#8217;objet parent, le nom, l&#8217;ID (Node), le modèle.</p>
@@ -621,7 +621,7 @@ Ne pas supprimer pour l&#8217;instant les anciens équipements de <strong>l&#821
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-si vous disposez d&#8217;un RaspberryPi supplémentaire et d&#8217;une autre carte SD, vous pouvez procéder à une migration un protocole après l&#8217;autre en installant un nouveau <strong>Jeedom Source</strong> en parallèle sans avoir à toucher à votre <strong>Jeedom Esclave</strong> existant. En déplaçant évidemment au fur et à mesure les éventuels contrôleurs de l&#8217;un à l&#8217;autre.
+si vous disposez d&#8217;un Raspberry Pi supplémentaire et d&#8217;une autre carte SD, vous pouvez procéder à une migration un protocole après l&#8217;autre en installant un nouveau <strong>Jeedom Source</strong> en parallèle sans avoir à toucher à votre <strong>Jeedom Esclave</strong> existant. En déplaçant évidemment au fur et à mesure les éventuels contrôleurs de l&#8217;un à l&#8217;autre.
 </td>
 </tr>
 </table>
@@ -645,7 +645,7 @@ Si vous utiliser votre RaspberryPi existant, veuillez être certain d&#8217;avoi
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-si vous utilisez le RaspberryPi existant qui est actuellement un <strong>Jeedom Esclave</strong>, nous vous conseillons d&#8217;utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
+si vous utilisez le Raspberry Pi existant qui est actuellement un <strong>Jeedom Esclave</strong>, nous vous conseillons d&#8217;utiliser une carte SD/microSD neuve. Cela vous permettra de faire retour arrière facilement si besoin.
 </td>
 </tr>
 </table>
@@ -653,7 +653,7 @@ si vous utilisez le RaspberryPi existant qui est actuellement un <strong>Jeedom 
 <div class="ulist">
 <ul>
 <li>
-<p>Installer un nouveau Jeedom sur une nouvelle carte SD (Que cela soit pour mettre dans votre <strong>Jeedom Esclave</strong> existant ou pour un nouveau RaspberryPi) en suivant la <a href="https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html">documentation d&#8217;installation</a>.</p>
+<p>Installer un nouveau Jeedom sur une nouvelle carte SD (Que cela soit pour mettre dans votre <strong>Jeedom Esclave</strong> existant ou pour un nouveau Raspberry Pi) en suivant la <a href="https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html">documentation d&#8217;installation</a>.</p>
 </li>
 <li>
 <p>Mettre à jour le <strong>Jeedom Source</strong> à la dernière version (même si aucune mise à jour ne vous est proposée).</p>
@@ -732,7 +732,7 @@ Vous pouvez aussi au fur et à mesure assigner les équipements aux objets recr�
 <p>Cliquer sur le bouton "Synchroniser" afin de récupérer les modules associés à votre contrôleur. (Ils sont gardés dans la mémoire de celui-ci)</p>
 </li>
 <li>
-<p>Remplacer le fichier <em>Zwcfg</em> : <em>Plugins &#8658; Gestion des Plugins &#8658; Z-wave</em>. Cliquer sur le bouton rouge <em>Zwcfg</em> et coller le contenu du fichier texte précédement créé sur votre ordinateur. <em>Sauvegarder les changements</em>.</p>
+<p>Remplacer le fichier <em>Zwcfg</em> : <em>Plugins &#8658; Gestion des Plugins &#8658; Z-wave</em>. Cliquer sur le bouton rouge <em>Zwcfg</em> et coller le contenu du fichier texte précédemment créé sur votre ordinateur. <em>Sauvegarder les changements</em>.</p>
 </li>
 <li>
 <p>Renommer vos modules et les placer dans les objets souhaités en vous aidant de votre mémo de migration.</p>
@@ -1020,7 +1020,7 @@ Les interactions sur le <strong>Jeedom Cible</strong> ne pourront pas être lanc
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Après avoir bien validé que vos équipements/scénarios/interactions/virtuels/&#8230;&#8203;. fonctionnent bien avec le nouveau système jeelink, vous pouvez procéder au ménage.
+Après avoir validé avec certitude que vos équipements/scénarios/interactions/virtuels/&#8230;&#8203;. fonctionnent correctement avec le nouveau système jeelink, vous pouvez procéder au ménage.
 </td>
 </tr>
 </table>

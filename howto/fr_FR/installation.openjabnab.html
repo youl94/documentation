@@ -464,7 +464,7 @@ Ce tuto est largement inspiré de <a href="http://jetweb.free.fr/nabaztag_rpi/Tu
 <h2 id="_installation_des_dépendances">1. Installation des dépendances</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Une fois le systeme installé en SSH faite :</p>
+<p>Une fois le système installé en SSH faite :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -487,7 +487,7 @@ apt-get install git</pre>
 <h2 id="_configuration_du_réseau">2. Configuration du réseau</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il faut ensuite recuperer l&#8217;addresse IP du système :</p>
+<p>Il faut ensuite récupérer l&#8217;addresse IP du système :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -519,13 +519,13 @@ apt-get install git</pre>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pour toute la suite du tuto j&#8217;utiliserais cette IP elle est bien sur à remplacer en fonction de celle que vous avez réelement
+Pour toute la suite du tuto j&#8217;utiliserai cette IP, elle est bien sûr à remplacer en fonction de celle que vous avez réellement
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Edité ensuite le fichier /etc/resolv.conf</p>
+<p>Editez ensuite le fichier /etc/resolv.conf</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -570,7 +570,7 @@ zone "0.168.192.in-addr.arpa"{
 </div>
 </div>
 <div class="paragraph">
-<p>Creez le fichier db.raspberry.pi</p>
+<p>Créez le fichier db.raspberry.pi</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -596,7 +596,7 @@ ojn IN A 192.168.0.162
 </div>
 </div>
 <div class="paragraph">
-<p>Puis creez ce fichier db.192.168.0.inv</p>
+<p>Puis créez ce fichier db.192.168.0.inv</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -627,7 +627,7 @@ ojn IN A 192.168.0.162
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Pensez bien à remplacer le 162 de la dernière ligne par la derniere partie de l&#8217;ip de votre système
+Pensez bien à remplacer le 162 de la dernière ligne par la dernière partie de l&#8217;ip de votre système
 </td>
 </tr>
 </table>
@@ -699,7 +699,7 @@ Il faut faire ctrl+c pour quitter le ping
 <h2 id="_récupération_d_openjabnab">4. Récupération d&#8217;openjabnab</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On va d&#8217;abord creer l&#8217;utilisateur :</p>
+<p>On va d&#8217;abord créer l&#8217;utilisateur :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -761,7 +761,7 @@ vim ojn.conf</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Il faut ensuite autorisé le repertoire du serveur openjabnab, faites :</p>
+<p>Il faut ensuite autoriser le répertoire du serveur openjabnab, faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -781,7 +781,7 @@ vim ojn.conf</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Puis on redemarre apache :</p>
+<p>Puis on redémarre apache :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -811,7 +811,7 @@ make</pre>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Cette étape peut etre très longue (jusqu&#8217;a 45min)
+Cette étape peut être très longue (jusqu&#8217;à 45min)
 </td>
 </tr>
 </table>
@@ -850,7 +850,7 @@ AllowUserManageZtamp = true</pre>
 <h2 id="_configuration_du_serveur_web_openjabnab">8. Configuration du serveur web openjabnab</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Sur votre post vous devez editer le fichier  C:\Windows\System32\drivers\etc et rajouter :</p>
+<p>Sur votre post vous devez éditer le fichier  C:\Windows\System32\drivers\etc et rajouter :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -874,7 +874,7 @@ AllowUserManageZtamp = true</pre>
 <h2 id="_lancement_du_serveur">9. Lancement du serveur</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Voila tout est pret il reste plus qu&#8217;a lancer le serveur :</p>
+<p>Voilà tout est prêt il ne reste plus qu&#8217;à lancer le serveur :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -909,10 +909,10 @@ Si tout est bon vous devriez avoir les statistique qui apparaissent en bas
 <h2 id="_configuration_du_lapin">10. Configuration du lapin</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pour configurer le lapin c&#8217;est assez simple, vous devez le débrancher puis en le rebrancher rester appuyez sur son bouton. Il doit normalement s&#8217;allumer en bleu.</p>
+<p>Pour configurer le lapin c&#8217;est assez simple, vous devez le débrancher puis en le rebrancher, rester appuyez sur son bouton. Il doit normalement s&#8217;allumer en bleu.</p>
 </div>
 <div class="paragraph">
-<p>Ensuite avez votre PC vous devriez avoir un nouveau réseaux wifi nabaztagXX, connectez vous dessus en tapant 192.168.0.1.</p>
+<p>Ensuite avec votre PC vous devriez avoir un nouveau réseau wifi nabaztagXX, connectez-vous dessus en tapant 192.168.0.1.</p>
 </div>
 <div class="paragraph">
 <p>Une fois dessus renseignez votre configuration wifi et les informations suivantes :</p>
@@ -921,7 +921,7 @@ Si tout est bon vous devriez avoir les statistique qui apparaissent en bas
 <div class="content">
 <pre>DHCP enabled : no
 Local Mask : 255.255.255.0
-Local gateway : 192.168.0.1 ou 192.168.0.254 (en fonction de votre réseaux)
+Local gateway : 192.168.0.1 ou 192.168.0.254 (en fonction de votre réseau)
 DNS server : 192.168.0.162</pre>
 </div>
 </div>
@@ -931,7 +931,7 @@ DNS server : 192.168.0.162</pre>
 <h2 id="_surveillance_du_serveur_openjabnab_et_démarrage_auto">11. Surveillance du serveur openjabnab et démarrage auto</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Comme vous le remarquerez si vous fermez votre session  le serveur openjabnab s&#8217;arrete il faut donc ajouter un petit script pour surveiller le serveur et le demarrer automatiquement. Faites :</p>
+<p>Comme vous le remarquerez si vous fermez votre session le serveur openjabnab s&#8217;arrête. Il faut donc ajouter un petit script pour surveiller le serveur et le démarrer automatiquement. Faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -981,7 +981,7 @@ fi</pre>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l&#8217;utilisateur ojn faites ctrl+D
+Il faut absolument le mettre dans la crontab de root, si vous êtes encore avec l&#8217;utilisateur ojn faites ctrl+D
 </td>
 </tr>
 </table>
@@ -1008,7 +1008,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Il faut vous maintenant vous creer un compte en cliquant sur creer un utilisateur :</p>
+<p>Il faut vous maintenant vous créer un compte en cliquant sur créer un utilisateur :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1016,7 +1016,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Renseignez les informations demandée et connectez vous :</p>
+<p>Renseignez les informations demandées et connectez-vous :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1032,7 +1032,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Puis descendez pour trouver la liste des lapins connecté et récuperer son adresse mac :</p>
+<p>Puis descendez pour trouver la liste des lapins connectés et récuperer son adresse mac :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1040,7 +1040,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Allez ensuite sur compte et renseignez le champs nom et adresse mac du lapin puis validez :</p>
+<p>Allez ensuite sur compte et renseignez le champ nom et adresse mac du lapin puis validez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1056,7 +1056,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Il faut vous maintenant activer l&#8217;api violet et la passer en public, c&#8217;est aussi ici que vous retrouvez la clef api violet qui vous servira pour Jeedom :</p>
+<p>Il vous faut maintenant activer l&#8217;api violet et la passer en public, c&#8217;est aussi ici que vous retrouvez la clef api violet qui vous servira pour Jeedom :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1064,7 +1064,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>En dessous vous retrouvez la liste des plugins, n&#8217;oubliez de les activer (type TTS ou controle des oreilles) :</p>
+<p>En dessous vous retrouvez la liste des plugins, n&#8217;oubliez pas de les activer (type TTS ou contrôle des oreilles) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1077,7 +1077,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 <h2 id="_configuration_de_jeedom">13. Configuration de Jeedom</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>La configuration dans jeedom est assez simple, il faut tout d&#8217;abord se connecter en SSH à Jeedom (si vous avez une box jeedom les identifiants sont dans la doc d&#8217;installation). Puis editer le fichier /etc/hosts</p>
+<p>La configuration dans Jeedom est assez simple, il faut tout d&#8217;abord se connecter en SSH à Jeedom (si vous avez une box Jeedom les identifiants sont dans la doc d&#8217;installation). Puis editer le fichier /etc/hosts</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1093,7 +1093,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Ensuite tous se passe dans Jeedom, après avoir creer votre lapin voila la configuration à mettre:</p>
+<p>Ensuite tous se passe dans Jeedom, après avoir créer votre lapin voilà la configuration à mettre:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1101,7 +1101,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 </div>
 </div>
 <div class="paragraph">
-<p>Voila votre lapin a maintenant son propre terrier en local !!!!!</p>
+<p>Voilà votre lapin a maintenant son propre terrier en local !!!!!</p>
 </div>
 </div>
 </div>
@@ -1118,7 +1118,7 @@ Il faut absolument le mettre dans la crontab de root, si vous etes encore avec l
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Je vais consider que oenjabnab est installé dans /home/ojn/OpenJabNab et que vous etes connecté en tant que l&#8217;utilisateur d&#8217;openjabnab, ici ojn
+Je vais considérer que oenjabnab est installé dans /home/ojn/OpenJabNab et que vous êtes connecté en tant que l&#8217;utilisateur d&#8217;openjabnab, ici ojn
 </td>
 </tr>
 </table>
@@ -1126,7 +1126,7 @@ Je vais consider que oenjabnab est installé dans /home/ojn/OpenJabNab et que vo
 <div class="sect2">
 <h3 id="_création_du_tts_jeedom">14.1. Création du tts jeedom</h3>
 <div class="paragraph">
-<p>Il vous faut creer un dossier jeedom dans servver/tts :</p>
+<p>Il vous faut crêer un dossier jeedom dans servver/tts :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1324,7 +1324,7 @@ make</pre>
 <div class="sect2">
 <h3 id="_modification_du_service_de_tts">14.3. Modification du service de tts</h3>
 <div class="paragraph">
-<p>Il faut editer le fichier /home/ojn/OpenJabNab/server/bin/openjabnab.ini et changer :</p>
+<p>Il faut éditer le fichier /home/ojn/OpenJabNab/server/bin/openjabnab.ini et changer :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1343,7 +1343,7 @@ make</pre>
 <div class="sect2">
 <h3 id="_relance_d_openjabnab">14.4. Relance d&#8217;openjabnab</h3>
 <div class="paragraph">
-<p>Le plus simple est ici de redemarrer la machine pour relancer openjabnab</p>
+<p>Le plus simple est ici de redémarrer la machine pour relancer openjabnab</p>
 </div>
 </div>
 </div>
