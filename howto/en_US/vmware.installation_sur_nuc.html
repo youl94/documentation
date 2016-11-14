@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Installation de vmware sur un nuc intel (gen6)</title>
+<title>Installation de VMware sur un NUC Intel (gen6)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,7 +412,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Installation de vmware sur un nuc intel (gen6)</h1>
+<h1>Installation de VMware sur un NUC Intel (gen6)</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Voici un tuto pour installer vmware sur un intel nuc (gen6). Nous verrons par la suite comment ajouter Jeedom dessus</p>
+<p>Voici un tuto pour installer VMware sur un Intel NUC (gen6). Nous verrons par la suite comment ajouter Jeedom dessus</p>
 </div>
 </div>
 </div>
@@ -449,10 +449,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_intel_nuc">1.1. Intel NUC</h3>
 <div class="paragraph">
-<p>L&#8217;Intel NUC est un petit PC pas le plus puissant mais très économe en énergie et petit. Cela en fait un parfait petit serveur de virtualisation basé sur VMware.</p>
+<p>L&#8217;Intel NUC est un petit PC, pas le plus puissant, mais très économe en énergie et de faibles dimensions. Cela en fait un parfait petit serveur de virtualisation basé sur VMware.</p>
 </div>
 <div class="paragraph">
-<p>Il existe actuellement 2 NUC de 6ème génération (les autres marchent aussi pour vmware mais nécessite de mettre des drivers en plus sur le noyau vmware):</p>
+<p>Il existe actuellement 2 NUC de 6ème génération (les autres marchent aussi pour VMware mais nécessitent de mettre des drivers en plus sur le noyau VMware):</p>
 </div>
 <div class="ulist">
 <ul>
@@ -503,7 +503,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_ssd">1.2. SSD</h3>
 <div class="paragraph">
-<p>Il faut à cela rajouter un SSD et de la mémoire. Niveau SSD je vous conseille 240go ou plus, à moins de prendre le modèle avec un emplacement 2.5 pouces (qui vous permette de mettre disque dur en plus) ou d&#8217;avoir un NAS type Synology pour faire du LUN iSCSI. Ne pas oublier qu&#8217;une VM de base (pas de stockage) c&#8217;est entre 20 à 40go, rajoutez à cela 40go pour le VMware en lui-même ça se remplit vite.</p>
+<p>Il faut à cela rajouter un SSD et de la mémoire. Niveau SSD je vous conseille 240Go ou plus, à moins de prendre le modèle avec un emplacement 2.5 pouces (qui vous permette de mettre disque dur en plus) ou d&#8217;avoir un NAS type Synology pour faire du LUN iSCSI. Ne pas oublier qu&#8217;une VM de base (pas de stockage) c&#8217;est entre 20 à 40Go, rajoutez à cela 40Go pour le VMware en lui-même ça se remplit vite.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -540,7 +540,7 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 <div class="sect2">
 <h3 id="_mémoire">1.3. Mémoire</h3>
 <div class="paragraph">
-<p>Attention pour la mémoire il faut absolument de la DDR4 en So-DIMM 260 pins, il faut au minimum 4go pour VMware, mais par expérience je vous conseille au moins 8go (personnellement je suis meme monté jusqu&#8217;à 16go, le nuc supporte au maximum 32go). Là, pas de mémoire recommandée, la moins chère va très bien (attention je prends toujours des packs de 2 barrettes, cela améliore les performances) :</p>
+<p>Attention pour la mémoire il faut absolument de la DDR4 en So-DIMM 260 pins, il faut au minimum 4Go pour VMware, mais par expérience je vous conseille au moins 8Go (personnellement je suis meme monté jusqu&#8217;à 16Go, le NUC supporte au maximum 32Go). Là, pas de mémoire recommandée, la moins chère va très bien (attention je prends toujours des packs de 2 barrettes, cela améliore les performances) :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -572,13 +572,13 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 <div class="ulist">
 <ul>
 <li>
-<p>aller <a href="https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6">ici</a> et vous inscrire</p>
+<p>aller sur <a href="https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6">ici</a> et vous inscrire</p>
 </li>
 <li>
 <p>attendre le mail pour bien valider l&#8217;inscription</p>
 </li>
 <li>
-<p>retourner <a href="https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6">ici</a> et vous connecter (il va peut être vous demander d&#8217;accepter les conditions il faut valider)</p>
+<p>retourner <a href="https://my.vmware.com/en/web/vmware/evalcenter?p=free-esxi6">ici</a> et vous connecter (il va peut être vous demander d&#8217;accepter les conditions, il faut valider)</p>
 </li>
 <li>
 <p>ensuite aller <a href="https://my.vmware.com/fr/web/vmware/details?productId=491&amp;downloadGroup=ESXI60U2">là</a> et ajouter à votre compte "ESXi ISO image (Includes VMware Tools)"</p>
@@ -600,7 +600,7 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 <div class="sect2">
 <h3 id="_téléchargement_de_rufus">2.2. Téléchargement de rufus</h3>
 <div class="paragraph">
-<p>La c&#8217;est beaucoup plus simple il vous suffit de cliquer <a href="http://rufus.akeo.ie/downloads/rufus-2.9.exe">la</a>. Il vous faut ensuite lancer le .exe</p>
+<p>Là c&#8217;est beaucoup plus simple il vous suffit de cliquer <a href="http://rufus.akeo.ie/downloads/rufus-2.9.exe">la</a>. Il vous faut ensuite lancer le .exe</p>
 </div>
 </div>
 <div class="sect2">
@@ -660,7 +660,7 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 </div>
 </div>
 <div class="paragraph">
-<p>Les composants sortis de leur boite :</p>
+<p>Les composants sortis de leur boîte :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -668,7 +668,7 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 </div>
 </div>
 <div class="paragraph">
-<p>Ouverture du NUC, là c&#8217;est très simple, mettez-le à l&#8217;envers, dévissez les 4 vis sous les pieds (elles ne sortent pas en entier c&#8217;est normal il faut juste les dévisser), puis tirer légèrement sur les vis pour ouvrir le nuc :</p>
+<p>Ouverture du NUC, là c&#8217;est très simple, mettez-le à l&#8217;envers, dévissez les 4 vis sous les pieds (elles ne sortent pas en entier c&#8217;est normal il faut juste les dévisser), puis tirez légèrement sur les vis pour ouvrir le NUC:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -692,7 +692,7 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 </div>
 </div>
 <div class="paragraph">
-<p>Et voilà, vous pouvez refermer (à moins bien sûr que vous ayez pris en SSD 2.5 pouces qu&#8217;il faut dans ce cas inserer dans le couvercle).</p>
+<p>Et voilà, vous pouvez refermer (à moins bien sûr que vous ayez pris un SSD 2.5 pouces qu&#8217;il faut dans ce cas insérer dans le couvercle).</p>
 </div>
 </div>
 </div>
@@ -700,7 +700,7 @@ VMware ne supporte pas l&#8217;ajout de disque USB, il est donc difficile d&#821
 <h2 id="_installation_de_vmware">4. Installation de VMware</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Là c&#8217;est très simple il suffit de mettre la clef USB sur l&#8217;un des ports USB du NUC, de brancher un écran sur le port HDMI, un clavier et l&#8217;alimentation. Vous allumez le NUC, l&#8217;installation se lancera toute seule :</p>
+<p>Là c&#8217;est très simple, il suffit de mettre la clef USB sur l&#8217;un des ports USB du NUC, de brancher un écran sur le port HDMI, un clavier et l&#8217;alimentation. Vous allumez le NUC, l&#8217;installation se lancera toute seule :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -771,7 +771,7 @@ J&#8217;ai oublié de faire les captures de la validation de la licence, il faut
 <p>Voilà VMware est installé (en plus il est sympa il vous donne son IP) , plus qu&#8217;à jouer avec !!!</p>
 </div>
 <div class="paragraph">
-<p>Pour la suite voici un <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html">tutoriel</a> pour la création de votre première VM. Et vous trouverez <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html">ici</a> un tutoriel de trucs et astuces (pour par exemple mettre votre licence vmware)</p>
+<p>Pour la suite voici un <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html">tutoriel</a> pour la création de votre première VM. Et vous trouverez <a href="https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.trucs_et_astuces.html">ici</a> un tutoriel de trucs et astuces (pour par exemple mettre votre licence VMware)</p>
 </div>
 </div>
 </div>

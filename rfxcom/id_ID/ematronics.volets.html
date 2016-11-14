@@ -418,17 +418,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_recherche_de_l_id_de_la_télécommande">1. Recherche de l’ID de la télécommande</a>
 <ul class="sectlevel2">
-<li><a href="#_aller_dans_general_plugins_rfxcom">1.1. Aller dans "General", "Plugins", "RfxCom"</a></li>
-<li><a href="#_dans_gestion_des_protocoles_rfxcom">1.2. Dans "Gestion des protocoles RFXCOM",</a></li>
+<li><a href="#_aller_dans_plugins_gestion_des_plugins_rfx_com">1.1. Aller dans "Plugins", "Gestion des plugins", "RFX COM"</a></li>
+<li><a href="#_dans_gestion_des_protocoles_rfxcom">1.2. Dans "Gestion des protocoles RFXcom",</a></li>
 <li><a href="#_activer_lancer_en_mode_debug">1.3. Activer, "Lancer en mode debug"</a></li>
 <li><a href="#_rechercher_de_l_id_de_la_télécommande">1.4. Rechercher de l’ID de la télécommande</a></li>
-<li><a href="#_arrêter_le_mode_debug_par_le_bouton_arrêter_redemarrer_le_démon">1.5. Arrêter le Mode Debug par le bouton "Arrêter/Redemarrer le démon"</a></li>
+<li><a href="#_arrêter_le_mode_debug_par_le_bouton_arrêter_redémarrer_le_démon">1.5. Arrêter le Mode Debug par le bouton "Arrêter/Redémarrer le démon"</a></li>
 </ul>
 </li>
 <li><a href="#_création_de_la_télécommande_sous_jeedom">2. Création de la télécommande sous JeeDom</a></li>
-<li><a href="#_associer_votre_télécommande_vituelle_jeedom_à_votre_moteur_ematronic">3. Associer votre Télécommande vituelle JeeDom à votre moteur Ematronic :</a>
+<li><a href="#_associer_votre_télécommande_vituelle_jeedom_à_votre_moteur_ematronic">3. Associer votre télécommande vituelle JeeDom à votre moteur Ematronic :</a>
 <ul class="sectlevel2">
-<li><a href="#_ré_initialisation_du_moteur">3.1. Ré-initialisation du moteur :</a></li>
+<li><a href="#_réinitialisation_du_moteur">3.1. Réinitialisation du moteur :</a></li>
 </ul>
 </li>
 <li><a href="#_association_de_la_télécommande_vituelle_jeedom_au_moteur_ematronic">4. Association de la télécommande Vituelle JeeDom au moteur Ematronic :</a></li>
@@ -440,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_recherche_de_l_id_de_la_télécommande">1. Recherche de l’ID de la télécommande</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_aller_dans_general_plugins_rfxcom">1.1. Aller dans "General", "Plugins", "RfxCom"</h3>
+<h3 id="_aller_dans_plugins_gestion_des_plugins_rfx_com">1.1. Aller dans "Plugins", "Gestion des plugins", "RFX COM"</h3>
 <div class="imageblock">
 <div class="content">
 <img src="../images/volet.ematronic/image07.png" alt="image07">
@@ -448,7 +448,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dans_gestion_des_protocoles_rfxcom">1.2. Dans "Gestion des protocoles RFXCOM",</h3>
+<h3 id="_dans_gestion_des_protocoles_rfxcom">1.2. Dans "Gestion des protocoles RFXcom",</h3>
 <div class="imageblock">
 <div class="content">
 <img src="../images/volet.ematronic/image04.png" alt="image04">
@@ -491,7 +491,7 @@ MainThread - rfxcmd:556 - DEBUG - Save packet to log_msgfile</pre>
 <div class="sect2">
 <h3 id="_rechercher_de_l_id_de_la_télécommande">1.4. Rechercher de l’ID de la télécommande</h3>
 <div class="paragraph">
-<p>Remarque, les telecommandes Ematronic commence toujours par : 09 19 03 donc la zone qui nous intéresse démarre de "Test message" : 09 19 03.</p>
+<p>Remarque, les télécommandes Ematronic commence toujours par : 09 19 03 donc la zone qui nous intéresse démarre de "Test message" : 09 19 03.</p>
 </div>
 <div class="paragraph">
 <p>Repérer : Id1 et Id2 et ajouter l’hexadecimal suivant : dans mon exemple Id1=1F et Id2=84.
@@ -500,7 +500,7 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_arrêter_le_mode_debug_par_le_bouton_arrêter_redemarrer_le_démon">1.5. Arrêter le Mode Debug par le bouton "Arrêter/Redemarrer le démon"</h3>
+<h3 id="_arrêter_le_mode_debug_par_le_bouton_arrêter_redémarrer_le_démon">1.5. Arrêter le Mode Debug par le bouton "Arrêter/Redémarrer le démon"</h3>
 <div class="imageblock">
 <div class="content">
 <img src="../images/volet.ematronic/image06.png" alt="image06">
@@ -513,7 +513,7 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 <h2 id="_création_de_la_télécommande_sous_jeedom">2. Création de la télécommande sous JeeDom</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Aller, dans Plugin, RFXCom.</p>
+<p>Aller, dans Plugins, Protocole domtique, RFXcom.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -521,7 +521,7 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquer sur "Ajouter" et saisir un nom pour votre télécommande vituelle.</p>
+<p>Cliquer sur "Ajouter" et saisir un nom pour votre télécommande virtuelle.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -529,10 +529,10 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Choisir dans la liste des équipements le template : "Volet Ematronic - Defaut".</p>
+<p>Choisir dans la liste des équipements le template : "Volet Ematronic - Défaut".</p>
 </div>
 <div class="paragraph">
-<p>Remplacer l’ID automatique par celui que vous avez Extrait précédemment et Cocher "Activer" et "Visible" :</p>
+<p>Remplacer l’ID automatique par celui que vous avez extrait précédemment et Cocher "Activer" et "Visible" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -540,7 +540,7 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquer sur "Sauvegarder" pour enregistrer votre configuration et charger la template "Volet Ematronic - Defaut".</p>
+<p>Cliquer sur "Sauvegarder" pour enregistrer votre configuration et charger le template "Volet Ematronic - Défaut".</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -548,7 +548,7 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Voila votre Télécommande est prête elle doit ressembler a ça :</p>
+<p>Voilà votre télécommande est prête, elle doit ressembler à ça :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -558,17 +558,17 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_associer_votre_télécommande_vituelle_jeedom_à_votre_moteur_ematronic">3. Associer votre Télécommande vituelle JeeDom à votre moteur Ematronic :</h2>
+<h2 id="_associer_votre_télécommande_vituelle_jeedom_à_votre_moteur_ematronic">3. Associer votre télécommande vituelle JeeDom à votre moteur Ematronic :</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_ré_initialisation_du_moteur">3.1. Ré-initialisation du moteur :</h3>
+<h3 id="_réinitialisation_du_moteur">3.1. Réinitialisation du moteur :</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>Débrancher électriquement le moteur.</p>
 </li>
 <li>
-<p>Sur le télécommande d’origine, laisser le bouton Up Appuyer 3 ou 4 secondes, la led devient rouge fixe.</p>
+<p>Sur la télécommande d’origine, laisser le bouton "Up" Appuyé 3 ou 4 secondes, la led devient rouge fixe.</p>
 </li>
 <li>
 <p>Brancher électriquement le moteur.</p>
@@ -611,11 +611,11 @@ Notre télécommande a donc comme ID &#8658; 1F84B9.</p>
 <p>Le moteur fera 5 bips.</p>
 </li>
 <li>
-<p>Appuyer sur la Commande "Monter" de la télécommande Vituelle de JeeDom.
+<p>Appuyer sur la Commande "Monter" de la télécommande virtuelle de JeeDom.
 image::../images/volet.ematronic/image09.png[]</p>
 </li>
 <li>
-<p>Le moteur fera 3 bips, pour annoncer que votre JeeDoom est associée !!</p>
+<p>Le moteur fera 3 bips, pour annoncer que votre JeeDoom est associé !!</p>
 </li>
 </ul>
 </div>

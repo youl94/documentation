@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Mise en place des backups sous vmware</title>
+<title>Mise en place des backups sous VMware</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,7 +412,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Mise en place des backups sous vmware</h1>
+<h1>Mise en place des backups sous VMware</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
@@ -453,7 +453,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pour ce tuto je vais utiliser l&#8217;interface Web de l&#8217;esxi qui est disponible soit par l&#8217;installation d&#8217;un vib soit à partir de le version 6.0 update 2. Pour rappels pour acceder à cette interface il suffit d&#8217;aller sur IP_ESXI/ui
+Pour ce tuto je vais utiliser l&#8217;interface Web de l&#8217;ESXi qui est disponible soit par l&#8217;installation d&#8217;un vib soit à partir de le version 6.0 update 2. Pour rappels pour acceder à cette interface il suffit d&#8217;aller sur IP_ESXI/ui
 </td>
 </tr>
 </table>
@@ -492,7 +492,7 @@ Dans la suite de ce tuto je considère que vous avez mis le script ghettoVCB.sh 
 </div>
 </div>
 <div class="paragraph">
-<p>Ensuite avec putty ou kitty connectez-vous dessus en mettant l’IP de votre ESXI et en utilisant vos identifiants de celui-ci</p>
+<p>Ensuite avec putty ou kitty connectez-vous dessus en mettant l’IP de votre ESXi et en utilisant vos identifiants de celui-ci</p>
 </div>
 </div>
 </div>
@@ -506,7 +506,7 @@ Dans la suite de ce tuto je considère que vous avez mis le script ghettoVCB.sh 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pour toute la suite de ce tuto je considère que votre datastore de backup à pour chemin /vmfs/volumes/Backup, attention à bien changer si ce n&#8217;est pas le cas chez vous
+Pour toute la suite de ce tuto je considère que votre datastore de backup a pour chemin /vmfs/volumes/Backup, attention à bien changer si ce n&#8217;est pas le cas chez vous
 </td>
 </tr>
 </table>
@@ -554,7 +554,7 @@ VM_STARTUP_ORDER=</pre>
 <p><strong>VM_BACKUP_VOLUME</strong> &#8658; emplacement de votre datastore de backup</p>
 </li>
 <li>
-<p><strong>VM_BACKUP_ROTATION_COUNT</strong> &#8658; notre de backup par VM à garder</p>
+<p><strong>VM_BACKUP_ROTATION_COUNT</strong> &#8658; nombre de backup par VM à garder</p>
 </li>
 </ul>
 </div>
@@ -588,7 +588,7 @@ Attention à bien mettre le / final pour le paramètre VM_BACKUP_VOLUME sinon le
 <h2 id="_test_de_backup">4. Test de backup</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Nous allons ici lancer un premier backup initial de tous les VMs pour voir si tout est ok, par la suite nous le planifierons en automatique. Retourner sur l&#8217;esxi en SSH (reconnectez-vous si nécessaire) et faites :</p>
+<p>Nous allons ici lancer un premier backup initial de toutes les VMs pour voir si tout est ok. Par la suite nous le planifierons en automatique. Retourner sur l&#8217;ESXi en SSH (reconnectez-vous si nécessaire) et faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -649,7 +649,7 @@ Attention à bien mettre le / final pour le paramètre VM_BACKUP_VOLUME sinon le
 <div class="ulist">
 <ul>
 <li>
-<p>Backup seulement la vm "toto"</p>
+<p>Backup seulement la VM "toto"</p>
 </li>
 </ul>
 </div>
@@ -664,7 +664,7 @@ Attention à bien mettre le / final pour le paramètre VM_BACKUP_VOLUME sinon le
 <h2 id="_lancement_automatique_des_backups">5. Lancement automatique des backups</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il faut ajouter la ligne de commande à la crontab mais sous vmware la crontab est un peu spéciale et surtout écrasée à chaque démarrage. Pour éviter cela il faut donc ajouter un petit script qui mettra à jour la crontab au boot (ne vous inquiétez pas c&#8217;est assez simple et rapide), en ssh sur l&#8217;esxi faire :</p>
+<p>Il faut ajouter la ligne de commande à la crontab mais sous VMware la crontab est un peu spéciale et surtout écrasée à chaque démarrage. Pour éviter cela il faut donc ajouter un petit script qui mettra à jour la crontab au boot (ne vous inquiétez pas c&#8217;est assez simple et rapide), en SSH sur l&#8217;ESXi faire :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -718,7 +718,7 @@ N&#8217;oubliez pas d&#8217;adapter le chemin vers le fichier de configuration d
 </table>
 </div>
 <div class="paragraph">
-<p>Dernière étape il faut redémarrer votre ESXi pour que le cron soit pris en compte, vous pouvez voir le résultat en faisant (toujours en SSH) :</p>
+<p>Dernière étape: il faut redémarrer votre ESXi pour que le cron soit pris en compte, vous pouvez voir le résultat en faisant (toujours en SSH) :</p>
 </div>
 <div class="listingblock">
 <div class="content">

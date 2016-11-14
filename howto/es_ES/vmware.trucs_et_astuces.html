@@ -436,7 +436,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pas vraiment un howto ici mais plus un recueils de trucs et astuces sur VMware</p>
+<p>Pas vraiment un howto ici mais plus un recueil de trucs et astuces sur VMware</p>
 </div>
 </div>
 </div>
@@ -444,7 +444,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_ajouter_sa_licence">1. Ajouter sa licence</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Une fois connecter sur l&#8217;interface web (IP_ESXI/ui) il faut aller sur "Gerer" :</p>
+<p>Une fois connecté sur l&#8217;interface web (IP_ESXI/ui) il faut aller sur "Gérer" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -474,7 +474,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bout de 60 jours
+Pour rappel, si vous ne le faites pas votre ESXi risque de ne plus fonctionner au bout de 60 jours
 </td>
 </tr>
 </table>
@@ -485,7 +485,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 <h2 id="_monter_un_datastore_nfs_avec_un_synology">2. Monter un datastore NFS avec un Synology</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On va voir ici comment monter un partage NFS depuis un Synology sur VMware. Cela permet par exemple de mettre les machines virtuels sur le Synology (qui peut avoir plus de place que l&#8217;ESXi) ou d&#8217;envoyer les backups des machines sur le Synology</p>
+<p>On va voir ici comment monter un partage NFS depuis un Synology sur VMware. Cela permet par exemple de mettre les machines virtuelles sur le Synology (qui peut avoir plus de place que l&#8217;ESXi) ou d&#8217;envoyer les backups des machines sur le Synology</p>
 </div>
 <div class="sect2">
 <h3 id="_configuration_du_synology">2.1. Configuration du Synology</h3>
@@ -498,7 +498,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Ensuite il faut cliquer sur "Dossier partagé", puis choisir le dossier à partager (ici Backup), cliquer sur modifier puis "Autorisation NFS" et enfin sur créer (ici j&#8217;en ai déja une, votre liste à vous devrez être vide) :</p>
+<p>Ensuite il faut cliquer sur "Dossier partagé", puis choisir le dossier à partager (ici Backup), cliquer sur modifier puis "Autorisation NFS" et enfin sur créer (ici j&#8217;en ai déja une, votre liste à vous devrait être vide) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -522,7 +522,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Voila c&#8217;est fini du coté Synology, on va maintenant passer coté ESXi</p>
+<p>Voilà c&#8217;est fini du coté Synology, on va maintenant passer coté ESXi</p>
 </div>
 </div>
 <div class="sect2">
@@ -544,7 +544,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>La vous selectionnez "Monter une banque de données NFS" puis faites suivant :</p>
+<p>Là vous selectionnez "Monter une banque de données NFS" puis faites suivant :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -552,7 +552,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Entrée le nom du datastore à créer (attention à eviter les espaces et caractères spéciaux), mettez l&#8217;IP de notre Synology et mettez le chemin du partage (voir au dessus) et enfin validez :</p>
+<p>Entrez le nom du datastore à créer (attention à éviter les espaces et caractères spéciaux), mettez l&#8217;IP de notre Synology et mettez le chemin du partage (voir au-dessus) et enfin validez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -560,7 +560,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquez sur terminez :</p>
+<p>Cliquez sur terminer :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -568,7 +568,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Et voila votre nouveau datastore devrait apparaitre (sinon cliquez sur "Actualiser").</p>
+<p>Et voilà votre nouveau datastore devrait apparaitre (sinon cliquez sur "Actualiser").</p>
 </div>
 </div>
 </div>
@@ -577,7 +577,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 <h2 id="_ajout_du_plugin_vaai_synology_pour_montage_nfs">3. Ajout du plugin VAAI Synology pour montage NFS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>L&#8217;ajout de ce plugin permet d&#8217;active l&#8217;acceleration matériels sur les montages NFS (pour explication voir <a href="http://www.virtual-sddc.ovh/exploiter-les-vaai-nfs-avec-un-nas-synology/">ici</a>)</p>
+<p>L&#8217;ajout de ce plugin permet d&#8217;activer l&#8217;accélération matérielle sur les montages NFS (pour explication voir <a href="http://www.virtual-sddc.ovh/exploiter-les-vaai-nfs-avec-un-nas-synology/">ici</a>)</p>
 </div>
 <div class="paragraph">
 <p>Pour voir si vous l&#8217;avez, il faut se connecter avec le client lourd (j&#8217;ai pas trouvé l&#8217;info sur le client web) et aller dans configuration &#8594; stockage :</p>
@@ -588,7 +588,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>La mise en place est assez simple, d&#8217;abord il faut activer le service SSH de l&#8217;ESXi (sur l&#8217;interface web il faut aller dans action &#8658; services &#8658; Actvier Secure Shell), puis se connecter en ssh dessus (les identifiants sont les même que pour accéder à l&#8217;interface). Ensuite il vous suffit de faire :</p>
+<p>La mise en place est assez simple, d&#8217;abord il faut activer le service SSH de l&#8217;ESXi (sur l&#8217;interface web il faut aller dans action &#8658; services &#8658; Activer Secure Shell), puis se connecter en SSH dessus (les identifiants sont les mêmes que pour accéder à l&#8217;interface). Ensuite il vous suffit de faire :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -644,10 +644,10 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 <h2 id="_installation_du_client_lourd">5. Installation du client lourd</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cette partie est facultative si vous n&#8217;avez pas besoin de gerer l&#8217;USB.</p>
+<p>Cette partie est facultative si vous n&#8217;avez pas besoin de gérer l&#8217;USB.</p>
 </div>
 <div class="paragraph">
-<p>Il vous faut aller, avec votre navigateur internet, sur l&#8217;IP de l&#8217;ESXI puis cliquer sur le lien "Download vSphere Client for Windows" :</p>
+<p>Il vous faut aller, avec votre navigateur internet, sur l&#8217;IP de l&#8217;ESXi puis cliquer sur le lien "Download vSphere Client for Windows" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -655,7 +655,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Une fois télécharger il vous suffit de lancer l&#8217;installation (je passe volontairement sur cette partie car il suffit de tout valider).</p>
+<p>Une fois téléchargé il vous suffit de lancer l&#8217;installation (je passe volontairement sur cette partie car il suffit de tout valider).</p>
 </div>
 <div class="paragraph">
 <p>Ensuite lancez VMware vSphere Client, vous devez avoir :</p>
@@ -666,7 +666,7 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 </div>
 </div>
 <div class="paragraph">
-<p>Vous avez juste à rentrer l&#8217;IP de votre ESXI, le nom d&#8217;utilisateur et le mot de passe et vous voila connecté dessus :</p>
+<p>Vous avez juste à rentrer l&#8217;IP de votre ESXi, le nom d&#8217;utilisateur et le mot de passe et vous voila connecté dessus :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -679,10 +679,10 @@ Pour rappels si vous ne le faite pas votre esxi risque de ne plus marcher au bou
 <h2 id="_mise_à_jour_de_l_esxi">6. Mise à jour de l&#8217;ESXi</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>La procedure est assez facile, il faut tout d&#8217;abord recuperer le patch en allant <a href="https://my.vmware.com/group/vmware/patch#search">ici</a> (il vous faudra surement vous connecter avec votre compte vmware). Sur la liste "Select a Product" mettez "ESXi (Embedded and Installable)", en face laisser la derniere version de vmware et faites "Search". Puis télécharger le patch voulu (en générale le dernier). Le build number (le premier numéro pas celui commencant par KB) vous donne la version du patch que vous pouvez comparer avec votre build number.</p>
+<p>La procédure est assez facile, il faut tout d&#8217;abord recupérer le patch en allant <a href="https://my.vmware.com/group/vmware/patch#search">ici</a> (il vous faudra sûrement vous connecter avec votre compte VMware). Sur la liste "Select a Product" mettez "ESXi (Embedded and Installable)", en face laisser la dernière version de VMware et faites "Search". Puis télécharger le patch voulu (en général le dernier). Le build number (le premier numéro pas celui commencant par KB) vous donne la version du patch que vous pouvez comparer avec votre build number.</p>
 </div>
 <div class="paragraph">
-<p>Ensuite transferez le zip sur un de vos datastore et faite :</p>
+<p>Ensuite transférez le zip sur un de vos datastores et faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -708,13 +708,13 @@ Remplacer bien le chemin et le nom du zip en fonction de votre configuration
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
+Attention à bien mettre le chemin complet vers le zip sinon ça ne marche pas
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>La commande au dessus ne mets à jour que les vib qui en ont besoin mais vous pouvez forcer l&#8217;installation de tous les vib du package (donc attention cela peux faire un downgrade) en faisant :</p>
+<p>La commande au-dessus ne met à jour que les vib qui en ont besoin mais vous pouvez forcer l&#8217;installation de tous les vib du package (donc attention cela peux faire un downgrade) en faisant :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -727,7 +727,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 <h2 id="_configuration_du_ntp">7. Configuration du NTP</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Par défaut l&#8217;ESXi n&#8217;utilise pas le ntp ce qui fait qu&#8217;il n&#8217;est pas à l&#8217;heure et que les VMs ne sont pas à l&#8217;heure, pour corriger c&#8217;est très simple. Il faut aller à partir de la version web sur Gérer &#8594; Système &#8594; Date et heure, la vous cliquez sur "Modifier les paramètres" :</p>
+<p>Par défaut l&#8217;ESXi n&#8217;utilise pas le NTP ce qui fait qu&#8217;il n&#8217;est pas à l&#8217;heure et que les VMs ne sont pas à l&#8217;heure, pour corriger c&#8217;est très simple. Il faut aller à partir de la version web sur Gérer &#8594; Système &#8594; Date et heure, là vous cliquez sur "Modifier les paramètres" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -754,7 +754,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 <p>Toujours dans Actions &#8594; Service NTP cliquez sur "Démarrer"</p>
 </div>
 <div class="paragraph">
-<p>Voila votre esxi devrait prendre la bonne heure tout seul maintenant.</p>
+<p>Voilà votre ESXi devrait prendre la bonne heure tout seul maintenant.</p>
 </div>
 </div>
 </div>
@@ -762,7 +762,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 <h2 id="_accès_extérieur_à_l_esxi">8. Accès extérieur à l&#8217;ESXi</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pour acceder à l&#8217;ESXi de l&#8217;exterieur il vous faut :</p>
+<p>Pour accéder à l&#8217;ESXi de l&#8217;extérieur il vous faut :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -775,7 +775,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 </ul>
 </div>
 <div class="paragraph">
-<p>Et voila c&#8217;est tout. Petite astuce si vous avez un nas Synology vous pouvez faire (attention faut suivre) :</p>
+<p>Et voilà c&#8217;est tout. Petite astuce si vous avez un NAS Synology vous pouvez faire (attention à bien suivre) :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -783,7 +783,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 <p>ouvrir le 443 vers le 5001 du NAS Synology</p>
 </li>
 <li>
-<p>ouvrir le 80 vers le 80 du NAS (utile juste pour generer les certificats let&#8217;s encrypt)</p>
+<p>ouvrir le 80 vers le 80 du NAS (utile juste pour générer les certificats let&#8217;s encrypt)</p>
 </li>
 <li>
 <p>ouvrir le port 902 vers le 902 de l&#8217;ESXi</p>
@@ -791,7 +791,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 </ul>
 </div>
 <div class="paragraph">
-<p>Ensuite sur le NAS dans le panneau de configuration puis portails d&#8217;application et proxy inversé (attention il faut absolument DSM 6) :</p>
+<p>Ensuite sur le NAS dans le panneau de configuration puis portail d&#8217;application et proxy inversé (attention il faut absolument DSM 6) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -799,7 +799,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquez sur creer et mettre :</p>
+<p>Cliquez sur créer et mettre :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -807,7 +807,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 </div>
 </div>
 <div class="paragraph">
-<p>Dans "Nom d&#8217;hôte" (au niveau de la source) il faut mettre le DNS voulu (par exemple monesxi.mondsn.synology.me) et dans "Nom d&#8217;hôte" (au niveau de la destination) il faut mettre l&#8217;ip de l&#8217;ESXi</p>
+<p>Dans "Nom d&#8217;hôte" (au niveau de la source) il faut mettre le DNS voulu (par exemple monesxi.mondsn.synology.me) et dans "Nom d&#8217;hôte" (au niveau de la destination) il faut mettre l&#8217;IP de l&#8217;ESXi</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -816,7 +816,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ca ne marche pas
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Vous pouvez faire aussi la meme chose pour acceder à jeedom mais en mettant cette fois l&#8217;ip de jeedom (de la vm si vous êtes en virtualisé) et le port 80
+Vous pouvez faire aussi la même chose pour accéder à jeedom mais en mettant cette fois l&#8217;IP de jeedom (de la vm si vous êtes en virtualisé) et le port 80
 </td>
 </tr>
 </table>
@@ -828,13 +828,13 @@ Vous pouvez faire aussi la meme chose pour acceder à jeedom mais en mettant cet
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Une fois que vous avez fait ca et si votre DNS pointe correctement sur le NAS vous pouvez generer un certificat SSL valide gratuitement avec Let&#8217;s encrypt, en allant dans Sécruité &#8658; certificat et en faisant ajouter. Ensuite n&#8217;oubliez pas de cliquer sur configurer pour l&#8217;affecter à votre proxy inversé
+Une fois que vous avez fait cela et si votre DNS pointe correctement sur le NAS vous pouvez générer un certificat SSL valide gratuitement avec Let&#8217;s encrypt, en allant dans Sécruité &#8658; certificat et en faisant ajouter. Ensuite n&#8217;oubliez pas de cliquer sur configurer pour l&#8217;affecter à votre proxy inversé
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Ensuite pour acceder à votre ESXi il vous suffit avec votre navigateur d&#8217;aller sur votre DNS ou IP externe en ajoutant /ui à la fin et c&#8217;est bon.</p>
+<p>Ensuite pour accéder à votre ESXi il vous suffit avec votre navigateur d&#8217;aller sur votre DNS ou IP externe en ajoutant /ui à la fin et c&#8217;est bon.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -843,7 +843,7 @@ Une fois que vous avez fait ca et si votre DNS pointe correctement sur le NAS vo
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Si vous passez par le reverse proxy du NAS la console en mode web des VMs ne marche pas (car ca passe par du websocket), en revanche si vous passez par VMware remote console tout devrait etre ok (ca passe par le port 902)
+Si vous passez par le reverse proxy du NAS la console en mode web des VMs ne fonctionne pas (car cela passe par du websocket), en revanche si vous passez par VMware Remote Console tout devrait être ok (cela passe par le port 902)
 </td>
 </tr>
 </table>

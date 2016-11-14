@@ -435,10 +435,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_en_un_nas_synology">4. En un NAS Synology</a>
 <ul class="sectlevel2">
-<li><a href="#_paso_1_instalación_de_docker">4.1. Paso 1 : Instalación de Docker</a>
+<li><a href="#_paso_1_instalación_de_docker">4.1. Paso 1 : Instalación de Docker</a></li>
+<li><a href="#_etape_2_récuperation_et_installation_des_images_jeedom">4.2. Etape 2 : Récuperation et installation des images Jeedom</a>
 <ul class="sectlevel3">
-<li><a href="#_mysql">4.1.1. MYSQL</a></li>
-<li><a href="#_jeedom">4.1.2. Jeedom</a></li>
+<li><a href="#_mysql">4.2.1. MYSQL</a></li>
+<li><a href="#_jeedom">4.2.2. Jeedom</a></li>
 </ul>
 </li>
 </ul>
@@ -474,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>una Jeeboard (hummingboard) i1, i2 o i4</p>
 </li>
 <li>
-<p>un nas Synology</p>
+<p>un NAS Synology</p>
 </li>
 <li>
 <p>todos los sistemas operativos Linux (basado en Debian de preferencia)</p>
@@ -527,7 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p>Un total de 115€ para un completo dispositivo domótico de código abierto.</p>
+<p>Soit un total de 115 € pour une box domotique open source avec une maîtrise complète de son installation</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -553,7 +554,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p>Un total de 195€ para un completo dispositivo domótico de código abierto.</p>
+<p>Soit un total de 195 € pour une box domotique open source avec une maîtrise complète de son installation</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -574,7 +575,7 @@ Puede reemplazar la Razberry por un dispositivo USB Z-Wave (aunque el plugin ser
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Jeedom es un software que es y seguirá siendo de código abierto. Su uso es totalmente gratuito y no depende de una nube o suscripción. Sin embargo algunos plugins que facilitan y mejoran la experiencia con Jeedom son de pago y/o pueden necesitar una conexión a Internet. Puede encontrar la lista de plugins desde el siguiente enlace: <a href="http://market.jeedom.fr/index.php?v=d&amp;p=market&amp;type=plugin">ici</a>
+Jeedom est un logiciel qui est et restera open source, son utilisation est entièrement gratuite et ne dépend pas d&#8217;un cloud ou d&#8217;un abonnement. Cependant certains plugins qui permettent d&#8217;augmenter les capacités de Jeedom ou son utilisation peuvent être payants <strong>et peuvent avoir besoin d&#8217;une connexion internet</strong>. Vous pouvez retrouver la liste des plugins <a href="http://market.jeedom.fr/index.php?v=d&amp;p=market&amp;type=plugin">ici</a>
 </td>
 </tr>
 </table>
@@ -586,7 +587,7 @@ Jeedom es un software que es y seguirá siendo de código abierto. Su uso es tot
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-¿Service Pack? ¿Eso qué es? Puede ver <a href="https://blog.jeedom.fr/?p=1215">aqui</a> los beneficios de los Service Pack?
+Service pack ? Quézako ? Vous pouvez voir <a href="https://blog.jeedom.fr/?p=1215">ici</a> les avantages des service packs
 </td>
 </tr>
 </table>
@@ -641,7 +642,7 @@ Jeedom es un software que es y seguirá siendo de código abierto. Su uso es tot
 <p>imagen::../images/install_humming_3.PNG[]</p>
 </div>
 <div class="paragraph">
-<p>Verifique que en "Device" esté seleccionada la unidad correcta de su tarjeta SD, haga clic en el icono carpeta para seleccionar la ruta de la imagen descargada y descomprimida (pasos 2.2 y 2.3)</p>
+<p>Vérifier que dans "Device" c&#8217;est bien votre carte SD qui est sélectionnée puis cliquez sur l&#8217;icône Dossier pour indiquer le chemin de l&#8217;image téléchargée et decompressée (étape 2 et 3) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -679,13 +680,13 @@ Jeedom es un software que es y seguirá siendo de código abierto. Su uso es tot
 <p>Les identifiants SSH sont root/Mjeedom96</p>
 </div>
 <div class="paragraph">
-<p>Si su tarjeta SD es de más de 4 Gigas, no olvide ampliar la partición con el comando "raspi-config" en SSH</p>
+<p>Attention si vous avez une carte SD de plus de 4go n&#8217;oubliez pas d&#8217;étendre la partition avec la commande raspi-config en SSH ou sudo raspi-config si nécessaire</p>
 </div>
 <div class="paragraph">
-<p>Si utiliza una Raspberry pi 2, ES IMPORTANTE NO HACER OVERCLOCKING, pues corre el riesgo de tener un sistema operativo muy instable con muchas posibilidades corrupción en la tarjeta SD</p>
+<p>Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L&#8217;OVERCLOCKER sous peine d&#8217;avoir un système instable avec de nombreuses corruptions de carte SD</p>
 </div>
 <div class="paragraph">
-<p>Para el resto, puede seguir la documentación en la sección  <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Primeros pasos con Jeedom</a></p>
+<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
 </div>
 <hr>
 </div>
@@ -817,7 +818,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Haga clic en Todo y, a continuación, instale el paquete Docker</p>
+<p>Cliquez sur tous, puis installez le paquet Docker</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -825,7 +826,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Espere hasta que finalice la instalación :</p>
+<p>Attendez jusqu&#8217;à ce que l&#8217;installation soit finie :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -835,14 +836,14 @@ Las contraseñas SSH son jeedom/Mjeedom96
 <div class="paragraph">
 <p>Para acceder al paquete Docker, es esencial contar con DSM 5.2 y un NAS compatible</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_etape_2_récuperation_et_installation_des_images_jeedom">4.2. Etape 2 : Récuperation et installation des images Jeedom</h3>
 <div class="paragraph">
-<p>Paso 2: Recuperación e instalación imágenes de Jeedom</p>
+<p>Il faut Docker pour faire tourner Jeedom, le premier un docker Mysql qui contiendra la base de données et un 2ème qui contient Jeedom</p>
 </div>
 <div class="paragraph">
-<p>Hace falta docker para hacer retornar a Jeedom, el primer docker Mysql que contendrá la base de datos, y un 2 º que contendrá Jeedom</p>
-</div>
-<div class="paragraph">
-<p>Ejecutar la aplicación Docker</p>
+<p>Lancez l&#8217;application Docker :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -850,7 +851,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mysql">4.1.1. MYSQL</h4>
+<h4 id="_mysql">4.2.1. MYSQL</h4>
 <div class="paragraph">
 <p>Haga clic en "Registrarse":</p>
 </div>
@@ -860,7 +861,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>En el campo de búsqueda teclear "mysql", seleccionar mysql y haga clic sobre descarga:</p>
+<p>Dans le champ de recherche tapez "mysql", selectionnez mysql et cliquez sur télécharger :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -868,20 +869,20 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Luego validar la mejor versión de la aplicación para tomar la última versión:</p>
+<p>Validez ensuite la demande de version, le mieux étant de prendre la version latest :</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/install_synology_14.PNG" alt="install synology 14">
 </div>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Haga clic en la imagen, aquí se puede seguir el progreso de la descarga (puede tomar varias docenas de minutos) </dt>
-<dd>
-<p>image::../images/install_synology_16.PNG[]</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peut prendre plusieurs dizaines de minutes) :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/install_synology_16.PNG" alt="install synology 16">
+</div>
 </div>
 <div class="paragraph">
 <p>Cuando se haya completado, haga clic en la imagen y ejecútelo:</p>
@@ -892,7 +893,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Introduzca un nombre para su mysql, un puerto local redirigido al puerto 3306 del contenedor, y luego haga siguiente:</p>
+<p>Donnez un nom à votre mysql ainsi qu&#8217;un port local redirigé vers le port 3306 du conteneur, puis faites suivant :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -908,7 +909,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Haga clic en "Parámetros azanzados"</p>
+<p>Cliquez sur "Paramètres avancés" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -916,7 +917,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Y luego "Añadir carpeta" y el lugar el respaldo deseado en synology (es en esta carpeta están todos los archivos de base de datos) envase y/var/lib/mysql (cuidado de desmarcar "Solo lectura")</p>
+<p>Puis sur "Ajouter un dossier", et la mettez le dossier voulu coté Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers de la base de données) et /var/lib/mysql coté conteneur (attention à bien décocher "Lecture seule")</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -932,11 +933,11 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Seleccione "ejecutar este contenedor cuando el asistente haya finalizado" y haga clic en "Aplicar".</p>
+<p>Cochez "Exécuter ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_jeedom">4.1.2. Jeedom</h4>
+<h4 id="_jeedom">4.2.2. Jeedom</h4>
 <div class="paragraph">
 <p>Haga clic en "Registrarse":</p>
 </div>
@@ -946,7 +947,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>En el campo de búsqueda "jeedom", seleccione jeedom/jeedom y haga clic en descarga:</p>
+<p>Dans le champ de recherche tapez "jeedom", sélectionnez jeedom/jeedom et cliquez sur télécharger :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -954,15 +955,15 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Validar la versión, mejor tomar la última.</p>
+<p>Validez ensuite la demande de version, le mieux étant de prendre la dernière.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Haga clic en la imagen, aquí se puede seguir el progreso de la descarga (puede tomar varias docenas de minutos) </dt>
-<dd>
-<p>image::../images/install_synology_21.PNG[]</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peut prendre plusieurs dizaines de minutes) :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/install_synology_21.PNG" alt="install synology 21">
+</div>
 </div>
 <div class="paragraph">
 <p>Cuando se haya completado, haga clic en la imagen y ejecútelo:</p>
@@ -973,7 +974,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Dar un nombre a su jeedom, así como un puerto local que será redirigido al puerto 80 (aquí 9080) y otro al 22 (aquí 9022) del contenedor, de acuerdo a:</p>
+<p>Donnez un nom à votre jeedom ainsi qu&#8217;un port local redirigé vers le port 80 (ici 9080) et un vers le 22 (ici 9022) du conteneur, puis faites suivant :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -989,7 +990,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Haga clic en "Parámetros azanzados"</p>
+<p>Cliquez sur "Paramètres avancés"</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1005,7 +1006,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Elija una carpeta de su Synology (es en esta carpeta todos los archivos de jeedom), cuidado con desmarcar "Solo lectura"</p>
+<p>Choisissez un dossier sur votre Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers jeedom), attention à bien décocher "Lecture seule"</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1021,7 +1022,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Elegir "Ejecutar el contenedor utilizando el privilegio alto" y luego confirmar todo:</p>
+<p>Cochez "Exécuter le conteneur à l&#8217;aide de privilèges élevés" puis validez le tout :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1029,7 +1030,7 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Seleccione "ejecutar este contenedor cuando el asistente haya finalizado" y haga clic en "Aplicar".</p>
+<p>Cochez "Exécuter ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
 </div>
 </div>
 </div>
@@ -1045,10 +1046,10 @@ Las contraseñas SSH son jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Rellena los campos según tu configuración (configuración del docker mysql instalada previamente) y confirme.</p>
+<p>Remplissez les champs en fonction de votre configuration (configuration du docker mysql installé précédemment) et validez.</p>
 </div>
 <div class="paragraph">
-<p>La dirección IP de la BDD es la dirección IP del NAS, el puerto es redirigido al  docker de Mysql, la contraseña se pone en el docker de mysql. El nombre de usuario es root y el nombre de la base de datos que se desea (recomendado Jeedom)</p>
+<p>L&#8217;addresse IP de la BDD est l&#8217;addresse IP du NAS, le port est celui redirigé du docker Mysql, le mot de passe est celui mis dans le docker Mysql. Le nom d&#8217;utilisateur est root et le nom de la base celui que vous voulez (conseillé Jeedom)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1062,13 +1063,13 @@ Las contraseñas SSH son jeedom/Mjeedom96
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Si desea tener acceso SSH necesitas redirigir localmente el puerto 22 del contenedor en los puertos, el usuario SSH es root/jeedom. Puede cambiar la contraseña de inicialización de la variable de entorno ROOT_PASSWORD con el valor de la contraseña deseada.
+Si vous voulez un accès SSH il vous faut dans les ports rediriger un port local vers le port 22 du conteneur, les identifiants SSH sont root/jeedom. Vous pouvez changer le mot de passe en initialisant la variable d&#8217;environement ROOT_PASSWORD à la valeur du mot de passe voulu.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Por lo demás se puede seguir la documentación <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
+<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
 </div>
 <div class="sect1">
 <h2 id="_docker">1. Docker</h2>
@@ -1080,7 +1081,7 @@ Si desea tener acceso SSH necesitas redirigir localmente el puerto 22 del conten
 <p>Para descubrir Jeedom podrías también instalarlo en un contenedor Docker</p>
 </div>
 <div class="paragraph">
-<p>Requisitos: Tener una máquina o una VM (máquina virtual) con el sistema operativo Linux</p>
+<p>Prérequis : Avoir une machine ou une VM tournant sous Linux</p>
 </div>
 <div class="sect2">
 <h3 id="_etapa_1_instalación_de_docker">1.1. Etapa 1 : Instalación de docker</h3>
@@ -1123,7 +1124,7 @@ $ apt-get install docker.io</pre>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Vous pouvez aussi installer mysql directement sur la machine hote dans ce cas il faut sauter cette étape.
+Vous pouvez aussi installer mysql directement sur la machine hôte, dans ce cas il faut sauter cette étape.
 </td>
 </tr>
 </table>
@@ -1168,7 +1169,7 @@ N&#8217;oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql v
 </div>
 </div>
 <div class="paragraph">
-<p>Puis lancer la :</p>
+<p>Puis lancez la :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1184,13 +1185,13 @@ N&#8217;oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql v
 <p>some-jeedom : nom du docker jeedom voulu</p>
 </li>
 <li>
-<p>/my/jeedom/data : répertoire ou les données de Jeedom sont mise sur l&#8217;hôte</p>
+<p>/my/jeedom/data : répertoire où les données de Jeedom sont mise sur l&#8217;hôte</p>
 </li>
 <li>
-<p>ROOT_PASSWORD : mot de passe root pour acceder à Jeedom en SSH</p>
+<p>ROOT_PASSWORD : mot de passe root pour accéder à Jeedom en SSH</p>
 </li>
 <li>
-<p>vous pouvez aussi changer la configuration des redirections de port</p>
+<p>vous pouvez aussi changer la configuration des redirections de ports</p>
 </li>
 </ul>
 </div>
@@ -1217,10 +1218,10 @@ N&#8217;oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql v
 </div>
 <div class="paragraph">
 <p>Debian 8 est la distribution officiellement supportée, l&#8217;utilisation d&#8217;une autre distribution est à proscrire au risque d&#8217;obtenir comme réponse du support de devoir restaurer votre Jeedom sur une image officielle.
-Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l&#8217;utilisation d&#8217;une mini ou center (disponible prochainement).</p>
+Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l&#8217;utilisation d&#8217;une Mini+ ou Smart (disponible prochainement).</p>
 </div>
 <div class="paragraph">
-<p>Connectez vous en SSH à votre système et faites :</p>
+<p>Connectez-vous en SSH à votre système et faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1251,11 +1252,11 @@ Les identifiants par défaut sont admin/admin
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Les arguments suivant sont utilisable :
+Les arguments suivants sont utilisables :
 -v = version jeedom désirer
 -w = dossier webserver
 -z = installation dependances z-wave
--m = mot de passe root mysql desirée
+-m = mot de passe root mysql désiré
 </td>
 </tr>
 </table>
@@ -1266,7 +1267,7 @@ Les arguments suivant sont utilisable :
 </div>
 </div>
 <div class="paragraph">
-<p>Por lo demás se puede seguir la documentación <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
+<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
 </div>
 </div>
 </div>

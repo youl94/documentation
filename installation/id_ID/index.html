@@ -436,7 +436,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_sur_synology">4. Sur Synology</a>
 <ul class="sectlevel2">
 <li><a href="#_etape_1_installation_de_docker">4.1. Etape 1 : Installation de Docker</a></li>
-<li><a href="#_etape_2_recuperation_et_installation_des_images_jeedom">4.2. Etape 2 : Recuperation et installation des images Jeedom</a>
+<li><a href="#_etape_2_récuperation_et_installation_des_images_jeedom">4.2. Etape 2 : Récuperation et installation des images Jeedom</a>
 <ul class="sectlevel3">
 <li><a href="#_mysql">4.2.1. MYSQL</a></li>
 <li><a href="#_jeedom">4.2.2. Jeedom</a></li>
@@ -472,7 +472,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>une Jeeboard (hummingboard) i1, i2 ou i4</p>
 </li>
 <li>
-<p>un nas Synology</p>
+<p>un NAS Synology</p>
 </li>
 <li>
 <p>tout système Linux (basé sur Debian de préférence)</p>
@@ -525,7 +525,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p>Soit un total de 115 € pour une box domotique open-source avec une maîtrise complète de son installation</p>
+<p>Soit un total de 115 € pour une box domotique open source avec une maîtrise complète de son installation</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -551,7 +551,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p>Soit un total de 195 € pour une box domotique open-source avec une maîtrise complète de son installation</p>
+<p>Soit un total de 195 € pour une box domotique open source avec une maîtrise complète de son installation</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -572,7 +572,7 @@ Il est possible de changer le Razberry par une clef USB Z-Wave (en revanche il f
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Jeedom est un logiciel qui est et restera opensource, son utilisation est entièrement gratuite et ne dépend pas d&#8217;un cloud ou d&#8217;un abonnement. Cependant certains plugins qui permettent d&#8217;augmenter les capacités de Jeedom ou son utilisation peuvent être payants <strong>et peuvent avoir besoin d&#8217;une connexion internet</strong>. Vous pouvez retrouver la liste des plugins <a href="http://market.jeedom.fr/index.php?v=d&amp;p=market&amp;type=plugin">ici</a>
+Jeedom est un logiciel qui est et restera open source, son utilisation est entièrement gratuite et ne dépend pas d&#8217;un cloud ou d&#8217;un abonnement. Cependant certains plugins qui permettent d&#8217;augmenter les capacités de Jeedom ou son utilisation peuvent être payants <strong>et peuvent avoir besoin d&#8217;une connexion internet</strong>. Vous pouvez retrouver la liste des plugins <a href="http://market.jeedom.fr/index.php?v=d&amp;p=market&amp;type=plugin">ici</a>
 </td>
 </tr>
 </table>
@@ -584,7 +584,7 @@ Jeedom est un logiciel qui est et restera opensource, son utilisation est entiè
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Service pack ? Quézako ? Vous pouvez voir <a href="https://blog.jeedom.fr/?p=1215">ici</a> les avantages des services pack
+Service pack ? Quézako ? Vous pouvez voir <a href="https://blog.jeedom.fr/?p=1215">ici</a> les avantages des service packs
 </td>
 </tr>
 </table>
@@ -654,7 +654,7 @@ Le nom de l&#8217;image Jeedom peut être différent de celui des captures faite
 </div>
 </div>
 <div class="paragraph">
-<p>Vérifier que dans "device" c&#8217;est bien votre carte SD qui est sélectionnée puis cliquez sur l&#8217;icône dossier pour indiquer le chemin de l&#8217;image téléchargée et decompressée (étape 2 et 3) :</p>
+<p>Vérifier que dans "Device" c&#8217;est bien votre carte SD qui est sélectionnée puis cliquez sur l&#8217;icône Dossier pour indiquer le chemin de l&#8217;image téléchargée et decompressée (étape 2 et 3) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -707,7 +707,7 @@ Les identifiants SSH sont root/Mjeedom96
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Attention si vous avez une carte SD de plus de 4go n&#8217;oubliez pas d&#8217;étendre la partition avec la commande raspi-config en ssh
+Attention si vous avez une carte SD de plus de 4go n&#8217;oubliez pas d&#8217;étendre la partition avec la commande raspi-config en SSH ou sudo raspi-config si nécessaire
 </td>
 </tr>
 </table>
@@ -719,13 +719,13 @@ Attention si vous avez une carte SD de plus de 4go n&#8217;oubliez pas d&#8217;�
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L&#8217;OVERCLOCKER sous peine d&#8217;avoir un système instable avec de nombreuse corruption de carte SD
+Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L&#8217;OVERCLOCKER sous peine d&#8217;avoir un système instable avec de nombreuses corruptions de carte SD
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Pour la suite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
+<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
 </div>
 <hr>
 </div>
@@ -863,7 +863,7 @@ Les identifiants SSH sont jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquez sur tous, puis installer le paquet Docker</p>
+<p>Cliquez sur tous, puis installez le paquet Docker</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -871,7 +871,7 @@ Les identifiants SSH sont jeedom/Mjeedom96
 </div>
 </div>
 <div class="paragraph">
-<p>Attendez jusqu&#8217;a ce que l&#8217;installation soit finie :</p>
+<p>Attendez jusqu&#8217;à ce que l&#8217;installation soit finie :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -892,12 +892,12 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_etape_2_recuperation_et_installation_des_images_jeedom">4.2. Etape 2 : Recuperation et installation des images Jeedom</h3>
+<h3 id="_etape_2_récuperation_et_installation_des_images_jeedom">4.2. Etape 2 : Récuperation et installation des images Jeedom</h3>
 <div class="paragraph">
-<p>Il faut docker pour faire tourner Jeedom, le premier un docker Mysql qui contiendra la base de données et un 2eme qui contient Jeedom</p>
+<p>Il faut Docker pour faire tourner Jeedom, le premier un docker Mysql qui contiendra la base de données et un 2ème qui contient Jeedom</p>
 </div>
 <div class="paragraph">
-<p>Lancer l&#8217;application Docker :</p>
+<p>Lancez l&#8217;application Docker :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -915,7 +915,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Dans le champs de recherche tapez "mysql", selectionnez mysql et cliquez sur télécharger :</p>
+<p>Dans le champ de recherche tapez "mysql", selectionnez mysql et cliquez sur télécharger :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -923,7 +923,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Validez ensuite la demande de version le mieux étant de prendre la version latest :</p>
+<p>Validez ensuite la demande de version, le mieux étant de prendre la version latest :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -931,7 +931,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peux prendre plusieurs dizaine de minutes) :</p>
+<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peut prendre plusieurs dizaines de minutes) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -947,7 +947,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Donnez un nom à votre mysql ainsi qu&#8217;un port local redirigé vers le port 3306 du conteneur, puis faite suivant :</p>
+<p>Donnez un nom à votre mysql ainsi qu&#8217;un port local redirigé vers le port 3306 du conteneur, puis faites suivant :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -963,7 +963,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquez sur "Paramètre avancés" :</p>
+<p>Cliquez sur "Paramètres avancés" :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -971,7 +971,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Puis sur "Ajouter un dossier", et la mettez le dossier voulu coté synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers de la base de données) et /var/lib/mysql coté conteneur (attention à bien decocher "Lecture seule")</p>
+<p>Puis sur "Ajouter un dossier", et la mettez le dossier voulu coté Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers de la base de données) et /var/lib/mysql coté conteneur (attention à bien décocher "Lecture seule")</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -987,7 +987,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Cochez "Executer ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
+<p>Cochez "Exécuter ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
 </div>
 </div>
 <div class="sect3">
@@ -1001,7 +1001,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Dans le champs de recherche tapez "jeedom", selectionnez jeedom/jeedom et cliquez sur télécharger :</p>
+<p>Dans le champ de recherche tapez "jeedom", sélectionnez jeedom/jeedom et cliquez sur télécharger :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1009,10 +1009,10 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Validez ensuite la demande de version le mieux étant de prendre la dernière.</p>
+<p>Validez ensuite la demande de version, le mieux étant de prendre la dernière.</p>
 </div>
 <div class="paragraph">
-<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peux prendre plusieurs dizaine de minutes) :</p>
+<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peut prendre plusieurs dizaines de minutes) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1028,7 +1028,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Donnez un nom à votre jeedom ainsi qu&#8217;un port local redirigé vers le port 80 (ici 9080) et un vers le 22 (ici 9022) du conteneur, puis faite suivant :</p>
+<p>Donnez un nom à votre jeedom ainsi qu&#8217;un port local redirigé vers le port 80 (ici 9080) et un vers le 22 (ici 9022) du conteneur, puis faites suivant :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1044,7 +1044,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Cliquez sur "Paramètre avancés"</p>
+<p>Cliquez sur "Paramètres avancés"</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1060,7 +1060,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Choisissez un dossier sur votre Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers jeedom), attention à bien decocher "Lecture seule"</p>
+<p>Choisissez un dossier sur votre Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers jeedom), attention à bien décocher "Lecture seule"</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1076,7 +1076,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Cochez "Executer le conteneur à l&#8217;aide de privilège élevés" puis validez le tout :</p>
+<p>Cochez "Exécuter le conteneur à l&#8217;aide de privilèges élevés" puis validez le tout :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1084,7 +1084,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Cochez "Executer ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
+<p>Cochez "Exécuter ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
 </div>
 </div>
 </div>
@@ -1099,7 +1099,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 </div>
 </div>
 <div class="paragraph">
-<p>Remplissez les champs en fonction de votre configuration (configuration du docker mysql installé précedement) et validez.</p>
+<p>Remplissez les champs en fonction de votre configuration (configuration du docker mysql installé précédemment) et validez.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1108,7 +1108,7 @@ Pour avoir accès au paquet Docker il faut absolument avoir DSM 5.2 et un NAS co
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-L&#8217;addresse IP de la BDD est l&#8217;addresse IP du NAS, le port est celui redirigé du docker Mysql, le mot de passe est celui mis dans le docker mysql. Le nom d&#8217;utilisateur est root et le nom de la base celui que vous voulez (conseillé Jeedom)
+L&#8217;addresse IP de la BDD est l&#8217;addresse IP du NAS, le port est celui redirigé du docker Mysql, le mot de passe est celui mis dans le docker Mysql. Le nom d&#8217;utilisateur est root et le nom de la base celui que vous voulez (conseillé Jeedom)
 </td>
 </tr>
 </table>
@@ -1125,13 +1125,13 @@ L&#8217;addresse IP de la BDD est l&#8217;addresse IP du NAS, le port est celui 
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Si vous voulez un accès SSH il vous faut dans les ports rediriger un port local vers le port 22 du contenaire, les identifiants SSH sont root/jeedom. Vous pouvez changer le mot de passe en initialisant la variable d&#8217;environement ROOT_PASSWORD à la valeur du mot de passe voulu.
+Si vous voulez un accès SSH il vous faut dans les ports rediriger un port local vers le port 22 du conteneur, les identifiants SSH sont root/jeedom. Vous pouvez changer le mot de passe en initialisant la variable d&#8217;environement ROOT_PASSWORD à la valeur du mot de passe voulu.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Pour la suite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
+<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
 </div>
 </div>
 </div>
@@ -1161,7 +1161,7 @@ Attention nous partons ici du principe que vous maitrisez déjà docker
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Pré-requis : Avoir une machine ou une VM tournant sous Linux
+Prérequis : Avoir une machine ou une VM tournant sous Linux
 </td>
 </tr>
 </table>
@@ -1207,7 +1207,7 @@ $ apt-get install docker.io</pre>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Vous pouvez aussi installer mysql directement sur la machine hote dans ce cas il faut sauter cette étape.
+Vous pouvez aussi installer mysql directement sur la machine hôte, dans ce cas il faut sauter cette étape.
 </td>
 </tr>
 </table>
@@ -1252,7 +1252,7 @@ N&#8217;oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql v
 </div>
 </div>
 <div class="paragraph">
-<p>Puis lancer la :</p>
+<p>Puis lancez la :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1268,13 +1268,13 @@ N&#8217;oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql v
 <p>some-jeedom : nom du docker jeedom voulu</p>
 </li>
 <li>
-<p>/my/jeedom/data : répertoire ou les données de Jeedom sont mise sur l&#8217;hôte</p>
+<p>/my/jeedom/data : répertoire où les données de Jeedom sont mise sur l&#8217;hôte</p>
 </li>
 <li>
-<p>ROOT_PASSWORD : mot de passe root pour acceder à Jeedom en SSH</p>
+<p>ROOT_PASSWORD : mot de passe root pour accéder à Jeedom en SSH</p>
 </li>
 <li>
-<p>vous pouvez aussi changer la configuration des redirections de port</p>
+<p>vous pouvez aussi changer la configuration des redirections de ports</p>
 </li>
 </ul>
 </div>
@@ -1307,13 +1307,13 @@ N&#8217;oubliez pas de remplacer "my-secret-pw" par le mot de passe root mysql v
 </td>
 <td class="content">
 Debian 8 est la distribution officiellement supportée, l&#8217;utilisation d&#8217;une autre distribution est à proscrire au risque d&#8217;obtenir comme réponse du support de devoir restaurer votre Jeedom sur une image officielle.
-Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l&#8217;utilisation d&#8217;une mini ou center (disponible prochainement).
+Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l&#8217;utilisation d&#8217;une Mini+ ou Smart (disponible prochainement).
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Connectez vous en SSH à votre système et faites :</p>
+<p>Connectez-vous en SSH à votre système et faites :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1344,11 +1344,11 @@ Les identifiants par défaut sont admin/admin
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Les arguments suivant sont utilisable :
+Les arguments suivants sont utilisables :
 -v = version jeedom désirer
 -w = dossier webserver
 -z = installation dependances z-wave
--m = mot de passe root mysql desirée
+-m = mot de passe root mysql désiré
 </td>
 </tr>
 </table>
@@ -1359,7 +1359,7 @@ Les arguments suivant sont utilisable :
 </div>
 </div>
 <div class="paragraph">
-<p>Pour la suite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
+<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
 </div>
 </div>
 </div>
