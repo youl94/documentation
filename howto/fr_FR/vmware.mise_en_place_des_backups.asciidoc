@@ -67,7 +67,7 @@ VM_STARTUP_ORDER=
 Les paramètres que vous devez adapter sont : 
 
 - *VM_BACKUP_VOLUME* => emplacement de votre datastore de backup
-- *VM_BACKUP_ROTATION_COUNT* => notre de backup par VM à garder
+- *VM_BACKUP_ROTATION_COUNT* => nombre de backup par VM à garder
 
 [NOTE]
 Vous pouvez consulter https://communities.vmware.com/docs/DOC-8760[ici] la documentation complète de ghettoVCB avec une description de chaque paramètre
