@@ -28,7 +28,7 @@ Introduzca la tarjeta SD en su ordenador y ejecute el programa win32diskimager:
 
 imagen::../images/install_humming_3.PNG[]
 
-Verifique que en "Device" esté seleccionada la unidad correcta de su tarjeta SD, haga clic en el icono carpeta para seleccionar la ruta de la imagen descargada y descomprimida (pasos 2.2 y 2.3) 
+Vérifier que dans "Device" c'est bien votre carte SD qui est sélectionnée puis cliquez sur l'icône Dossier pour indiquer le chemin de l'image téléchargée et decompressée (étape 2 et 3) : 
 
 image::../images/install_humming_4.PNG[]
 
@@ -50,9 +50,9 @@ image::../images/install_humming_7.PNG[]
 Les identifiants SSH sont root/Mjeedom96
 
 [IMPORTANTE]
-Si su tarjeta SD es de más de 4 Gigas, no olvide ampliar la partición con el comando "raspi-config" en SSH
+Attention si vous avez une carte SD de plus de 4go n'oubliez pas d'étendre la partition avec la commande raspi-config en SSH ou sudo raspi-config si nécessaire
 
 [IMPORTANTE]
-Si utiliza una Raspberry pi 2, ES IMPORTANTE NO HACER OVERCLOCKING, pues corre el riesgo de tener un sistema operativo muy instable con muchas posibilidades corrupción en la tarjeta SD
+Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L'OVERCLOCKER sous peine d'avoir un système instable avec de nombreuses corruptions de carte SD
 
-Para el resto, puede seguir la documentación en la sección  https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Primeros pasos con Jeedom]
+Ensuite vous pouvez suivre la documentation https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Premier pas avec Jeedom]

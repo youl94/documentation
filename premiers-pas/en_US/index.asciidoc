@@ -17,7 +17,7 @@ include::findJeedom.asciidoc[]
 == Link my Jeedom my account market
 include::linkmarket.asciidoc[]
 
-== Get My direct access URL
+== Obtenir mon URL d'accès direct
 include::dnsaccess.asciidoc[]
 
 == Changer le mot de passe par défaut de Jeedom

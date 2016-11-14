@@ -4,7 +4,7 @@ Attention nous partons ici du principe que vous maitrisez déjà docker
 Um Jeedom zu entdecken, können Sie es auch in einem Docker-Container arbeiten lassen :
 
 [IMPORTANT]
-Voraussetzung : Mit einer Maschine oder einer unter Linux arbeitender VM 
+Prérequis : Avoir une machine ou une VM tournant sous Linux
 
 === Schritt 1 : Docker installieren 
 
@@ -25,7 +25,7 @@ $ apt-get install docker.io
 === Schritt 2 : Ein MySQL-Abbild installieren
 
 [NOTE]
-Alternativ können Sie Mysql direkt auf dem Hostcomputer installieren, in diesem Fall sollten Sie diesen Schritt überspringen.
+Vous pouvez aussi installer mysql directement sur la machine hôte, dans ce cas il faut sauter cette étape.
 
 Ich benutze link:https://hub.docker.com/_/mysql/[dieses hier]. So installieren Sie es : 
 
@@ -50,7 +50,7 @@ Abbild installieren :
 docker pull jeedom/jeedom
 ----
 
-Führen Sie dann aus : 
+Puis lancez la : 
 
 ----
 docker run --name some-jeedom --privileged -v /dev/tty*:/dev -v /my/jeedom/data:/var/www/html -e ROOT_PASSWORD=todo -p 9080:80 -p 9022:22 jeedom/jeedom
@@ -59,9 +59,9 @@ docker run --name some-jeedom --privileged -v /dev/tty*:/dev -v /my/jeedom/data:
 Vergessen Sie nicht, die Befehlszeile zu ändern, um zu konfigurieren: 
 
 - some-jeedom : Name des gewünschten Docker-Jeedom 
-- /my/jeedom/data : Verzeichnisse oder die Daten von Jeedom werden auf dem Gastgeber ausgeführt
-- ROOT_PASSWORD : Root-Passwort für den SSH Zugriff auf Jeedom
--Sie können auch die Konfiguration der Port-Umleitungen ändern
+- /my/jeedom/data : répertoire où les données de Jeedom sont mise sur l'hôte
+- ROOT_PASSWORD : mot de passe root pour accéder à Jeedom en SSH
+- vous pouvez aussi changer la configuration des redirections de ports
 
 Il vous faut ensuite installer Jeedom en allant sur : IP_DOCKER:9080 et entrer les informations de connexion vers mysql :
 

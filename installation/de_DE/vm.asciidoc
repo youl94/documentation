@@ -10,7 +10,7 @@ Sie müssen link:https://app.box.com/s/ijyxkntjjip9x4oue2xqdi53r4sh8ent[hier] hi
 
 === Schritt 3: VM-Abbild Dekomprimieren
 
-Dekomprimieren sie das  Jeedom-VM-Abbild ( falls Sie nichts zum dekomprimieren haben können Sie hier link:http://www.clubic.com/telecharger-fiche9632-winrar.html[winrar] herunterladen)
+Décompressez l'image de la VM Jeedom (si vous n'avez rien pour la décompresser vous pouvez installer link:http://www.clubic.com/telecharger-fiche9632-winrar.html[winrar])
 
 === Schritt 4 :  VM starten
 
@@ -18,12 +18,12 @@ Gehen Sie auf das entpackte VM-Abbild und führen Sie die "Jeedom.vmx"  Datei au
 
 image::../images/installation_vmware1.jpg[]
 
-Klicken Sie auf "Play Virtual Machine",  antworten auf alle Fragen mit Ja (wenn gefragt wird ob die Maschine verschoben oder kopiert werden soll, wählen sie verschieben), warten Sie bis die Maschine startet, sie sollten sehen : 
+Cliquez sur "Play virtual machine", répondez oui à toutes les questions (s’il vous demande si vous venez de déplacer ou copier la machine, choisissez déplacer), attendez que la machine démarre, vous devriez avoir : 
 
 image::../images/installation_vmware2.jpg[]
 
 [TIP]
 Die SSH Zugangsdaten sind jeedom/Mjeedom96 oder root/Mjeedom96
-Der Root-Benutzer kann nicht Remote-Benutzer sein  
+L'utilisateur root ne peut étre utilisé à distance
 
 Im übrigen können Sie die Dokumentation https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Erste Schritte mit Jeedom]  folgen.

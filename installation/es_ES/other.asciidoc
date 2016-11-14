@@ -2,9 +2,9 @@ Vous trouverez ici la documentation pour installer Jeedom sur la plupart des sys
 
 [IMPORTANTE]
 Debian 8 est la distribution officiellement supportée, l'utilisation d'une autre distribution est à proscrire au risque d'obtenir comme réponse du support de devoir restaurer votre Jeedom sur une image officielle.
-Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l'utilisation d'une mini ou center (disponible prochainement).
+Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l'utilisation d'une Mini+ ou Smart (disponible prochainement).
 
-Connectez vous en SSH à votre système et faites : 
+Connectez-vous en SSH à votre système et faites : 
 
 ----
 wget https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
@@ -18,11 +18,11 @@ Il vous suffit ensuite d'aller sur IP_MACHINE_JEEDOM
 Les identifiants par défaut sont admin/admin
 
 [NOTE]
-Les arguments suivant sont utilisable :
+Les arguments suivants sont utilisables :
 -v = version jeedom désirer
 -w = dossier webserver
 -z = installation dependances z-wave
--m = mot de passe root mysql desirée
+-m = mot de passe root mysql désiré
 
 -----
 
@@ -32,4 +32,4 @@ Les arguments suivant sont utilisable :
 
 
 
-Por lo demás se puede seguir la documentación https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Premier pas avec Jeedom]
+Ensuite vous pouvez suivre la documentation https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Premier pas avec Jeedom]

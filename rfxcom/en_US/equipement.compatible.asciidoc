@@ -1,4 +1,4 @@
-= Liste des équipements compatible RFXCOM
+= Liste des équipements compatible RFXcom
 
 [cols="5|*", options="header"] 
 |===
@@ -50,7 +50,7 @@
 
 |CRESTA HW-TX320|Température Humidité avec affichage|Hideki||
 
-|Digimax 210 TH10|Thermostat|X10|Utiliser "Température, Humidité et Pression - Defaut"|
+|Digimax 210 TH10|Thermostat|X10|Utiliser "Température, Humidité et Pression - Défaut"|
 
 |DI.O by Chacon 54583|Détecteur crépusculaire|AC||
 
@@ -60,7 +60,7 @@
 
 |DI.O by Chacon 54761|Télécommande 16 canaux|AC||http://www.domadoo.fr/produit,1528,15,CHACON-T%E5%B9%A8%E5%B6%B0ommande-16-canaux-Blanche-%28gamme-DI-O%29.htm[Acheter]
 
-|DI.O by Chacon 54746|Prise exterieur|AC||
+|DI.O by Chacon 54746|Prise exterieure|AC||
 
 |DI-O by Chacon 54783|Détecteur crépusculaire|AC||
 
@@ -104,11 +104,11 @@
 
 |SIMU RSA HZ|Porte de garage|||
 
-|Somfy Freevia 300|Motorisation portail|Poser RFXCOM sur le moteur pour l’associer au moteur comme si c’était une télécommande||
+|Somfy Freevia 300|Motorisation portail|Poser RFXcom sur le moteur pour l’associer au moteur comme si c’était une télécommande||
 
-|Somfy Evolvia 400/450|Motorisation portail|Poser RFXCOM sur le moteur pour l’associer au moteur comme si c’était une télécommande. Le capot du moteur doit être ouvert et il doit faire jour. La procédure ne marche pas s’il fait nuit.||
+|Somfy Evolvia 400/450|Motorisation portail|Poser RFXcom sur le moteur pour l’associer au moteur comme si c’était une télécommande. Le capot du moteur doit être ouvert et il doit faire jour. La procédure ne marche pas s’il fait nuit.||
 
-|Somfy RTS|Volet roulant et autres périphériques Somfy RTS|||
+|Somfy RTS|Volets roulants et autres périphériques Somfy RTS|||
 
 |Thermomètre TX320|Température Humidité avec affichage|||
 

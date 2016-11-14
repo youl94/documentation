@@ -6,7 +6,7 @@ Klicken Sie dann auf "Market und Updates"
 
 image::../images/premier-linkmarket2.png[]
 
-Et remplir le champ "nom d'utilisateur" et mot de passe en fonction de vos identifants du Market (et bien du market et pas de Jeedom)
+Et remplir le champ "Nom d'utilisateur" et "Mot de passe" en fonction de vos identifants du Market (identifiants du market et non pas de Jeedom)
 
 image::../images/premier-linkmarket3.png[]
 

@@ -2,7 +2,7 @@ Jeedom kann auf verschiedenen Hardware-Komponenten installiert werden:
 
 - Ein Raspberry Pi 1 oder 2
 - Ein Jeeboard (hummingboard) i1, i2 und i4
-- Eine Synology NAS
+- un NAS Synology
 - Jedes Linux-System (Debian-basierte bevorzugt)
 
 Sie können auch eine fertige Box mit vorinstalliertem Jeedom, die zusätzlich ein Service Pack (plus Support und Service) und verfügbare Plugins verwenden: 
@@ -21,7 +21,7 @@ Hier sind 2 "Typen" von Konfigurationen, einen guten Start mit Jeedom und Z-Wave
 - Eine Micro SD Karte ~ 7 €
 - Stromversorgung über USB ~ 8 € 
 
-Insgesamt 115 € für eine Open-Source-Box Home-Automation mit vollständiger Kontrolle der Installation
+Soit un total de 115 € pour une box domotique open source avec une maîtrise complète de son installation
 
 . Jeedomboard Dual
 
@@ -30,13 +30,13 @@ Insgesamt 115 € für eine Open-Source-Box Home-Automation mit vollständiger K
 - Eine Micro SD Karte ~ 7 €
 - Stromversorgung über USB ~ 8 € 
 
-Insgesamt 195 € für eine Open-Source-Box Home-Automation mit vollständiger Kontrolle der Installation
+Soit un total de 195 € pour une box domotique open source avec une maîtrise complète de son installation
 
 [TIP]
 Sie können den Razberry von einem Z-Wave USB Stick ändern (allerdings wird das openzwave Plugin nur mehr unter Jeedom benötigen) oder wenn Sie nicht möchten, dass eine Z-Wave RFXCOM oder EnOcean Schlüssel (oder sogar piOcean)
 
 [TIP]
-Jeedom ist eine Software, sie ist und wird Open Source bleiben, der Einsatz ist völlig kostenlos und nicht auf einer Cloud oder ein Abonnement . Doch einige Plugins, die die Kapazität von Jeedom oder seine Verwendung erweitern, ist möglicherweise kostenpflichtig *und benötigen eine Internet-Verbindung*. Sie  können die Plugin Liste link:http://market.jeedom.fr/index.php?v=d&p=market&type=plugin[hier] finden
+Jeedom est un logiciel qui est et restera open source, son utilisation est entièrement gratuite et ne dépend pas d'un cloud ou d'un abonnement. Cependant certains plugins qui permettent d'augmenter les capacités de Jeedom ou son utilisation peuvent être payants *et peuvent avoir besoin d'une connexion internet*. Vous pouvez retrouver la liste des plugins link:http://market.jeedom.fr/index.php?v=d&p=market&type=plugin[ici]
 
 [TIP]
-Service Pack? Quézako ? Sie können die Vorteile der Service Packs link:https://blog.jeedom.fr/?p=1215[hier] finden.
+Service pack ? Quézako ? Vous pouvez voir link:https://blog.jeedom.fr/?p=1215[ici] les avantages des service packs

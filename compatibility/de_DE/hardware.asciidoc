@@ -6,8 +6,8 @@
 |Odroid C2|Release-Kandidat|
 |RPI1|Stabil|
 |RPI2|nicht offiziell/Stabil|
-|RPI3|nicht offiziell/Stabil|Achtung, wenn Sie einen Razberry mit WiFi/Bluetooth benutzen, daß funktioniert nicht
-|64-bit|Stabil|Achtung, ausschließlich mit Debian Jessie
+|RPI3|Non officiel/Stable|Attention si vous utilisez un Razberry le wifi/bluetooth ne pourra marcher
+|64 bits|Stable|Attention seulement sous Debian Jessie
 |32-bit|Nicht unterstützt|
-|VmWare|Stabil|Achtung, ausschließlich mit Debian Jessie. Keine Unterstützung für VmWare nur für Jeedom.
+|Vmware|Stable|Attention seulement sous Debian Jessie. Pas de support pour VMware, seulement pour Jeedom
 |===

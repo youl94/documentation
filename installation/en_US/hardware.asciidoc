@@ -2,7 +2,7 @@ Jeedom can be installed on various hardware components :
 
 - Raspberry pi 1 or 2
 - Jeeboard (hummingboard) i1, i2 or i4
--  Synology NAS
+- un NAS Synology
 - Any Linux system (Debian-based preferred)
 
 You can also buy a ready-made box with preinstalled Jeedom which additionally contains a service pack (more support and service) and offer plugins : 
@@ -21,7 +21,7 @@ Here are 2 configurations "type" for good start with Jeedom Z-Wave :
 - a micro SD card ~ 7 €
 - USB power supply -8 € 
 
-A total of € 115 for a box open source home automation with full control of his installation
+Soit un total de 115 € pour une box domotique open source avec une maîtrise complète de son installation
 
 . Jeedomboard dual
 
@@ -30,13 +30,13 @@ A total of € 115 for a box open source home automation with full control of hi
 - a micro SD card ~ 7 €
 - USB power supply -8 € 
 
-A total of € 195 for a box open source home automation with full control of his installation
+Soit un total de 195 € pour une box domotique open source avec une maîtrise complète de son installation
 
 [TIP]
 You can change the Razberry by a Z-Wave USB stick (though it will openzwave the plugin and more under Jeedom) or if you do not want a Z-Wave, a RFXCOM, or EnOcean key (or even piOcean )
 
 [TIP]
-Jeedom est un logiciel qui est et restera opensource, son utilisation est entièrement gratuite et ne dépend pas d'un cloud ou d'un abonnement. Cependant certains plugins qui permettent d'augmenter les capacités de Jeedom ou son utilisation peuvent être payants *et peuvent avoir besoin d'une connexion internet*. Vous pouvez retrouver la liste des plugins link:http://market.jeedom.fr/index.php?v=d&p=market&type=plugin[ici]
+Jeedom est un logiciel qui est et restera open source, son utilisation est entièrement gratuite et ne dépend pas d'un cloud ou d'un abonnement. Cependant certains plugins qui permettent d'augmenter les capacités de Jeedom ou son utilisation peuvent être payants *et peuvent avoir besoin d'une connexion internet*. Vous pouvez retrouver la liste des plugins link:http://market.jeedom.fr/index.php?v=d&p=market&type=plugin[ici]
 
 [TIP]
-Service pack? Quézako? You can see link:https://blog.jeedom.fr/?p=1215[here] the benefits of service packs
+Service pack ? Quézako ? Vous pouvez voir link:https://blog.jeedom.fr/?p=1215[ici] les avantages des service packs

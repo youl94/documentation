@@ -23,7 +23,7 @@ image::../images/doc-presentation-maj.png[Page Update]
 image::../images/doc-presentation-sauvegarde.png[Page Backup]
 
 
-Around this core plugins of any kind can integrate:
+Autour de ce noyau viennent se greffer des plugins qui peuvent être de toutes sortes :
 
 - home automation protocol (Z-Wave, RFXcom, EnOcean...),
 - other protocol IP (KNX, xPL...),
@@ -33,7 +33,7 @@ Around this core plugins of any kind can integrate:
 - organization (agenda, Google agenda),
 - development (script).
 
-These plugins can be installed via market and extend the possibilities of Jeedom.
+Ces plugins peuvent être récupérés via Market et permettent d'étendre les possibilités de Jeedom.
 
 image::../images/doc-presentation-market.png[Page Market]
 
