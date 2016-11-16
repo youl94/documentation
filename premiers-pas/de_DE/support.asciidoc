@@ -10,7 +10,8 @@ Celle-ci se décompose en plusieurs catégories : une partie pour le "coeur" de
 
 === Das Forum
 
-Disponible link:https://jeedom.fr/forum[ici], le forum est très actif et contient énormément d'informations. Si vous avez une question, n'hésitez pas à la poser, vous aurez une réponse en moins d'une heure (en moyenne).
+Disponible link:https://jeedom.com/forum[ici], le forum est très actif et contient énormément d'informations. Si vous avez une question, n'hésitez pas à la poser, vous aurez une réponse en moins d'une heure (en moyenne).
+Attention, le forum est maintenu par la communauté Jeedom, composée de bénévoles, et non par la société Jeedom.
 
 image::../images/premier-support3.png[]
 

@@ -276,7 +276,7 @@ _[small]#Piles : 1x3V CR1216#_|Mode inclusion auto et appui sur le bouton learn|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/d2-01-09_smartplug_ubiwizz_metering.jpg[width=150,align="center"]|UbiWizz|Smart Plug EnOcean|D2-01-09|Prise|Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant |Mode inclusion auto et appui long (5s) sur le bouton learn puis relachement et appui de 2 secondes| link:++http://www.domadoo.fr/fr/peripheriques/2667-ubiwizz-smart-plug-enocean-schuko.html++[Acheter^]
+|image:../images/compatibility_list/d2-01-09_smartplug_ubiwizz_metering.jpg[width=150,align="center"]|UbiWizz|Smart Plug EnOcean|D2-01-09|Prise|Bien s'assurer que la prise sort du learn après inclusion. Sinon procédez à une exclusion avant |Mode inclusion auto et appui long (5s) sur le bouton learn puis relachement et appuie de 2 secondes| link:++http://www.domadoo.fr/fr/peripheriques/2667-ubiwizz-smart-plug-enocean-schuko.html++[Acheter^]
 // 
 
 
@@ -288,7 +288,7 @@ _[small]#Piles : 1x3V CR1216#_|Mode inclusion auto et appui sur le bouton learn|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/recepteur_1_canal_vitec_ubid1008.jpg[width=150,align="center"]|Vitec|Récepteur 1 canal Vitec|RECEPTEUR 1 CANAL|Micromodule|Module récepteur seulement. Ne s'inclue pas mais s'appaire |Ajouter sans inclure. Choisir le profil. Ensuite mettre le module en learn puis cliquez sur tester ON dans jeedom| 
+|image:../images/compatibility_list/recepteur_1_canal_vitec_ubid1008.jpg[width=150,align="center"]|Vitec|Récepteur 1 canal Vitec|RECEPTEUR 1 CANAL|Micromodule|Module récepteur seulement ne s'inclue pas mais s'appaire |Ajouter sans inclure. Choisir le profil. Ensuite mettre le module en learn puis cliquez sur tester ON dans jeedom| 
 // 
 
 
