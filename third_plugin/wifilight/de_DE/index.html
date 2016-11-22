@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Description</title>
+<title>Wifilight</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,26 +415,42 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a>
-<ul class="sectlevel3">
+<li><a href="#_wifilight">1. Wifilight</a>
+<ul class="sectlevel2">
 <li><a href="#_présentation">1.1. Présentation</a></li>
+<li><a href="#_compatibilités_et_limitations">1.2. Compatibilités et limitations</a></li>
+<li><a href="#_produits_compatibles">1.3. Produits compatibles</a></li>
+<li><a href="#_test_de_compatibilité">1.4. Test de compatibilité</a></li>
+<li><a href="#_limitations">1.5. Limitations</a></li>
+<li><a href="#_configuration_du_module_wifi">1.6. Configuration du module wifi</a>
+<ul class="sectlevel3">
+<li><a href="#_installer_les_leds">1.6.1. Installer les leds</a></li>
+<li><a href="#_configurer_le_routeur">1.6.2. Configurer le routeur</a></li>
 </ul>
 </li>
-<li><a href="#_configuration">2. Configuration</a>
+<li><a href="#_installation_et_configuration_du_plugin">1.7. Installation et Configuration du plugin</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_paramétrage">1.7.1. Paramétrage</a></li>
+<li><a href="#_ajout_des_commandes">1.7.2. Ajout des commandes</a></li>
 </ul>
 </li>
-<li><a href="#_paramétrage">3. Paramétrage</a>
+<li><a href="#_utilisation_du_widget">1.8. Utilisation du widget</a></li>
+<li><a href="#_exemples_de_scénario">1.9. Exemples de scénario</a>
 <ul class="sectlevel3">
-<li><a href="#_paramétrage_2">3.1. Paramétrage</a></li>
+<li><a href="#_scénario_pour_modifier_la_couleur_en_fonction_d_un_bouton_virtuel">1.9.1. Scénario pour modifier la couleur en fonction d&#8217;un bouton virtuel</a></li>
 </ul>
 </li>
-<li><a href="#_faq">4. FAQ</a></li>
-<li><a href="#_troubleshoting">5. Troubleshoting</a></li>
-<li><a href="#_changelog">6. Changelog</a>
+<li><a href="#_fonctionnement_du_retour_d_état">1.10. Fonctionnement du retour d&#8217;état</a>
 <ul class="sectlevel3">
-<li><a href="#_version_1">6.1. Version 1</a></li>
+<li><a href="#_compatibilité_du_retour_d_état">1.10.1. Compatibilité du retour d&#8217;état</a></li>
+<li><a href="#_principe">1.10.2. Principe</a></li>
+<li><a href="#_mise_à_jour_périodique_de_jeedom">1.10.3. Mise à jour périodique de Jeedom</a></li>
+<li><a href="#_mise_à_jour_par_scénario">1.10.4. Mise à jour par scénario</a></li>
+<li><a href="#_récupération_des_informations_de_retour_d_état">1.10.5. Récupération des informations de retour d&#8217;état</a></li>
+</ul>
+</li>
+<li><a href="#_faq">1.11. FAQ</a></li>
+<li><a href="#_difficultés">1.12. Difficultés</a></li>
 </ul>
 </li>
 </ul>
@@ -442,144 +458,798 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_description">1. Description</h2>
+<h2 id="_wifilight">1. Wifilight</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_présentation">1.1. Présentation</h4>
+<hr>
+<div class="sect2">
+<h3 id="_présentation">1.1. Présentation</h3>
 <div class="paragraph">
-<p>Ce plugin permet la gestion des periphériques Upnp</p>
+<p>Ce plugin permet de gérer de nombreux  bandeau de leds ou ampoules leds pilotés par radiofréquence 2.4 GHz via une box wifi vendue avec le produit. Le plugin dialogue avec la box wifi mais pas directement avec les leds.</p>
 </div>
 <hr>
 </div>
+<div class="sect2">
+<h3 id="_compatibilités_et_limitations">1.2. Compatibilités et limitations</h3>
+
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuration">2. Configuration</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<div class="sect2">
+<h3 id="_produits_compatibles">1.3. Produits compatibles</h3>
 <div class="paragraph">
-<p>Une fois le plugin activé, les dépendances doivent s’installer automatiquement.
-Si ce n’est pas le cas ou si elle ne sont pas OK, cliquer sur relancer.</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Ensuite il faut définir le port utilisé par le démon (si vous ne mettez rien, le port utilisé sera 5002)</p>
-</div>
-</div>
+<p>Il existe de nombreux produits compatibles avec le plugin mais de marques très différents ou sans marque.</p>
 </div>
 <div class="paragraph">
-<p>Enfin il est possible (en mode expert uniquement) de paramètré le timeout des commandes (par defaut le timeout est de 10 secondes)</p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_paramétrage">3. Paramétrage</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_paramétrage_2">3.1. Paramétrage</h4>
-<div class="paragraph">
-<p>Pour les services disposant d&#8217;un widget spécifiques :</p>
+<p>Les produits connus comme compatibles :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ContentDirectory</p>
+<p>Ampoules Mi-Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>AVTransport</p>
+<p>Contrôleur led Mi-Light/EasyBulb/LimitlessLED V3.0 à V5.0 : pas de retour d&#8217;état</p>
+</li>
+<li>
+<p>Contrôleur bandeau led LW12/Lagute : ne gèrent pas le blanc</p>
+</li>
+<li>
+<p>Contrôleur bandeau led Magic UFO : gère le blanc</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>il est possible de choisir entre l&#8217;affichage "standard" des commandes et l&#8217;affichage spécifique aux service.
-En complément de l&#8217;affichage spécifique, il est possible d&#8217;afficher les commandes du service "non géré" par l&#8217;affichage spécifique et de forcer l&#8217;affichage des commandes en "standard" en plus de l&#8217;affichage spécifique</p>
+<p>Produits prochainement compatibles :</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Que se soit pour les services disposant d&#8217;un widget spécifique ou pour les autres services, l&#8217;affichage en mode "standard" prend en compte les paramètrage des commandes (affichage On/Off).
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Comment faire un appel aux commandes des equipements Upnp dans les scénarios ?</div><div class="content">
-<div class="paragraph">
-<p>Les commandes Upnp nécessitant des paramètres pour être executée, il est nécessaire de passer par un bloc code. Exemple :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/upnp_scenario.png" alt="upnp scenario">
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Contrôleur led Mi-Light/EasyBulb/LimitlessLED V6.0</p>
+</li>
+<li>
+<p>les ampoules RGBW/WW/CW avec le pont V6.0</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Pour connaitre les paramètres de chaque commande, il faut regarder le paramétrage des commandes sur l&#8217;equipement (attention pour les listes de valeur, il faut saisir une valeur autorisée)</p>
+<p>Produits pouvant être compatibles :</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/upnp_commandes.png" alt="upnp commandes">
+<div class="ulist">
+<ul>
+<li>
+<p>Les nombreuses copies des produits ci-dessus</p>
+</li>
+<li>
+<p>Ceux compatibles avec le logiciel Magic Home de type 1 et 3</p>
+</li>
+</ul>
 </div>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshoting">5. Troubleshoting</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Dans le log il y a parfois des messages : "Unable to find the service with SID XXX"</div><div class="content">
 <div class="paragraph">
-<p>Ces messages n&#8217;ont pas d&#8217;incidence en fonctionnement normal et sont la uniquement pour du dépannage. Ce genre de message apparait notament lorsqu&#8217;on redémarre le service et sont liés a de précédant abonnement au messages des services UPnP</p>
+<p>Produits incompatibles et qui ne le seront pas :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les ampoules ou contrôleurs de bandeau led qui contiennent un récepteur wifi ou bluetoooth au lieu d&#8217;un recepteur radiofréquence 2.4 Ghz.</p>
+</li>
+<li>
+<p>les contrôleurs de bandeau led ou d&#8217;ampoules qui utilisent une connexion wifi point à point avec l&#8217;application mobile.</p>
+</li>
+</ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_test_de_compatibilité">1.4. Test de compatibilité</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Sur demande, un plugin de test peut être fourni.</p>
+</li>
+<li>
+<p>Il est conseillé de se renseigner sur le forum pour connaitre la compatibilité d&#8217;un produit peu diffusé.</p>
+</li>
+<li>
+<p>Aller sur le forum de Jeedom ici : <a href="https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840" class="bare">https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840</a></p>
+</li>
+</ul>
 </div>
-<div class="openblock">
-<div class="title">Lorsque j&#8217;execute certaines commandes, j&#8217;ai un message d&#8217;erreur indiquant que la commande n&#8217;a pas pu s&#8217;executer dans le délai imparti</div><div class="content">
+</div>
+<div class="sect2">
+<h3 id="_limitations">1.5. Limitations</h3>
 <div class="paragraph">
-<p>La configuration du plugin permet de definir le timeout de l&#8217;execution d&#8217;une commande (voir la rubrique configuration). Dans mon cas, lors du chargement d&#8217;un media sur ma television, la première fois, le délai de réponse de la television peut aller au dela de 5 secondes.
-Si ce problème vous arrive, il suffit de relancer l&#8217;action. Si ce problème arrive régulièrement, augmenter le delai du timeout.</p>
+<p>Mi-Light/EasyBulb/LimitlessLED :</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-La valeur par defaut est 10 secondes
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>toutes les fonctionnalités sont prises en compte par le plugin.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>LW12/Lagute :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>la programmation des modes custom n&#8217;est pas possible, il faut utiliser l&#8217;application fournie avec le contrôleur (Magic Home). Par contre, les modes customs peuvent être déclenchés avec le plugin. Le retour d&#8217;état de l&#8217;intensité n&#8217;est pas géré par le plugin car n&#8217;est pas natif au contrôleur.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magic UFO :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>la programmation des modes custom, le mode radio et les timers ne sont pas gérés. Il faut alors utiliser l&#8217;application fournie avec le contrôleur (Magic Home). Par contre, les modes customs peuvent être déclenchés avec le plugin. Le retour d&#8217;état de l&#8217;intensité n&#8217;est pas géré par le plugin car n&#8217;est pas natif au contrôleur.</p>
+</li>
+</ul>
 </div>
 </div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuration_du_module_wifi">1.6. Configuration du module wifi</h3>
 <div class="sect3">
-<h4 id="_version_1">6.1. Version 1</h4>
+<h4 id="_installer_les_leds">1.6.1. Installer les leds</h4>
 <div class="paragraph">
-<p>Création du plugin</p>
+<p>Attention, le plugin est uniquement compatible avec les leds wifi des marques Mi-light/EasyBulb/LimitlessLED, le contrôleur de bandeau à leds LW-12, les contrôleurs compatibles Magic UFO</p>
+</div>
+<div class="paragraph">
+<p>Utiliser la documentation du constructeur et vérifier le fonctionnement avec la télécommande radiofréquence du constructeur. Noter le canal (1 à 4) (inutile pour le contrôleur LW-12 ou les contrôleurs compatibles Magic UFO).</p>
+</div>
+<div class="paragraph">
+<p>Télécharger l&#8217;application mobile du constructeur et suivre les indications afin de contrôler les leds avec le mobile.</p>
+</div>
+<div class="paragraph">
+<p>Consultez l&#8217;aide et les forums du constructeur des lampes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configurer_le_routeur">1.6.2. Configurer le routeur</h4>
+<div class="paragraph">
+<p>Si vous utilisez une box domotique aller dans la partie configuration DHCP et modifier l&#8217;attribution de l&#8217;adresse IP du module wifi pour qu&#8217;elle soit statique. Noter cette adresse. En général elle sera de la forme :</p>
+</div>
+<div class="paragraph">
+<p>192.168.1.xxx   où xxx correspond à l&#8217;adresse du module wifi (2 à 254)</p>
+</div>
+<div class="paragraph">
+<p>Consultez les forums de votre box pour apprendre à configurer votre DHCP.</p>
+</div>
+<div class="paragraph">
+<p>Après cette modification, vérifier que l&#8217;application mobile contrôle toujours les lampes.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez alors passer à la configuration du plugin Wifilight.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_et_configuration_du_plugin">1.7. Installation et Configuration du plugin</h3>
+<div class="sect3">
+<h4 id="_paramétrage">1.7.1. Paramétrage</h4>
+<div class="paragraph">
+<p>Pour paramétrer un équipement, choisir le menu <strong>Plugins / Objets communicants / Wifilight</strong></p>
+</div>
+<div class="paragraph">
+<p>Puis cliquer sur le bouton en haut à gauche <strong>Ajouter un module Wifi</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Saisir le nom du module wifi</p>
+</li>
+<li>
+<p>Saisir l&#8217;objet parent</p>
+</li>
+<li>
+<p>Choisir la catégorie Lumière</p>
+</li>
+<li>
+<p>Activer et rendre visible</p>
+</li>
+<li>
+<p>Saisir l&#8217;adresse IP du module wifi</p>
+</li>
+<li>
+<p>Saisir la canal utilisé (ce paramètre est ignoré pour les contrôleurs LW-12 ou compatibles Magic UFO)</p>
+</li>
+<li>
+<p>Saisir le type de lampe (RGBW, blanche, LW-12, Magic UFO).
+C&#8217;est indispensable pour créer l&#8217;ensemble des commandes pour le type de lampe utilisé</p>
+</li>
+<li>
+<p>Saisir le nombre d&#8217;envois de commandes : permet de répéter la commande pour un équipement éloigné en cas de mauvaise transmission</p>
+</li>
+<li>
+<p>saisir le délai d&#8217;envoi en cas de répétition</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exemple de configuration générale :</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/fr_FR_Wifilight01.png" alt="fr FR Wifilight01">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ajout_des_commandes">1.7.2. Ajout des commandes</h4>
+<div class="paragraph">
+<p>A la sauvegarde du module, les commandes sont automatiquement créées.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/fr_FR_Wifilight02.png" alt="fr FR Wifilight02">
+</div>
+</div>
+<div class="paragraph">
+<p>Le nom des commandes peut être modifié. Les commandes automatiquement créées et effacées sont recréées lors d&#8217;une sauvegarde.
+Toutes les commandes sont créées et peuvent alourdir l&#8217;interface, vous pouvez choisir de ne pas les afficher.</p>
+</div>
+<div class="paragraph">
+<p>Pour les autres canaux du même module wifi, créer un nouveau module Wifi de la même façon et modifier le canal.</p>
+</div>
+<div class="paragraph">
+<p>Pour les Mi-Light/EasyBulb/LimitlessLED, utiliser un équipement avec le canal 0 pour contrôler les 4 canaux en même temps.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utilisation_du_widget">1.8. Utilisation du widget</h3>
+<div class="paragraph">
+<p>Le widget dans le tableau de bord va permettre de contrôler les leds :</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/fr_FR_Wifilight06.png" alt="fr FR Wifilight06">
+</div>
+</div>
+<div class="paragraph">
+<p>Les widgets sont les widgets standards de Jeedom.
+Pour le widget color, il est possible de télécharger :
+ dashboard.action.color.Color_default_no_off
+qui correspond au widget standard mais sans le bouton off.</p>
+</div>
+<div class="paragraph">
+<p>Attention : il n&#8217;y a pas de retour d&#8217;état depuis les Mi-Light. Si l&#8217;éclairage a été modifié par une télécommande radiofréquence, le plugin ne retournera pas l&#8217;information sur le tableau de bord.
+Pour les LW12/Magic UFO le plugin permet d&#8217;obtenir l&#8217;état toutes les minutes. La récupération par scénario est possible. L&#8217;intensité modifiée avec une app sur mobile sans passer par jeedom ne sera pas répercutée car l&#8217;intensité n&#8217;est pas gérée par ces contrôleurs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exemples_de_scénario">1.9. Exemples de scénario</h3>
+<div class="sect3">
+<h4 id="_scénario_pour_modifier_la_couleur_en_fonction_d_un_bouton_virtuel">1.9.1. Scénario pour modifier la couleur en fonction d&#8217;un bouton virtuel</h4>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/fr_FR_Wifilight07.png" alt="fr FR Wifilight07">
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fonctionnement_du_retour_d_état">1.10. Fonctionnement du retour d&#8217;état</h3>
+<div class="sect3">
+<h4 id="_compatibilité_du_retour_d_état">1.10.1. Compatibilité du retour d&#8217;état</h4>
+<div class="paragraph">
+<p>Le retour d&#8217;état fonctionne avec les contrôleurs LW12/Lagute et Magic UFO</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_principe">1.10.2. Principe</h4>
+<div class="paragraph">
+<p>Le retour d&#8217;état consiste à ce que Jeedom récupère l&#8217;état du contrôleur si son état a été changé par un autre maitre que Jeedom : appli portable ou télécommande</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mise_à_jour_périodique_de_jeedom">1.10.3. Mise à jour périodique de Jeedom</h4>
+<div class="paragraph">
+<p>Toutes les minutes Jeedom interroge le contrôleur pour connaitre son état et mettre à jour l&#8217;allure des widgets du plugin ( sliders et couleur ). Des informations correspondant à l&#8217;état sont mises à jour et peuvent être interrogées par les scénarios.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mise_à_jour_par_scénario">1.10.4. Mise à jour par scénario</h4>
+<div class="paragraph">
+<p>La commande GetState permet de mettre à jour dans un scénario l&#8217;état du contrôleur</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_récupération_des_informations_de_retour_d_état">1.10.5. Récupération des informations de retour d&#8217;état</h4>
+<div class="paragraph">
+<p>Toutes les commandes "Info" du widget et qui contiennent Get ou Etat dans leur nom correspondent à un des états du contrôleur : couleur, vitesse, ON/OFF &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Contrôleurs de type Magic UFO :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ColorGet : récupère la couleur au format #RGB (#FF00FF)</p>
+</li>
+<li>
+<p>ModeGet : récupère le mode guirlande</p>
+</li>
+<li>
+<p>SpeedGet : récupère la vitesse du mode guirlande</p>
+</li>
+<li>
+<p>Etat : récupère si le contrôleur est arrêté  ou en marche &#8594; marche: 1, arrêt :  0</p>
+</li>
+<li>
+<p>SwProgRunGet : récupère si le contrôleur, en mode guirlande, fonctionne ou est en pause &#8594; pause  : 0,  marche : 1</p>
+</li>
+<li>
+<p>WhiteGet : récupère l&#8217;intensité du blanc 0 à 255</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Contrôleurs de type LW12/Lagute :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ColorGet : récupère la couleur #RGB (#FF00FF)</p>
+</li>
+<li>
+<p>ProgGet : récupère le n° du mode guirlande</p>
+</li>
+<li>
+<p>SpeedGet : récupère la vitesse du mode guirlande</p>
+</li>
+<li>
+<p>Etat : récupère si le contrôleur est arrêté  ou en marche &#8594; marche: 1, arrêt :  0</p>
+</li>
+<li>
+<p>SwProgRunGet : récupère si le contrôleur, en mode guirlande, fonctionne ou est en pause &#8594; pause  : 0,  marche : 1</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_faq">1.11. FAQ</h3>
+<div class="openblock panel">
+<div class="title">Quelles ampoules peuvent être utilisées ?</div><div class="content">
+<div class="paragraph">
+<p>Les produits connus comme compatibles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ampoules Mi-light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
+</li>
+<li>
+<p>Contrôleur led Mi-light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
+</li>
+<li>
+<p>Contrôleur led LW12/Lagute : ne gèrent pas le blanc</p>
+</li>
+<li>
+<p>Contrôleur led Magic UFO : gère le blanc</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Produit prochainement compatible :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Contrôleur led Mi-light/EasyBulb/LimitlessLED V6.0</p>
+</li>
+<li>
+<p>les ampoules RGBW/WW/CW avec le pont V6.0</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Produits pouvant être compatibles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les nombreuses copies des produits ci-dessus</p>
+</li>
+<li>
+<p>Ceux compatibles avec le logiciel Magic Home de type 1 et 3</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Produits incompatibles et qui ne le seront pas :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les ampoules ou contrôleurs de bandeau led qui contiennent un récepteur wifi ou bluetoooth au lieu d&#8217;un recepteur radiofréquence 2.4 Ghz.</p>
+</li>
+<li>
+<p>les contrôleurs de bandeau led ou d&#8217;ampoules qui utilisent une connexion wifi point à point avec l&#8217;application mobile.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Les ampoules et contrôleurs d&#8217;autres marques ou les clones ne sont pas supportés ou doivent être testés au préalable.</p>
+</div>
+<div class="paragraph">
+<p>Un plugin de test pourra être fourni pour vérifier la compatibilité des leds, contacter l&#8217;auteur via le forum.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Rien ne se passe</div><div class="content">
+<div class="paragraph">
+<p>Faire d&#8217;abord fonctionner les lampes avec l&#8217;application mobile fournie par le constructeur.</p>
+</div>
+<div class="paragraph">
+<p>Utiliser le bouton <strong>tester</strong> dans le menu Plugin/Automatismes/Wifilight.</p>
+</div>
+<div class="paragraph">
+<p>Aucune aide ne sera apportée sans que les lampes soient opérationnelles avec la télécommande ou l&#8217;application du téléphone portable.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Je ne sais pas configurer ma box internet</div><div class="content">
+<div class="paragraph">
+<p>Aucune aide ne sera apportée sur la box et les notions nécessaires pour configurer le routeur pour attribuer une adresse IP fixe. Consulter les forums de la box.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">La gestion de l&#8217;intensité des ampoules blanches  Mi-light/EasyBulb/LimitlessLED n&#8217;est pas pratique</div><div class="content">
+<div class="paragraph">
+<p>Le constructeur des leds n&#8217;a pas prévu de pouvoir affecter directement l&#8217;intensité de l&#8217;ampoule. On ne peut qu&#8217;incrémenter ou décrémenter par rapport à la valeur précédente. Le plugin ne fait que reproduire ce fonctionnement et ne permet pas de proposer un curseur.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Y-a-t-il un retour d&#8217;état ?</div><div class="content">
+<div class="paragraph">
+<p>Les ampoules RGBW Mi-light/EasyBulb/LimitlessLED ne possèdent pas de retour d&#8217;état. Cela signifie que si, par exemple, l&#8217;ampoule est éteinte avec la télécommande ou avec l&#8217;application du téléphone portable, le plugin n&#8217;est pas prévenu. Ainsi Jeedom pourra afficher que la lampe est allumée alors qu&#8217;elle a été éteinte par ailleurs.
+L&#8217;interface utilisateur de Jeedom ne correspondra donc pas à la réalité.
+Un moyen de contourner partiellement ce problème est d&#8217;utiliser des télécommandes connectées à Jeedom, il sera alors possible d&#8217;indiquer au widget l&#8217;action réalisée.</p>
+</div>
+<div class="paragraph">
+<p>Le contrôleur LW-12 et le contrôleur  Magic UFO peuvent être interrogés pour connaitre leur état zt sont intérrogés toutes les minutes, seule l&#8217;intensité n&#8217;est pas répercutée si elle a été modifiée autrement qu&#8217;avec Jeedom.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Comment obtenir de l&#8217;aide ?</div><div class="content">
+<div class="paragraph">
+<p>Aller sur le forum de Jeedom ici : <a href="https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840" class="bare">https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840</a></p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_difficultés">1.12. Difficultés</h3>
+<div class="openblock">
+<div class="title">LW12 et Magic UFO</div><div class="content">
+<div class="paragraph">
+<p>Les nouvelles fonctionnalités sont expérimentales (retour d&#8217;état)</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>=== Changelog
+==== 3.05 2016-11-19</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Documentation mise à jour</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 3.04 2016-11-16</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Correction bogues</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 3.03 2016-10-31</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppression des bootstrapswitch</p>
+</li>
+<li>
+<p>Mise aux normes de l&#8217;interface à onglets</p>
+</li>
+<li>
+<p>Amélioration de la rapidité d&#8217;affichage</p>
+</li>
+<li>
+<p>Correction bogues</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 3.02 2016-10-25</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppressions log</p>
+</li>
+<li>
+<p>Pas de répétition de commandes lorsqu&#8217;elles nécessitent plusieurs ordres (intensité et température des milights blanches)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 3.01 2016-10-04</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amélioration compatibilité appli mobile</p>
+</li>
+<li>
+<p>Correction bogues</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 3.0 2016-09-29</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Compatibilité complète LW12/Lagute</p>
+</li>
+<li>
+<p>Compatibilité complète avec contrôleurs compatibles MAGIC UFO</p>
+</li>
+<li>
+<p>Ajout du retour d&#8217;atat</p>
+</li>
+<li>
+<p>Synchronisation du widget color</p>
+</li>
+<li>
+<p>Compatible appli mobile</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 2.05 2016-07-29</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppression ampoules RGBWW/CW (pas de contrôleur compatible)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 2.04 2016-02-28</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Correction bogue commande mid</p>
+</li>
+<li>
+<p>Ajout expérimental des ampoules RGBWW/CW</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 2.03 2016-01-30</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Traduction en anglais : OK</p>
+</li>
+<li>
+<p>Ajout des tooltips d&#8217;aide</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 2.02 2016-01-30</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>correction bogue : canal non pris en compte pour leds blanches</p>
+</li>
+<li>
+<p>Canal 0 : maintenant utilisable</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 2.01 2016-01-17</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>traduction en anglais</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 2.0 2016-01-10</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>plugin compatible avec le contrôleur de bandeau led LW-12</p>
+</li>
+<li>
+<p>le bouton off du widget couleur éteint les leds</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 1.04 2015-11-12</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>correction bogue dans l&#8217;API : intensité moyenne et max</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 1.03 2015-11-11</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>correction bogue dans l&#8217;API : intensité moyenne et max</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 1.02 2015-11-10</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>correction bogue sur le fonctionnement multi-canaux</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 1.01 2015-11-07</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>correction bogue sur la couleur de température des lampes blanches</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 1.0 2015-10-18</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>passage en stable</p>
+</li>
+<li>
+<p>ajout des lampes blanches</p>
+</li>
+<li>
+<p>l&#8217;ajout des commandes pour chaque type de lampe (blanche ou RGBW) est automatique</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.08 - 2015-09-09</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modifications mineures d&#8217;interface pour suivre les recommandations pour les plugins</p>
+</li>
+<li>
+<p>correction bogue API (merci @diving91)</p>
+</li>
+<li>
+<p>modification du logo (merci à @Aloïs)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.07 - 2015-08-07</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Interface d&#8217;ajout de modules mise au goût du jour</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.06 - 2015-07-07</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>possibilité de modifier les widgets</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.05 - 2015-02-19</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>le bouton off du widget par défaut éteint les leds sans erreur</p>
+</li>
+<li>
+<p>ajout de nouvelles commandes (couleurs prédéfinies)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.04 - 2014-11-26</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ajout de off</p>
+</li>
+<li>
+<p>correction bogue on</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.03 - 2014-11-26</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ajout de nouvelles commandes (disco)</p>
+</li>
+<li>
+<p>correction bogue choix canal sur lumière blanche</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.02 - 2014-11-25</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ajout de la documentation</p>
+</li>
+<li>
+<p>modification du nom des commandes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>==== 0.01 - 2014-11-23</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>publication de la première version</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
