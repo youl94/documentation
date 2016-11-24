@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Präsentation</title>
+<title>Imperihome</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,191 +412,662 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>Imperihome</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_präsentation">1. Präsentation</a>
+<li><a href="#_description">1. Description</a></li>
+<li><a href="#_configuration">2. Configuration</a>
 <ul class="sectlevel2">
-<li><a href="#_ersichtliche_daten_auf_dem_armaturenbrett">1.1. Ersichtliche Daten auf dem Armaturenbrett :</a></li>
+<li><a href="#_plugin">2.1. Plugin</a></li>
+<li><a href="#_configuration_d_imperihome">2.2. Configuration d&#8217;Imperihome</a></li>
+<li><a href="#_sélection_des_équipements_à_transmettre">2.3. Sélection des équipements à transmettre</a></li>
+<li><a href="#_détermination_automatique_du_type_d_équipement">2.4. Détermination automatique du type d&#8217;équipement</a></li>
+<li><a href="#_détermination_manuel_du_type_d_équipement">2.5. Détermination manuel du type d&#8217;équipement</a></li>
 </ul>
 </li>
-<li><a href="#_installation_einrichtung">2. Installation/Einrichtung</a>
+<li><a href="#_détection_automatique">3. Détection automatique</a>
 <ul class="sectlevel2">
-<li><a href="#_aktualisierungsrate">2.1. Aktualisierungsrate</a></li>
-<li><a href="#_comportement_avec_l_application_mobile">2.2. Comportement avec l&#8217;application mobile</a></li>
+<li><a href="#_explication">3.1. Explication</a></li>
+<li><a href="#_définition_des_critères">3.2. Définition des critères</a>
+<ul class="sectlevel3">
+<li><a href="#_actionneurs">3.2.1. Actionneurs</a></li>
+<li><a href="#_détecteurs_et_capteurs">3.2.2. Détecteurs et Capteurs</a></li>
+<li><a href="#_scénarios">3.2.3. Scénarios</a></li>
+<li><a href="#_autres">3.2.4. Autres</a></li>
 </ul>
 </li>
-<li><a href="#_quelques_copies_d_écran">3. Quelques copies d&#8217;écran</a></li>
+</ul>
+</li>
 <li><a href="#_faq">4. FAQ</a></li>
-<li><a href="#_fehlersuche">5. Fehlersuche</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_präsentation">1. Präsentation</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>Dieses Plugin ermöglicht es Ihnen die IPX800-Karte von GCE-Electronics zu verwalten.</p>
-</div>
-<div class="paragraph">
-<p>Ursprünglich ist dieses Plugin entstanden, um sich mit der IPX800 GCE zu verbinden.</p>
-</div>
-<div class="sect2">
-<h3 id="_ersichtliche_daten_auf_dem_armaturenbrett">1.1. Ersichtliche Daten auf dem Armaturenbrett :</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>''Die Analogeingänge''</p>
-</li>
-<li>
-<p>''Die Digitaleingänge''</p>
-</li>
-<li>
-<p>''Die Relais''</p>
-</li>
-<li>
-<p>''Die Impulszähler''</p>
-</li>
-</ul>
-</div>
-</div>
+<hr>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_installation_einrichtung">2. Installation/Einrichtung</h2>
+<h2 id="_description">1. Description</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Nous allons maintenant paramétrer un équipement. Pour se faire, cliquer sur ''Plugins / Protocole domotique / IPX800''</p>
-</div>
-<div class="paragraph">
-<p>Puis cliquer sur le bouton en haut à gauche ''Ajouter un équipement''</p>
-</div>
-<div class="paragraph">
-<p>Puis saisir le nom de l&#8217;équipement (ex. IPX 1).</p>
-</div>
-<div class="paragraph">
-<p>Puis définir :</p>
-</div>
 <div class="ulist">
+<div class="title">Le plugin Imperihome permet:</div>
 <ul>
 <li>
-<p>''Objet parent''</p>
+<p>la mise à disposition d&#8217;une API "ISS" pour Imperihome (récupération des données de JeeDom et demandes d&#8217;actions)</p>
 </li>
 <li>
-<p>''Catégorie'' (optionnelle)</p>
-</li>
-<li>
-<p>''Activer'' (à cocher, sinon l’équipement ne sera pas utilisable)</p>
-</li>
-<li>
-<p>''Visible'' (optionel si vous ne désirez pas le rendre visible sur le Dashboard)</p>
-</li>
-<li>
-<p>''Adresse IP''</p>
-</li>
-<li>
-<p>''Port''</p>
-</li>
-<li>
-<p>''Compte''</p>
-</li>
-<li>
-<p>''Mot de passe''</p>
+<p>l&#8217;utilisation de l&#8217;API Control d&#8217;Imperihome pour intéragir avec le logiciel Imperihome installé sur un périphérique (non intégré à l&#8217;heure actuelle)</p>
 </li>
 </ul>
 </div>
+<div class="ulist">
+<div class="title">Les informations sur ce logiciel ainsi que les API sont disponibles sur le site de l&#8217;éditeur:</div>
+<ul>
+<li>
+<p><a href="http://www.imperihome.com/fr/">Le logiciel Imperihome</a></p>
+</li>
+<li>
+<p><a href="https://imperihome.zendesk.com/hc/en-us/articles/202088308-ImperiHome-Standard-System-API-definition">L&#8217;ISS</a></p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration">2. Configuration</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_aktualisierungsrate">2.1. Aktualisierungsrate</h3>
+<h3 id="_plugin">2.1. Plugin</h3>
 <div class="paragraph">
-<p>Pour les entrées analogiques et les compteurs, les données sont récupérées par le plugin toutes les minutes. Il n&#8217;est pas possible d&#8217;avoir une fréquence plus élevée.
-Pour le reste, si le mode push est activé, le rafraichissement est quasi instantané.</p>
+<p>L&#8217;activation du plugin nécessite un pré-requis: avoir renseigné la configuration réseau dans le menu Général &#8594; Administration &#8594; Configuration.</p>
 </div>
 <div class="paragraph">
-<p>Pour activer le push, il faut cliquer sur
-image::../images/bouton_config_push.jpg[]</p>
+<p>Celle-ci permet en effet au plugin de déterminer le chemin d&#8217;accès de l&#8217;API ISS qu&#8217;il faudra renseigner dans Imperihome.</p>
 </div>
 <div class="paragraph">
-<p>Ensuite aller en bas et cliquer sur Appliquer.</p>
+<p>Une fois le plugin activé (menu Général &#8594; Plugins &#8594; Imperihome), une section "Configuration" apparait.</p>
+</div>
+<div class="paragraph">
+<p>A ce moment là, le plugin détermine automatiquement l&#8217;adresse à renseigner dans Imperihome:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/plugin_config.jpg" alt="Configuration du plugin">
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_comportement_avec_l_application_mobile">2.2. Comportement avec l&#8217;application mobile</h3>
+<h3 id="_configuration_d_imperihome">2.2. Configuration d&#8217;Imperihome</h3>
 <div class="paragraph">
-<p>Par defaut, voici le comportement :</p>
+<p>Sous imperihome, aller dans Paramètres &#8594; Mes Systèmes, puis Ajouter un système. Sélectionner "Imperihome Standard System", puis rentrer l&#8217;URL donnée par le plugin dans "URL de Base API Locale".</p>
 </div>
+<div class="paragraph">
+<p>Si vous souhaitez accéder depuis l&#8217;exterieur, configurer également l&#8217;URL Externe en l&#8217;adaptant à votre installation.</p>
+</div>
+<div class="paragraph">
+<p>Cliquer sur suivant et terminer. Si aucun équipement ne s&#8217;affiche, c&#8217;est normal pour le moment, il faut aller sélectionner quels équipements vous souhaitez remonter vers Imperihome.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sélection_des_équipements_à_transmettre">2.3. Sélection des équipements à transmettre</h3>
+<div class="paragraph">
+<p>Rendez-vous dans la page Plugins &#8594; Imperihome, puis dans l&#8217;onglet "Configuration ISS".</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ISSConfig.jpg" alt="Configuration du plugin">
+</div>
+</div>
+<div class="paragraph">
+<p>Vous pouvez ici sélectionner les équipements à transmettre, et visualiser le type d&#8217;équipement automatiquement détecté.</p>
+</div>
+<div class="paragraph">
+<p>Une fois les équipements sélectionnés, cliquer sur "Sauvegarder". Sous Imperihome, il se peut que l&#8217;équipement ne remonte pas immédiatement. Pour forcer la mise à jour, cliquer sur la double fléche rotative en haut à droite de l&#8217;écran sous Imperihome.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_détermination_automatique_du_type_d_équipement">2.4. Détermination automatique du type d&#8217;équipement</h3>
+<div class="paragraph">
+<p>Dans le mesure du possible, le plugin essaie de reconnaitre les équipements et de leur donner un type "Imperihome" adapté.
+En automatique, le plugin transforme les commandes de type "info" en un équipement.</p>
+</div>
+<div class="paragraph">
+<p>Si on prend en exemple une prise de courant télécommandée et qui remonte les informations de consommation, celle-ci aura deux commandes de type "info": Etat et Conso.</p>
+</div>
+<div class="paragraph">
+<p>Le plugin va alors créer 2 équipements: un de type "devSwitch" (pour Etat) et l&#8217;autre de type "devElectricity" pour Conso.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_détermination_manuel_du_type_d_équipement">2.5. Détermination manuel du type d&#8217;équipement</h3>
+<div class="paragraph">
+<p>!! Attention: modifier le type d&#8217;un équipement alors que celui-ci est configuré dans Imperihome peut faire planter l&#8217;application.</p>
+</div>
+<div class="paragraph">
+<p>!! Je vous recommande de supprimer l&#8217;équipement dans Imperihome avant de modifier son type dans Jeedom.</p>
+</div>
+<div class="paragraph">
+<p>Pour accéder au mode avancé, il faut activer le Mode Expert de Jeedom.
+Un onglet "Mode avancé" est alors disponible.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ISSAdvancedConfig.jpg" alt="Configuration du plugin">
+</div>
+</div>
+<div class="paragraph">
+<p>Vous retrouvez ici les équipements configurés manuellement.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez les modifier ou supprimer, ou en créer un nouveau.</p>
+</div>
+<div class="paragraph">
+<p>Lorsque vous cliquer sur "Ajouter un équipement" ou Modifier, la fenêtre qui s&#8217;ouvre permet de configurer l&#8217;équipement.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ISSEqAdvancedConfig1.jpg" alt="Configuration du plugin">
+</div>
+</div>
+<div class="paragraph">
+<p>Il faut alors configurer la commande support: celle-ci correspond au nom de l&#8217;équipement qui s&#8217;affichera sur Imperihome.</p>
+</div>
+<div class="paragraph">
+<p>Ensuite, il faut sélectionner le type d&#8217;équipement (<a href="https://imperihome.zendesk.com/hc/en-us/articles/202088308-ImperiHome-Standard-System-API-definition">se reporter à la doc Imperihome</a>).</p>
+</div>
+<div class="paragraph">
+<p>Ensuite, vous pouvez configurer chaque paramétre et action.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ISSEqAdvancedConfig2.jpg" alt="Configuration du plugin">
+</div>
+</div>
+<div class="paragraph">
+<p>Pour les paramètres, il faut soit rentrer manuellement une valeur, soit sélectionner une commande de type Info.</p>
+</div>
+<div class="paragraph">
+<p>Pour les actions, il faut nécessairement sélectionner une commande de type Action.</p>
+</div>
+<div class="paragraph">
+<p>Prenons l&#8217;exemple d&#8217;une prise télécommandée. Disons que sous Jeedom, elle possède deux commandes Info (Etat et Consommation) et deux commandes Action (Allumer et Eteindre).</p>
+</div>
+<div class="paragraph">
+<p>Il faudra alors selectionner le type "Standard On/Off switch".</p>
+</div>
+<div class="ulist">
+<div class="title">Puis:</div>
+<ul>
+<li>
+<p>paramètre Status: selectionner la commande Etat</p>
+</li>
+<li>
+<p>paramètre Energy: selectionner la commande Consommation</p>
+</li>
+<li>
+<p>action setStatus:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>''L&#8217;ip800''</p>
+<p>pour le 0: selectionner la commande Eteindre</p>
+</li>
+<li>
+<p>pour le 1: selectionner la commande Allumer</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Les commandes sont toutes paramétrées.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>''Die Analogeingänge''</p>
-</li>
-</ul>
+<p>Sauvegarder la configuration, puis réactualiser la liste des équipements sous Imperihome.</p>
 </div>
 <div class="paragraph">
-<p>Les commandes sont toutes par defaut visible et le type dépend de la sonde choisi.</p>
+<p>Il y a une subtilité pour le type MultiSwitch et son action SetChoice. Si une commande est renseignée, alors elle sera appelée en lui passant comme paramètre la valeur sélectionnée dans Imperihome. Si aucune commande n&#8217;est renseignée, alors le plugin recherchera une commange ayant comme nom la valeur sélectrionnée dans Imperihome au sein du même équipement que la commande support.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>''Die Digitaleingänge''</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Les commandes sont considérées comme des lumières.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>''Die Relais''</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Les commandes sont considérées comme des lumières.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>''Die Impulszähler''</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Les commandes sont considérées comme des types génériques.</p>
-</div>
-<div class="paragraph">
-<p>Il faut noter que l&#8217;on retrouvera dans l&#8217;application les commandes à partir du moment où elles sont paramétrées, même si elles ne sont pas marquées comme visible. Pour les masquer, il faut choisir dans "Configuration commande" &#8658; "Type générique" &#8658; "Ne pas tenir compte de cette commande".</p>
-</div>
+<hr>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_quelques_copies_d_écran">3. Quelques copies d&#8217;écran</h2>
+<h2 id="_détection_automatique">3. Détection automatique</h2>
 <div class="sectionbody">
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/ipx800_screenshot1.jpg" alt="ipx800 screenshot1">
+<div class="sect2">
+<h3 id="_explication">3.1. Explication</h3>
+<div class="paragraph">
+<p>Le système de détection automatique se base sur un certains nombre de critère afin de déterminer le type le plus adapté à Imperihome.</p>
+</div>
+<div class="paragraph">
+<p>Ci-dessous, vous trouverez les différents critères pour pouvoir avoir une détection optimale.</p>
 </div>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/ipx800_screenshot2.jpg" alt="ipx800 screenshot2">
+<div class="sect2">
+<h3 id="_définition_des_critères">3.2. Définition des critères</h3>
+<div class="sect3">
+<h4 id="_actionneurs">3.2.1. Actionneurs</h4>
+<div class="openblock panel">
+<div class="title">Interrupteur [DevSwitch]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Binaire et il y a des commandes de type Action dans l&#8217;équipement</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>Il s&#8217;agit d&#8217;une commande de type Action</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/ipx800_screenshot3.jpg" alt="ipx800 screenshot3">
+</div>
+<div class="openblock panel">
+<div class="title">Variateur de lumière [DevDimmer]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le widget de la commande est "Light"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "%" ainsi que des commandes de type Action dans l&#8217;équipement</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Serrure [DevLock]</div><div class="content">
+<div class="paragraph">
+<p>Pas de détection automatique sur ce type. Utiliser le mode avancé.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Lampe RGB [DevRGBLight]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Il existe au moins une commande de type Couleur dans l&#8217;équipement</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Volet [DevShutter]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est liée au plugin Store</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le widget de la commande est "Store"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_détecteurs_et_capteurs">3.2.2. Détecteurs et Capteurs</h4>
+<div class="openblock panel">
+<div class="title">Capteur de CO2 [DevCO2]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le type de la commande est "Binaire" et le nom de la commande contient "Fumée" ou "Smoke"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "ppm"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Détecteur de CO2 [DevCO2Alert]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le type de la commande est "Binaire"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">et</div>
+<ul>
+<li>
+<p>Le nom de la commande est "Co"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Détecteur d&#8217;ouverture [DevDoor]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le widget de la commande est "Door", "Baie", "Window" ou "Porte_garage"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>Le nom de la commande contient "Etat" et le nom de l&#8217;équipement est "Fenetre" ou "Porte"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Compteur d&#8217;énergie [DevElectricity]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "w" ou "kwh"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Compteur d&#8217;eau [DevFlood]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "m3"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur d&#8217;humidité [DevHygrometry]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le nom de la commande contient "Humidité"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de luminosité [DevLuminosity]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "lux"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Détecteur de mouvement [DevMotion]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le widget de la commande est "Presence"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>La commande est liée au plugin Alarme</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de bruit [DevNoise]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "dB"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de pression [DevPressure]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité ""</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de pluie [DevRain]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "mm/h" ou "mm"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Détecteur de fumée [DevSmoke]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le widget de la commande est "Fire"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de température [DevTemperature]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "°C"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de température et humidité [DevTempHygro]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le nom de la commande contient "Humidité"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">et</div>
+<ul>
+<li>
+<p>Une commande du même équipement a comme unité "°C", et est indiquée comme "A Transmettre"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">OU</div>
+<ul>
+<li>
+<p>La commande a comme unité "°C"</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">et</div>
+<ul>
+<li>
+<p>Une commande du même équipement a comme nom "Humidité", et est indiquée comme "A Transmettre"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur d&#8217;UV [DevUV]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Le nom de la commande contient "UV"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Capteur de vent [DevWind]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric et a comme unité "km/h"</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scénarios">3.2.3. Scénarios</h4>
+<div class="openblock panel">
+<div class="title">Scénario [DevScene]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>Il s&#8217;agit d&#8217;un scénario</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_autres">3.2.4. Autres</h4>
+<div class="openblock panel">
+<div class="title">Equipement générique [DevGenericSensor]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est de type Numeric, a comme unité "%" et il n&#8217;y a pas de commandes de type Action dans l&#8217;équipement</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>La commande est de type Binaire et il n&#8217;y a pas de commandes de type Action dans l&#8217;équipement</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>Il n&#8217;a pas été possible de déterminer un autre type: type retourné par défaut</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Caméra [DevCamera]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est liée au plugin Caméra</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Selecteur de choix [DevMultiSwitch]</div><div class="content">
+<div class="ulist">
+<div class="title">Conditions:</div>
+<ul>
+<li>
+<p>La commande est liée au plugin Présence</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ou</div>
+<ul>
+<li>
+<p>La commande est liée au plugin Alarme (sélection du mode)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Thermostat [DevThermostat]</div><div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>La commande est liée au plugin Thermostat</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
 </div>
 </div>
 </div>
@@ -605,259 +1076,19 @@ image::../images/bouton_config_push.jpg[]</p>
 <h2 id="_faq">4. FAQ</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Lorsqu&#8217;une entrée/sortie change, la mise à jour dans jeedom n&#8217;est pas instantané ?</div><div class="content">
+<div class="title">Ou trouver le lien à renseigner dans ImperiHome ?</div><div class="content">
 <div class="paragraph">
-<p>Oui il suffit de demander en passant par le forum.</p>
+<p>Le lien de l&#8217;API a configurer dans Imperihome est donné dans la page de configuration.</p>
 </div>
 </div>
 </div>
-<div class="openblock">
-<div class="title">A quelle fréquence les données sont-elles mise à jour ?</div><div class="content">
+<div class="openblock panel">
+<div class="title">L&#8217;équipement disponible dans Imperihome n&#8217;est pas du bon type</div><div class="content">
 <div class="paragraph">
-<p>Les données sont mises à jour en permanence pour les entrées numériques et les relais.
-Elles sont mises à jour une fois par minutes pour les entrées analogiques et les compteurs.</p>
+<p>La configuration automatique utilise les types génériques qui sont paramétrables sur les commandes.
+La configuration automatique n&#8217;a pas fonctionné, il faut passer par le mode manuel: cf doc.</p>
 </div>
 </div>
-</div>
-<div class="openblock">
-<div class="title">Ce plugin ne génère pas de log, comment en avoir ?</div><div class="content">
-<div class="paragraph">
-<p>Il est nécessaire au préalable d&#8217;activer temporairement le debug de Jeedom (menu Configuration &#8658; Configuration des logs &amp; messages &#8658; Activer + Niveau de log = Debug).</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_fehlersuche">5. Fehlersuche</h2>
-<div class="sectionbody">
-<div class="hdlist">
-<table>
-<tr>
-<td class="hdlist1">
-1.42
-</td>
-<td class="hdlist2">
-<p>Continue la collecte lorsque une IPX est HS.</p>
-<div class="paragraph">
-<p>Trappe certains messages d&#8217;erreur.</p>
-</div>
-<div class="paragraph">
-<p>Ajout du type LIGHT_TOGGL pour les relais.</p>
-</div>
-<div class="paragraph">
-<p>Définition template des relais boutons.</p>
-</div>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.41
-</td>
-<td class="hdlist2">
-<p>Modification être compatible avec le plugin mobile.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.40
-</td>
-<td class="hdlist2">
-<p>Mise a jour des entrées analogiques, même si la valeur ne change pas pour les graphiques.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.39
-</td>
-<td class="hdlist2">
-<p>Compatibilité Jeedom 2.0.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.38
-</td>
-<td class="hdlist2">
-<p>Modification de cron pour plus d&#8217;autonomie.</p>
-<div class="paragraph">
-<p>Modification de l&#8217;extension du logo.</p>
-</div>
-<div class="paragraph">
-<p>Compatibilité Imperihome.</p>
-</div>
-<div class="paragraph">
-<p>Retrait de la suppression des équipements lors de la désactivation du plugin.</p>
-</div>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.37
-</td>
-<td class="hdlist2">
-<p>Correction par rapport au nouveau core.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.36
-</td>
-<td class="hdlist2">
-<p>Correction des formules pour les pinces ampèremetriques.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.35
-</td>
-<td class="hdlist2">
-<p>Message de debug pour les receptions de push.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.34
-</td>
-<td class="hdlist2">
-<p>Prise en compte du port pour jeedom et de l&#8217;IP sans qu&#8217;il soit nécessaire que ce soit renseigné au niveau globale.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.33
-</td>
-<td class="hdlist2">
-<p>Correction des fréquences d&#8217;impulsion par minute.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.32
-</td>
-<td class="hdlist2">
-<p>Message de debug pour les calculs d&#8217;impulsion/minute.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.31
-</td>
-<td class="hdlist2">
-<p>Supression de l&#8217;info <code>updatetime</code>.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.30
-</td>
-<td class="hdlist2">
-<p>Ajout des pinces 50A.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.29
-</td>
-<td class="hdlist2">
-<p>Ajout de Correction automatique par rapport au seuil Min et Max.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.28
-</td>
-<td class="hdlist2">
-<p>Ajout de lien vers les options d&#8217;affichage.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.27
-</td>
-<td class="hdlist2">
-<p>Correction de double cron.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.26
-</td>
-<td class="hdlist2">
-<p>Prise en charge des compteurs indépendament des boutons.</p>
-<div class="paragraph">
-<p>Ajout du nombre d&#8217;impulsions par minute.</p>
-</div>
-<div class="paragraph">
-<p>Ajout d&#8217;une information status.</p>
-</div>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.24
-</td>
-<td class="hdlist2">
-<p>Redéclenchement jusqu&#8217;à 3 fois en cas d&#8217;indispo de l&#8217;IPX.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.18
-</td>
-<td class="hdlist2">
-<p>Prise en compte des extensions x800 et x400.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.15
-</td>
-<td class="hdlist2">
-<p>Correction pour la réception des push pour les entrées numériques.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.13
-</td>
-<td class="hdlist2">
-<p>Prise en compte des unitées pour les entrées analogiques.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.12
-</td>
-<td class="hdlist2">
-<p>Correction de la cron pour ne prendre que les changements d&#8217;état.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.11
-</td>
-<td class="hdlist2">
-<p>Possibilité de configurer le push que sur certaines entrées.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.09
-</td>
-<td class="hdlist2">
-<p>Ajout des formules pour les entrée analogiques.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-1.1
-</td>
-<td class="hdlist2">
-<p>Ajout <code>all on</code> et <code>all off</code>.</p>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
