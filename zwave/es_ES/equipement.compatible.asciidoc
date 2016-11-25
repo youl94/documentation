@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*46* [green]*marques de modules différentes, soit un total de* [red]*248* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*46* [green]*marques de modules différentes, soit un total de* [red]*249* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -164,6 +164,11 @@ _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/318
 
 |image:../images/compatibility_list/assa_abloy.YRD240.jpg[width=150,align="center"]|Assa Abloy|Yale Key Free Touchscreen Deadbolt (YRD240)|Serrure|Inclusion en mode sécurisé | 
 // 297.6.0_yrd240.doorlock.json
+
+|image:../images/compatibility_list/assa_abloy.ysl.jpg[width=150,align="center"]|Assa Abloy|Yale Keyless Connected Smart Lock (YSL)|Serrure|Inclusion en mode sécurisé 
+
+_[small]#Piles : 4x1.5V AA#_| 
+// 297.7.0_ysl.doorlock.json
 
 |image:../images/compatibility_list/assa_abloy.YRD210.jpg[width=150,align="center"]|Assa Abloy|Yale Push Button Deadbolt (YRD210)|Serrure|Inclusion en mode sécurisé | 
 // 297.4.0_yrd210.doorlock.json

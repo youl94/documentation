@@ -1,7 +1,7 @@
 = Liste des equipements enocean compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*10* [green]*marques de modules différentes, soit un total de* [red]*57* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*10* [green]*marques de modules différentes, soit un total de* [red]*58* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles.
 
@@ -265,6 +265,9 @@ _[small]#Piles : 1x3V CR1216#_|Mode inclusion auto et appui sur le bouton learn|
 // 
 
 |image:../images/compatibility_list/recepteur_2_canaux_trio2sys_recepteur_2_canaux.jpg[width=150,align="center"]|Trio2sys|Récepteur 2 canaux O2line|RECEPTEUR 2 CANAUX|Micromodule|Module récepteur seulement ne s'inclue pas mais s'appaire |Ajouter sans inclure. Choisir le profil. Ensuite mettre le module en learn sur le canal 1 puis cliquez sur tester ON-1 dans jeedom, répétez l'opération avec ON-2 pour le deuxième canal| 
+// 
+
+|image:../images/compatibility_list/a5-04-01_trio2sys-capteur-temperature-humidite-o2line-blanc.jpg[width=150,align="center"]|Trio2sys|Sonde radio humidité et température pour montage interieur|A5-04-01|Température| |Mode inclusion auto et aimant| 
 // 
 
 
