@@ -418,12 +418,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_description">1. Description</a></li>
 <li><a href="#_fonction">2. Fonction</a></li>
-<li><a href="#_caracteristiques_techniques">3. Caracteristiques techniques</a></li>
-<li><a href="#_utilisation">4. Utilisation</a>
+<li><a href="#_technische_daten">3. Technische Daten</a></li>
+<li><a href="#_verwendung">4. Verwendung</a>
 <ul class="sectlevel2">
-<li><a href="#_pilotage_direct">4.1. Pilotage direct</a></li>
-<li><a href="#_reset">4.2. Reset</a></li>
-<li><a href="#_apprentissage">4.3. Apprentissage</a></li>
+<li><a href="#_direkte_steuerung">4.1. Direkte Steuerung</a></li>
+<li><a href="#_zurücksetzen">4.2. Zurücksetzen</a></li>
+<li><a href="#_einlernen">4.3. Einlernen</a></li>
 <li><a href="#_répéteur">4.4. Répéteur</a></li>
 </ul>
 </li>
@@ -492,43 +492,43 @@ La prise Enocean® SmartPlug permet de commander à distance vos appareils élec
 <p>Très haute capacité de résistance aux surtensions ( 2,5 kV , non destructif / 6 kV , aucun risque d&#8217;incendie )</p>
 </li>
 <li>
-<p>Certifié selon IEC60884-1 / -2 à 5 , EN60730-1 , VDE620-1 ( certificat CB )</p>
+<p>Bestätigt nach IEC60884-1/ -2 bis 5, EN60730-1, VDE620-1 (Zertifikat CB)</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_caracteristiques_techniques">3. Caracteristiques techniques</h2>
+<h2 id="_technische_daten">3. Technische Daten</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Alimentatation : 230 V~ / 50 Hz</p>
+<p>Stromversorgung : 230 V / 50 Hz</p>
 </li>
 <li>
-<p>Intensité :  max 16 A</p>
+<p>Stromstärke : Max 16A</p>
 </li>
 <li>
-<p>Dimensions en mm : 77 x 51 x 51</p>
+<p>Abmessungen in mm : 77 x 51 x 51</p>
 </li>
 <li>
 <p>Commutation max : 3 680W</p>
 </li>
 <li>
-<p>Fréquence : 868,3 MHz - bidirectionnel</p>
+<p>Frequenz : 868,3 MHz - bidirektional</p>
 </li>
 <li>
-<p>Couleur : Blanc</p>
+<p>Farbe : weiß</p>
 </li>
 <li>
-<p>Protection : IP20</p>
+<p>Schutzgrad : IP20</p>
 </li>
 <li>
-<p>EEP : D2-01-09 (Mode Switch)</p>
+<p>EEP : D2-01-09 (Schalter Modus)</p>
 </li>
 <li>
-<p>EEP : A5-12-01 (Conso)</p>
+<p>EEP : A5-12-01 (Verbrauch)</p>
 </li>
 <li>
 <p>EEP : A5-38-08 (Dimming) (Note: Cette information EPP est semble-t-il erronée&#8230;&#8203;)</p>
@@ -543,7 +543,7 @@ La prise Enocean® SmartPlug permet de commander à distance vos appareils élec
 </div>
 </div>
 <div class="sect1">
-<h2 id="_utilisation">4. Utilisation</h2>
+<h2 id="_verwendung">4. Verwendung</h2>
 <div class="sectionbody">
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -551,14 +551,14 @@ La prise Enocean® SmartPlug permet de commander à distance vos appareils élec
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pilotage_direct">4.1. Pilotage direct</h3>
+<h3 id="_direkte_steuerung">4.1. Direkte Steuerung</h3>
 <div class="paragraph">
-<p>Une bréve pression (100-400ms) sur la touche tactile permet de basculer la charge en On/Off.
+<p>Ein kurzer Druck (100-400ms), auf den Berührungsschalter, erlaubt den Verbraucher umzuschalten AN/AUS.
 Note : il est important que le bouton tactile soit relaché rapidement, car une longue pression le passera dans un mode de configuration.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_reset">4.2. Reset</h3>
+<h3 id="_zurücksetzen">4.2. Zurücksetzen</h3>
 <div class="paragraph">
 <p>Pour effectuer un reset complet de votre SmartPlug et ainsi effacer tous les appareils associés, appuyez sur le bouton tactile plus de 20 secondes jusqu&#8217;à l&#8217;obtention de la Led Rouge fixe.
 Relachez le bouton et appuyez à nouveau 5 secondes, la Led va clignoter vert 5 fois rapidement.
@@ -566,9 +566,9 @@ Le Smartplug est vierge.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_apprentissage">4.3. Apprentissage</h3>
+<h3 id="_einlernen">4.3. Einlernen</h3>
 <div class="paragraph">
-<p>Pour passer en mode apprentissage il suffit d&#8217;appuyer sur le bouton tactile pendant 5 secondes, le voyant va passer au rouge clignotant (1 fois par seconde).
+<p>Um in den Lehrnmodus zugehen reicht es aus, 5 Sekunden auf dem Tastknopf zu drücken, das aufblinkende Kontroll-Licht (1 Mal pro Sekunde) wird in rot übergehen.
 Vous pouvez à présent appuyer sur votre inter, capteur, ou commande Jeedom :
 - la Led du SmartPlug doit passer au clignotement vert (5 fois) pour confirmer l&#8217;apprentissage.
 L&#8217;ID d&#8217;identification de l&#8217;appareil est ainsi mémorisé.</p>
