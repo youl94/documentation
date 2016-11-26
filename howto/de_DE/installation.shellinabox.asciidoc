@@ -1,12 +1,12 @@
-= Shellinabox avec Jeedom
+= Shellinabox mit Jeedom
 
-Shellinabox est une console accessible dans un navigateur
+Shellinabox ist eine Konsole, die in einem Browser zugänglich ist
 
 Ca se présente sous la forme d'un service écoutant sur le port 4200 en https. Ici on va décrire son installation et ensuite les confs de reverse proxy
 
-== Installation de Shellinabox
+== Shellinabox Installation
 
-Voici les commandes à lancer pour installer shellinabox :
+Hier sind die Befehle, um die Shellinabox Installation zu starten :
 
 ----
 sudo apt-get -y shellinabox
