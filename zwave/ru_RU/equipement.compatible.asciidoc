@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*46* [green]*marques de modules différentes, soit un total de* [red]*249* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*46* [green]*marques de modules différentes, soit un total de* [red]*250* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -196,6 +196,9 @@ _[small]#Piles : 4x1.5V AA#_|
 
 |image:../images/compatibility_list/benext.door.jpg[width=150,align="center"]|Benext|Door sensor|Ouverture| _[small]#Piles : 2x1.5V AAA#_| 
 // 138.4.256_door.sensor.json
+
+|image:../images/compatibility_list/benext.heatingControl.jpg[width=150,align="center"]|Benext|Heating Control|Micromodule| | 
+// 138.33.1_heating.control.json
 
 |image:../images/compatibility_list/zipato.minikeypad.jpg[width=150,align="center"]|Benext|Mini Keypad RFID|Clavier RFID|Le badge utilisé ne remonte pas. Ce module est actuellement vendu sous la marque Zipato 
 
