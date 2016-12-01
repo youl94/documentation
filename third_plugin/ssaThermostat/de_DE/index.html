@@ -420,7 +420,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_description">1.1. Description</a>
 <ul class="sectlevel3">
 <li><a href="#_le_chauffage_est_le_poste_le_plus_important_dans_la_consommation_d_énergie_d_une_maison_sous_les_latitudes_tempérées">1.1.1. Le chauffage est le poste le plus important dans la consommation d’énergie d’une maison sous les latitudes tempérées.</a></li>
-<li><a href="#_l_algorithme_de_controle_mis_en_place_est_un_algorithme_avec_une_régulation_par_pid_br">1.1.2. L&#8217;algorithme  de controle mis en place est un algorithme avec une régulation par PID.<br></a></li>
+<li><a href="#_l_algorithme_de_contrôle_mis_en_place_est_un_algorithme_avec_une_régulation_par_pid_br">1.1.2. L&#8217;algorithme  de contrôle mis en place est un algorithme avec une régulation par PID.<br></a></li>
 </ul>
 </li>
 <li><a href="#_installation">1.2. Installation</a></li>
@@ -432,18 +432,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_la_configuration_du_thermostat_s_effectue_en_3_étapes">1.4. La configuration du Thermostat s&#8217;effectue en 3 étapes :</a></li>
 <li><a href="#_pilote">1.5. Pilote</a></li>
-<li><a href="#_temperature_par_defaut">1.6. Temperature par defaut</a>
+<li><a href="#_température_par_défaut">1.6. Température par défaut</a>
 <ul class="sectlevel3">
 <li><a href="#_gestion_des_plages">1.6.1. Gestion des plages</a></li>
 </ul>
 </li>
 <li><a href="#_guide">1.7. Guide</a>
 <ul class="sectlevel3">
-<li><a href="#_mode_d_emplois_du_thermostat">1.7.1. Mode d&#8217;emplois du thermostat.</a></li>
+<li><a href="#_mode_d_emploi_du_thermostat">1.7.1. Mode d&#8217;emploi du thermostat.</a></li>
 </ul>
 </li>
 <li><a href="#_faq">1.8. FAQ</a></li>
-<li><a href="#_developpeur">1.9. Developpeur</a></li>
+<li><a href="#_développeur">1.9. Développeur</a></li>
+<li><a href="#_changelog">1.10. Changelog</a></li>
+<li><a href="#_version">1.11. Version</a></li>
+<li><a href="#_roadmap">1.12. Roadmap</a></li>
 </ul>
 </li>
 </ul>
@@ -459,7 +462,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h4 id="_le_chauffage_est_le_poste_le_plus_important_dans_la_consommation_d_énergie_d_une_maison_sous_les_latitudes_tempérées">1.1.1. Le chauffage est le poste le plus important dans la consommation d’énergie d’une maison sous les latitudes tempérées.</h4>
 <div class="paragraph">
 <p>Ce plugin permet de créer et gérer des thermostats, pour piloter le chauffage de votre domicile.
-Il  seduira les personnes désireuse de mieux gérer leurs dépenses d&#8217;énérgie en visualisant sa courbe de température et son historique de chauffe.</p>
+Il séduira les personnes désireuse de mieux gérer leurs dépenses d&#8217;énergie en visualisant sa courbe de température et son historique de chauffe.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -468,7 +471,7 @@ Il  seduira les personnes désireuse de mieux gérer leurs dépenses d&#8217;én
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Ce plugin permet de programmer différentes plage de fonctionnement en reglant finement la température souhaité. Pas besoins de plugin supplémentaire, ce thermostat intergre une gestion de planning.
+Ce plugin permet de programmer différentes plages de fonctionnement en réglant finement la température souhaitée. Pas besoins de plugin supplémentaire, ce thermostat intègre une gestion de planning.
 </td>
 </tr>
 </table>
@@ -493,7 +496,7 @@ Ce plugin permet de programmer différentes plage de fonctionnement en reglant f
 </div>
 </div>
 <div class="sect3">
-<h4 id="_l_algorithme_de_controle_mis_en_place_est_un_algorithme_avec_une_régulation_par_pid_br">1.1.2. L&#8217;algorithme  de controle mis en place est un algorithme avec une régulation par PID.<br></h4>
+<h4 id="_l_algorithme_de_contrôle_mis_en_place_est_un_algorithme_avec_une_régulation_par_pid_br">1.1.2. L&#8217;algorithme  de contrôle mis en place est un algorithme avec une régulation par PID.<br></h4>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -501,9 +504,9 @@ Ce plugin permet de programmer différentes plage de fonctionnement en reglant f
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-La régulation PID est la solution la plus performante pour réguler une chaudière<br>
-Le thermostat va gérer la chaudière via des cycles dont la durée  varie en fonction de l’inertie du système de chauffage.<br>
-Plus la température mesurée se rapprochera de la température de consigne, plus le pourcentage de temps ou la chaudière sera activée diminuera.<br>
+La régulation PID est la solution la plus performante pour réguler une chaudière.<br>
+Le thermostat va gérer la chaudière via des cycles dont la durée varie en fonction de l’inertie du système de chauffage.<br>
+Plus la température mesurée se rapprochera de la température de consigne, moins souvent la chaudière sera activée.<br>
 C’est ce que l’on appelle le système proportionnel.<br>
 De ce fait, ce système est à la fois plus économique et surtout plus confortable que le système de type « tout ou rien » à hystérésis.
 </td>
@@ -517,16 +520,16 @@ De ce fait, ce système est à la fois plus économique et surtout plus conforta
 <h3 id="_installation">1.2. Installation</h3>
 <hr>
 <div class="paragraph">
-<p>Il n&#8217;y a pas d&#8217;actions particuliere lors  de l&#8217;installation du plugin.</p>
+<p>Il n&#8217;y a pas d&#8217;actions particulière lors  de l&#8217;installation du plugin.</p>
 </div>
 <div class="paragraph">
-<p>J&#8217;ai choisi de ne pas exposer, dans cette premiere version les parametres de réglage du PID.</p>
+<p>J&#8217;ai choisi de ne pas exposer, dans cette première version les paramètres de réglage du PID.</p>
 </div>
 <div class="paragraph">
-<p>Cela reste donc plus simple. Le thermostat est reglé pour atteindre le plus rapidemnt possible la température de consigne.</p>
+<p>Cela reste donc plus simple. Le thermostat est réglé pour atteindre le plus rapidement possible la température de consigne.</p>
 </div>
 <div class="paragraph">
-<p>Les cycles sont des cycles de 10 minutes. Pour preserver la Chaudiere, le temps minimum de chauffe est fixé à 3 minutes.</p>
+<p>Les cycles sont des cycles de 10 minutes. Pour préserver la chaudière, le temps minimum de chauffe est fixé à 3 minutes.</p>
 </div>
 <hr>
 </div>
@@ -537,7 +540,7 @@ De ce fait, ce système est à la fois plus économique et surtout plus conforta
 <div class="sect3">
 <h4 id="_configuration_du_plugin">1.3.1. Configuration du plugin</h4>
 <div class="paragraph">
-<p>Apres le  telechargement du plugin, il vous suffit juste d&#8217;activer celui-ci, il n&#8217;y a aucune configuration a ce niveau.</p>
+<p>Après le téléchargement du plugin, il vous suffit juste d&#8217;activer celui-ci, il n&#8217;y a aucune configuration à ce niveau.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -549,8 +552,8 @@ De ce fait, ce système est à la fois plus économique et surtout plus conforta
 <div class="sect3">
 <h4 id="_configuration_d_un_objet">1.3.2. Configuration d&#8217;un objet</h4>
 <div class="paragraph">
-<p>La configuration des Equipements "Thermostat" est accessible a partir du menu plugin :
-il vous suffit de cliquer sur le bouton "ajouter" ou sur un equipement déjà présent.</p>
+<p>La configuration des Équipements "Thermostat" est accessible à partir du menu plugin :
+il vous suffit de cliquer sur le bouton "ajouter" ou sur un équipement déjà présent.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -558,7 +561,7 @@ il vous suffit de cliquer sur le bouton "ajouter" ou sur un equipement déjà pr
 </div>
 </div>
 <div class="paragraph">
-<p>La premiere etape, commune aux plugins Jeedom, consiste au reglage des parametres genéreaux du thermostat</p>
+<p>La première étape, commune aux plugins Jeedom, consiste au réglage des paramètres généraux du thermostat.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -572,7 +575,7 @@ il vous suffit de cliquer sur le bouton "ajouter" ou sur un equipement déjà pr
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Cette étape permet de définir, l&#8217;objet parent, l&#8217;activation et la visibilité du Thermostat, ainsi que les informations habituelles.
+Cette étape permet de définir l&#8217;objet parent, l&#8217;activation et la visibilité du thermostat, ainsi que les informations habituelles.
 </td>
 </tr>
 </table>
@@ -597,7 +600,7 @@ Cette étape permet de définir, l&#8217;objet parent, l&#8217;activation et la 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-il s&#8217;agit dans cette section de configurer les commandes qui vont permettrent au Thermostat d&#8217;interagir avec votre domotique.
+il s&#8217;agit dans cette section de configurer les commandes qui vont permettre au Thermostat d&#8217;interagir avec votre domotique.
 </td>
 </tr>
 </table>
@@ -609,7 +612,7 @@ il s&#8217;agit dans cette section de configurer les commandes qui vont permettr
 <p>Sonde</p>
 <div class="literalblock">
 <div class="content">
-<pre>La sonde de température permet d'indiquer au Thermostat la commande qui va lui permetre de relever la température d'ambiance de votre piece.</pre>
+<pre>La sonde de température permet d'indiquer au Thermostat la commande qui va lui permettre de relever la température d'ambiance de votre pièce.</pre>
 </div>
 </div>
 </li>
@@ -617,7 +620,7 @@ il s&#8217;agit dans cette section de configurer les commandes qui vont permettr
 <p>Commande ON</p>
 <div class="literalblock">
 <div class="content">
-<pre>Cette commande permet d'indiquer au Thermostat la commande à utiliser pour mettre en route votre chaudiere ou radiateur</pre>
+<pre>Cette commande permet d'indiquer au Thermostat la commande à utiliser pour mettre en route votre chaudière ou radiateur.</pre>
 </div>
 </div>
 </li>
@@ -625,7 +628,7 @@ il s&#8217;agit dans cette section de configurer les commandes qui vont permettr
 <p>Commande Off</p>
 <div class="literalblock">
 <div class="content">
-<pre>Cette commande permet d'indiquer au thermostat la commande à utiliser pour arreter votre chaudiere ou radiateur</pre>
+<pre>Cette commande permet d'indiquer au thermostat la commande à utiliser pour arrêter votre chaudière ou radiateur.</pre>
 </div>
 </div>
 </li>
@@ -646,7 +649,7 @@ Les commandes disponible pour la Sonde sont des commandes de type "Info".
 </div>
 </div>
 <div class="sect2">
-<h3 id="_temperature_par_defaut">1.6. Temperature par defaut</h3>
+<h3 id="_température_par_défaut">1.6. Température par défaut</h3>
 <div class="imageblock">
 <div class="content">
 <img src="../images/default.png" alt="default">
@@ -659,7 +662,7 @@ Les commandes disponible pour la Sonde sont des commandes de type "Info".
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-il s&#8217;agit dans cette section de configurer les Consignes de température par defaut du thermostat. Ces consignes sont utilisées lorsque qu l&#8217;on est pas dans une plage de fonctionnement definis ou lorsque le mode hors gel est activé.
+il s&#8217;agit dans cette section de configurer les Consignes de température par défaut du thermostat. Ces consignes sont utilisées lorsque l&#8217;on n&#8217;est pas dans une plage de fonctionnement défini ou lorsque le mode hors gel est activé.
 </td>
 </tr>
 </table>
@@ -667,7 +670,7 @@ il s&#8217;agit dans cette section de configurer les Consignes de température p
 <div class="sect3">
 <h4 id="_gestion_des_plages">1.6.1. Gestion des plages</h4>
 <div class="paragraph">
-<p>Le plungin Thermostat offre la possibilité de créer des plages spécifiques de controle.</p>
+<p>Le plugin Thermostat offre la possibilité de créer des plages spécifiques de contrôle.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -681,7 +684,7 @@ il s&#8217;agit dans cette section de configurer les Consignes de température p
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Imaginons que vous ayez definis une temprétaure par défaut de 19°c mais que tous les matins vous avez besoins d&#8217;une température différente. Les plages sont la pour ça !
+Imaginons que vous ayez defini une température par défaut de 19°C mais que tous les matins vous avez besoin d&#8217;une température différente. Les plages sont la pour ça !
 </td>
 </tr>
 </table>
@@ -701,13 +704,13 @@ Pour créer une plage, il faut cliquer sur le bouton "Créer une plage".  Cela a
 <div class="sect4">
 <h5 id="_configuration_2">Configuration</h5>
 <div class="paragraph">
-<p>Rien de plus simple. commencez par donner un nom à votre plage et fixez les différents parametres</p>
+<p>Rien de plus simple. commencez par donner un nom à votre plage et fixez les différents paramètres.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_heure_de_début_fin_de_la_plage">Heure de début/fin de la plage</h5>
 <div class="paragraph">
-<p>L&#8217;heure de début ou de fin d&#8217;une plage se définit grace à cette fenetre.</p>
+<p>L&#8217;heure de début ou de fin d&#8217;une plage se définit grâce à cette fenêtre.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -721,7 +724,7 @@ Pour créer une plage, il faut cliquer sur le bouton "Créer une plage".  Cela a
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Vous pouvez utilisez les bouton + ou - pour dimineur l&#8217;heure et les minutes ou les entrer directement à l&#8217;aide de votre clavier.
+Vous pouvez utilisez les bouton + ou - pour diminuer l&#8217;heure et les minutes ou les entrer directement à l&#8217;aide de votre clavier.
 </td>
 </tr>
 </table>
@@ -753,7 +756,7 @@ Vous pouvez utilisez les bouton + ou - pour dimineur l&#8217;heure et les minute
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-l&#8217;Heure de fin est focément supérieure à l&#8217;heure de début.
+l&#8217;Heure de fin est forcément supérieure à l&#8217;heure de début.
 </td>
 </tr>
 </table>
@@ -763,7 +766,7 @@ l&#8217;Heure de fin est focément supérieure à l&#8217;heure de début.
 <h5 id="_température_de_consigne">Température de consigne</h5>
 <div class="literalblock">
 <div class="content">
-<pre>Ce parametre  permet d'indiquer au thermostat la température de consigne à utiliser pour cette plage</pre>
+<pre>Ce paramètre permet d'indiquer au thermostat la température de consigne à utiliser pour cette plage.</pre>
 </div>
 </div>
 </div>
@@ -771,7 +774,7 @@ l&#8217;Heure de fin est focément supérieure à l&#8217;heure de début.
 <h5 id="_jour_d_application">Jour d&#8217;application</h5>
 <div class="literalblock">
 <div class="content">
-<pre>il sagit ici d'un planning d'application de la plage. Vous pouvez choisir d'ppliquer votre consigne le lundi, le samedi ou les jours ferié.</pre>
+<pre>il s"agit ici d'un planning d'application de la plage. Vous pouvez choisir d'appliquer votre consigne le lundi, le samedi ou les jours fériés.</pre>
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -781,14 +784,14 @@ l&#8217;Heure de fin est focément supérieure à l&#8217;heure de début.
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Vous pouvez créer une multitude de plage correspondant à vos besoins. Choisir la températured e consigne au reveil les jour de semaine ou de decider de chauffer moins pendant votre absence.
+Vous pouvez créer une multitude de plage correspondant à vos besoins. Choisir la température de consigne au réveil les jour de semaine ou de décider de chauffer moins pendant votre absence.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Le thermosatat proposes, par defaut, 7 commandes.
-Vous ne pouvez pas modifier ces commandes. Elles permettent d&#8217;interagir l&#8217;IHM</p>
+<p>Le thermostat propose, par défaut, 7 commandes.
+Vous ne pouvez pas modifier ces commandes. Elles permettent d&#8217;interagir avec l&#8217;IHM.</p>
 </div>
 <hr>
 <hr>
@@ -799,10 +802,10 @@ Vous ne pouvez pas modifier ces commandes. Elles permettent d&#8217;interagir l&
 <h3 id="_guide">1.7. Guide</h3>
 <hr>
 <div class="sect3">
-<h4 id="_mode_d_emplois_du_thermostat">1.7.1. Mode d&#8217;emplois du thermostat.</h4>
+<h4 id="_mode_d_emploi_du_thermostat">1.7.1. Mode d&#8217;emploi du thermostat.</h4>
 <div class="paragraph">
-<p>L&#8217;utilisaion du themostat est simple et intuitif. Le Thermosat dispose de deux boutons "mode -" et "mode +".<br>
-Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</p>
+<p>L&#8217;utilisation du thermostat est simple et intuitif. Le Thermostat dispose de deux boutons "mode -" et "mode +".<br>
+Ces deux boutons permettent de passer successivement  sur les modes suivants :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -810,13 +813,13 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 <p>off  : le thermostat est en arrêt forcé,</p>
 </li>
 <li>
-<p>on   : le thermostat est en marche forcé, la chaudiere est donc en route,</p>
+<p>on   : le thermostat est en marche forcé, la chaudière est donc en route,</p>
 </li>
 <li>
-<p>auto : le thermostat est en mode pilote, la chaudiere sera mise en marche en fonction de la température de consigne et de la température d&#8217;ambiance,</p>
+<p>auto : le thermostat est en mode pilote, la chaudière sera mise en marche en fonction de la température de consigne et de la température d&#8217;ambiance,</p>
 </li>
 <li>
-<p>Hors gel : le thermostat est en mode pilote, la chaudiere sera mise en marche pour maintenire la température de consigne "Hors gel".</p>
+<p>Hors gel : le thermostat est en mode pilote, la chaudière sera mise en marche pour maintenir la température de consigne "Hors gel".</p>
 </li>
 </ul>
 </div>
@@ -839,26 +842,26 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 <div class="olist upperalpha">
 <ol class="upperalpha" type="A">
 <li>
-<p>Ring : ce disque animé est present lorsque la chaudiere est en marche.</p>
+<p>Ring : ce disque animé est présent lorsque la chaudière est en marche.</p>
 </li>
 <li>
 <p>Mode : cet indicateur indique le mode de fonctionnement du thermostat.<br>
-(Off &gt; On &gt; Auto &gt; Hors Gel</p>
+(Off &gt; On &gt; Auto &gt; Hors Gel.</p>
 </li>
 <li>
-<p>Temperature : Température de la piece</p>
+<p>Température : température de la pièce.</p>
 </li>
 <li>
-<p>Consigne : Température de consigene (température à atteindre)</p>
+<p>Consigne : température de consigne (température à atteindre).</p>
 </li>
 <li>
-<p>Mode + : Bouton permettantde changer de mode</p>
+<p>Mode + : bouton permettant de changer de mode.</p>
 </li>
 <li>
-<p>Mode - : Bouton permettant de changer de mode</p>
+<p>Mode - : bouton permettant de changer de mode.</p>
 </li>
 <li>
-<p>Historique : permet d&#8217;acceder au graphique statistique</p>
+<p>Historique : permet d&#8217;accéder au graphique statistique.</p>
 </li>
 </ol>
 </div>
@@ -886,26 +889,26 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 <div class="olist upperalpha">
 <ol class="upperalpha" type="A">
 <li>
-<p>Ring Consigne: Indicateur Temperature de consigne</p>
+<p>Ring Consigne : indicateur Température de consigne</p>
 </li>
 <li>
-<p>Ring Température : Indicateur du niveau de température Ambiante</p>
+<p>Ring Température : indicateur du niveau de température Ambiante</p>
 </li>
 <li>
-<p>Temperature : Température de la piece</p>
+<p>Température : température de la pièce.</p>
 </li>
 <li>
 <p>Mode : cet indicateur indique le mode de fonctionnement du thermostat.<br>
-(Off &gt; On &gt; Auto &gt; Hors Gel</p>
+(Off &gt; On &gt; Auto &gt; Hors Gel.</p>
 </li>
 <li>
-<p>Etat : cet indicateur indique l&#8217;état de fonctionnement de la chaudiere</p>
+<p>État : cet indicateur indique l&#8217;état de fonctionnement de la chaudière.</p>
 </li>
 <li>
-<p>Mode + : Bouton permettantde changer de mode</p>
+<p>Mode + : bouton permettant de changer de mode.</p>
 </li>
 <li>
-<p>Mode - : Bouton permettant de changer de mode</p>
+<p>Mode - : bouton permettant de changer de mode.</p>
 </li>
 </ol>
 </div>
@@ -939,7 +942,7 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 <p>Consigne</p>
 </li>
 <li>
-<p>Etat chaudiere</p>
+<p>État chaudière</p>
 </li>
 </ol>
 </div>
@@ -960,10 +963,42 @@ Ces deux boutons permettent de passer succesiffement  sur les modes suivants :</
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_developpeur">1.9. Developpeur</h3>
+<h3 id="_développeur">1.9. Développeur</h3>
 <hr>
 <div class="paragraph">
 <p>974steph</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_changelog">1.10. Changelog</h3>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_version">1.11. Version</h3>
+<hr>
+<div class="ulist">
+<div class="title">version : dev 7 nov 2016</div>
+<ul>
+<li>
+<p>correction "bogue graphique window 7 &amp; 8"</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_roadmap">1.12. Roadmap</h3>
+<hr>
+<div class="ulist">
+<div class="title">janvier 2017</div>
+<ul>
+<li>
+<p>ajout shunt "fenêtre ouverte"</p>
+</li>
+<li>
+<p>ajout mode "absence"</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
