@@ -10,9 +10,9 @@ Vous pouvez trouver la dernière version Debian en netinstall (taille minimale m
 
 === Auf einer physischen Maschine
 
-Il faut soit graver l'iso sur un CD et mettre le CD dans la machine, mais de nos jour les lecteurs CD sont de plus en plus rares... Ou alors faire une clef USB bootable.
+Il faut soit graver l'iso sur un CD et mettre le CD dans la machine (mais de nos jour les lecteurs CD sont de plus en plus rares) ou alors créer une clef USB bootable.
 
-Pour la clef USB bootable il faut télécharger rufus http://rufus.akeo.ie/downloads/rufus-2.9.exe[là], le lancer et le configurer comme ça : 
+Pour la clef USB bootable il faut télécharger rufus http://rufus.akeo.ie/downloads/rufus-2.9.exe[là], le lancer et le configurer comme cela : 
 
 image::../images/debian.installation.PNG[]
 
@@ -23,7 +23,7 @@ Il ne vous reste plus qu'à cliquer sur démarrer, puis mettre la clef USB sur l
 
 === Auf einer VM
 
-La manipulation est assez simple, vous créez une nouvelle machine virtuelle, vous branchez mettez un lecteur CD virtuel dessus qui pointe vers l'iso (pensez bien à la connecter) et vous lancez la machine. Voir https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[ici] pour plus de détails.
+La manipulation est assez simple, vous créez une nouvelle machine virtuelle, vous branchez, mettez un lecteur CD virtuel dessus qui pointe vers l'iso (pensez bien à le connecter) et vous lancez la machine. Voir https://jeedom.github.io/documentation/howto/fr_FR/doc-howto-vmware.creer_une_vm.html[ici] pour plus de détails.
 
 == Installation
 
@@ -51,7 +51,7 @@ Appuyez juste sur entrée :
 
 image::../images/debian.installation6.PNG[]
 
-Mettez un mot de passe, je vous en conseil un simple ici (comme oooo), il pourra être changer plus tard (commande passwd) :
+Mettez un mot de passe, je vous en conseille un simple ici (comme oooo), il pourra être changé plus tard (commande passwd) :
 
 image::../images/debian.installation7.PNG[]
 
@@ -111,7 +111,7 @@ Et encore (oui on valide beaucoup sur une installation de debian) :
 
 image::../images/debian.installation21.PNG[]
 
-Là plus compliqué, il faut désélectionner "environnement de bureau Debian" en appuyant sur la touche espace et sélectionner "serveur SSH" en appuyant sur espace (il faut se déplacer avec les flèches du clavier), puis valider en appuyant sur entrée :
+Maintenant plus compliqué, il faut désélectionner "environnement de bureau Debian" en appuyant sur la touche espace et sélectionner "serveur SSH" en appuyant sur espace (il faut se déplacer avec les flèches du clavier), puis valider en appuyant sur entrée :
 
 image::../images/debian.installation22.PNG[]
 
@@ -141,7 +141,7 @@ sudo apt-get install -y vim sudo
 
 === Ajouter fail2ban
 
-Fail2ban est un logiciel qui permet de sécuriser l'accès à votre debian, en cas d'un trop grand nombre d'échecs de connexion il bloque l'accès à l'IP en question (donc pas à tout le monde seulement à l'attaquant) un certain temps.
+Fail2ban est un logiciel qui permet de sécuriser l'accès à votre debian, en cas d'un trop grand nombre d'échecs de connexion il bloque l'accès à l'IP en question (donc pas à tout le monde, seulement à l'attaquant) un certain temps.
 
 ----
 sudo apt-get install -y fail2ban
@@ -155,4 +155,4 @@ Les Open VMware Tools installent les drivers spécifiques au système d'exploita
 sudo apt-get install -y open-vm-tools
 ----
 
-Il ne vous reste plus qu'a installer jeedom en suivant https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
+Il ne vous reste plus qu'à installer jeedom en suivant https://jeedom.github.io/documentation/installation/fr_FR/doc-installation.html#_autre[ceci]
