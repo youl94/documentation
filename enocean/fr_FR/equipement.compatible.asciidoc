@@ -1,7 +1,7 @@
 = Liste des equipements enocean compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*10* [green]*marques de modules différentes, soit un total de* [red]*58* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*11* [green]*marques de modules différentes, soit un total de* [red]*60* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles.
 
@@ -116,6 +116,21 @@ _[small]#Piles : 1x9V CP-V9#_|Mode inclusion auto et appui sur le bouton pour fa
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
 |image:../images/compatibility_list/a5-12-10_ewattch.jpg[width=150,align="center"]|Ewattch|SQUID Sous-compteur electrique EnOcean - 12 entrées|A5-12-10|Compteur| |Mode inclusion auto et brancher le squid| link:++http://www.domadoo.fr/fr/peripheriques/2859-ewattch-squid-sous-compteur-electrique-enocean-12-entrees-3770002148045.html++[Acheter^]
+// 
+
+
+|===
+
+== Hoppe
+
+[cols=".^3a,.^1s,.^4,.^2,.^2,.^6,.^10,.^2", options="header"]
+|===
+|Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
+
+|image:../images/compatibility_list/f6-10-00_hoppe_poignee-aluminium.jpg[width=150,align="center"]|Hoppe|Poignée de fenêtre Sécusignal Atlanta Aluminium|F6-10-00|Poignée|Bien choisir le bon profil après inclusion |Mode inclusion auto et tourner la poignée| link:++http://www.domadoo.fr/fr/peripheriques/1062-hoppe-poignee-fenetre-secusignal-atlanta-alu-4012789023428.html++[Acheter^]
+// 
+
+|image:../images/compatibility_list/f6-10-00_hoppe_poignee-blanche.jpg[width=150,align="center"]|Hoppe|Poignée de fenêtre Sécusignal Atlanta Blanche|F6-10-00|Poignée|Bien choisir le bon profil après inclusion |Mode inclusion auto et tourner la poignée| link:++http://www.domadoo.fr/fr/peripheriques/1063-hoppe-poignee-fenetre-secusignal-atlanta-blanc-4012789104158.html++[Acheter^]
 // 
 
 
