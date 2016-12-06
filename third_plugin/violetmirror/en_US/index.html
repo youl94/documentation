@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>Description</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,94 +415,53 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
-<ul class="sectlevel2">
-<li><a href="#_espeasy_firmware_polyvalent_pour_les_esp8266">1.1. ESPeasy, firmware polyvalent pour les ESP8266</a></li>
-<li><a href="#_que_fait_le_plugin_jeedom_pour_espeasy">1.2. Que fait le plugin Jeedom pour ESPeasy</a></li>
+<li><a href="#_description">1. Description</a>
+<ul class="sectlevel3">
+<li><a href="#_violet_mir_ror">1.1. Violet Mir:ror</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
-<ul class="sectlevel2">
-<li><a href="#_plugin_konfiguration">2.1. Plugin Konfiguration</a></li>
+<li><a href="#_configuration">2. Configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
 </ul>
 </li>
 <li><a href="#_faq">3. FAQ</a></li>
-<li><a href="#_fehlersuche">4. Fehlersuche</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_description">1. Description</h2>
 <div class="sectionbody">
-<hr>
-<div class="sect2">
-<h3 id="_espeasy_firmware_polyvalent_pour_les_esp8266">1.1. ESPeasy, firmware polyvalent pour les ESP8266</h3>
+<div class="sect3">
+<h4 id="_violet_mir_ror">1.1. Violet Mir:ror</h4>
 <div class="paragraph">
-<p>ESPeasy est un firmware pour les différents types d&#8217;ESP8266.</p>
-</div>
-<div class="paragraph">
-<p>Une fois chargé, vous disposez d&#8217;une page web d&#8217;administration qui permet de configurer les capteurs/actionneurs de l&#8217;ESP en live et aussi son interaction avec un logiciel de domotique</p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_que_fait_le_plugin_jeedom_pour_espeasy">1.2. Que fait le plugin Jeedom pour ESPeasy</h3>
-<div class="paragraph">
-<p>Le plugin facilite l&#8217;utilisation d&#8217;ESPeasy avec Jeedom.</p>
-</div>
-<div class="paragraph">
-<p>Il n&#8217;est pas nécessaire dans le principe, puisque par exemple ESPeasy fonctionne en MQTT.</p>
-</div>
-<div class="paragraph">
-<p>En revanche, il offre une URL unique à renseigner pour tous les ESP8266 et la création des équipements à la volée avec leurs capteurs. Les actionneurs sont ajoutés en saisissant juste leur ID et valeur.</p>
+<p>Ce plugin permet d&#8217;utiliser des lecteurs RFID Mir:ror de Violet.</p>
 </div>
 <hr>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
+<h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_plugin_konfiguration">2.1. Plugin Konfiguration</h3>
+<div class="sect3">
+<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
 <div class="paragraph">
-<p>La page du plugin indique les 3 informations à renseigner dans vos ESPeasy, il n&#8217;y a pas de configuration à faire pour les capteurs</p>
-</div>
-<div class="paragraph">
-<p>Auf bestehenden Anlagen können Sie die Aktoren hinzufügen</p>
+<p>Sur la page de configuration, il faut renseigner le port à utiliser (par défaut /dev/hidraw1)</p>
 </div>
 <div class="paragraph">
-<p>L&#8217;adresse du controlleur et le port sont à renseigner sur l&#8217;onglet "config"</p>
+<p>L&#8217;équipement sera créer automatiquement avec en commandes :</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/espeasy_conf1.png" alt="Image du produit">
-</div>
-</div>
-<div class="paragraph">
-<p>Pour le publish template, il faut aller dans l&#8217;onglet "tools"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/espeasy_conf2.png" alt="Image du produit">
-</div>
-</div>
-<div class="paragraph">
-<p>Là on clique sur le bouton "advanced" et on remplit le champ "publish template"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/espeasy_conf3.png" alt="Image du produit">
-</div>
-</div>
-<div class="paragraph">
-<p>Il semble nécessaire également que les capteurs aient un device renseigné, même si pour Jeedom il ne sert à rien, donc si rien ne remonte, n&#8217;oubliez pas de le saisir dans l&#8217;onglet "device"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/espeasy_conf4.png" alt="Image du produit">
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>une position du lecteur (binaire à 1 quand il est face visible, 0 quand retourné)</p>
+</li>
+<li>
+<p>un indicateur de RFID pour chaque puce présentée (binaire à 1 si présent sur le lecteur, 0 quand enlevé)</p>
+</li>
+</ul>
 </div>
 <hr>
 </div>
@@ -512,22 +471,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_faq">3. FAQ</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Est-ce que le plugin utilise le Cloud ?</div><div class="content">
+<div class="title">Puis-je utiliser d&#8217;autre lecteurs RFID que le Mir:ror ?</div><div class="content">
 <div class="paragraph">
-<p>Non, les communications se font via HTTP directement des ESP à Jeedom</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_fehlersuche">4. Fehlersuche</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Comment se créer mes équipements?</div><div class="content">
-<div class="paragraph">
-<p>A l&#8217;envoi d&#8217;informations par l&#8217;ESP</p>
+<p>Non le plugin ne gère que ce lecteur</p>
 </div>
 </div>
 </div>
