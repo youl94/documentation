@@ -422,7 +422,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_configuration">2. Configuration</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_the_plugin_configuration">2.1. The plugin configuration</a></li>
 </ul>
 </li>
 <li><a href="#_faq">3. FAQ</a></li>
@@ -449,7 +449,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<h4 id="_the_plugin_configuration">2.1. The plugin configuration</h4>
 <div class="paragraph">
 <p>Le plugin ne comporte pas de configuration générale.</p>
 </div>
@@ -485,38 +485,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_faq">3. FAQ</h2>
 <div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Puis-je lier 2 stocks pour simuler par exemple un stock à la maison et un stock chez le fournisseur déjà acheté ?</div><div class="content">
 <div class="paragraph">
-<p>Oui, il faudra alors 2 équipements Stock. Puis les lier via un scénario.</p>
-</div>
-<div class="paragraph">
-<p>Deux possibilités :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>utiliser un virtuel qui enlèvera du stock "fournisseur" et ajoutera au stock "local" la même quantité.</p>
-</li>
-<li>
-<p>directement utiliser les commandes du stock fournisseur pour déclencher l&#8217;ajout au stock local (ne pas oublier les 2 commandes Enlever 1 et Enlever X, attention dans ce cas il ne faudra pas utiliser Définir le stock)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Le scénario devra aussi basculer le nouveau prix si besoin sur le stock local.</p>
-</div>
-<div class="paragraph">
-<p>Une bonne solution peut être d&#8217;utiliser une fonction ask pour que jeedom vous demande si il y a eu un mouvement du stock fournisseur vers le stock local.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">Je me suis trompé dans le prix unitaire et je souhaite réinitialiser</div><div class="content">
-<div class="paragraph">
-<p>Vous pouvez le faire en saisissant 0 en prix unitaire, puis en saisissant le tarif souhaité</p>
-</div>
-</div>
+<p>include::FAQ.AsciiDoc]</p>
 </div>
 </div>
 </div>

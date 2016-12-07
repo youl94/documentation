@@ -417,16 +417,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_description">1. Description</a>
 <ul class="sectlevel3">
-<li><a href="#_beacon_bt_transformer_un_jeedom_en_eddystone_ou_ibeacon">1.1. Beacon BT, transformer un Jeedom en Eddystone ou iBeacon</a></li>
+<li><a href="#_beacon_bt_transform_a_jeedom_into_eddystone_or_ibeacon">1.1. Beacon BT, transform a Jeedom into Eddystone or iBeacon</a></li>
 </ul>
 </li>
 <li><a href="#_configuration">2. Configuration</a>
 <ul class="sectlevel3">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_the_plugin_configuration">2.1. The plugin configuration</a></li>
 </ul>
 </li>
 <li><a href="#_faq">3. FAQ</a></li>
-<li><a href="#_troubleshoting">4. Troubleshoting</a></li>
+<li><a href="#_troubleshooting">4. Troubleshooting</a></li>
 <li><a href="#_changelog">5. Changelog</a>
 <ul class="sectlevel3">
 <li><a href="#_version_1">5.1. Version 1</a></li>
@@ -440,12 +440,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_description">1. Description</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_beacon_bt_transformer_un_jeedom_en_eddystone_ou_ibeacon">1.1. Beacon BT, transformer un Jeedom en Eddystone ou iBeacon</h4>
+<h4 id="_beacon_bt_transform_a_jeedom_into_eddystone_or_ibeacon">1.1. Beacon BT, transform a Jeedom into Eddystone or iBeacon</h4>
 <div class="paragraph">
-<p>Le plugin Beacon BT permet à Jeedom d&#8217;utiliser un périphérique Bluetooth pour émettre comme un Beacon Bluetooth.</p>
+<p>The Beacon BT plugin allows Jeedom to use a Bluetooth device to send as a Bluetooth Beacon.</p>
 </div>
 <div class="paragraph">
-<p>Il est possible de choisir le type de Beacon entre iBeacon ou Eddystone.</p>
+<p>It is possible to choose the type of Beacon between iBeacon or Eddystone.</p>
 </div>
 <hr>
 </div>
@@ -455,26 +455,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
+<h4 id="_the_plugin_configuration">2.1. The plugin configuration</h4>
 <div class="paragraph">
-<p>Sur la page de configuration, il y a 5 paramètres :</p>
+<p>On the configuration page of the plugin, there is 5 settings</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Type : permet de choisir entre Eddystone et iBeacon. Eddystone permet de diffuser une URL en même temps que la présence. iBeacon nécessite de renseigner tous les paramètres</p>
+<p>Type: allows you to choose between Eddystone and iBeacon. Eddystone allows to broadcast a URL at the same time as the presence. IBeacon requires you to enter all parameters</p>
 </li>
 <li>
-<p>UUID/Nom : pour iBeacon il faudra mettre un UUID unique, pour Eddystone c&#8217;est un nom choisit</p>
+<p>UUID / Name: for iBeacon it will be necessary to put a unique UUID, for Eddystone it is a chosen name</p>
 </li>
 <li>
-<p>Major : le major du iBeacon (inutile en Eddystone)</p>
+<p>Major: Major of iBeacon (useless in Eddystone)</p>
 </li>
 <li>
-<p>Minor : le minor du iBeacon (inutile en Eddystone)</p>
+<p>Minor: Minor of iBeacon (useless in Eddystone)</p>
 </li>
 <li>
-<p>Power : le power level du iBeacon à 1m (inutile en Eddystone)</p>
+<p>Power: the power level of the iBeacon at 1m (useless in Eddystone)</p>
 </li>
 </ul>
 </div>
@@ -496,15 +496,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_troubleshoting">4. Troubleshoting</h2>
+<h2 id="_troubleshooting">4. Troubleshooting</h2>
 <div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Je ne sais pas comment récupérer le paramètre de force d émission ?</div><div class="content">
+<div class="olist panel">
+<ol class="panel">
+<li>
+<p>I do not know how to retrieve the setting force issue?</p>
+</li>
+</ol>
+</div>
+<div class="openblock">
+<div class="content">
 <div class="paragraph">
-<p>Il faut se mettre à 1m du Jeedom et utiliser un scan permettant de récupérer l&#8217;information de RSSI des appareils détectés.</p>
+<p>Must get down to 1 m of the Jeedom and use a scan to retrieve the detected devices RSSI information.</p>
 </div>
 <div class="paragraph">
-<p>Pour information, le paramètre n est pas nécessaire sur un Eddystone</p>
+<p>For information, the n parameter is not necessary on an Eddystone</p>
 </div>
 </div>
 </div>
@@ -517,7 +524,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_version_1">5.1. Version 1</h4>
 <div class="paragraph">
-<p>Première version</p>
+<p>First version</p>
 </div>
 </div>
 </div>
