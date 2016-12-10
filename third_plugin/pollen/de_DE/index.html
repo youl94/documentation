@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Indices alerte pollen</title>
+<title>Pollenflug Index</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,12 +415,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_indices_alerte_pollen">1. Indices alerte pollen</a>
+<li><a href="#_pollenflug_index">1. Pollenflug Index</a>
 <ul class="sectlevel2">
-<li><a href="#_description">1.1. Description</a></li>
-<li><a href="#_configuration">1.2. Configuration</a></li>
+<li><a href="#_beschreibung">1.1. Beschreibung</a></li>
+<li><a href="#_konfiguration">1.2. Konfiguration</a></li>
 <li><a href="#_faq">1.3. FAQ</a></li>
-<li><a href="#_changelog">1.4. Changelog</a></li>
+<li><a href="#_Änderungsprotokoll">1.4. Änderungsprotokoll</a></li>
 </ul>
 </li>
 </ul>
@@ -428,7 +428,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_indices_alerte_pollen">1. Indices alerte pollen</h2>
+<h2 id="_pollenflug_index">1. Pollenflug Index</h2>
 <div class="sectionbody">
 <div class="admonitionblock important">
 <table>
@@ -437,45 +437,49 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Ce plugin nécessite l&#8217;extention GD de PHP
+Dieses Plugin benötigt die PHP GD-Erweiterung
 </td>
 </tr>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_description">1.1. Description</h3>
+<h3 id="_beschreibung">1.1. Beschreibung</h3>
 <div class="paragraph">
-<p>Le plugin Indices Pollen permet de récupérer les Indices de pollen de l&#8217;air. Il suffit de selectionne la Departement.
-Les données disponible sont issue du site <a href="http://www.pollens.fr/docs/vigilance.html">pollens.fr</a></p>
+<p>Das Pollenflug Index Plugin erlaubt es, den Index der Pollen in der Luft abzurufen. Wählen Sie einfach die Gegend.
+Die Daten stehen auf der Seite <a href="http://www.pollens.fr/docs/vigilance.html">pollens.fr</a> zur verfügung.</p>
 </div>
 <div class="paragraph">
-<p>Risque allergique vont de 0 à 5 :
-* nul</p>
+<p>Allergie-Risiko liegt zwischen 0 und 5 :
+* Nein</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>très faible</p>
-</li>
-<li>
-<p>faible</p>
-</li>
-<li>
-<p>moyen</p>
-</li>
-<li>
-<p>élevé</p>
-</li>
-<li>
-<p>très élevé</p>
+<p>sehr niedrige</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Il y a en plus une information type boolean permettant de savoir si la dernière mise à jour des données a fonctionnée.</p>
+<p>niedrig</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>mittel</p>
+</li>
+<li>
+<p>hoch</p>
+</li>
+<li>
+<p>sehr hoch</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>A l&#8217;affichage, ça donne :</p>
+<p>Es gibt außerdem eine logische Funktion, die es erlaubt, herauszufinden, ob die letzte Aktualisierung der Daten funktioniert hat.</p>
+</div>
+<div class="paragraph">
+<p>Das Display zeigt an :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -484,7 +488,7 @@ Les données disponible sont issue du site <a href="http://www.pollens.fr/docs/v
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configuration">1.2. Configuration</h3>
+<h3 id="_konfiguration">1.2. Konfiguration</h3>
 <div class="paragraph">
 <p>Pour le configurer c’est très simple il suffit de créer un équipement et de renseigner le département.</p>
 </div>
@@ -568,7 +572,7 @@ gd.jpeg_ignore_warning =&gt; 0 =&gt; 0</pre>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_changelog">1.4. Changelog</h3>
+<h3 id="_Änderungsprotokoll">1.4. Änderungsprotokoll</h3>
 <div class="hdlist">
 <table>
 <tr>
