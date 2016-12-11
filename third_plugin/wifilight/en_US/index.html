@@ -451,7 +451,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_mode_scène_xiaomi_yeelight">1.11. Mode scène Xiaomi Yeelight</a>
 <ul class="sectlevel3">
-<li><a href="#_mode_scène">1.11.1. Mode Scène</a></li>
+<li><a href="#_configuration_de_l_ampoule">1.11.1. Configuration de l&#8217;ampoule</a></li>
+<li><a href="#_mode_scène_xiaomi_yeelight_2">1.11.2. Mode Scène Xiaomi Yeelight</a></li>
 </ul>
 </li>
 <li><a href="#_faq">1.12. FAQ</a></li>
@@ -492,6 +493,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Ampoules Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
 </li>
 <li>
+<p>Stgrip-led Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
+</li>
+<li>
 <p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V3.0 à V5.0 : pas de retour d&#8217;état</p>
 </li>
 <li>
@@ -504,7 +508,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Contrôleur bandeau led Magic UFO : gère le blanc</p>
 </li>
 <li>
-<p>Ampoules WiFi Yeelight blanches et couleur</p>
+<p>Ampoules WiFi Xiaomi Yeelight blanches et couleur avec retour d&#8217;état</p>
+</li>
+<li>
+<p>Strip-led WiFi Xiaomi Yeelight couleur avec retour d&#8217;état</p>
 </li>
 </ul>
 </div>
@@ -586,7 +593,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>les commandes HSV, Flow et scène ne sont pas gérées.</p>
+<p>les commandes HSV ne sont pas gérées.Flow et scène le sont en créant des commandes avec le code JSON correspondant à l&#8217;effet recherché (voir la documentation de l&#8217;API YeeLight).</p>
 </li>
 </ul>
 </div>
@@ -659,7 +666,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Saisir la canal utilisé (ce paramètre est ignoré pour les contrôleurs LW-12 ou compatibles Magic UFO,le pont Mi.Light V6 et les ampoules Xiaomi YeeLight)</p>
 </li>
 <li>
-<p>Saisir le type de lampe (Mi.Light RGBW, Mi.Light RGBW pont V6, Mi.Light blanche, Mi.Light Blanche Pont V6, Mi.Light RGBW WW/CW, Pont Mi.Light V6, LW-12, Magic UFO, Xiaomi YeeLight Blanche, Xiaomi Yeelight RGBW, Xiaomi Yeelight bandeau led).
+<p>Saisir le type de lampe (Mi.Light RGBW, Mi.Light RGBW pont V6, Mi.Light blanche, Mi.Light Blanche Pont V6, Mi.Light RGBW WW/CW, Pont Mi.Light V6, LW-12, Magic UFO, Xiaomi Yeelight Blanche, Xiaomi Yeelight RGBW, Xiaomi Yeelight bandeau led).
 C&#8217;est indispensable pour créer l&#8217;ensemble des commandes pour le type de lampe ou de pont utilisé</p>
 </li>
 <li>
@@ -817,23 +824,62 @@ Pour les Xiaomi YeeLight, le plugin permet le retour d&#8217;état toutes les mi
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Ampoules et strip-led Xiaomi Yeelight :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ColorGet : récupère la couleur #RGB (#FF00FF) (pour les lampes compatibles)</p>
+</li>
+<li>
+<p>Etat : récupère si le contrôleur est arrêté  ou en marche &#8594; marche: 1, arrêt :  0</p>
+</li>
+<li>
+<p>IntensityGet : résupère l&#8217;intensité</p>
+</li>
+<li>
+<p>KelvinGet : résupéère la température de couleur (pour les lampes compatibles)</p>
+</li>
+</ul>
+</div>
 <hr>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mode_scène_xiaomi_yeelight">1.11. Mode scène Xiaomi Yeelight</h3>
 <div class="sect3">
-<h4 id="_mode_scène">1.11.1. Mode Scène</h4>
+<h4 id="_configuration_de_l_ampoule">1.11.1. Configuration de l&#8217;ampoule</h4>
+<div class="paragraph">
+<p>Il est indispensable d&#8217;activer le mode développeur via l&#8217;application  Xiaomi Yeelight.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mode_scène_xiaomi_yeelight_2">1.11.2. Mode Scène Xiaomi Yeelight</h4>
 <div class="paragraph">
 <p>Il est possible de configurer les modes scène. Plusieurs modes scènes sont préprogrammés mais il est possible d&#8217;ajouter d&#8217;autres modes scène.</p>
 </div>
 <div class="paragraph">
-<p>Il suffit de respecter certaines conditions :
-- Ajouter une commande wifilight action de type Défaut
-- Son nom interne doit commencer par Scene. Exemples : SceneSoleil - Scene025
-- Dans parametres, mettre la commande scène Yeelight, par exemple : "id":1, "method":"set_scene","params":["cf",0,0,"500,1,255,100,1000,1,16776960,70"]
-- Ne pas mettre les accolades de début et de fin ainsi que les caractères de retour à la ligne, le plugin les ajoutera automatiquement
-- S&#8217;inspirer des commandes préconfigurées pour créer ces modes scène supplémentaires.</p>
+<p>Il suffit de respecter certaines conditions :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ajouter une commande wifilight action de type Défaut</p>
+</li>
+<li>
+<p>Son nom interne doit commencer par Scene. Exemples : SceneSoleil - Scene025</p>
+</li>
+<li>
+<p>Dans parametres, mettre la commande scène Yeelight, par exemple : "id":1, "method":"set_scene","params":["cf",0,0,"500,1,255,100,1000,1,16776960,70"]</p>
+</li>
+<li>
+<p>Ne pas mettre les accolades de début et de fin ainsi que les caractères de retour à la ligne, le plugin les ajoutera automatiquement</p>
+</li>
+<li>
+<p>S&#8217;inspirer des commandes préconfigurées pour créer ces modes scène supplémentaires.</p>
+</li>
+</ul>
 </div>
 <hr>
 </div>
@@ -944,6 +990,13 @@ Un moyen de contourner partiellement ce problème est d&#8217;utiliser des tél�
 </div>
 </div>
 <div class="openblock panel">
+<div class="title">Impossible de faire fonctionner les ampoules Xiaomi Yeelight</div><div class="content">
+<div class="paragraph">
+<p>Il est indispensable d&#8217;activer le mode développeur via l&#8217;application  Xiaomi Yeelight.</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
 <div class="title">Comment obtenir de l&#8217;aide ?</div><div class="content">
 <div class="paragraph">
 <p>Aller sur le forum de Jeedom ici : <a href="https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840" class="bare">https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840</a></p>
@@ -954,6 +1007,20 @@ Un moyen de contourner partiellement ce problème est d&#8217;utiliser des tél�
 </div>
 <div class="sect2">
 <h3 id="_difficultés">1.13. Difficultés</h3>
+<div class="ulist">
+<div class="title">Erreur lors de l&#8217;envoi de commande / roue crantée sans arrêt / Emission sans arrêt</div>
+<ul>
+<li>
+<p>les équipements wifilight doivent être mis à jour</p>
+</li>
+<li>
+<p>&#8594; aller dans chaque équipement et sauvegarder 2 fois</p>
+</li>
+<li>
+<p>&#8594; tester avec un nouvel équipement</p>
+</li>
+</ul>
+</div>
 <div class="ulist">
 <div class="title">Pont Mi.Light V6 : commande non prise en compte</div>
 <ul>
@@ -1001,7 +1068,7 @@ Un moyen de contourner partiellement ce problème est d&#8217;utiliser des tél�
 <div class="ulist">
 <ul>
 <li>
-<p>Prise en compte du pont Mi.Light V6 et des ampoule RGBW DualWhite RGBWW WW/CW</p>
+<p>Prise en compte du pont Mi.Light V6 et des ampoules RGBW DualWhite RGBWW WW/CW</p>
 </li>
 <li>
 <p>Gestion de l&#8217;ampoule du pont V6</p>
@@ -1011,6 +1078,12 @@ Un moyen de contourner partiellement ce problème est d&#8217;utiliser des tél�
 </li>
 <li>
 <p>Prise en compte du bandeau led  RGBW Xiaomi Yeelight</p>
+</li>
+<li>
+<p>refonte du retour d&#8217;état pour les ponts V3 à V5</p>
+</li>
+<li>
+<p>&#8594; nécessite d&#8217;aller dans l&#8217;équipement milight et de sauvegarder</p>
 </li>
 </ul>
 </div>
