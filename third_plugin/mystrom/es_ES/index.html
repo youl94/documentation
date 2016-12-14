@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Synoaudio</title>
+<title>MyStrom</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,308 +412,159 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Synoaudio</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_the_plugin_configuration">1. The plugin configuration</a></li>
-<li><a href="#_configuration_des_équipements">2. Configuration des équipements</a></li>
-<li><a href="#_intégration_dans_un_scénario">3. Intégration dans un scénario</a></li>
-<li><a href="#_fonction_tts">4. Fonction TTS</a></li>
-<li><a href="#_faq">5. FAQ</a></li>
-<li><a href="#_changelog">6. Changelog</a></li>
+<li><a href="#_mystrom">1. MyStrom</a>
+<ul class="sectlevel2">
+<li><a href="#_description">1.1. Description</a></li>
+<li><a href="#_configuration_du_plugin">1.2. Configuration du plugin</a></li>
+</ul>
+</li>
+<li><a href="#_configuration_du_plugin_2">2. Configuration du plugin</a></li>
+<li><a href="#_configuration_des_équipements">3. Configuration des équipements</a>
+<ul class="sectlevel2">
+<li><a href="#_faq">3.1. FAQ</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_mystrom">1. MyStrom</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_description">1.1. Description</h3>
 <div class="paragraph">
-<p>Le plugin Synoaudio permet de se connecter à votre nas et de contrôler Audio Station ainsi que vos lecteurs compatibles. Il va vous permettre de voir l&#8217;état d&#8217;un lecteur et d&#8217;effectuer des actions dessus (lecture, pause, suivant, précédent, volume, choix d&#8217;une playlist&#8230;&#8203;)</p>
+<p>Plugin permettant de piloter les eco lan MyStrom.
+Les équipements doivent être enregistrés sur le serveur de MyStrom.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_configuration_du_plugin">1.2. Configuration du plugin</h3>
+
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_plugin_configuration">1. The plugin configuration</h2>
+<h2 id="_configuration_du_plugin_2">2. Configuration du plugin</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Après téléchargement du plugin, il faut activer celui-ci:</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/synoaudio.png" alt="synoaudio">
+<img src="../images/docConfiguration.png" alt="docConfiguration">
 </div>
 </div>
 <div class="paragraph">
-<p>Renseignez l&#8217;adresse IP ou DNS et le port de votre nas hébergeant Synology AudioStation, l&#8217;utilisateur et le mot de passe pour se connecter. Le mode sécurisé permet de passer les requêtes en https (Verifier que le port soit bien le port https). Dans un premier temps vous devrez sauvegarder et ensuite vous pourrez lancer une découverte des lecteurs compatibles avec AudioStation.(Veillez à ce que vos lecteurs soient allumés pour qu&#8217;ils soient découverts)</p>
+<p>Pour configurer le plugin vous devez introduire l&#8217;adresse email ainsi que
+le mot de passe de votre compte MyStrom.
+Ensuite il est très important de sauver avant de continuer!</p>
 </div>
 <div class="paragraph">
-<p>Pour utiliser le TTS vous devez sélectionner le type de moteur : Local (PicoTTS) ou Online(Voxygen, accès à Internet Obligatoire). Le choix de la voix ne fonctionne que pour le mode Online.
-Remarque: Le moteur TTS local récupère la langue de Jeedom pour générer la voix.</p>
-</div>
-<div class="paragraph">
-<p>Ensuite rendez-vous dans l&#8217;onglet du plugin pour affecter un objet(pièce) à vos lecteurs et sauvegardez.</p>
+<p>Cliquez sur le bouton <strong>Rechercher les équipements MyStrom</strong>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration_des_équipements">2. Configuration des équipements</h2>
+<h2 id="_configuration_des_équipements">3. Configuration des équipements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>La configuration des players est accessible à partir du menu plugin :</p>
+<p>La configuration des équipements MyStrom est accessible à partir du menu
+plugin :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/synoaudio1.png" alt="synoaudio1">
+<img src="../images/docConfigurationEquipementMenu.png" alt="docConfigurationEquipementMenu">
 </div>
 </div>
 <div class="paragraph">
-<p>Voilà à quoi ressemble la page du plugin (ici avec déjà 1 player) :</p>
+<p>Vous y retrouvez la liste des équipements trouvés dans votre compte MyStrom:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/synoaudio2.png" alt="synoaudio2">
+<img src="../images/docConfigurationEquipements.png" alt="docConfigurationEquipements">
 </div>
 </div>
 <div class="paragraph">
-<p>Affectez un objet (pièce) à vos lecteurs (si ce n&#8217;est pas fait en automatique), une couleur (si besoin) et le type d&#8217;affichage. Ensuite ,sauvegardez.</p>
+<p>Une fois que vous cliquez sur un équipement vous obtenez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/synoaudio3.png" alt="synoaudio3">
+<img src="../images/docConfigurationEquipement.png" alt="docConfigurationEquipement">
 </div>
 </div>
-<div class="admonitionblock tip">
+<div class="paragraph">
+<p>Vous retrouvez ici toute la configuration de votre équipement :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Nom de l&#8217;équipement MyStrom</strong> : nom de votre équipement dans votre compte
+MyStrom.</p>
+</li>
+<li>
+<p><strong>Objet parent</strong> : indique l&#8217;objet parent auquel appartient l&#8217;équipement.</p>
+</li>
+<li>
+<p><strong>Activer</strong> : permet de rendre votre équipement actif.</p>
+</li>
+<li>
+<p><strong>Visible</strong> : le rend visible sur le dashboard.</p>
+</li>
+<li>
+<p><strong>Identifiant</strong> : Identifiant de l&#8217;équipement sur le serveur MyStrom.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>En dessous vous retrouvez la liste des commandes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Consommation</strong> : Consommation actuelle de l&#8217;équipement en watt.</p>
+</li>
+<li>
+<p><strong>Consommation journalière</strong> : Consommation totale de la journée en Kw.</p>
+</li>
+<li>
+<p><strong>Consommation mensuelle</strong> : Consommation totale du mois en cours en Kw.</p>
+</li>
+<li>
+<p><strong>Etat binaire</strong> : 1 si l&#8217;équipement est on, 0 si il est off.</p>
+</li>
+<li>
+<p><strong>Etat</strong> : contient l&#8217;état de l&#8217;équipement, on, off ou offline.</p>
+</li>
+<li>
+<p><strong>Off</strong> : Action permettant d&#8217;éteindre l&#8217;équipement.</p>
+</li>
+<li>
+<p><strong>On</strong> : Action permettant d&#8217;allumer l&#8217;équipement.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Les lecteurs s&#8217;activent ou se désactivent automatiquement en fonction de leur disponibilités, la tuile se grise et devient inerte.
+Si l&#8217;équipement est le master, celui-ci n&#8217;a pas les commandes
+On et Off mais une commande <strong>Restart</strong> qui permet de redémarrer
+l&#8217;équipement.
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_intégration_dans_un_scénario">3. Intégration dans un scénario</h2>
-<div class="sectionbody">
+<hr>
+<div class="sect2">
+<h3 id="_faq">3.1. FAQ</h3>
 <div class="paragraph">
-<p>Toute les actions sont disponibles via scénario exemple :</p>
+<p>Unresolved directive in index.asciidoc - include::faq.asciidoc[]</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/synoaudio4.png" alt="synoaudio4">
-</div>
-</div>
-<div class="paragraph">
-<p>Cas particulier pour le lecteur "Multiple AirPlay Devices"  l&#8217;action "Multiple Player" est disponible. Elle permet d&#8217;ajouter des players en multiroom et d&#8217;ajuster leur volume.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/synoaudio5.png" alt="synoaudio5">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_fonction_tts">4. Fonction TTS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>La fonction TTS est disponible via scénario, commande 'Dire', elle permet de faire parler Jeedom via le plugin.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/synoaudio6.png" alt="synoaudio6">
-</div>
-</div>
-<div class="paragraph">
-<p>Le plugin limite le message à 200 caractères pour le moteur Local et à 100 caractères pour le moteur Online.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Il est possible d&#8217;ajouter une temporisation pour la remise en état du lecteur : Dans le champs 'Volume' mettre [Volume]|[Temporisation]. Exemple d&#8217;un volume 45 et une temporisation de 10 seconde : 45|10 .
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">5. FAQ</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Lenteur de jeedom et/ou du Nas depuis que le plugin est installé </dt>
-<dd>
-<p>Le plugin fait des appels réguliers au nas pour remonter toutes les informations utiles. Il est possible de modifier le paramètre de la tache planifiée, Général &#8594; Administration &#8594; Moteur de tâches et sur la tâche synoaudio, pull : changer la valeur dans la colonne Démon (Valeur en secondes, c&#8217;est l&#8217;intervalle entre deux taches).</p>
-</dd>
-<dt class="hdlist1">J&#8217;ai configurer mon plugin mais j&#8217;ai l&#8217;erreur "200 : SyntaxError: Unexpected end of input" </dt>
-<dd>
-<p>C&#8217;est une erreur générique, il faut aller dans l&#8217;onglet logs de Jeedom pour avoir plus de détail.
-Plusieurs pistes peuvent être explorer :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Vérifier que votre utilisateur / mot de passe soient corrects,</p>
-</li>
-<li>
-<p>Vérifier les droits de votre utilisateur sur votre nas . l&#8217;utilisateur doit avoir tous les droits dans AudioStation.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Le TTS met longtemps à répondre </dt>
-<dd>
-<p>Le nombre action nécessaire au plugin pour énoncer un message est importante.
-En voici un extrait :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Création du message (la durée dépend de sa longueur)</p>
-</li>
-<li>
-<p>Transfert du message sur le réseau.</p>
-</li>
-<li>
-<p>Mise en lecture du fichier (beaucoup de requête faite à Audio Station)</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Le message énoncé par le TTS n&#8217;est pas complet </dt>
-<dd>
-<p>Le plugin limite le message à 200 caractères pour le moteur Local et à 100 caractères pour le moteur Online.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>22
-Correction pour prise en charge des noms de plyer non ASCII
-Correction repertoire voice_tts</p>
-</div>
-<div class="paragraph">
-<p>21
-Mise à jour du widget (Opacité - Transparence - Bordure- &#8230;&#8203;)
-Fix du problème avec les images d&#8217;album
-Mise à jour de la recherche
-Correction temporisation lors du TTS</p>
-</div>
-<div class="paragraph">
-<p>20
-Suppression de la limitation sur le moteur TTS local
-Suppression bootstrapswich (Jeeom 3.x.x)
-Compatibilité avec l&#8217;opacité (plan, design,&#8230;&#8203;)
-Modification de la recherche (Artistes/Albums/Chansons)</p>
-</div>
-<div class="paragraph">
-<p>19
-Correction de la recherche
-Préparation des cmd pour les types génériques (En attendant les type génériques multimédia)
-Prise en compte du port HTTP pour Docker
-Correction pour l&#8217;affichage avancé dans la configuration de l&#8217;équipement
-Ajout de raccourci dans le plugin</p>
-</div>
-<div class="paragraph">
-<p>18
-Mise à jour du code pour Jeedom 2.3
-Ajout de la recherche d&#8217;une chanson</p>
-</div>
-<div class="paragraph">
-<p>0.17
-Correction de l&#8217;appel des dépendances
-Correction de la remise en état après un appel du TTS
-Conversion wav to mp3
-Correction Widget
-Ajout dans les playlists d&#8217;une fonction aléatoire</p>
-</div>
-<div class="paragraph">
-<p>0.16
-Arrêt de la désactivation du plugin (Tuile inactive)
-Modification du widget ( ajout de la class 'widget-name')
-Correction TTS : - inversement des champs Volume et Message pour coller au standard
-                 - Possibilité d&#8217;ajouter une temporisation (Voir documentation)</p>
-</div>
-<div class="paragraph">
-<p>0.15
-Correction TTS</p>
-</div>
-<div class="paragraph">
-<p>0.14
-Optimisation de la génération et de la lecture du TTS
-Correction affichage Cover.</p>
-</div>
-<div class="paragraph">
-<p>0.13
-Gestion des erreurs de session (Relance la création du sid)
-Optimisation de la fonction pull (moins de charge système)
-Mise à jour du code pour Jeedom 2.1 et suivant
-TTS</p>
-</div>
-<div class="paragraph">
-<p>0.12
-Ajout de la pièce au player lors de la découverte, si son nom est présent dans le nom du player.
-Prise en charge du mode sécurisé (https)
-Ajout option simplification de l&#8217;affichage
-Ajout de plusieurs player airplay via scénario (En précisant leur nom et leur volume séparé par une virgule)
-Amélioration du panel de gestion des lecteurs 'airplay'
-Mise à jour de la documentation</p>
-</div>
-<div class="paragraph">
-<p>0.11
-Prise en charge des caractères spéciaux dans le mot de passe et les users du NAS
-Prise en charge complète des players 'airplay' (Gestion du volume globale et unitaire)</p>
-</div>
-<div class="paragraph">
-<p>0.0.10
-Correction ajout playlist et boucle lecture</p>
-</div>
-<div class="paragraph">
-<p>0.0.9
-Correction lancement playlist via un scénario</p>
-</div>
-<div class="paragraph">
-<p>0.0.8
-Correction de la partie mobile
-Mise à jour de la documentation et des screenshots</p>
-</div>
-<div class="paragraph">
-<p>0.0.6
-Correction bug (play/pause)</p>
-</div>
-<div class="paragraph">
-<p>0.0.5
-Correction deamon pour la v2</p>
-</div>
-<div class="paragraph">
-<p>0.0.4
-Correction du cron pour conformité version 2.0</p>
-</div>
-<div class="paragraph">
-<p>0.0.3
-Correction du cron pour la fonction de pulling
-Ajout de la version mobile
-Corrections mineurs</p>
-</div>
-<div class="paragraph">
-<p>0.0.2
-Correction de la découverte des players</p>
-</div>
-<div class="paragraph">
-<p>0.0.1
-Première version bêta</p>
 </div>
 </div>
 </div>
