@@ -416,28 +416,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
 <li><a href="#_description">1. Description</a>
-<ul class="sectlevel3">
-<li><a href="#_introduction">1.1. Introduction</a></li>
+<ul class="sectlevel2">
+<li><a href="#_xiaomi_home_centrale_domotique_zigbee_et_wifi">1.1. Xiaomi Home, centrale domotique Zigbee et Wifi</a></li>
 </ul>
 </li>
-<li><a href="#_settings">2. Settings</a>
-<ul class="sectlevel3">
-<li><a href="#_the_plugin_configuration">2.1. The plugin configuration</a></li>
+<li><a href="#_configuration">2. Configuration</a>
+<ul class="sectlevel2">
+<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_configuration_de_la_gateway">2.2. Configuration de la gateway</a></li>
 </ul>
 </li>
-<li><a href="#_paramétrage">3. Paramétrage</a>
-<ul class="sectlevel3">
-<li><a href="#_paramétrage_equipement">3.1. Paramétrage Equipement</a></li>
-<li><a href="#_paramétrage_commandes">3.2. Paramétrage Commandes</a></li>
-</ul>
-</li>
-<li><a href="#_faq">4. FAQ</a></li>
-<li><a href="#_troubleshoting">5. Troubleshoting</a></li>
-<li><a href="#_changelog">6. Changelog</a>
-<ul class="sectlevel3">
-<li><a href="#_version_1">6.1. Version 1</a></li>
-</ul>
-</li>
+<li><a href="#_faq">3. FAQ</a></li>
 </ul>
 </div>
 </div>
@@ -445,199 +434,107 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_description">1. Description</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_introduction">1.1. Introduction</h4>
+<div class="sect2">
+<h3 id="_xiaomi_home_centrale_domotique_zigbee_et_wifi">1.1. Xiaomi Home, centrale domotique Zigbee et Wifi</h3>
 <div class="paragraph">
-<p>Ce plugin permet la gestion des periphériques Upnp</p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_settings">2. Settings</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_the_plugin_configuration">2.1. The plugin configuration</h4>
-<div class="paragraph">
-<p>Une fois le plugin activé, les dépendances doivent s’installer automatiquement.
-Si ce n’est pas le cas ou si elle ne sont pas OK, cliquer sur relancer.</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Ensuite il faut définir le port utilisé par le démon (si vous ne mettez rien, le port utilisé sera 5002)</p>
-</div>
-</div>
+<p>La Xiaomi Home Gateway permet d&#8217;utiliser différents capteurs Zigbee Xiaomi.</p>
 </div>
 <div class="paragraph">
-<p>Enfin il est possible (en mode expert uniquement) de paramètré le timeout des commandes (par defaut le timeout est de 10 secondes)</p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_paramétrage">3. Paramétrage</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_paramétrage_equipement">3.1. Paramétrage Equipement</h4>
-<div class="paragraph">
-<p>Pour les services disposant d&#8217;un widget spécifiques :</p>
+<p>Liste des capteurs :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ContentDirectory</p>
+<p>Gateway : <a href="http://www.gearbest.com/living-appliances/pp_344667.html?vip=674314" class="bare">http://www.gearbest.com/living-appliances/pp_344667.html?vip=674314</a></p>
 </li>
 <li>
-<p>AVTransport</p>
+<p>Capteur de porte : <a href="http://www.gearbest.com/smart-light-bulb/pp_257677.html?vip=674314" class="bare">http://www.gearbest.com/smart-light-bulb/pp_257677.html?vip=674314</a></p>
+</li>
+<li>
+<p>Capteur de mouvement : <a href="http://www.gearbest.com/smart-light-bulb/pp_257678.html?vip=674314" class="bare">http://www.gearbest.com/smart-light-bulb/pp_257678.html?vip=674314</a></p>
+</li>
+<li>
+<p>Température / Humidité : <a href="http://www.gearbest.com/living-appliances/pp_344665.html?vip=674314" class="bare">http://www.gearbest.com/living-appliances/pp_344665.html?vip=674314</a></p>
+</li>
+<li>
+<p>Interrupteur : <a href="http://www.gearbest.com/smart-light-bulb/pp_257679.html?vip=674314" class="bare">http://www.gearbest.com/smart-light-bulb/pp_257679.html?vip=674314</a></p>
+</li>
+<li>
+<p>Cube : <a href="http://www.gearbest.com/living-appliances/pp_364494.html?vip=674314" class="bare">http://www.gearbest.com/living-appliances/pp_364494.html?vip=674314</a></p>
+</li>
+<li>
+<p>Prise : <a href="http://www.gearbest.com/living-appliances/pp_344666.html?vip=674314" class="bare">http://www.gearbest.com/living-appliances/pp_344666.html?vip=674314</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>il est possible de choisir entre l&#8217;affichage "standard" des commandes et l&#8217;affichage spécifique aux service.
-En complément de l&#8217;affichage spécifique, il est possible d&#8217;afficher les commandes du service "non géré" par l&#8217;affichage spécifique et de forcer
-l&#8217;affichage des commandes en "standard" en plus de l&#8217;affichage spécifique</p>
+<p>Le plugin devrait prendre en charge en plus les appareils Wifi Xiaomi :</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Que se soit pour les services disposant d&#8217;un widget spécifique ou pour les autres services, l&#8217;affichage en mode "standard" prend en compte les paramètrage des commandes (affichage On/Off).
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Bandeau RGB : <a href="http://www.gearbest.com/smart-lighting/pp_424884.html?vip=674314" class="bare">http://www.gearbest.com/smart-lighting/pp_424884.html?vip=674314</a></p>
+</li>
+<li>
+<p>Ampoule RGB : <a href="http://www.gearbest.com/smart-lighting/pp_361555.html?vip=672465" class="bare">http://www.gearbest.com/smart-lighting/pp_361555.html?vip=672465</a></p>
+</li>
+<li>
+<p>Ampoule blanc : <a href="http://www.gearbest.com/smart-light-bulb/pp_278478.html?vip=674363" class="bare">http://www.gearbest.com/smart-light-bulb/pp_278478.html?vip=674363</a></p>
+</li>
+</ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_paramétrage_commandes">3.2. Paramétrage Commandes</h4>
 <div class="paragraph">
-<p>Les actions mises a disposition par le plugin nécessitent la plupart du temps des paramètres.
-Il est possible via l&#8217;onglet "Commandes" de la page de configuration d&#8217;un equipement de définir des valeurs par defaut pour ces paramètres
-et de créer plusieur configuration de la même commande, ceci permet par exemples afin de créer les actions On et Off pour la commande UPnP "SetBinaryState"
-ou encore de créer un bouton permettant de charger ma chanson préféré ou encore de paramètré plusieur radio.
-Pour cela il faut créer une nouvelle commande d&#8217;action et dans le champs "Action" correspondant à la commande créer définir l&#8217;action UPnP qu&#8217;on souhaite paramètré.
-Ensuite, après enregistrement, les paramètre de la commande apparaissent dans le champ Option de la commande.</p>
+<p>Non fonctionnel actuellement :</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/upnp_customAction.png" alt="upnp customAction">
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Si vous n&#8217;avez pas besoin d&#8217;afficher les paramètres des commandes sur le dashboard (parce que par exemple la valeur par defaut que vous
-avez indiquer est la seul valeur qui vous interesse alors vous pouvez décocher la checbox "Afficher les options")
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-La valeur du champ information peut être renseigner afin de définir quel info est en relation avec cette action (a part pour la commande
-SetBinaryState je ne vois pas de cas d&#8217;usage mais on ne sais jamais soyez inventif)
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-L&#8217;option WaitResponse est utilise si vous souhaiter "enchainer" des commandes dans un sénario par exemple, le traitement ne passera à la commande
-suivante que lorsque la commande avec WaitResponse = 1 ou true sera fini alors que si WaitResponse = 0 ou false,
-alors la commande suivante sera executer sans attendre la fin de la première commande. Dans la plupart des cas, mettre 0 ou 1 ou rien n&#8217;a pas d&#8217;incidence.
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Capteur de qualité d&#8217;air : <a href="http://www.gearbest.com/living-appliances/pp_557543.html?vip=674363" class="bare">http://www.gearbest.com/living-appliances/pp_557543.html?vip=674363</a></p>
+</li>
+<li>
+<p>Multiprise : <a href="http://www.gearbest.com/electronics-gadgets/pp_310701.html?vip=674363" class="bare">http://www.gearbest.com/electronics-gadgets/pp_310701.html?vip=674363</a></p>
+</li>
+<li>
+<p>Controleur IR : <a href="http://www.gearbest.com/smart-home/pp_229556.html?vip=674363" class="bare">http://www.gearbest.com/smart-home/pp_229556.html?vip=674363</a></p>
+</li>
+</ul>
 </div>
 <hr>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
+<h2 id="_configuration">2. Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuration_du_plugin">2.1. Configuration du plugin</h3>
+<div class="paragraph">
+<p>Le plugin ne comporte pas de configuration générale</p>
+</div>
+<div class="paragraph">
+<p>Il y a un service qui une fois démarré se connecte à la Xiaomi Gateway et récupère les informations</p>
+</div>
+<div class="paragraph">
+<p>Les équipements de la gateway sont créés automatiquement</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_de_la_gateway">2.2. Configuration de la gateway</h3>
+<div class="paragraph">
+<p>Il est par contre nécessaire de paramétrer la gateway en mode développeur</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq">3. FAQ</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Comment faire un appel aux commandes des equipements Upnp dans les scénarios ?</div><div class="content">
+<div class="title">Quel type de gateway Xiaomi est supporté ?</div><div class="content">
 <div class="paragraph">
-<p>Les commandes Upnp nécessitant des paramètres pour être executée, il est nécessaire de passer par un bloc code. Exemple :</p>
+<p>La "Aquara" pour le Zigbee qu&#8217;il faut bien paramétrer en mode développeur pour y accéder localement</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/upnp_scenario.png" alt="upnp scenario">
-</div>
-</div>
-<div class="paragraph">
-<p>Pour connaitre les paramètres de chaque commande, il faut regarder le paramétrage des commandes sur l&#8217;equipement (attention pour les listes de valeur, il faut saisir une valeur autorisée)</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/upnp_commandes.png" alt="upnp commandes">
-</div>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshoting">5. Troubleshoting</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Dans le log il y a parfois des messages : "Unable to find the service with SID XXX"</div><div class="content">
-<div class="paragraph">
-<p>Ces messages n&#8217;ont pas d&#8217;incidence en fonctionnement normal et sont la uniquement pour du dépannage. Ce genre de message apparait notament lorsqu&#8217;on redémarre le service et sont liés a de précédant abonnement au messages des services UPnP</p>
-</div>
-</div>
-</div>
-<div class="openblock">
-<div class="title">Lorsque j&#8217;execute certaines commandes, j&#8217;ai un message d&#8217;erreur indiquant que la commande n&#8217;a pas pu s&#8217;executer dans le délai imparti</div><div class="content">
-<div class="paragraph">
-<p>La configuration du plugin permet de definir le timeout de l&#8217;execution d&#8217;une commande (voir la rubrique configuration). Dans mon cas, lors du chargement d&#8217;un media sur ma television, la première fois, le délai de réponse de la television peut aller au dela de 5 secondes.
-Si ce problème vous arrive, il suffit de relancer l&#8217;action. Si ce problème arrive régulièrement, augmenter le delai du timeout.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-La valeur par defaut est 10 secondes
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_version_1">6.1. Version 1</h4>
-<div class="paragraph">
-<p>Creation of the plugin</p>
 </div>
 </div>
 </div>
