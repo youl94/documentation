@@ -432,10 +432,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_présentation_du_panel_avec_liste_des_actions_historisées_et_visualisation_de_l_agenda">2.5. Présentation du panel : avec liste des actions historisées et visualisation de l&#8217;agenda</a></li>
-<li><a href="#_utilisation_des_données">2.6. Utilisation des données</a></li>
-<li><a href="#_cron_et_rafraîchissement_de_données">2.7. Cron et Rafraîchissement de données</a></li>
+<li><a href="#_datas_usage">2.6. Datas usage</a></li>
+<li><a href="#_cron_and_datas_refresh">2.7. Cron and Datas refresh</a></li>
 <li><a href="#__santé_des_échanges_réseaux">2.8. "Santé" des échanges réseaux</a></li>
-<li><a href="#_annexes">2.9. Annexes</a>
+<li><a href="#_attachments">2.9. Attachments</a>
 <ul class="sectlevel3">
 <li><a href="#__em_annexe_1_aide_à_la_saisie_d_un_évènement_action_scénario_ou_commande_action_dans_votre_agenda_em">2.9.1. <em>Annexe 1 : Aide à la saisie d&#8217;un évènement "Action" (scénario ou commande action) dans votre agenda</em></a></li>
 <li><a href="#__em_annexe_2_fréquence_de_rafraîchissement_em">2.9.2. <em>Annexe 2 : Fréquence de rafraîchissement</em></a></li>
@@ -464,7 +464,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>soit en téléchargement d&#8217;un fichier ics (google, zimbra, outlook, &#8230;&#8203;)</p>
+<p>or download an ics file (google, zimbra, outlook,&#8230;&#8203;)</p>
 </li>
 <li>
 <p>soit en Caldav (lecture seule pour l&#8217;instant avec cache locale sur la période de synchro)</p>
@@ -493,14 +493,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Ce plugin permet de retourner les évènements de votre agenda iCalendar, il suffit pour cela de créer un équipement et de lui ajouter autant de "commandes" que vous avez d&#8217;agenda à traiter. Même s’il y beaucoups de paramètres, la configuration du plugin est simple : les paramètres par défaut peuvent être conservés, ce qui facilite la création.<br>
-Vous pouvez l’utiliser pour l&#8217;affichage d&#8217;agenda tout simplement ou pour récupérer des agendas vous permettant de réaliser des actions dans votre installation Jeedom.</p>
+<p>This plugin makes it possible to return the events of your calendar iCalendar, it is enough to do this to create a device and to add to it as many "commands" as you have of agenda to treat. Even if there are many parameters, the configuration of the plugin is simple: the default settings can be preserved, which facilitates the creation.<br>
+You can use it for calendar display simply or to recover agendas allowing you to perform actions in your Jeedom installation.</p>
 </div>
 <hr>
 <div class="sect2">
 <h3 id="_the_plugin_configuration_and_installation">2.1. The plugin configuration and installation</h3>
 <div class="paragraph">
-<p>Après téléchargement du plugin, vous devez l&#8217;activer pour profiter de ces fonctionnalité.<br>
+<p>After downloading the plugin, you must activate it to take advantage of his features.<br>
 Des paramètres de configuration vous sont proposés, mais les valeurs par défaut peuvent être conservées.<br></p>
 </div>
 <div class="paragraph">
@@ -607,7 +607,7 @@ Les valeurs possibles sont :<br>
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">=== Paramètres graphiques ===</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autre Widget</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Other Widget</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Checkbox<br>
 <em>(décoché par défaut)</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cette option vous permet de désactiver le widget standard du plugin et donc d&#8217;utiliser le widget jeedom ou de créer son propre widget.<br>
@@ -651,8 +651,8 @@ Cette option peut aussi être utile en cas de coupure de courant coute, vous pou
 <br>
 Les périodes disponibles sont :<br>
 - les 2 dernières minutes<br>
-- les 5 dernières minutes<br>
-- les 15 dernières minutes<br>
+- 5 last minutes<br>
+- 15 last minutes<br>
 - l&#8217;heure précédente<br>
 <strong>Remarque:</strong> ces 4 périodes sont en glissante par rapport à l&#8217;instant T.</p></td>
 </tr>
@@ -1052,7 +1052,7 @@ En dessous de la date, vous pouvez supprimer les données historisées pour cett
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_utilisation_des_données">2.6. Utilisation des données</h3>
+<h3 id="_datas_usage">2.6. Datas usage</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1075,24 +1075,24 @@ La recherche se fait en utilisant l&#8217;argument de comparaison "contient" <co
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Nom uniquement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">recherche de la présence d&#8217;un nom : cmd_iCal~"mon event"<br>
-<em>exemple : #[MA_CMD]#~"déjeuner"</em></p></td>
+<em>example : #[MA_CMD]#~"brunch"</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Etat actif</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">recherche d&#8217;un état actif pour un événement précis : cmd_iCal~"A;mon event"<br>
-<em>exemple : #[MA_CMD]#~"A;Volet RDC"</em><br>
+<em>example : #[MA_CMD]#~"A;Shutter 1stFloor"</em><br>
 <strong>Remarque :</strong> ce test contient aussi les états des 1ère et dernière minutes ; pour ne pas en tenir compte, il faut écrire :<br>
-<em>#[MA_CMD]#~";A;Volet RDC"</em></p></td>
+<em>#[MA_CMD]#~";A;Shutter 1stFloor"</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Etat actif : 1ère minute</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">recherche de la 1ère minute d&#8217;un état actif pour un événement précis : cmd_iCal~";DA;mon event"<br>
-<em>exemple : #[MA_CMD]#~";DA;Volet RDC"</em></p></td>
+<em>example : #[MA_CMD]#~";DA;Shutter 1stFloor"</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Etat actif : dernière minute</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">recherche de la dernière minute d&#8217;un état actif pour un événement précis : cmd_iCal~";FA;mon event"<br>
-<em>exemple : #[MA_CMD]#~";FA;Volet RDC"</em><br>
+<em>example : #[MA_CMD]#~";FA;Shutter 1stFloor"</em><br>
 <strong>Remarque :</strong> La borne de fin sera configurée 1 minute avant l&#8217;heure configurée (exemple pour 18h, l&#8217;indicateur sera affiché à 17h59); sauf pour 23h59.</p></td>
 </tr>
 </tbody>
@@ -1111,7 +1111,7 @@ Soit un <code>#[MA_CMD]#="Congé"</code> en "événement courant", équivaut à 
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_cron_et_rafraîchissement_de_données">2.7. Cron et Rafraîchissement de données</h3>
+<h3 id="_cron_and_datas_refresh">2.7. Cron and Datas refresh</h3>
 <div class="paragraph">
 <p><strong>Récupération des données :</strong><br>
 Les données récupérées correspondent à une journée complète, mais sont récupérées en fonction du paramétrage défini (minimum 30 minutes); elles sont enregistrées en cache utilisé par le plugin.<br>
@@ -1153,7 +1153,7 @@ Ces états sont renseignées à chaque synchro (soit à chaque période définie
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_annexes">2.9. Annexes</h3>
+<h3 id="_attachments">2.9. Attachments</h3>
 <div class="sect3">
 <h4 id="__em_annexe_1_aide_à_la_saisie_d_un_évènement_action_scénario_ou_commande_action_dans_votre_agenda_em">2.9.1. <em>Annexe 1 : Aide à la saisie d&#8217;un évènement "Action" (scénario ou commande action) dans votre agenda</em></h4>
 <div class="paragraph">
@@ -1169,7 +1169,7 @@ Le format attendu doit être du type : <code>période (DA ou FA)|sc=id du sénar
 <p>Il est aussi possible d&#8217;activer ou désactiver un scénario par ce procédé ; ces valeurs sont présentes en fin de liste des choix "nom de la variable".<br>
 En saisie manuelle, mettre : "#active" pour activer le scénario ou "#desactive" pour désactiver le scénario.<br>
 Par contre, ne pas mettre de valeur de variable pour que cette action soit prise en compte.<br>
-<em>exemple : <code>DA|sc=3|#active</code> </em><br>
+<em>example : <code>DA|sc=3|#active</code> </em><br>
 <strong>Remarque:</strong> ces 2 actions ne permettent pas de lancer le scénario, mais juste agir dessus.<br>
 <br></p>
 </div>
@@ -1666,8 +1666,15 @@ La saisie doit être du type : <code>variable(getTimeEnd_12345) != -99</code> , 
 <div class="sect1">
 <h2 id="_faq">3. FAQ</h2>
 <div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Peut-on avoir les futurs évènements ?</div><div class="content">
+<div class="olist panel">
+<ol class="panel">
+<li>
+<p>Can we have given the future events ?</p>
+</li>
+</ol>
+</div>
+<div class="openblock">
+<div class="content">
 <div class="paragraph">
 <p>Avec les valeurs "événement heure à venir" et "événement sur la journée" du paramètre "format donnée" : oui d&#8217;un point de vue affichage sur le widget.<br>
 Par contre, le traitement de futurs évènements n&#8217;est pas possible (ils ne sont présents qu&#8217;en terme d&#8217;affichage), sauf si vous parcer les informations.</p>
@@ -1736,7 +1743,7 @@ Vous devez vérifier si vous n&#8217;avez pas modifié cette commande/scénario 
 <div class="title">Mes scénarios réagissent à des évènements passées ou futurs (mode prochaine heure ou journée)</div><div class="content">
 <div class="paragraph">
 <p>Dans l&#8217;analyse de la trame, il faut vérifier que vous êtes sur un évènement actif; en vérifiant que <span class="yellow-background">;A;</span> est présent. <em>(exemple : "&#8230;&#8203;"~";A;mon event")</em>.
-Voir la documentation pour plus d&#8217;explications.</p>
+See the documentation for further explanation.</p>
 </div>
 </div>
 </div>
