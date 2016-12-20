@@ -417,33 +417,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_description">1. Description</a>
 <ul class="sectlevel2">
-<li><a href="#_apc_ups_monitoring">1.1. APC-UPS monitoring</a></li>
+<li><a href="#_mi_flora">1.1. Mi Flora</a></li>
 </ul>
 </li>
-<li><a href="#_settings">2. Settings</a></li>
-<li><a href="#_the_plugin_configuration">The plugin configuration</a></li>
-<li><a href="#_general_configuration">General configuration</a></li>
-<li><a href="#_configuration_of_equipment">Configuration of equipment</a>
-<ul class="sectlevel4">
-<li><a href="#_settings_2">Settings</a></li>
-<li><a href="#_use">1.2. Use</a></li>
-<li><a href="#_configuration_of_a_ups_in_network">1.3. Configuration of a UPS in network</a></li>
-<li><a href="#_configuration_of_a_ups_not_connected_on_jeedom">1.4. Configuration of a UPS not connected on Jeedom</a>
-<ul class="sectlevel3">
-<li><a href="#_installation_of_apcupsd">1.4.1. Installation of apcupsd</a></li>
-<li><a href="#_the_listening_address_configuration">1.4.2. The listening address configuration</a></li>
-<li><a href="#_configuration_in_jeedom">1.4.3. Configuration in Jeedom</a></li>
-</ul>
-</li>
-<li><a href="#_faq">5. FAQ</a></li>
-<li><a href="#_troubleshoting">6. Troubleshoting</a></li>
-<li><a href="#_events">7. Events</a></li>
-<li><a href="#_changelog">8. Changelog</a>
-<ul class="sectlevel3">
-<li><a href="#_version_1_1">8.1. Version 1.1</a></li>
-<li><a href="#_version_1">8.2. Version 1</a></li>
-</ul>
-</li>
+<li><a href="#_configuration">2. Configuration</a>
+<ul class="sectlevel2">
+<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
 </ul>
 </li>
 </ul>
@@ -454,381 +433,122 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_description">1. Description</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_apc_ups_monitoring">1.1. APC-UPS monitoring</h3>
+<h3 id="_mi_flora">1.1. Mi Flora</h3>
 <div class="paragraph">
-<p>This plugin allows to recover the information about APC ups and also to be notified on their events.</p>
-</div>
-<div class="paragraph">
-<p>It uses apcupsd in dependence (installed during activation of the plugin) and allows to manage a UPS APC with USB or in remote.</p>
+<p>Plugin permettant de récupérer l&#8217;horoscope via une petite phrase tous les jours.</p>
 </div>
 <div class="paragraph">
-<p>The information provided is:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Load: the % load of the inverter from its power</p>
-</li>
-<li>
-<p>Battery: the load % of the UPS battery</p>
-</li>
-<li>
-<p>Current inbound: the voltage of the supply current of the inverter</p>
-</li>
-<li>
-<p>Model: the model of inverter</p>
-</li>
-<li>
-<p>Status: the status of the UPS</p>
-</li>
-<li>
-<p>Time on battery: the available run time</p>
-</li>
-<li>
-<p>Voltage pile : tension de la pile</p>
-</li>
-<li>
-<p>Evènement : tout évènement détecté par le service apcupsd qui est transmit en push à Jeedom</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/apcups1.png" alt="Image du produit">
-</div>
+<p>Ceci peut-être très pratique afin de donner l&#8217;horoscope du jour à une personne (via une caméra Netatmo par exemple) par TTS tous les jours.</p>
 </div>
 <hr>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_settings">2. Settings</h2>
+<h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
-
-</div>
-</div>
-<h1 id="_the_plugin_configuration" class="sect0">The plugin configuration</h1>
-
-<h1 id="_general_configuration" class="sect0">General configuration</h1>
-<div class="paragraph">
-<p>The plugin does not have general configuration.</p>
-</div>
-<div class="paragraph">
-<p>Note that when the plugin is activated, it performs two actions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Installation and configuration of apcupsd to manage a USB UPS</p>
-</li>
-<li>
-<p>Creation of equipment to declare the created USB UPS</p>
-</li>
-</ul>
-</div>
-<h1 id="_configuration_of_equipment" class="sect0">Configuration of equipment</h1>
-<div class="paragraph">
-<p>As mentioned above, a first device is created upon activation. It is functional for a local USB ups.</p>
-</div>
-<div class="paragraph">
-<p>You can add other equipment if you have other inverters on the network for example.</p>
-</div>
-<div class="paragraph">
-<p>The plugin is in the Monitoring category.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/apcups2.png" alt="Image du produit">
-</div>
-</div>
-<div class="sect4">
-<h5 id="_settings_2">Settings</h5>
-<div class="paragraph">
-<p>The equipment has 3 parameters:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Address: the address of connection for the APC (127.0.0.1 by default) information</p>
-</li>
-<li>
-<p>Port: listening port of the apcupsd (default 3551) service</p>
-</li>
-<li>
-<p>Power: the power of the ups (necessary to have access to the consumption)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Attention: Please enter an ip address and not a name for the address, this one is used to identify which emits a push event</p>
-</div>
-<div class="paragraph">
-<p>For power, it is easily identifiable in the name of the template (Back - Up 550 USB for example, 550 is power)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_use">1.2. Use</h4>
-<div class="paragraph">
-<p>The equipment has a widget for the dashboard.</p>
-</div>
-<div class="paragraph">
-<p>Consumption is available to be integrated into the energy plugin for example via a calculation between the load and the power of the inverter.</p>
-</div>
-<div class="paragraph">
-<p>Event information will be useful for triggering scripts, as well as the status.</p>
-</div>
-<div class="paragraph">
-<p>Battery life can be a good complement in the scenarios triggered on status for example.</p>
-</div>
-<hr>
-</div>
 <div class="sect2">
-<h3 id="_configuration_of_a_ups_in_network">1.3. Configuration of a UPS in network</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_configuration_of_a_ups_not_connected_on_jeedom">1.4. Configuration of a UPS not connected on Jeedom</h3>
-<div class="sect3">
-<h4 id="_installation_of_apcupsd">1.4.1. Installation of apcupsd</h4>
+<h3 id="_configuration_du_plugin">2.1. Configuration du plugin</h3>
 <div class="paragraph">
-<p>Apcupsd must be installed of course, it will be questioned</p>
-</div>
-<div class="paragraph">
-<p>Therefore, install it via the appropriate method on your system</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_the_listening_address_configuration">1.4.2. The listening address configuration</h4>
-<div class="paragraph">
-<p>In the /etc/apcupsd/apcupsd.conf file, you must verify the NISIP parameter so that it is the address of the machine on the network and not 127.0.0.1 (which would be non-searchable)</p>
-</div>
-<div class="paragraph">
-<p>NISIP 192.168.0.100</p>
-</div>
-<div class="sect4">
-<h5 id="_editing_apccontrol_to_activate_the_push">Editing apccontrol to activate the push</h5>
-<div class="paragraph">
-<p>In the /etc/apcupsd/apccontrol file, you must first add a line to call Jeedom on the events.</p>
-</div>
-<div class="paragraph">
-<p>Copy the one that is present on Jeedom</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_configuration_in_jeedom">1.4.3. Configuration in Jeedom</h4>
-<div class="paragraph">
-<p>Now you only have to add a device and fill in the address you filled in the configuration</p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">5. FAQ</h2>
-<div class="sectionbody">
-<div class="olist panel">
-<ol class="panel">
-<li>
-<p>Is the plugin relies on third-party API?</p>
-</li>
-</ol>
+<p>La partie configuration du plugin permet:</p>
 </div>
 <div class="openblock">
 <div class="content">
-<div class="paragraph">
-<p>The plugin uses apcupsd to retrieve its information.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshoting">6. Troubleshoting</h2>
-<div class="sectionbody">
-<div class="olist panel">
-<ol class="panel">
-<li>
-<p>I don&#8217;t have any information going back</p>
-</li>
-</ol>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>You have to create an equipment and fullfill the informations requested.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_events">7. Events</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Here is the list of events that can send apcupsd</p>
-</div>
-<div class="openblock panel">
-<div class="title">annoy me</div><div class="content">
-<div class="paragraph">
-<p>When a shutdown is scheduled, and the time specified on the directive ANNOYME expires in the apcupsd.conf file, this event is generated.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">changeme</div><div class="content">
-<div class="paragraph">
-<p>When apcupsd detects that the hands are on, but the battery is not functioning correctly, this event is generated. It was repeated every x hours.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">commfailure</div><div class="content">
-<div class="paragraph">
-<p>This event is generated each time the communication line with the computer is severed. This event is not detected you dumb signaling UPSes.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">commok</div><div class="content">
-<div class="paragraph">
-<p>A commfailure event is issued, when the communications to the computer is re-established, this event will be generated.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">doreboot</div><div class="content">
-<div class="paragraph">
-<p>This event is depreciated and should not be used.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">doshutdown</div><div class="content">
-<div class="paragraph">
-<p>When the UPS is running on batteries and one of the limits expires (time, run, load), this event is generated to cause the machine to shutdown.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">emergency</div><div class="content">
-<div class="paragraph">
-<p>Called for an emergency system shutdown. (What triggers such a shutdown is unclear&#8230;&#8203;) After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">failing</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the UPS is running on batteries and the battery power is exhausted. The event following this one will be a shutdown.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">loadlimit</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the battery charge is below the low limit specified in the apcupsd.conf file. After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">powerout</div><div class="content">
-<div class="paragraph">
-<p>This event is generated immediately when apcupsd detects that the UPS has switched to batteries. It may be due to a short powerfailure, an automatic selftest of the UPS, or a longer powerfailure.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">onbattery</div><div class="content">
-<div class="paragraph">
-<p>This event is generated 5 or 6 seconds after an initial powerfailure is detected. It means that apcupsd definitely considers the UPS to be on batteries. The onset of this event can be delayed by the ONBATTERYDELAY apcupsd.conf configuration directive.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">offbattery</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the mains return only if the onbattery event has been generated.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">mainsback</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the mains power returns after a powerout condition. The shutdown event may or may not have been generated depending on the parameters you have defined and the length of the power outage.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">remotedown</div><div class="content">
-<div class="paragraph">
-<p>This event is generated on a slave machine when it detects either that the master has shutdown, or that a onbattery situation exists and the communications line has been severed.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">runlimit</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the MINUTES value defined in the apcupsd.conf file expires while in a power fail condition. The MINUTES is the remaining runtime as internally calculated by the UPS and monitored by apcupsd. After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">timeout</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the TIMEOUT value defined in the apcupsd.conf file expires while in a power fail condition. It indicates that the total time in a power failure has been exceeded and the machine should be shutdown. After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">startselftest</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when apcupsd detects a self test by the UPS. Normally due to the 6 second onbattery delay default time, self test events are not detected.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">endselftest</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the end of a self test is detected.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">battdetach</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when apcupsd detects that the UPS battery has been disconnected.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">battattach</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when apcupsd detects that the UPS battery has been reconnected after a battdetach event.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">8. Changelog</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_version_1_1">8.1. Version 1.1</h4>
-<div class="paragraph">
-<p>Transition to the system of dependencies 2.0</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_version_1">8.2. Version 1</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Creation of the plugin .</p>
+<p>de choisir la frequence d&#8217;actualisation de l&#8217;horoscope</p>
 </li>
 </ul>
+</div>
+<hr>
+<div class="paragraph">
+<p>== FAQ</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Le plugin n&#8217;utilise que du PHP  pour aller chercher les informations (après découpage) sur un site d&#8217;astrologie.</p>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="paragraph">
+<p>Ne connaissant pas exactement l&#8217;heure d&#8217;actualisation du site internet, il est préférable de le faire tôt dans la matinée.</p>
+</div>
+<div class="openblock">
+<div class="content">
+<hr>
+<div class="paragraph">
+<p>== Change log</p>
+</div>
+<div class="paragraph">
+<p>Versions 1.0 &#8230;&#8203; 1.04 : 18 Decembre 2016 - 18 Decembre 2016</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Version intiales du plugin.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Version 1.04: 18 Decembre 2016</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Mise à jour de l&#8217;horoscope apres chaque enregistrement de l&#8217;equipement</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Version 1.03: 18 Decembre 2016</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppression de la classe bootstrap</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Version 1.02: 18 Decembre 2016</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Actualisation de l&#8217;horoscope apres la creation de l&#8217;equipement</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Version 1.0: 18 Decembre 2016</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Supporte les 12 signes du zodiaque.</p>
+</li>
+<li>
+<p>Premiere publication du plugin</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
 </div>
 </div>
 </div>
