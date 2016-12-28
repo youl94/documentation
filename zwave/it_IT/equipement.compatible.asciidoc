@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*46* [green]*marques de modules différentes, soit un total de* [red]*250* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*256* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -99,6 +99,9 @@ _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/268
 
 _[small]#Piles : 4x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/2681-aeon-labs-detecteur-multifonction-multisensor-z-wave-plus-gen5-1220000012684.html++[Acheter^]
 // 134.2.74_zw074_multi-sensor.gen5.json
+
+|image:../images/compatibility_list/aeotec.nanoswitch.jpg[width=150,align="center"]|Aeotec|Nano Switch (ZW116)|Micromodule| | 
+// 134.259.116_zw116.nano.switch.json
 
 |image:../images/compatibility_list/aeotec.panicbutton.jpg[width=150,align="center"]|Aeotec|Panic Button (DSA38)|Télécommande| _[small]#Piles : 1x3V CR2450#_|link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-aeotec.panic_button_-_Telecommande.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/278-aeon-labs-telecommande-z-wave-porte-cles-1-bouton.html++[Acheter^]
 // 134.1.38_dsa38_panic.button.json
@@ -253,6 +256,18 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 
 |image:../images/compatibility_list/danfoss.living-connect.jpg[width=150,align="center"]|Danfoss|Thermostat Living Connect|Thermostat| _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/2495-danfoss-tete-electronique-living-connect-z-wave-lc-13-5013567421497.html++[Acheter^]
 // 2.5.3_danfoss.danfoss.thermostat.living.connect.json
+
+
+|===
+
+== Devolo
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+|image:../images/compatibility_list/devolo.9511.jpg[width=150,align="center"]|Devolo|9511|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
+// 373.2.14_MT02648.devolo.contact.door.json
 
 
 |===
@@ -700,6 +715,12 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
 
+|image:../images/compatibility_list/shenzen_neo.nas-ds01z.jpg[width=150,align="center"]|Neocoolcam|Door Sensor|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
+// 600.3.4226_nas-ds01z.json
+
+|image:../images/compatibility_list/shenzen_neo.nas-pd01z.jpg[width=150,align="center"]|Neocoolcam|PIR Sensor|Multicapteurs| _[small]#Piles : 1x3V CR123A#_| 
+// 600.3.131_nas-pd01z.json
+
 
 |===
 
@@ -1055,6 +1076,9 @@ _[small]#Piles : 2x1.5V AA#_|link:++https://jeedom.fr/doc/documentation/zwave-mo
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
 
+|image:../images/compatibility_list/vision.zf5201.jpg[width=150,align="center"]|Vision Security|Flood-Sensor (ZF5201)|Fuite| _[small]#Piles : 1x3.2V CR123A#_| 
+// 265.8220.7169_zf5201.water.sensor.json
+
 |image:../images/compatibility_list/vision.zu1401.jpg[width=150,align="center"]|Vision Security|USB Stick ZU 1401|Contrôleur| | 
 // 265.4097.257_zu1401.z-wave.usb.stick.json
 
@@ -1107,6 +1131,9 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/26
 
 |image:../images/compatibility_list/vision.zs6301.jpg[width=150,align="center"]|Vision Security|ZS 6301 Wireless CO Detector|CO| _[small]#Piles : 3x1.5V AA#_| link:++http://www.domadoo.fr/fr/peripheriques/2159-vision-security-detecteur-de-monoxyde-de-carbone-z-wave.html++[Acheter^]
 // 265.8207.3842_zs6301.co.detector.json
+
+|image:../images/compatibility_list/vision.zs51015.jpg[width=150,align="center"]|Vision Security|ZS5101 Détecteur de choc ZWave+|Vibration| _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2157-vision-security-detecteur-de-choc-z-wave-0019962005503.html++[Acheter^]
+// 265.8195.774_zs51015.shock.and.vibration.sensor.json
 
 |image:../images/compatibility_list/vision.zs5101.jpg[width=150,align="center"]|Vision Security|ZS5101|Vibration| _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2157-vision-security-detecteur-de-choc-z-wave.html++[Acheter^]
 // 265.8195.769_zs5101.shock.and.vibration.sensor.json
@@ -1294,6 +1321,9 @@ _[small]#Piles : 1X ER14250 3,6V#_| link:++http://www.domadoo.fr/fr/peripherique
 
 |image:../images/compatibility_list/mco.mhs412.jpg[width=150,align="center"]|Mco|MH-S412 Double|Interrupteur| |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-mco.MH-S412_Double_-_Interrupteur.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/2889-mcohome-interrupteur-tactile-en-verre-z-wave-2-charges-blanc.html++[Acheter^]
 // 351.16642.514_mco.home.mh-s412.double.json
+
+||Neocoolcam|Flood Sensor|Fuite| | 
+// 600.3.4229_nas.ws02z.json
 
 ||Neocoolcam|Smart Power Plug NAS-WR01ZE|Prise| | 
 // 600.3.4231_nas.wr01ze.power.plug.json
