@@ -430,14 +430,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_références_du_protocole">3. Références du protocole</a>
-<ul class="sectlevel2">
-<li><a href="#_mémo_de_référence_pour_les_commandes_à_envoyer">3.1. Mémo de référence pour les commandes à envoyer</a>
 <ul class="sectlevel3">
-<li><a href="#_candle">3.1.1. Candle</a></li>
-<li><a href="#_candle_v6">3.1.2. Candle v6</a></li>
-<li><a href="#_color">3.1.3. Color</a></li>
-</ul>
-</li>
+<li><a href="#_reference_memo_for_commands_to_send">3.1. Reference memo for commands to send</a></li>
+<li><a href="#_candle">3.2. Candle</a></li>
+<li><a href="#_candle_v6">3.3. Candle v6</a></li>
+<li><a href="#_color">3.4. Color</a></li>
 </ul>
 </li>
 <li><a href="#_0x0018_get_set_color">4. 0x0018: Get / Set Color</a></li>
@@ -534,10 +531,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_références_du_protocole">3. Références du protocole</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_mémo_de_référence_pour_les_commandes_à_envoyer">3.1. Mémo de référence pour les commandes à envoyer</h3>
 <div class="sect3">
-<h4 id="_candle">3.1.1. Candle</h4>
+<h4 id="_reference_memo_for_commands_to_send">3.1. Reference memo for commands to send</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_candle">3.2. Candle</h4>
 <div class="paragraph">
 <p>0x0014: Effects</p>
 </div>
@@ -573,7 +572,7 @@ ff000000 | candle color
 </div>
 </div>
 <div class="sect3">
-<h4 id="_candle_v6">3.1.2. Candle v6</h4>
+<h4 id="_candle_v6">3.3. Candle v6</h4>
 <div class="paragraph">
 <p>0x0017: Effects</p>
 </div>
@@ -609,7 +608,7 @@ ff000000 | candle color
 </div>
 </div>
 <div class="sect3">
-<h4 id="_color">3.1.3. Color</h4>
+<h4 id="_color">3.4. Color</h4>
 <div class="paragraph">
 <p>0x0016: Effects</p>
 </div>
@@ -634,7 +633,6 @@ speed     | 46 46 -&gt; 01 01 =&gt; Slow to Fast (Flash, Rainbow), 1e 1e -&gt; 0
 - Green flash effect: `char-write-cmd 0x0016 0000ff0000000f0f`
 - White pulse effect: `char-write-cmd 0x0016 ff00000001000f0f`
 - Rainbow jump effect: `char-write-cmd 0x0016 00ff000002000f0f`</pre>
-</div>
 </div>
 </div>
 </div>
