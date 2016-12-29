@@ -1,7 +1,7 @@
 = Liste des equipements blea compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*16* [green]*marques de modules différentes, soit un total de* [red]*35* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*16* [green]*marques de modules différentes, soit un total de* [red]*41* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles.
 
@@ -11,7 +11,7 @@ D'autres modules non présents sur cette liste peuvent être compatibles.
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/smartplug.jpg[width=150,align="center"]|Awox|Smartplug|SMARTPLUG|Prises|Le relachement est envoyé même après un appui simple ou appui double |Mode inclusion auto| 
+|image:../images/compatibility_list/smartplug.jpg[width=150,align="center"]|Awox|Smartplug|SMARTPLUG|Prises| |Mode inclusion| 
 // 
 
 
@@ -63,7 +63,7 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/hector.jpg[width=150,align="center"]|Hector|Hector|HECTOR|Capteurs| _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton| 
+|image:../images/compatibility_list/hector.jpg[width=150,align="center"]|Hector|Hector|HECTOR|Capteurs| _[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 
@@ -75,7 +75,7 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/default.jpg[width=150,align="center"]|Inconnu|Inconnu|DEFAULT|Defaut|Uniquement pour les équipements non encore rajouté dans le plugin, pour a minima avoir la présence et les rssi ainsi que la data brute |Mode inclusion| 
+|image:../images/compatibility_list/default.jpg[width=150,align="center"]|Inconnu|Inconnu|DEFAULT|Defaut|Uniquement pour les équipements non encore rajouté dans le plugin, pour a minima avoir la présence et les rssi ainsi que la data brute |Mode inclusion avec option 'Inconnu'| 
 // 
 
 
@@ -121,16 +121,16 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/logiswitch_blanc.jpg[width=150,align="center"]|Logitech|Logitech Pop blanc|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion| 
+|image:../images/compatibility_list/logiswitch_blanc.jpg[width=150,align="center"]|Logitech|Logitech Pop blanc|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion et appui sur le bouton| 
 // 
 
-|image:../images/compatibility_list/logiswitch_gris.jpg[width=150,align="center"]|Logitech|Logitech Pop gris|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion| 
+|image:../images/compatibility_list/logiswitch_gris.jpg[width=150,align="center"]|Logitech|Logitech Pop gris|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion et appui sur le bouton| 
 // 
 
-|image:../images/compatibility_list/logiswitch.jpg[width=150,align="center"]|Logitech|Logitech Pop rouge|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion| 
+|image:../images/compatibility_list/logiswitch.jpg[width=150,align="center"]|Logitech|Logitech Pop rouge|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion et appui sur le bouton| 
 // 
 
-|image:../images/compatibility_list/logiswitch_vert.jpg[width=150,align="center"]|Logitech|Logitech Pop vert|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion| 
+|image:../images/compatibility_list/logiswitch_vert.jpg[width=150,align="center"]|Logitech|Logitech Pop vert|LOGISWITCH|Boutons|Ne doit absolument pas être connecté sur un autre appareil |Mode inclusion et appui sur le bouton| 
 // 
 
 
@@ -142,9 +142,9 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/jinlin.jpg[width=150,align="center"]|Lyl Smart|Jinlin|JINLIN|Lumière|Uniquement pour de la présence 
+|image:../images/compatibility_list/jinlin.jpg[width=150,align="center"]|Lyl Smart|Jinlin|JINLIN|Lumière|Uniquement pour de la présence (le reste viendra) 
 
-_[small]#Piles : Batterie#_|Mode inclusion auto| 
+_[small]#Piles : Batterie#_|Mode inclusion| 
 // 
 
 
@@ -170,9 +170,34 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/niu_wazabi.jpg[width=150,align="center"]|Nodon|niu|NIU|Boutons|Disponible en plusieurs coloris 
+|image:../images/compatibility_list/niu_white.jpg[width=150,align="center"]|Nodon|Niu Blanc|NIU|Boutons|Disponible en plusieurs coloris 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
+// 
+
+|image:../images/compatibility_list/niu_cozygrey.jpg[width=150,align="center"]|Nodon|Niu Gris|NIU|Boutons|Disponible en plusieurs coloris 
+
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
+// 
+
+|image:../images/compatibility_list/niu_lagoon.jpg[width=150,align="center"]|Nodon|Niu Lagoon|NIU|Boutons|Disponible en plusieurs coloris 
+
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
+// 
+
+|image:../images/compatibility_list/niu_softberry.jpg[width=150,align="center"]|Nodon|Niu Softberry|NIU|Boutons|Disponible en plusieurs coloris 
+
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
+// 
+
+|image:../images/compatibility_list/niu_techblue.jpg[width=150,align="center"]|Nodon|Niu Techblue|NIU|Boutons|Disponible en plusieurs coloris 
+
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
+// 
+
+|image:../images/compatibility_list/niu_wazabi.jpg[width=150,align="center"]|Nodon|Niu Wazabi|NIU|Boutons|Disponible en plusieurs coloris 
+
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
 // 
 
 
@@ -184,9 +209,12 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
+|image:../images/compatibility_list/nut_mini_bleu.jpg[width=150,align="center"]|Nut|Nut Mini Bleu|NUT|Présence| _[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
+// 
+
 |image:../images/compatibility_list/nut.jpg[width=150,align="center"]|Nut|Nut|NUT|Présence|Uniquement pour de la présence 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 
@@ -236,7 +264,7 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto|
 
 |image:../images/compatibility_list/ticatag.jpg[width=150,align="center"]|Tibe|Ticatag|TICATAG|Boutons|Le relachement est envoyé même après un appui simple ou appui double 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion et appui sur le bouton| 
 // 
 
 
@@ -250,7 +278,7 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton|
 
 |image:../images/compatibility_list/wistiki.jpg[width=150,align="center"]|Wistiki|Wistiki|WISTIKI|Présence|Uniquement pour de la présence 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 
@@ -262,29 +290,29 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion auto|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/xiaomiscale.jpg[width=150,align="center"]|Xiaomi|MiScale|MISCALE|Scale|Poids et unité 
+|image:../images/compatibility_list/miscale.jpg[width=150,align="center"]|Xiaomi|MiScale|MISCALE|Scale|Gestion de profils complète 
 
 _[small]#Piles : 4x1.5V AA#_|Mode inclusion| 
 // 
 
 |image:../images/compatibility_list/mibandcolor.jpg[width=150,align="center"]|Xiaomi|Miband (avec led couleur)|MIBANDCOLOR|Santé|Selon les firmwares peut ne plus fonctionner. Attention si le bracelet est connecté à votre smartphone il est plus visible en bluetooth 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 |image:../images/compatibility_list/miband1s.jpg[width=150,align="center"]|Xiaomi|Miband1s|MIBAND1S|Santé|Selon les firmwares peut ne plus fonctionner. Attention si le bracelet est connecté à votre smartphone il est plus visible en bluetooth 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 |image:../images/compatibility_list/miband1.jpg[width=150,align="center"]|Xiaomi|Miband|MIBAND1|Santé|Selon les firmwares peut ne plus fonctionner. Attention si le bracelet est connecté à votre smartphone il est plus visible en bluetooth 
 
-_[small]#Piles : 1x3V CR2032#_|Mode inclusion auto et appui sur le bouton| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
-|image:../images/compatibility_list/miflora.jpg[width=150,align="center"]|Xiaomi|Miflora|MIFLORA|Scale|Plantes 
+|image:../images/compatibility_list/miflora.jpg[width=150,align="center"]|Xiaomi|Miflora|MIFLORA|Capteurs|Capteurs de plantes 
 
-_[small]#Piles : 4x44#_|Mode inclusion| 
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 
