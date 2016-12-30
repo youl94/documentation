@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*256* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*258* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -351,6 +351,9 @@ _[small]#Piles : 4x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/307
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
+
+|image:../images/compatibility_list/eurotronic.stellaz.jpg[width=150,align="center"]|Eurotronic|Vanne Thermostatique Z-Wave StellaZ|Thermostat| | link:++http://www.domadoo.fr/fr/peripheriques/2361-eurotronic-vanne-thermostatique-z-wave-stellaz.html++[Acheter^]
+// 328.1.1_eur_stellaz.json
 
 |image:../images/compatibility_list/eurotronic.cometz.jpg[width=150,align="center"]|Eurotronic|Vanne thermostatique Z-Wave+ Comet|Thermostat| | link:++http://www.domadoo.fr/fr/peripheriques/3228-eurotronic-vanne-thermostatique-z-wave-comet-4260012711011.html++[Acheter^]
 // 328.2.1_eur_cometz.json
@@ -1225,6 +1228,9 @@ _[small]#Piles : 2x1.5V AA#_|link:++https://jeedom.fr/doc/documentation/zwave-mo
 
 |image:../images/compatibility_list/zipato.vszd2102.jpg[width=150,align="center"]|Zipato|VS-ZD2102 Door/Window Sensor|Ouverture| _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2609-zipato-detecteur-d-ouverture-z-wave-3858890730470.html++[Acheter^]
 // 305.8193.262_vszd2102.eu.doorwindow.sensor.json
+
+|image:../images/compatibility_list/vision.zp3102.jpg[width=150,align="center"]|Zipato|ZP3102|Multicapteurs| _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2605-zipato-detecteur-de-mouvement-et-capteur-de-temperature-z-wave-3858890730272.html++[Acheter^]
+// 305.8194.517_zp3102.eu.pir.motion.sensor.json
 
 
 |===
