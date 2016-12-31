@@ -63,7 +63,9 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion|
 |===
 |Image|Marque|Nom|Profil|Type|Remarque|Inclusion|Lien
 
-|image:../images/compatibility_list/hector.jpg[width=150,align="center"]|Hector|Hector|HECTOR|Capteurs| _[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
+|image:../images/compatibility_list/hector.jpg[width=150,align="center"]|Hector|Hector|HECTOR|Capteurs|Ne dois pas rester connecté en permanence sur votre téléphone si vous voulez l'interaction dans Jeedom 
+
+_[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
 // 
 
 
