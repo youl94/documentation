@@ -322,4 +322,4 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion|
 
 
 [NOTE]
-Cette liste est basee sur des retours utilisateurs, l'équipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
+Cette liste est basée sur des retours utilisateurs, l'équipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
