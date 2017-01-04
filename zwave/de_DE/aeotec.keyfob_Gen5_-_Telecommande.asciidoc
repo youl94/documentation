@@ -4,7 +4,7 @@
 {nbsp} +
 
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -72,7 +72,7 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 {nbsp} +
 
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -257,7 +257,7 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

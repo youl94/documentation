@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -58,7 +58,7 @@ image::../images/dlink.dchz110/caracteristiques_techniques.jpg[width=850,align="
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -239,7 +239,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 
 {nbsp} +
 

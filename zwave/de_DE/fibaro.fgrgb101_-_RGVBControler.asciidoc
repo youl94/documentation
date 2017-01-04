@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -70,7 +70,7 @@ Le micromodule Z-Wave Fibaro FGRGB-101 permet, au choix, de commander des éclai
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 * Marque : Fibar Group
 * Nom : Fibaro FGRGB-101 RGBW

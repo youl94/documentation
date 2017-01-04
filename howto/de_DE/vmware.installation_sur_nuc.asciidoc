@@ -2,7 +2,7 @@
 
 Voici un tuto pour installer VMware sur un Intel NUC (gen6). Nous verrons par la suite comment ajouter Jeedom dessus
 
-== Le matériel
+== Material
 
 === Intel NUC
 

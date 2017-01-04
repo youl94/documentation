@@ -3,7 +3,7 @@
 {nbsp} +
 
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -75,7 +75,7 @@ Note : Ce module nécessite le neutre pour fonctionner.
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 

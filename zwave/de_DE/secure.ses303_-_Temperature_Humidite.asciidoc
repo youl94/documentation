@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -64,7 +64,7 @@ On peut facilement l'inclure / l'exclure dans un réseau Z-Wave.
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -222,7 +222,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 
 {nbsp} +
 

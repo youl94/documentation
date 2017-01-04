@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -70,7 +70,7 @@ Certains matériaux brûlent sans fumer. C'est pourquoi les ingénieurs de Fibar
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -238,7 +238,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 
 {nbsp} +
 

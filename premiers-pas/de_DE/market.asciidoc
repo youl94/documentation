@@ -2,11 +2,11 @@ Das erste was zu tun ist, ist ein Konto zu erstellen um Ihr Jeedom auf diesem re
 
 image::../images/premier-market.png[]
 
-Cliquez sur le bouton "S'enregistrer" en haut à droite :
+Klicken Sie oben rechts auf Registrieren :
 
 image::../images/premier-market2.png[]
 
-Remplissez les différents champs et validez. Vous tomberez ensuite sur cette page :
+Füllen Sie die verschiedenen Felder aus und bestätigen sie. Sie werden danach auf diese Seite gelangen :
 
 image::../images/premier-market3.png[]
 

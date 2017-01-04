@@ -1,9 +1,9 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*258* [green]*modules.*
+[green]*Derzeit ist Jeedom kompatibel mit* [red]*47* [green]*Marken mit verschiedenen Modulen, d.h. insgesamt* [red]*258* [green]*Modulen.*
 
-D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
+Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
 == Aeotec
 

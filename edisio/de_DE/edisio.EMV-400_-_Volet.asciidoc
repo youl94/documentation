@@ -1,10 +1,10 @@
 = Edisio EMV-400 "Volet roulant"
 
-* *Le module*
+* *Das Modul*
 
 image::../images/emv.400/module.jpg[width=550,align="center"]
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 image::../images/emv.400/vue_default.jpg[align="center"]
 
@@ -49,7 +49,7 @@ Le neutre est nécessaire que pour le mode "Volet"
 * Dimensions: 48x46x26mm
 * Degré de protection: IP20
 
-== Données du module
+== Moduldaten
 
 * Marque : Edisio Smart Home
 * Nom : EMV-400

@@ -3,7 +3,7 @@
 Dans 90% des cas il n'est pas nécessaire de forcer les clef GSM en mode GSM seulement (au lieu de GSM + cdrom + lecteur de carte), le seul cas où c'est obligatoire c'est si vous voulez utiliser la clef dans un Jeedom sur une VM (VMware ESXi). En effet si vou ne la passez pas en mode GSM seulement la clef n'apparaitra pas dans la liste des périphérique USB que vous pouvez faire passer à la VM.
 
 [IMPORTANT]
-Ce tuto a été fait sur un Windows 10
+Dieses Tutorial wurde auf Windows 10 gemacht.
 
 == Installation des drivers
 

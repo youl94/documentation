@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -77,7 +77,7 @@ un "réseau" Z-Wave, ce réseau pouvant être aussi simple qu'une seule téléco
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 

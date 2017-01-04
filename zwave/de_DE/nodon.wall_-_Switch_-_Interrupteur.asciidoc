@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -62,7 +62,7 @@ L’interrupteur possède une platine de fixation pour le monter facilement dans
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -232,7 +232,7 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

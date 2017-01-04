@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-Si vous n’en disposez pas encore, il va vous falloir installer le plugin Z-Wave, pas d’inquiétude, cela ne demande que quelques secondes.
+Wenn Sie noch kein Z-Wave-Plugin haben, werden Sie es  installieren müssen, keine Sorge, es dauert nur ein paar Sekunden.
 Pour ce faire, il suffit de se rendre dans le menu « Général », puis « Plugins »
 
 {nbsp} +

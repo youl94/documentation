@@ -4,7 +4,7 @@
 {nbsp} +
 
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -84,7 +84,7 @@ FCC Part 15 B, FCC Part 15 C
 {nbsp} +
 
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -253,7 +253,7 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

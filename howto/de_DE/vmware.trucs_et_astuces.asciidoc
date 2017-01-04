@@ -2,7 +2,7 @@
 
 Pas vraiment un howto ici mais plus un recueil de trucs et astuces sur VMware
 
-== Ajouter sa licence
+== Lizenz hinzufügen
 
 Une fois connecté sur l'interface web (IP_ESXI/ui) il faut aller sur "Gérer" : 
 

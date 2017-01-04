@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -56,7 +56,7 @@ Son aimant intégré permet de la fixer partout, du radiateur à la porte de 
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -226,7 +226,7 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

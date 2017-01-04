@@ -4,7 +4,7 @@
 {nbsp} +
 
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -67,7 +67,7 @@ Cette télécommande peut également être utilisée comme un bouton d'urgence o
 {nbsp} +
 
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -240,7 +240,7 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

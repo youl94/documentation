@@ -4,7 +4,7 @@
 {nbsp} +
 
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -90,7 +90,7 @@ si vous avez déjà un réseau existant.
 {nbsp} +
 
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -302,7 +302,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 {nbsp} +
 
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

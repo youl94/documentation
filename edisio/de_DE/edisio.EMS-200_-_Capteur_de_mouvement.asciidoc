@@ -1,10 +1,10 @@
 = Edisio EMS-200 "Capteur de mouvement"
 
-* *Le module*
+* *Das Modul*
 
 image::../images/ems200/ems200.module.jpg[width=350,align="center"]
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 image::../images/ems200/ems200.vue-defaut.jpg[align="center"]
 
@@ -36,7 +36,7 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 * Degré de protection : IP20
 * Utilisation : En intérieur
 
-== Données du module
+== Moduldaten
 
 * Marque : Edisio Smart Home
 * Nom : EMS-200

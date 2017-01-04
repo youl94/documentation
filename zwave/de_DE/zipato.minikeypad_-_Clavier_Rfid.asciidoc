@@ -3,7 +3,7 @@
 
 {nbsp} +
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -65,7 +65,7 @@ En plus d'utiliser le clavier numérique, vous pouvez aussi passer un badge RFID
 
 {nbsp} +
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -282,7 +282,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 
 {nbsp} +
 
-=== Note importante
+=== Wichtiger Hinweis
 
 {nbsp} +
 

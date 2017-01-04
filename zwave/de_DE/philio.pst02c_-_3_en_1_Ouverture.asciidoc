@@ -4,7 +4,7 @@
 {nbsp} +
 
 
-* *Le module*
+* *Das Modul*
 
 {nbsp} +
 
@@ -80,7 +80,7 @@ Un contrôleur Z-Wave (télécommande, dongle ...) est nécessaire afin d'intég
 {nbsp} +
 
 
-=== Données du module
+=== Moduldaten
 
 {nbsp} +
 
@@ -264,7 +264,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 {nbsp} +
 
 
-=== Note importante
+=== Wichtiger Hinweis
 {nbsp} +
 
 

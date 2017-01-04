@@ -1,10 +1,10 @@
 = Edisio EOS-200 "Capteur d'ouverture"
 
-* *Le module*
+* *Das Modul*
 
 image::../images/eos200/eos200.module.jpg[width=350,align="center"]
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 image::../images/eos200/eos200.vue-defaut.jpg[align="center"]
 
@@ -38,7 +38,7 @@ Le signal est uniquement envoyé à la séparation du capteur de son élément m
 * Degré de protection : IP20
 * Utilisation : En intérieur
 
-== Données du module
+== Moduldaten
 
 * Marque : Edisio Smart Home
 * Nom : EOS-200
