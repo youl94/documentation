@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Monit avec Jeedom</title>
+<title>Monit mit Jeedom</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,13 +412,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Monit avec Jeedom</h1>
+<h1>Monit mit Jeedom</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_installation_de_monit">1. Installation de Monit</a></li>
-<li><a href="#_exemples_de_conf">2. Exemples de conf</a></li>
-<li><a href="#_supervision_apache">3. Supervision Apache</a></li>
+<li><a href="#_monit_installation">1. Monit Installation</a></li>
+<li><a href="#_beispiel_conf">2. Beispiel conf</a></li>
+<li><a href="#_apache_Überprüfen">3. Apache Überprüfen</a></li>
 <li><a href="#_supervision_nginx_y_compris_php_fpm">4. Supervision Nginx (y compris Php-fpm)</a></li>
 <li><a href="#_supervision_mysql">5. Supervision MySQL</a></li>
 <li><a href="#_supervision_apcupsd">6. Supervision APCupsd</a></li>
@@ -429,18 +429,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Monit est un service de supervision de services. Il se charge de vérifier qu&#8217;un service est toujours démarré.</p>
+<p>Monit ist ein Überwachungsservice der Dienste. Es ist zuständig zu überprüfen, dass ein Dienst ausgeführt wird.</p>
 </div>
 <div class="paragraph">
-<p>Pour cela on lui indique les critères d&#8217;évaluation et les actions à prendre.</p>
+<p>Hierfür gibt man ihm die Bewertungskriterien und die zu ergreifenden Maßnahmen an.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_installation_de_monit">1. Installation de Monit</h2>
+<h2 id="_monit_installation">1. Monit Installation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Voici les commandes à lancer pour installer monit :</p>
+<p>Hier sind die Befehle, um die Monit Installation zu starten :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -450,21 +450,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exemples_de_conf">2. Exemples de conf</h2>
+<h2 id="_beispiel_conf">2. Beispiel conf</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Voici des exemples de configuration pour Monit avec Jeedom.</p>
+<p>Einige Beispiele für Konfiguration für Monit mit Jeedom.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_supervision_apache">3. Supervision Apache</h2>
+<h2 id="_apache_Überprüfen">3. Apache Überprüfen</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre># Apache (test sur port 80)
-check process apache2 with pidfile /var/run/apache2/apache2.pid
-    start program = "/etc/init.d/apache2 start"
+<pre># Apache (Test auf Port 80)
+Apache2 Prozess überprüfen mit pidfile /var/run/apache2/apache2.pid
+     Programm start = "/etc/init.d/apache2 start"
     stop  program = "/etc/init.d/apache2 stop"
        if failed port 80 for 2 cycles then restart</pre>
 </div>
