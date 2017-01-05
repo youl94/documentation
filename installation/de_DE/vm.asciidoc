@@ -10,7 +10,7 @@ Sie müssen link:https://app.box.com/s/ijyxkntjjip9x4oue2xqdi53r4sh8ent[hier] hi
 
 === Schritt 3: VM-Abbild Dekomprimieren
 
-Décompressez l'image de la VM Jeedom (si vous n'avez rien pour la décompresser vous pouvez installer link:http://www.clubic.com/telecharger-fiche9632-winrar.html[winrar])
+Dekomprimieren sie das Jeedom-VM-Abbild ( falls Sie nichts zum dekomprimieren haben können Sie hier link:http://www.clubic.com/telecharger-fiche9632-winrar.html[winrar]) herunterladen.
 
 === Schritt 4 :  VM starten
 
