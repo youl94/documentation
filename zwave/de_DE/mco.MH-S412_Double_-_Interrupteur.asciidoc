@@ -14,7 +14,7 @@ image::../images/mco.mhs412/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -35,13 +35,13 @@ L’interrupteur MH-S412-EU peut contrôler n’importe quel type de charge, un 
 L’interrupteur est également  équipé d’un voyant LED qui indique son état.
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
 * Commander deux lampes ou appareils à distance
 * S’installe à la place d’un interrupteur existant (s'insère parfaitement dans une boite d'encastrement de 40mm)
-* Fonction ON / OFF
+* Funktion AN/AUS
 * Supporte les commandes d’association (Groupe 1 et Groupe 2)
 * Contrôle des deux charges en local
 * LED de statut

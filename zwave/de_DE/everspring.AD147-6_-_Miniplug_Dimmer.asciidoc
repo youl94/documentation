@@ -11,7 +11,7 @@ image::../images/everspring.AD147-6/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -33,7 +33,7 @@ contrôleur Z-Wave de votre réseau.
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

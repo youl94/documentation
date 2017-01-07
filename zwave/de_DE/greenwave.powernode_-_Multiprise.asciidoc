@@ -11,7 +11,7 @@ image::../images/greenwave.powernode/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -42,7 +42,7 @@ Cette multiprise est idéale pour contrôler des appareils multimédia dans un m
 
 * Multiprise Z-Wave 6 ports
 * Permet le suivi des consommations des appareils branchés
-* Fonction ON/OFF
+* Funktion AN/AUS
 * Possibilité de lui affecter un numéro et une couleur afin de différencier les différentes PowerNode d'une même installation.
 * Bouton On/Off directement sur la multiprise
 * Protection contre les surintensités

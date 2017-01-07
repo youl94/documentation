@@ -21,7 +21,7 @@ Pour finir, chaque module peut être utilisé en mode déporté, c'est très pra
 [IMPORTANT] 
 Le neutre est nécessaire que pour le mode "Volet"
 
-== Fonctions
+== Funktionen
 
 * 2 sorties par relais alimentées
 * S'installe dans une boite d'encastrement de 55mm ou directement dans les caissons des ouvrants

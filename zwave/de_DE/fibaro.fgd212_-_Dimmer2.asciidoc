@@ -11,7 +11,7 @@ image::../images/fibaro.fgd212/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom Sichtbar*
 
 {nbsp} +
 
@@ -33,13 +33,13 @@ Il est compatible avec tout type de lampes supportant la variation ou non. En pl
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
 * Commander un éclairage à distance
 * S'installe derrière un interrupteur existant
-* Fonction ON/OFF et Variation
+* Funktion AN/AUS und Variationen
 * Utilisation en mode 2 fils (neutre pas nécessaire)
 * Intègre la puce Z-Wave série 500
 * Communication 250% plus rapide comparé à des périphériques Z-Wave standard 

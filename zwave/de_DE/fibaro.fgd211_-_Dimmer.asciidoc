@@ -11,7 +11,7 @@ image::../images/fibaro.fgd211/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom Sichtbar*
 
 {nbsp} +
 
@@ -38,7 +38,7 @@ Chaque module Z-Wave fonctionne comme un répéteur sans fil avec les autres mod
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

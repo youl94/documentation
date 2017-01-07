@@ -11,7 +11,7 @@ image::../images/swiid.inter/module.jpg[width=356,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -43,13 +43,13 @@ un "réseau" Z-Wave, ce réseau pouvant être aussi simple qu'une seule téléco
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
 * Interrupteur sur cordon utilisable à la fois manuellement (appui court) et par radio à distance (Z-Wave)
 * Utilisation en remplacement d'un interrupteur à cordon standard d'une lampe de chevet, de table ou de bureau
-* Fonction ON/OFF
+* Funktion AN/AUS
 * Activation d'un scénario domotique sur appui long (association Z-Wave)
 * Dimensions comparables à un interrupteur sur cordon ordinaire
 * S'installe comme un interrupteur sur cordon ordinaire

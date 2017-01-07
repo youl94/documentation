@@ -11,7 +11,7 @@ image::../images/smarthomebyeverspring.AN179-0/module.jpg[width=256,align="cente
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -37,7 +37,7 @@ contrôleur Z-Wave de votre réseau.
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

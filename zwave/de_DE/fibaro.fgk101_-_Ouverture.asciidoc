@@ -11,7 +11,7 @@ image::../images/fibaro.fgk101-DS18B20/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom Sichtbar*
 
 {nbsp} +
 

@@ -11,7 +11,7 @@ image::../images/fibaro.fgsd102/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -31,7 +31,7 @@ Certains matériaux brûlent sans fumer. C'est pourquoi les ingénieurs de Fibar
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -59,7 +59,7 @@ Certains matériaux brûlent sans fumer. C'est pourquoi les ingénieurs de Fibar
 * Fréquence : 868,42 MHz
 * Distance de transmission : 50m champ libre, 30m en intérieur
 * Dimensions : 65 x 28 mm (diamètre x hauteur)
-* Température de fonctionnement : 0-55°C
+* Betriebstemperatur : 0-55 ° C
 * Humidité de fonctionnement : 0% - 93%
 * Gamme de mesure de la température : -20 à 100°C
 * Sensibilité à la fumée : 1er niveau - 1,20 +/- 0,5% obs/m; 2e niveau - 1,80 +/- 0,5% obs/m; 3e niveau - 2,80 +/- 0,5% obs/m

@@ -11,7 +11,7 @@ image::../images/fibaro.fgfs101/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -37,7 +37,7 @@ Ce capteur intègre un testeur de portée de réseau Z-Wave,ce qui vous assure d
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

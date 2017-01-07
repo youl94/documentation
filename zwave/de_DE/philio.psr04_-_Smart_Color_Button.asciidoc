@@ -14,7 +14,7 @@ image::../images/philio.psr04/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -39,13 +39,13 @@ Il utilise la dernière puce Z-Wave série 500, offrant une augmentation de la p
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
 * Interrupteur multifonctions
 * Technologie Z-Wave+
-* Fonction ON/OFF et variation (éclairage ou volets)
+* Funktion AN/AUS und Variationen (Beleuchtung oder Rollläden)
 * Fonction minuterie intégrée
 * Etanche
 * S'adapte à tout style de décoration

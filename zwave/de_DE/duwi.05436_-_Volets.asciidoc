@@ -11,7 +11,7 @@ image::../images/duwi.05436/1-Module.PNG[width=512,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom Sichtbar*
 
 {nbsp} +
 
@@ -37,7 +37,7 @@ Attention: ce module n'envoie pas son état au contrôleur z-wave lorsque l'util
 {nbsp} +
 
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

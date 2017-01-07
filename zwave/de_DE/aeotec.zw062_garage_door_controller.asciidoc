@@ -14,7 +14,7 @@ image::../images/aeotec.garagedoorcontroller/module.jpg[width=256,align="center"
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -33,7 +33,7 @@ Qu'il soit utilisé par le moteur ou manuellement, le détecteur intelligent liv
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

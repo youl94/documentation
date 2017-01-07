@@ -11,7 +11,7 @@ image::../images/nodon.wallswitch/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -29,7 +29,7 @@ L’interrupteur possède une platine de fixation pour le monter facilement dans
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -48,7 +48,7 @@ L’interrupteur possède une platine de fixation pour le monter facilement dans
 * Alimentation : Pile CR2032 – Autonomie 1,5 - 2ans
 * 4 boutons
 * Montage mural par adhésif double face (inclus) ou vis (non incluses)
-* Température de fonctionnement : 0°C à 40°C
+* Betriebstemperatur : 0°C bis 40°C
 * Altitude : 2000m
 * Protocole radio Z-Wave® : 868.4MHz – 500 Series – Compatible Z-Wave Plus® SDK 06.51.06
 * Portée : 40m en intérieur / 70m en extérieur

@@ -11,7 +11,7 @@ image::../images/everspring.AN180-6/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -33,7 +33,7 @@ La Mini Prise On/Off est un appareil compatible Z-Wave™ qui est destiné pour 
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

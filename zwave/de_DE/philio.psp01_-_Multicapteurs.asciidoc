@@ -14,7 +14,7 @@ image::../images/philio.psp01/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -48,7 +48,7 @@ si vous avez déjà un réseau existant.
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

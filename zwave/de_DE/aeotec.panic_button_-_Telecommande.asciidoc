@@ -14,7 +14,7 @@ image::../images/aeotec.panicbutton/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -37,7 +37,7 @@ Cette télécommande peut également être utilisée comme un bouton d'urgence o
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

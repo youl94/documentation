@@ -11,7 +11,7 @@ image::../images/secure.sir321/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -31,7 +31,7 @@ Le SIR 321 prend en charge les capteurs de température externe SES001, SES002 e
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -53,7 +53,7 @@ Le SIR 321 prend en charge les capteurs de température externe SES001, SES002 e
 * Alimentation: 230V AC, 50Hz
 * Dimensions 85x85x44mm
 * Indice de protection : IP30
-* Température de fonctionnement: 0°C à 35°C
+* Betriebstemperatur : 0°C bis 35°C
 
 {nbsp} +
 

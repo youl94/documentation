@@ -16,7 +16,7 @@ Suivant l'état, le capteur contrôle l'allumage ou l'extinction de vos éclaira
 
 Le signal est uniquement envoyé à la séparation du capteur de son élément magnétique. L'indicateur LED intégré signale tous changements d'état. Niveau de batterie faible signalé par 3 "bip" sonores sur le récepteur
 
-== Fonctions
+=== Funktionen
 
 * Capteur magnétique sans fil alimenté par piles
 * Détecte les ouvertures/fermetures
@@ -32,7 +32,7 @@ Le signal est uniquement envoyé à la séparation du capteur de son élément m
 * Type de module : Emetteur Edisio
 * Alimentation : 3VDC (Pile Lithium ER14250)
 * Fréquence : 868,3 MHz
-* Température de fonctionnement : 0°C +45°C
+* Betriebstemperatur : 0°C bis 45°C
 * Portée en champs libre : 100M
 * Dimensions : 25x79x19mm
 * Degré de protection : IP20

@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Derzeit ist Jeedom kompatibel mit* [red]*47* [green]*Marken mit verschiedenen Modulen, d.h. insgesamt* [red]*258* [green]*Modulen.*
+[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*259* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -472,7 +472,7 @@ _[small]#Piles : 4x1.5V AA#_| link:++http://www.domadoo.fr/fr/peripheriques/3423
 // 271.1792.16384_fgk101.door.opening.sensor.json
 
 |image:../images/compatibility_list/fibaro.fgk101zw5.jpg[width=150,align="center"]|Fibaro|FGK-101 ZW5 Door Sensor|Ouverture| _[small]#Piles : 1x3.6V ER14250#_|link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgk101_-_Ouverture.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/3608-fibaro-detecteur-d-ouverture-z-wave-avec-entree-contact-sec-blanc-5902020528364.html++[Acheter^]
-// 271.1793.4097_fgk101zw5.door.opening.sensor.json
+// 271.1793.12289_fgk101zw5.door.opening.sensor.json
 
 |image:../images/compatibility_list/fibaro.fgms001.jpg[width=150,align="center"]|Fibaro|FGMS-001 Motion Sensor|Multicapteurs|Par défaut possède une configuration très économique. Lire la documentation pour le configurer correctement 
 
@@ -524,6 +524,9 @@ _[small]#Piles : 1x3V CR123A#_|link:++https://jeedom.fr/doc/documentation/zwave-
 
 _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2751-fibaro-detecteur-de-fumee-z-wave-plus-fgsd-002-5902020528265.html++[Acheter^]
 // 271.3072.4096_fgss101.smoke.sensor.json
+
+|image:../images/compatibility_list/fibaro.fgwpe101zw5.jpg[width=150,align="center"]|Fibaro|FGWPE/FGWPF Wall Plug Gen5|Prise| |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgwpe101_-_Wall_Plug.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/3909-fibaro-module-prise-commutateur-et-consometre-z-wave-fibaro-wall-plug-fgwpf-102-zw5-schuko-5902020528647.html++[Acheter^]
+// 271.1538.4097_fgwpe.wall.plug.zw5.json
 
 |image:../images/compatibility_list/fibaro.fgwpe101.jpg[width=150,align="center"]|Fibaro|FGWPE/FGWPF Wall Plug|Prise| |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgwpe101_-_Wall_Plug.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/2934-fibaro-module-prise-commutateur-z-wave-avec-mesure-d-energie-fgwpf-102-schuko-5902020528302.html++[Acheter^]
 // 271.1536.4096_fgwpe.wall.plug.json

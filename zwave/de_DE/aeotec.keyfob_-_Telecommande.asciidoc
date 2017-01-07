@@ -14,7 +14,7 @@ image::../images/aeotec.keyfob/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -35,7 +35,7 @@ Chaque bouton permet de contrôler deux dispositifs ou scènes grâce à la gest
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

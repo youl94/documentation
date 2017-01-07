@@ -11,7 +11,7 @@ image::../images/dlink.dchz110/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -31,7 +31,7 @@ Un contrôleur Z-Wave (télécommande, dongle …?) est nécessaire afin d’int
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

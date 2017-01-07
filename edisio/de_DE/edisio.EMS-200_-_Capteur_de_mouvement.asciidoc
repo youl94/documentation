@@ -14,7 +14,7 @@ Placé dans un couloir, le salon, le garage de votre maison par exemple, le capt
 
 Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un large périmètre. L'indicateur LED intégré signale tout changement d'état. 
 
-== Fonctions
+== Funktionen
 
 * Détecte les mouvements, même dans le noir complet
 * Ultra compact 
@@ -29,7 +29,7 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 * Type de module : Emetteur Edisio
 * Alimentation : 3VDC (Pile Lithium ER14250)
 * Fréquence : 868,3 MHz
-* Température de fonctionnement : 0°C +45°C
+* Betriebstemperatur : 0°C bis 45°C
 * Portée en champs libre : 100M
 * Portée de détection : 6M
 * Dimensions : 25x79x19mm

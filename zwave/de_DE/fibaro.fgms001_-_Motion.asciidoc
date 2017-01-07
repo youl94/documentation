@@ -14,7 +14,7 @@ image::../images/fibaro.fgms001/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -34,7 +34,7 @@ Le détecteur de mouvement peut être utilisé pour les scènes d'éclairage et 
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

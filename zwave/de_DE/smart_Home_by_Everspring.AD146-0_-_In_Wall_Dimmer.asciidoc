@@ -11,7 +11,7 @@ image::../images/smarthomebyeverspring.AD146-0/module.jpg[width=256,align="cente
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -37,13 +37,13 @@ contrôleur Z-Wave de votre réseau.
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
 * Commandez un éclairage/appareil à distance
 * S'installe derrière un interrupteur existant
-* Fonction ON/OFF et variation
+* Funktion AN/AUS und Variationen
 * Faible consommation d'énergie
 * Très petit, dimensions réduites
 * Antenne longue portée

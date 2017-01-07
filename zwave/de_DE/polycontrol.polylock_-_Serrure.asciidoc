@@ -14,7 +14,7 @@ image::../images/polycontrol.polylock/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -38,7 +38,7 @@ Le système Poly-Control peut être utilisé dans un environnement domestique ou
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

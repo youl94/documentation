@@ -11,7 +11,7 @@ image::../images/secure.ses303/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -36,7 +36,7 @@ On peut facilement l'inclure / l'exclure dans un réseau Z-Wave.
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

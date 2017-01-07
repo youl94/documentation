@@ -11,7 +11,7 @@ image::../images/nodon.octan/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -29,7 +29,7 @@ Son aimant intégré permet de la fixer partout, du radiateur à la porte de 
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -49,7 +49,7 @@ Son aimant intégré permet de la fixer partout, du radiateur à la porte de 
 * 4 boutons
 * Support mural fixé par adhésif double face (inclus) ou vis (non incluses)
 * Aimant intégré pour fixation sur surface métallique
-* Température de fonctionnement : 0°C à 40°C - Altitude : 2000m
+* Betriebstemperatur: 0°C bis 40°C - Höhe: 2000 m
 * Protocole radio Z-Wave® : 868.4MHz – 500 Series – Compatible Z-Wave Plus® SDK 06.51.01 Portée: 40m indoor / 80m outdoor
 * Dimensions : 80*80*15mm
 * Garantie 2 ans

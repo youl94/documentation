@@ -11,7 +11,7 @@ image::../images/zipato.minikeypad/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -31,7 +31,7 @@ En plus d'utiliser le clavier numérique, vous pouvez aussi passer un badge RFID
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -58,7 +58,7 @@ En plus d'utiliser le clavier numérique, vous pouvez aussi passer un badge RFID
 *	Buzzer : 60dBa à 10 cm de distance
 *	Température de stockage : -5°C à +65°C
 *	Humidité pour stockage : 10% à 70%
-*	Température de fonctionnement : 10°C à 40°C
+* Betriebstemperatur : 10°C bis 40°C
 *	Humidité en fonctionnement : 30% à 80%
 *	Dimensions : 62 x 62 x 20 mm
 *	Certifications :	Sécurité : UL EMC : FCC, CE RoHS

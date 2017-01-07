@@ -11,7 +11,7 @@ image::../images/greenwave.Powernode1/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -37,14 +37,14 @@ Le module prise PowerNode est équipé d'une protection contre les surintensité
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
 * Commander une lampe ou un appareil à distance
 * Module prise s'intégrant directement entre une prise électrique et la charge à commander
 * Permet le suivi de consommation de l'appareil branché
-* Fonction ON/OFF
+* Funktion AN/AUS
 * Possibilité de lui affecter un numéro et une couleur afin de différencier les différentes PowerNode d'une même installation
 * Bouton On/Off directement sur la prise
 * Protection contre les surintensités

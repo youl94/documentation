@@ -11,7 +11,7 @@ image::../images/fibaro.fgrgb101/module.jpg[width=256,align="center"]
 
 {nbsp} +
 
-* *Le visuel Jeedom*
+* *In Jeedom Sichtbar*
 
 {nbsp} +
 
@@ -38,12 +38,12 @@ Le micromodule Z-Wave Fibaro FGRGB-101 permet, au choix, de commander des éclai
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 * Commander des éclairages basse tension 12/24V (halogène ou LED)
 * S'installe derrière un interrupteur existant
 * Simulation lumineuse précédemment programmée
-* Fonction ON/OFF et Variation
+* Funktion AN/AUS und Variationen
 * Petit, discret et esthétique
 * Facilité d'utilisation et d'installation
 

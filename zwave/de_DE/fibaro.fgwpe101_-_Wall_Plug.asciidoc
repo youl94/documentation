@@ -13,7 +13,7 @@ image::../images/fibaro.fgwpe101/module.jpg[width=256,align="center"]
 {nbsp} +
 
 
-* *Le visuel Jeedom*
+* *In Jeedom sichtbar*
 
 {nbsp} +
 
@@ -33,7 +33,7 @@ Le Wall Plug Fibaro peut être contrôlé par un bouton sur son carter ou bien d
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -55,7 +55,7 @@ Le Wall Plug Fibaro peut être contrôlé par un bouton sur son carter ou bien d
 * Fréquence : 868,42 Mhz EU
 * Distance de transmission : 50m champ libre, 30m en intérieur
 * Dimensions: 17 x 42 x 37 mm
-* Température de fonctionnement : 0-40°C
+* Betriebstemperatur : 0-40 ° C
 * Température limite : 105°C
 * Normes : LVD (2006/95/WE), EMC (2004/108/EC), R&TTE(1999/5/WE)
 
