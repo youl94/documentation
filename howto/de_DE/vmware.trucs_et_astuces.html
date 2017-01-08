@@ -419,15 +419,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_lizenz_hinzufügen">1. Lizenz hinzufügen</a></li>
 <li><a href="#_monter_un_datastore_nfs_avec_un_synology">2. Monter un datastore NFS avec un Synology</a>
 <ul class="sectlevel2">
-<li><a href="#_configuration_du_synology">2.1. Configuration du Synology</a></li>
-<li><a href="#_configuration_de_l_esxi">2.2. Configuration de l&#8217;ESXi</a></li>
+<li><a href="#_synology_konfiguration">2.1. Synology Konfiguration</a></li>
+<li><a href="#_esxi_konfiguration">2.2. ESXi Konfiguration</a></li>
 </ul>
 </li>
 <li><a href="#_ajout_du_plugin_vaai_synology_pour_montage_nfs">3. Ajout du plugin VAAI Synology pour montage NFS</a></li>
 <li><a href="#_installer_mettre_à_jour_l_esxi_embedded_host_client">4. Installer/Mettre à jour l&#8217;ESXi Embedded Host Client</a></li>
 <li><a href="#_installation_du_client_lourd">5. Installation du client lourd</a></li>
 <li><a href="#_mise_à_jour_de_l_esxi">6. Mise à jour de l&#8217;ESXi</a></li>
-<li><a href="#_configuration_du_ntp">7. Configuration du NTP</a></li>
+<li><a href="#_ntp_konfiguration">7. NTP Konfiguration</a></li>
 <li><a href="#_accès_extérieur_à_l_esxi">8. Accès extérieur à l&#8217;ESXi</a></li>
 </ul>
 </div>
@@ -488,7 +488,7 @@ Pour rappel, si vous ne le faites pas votre ESXi risque de ne plus fonctionner a
 <p>On va voir ici comment monter un partage NFS depuis un Synology sur VMware. Cela permet par exemple de mettre les machines virtuelles sur le Synology (qui peut avoir plus de place que l&#8217;ESXi) ou d&#8217;envoyer les backups des machines sur le Synology</p>
 </div>
 <div class="sect2">
-<h3 id="_configuration_du_synology">2.1. Configuration du Synology</h3>
+<h3 id="_synology_konfiguration">2.1. Synology Konfiguration</h3>
 <div class="paragraph">
 <p>Il faut aller sur le panneau de configuration puis "Services de fichiers" et cocher la case "Activer NFS" :</p>
 </div>
@@ -526,7 +526,7 @@ Pour rappel, si vous ne le faites pas votre ESXi risque de ne plus fonctionner a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_configuration_de_l_esxi">2.2. Configuration de l&#8217;ESXi</h3>
+<h3 id="_esxi_konfiguration">2.2. ESXi Konfiguration</h3>
 <div class="paragraph">
 <p>Il faut aller sur "Stockage" :</p>
 </div>
@@ -724,7 +724,7 @@ Attention à bien mettre le chemin complet vers le zip sinon ça ne marche pas
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration_du_ntp">7. Configuration du NTP</h2>
+<h2 id="_ntp_konfiguration">7. NTP Konfiguration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Par défaut l&#8217;ESXi n&#8217;utilise pas le NTP ce qui fait qu&#8217;il n&#8217;est pas à l&#8217;heure et que les VMs ne sont pas à l&#8217;heure, pour corriger c&#8217;est très simple. Il faut aller à partir de la version web sur Gérer &#8594; Système &#8594; Date et heure, là vous cliquez sur "Modifier les paramètres" :</p>
