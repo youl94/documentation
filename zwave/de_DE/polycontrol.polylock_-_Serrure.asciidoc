@@ -23,7 +23,7 @@ image::../images/polycontrol.polylock/vuedefaut1.jpg[width=220,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 {nbsp}
 
 Sécurisez votre maison en utilisant la serrure électronique Z-Wave de Poly-Control !
@@ -52,7 +52,7 @@ Le système Poly-Control peut être utilisé dans un environnement domestique ou
 {nbsp} +
 
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -71,14 +71,14 @@ Le système Poly-Control peut être utilisé dans un environnement domestique ou
 
 
 * Marque : Poly-Control
-* Nom : Polylock
-* Fabricant ID : 270
-* Type Produit : 1
-* Produit ID : 1
+* Name : Polylock
+* Hersteller-ID : 270
+* Produkttyp : 1
+* Produkt-ID : 1
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -105,12 +105,12 @@ image::../images/polycontrol.polylock/information.jpg[Plugin Zwave,align="center
 {nbsp} +
 
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -120,7 +120,7 @@ image::../images/polycontrol.polylock/commandes.jpg[Commandes,align="center"]
 {nbsp} +
 
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -133,7 +133,7 @@ image::../images/polycontrol.polylock/commandes.jpg[Commandes,align="center"]
 {nbsp} +
 
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -146,8 +146,8 @@ de wake up et de réveil. Il récupérera toutes modifications de configutation 
 {nbsp} +
 
 
-Si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+Wenn Sie später die Konfiguration des Moduls gemäß Ihrer Funktion durchführen wollen, 
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -181,7 +181,7 @@ image::../images/polycontrol.polylock/config1.jpg[Config1,align="center"]
 
 
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 

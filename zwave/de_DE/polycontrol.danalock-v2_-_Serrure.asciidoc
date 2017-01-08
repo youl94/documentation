@@ -23,7 +23,7 @@ image::../images/polycontrol.danalock/vuedefaut1.jpg[width=220,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 {nbsp}
 
 *Sécurisez votre maison en utilisant la serrure électronique Z-Wave de Poly-Control !*
@@ -80,7 +80,7 @@ Développez le contrôle de votre maison intelligente avec un Danalock, l'initia
 Danalock allie l'élégance et le minimalisme du design scandinave - avec une lunette en aluminium massif anodisé et les technologies de pointe Bluetooth et Z-Wave. Une conception discrète danoise conçue pour durer.
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -102,7 +102,7 @@ Danalock allie l'élégance et le minimalisme du design scandinave - avec une lu
 {nbsp} +
 
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -123,14 +123,14 @@ Danalock allie l'élégance et le minimalisme du design scandinave - avec une lu
 
 
 * Marque : Poly-Control
-* Nom : Danalock V2 BTZE
-* Fabricant ID : 010e
-* Type Produit : 1
-* Produit ID : 1
+* Name : Danalock V2 BTZE
+* Hersteller-ID : 010e
+* Produkttyp : 1
+* Produkt-ID : 1
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -176,12 +176,12 @@ image::../images/polycontrol.danalock/information.jpg[Plugin Zwave,align="center
 {nbsp} +
 
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -191,7 +191,7 @@ image::../images/polycontrol.danalock/commandes.jpg[Commandes,align="center"]
 {nbsp} +
 
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -204,7 +204,7 @@ image::../images/polycontrol.danalock/commandes.jpg[Commandes,align="center"]
 {nbsp} +
 
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -218,7 +218,7 @@ de wake up et de réveil. Il récupérera toutes modifications de configutation 
 
 
 Si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -260,7 +260,7 @@ image::../images/polycontrol.danalock/bouton_configuration.jpg[Config1,align="ce
 
 
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 

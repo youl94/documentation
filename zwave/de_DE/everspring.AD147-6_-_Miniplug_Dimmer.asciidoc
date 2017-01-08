@@ -19,7 +19,7 @@ image::../images/everspring.AD147-6/vuedefaut1.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -44,11 +44,11 @@ contrôleur Z-Wave de votre réseau.
 * Technologie Z-Wave Plus
 * Dimensions réduites pour passer presque inaperçue
 * LED de statut sur le bouton intégré
-* Fonction répéteur Z-Wave
+* Z-Wave Repeater-Funktion
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -68,14 +68,14 @@ contrôleur Z-Wave de votre réseau.
 {nbsp} +
 
 * Marque : Everspring
-* Nom : Miniplug Dimmer
-* Fabricant ID : 96
-* Type Produit : 3
-* Produit ID : 3
+* Name : Miniplug Dimmer
+* Hersteller-ID : 96
+* Produkttyp : 3
+* Produkt-ID : 3
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -102,11 +102,11 @@ image::../images/everspring.AD147-6/information.jpg[Plugin Zwave,align="center"]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -114,7 +114,7 @@ image::../images/everspring.AD147-6/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -129,12 +129,12 @@ A noter que sur le dashboard, les infos Etat, ON/OFF, Intensité se retrouvent s
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
 Vous pouvez effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -160,7 +160,7 @@ image::../images/everspring.AD147-6/config1.jpg[Config1,align="center"]
 * 3 : Ce paramètre permet de définir si la prise reprendra son statut (ON ou OFF) après une reprise de courant.
 * 4 : Ce paramètre permet de définir si la prise fontionnera en mode variation ou en mode on/off
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 

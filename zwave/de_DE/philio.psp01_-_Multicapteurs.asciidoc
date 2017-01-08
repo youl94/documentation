@@ -23,7 +23,7 @@ image::../images/philio.psp01/vuedefaut1.jpg[width=350,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -66,7 +66,7 @@ si vous avez déjà un réseau existant.
 {nbsp} +
 
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -82,7 +82,7 @@ si vous avez déjà un réseau existant.
 * Portée de détection PIR : 8 à 10m
 * Dimensions : 28 x 96 x 23 mm
 * Poids : 39g
-* Température de fonctionnement : -10 à 40° C
+* Betriebstemperatur : -10°C bis 40°C
 * Humidité de fonctionnement : 85%RH max
 * Norme CE : EN300 220-1
 * Certification Z-Wave : ZC08-13050003
@@ -96,14 +96,14 @@ si vous avez déjà un réseau existant.
 
 
 * Marque : Philio Technology Corporation
-* Nom : Philio PSP01
-* Fabricant ID : 316
-* Type Produit : 2
-* Produit ID : 2
+* Name : Philio PSP01
+* Hersteller-ID : 316
+* Produkttyp : 2
+* Produkt-ID : 2
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -130,12 +130,12 @@ image::../images/philio.psp01/information.jpg[Plugin Zwave,align="center"]
 {nbsp} +
 
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -145,7 +145,7 @@ image::../images/philio.psp01/commandes.jpg[Commandes,align="center"]
 {nbsp} +
 
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -161,7 +161,7 @@ image::../images/philio.psp01/commandes.jpg[Commandes,align="center"]
 
 Tous les modules de la gamme ayant les mêmes ids, à vous d'afficher ceux correspondant à votre module.
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -174,8 +174,8 @@ Lors d'une première inclusion réveillez toujours le module juste après l'incl
 {nbsp} +
 
 
-Ensuite si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+Wenn Sie später die Konfiguration des Moduls gemäß Ihrer Funktion durchführen wollen, 
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -215,7 +215,7 @@ image::../images/philio.psp01/config2.jpg[Config2,align="center"]
 
 
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
@@ -294,7 +294,7 @@ Cochez la case "Evènement sur changement".
 
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
 Ce module est un module sur batterie, la nouvelle configuration sera prise en compte au prochain wakeup.
 --
@@ -309,8 +309,8 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wakeup, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +
 

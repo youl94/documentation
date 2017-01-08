@@ -89,7 +89,7 @@ Wenn Sie fertig sind, klicken Sie auf das Bild ausführen:
 
 image::../images/install_synology_22.PNG[]
 
-Donnez un nom à votre jeedom ainsi qu'un port local redirigé vers le port 80 (ici 9080) et un vers le 22 (ici 9022) du conteneur, puis faites suivant :
+Geben Sie einen Namen für Ihre Jeedom und einen lokalen Port auf Port 80 (hier 9080 und einen auf 22 (hier 9022) des Containers, dann weiter klicken :
 
 image::../images/install_synology_23.PNG[]
 
@@ -125,7 +125,7 @@ Il vous faut maintenant installer Jeedom, c'est très simple allez sur IP_NAS:90
 
 image::../images/install_synology_31.PNG[]
 
-Remplissez les champs en fonction de votre configuration (configuration du docker mysql installé précédemment) et validez.
+Füllen Sie die Felder entsprechend Ihrer Konfiguration (Docker konfigurieren, mysql muß zuvor installiert sein) aus und bestätigen sie.
 
 [WICHTIG]
 L'addresse IP de la BDD est l'addresse IP du NAS, le port est celui redirigé du docker Mysql, le mot de passe est celui mis dans le docker Mysql. Le nom d'utilisateur est root et le nom de la base celui que vous voulez (conseillé Jeedom)

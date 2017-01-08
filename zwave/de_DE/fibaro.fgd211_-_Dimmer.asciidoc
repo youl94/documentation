@@ -19,7 +19,7 @@ image::../images/fibaro.fgd211/vuedefaut1.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -53,7 +53,7 @@ Chaque module Z-Wave fonctionne comme un répéteur sans fil avec les autres mod
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -67,7 +67,7 @@ Chaque module Z-Wave fonctionne comme un répéteur sans fil avec les autres mod
 * Fréquence : 868,42 Mhz
 * Distance de transmission : 50m champ libre, 30m en intérieur
 * Dimensions: 15 x 42 x 36 mm
-* Température de fonctionnement : 0-40°C
+* Betriebstemperatur : 0-40 ° C
 * Température limite : 105°C
 * Normes : EN 55015 et EN 60669-2-1
 
@@ -77,15 +77,15 @@ Chaque module Z-Wave fonctionne comme un répéteur sans fil avec les autres mod
 
 {nbsp} +
 
-* Marque : Fibar Group
-* Nom : Fibaro FGMS-001 [Motion Sensor]
-* Fabricant ID : 271
-* Type Produit : 256
-* Produit ID : 4106
+* Marke : Fibar Group
+* Name : Fibaro FGMS-001 [Bewegungsmelder]
+* Hersteller-ID : 271
+* Produkttyp : 256
+* Produkt-ID : 4106
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -117,11 +117,11 @@ image::../images/fibaro.fgd211/information.jpg[Plugin Zwave,align="center"]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -129,7 +129,7 @@ image::../images/fibaro.fgd211/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -142,12 +142,12 @@ A noter que sur le dashboard toutes les infos se retrouvent sur le même icone
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
 Vous pouvez effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -191,11 +191,11 @@ image::../images/fibaro.fgd211/config3.jpg[Config3,align="center"]
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
-Ce module possède trois groupes d'association, seul le troisième est indispensable.
+Dieses Modul hat 3 Assoziationsgruppen, nur die dritte ist unerlässlich.
 
 {nbsp} +
 

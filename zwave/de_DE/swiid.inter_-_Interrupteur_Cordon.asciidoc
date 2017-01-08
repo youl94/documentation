@@ -19,7 +19,7 @@ image::../images/swiid.inter/vuedefaut1.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -57,7 +57,7 @@ un "réseau" Z-Wave, ce réseau pouvant être aussi simple qu'une seule téléco
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -67,10 +67,10 @@ un "réseau" Z-Wave, ce réseau pouvant être aussi simple qu'une seule téléco
 * Puissance maxi : 660W
 * Consommation : < 0,08W
 * Indice de protection: IP20
-* Protocole radio: Z-Wave® (SDK 4.55)
-* Fréquence radio : 868,42 MHz (EU)
+* Funkprotokoll : Z-Wave® (SDK 4.55)
+* Funkfrequenz : 868,42MHz (EU)
 * Dist. transmission: Jusqu'à 30m en intérieur (dépend des matériaux)
-* Temp. fonctionnement : 0 – 40°C
+* Betriebstemperatur : 0-40°C
 * Affichage marche/arrêt : LEDs bleues
 * Dimensions : 84 x 32 x 29 mm
 * Normes UE : EN 61058-2-1:2011 EN 55015
@@ -83,13 +83,13 @@ un "réseau" Z-Wave, ce réseau pouvant être aussi simple qu'une seule téléco
 
 * Marque : Swiid
 * Nom : Swiidinter
-* Fabricant ID : 358
-* Type Produit : 256
-* Produit ID : 256
+* Hersteller-ID : 358
+* Produkttyp : 256
+* Produkt-ID : 256
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -115,11 +115,11 @@ image::../images/swiid.inter/information.jpg[Plugin Zwave,align="center"]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -127,7 +127,7 @@ image::../images/swiid.inter/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -141,12 +141,12 @@ A noter que sur le dashboard toutes les infos se retrouvent sur le même icone
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
 Vous pouvez effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -177,7 +177,7 @@ Ce paramètre permet de choisir le comportement lorsque vous associez le swiidin
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 

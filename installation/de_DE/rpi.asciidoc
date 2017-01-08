@@ -53,6 +53,6 @@ Les identifiants SSH sont root/Mjeedom96
 Attention si vous avez une carte SD de plus de 4go n'oubliez pas d'étendre la partition avec la commande raspi-config en SSH ou sudo raspi-config si nécessaire
 
 [IMPORTANT]
-Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L'OVERCLOCKER sous peine d'avoir un système instable avec de nombreuses corruptions de carte SD
+Wenn Sie einen rpi2 haben, VOR ALLEM NICHT ÜBERTACKTEN, das könnte ein instabiles System zur folge haben mit zahlreicher Beschädigung der SD Karte
 
 Ensuite vous pouvez suivre la documentation https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html[Premier pas avec Jeedom]

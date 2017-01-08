@@ -23,7 +23,7 @@ image::../images/aeotec.garagedoorcontroller/vuedefaut1.jpg[width=200,align="cen
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -46,7 +46,7 @@ Qu'il soit utilisé par le moteur ou manuellement, le détecteur intelligent liv
 * Port USB pour charger vos propres sons MP3.
 * LED de statut intégrée sur le bouton.
 * Fait partie de la gamme Gen5 de Aeon Labs.
-* Sécurité de la communication radio via le chiffrement AES-128.
+* Sichere Funkkommunikation über die AES-128-Verschlüsselung
 * Intègre la puce Z-Wave série 500.
 * Communication 250% plus rapide comparée à des périphériques Z-Wave standard.
 * Répéteur de messages Z-Wave.
@@ -56,7 +56,7 @@ Qu'il soit utilisé par le moteur ou manuellement, le détecteur intelligent liv
 {nbsp} +
 
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -70,7 +70,7 @@ Qu'il soit utilisé par le moteur ou manuellement, le détecteur intelligent liv
 * Formats audio supportés : mp3 et WMV à la fréquence de 320Kbps
 * Fréquence : 868,42 Mhz
 * Distance de transmission : 300m en champ libre
-* Température de fonctionnement : -20°C à 50°C
+* Betriebstemperatur : -20°C bis 50°C
 * Humidité de fonctionnement : 80%
 * Certifications: FCC, UL, CE, ROHS
 
@@ -83,14 +83,14 @@ Qu'il soit utilisé par le moteur ou manuellement, le détecteur intelligent liv
 
 
 * Marque : Aeotec
-* Nom : Garage Door Controller (ZW062)
-* Fabricant ID : 134
-* Type Produit : 3
-* Produit ID : 62
+* Name : Garage Tür-Controller (ZW062)
+* Hersteller-ID : 134
+* Produkttyp : 3
+* Produkt-ID : 62
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -117,12 +117,12 @@ image::../images/aeotec.garagedoorcontroller/information.jpg[Plugin Zwave,align=
 {nbsp} +
 
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -132,7 +132,7 @@ image::../images/aeotec.garagedoorcontroller/commandes.jpg[Commandes,align="cent
 {nbsp} +
 
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -146,13 +146,13 @@ image::../images/aeotec.garagedoorcontroller/commandes.jpg[Commandes,align="cent
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
 
-Ensuite si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+Wenn Sie später die Konfiguration des Moduls gemäß Ihrer Funktion durchführen wollen, 
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -184,7 +184,7 @@ image::../images/aeotec.garagedoorcontroller/config2.jpg[Config1,align="center"]
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 

@@ -18,7 +18,7 @@ image::../images/dlink.dchz110/module.jpg[width=256,align="center"]
 image::../images/dlink.dchz110/vuedefaut1.jpg[width=350,align="center"]
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -46,11 +46,11 @@ Un contrôleur Z-Wave (télécommande, dongle …?) est nécessaire afin d’int
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
-Site officiel : http://www.dlink.com/-/media/Consumer_Products/DCH/DCH%20Z110/Datasheet/DCH_Z110_Datasheet_FR.pdf
+Offizielle Website
 
 Autre lien technique : http://www.kafkas.gr/uploads/Pdf/182732/DCH-Z120_183010381_01_Z02.PDF
 
@@ -64,14 +64,14 @@ image::../images/dlink.dchz110/caracteristiques_techniques.jpg[width=850,align="
 
 * Marque : D-Link
 * Modèle : DCH-Z110 Détecteur d’ouverture de porte et de fenêtre mydlink™ Home
-* Fabricant : FIBARO System
+* Hersteller : FIBARO Systems
 * Fabricant ID : 264 [0x0108]
-* Type Produit : 2 [0x0002]
-* Produit ID : 14 [0x000e]
+* Produkttyp : 2 [0x0002]
+* Produkt-ID : 14 [0x000e]
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -98,11 +98,11 @@ image::../images/dlink.dchz110/apres_inclusion.jpg[Plugin Zwave]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -110,7 +110,7 @@ image::../images/dlink.dchz110/commandes.jpg[Commandes]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -122,7 +122,7 @@ image::../images/dlink.dchz110/commandes.jpg[Commandes]
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -133,7 +133,7 @@ Lors d’une première inclusion, ou d’une modification, sauvegarder puis rév
 {nbsp} +
 
 Ensuite il est nécessaire d’effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -183,7 +183,7 @@ image::../images/dlink.dchz110/config2.jpg[Config2]
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
@@ -232,7 +232,7 @@ Ce module se réveille en appuyant sur son bouton association.
 {nbsp} +
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
 Ce module est un module sur batterie, la nouvelle configuration sera prise en compte au prochain wakeup. (bouton d'association pour le forcer, d'où l'interêt de ne pas mettre en place le module avant sa bonne configuration)
 --
@@ -246,7 +246,7 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 [icon="../images/plugin/attention.jpg"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wakeup, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +

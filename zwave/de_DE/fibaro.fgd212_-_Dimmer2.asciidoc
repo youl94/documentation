@@ -19,7 +19,7 @@ image::../images/fibaro.fgd212/vuedefaut1.jpg[width=300,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -52,13 +52,13 @@ Il est compatible avec tout type de lampes supportant la variation ou non. En pl
 * Diode LED d'indication d'état de l'inclusion, d'étalonnage et niveaux de MENU
 * Testeur de portée Z-Wave intégré
 * Détecte automatiquement les défauts de câblage, température élevée, ampoule grillée, les surtensions et les surcharges
-* Options de configuration avancée
+* Optionen der erweiterten Konfiguration
 * Petit, discret et esthétique
 * Facilité d'utilisation et d'installation
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -73,7 +73,7 @@ Il est compatible avec tout type de lampes supportant la variation ou non. En pl
 * Puissance du signal : 1mW
 * Distance de transmission : 50m champ libre, 30m en intérieur
 * Dimensions : 42.5 x 38.25 x 20.3mm
-* Température de fonctionnement : 0-35°C
+* Betriebstemperatur : 0-35 ° C
 * Température limite : 105°C
 * Normes : RoHS 2011/65/EU, LVD 2006/95/EC, EMC 2004/108/EC, R&TTE 1999/5/EC
 
@@ -83,15 +83,15 @@ Il est compatible avec tout type de lampes supportant la variation ou non. En pl
 
 {nbsp} +
 
-* Marque : Fibar Group
+* Marke : Fibar Group
 * Nom :  FGD212 Dimmer 2
-* Fabricant ID : 271
-* Type Produit : 258
-* Produit ID : 4096
+* Hersteller-ID : 271
+* Produkttyp : 258
+* Produkt-ID : 4096
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -123,11 +123,11 @@ image::../images/fibaro.fgd212/information.jpg[Plugin Zwave,align="center"]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées aux modules seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -135,7 +135,7 @@ image::../images/fibaro.fgd212/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -150,12 +150,12 @@ A noter que sur le dashboard toutes les infos se retrouvent sur le même icone
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
 Vous pouvez effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -183,7 +183,7 @@ EN COURS DE REDACTION
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 

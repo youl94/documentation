@@ -19,7 +19,7 @@ image::../images/fibaro.fgk101-DS18B20/vuedefaut1.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -55,7 +55,7 @@ déjà un réseau existant.
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -65,7 +65,7 @@ déjà un réseau existant.
 * Fréquence : 868,42 Mhz
 * Distance de transmission : 50m champ libre, 30m en intérieur
 * Dimensions: 76 x 17 x 19 mm
-* Température de fonctionnement : 0-40°C
+* Betriebstemperatur : 0-40 ° C
 
 {nbsp} +
 
@@ -73,15 +73,15 @@ déjà un réseau existant.
 
 {nbsp} +
 
-* Marque : Fibar Group
-* Nom : Fibaro FGK-101 avec sonde de température (DS18B20)
-* Fabricant ID : 271
-* Type Produit : 1792
-* Produit ID : 4096
+* Marke : Fibar Group
+* Name : Fibaro FGK-101 mit Temperatursonde (DS18B20)
+* Hersteller-ID : 271
+* Produkttyp : 1792
+* Produkt-ID : 4096
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -107,11 +107,11 @@ image::../images/fibaro.fgk101-DS18B20/information.jpg[Plugin Zwave,align="cente
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -119,7 +119,7 @@ image::../images/fibaro.fgk101-DS18B20/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -132,7 +132,7 @@ Vous pouvez masquer ou afficher ces commandes comme vous le souhaitez.
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -142,8 +142,8 @@ Lors d'une première inclusion réveillez toujours le module juste après l'incl
 
 {nbsp} +
 
-Ensuite si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+Wenn Sie später die Konfiguration des Moduls gemäß Ihrer Funktion durchführen wollen, 
+erfolgt das in Jeedom über die Schaltfläche „Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -177,11 +177,11 @@ image::../images/fibaro.fgk101-DS18B20/config2.jpg[Config2,align="center"]
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
-Ce module possède trois groupes d'association, seul le troisième est indispensable.
+Dieses Modul hat 3 Assoziationsgruppen, nur die dritte ist unerlässlich.
 
 {nbsp} +
 
@@ -242,7 +242,7 @@ Ce module à une portée très faible. Il est conseillé de faire l'inclusion au
 {nbsp} +
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
 Ce module est un module sur batterie, la nouvelle configuration sera prise en compte au prochain wakeup.
 --
@@ -256,8 +256,8 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wakeup, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +
 

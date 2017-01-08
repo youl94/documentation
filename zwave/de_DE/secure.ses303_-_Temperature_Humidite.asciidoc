@@ -19,7 +19,7 @@ image::../images/secure.ses303/vuedefaut1.jpg[width=350,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -43,13 +43,13 @@ On peut facilement l'inclure / l'exclure dans un réseau Z-Wave.
 * Mesure précise de la température et de l'humidité
 * Application dans des systèmes de contrôle dynamique de réservoirs/tubes/planchers chauffants/...
 * Possibilité de brancher des sonde externes
-* Interropérable avec les produits et systèmes Z-Wave certifiés
+* Interoperabilität mit zertifizierten Z-Wave Produkten und Systemen 
 * Installation facile et rapide
 * Rapport de batterie faible
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -69,14 +69,14 @@ On peut facilement l'inclure / l'exclure dans un réseau Z-Wave.
 {nbsp} +
 
 * Marque : Horstmann
-* Nom : SES 303 Temperature and Humidity Sensor
-* Fabricant ID : 89
-* Type Produit : 13
-* Produit ID : 3
+* Name : SES 303 Temperatur und Feuchtigkeit Sensor
+* Hersteller-ID : 89
+* Produkttyp : 13
+* Produkt-ID : 3
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -102,11 +102,11 @@ image::../images/secure.ses303/information.jpg[Plugin Zwave]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -114,7 +114,7 @@ image::../images/secure.ses303/commandes.jpg[Commandes]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -137,7 +137,7 @@ Lors d'une première inclusion réveillez toujours le module juste après l'incl
 {nbsp} +
 
 Ensuite il est nécessaire d’effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -166,7 +166,7 @@ Tous les autres paramètres sont identiques et correspondent à toutes les sonde
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
@@ -215,7 +215,7 @@ Ce module se réveille en appuyant 1 fois sur son bouton d'inclusion.
 {nbsp} +
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
 Ce module est un module sur batterie, la nouvelle configuration sera prise en compte au prochain wake up.
 --
@@ -229,8 +229,8 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wake up, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +
 

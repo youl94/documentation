@@ -8,7 +8,7 @@ image::../images/ems200/ems200.module.jpg[width=350,align="center"]
 
 image::../images/ems200/ems200.vue-defaut.jpg[align="center"]
 
-== Résumé
+== Zusammenfassung
 
 Placé dans un couloir, le salon, le garage de votre maison par exemple, le capteur de mouvement détecte une présence, le changement d'état est instantané.
 
@@ -24,7 +24,7 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 * Montage au mur par des vis ou par double face
 * Informations sur le niveau de la batterie
 
-== Caractéristiques techniques
+== Technische Daten
 
 * Type de module : Emetteur Edisio
 * Alimentation : 3VDC (Pile Lithium ER14250)
@@ -39,9 +39,9 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 == Moduldaten
 
 * Marque : Edisio Smart Home
-* Nom : EMS-200
+* Name : EMS-200
 
-== Configuration générale
+== Hauptkonfiguration
 
 Pour configurer le plugin Edisio et associer un module à Jeedom, référez-vous à cette link:https://www.jeedom.fr/doc/documentation/plugins/edisio/fr_FR/edisio.html[documentation].
 
@@ -80,13 +80,13 @@ image::../images/ems200/ems200.general.jpg[align="center"]
 [TIP]
 Afin que le widget soit présent sur le dashboard, pensez à placer votre équipement dans un objet.
 
-=== Commandes
+=== Befehle
 
 Une fois votre équipement créé, vous devriez obtenir les commandes associées au module :
 
 image::../images/ems200/ems200.commande.jpg[Commandes,align="center"]
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 * Présence : C'est la commande qui indique si une présence est détectée
 * Batterie : Indique l'état de la batterie

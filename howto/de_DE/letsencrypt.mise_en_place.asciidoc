@@ -14,7 +14,7 @@ cd letsencrypt
 
 Pour faire une demande de certificat vous devez posséder un nom de domaine pour lequel il sera générer.
 
-== Configuration d'Apache
+==  Apache Konfiguration
 
 Cette commande n'est à utiliser que si vous disposez d'un serveur web Apache.
 
@@ -26,7 +26,7 @@ Vous devez remplacer les paramètres email et domaine par vos valeurs.
 
 Normalement les paramètres d'ajout du protocole https sont ajoutés par le script dans Apache.
 
-== Configuration de Nginx
+== Nginx Konfiguration
 
 Cette commande n'est à utiliser que si vous disposez d'un serveur web Nginx.
 

@@ -19,7 +19,7 @@ image::../images/greenwave.powernode/vuedefaut1.jpg[width=400,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -50,20 +50,20 @@ Cette multiprise est idéale pour contrôler des appareils multimédia dans un m
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
 * Alimentation : 250V ~ AC, 50Hz
-* Courant de charge maximum : 10A
+* Maximaler Laststrom : 10A
 * Puissance de charge maximale : 2400W (@ 240V)
 * Consommation en veille : 0,4 W
 * Précision de mesure : ± 0.1W
 * Protection contre les surintensités : 10A fusible interne
 * Type de prise : DIN49440 / CEE 7/7 (Schuko)
-* Radio Fréquence Z-Wave : 868.42MHz
+* Z-Wave Funkfrequenz : 868,42MHz
 * Portée maximale Z-Wave : 30m
-* Température de fonctionnement : 0 ° C à + 25 ° C
+* Betriebstemperatur : 0°C bis +25°C
 * Température de stockage : -20 ° C à + 60 ° C
 * Humidité maximale : 5% à 90%
 * Classe IP (Tolérance d'humidité) : IP20
@@ -75,14 +75,14 @@ Cette multiprise est idéale pour contrôler des appareils multimédia dans un m
 {nbsp} +
 
 * Marque : GreenWave
-* Nom : GreenWave[6 x prises]
-* Fabricant ID : 153
-* Type Produit : 3
-* Produit ID : 4
+* Name : GreenWave NP-210F PowerNode 6 Steckdosenleiste
+* Hersteller-ID : 153
+* Produkttyp : 3
+* Produkt-ID : 4
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -108,11 +108,11 @@ image::../images/greenwave.powernode/information.jpg[Plugin Zwave,align="center"
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -124,7 +124,7 @@ image::../images/greenwave.powernode/commandes5.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -165,12 +165,12 @@ A noter que sur le dashboard les commandes ON/OFF/ETAT sont regroupées en un se
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
 Vous pouvez effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -199,7 +199,7 @@ Comme vous pourrez le constater il n'y a pas beaucoup de configuration pour ce m
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
@@ -249,7 +249,7 @@ image::../images/greenwave.powernode/consocumul2.jpg[align="center"]
 {nbsp} +
 
 
-==== Reset
+==== Zurücksetzen
 
 {nbsp} +
 

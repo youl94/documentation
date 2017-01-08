@@ -31,7 +31,7 @@ systemctl stop nginx
 systemctl stop mysql
 ----
 
-=== Installation et configuration d'Apache
+=== Installation und Konfiguration von Apache
 
 ----
 mkdir -p /var/www/html/log

@@ -19,7 +19,7 @@ image::../images/fibaro.fgsd102/vuedefaut1.jpg[width=350,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -49,13 +49,13 @@ Certains matériaux brûlent sans fumer. C'est pourquoi les ingénieurs de Fibar
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
 * Type de module : Emetteur Z-Wave
 * Alimentation : Batterie Lithium 3V CR123A
-* Autonomie de la batterie : 3 ans
+* Batterielaufzeit  : 3 Jahre
 * Fréquence : 868,42 MHz
 * Distance de transmission : 50m champ libre, 30m en intérieur
 * Dimensions : 65 x 28 mm (diamètre x hauteur)
@@ -74,15 +74,15 @@ Certains matériaux brûlent sans fumer. C'est pourquoi les ingénieurs de Fibar
 
 {nbsp} +
 
-* Marque : Fibar Group
-* Nom : Fibaro Smoke Sensor FGSD-002
-* Fabricant ID : 271
-* Type Produit : 3074
-* Produit ID : 4098
+* Marke : Fibar Group
+* Name : Fibaro Rauch-Sensor FGSD-002
+* Hersteller-ID : 271
+* Produkttyp : 3074
+* Produkt-ID : 4098
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -108,11 +108,11 @@ image::../images/fibaro.fgsd102/information.jpg[Plugin Zwave]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -120,7 +120,7 @@ image::../images/fibaro.fgsd102/commandes.jpg[Commandes]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -133,7 +133,7 @@ image::../images/fibaro.fgsd102/commandes.jpg[Commandes]
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -144,7 +144,7 @@ Lors d'une première inclusion réveillez toujours le module juste après l'incl
 {nbsp} +
 
 Ensuite il est nécessaire d’effectuer la configuration du module en fonction de votre installation.
-Il faut pour cela passer par le bouton "Configuration" du plugin OpenZwave de Jeedom.
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -182,7 +182,7 @@ image::../images/fibaro.fgsd102/config2.jpg[Config2]
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
@@ -231,7 +231,7 @@ Ce module se réveille en appuyant 3 fois sur son bouton d'inclusion.
 {nbsp} +
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
 Ce module est un module sur batterie, la nouvelle configuration sera prise en compte au prochain wakeup.
 --
@@ -245,8 +245,8 @@ Ce module est un module sur batterie, la nouvelle configuration sera prise en co
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wakeup, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +
 

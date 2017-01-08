@@ -19,7 +19,7 @@ image::../images/nodon.octan/vuedefaut1.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -41,16 +41,16 @@ Son aimant intégré permet de la fixer partout, du radiateur à la porte de 
 
 {nbsp} +
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
-* Alimentation : Pile CR2032 – Autonomie 1,5 - 2ans
+* Batterie : CR2032 - Batterie 1,5-2 Jahre
 * 4 boutons
 * Support mural fixé par adhésif double face (inclus) ou vis (non incluses)
 * Aimant intégré pour fixation sur surface métallique
 * Betriebstemperatur: 0°C bis 40°C - Höhe: 2000 m
-* Protocole radio Z-Wave® : 868.4MHz – 500 Series – Compatible Z-Wave Plus® SDK 06.51.01 Portée: 40m indoor / 80m outdoor
+* Z-Wave® Funk Protokoll : 868,4MHz - 500 Serie - kompatibel Z-Wave Plus® SDK 06.51.01  Reichweite: 40m Innen / 80m Außen
 * Dimensions : 80*80*15mm
 * Garantie 2 ans
 
@@ -61,14 +61,14 @@ Son aimant intégré permet de la fixer partout, du radiateur à la porte de 
 {nbsp} +
 
 * Marque : Nodon
-* Nom : CRC-3-1-00 Octan Remote
-* Fabricant ID : 357
-* Type Produit : 2
-* Produit ID : 1
+* Name : CRC-3-1-00 Octan Remote (Fernbedienung)
+* Hersteller-ID : 357
+* Produkttyp : 2
+* Produkt-ID : 1
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -94,11 +94,11 @@ image::../images/nodon.octan/information.jpg[Plugin Zwave,align="center"]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -106,7 +106,7 @@ image::../images/nodon.octan/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -127,7 +127,7 @@ image::../images/nodon.octan/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -139,8 +139,8 @@ Lors d'une première inclusion réveillez toujours le module juste après l'incl
 {nbsp} +
 
 
-Ensuite si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+Wenn Sie später die Konfiguration des Moduls gemäß Ihrer Funktion durchführen wollen, 
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -167,7 +167,7 @@ image::../images/nodon.octan/config1.jpg[Config1,align="center"]
 * 8 : Permet de choisir le mode de fonctionnement de la LED
 
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
@@ -219,9 +219,9 @@ Pour réveiller ce module il suffit d'appuyer sur un des boutons
 {nbsp} +
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
-Ce module est un module sur batterie, la nouvelle configuration ne sera prise en compte que si vous réveillez la télécommande.
+Dieses Modul ist ein Batterie-Modul, die neue Konfiguration wird berücksichtigt werden, wenn die Fernbedienung aufwacht.
 --
 
 {nbsp} +
@@ -233,8 +233,8 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wakeup, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +
 

@@ -23,7 +23,7 @@ image::../images/aeotec.keyfob-gen5/vuedefaut1.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Résumé
+=== Zusammenfassung
 
 {nbsp} +
 
@@ -48,7 +48,7 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 * Gère jusqu'à 8 périphériques/scènes
 * Volet de protection coulissant
 * Fait partie de la gamme Gen5 de Aeon Labs
-* Sécurité de la communication radio via le chiffrement AES-128
+* Sichere Funkkommunikation über die AES-128-Verschlüsselung
 * Intègre la puce Z-Wave série 500
 * Communication 250% plus rapide comparée à des périphériques Z-Wave standard 
 * Optimisation de l'antenne, portée 100 mètres
@@ -57,7 +57,7 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 {nbsp} +
 
 
-=== Caractéristiques techniques
+=== Technische Daten
 
 {nbsp} +
 
@@ -78,14 +78,14 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 
 
 * Marque : Aeotec
-* Nom : ZW088 Key Fob Gen5
+* Name : ZW088 Key Fob Gen5
 * Fabricant ID : 134
-* Type Produit : 1
-* Produit ID : 88
+* Produkttyp : 1
+* Produkt-ID : 88
 
 {nbsp} +
 
-=== Configuration
+=== Konfiguration
 
 {nbsp} +
 
@@ -112,12 +112,12 @@ image::../images/aeotec.keyfob-gen5/information.jpg[Plugin Zwave,align="center"]
 {nbsp} +
 
 
-==== Commandes
+==== Befehle
 
 {nbsp} +
 
 
-Une fois le module reconnu, les commandes associées au module seront disponibles.
+Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.
 
 {nbsp} +
 
@@ -127,7 +127,7 @@ image::../images/aeotec.keyfob-gen5/commandes.jpg[Commandes,align="center"]
 {nbsp} +
 
 
-[underline]#Voici la liste des commandes :#
+[underline]#Hier ist die Liste der Befehle :#
 
 {nbsp} +
 
@@ -152,7 +152,7 @@ image::../images/aeotec.keyfob-gen5/commandes.jpg[Commandes,align="center"]
 
 {nbsp} +
 
-==== Configuration du module
+==== Modulkonfiguration
 
 {nbsp} +
 
@@ -164,8 +164,8 @@ Lors d'une première inclusion réveillez toujours le module juste après l'incl
 {nbsp} +
 
 
-Ensuite si vous voulez effectuer la configuration du module en fonction de votre installation,
-il faut pour cela passer par la bouton "Configuration" du plugin OpenZwave de Jeedom.
+Wenn Sie später die Konfiguration des Moduls gemäß Ihrer Funktion durchführen wollen, 
+erfolgt das in Jeedom über die Schaltfläche "Konfiguration“, des OpenZwave Plugin.
 
 {nbsp} +
 
@@ -195,11 +195,11 @@ image::../images/aeotec.keyfob-gen5/config1.jpg[Config1,align="center"]
 
 {nbsp} +
 
-==== Groupes
+==== Gruppen
 
 {nbsp} +
 
-Ce module possède deux groupes d'association, le premier est le seul indispensable.
+Dieses Modul verfügt über zwei Assoziation-Gruppen, das Erste 
 
 {nbsp} +
 
@@ -250,9 +250,9 @@ Ce module se réveille en restant appuyer 3 secondes sur le bouton LEARN.
 {nbsp} +
 
 [panel,primary]
-.J'ai changé la configuration mais elle n'est pas prise en compte.
+Ich habe die Konfiguration geändert, aber es wird nicht berücksichtigt.
 --
-Ce module est un module sur batterie, la nouvelle configuration ne sera prise en compte que si vous réveillez la télécommande.
+Dieses Modul ist ein Batterie-Modul, die neue Konfiguration wird berücksichtigt werden, wenn die Fernbedienung aufwacht.
 --
 
 {nbsp} +
@@ -264,8 +264,8 @@ Ce module est un module sur batterie, la nouvelle configuration ne sera prise en
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
 [underline]#Il faut réveiller le module :#
- après son inclusion, après un changement de la configuration
-, après un changement de wakeup, après un changement des groupes d'association
+ nach seiner Inklusion, nach einer Konfigurationsänderung,
+nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 
 {nbsp} +
 
