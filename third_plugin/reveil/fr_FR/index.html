@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>OpenALPR - License Plate Recognition</title>
+<title>Gestions des reveil</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,24 +412,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>OpenALPR - License Plate Recognition</h1>
+<h1>Gestions des reveil</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
 <li><a href="#_description">1. Description</a></li>
-<li><a href="#_installation_et_configuration">2. Installation et configuration</a>
-<ul class="sectlevel2">
-<li><a href="#_dependencies_install">2.1. Dependencies install</a></li>
-<li><a href="#_configuration_du_plugin_et_de_ses_dépendance">2.2. Configuration du plugin et de ses dépendance</a></li>
-</ul>
-</li>
-<li><a href="#_paramétrage_des_equipements_et_des_commandes">3. Paramétrage des equipements et des commandes</a>
+<li><a href="#_paramétrage">2. Paramétrage</a>
 <ul class="sectlevel3">
-<li><a href="#_group_of_license_plates">3.1. Group of license plates</a></li>
-<li><a href="#_plaques_d_imatriculation">3.2. Plaques d&#8217;imatriculation</a></li>
+<li><a href="#_créer_une_zone">2.1. Créer une Zone</a></li>
+<li><a href="#_definition_de_la_zone">2.2. Definition de la Zone</a></li>
+<li><a href="#_configuration">2.3. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#_faq">4. FAQ</a></li>
 </ul>
 </div>
 </div>
@@ -438,245 +432,102 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_description">1. Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Plugin permanent de faire de la reconnaissance de plaque d’immatriculation avec nos camera</p>
+<p>Ce plugin permet de gérer facilement vos reveil.
+Celui-ci est entirement basé sur le plugin Heliotrope qui est un prérequis pour l&#8217;utilisation de ce plugin.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>  Attention avec l'usage de ce plugin
-Seules les autorités publiques (les mairies notamment) peuvent
-filmer la voie publique.
-Les particuliers ne peuvent filmer que l’intérieur de leur propriété.
-Ils ne peuvent pas filmer la voie publique, y compris pour
-assurer la sécurité de leur véhicule garé devant leur domicile.</pre>
-</div>
+<div class="paragraph">
+<p>Vous avez la possibilité de fermer vos reveil a la tomber de la nuit et de les ré-ouvrir au levé du soleil.
+Vous avez egalement la possibilité de gérer vos reveil pour qu&#8217;il se ferme si le soleil est dans l&#8217;azimute de votre feunetre</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_installation_et_configuration">2. Installation et configuration</h2>
+<h2 id="_paramétrage">2. Paramétrage</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_dependencies_install">2.1. Dependencies install</h3>
 <div class="paragraph">
-<p>To facilitate the implementation of the dependencies, jeedom is going to handle the installation of the OpenALPR software .</p>
-</div>
-<div class="paragraph">
-<p>Dans la cadre réservé aux dépendances, vous allez avoir le statut de l’installation. Nous avons aussi la possibilité de consulté le log d’installation en temps réel.</p>
+<p>Comme pour tous les plugins, nous allons commencer par créer un groupe de zone avec le bouton ajouter.
+Après avoir nommé, ce groupe nous allons pouvoir commencer a mettre en place nos zones.
+==== Configuration générale Jeedom</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/Installation_dependance.jpg" alt="Installation dependance">
+<img src="../images/ConfigurationGeneral.jpg" alt="ConfigurationGeneral">
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_configuration_du_plugin_et_de_ses_dépendance">2.2. Configuration du plugin et de ses dépendance</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/openalpr_screenshot_configuration.jpg" alt="openalpr screenshot configuration">
-</div>
-</div>
-<div class="paragraph">
-<p>Les paramettre de configuration général sont:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Création automatique de plaque inconnue: Permet a jeedom de créer une commande pour les plaque non reconue</p>
+<p>Nom  : le nom a déjà été paramétré, mais vous avez la possibilité de le changer.</p>
 </li>
 <li>
-<p>Activer le Snapshot: Permet de déterminer si on veut des snapshot des détécton</p>
+<p>Objet parent : ce paramètre permet d&#8217;ajouter l&#8217;équipement dans un objet Jeedom.</p>
 </li>
 <li>
-<p>Choisir l&#8217;emplacement par defaut des snapshot</p>
+<p>Catégorie : déclare l&#8217;équipement dans une catégorie.</p>
 </li>
 <li>
-<p>Choisir les commandes d&#8217;alerte (mail, slack&#8230;&#8203;) separer par des &amp;&amp;</p>
+<p>Visible : permet de rendre l&#8217;équipement visible dans le Dashboard.</p>
 </li>
 <li>
-<p>Choisir le nombre d&#8217;images envoyé</p>
+<p>Activer : permet d&#8217;activer l&#8217;équipement.</p>
 </li>
 <li>
-<p>Personnalisé les paramettre par defaut de OpenAlpr</p>
+<p>Héliotrope : Choisir l&#8217;equipement héliotrope a prendre en compte pour ce groupe de zone</p>
 </li>
 <li>
-<p>state_id_img_size_percent</p>
+<p>Activation de la gestion par rayonnement : permet d&#8217;activer le gestion du rayonnement solaire</p>
 </li>
 <li>
-<p>ocr_img_size_percent</p>
+<p>Activation de la gestion jours nuit : permet d&#8217;activer si vous voulez ouvrir et fermé vos volet avec le jours et la nuit</p>
 </li>
 <li>
-<p>Calibrage de votre camera améliore la précision de la détection dans les cas où des plaques d&#8217;immatriculation sont capturés à un angle raide (Utilisez l&#8217;utilitaire openalpr-utils-calibration pour calibrer votre camera fixe pour ajuster un angle )</p>
+<p>Delais apres le levée du jours : Delais ajouté a l&#8217;heure du levé du jours</p>
 </li>
 <li>
-<p>La détection ignorera plaques qui sont trop grands. Ceci est une bonne technique de l&#8217;efficacité à utiliser si les plaques vont être à une distance fixe de la caméra (par exemple, vous ne verrez jamais plaques qui remplissent la totalité de l&#8217;image</p>
-</li>
-<li>
-<p>Augmentation détection d&#8217;itération est le pourcentage que le cadre de LBP augmente chaque itération. Il doit être supérieur à 1,0. Une valeur de 1,01 signifie augmentation de 1%, 1,10 augmentation de 10% de chaque fois. Ainsi, une augmentation de 1% serait ~ 10x plus lent que 10% à traiter, mais il a une plus grande chance de l&#8217;atterrissage directement sur la plaque et d&#8217;obtenir une détection forte</p>
-</li>
-<li>
-<p>La force minimale de détection détermine comment assurer l&#8217;algorithme de détection doit être avant de signaler qu&#8217;une région de la plaque existe. Techniquement, cela correspond à LBP voisins les plus proches (par exemple, combien de détectives sont regroupés autour de la même zone). Par exemple, 2 = très indulgent, 9 = très stricte</p>
-</li>
-<li>
-<p>La détection n&#8217;a pas nécessairement besoin d&#8217;une image de très haute résolution pour détecter les plaques. En utilisant une image d&#8217;entrée plus petit doit encore trouver les plaques et le fera plus rapidement. Peaufiner les valeurs de max_detection_input va redimensionner l&#8217;image d&#8217;entrée si elle est plus grande que ces tailles (exprimées en pixels</p>
-</li>
-<li>
-<p>Technique utilisée pour trouver des régions de plaque d&#8217;immatriculation d&#8217;une image. La valeur peut être réglée sur les résultats doivent correspondre un textpattern de post-traitement si un modèle est disponible.</p>
-</li>
-<li>
-<p>Contourne la détection de la plaque. Si elle est positionnée à 1, la bibliothèque suppose que chaque zone prévue est une zone de la plaque susceptible.</p>
-</li>
-<li>
-<p>OpenALPR peut balayer la même image plusieurs fois avec randomisation différent. Mettre ce paramètre à une valeur plus grande que 1 peut augmenter la précision, mais augmentera le temps de traitement linéaire</p>
-</li>
-<li>
-<p>OpenALPR détecte les cultures de plaque à contraste élevé et utilise une technique de détection de bord alternatif. Mettre cette option à 0.0 classerait toutes les images comme contraste élevé, la mise à 1.0 classerait pas d&#8217;images comme contraste élevé.</p>
-</li>
-<li>
-<p>max_plate_angle_degrees</p>
-</li>
-<li>
-<p>ocr_min_font_point</p>
-</li>
-<li>
-<p>Minimum de confiance OCR à considérer(%)</p>
-</li>
-<li>
-<p>Tout caractère OCR inférieur à ce parametre sera ignorée.</p>
-</li>
-<li>
-<p>Mode Débug</p>
-</li>
-<li>
-<p>Ajouter une camera : Permet d’ajouter une camera</p>
-</li>
-<li>
-<p>Resau jeedom: Permet de déterminer sur quel jeedom l’analyse va se faire</p>
-</li>
-<li>
-<p>Plugin source camera: determine la maniere de configurer une camera</p>
-</li>
-<li>
-<p>Url de la Camera: adresse du flux de votre camera</p>
-</li>
-<li>
-<p>Login de connexion a la Camera</p>
-</li>
-<li>
-<p>Mots de pass de la Camera</p>
+<p>Delais avant la tombée de la nuit : Delais retirer a l&#8217;heure du levé de la tombée de la nuit</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Nous pouvons voir le status de configuration et d’activation d’OpenALPR dans le cadre "Démon"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/Status_Demon.jpg" alt="Status Demon">
-</div>
-</div>
-<div class="paragraph">
-<p>Si tous les voyant sont au vert, nous pouvons passée a la suite</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_paramétrage_des_equipements_et_des_commandes">3. Paramétrage des equipements et des commandes</h2>
-<div class="sectionbody">
 <div class="sect3">
-<h4 id="_group_of_license_plates">3.1. Group of license plates</h4>
+<h4 id="_créer_une_zone">2.1. Créer une Zone</h4>
 <div class="paragraph">
-<p>First of all, you need to create a new group and to name it.
-Comme dans tous les plugins Jeedom vous avez un bouton ajouté un equipement sur la gauche de votre fenetre.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/Configuration_equipement.jpg" alt="Configuration equipement">
-</div>
-</div>
-<div class="paragraph">
-<p>Ce nouvelle équipement a besoin d&#8217;être paramétré.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nom du groupe : Le nom a déjà été paramétrée mais vous avez la possibilité de la changer</p>
-</li>
-<li>
-<p>Objet parent : Ce paramétré permet d&#8217;ajouter l&#8217;équipement dans un objet Jeedom</p>
-</li>
-<li>
-<p>Catégorie : Déclare l&#8217;équipement dans une catégorie</p>
-</li>
-<li>
-<p>Visible : Permet de rendre l&#8217;équipement visible dans le Dashboard</p>
-</li>
-<li>
-<p>Activer : Permet d&#8217;activer l&#8217;équipement</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Le groupe "Plaques détectées inconnu" ce créer automatiquement des qu’une plaque a ete détécté et qu’elle n’existe pas sous jeedom.
-Pour créer votre groupe et comme partout sur jeedom vous avez le bouton "Ajouter" sur la gauche de votre écran.</p>
+<p>Nous alons créer une zone en cliquant sur l&#8217;onglet ajouter.
+Celui ci va nous demander de le nomer.
+Une fois fait, un nouvelle onglet vas etre créer</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_plaques_d_imatriculation">3.2. Plaques d&#8217;imatriculation</h4>
+<h4 id="_definition_de_la_zone">2.2. Definition de la Zone</h4>
 <div class="paragraph">
-<p>Maintenant que votre équipement est crée et configurée, on vas pouvoir y ajouter des commandes.
-Le groupe "Plaques détectées inconnu" ce créer automatiquement des qu’une plaque a ete détécté et qu’elle n’existe pas sous jeedom.
-Pour créer votre groupe et comme partout sur jeedom vous avez le bouton "Ajouter" sur la gauche de votre écran.</p>
-</div>
-<div class="paragraph">
-<p>Exemple de configuration</p>
+<p>La zone cree, nous avons besoin de definir ou est notre feunetre, ou zone de fenetre.
+Pour cela il suffit de deplacé les marqueur droite et gauche de la fenetre sur le carte</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/Configuration_commande.jpg" alt="Configuration commande">
+<img src="../images/ConfigurationMap.jpg" alt="ConfigurationMap">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration">2.3. Configuration</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ConfigurationConditionAction.jpg" alt="ConfigurationConditionAction">
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Nom : Donner un nom a votre plaque de manière a la retrouve facilement dans Jeedom</p>
+<p>Angle d&#8217;ensoleillement de la Zone : est un indicateur de l&#8217;angle du droit de votre feunetre par rapport au nord</p>
 </li>
 <li>
-<p>Numero de la plaque: Numero de la plaque (sans les tirets) (il est possible de remplacé des caractere par de ** en cas de flotte avec de plaque qui se suive</p>
-<div class="literalblock">
-<div class="content">
-<pre> AX**
-AX123**
-AX**WW
-123
-**123WW
-**WW</pre>
-</div>
-</div>
+<p>Ajouter vos conditions</p>
 </li>
 <li>
-<p>Historiser: Tres utiles si vous voulez visualiser sur le panel les entée</p>
-</li>
-<li>
-<p>Afficher: si vous voulez que la plaque apparaisse sur le dashbord</p>
-</li>
-<li>
-<p>Déplacer: ce bouton permet de déplacer une plaque d’un groupe a un autre</p>
-</li>
-<li>
-<p>Enfin pensez sauvegarder.</p>
+<p>Ajouter vos actions</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved directive in index.asciidoc - include::faq.asciidoc[]</p>
 </div>
 </div>
 </div>
