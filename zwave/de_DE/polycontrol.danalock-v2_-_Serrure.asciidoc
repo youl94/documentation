@@ -167,7 +167,7 @@ image::../images/polycontrol.danalock/inclusion2.jpg[width=300,align="center"]
 Dans l'application cliquez sur "Smart home" puis sur "Z-wave" et enfin sur "CONNECT".
 
 
-[underline]#Une fois inclus vous devriez obtenir ceci :#
+[underline]#Einmal Includiert, sollten Sie folgendes erhalten :#
 
 {nbsp} +
 
@@ -228,7 +228,7 @@ image::../images/plugin/bouton_configuration.jpg[Configuration plugin Zwave,alig
 {nbsp} +
 
 
-[underline]#Vous arriverez sur cette page# (après avoir cliqué sur l'onglet paramètres)
+[underline]#Sie werden auf diese Seite kommen# (nach einem Klick auf die Registerkarte Parameter)
 
 {nbsp} +
 
@@ -237,7 +237,7 @@ image::../images/polycontrol.danalock/bouton_configuration.jpg[Config1,align="ce
 {nbsp} +
 
 
-[underline]#Détails des paramètres :#
+[underline]#Parameterdetails :#
 
 {nbsp} +
 

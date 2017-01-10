@@ -86,7 +86,7 @@ image::../images/secure.sir321/inclusion.jpg[width=350,align="center"]
 
 {nbsp} +
 
-[underline]#Une fois inclus vous devriez obtenir ceci :#
+[underline]#Einmal Includiert, sollten Sie folgendes erhalten :#
 
 {nbsp} +
 
@@ -129,7 +129,7 @@ image::../images/plugin/bouton_configuration.jpg[Configuration plugin Zwave,alig
 
 {nbsp} +
 
-[underline]#Vous arriverez sur cette page# (après avoir cliqué sur l'onglet paramètres)
+[underline]#Sie werden auf diese Seite kommen# (nach einem Klick auf die Registerkarte Parameter)
 
 {nbsp} +
 
@@ -137,7 +137,7 @@ image::../images/secure.sir321/config1.jpg[Config1]
 
 {nbsp} +
 
-[underline]#Détails des paramètres :#
+[underline]#Parameterdetails :#
 
 {nbsp} +
 

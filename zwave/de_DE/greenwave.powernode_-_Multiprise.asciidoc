@@ -178,7 +178,7 @@ image::../images/plugin/bouton_configuration.jpg[Configuration plugin Zwave,alig
 
 {nbsp} +
 
-[underline]#Vous arriverez sur cette page# (après avoir cliqué sur l'onglet Paramètres)
+[underline]#Sie werden auf diese Seite kommen# (nach einem Klick auf die Registerkarte Parameter)
 
 {nbsp} +
 
@@ -190,7 +190,7 @@ Comme vous pourrez le constater il n'y a pas beaucoup de configuration pour ce m
 
 {nbsp} +
 
-[underline]#Détails des paramètres :#
+[underline]#Parameterdetails :#
 
 {nbsp} +
 

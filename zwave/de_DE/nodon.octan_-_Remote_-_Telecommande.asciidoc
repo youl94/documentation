@@ -86,7 +86,7 @@ image::../images/nodon.octan/inclusion.jpg[width=350,align="center"]
 
 {nbsp} +
 
-[underline]#Une fois inclus vous devriez obtenir ceci :#
+[underline]#Einmal Includiert, sollten Sie folgendes erhalten :#
 
 {nbsp} +
 
@@ -148,7 +148,7 @@ image::../images/plugin/bouton_configuration.jpg[Configuration plugin Zwave,alig
 
 {nbsp} +
 
-[underline]#Vous arriverez sur cette page# (après avoir cliqué sur l'onglet paramètres)
+[underline]#Sie werden auf diese Seite kommen# (nach einem Klick auf die Registerkarte Parameter)
 
 {nbsp} +
 
@@ -157,7 +157,7 @@ image::../images/nodon.octan/config1.jpg[Config1,align="center"]
 
 {nbsp} +
 
-[underline]#Détails des paramètres :#
+[underline]#Parameterdetails :#
 
 {nbsp} +
 
@@ -232,7 +232,7 @@ Dieses Modul ist ein Batterie-Modul, die neue Konfiguration wird berücksichtigt
 
 [icon="../images/plugin/important.png"]
 [IMPORTANT]
-[underline]#Il faut réveiller le module :#
+[underline]#Es ist notwendig, das Modul zu aktivieren :#
  nach seiner Inklusion, nach einer Konfigurationsänderung,
 nach einer Änderung vom Wakeup, nach einer Änderung der Assoziations-Gruppe
 

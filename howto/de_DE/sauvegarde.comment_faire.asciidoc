@@ -56,7 +56,7 @@ il y a une case à cocher (_"Faire une sauvegarde avant la mise à jour"_) dans 
 +
 image::../images/save-restore03.jpg[align="center"]
 
-. [underline]#Sauvegardes cloud#
+. [underline]#Cloud Backups#
 
 * Sauvegardes disponibles : Permet de voir et sélectionner le fichier de sauvegarde disponible sur le cloud qui sera utilisé pour la restauration.
 * Restaurer la sauvegarde : Le bouton _Restaurer_ permet de lancer une restauration de Jeedom en utilisant le fichier de sauvegarde sélectionné dans la liste _Sauvegardes disponibles_.

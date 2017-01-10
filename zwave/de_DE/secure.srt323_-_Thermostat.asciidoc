@@ -158,7 +158,7 @@ image::../images/secure.srt323/config1.jpg[Config1]
 
 {nbsp} +
 
-[underline]#Détails des paramètres :#
+[underline]#Parameterdetails :#
 
 {nbsp} +
 
