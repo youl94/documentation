@@ -41,7 +41,7 @@ Cette télécommande peut également être utilisée comme un bouton d'urgence o
 
 {nbsp} +
 
-* Télécommande porte-clés
+`* Fernbedienung Tür-Schlüssel
 * Contrôleur principal ou secondaire
 * Ultra compacte et ultra design
 * 1 bouton configurable

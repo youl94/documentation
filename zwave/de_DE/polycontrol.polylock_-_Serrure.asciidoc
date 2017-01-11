@@ -58,7 +58,7 @@ Le système Poly-Control peut être utilisé dans un environnement domestique ou
 
 * Alimentation : Pile Lithium-Chloride 3.6V
 * Fréquence : 868,42 Mhz
-* Portée : jusqu'à 100 m à l'extérieur, jusqu'à 30 m dans les bâtiments
+* Reichweite : bis zu 100 m im Freien, bis zu 30 m in Gebäuden
 * Dimensions : 120 x 52 x 60 mm (L x l x h)
 * Poids : 370g
 

@@ -57,7 +57,7 @@ La Mini Prise On/Off est un appareil compatible Z-Wave™ qui est destiné pour 
 * Consommation : 0.6W
 * Puissance maximum : Charge résistive : 1500W, Ampoule à incandesence : 800W, Ampoule Fluocompacte : 200W, Ampoule Led (non dimmable) : 200W
 * Fréquence : 868,42 Mhz
-* Portée : jusqu'à  70 m à l'extérieur, jusqu'à 30 m dans les bâtiments
+* Reichweite : bis zu 70 m im Freien, bis zu 30 m in Gebäuden
 * Affichage: LED sur le bouton
 * Dimensions : Longueur (prise incluse) : 74mm Diamètre : 52mm
 

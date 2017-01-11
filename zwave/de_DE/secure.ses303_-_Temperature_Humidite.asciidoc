@@ -45,7 +45,7 @@ On peut facilement l'inclure / l'exclure dans un réseau Z-Wave.
 * Possibilité de brancher des sonde externes
 * Interoperabilität mit zertifizierten Z-Wave Produkten und Systemen 
 * Installation facile et rapide
-* Rapport de batterie faible
+* Bericht bei schwacher Batterie 
 
 {nbsp} +
 
@@ -58,7 +58,7 @@ On peut facilement l'inclure / l'exclure dans un réseau Z-Wave.
 * Puce Z-Wave Plus
 * Fréquence : 868,42 Mhz
 * Alimentation: 2x piles AA (LR6)
-* Portée : jusqu'à 100 m en champ libre
+* Reichweite : bis zu 100 m im Freien
 * Indice de protection : IP30
 * Dimensions : 86 x 85 x 30 mm
 

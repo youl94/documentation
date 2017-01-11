@@ -27,7 +27,7 @@ Le neutre est nécessaire que pour le mode "Volet"
 * S'installe dans une boite d'encastrement de 55mm ou directement dans les caissons des ouvrants
 * Mode d'usage: Marche/Arrêt, Ouvrir/Stop/Fermer
 * Compatible avec les moteurs à fin de course électronique et mécanique
-* Mode déporté
+* Remote-Modus
 * Fonction minuterie: Mode Marche/Arrêt: 30min ou 60min
 * Réplique du signal (répéteur)
 * Micromodule bidirectionnel
@@ -151,7 +151,7 @@ image::../images/emv.400/commande_eclairage.jpg[Commandes,align="center"]
 [IMPORTANT]
 Le retour d'état est simulé par Jeedom. Par conséquent, si vous utilisez un autre émetteur, Jeedom ne pourra pas mettre à jour l'état du récepteur.
 
-=== Informations
+=== Information
 
 Une fois votre équipement associé à Jeedom, diverses informations seront disponibles :
 

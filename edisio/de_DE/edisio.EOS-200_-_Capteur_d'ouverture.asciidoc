@@ -33,7 +33,7 @@ Le signal est uniquement envoyé à la séparation du capteur de son élément m
 * Alimentation : 3VDC (Pile Lithium ER14250)
 * Fréquence : 868,3 MHz
 * Betriebstemperatur : 0°C bis 45°C
-* Portée en champs libre : 100M
+* Reichweite im freien Feld : 100M
 * Dimensions : 25x79x19mm
 * Degré de protection : IP20
 * Utilisation : En intérieur
@@ -89,7 +89,7 @@ image::../images/eos200/eos200.commandes.jpg[Commandes,align="center"]
 * Porte : C'est la commande qui indique si la porte est ouverte ou fermée
 * Batterie : Indique l'état de la batterie
 
-=== Informations
+=== Information
 
 Une fois votre équipement associé à Jeedom, diverses informations seront disponibles :
 

@@ -62,7 +62,7 @@ Cette multiprise est idéale pour contrôler des appareils multimédia dans un m
 * Protection contre les surintensités : 10A fusible interne
 * Type de prise : DIN49440 / CEE 7/7 (Schuko)
 * Z-Wave Funkfrequenz : 868,42MHz
-* Portée maximale Z-Wave : 30m
+* Maximale Z-Wave-Reichweite : 30m
 * Betriebstemperatur : 0°C bis +25°C
 * Température de stockage : -20 ° C à + 60 ° C
 * Humidité maximale : 5% à 90%

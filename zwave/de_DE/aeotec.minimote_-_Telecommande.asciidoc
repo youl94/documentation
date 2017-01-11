@@ -57,7 +57,7 @@ Avec cette télécommande, vous pourrez également inclure/exclure des modules d
 * Alimentation : batterie interne rechargeable via USB
 * Affichage: LED bleue et rouge
 * Fréquence : 868,42MHz 
-* Portée : jusqu'à 30 m
+* Reichweite : bis zu 30 m
 * Dimensions : 0.8cm x 3.3cm x 9.3cm
 * Betriebstemperatur : -35°C bis +85°C
 
