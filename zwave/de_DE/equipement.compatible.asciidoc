@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*259* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*262* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -251,11 +251,20 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 |===
 |Bild|Marke|Name|Typ|Hinweis|Link
 
+|image:../images/compatibility_list/danfoss.living-connect.jpg[width=150,align="center"]|Danfoss|Living Connect Radiator Thermostat|Thermostat| _[small]#Piles : 2x1.5V AAA#_| 
+// 2.32773.1_living.connect.json
+
+|image:../images/compatibility_list/danfoss.living-connect.jpg[width=150,align="center"]|Danfoss|Popp Radiator Thermostat|Thermostat| _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/3683-popp-tete-thermostatique-sans-fil-z-wave-0019962010101.html++[Acheter^]
+// 2.277.40976_pop.radiator.thermostat.json
+
+|image:../images/compatibility_list/danfoss.ra.plus-w.jpg[width=150,align="center"]|Danfoss|RA Plus-W Radiator Thermostat|Thermostat| _[small]#Piles : 2x1.5V AAA#_| 
+// 2.100.1_ra.plus-w.radiator.thermostat.json
+
 |image:../images/compatibility_list/danfoss.room-sensor.jpg[width=150,align="center"]|Danfoss|RS Room Sensor|Thermostat| _[small]#Piles : 2x1.5V AA#_| link:++http://www.domadoo.fr/fr/peripheriques/3069-danfoss-sonde-d-ambiance-z-wave-danfoss-link-rs.html++[Acheter^]
-// 2.3.32784_danfoss.rs.room.sensor.json
+// 2.3.32784_rs.room.sensor.json
 
 |image:../images/compatibility_list/danfoss.living-connect.jpg[width=150,align="center"]|Danfoss|Thermostat Living Connect|Thermostat| _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/2495-danfoss-tete-electronique-living-connect-z-wave-lc-13-5013567421497.html++[Acheter^]
-// 2.5.3_danfoss.danfoss.thermostat.living.connect.json
+// 2.5.3_thermostat.living.connect.json
 
 
 |===
