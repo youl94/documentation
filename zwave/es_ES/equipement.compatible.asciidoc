@@ -524,7 +524,7 @@ _[small]#Piles : 1x3V CR123A#_|link:++https://jeedom.fr/doc/documentation/zwave-
 // 271.514.4098_fgs-222.double.charge.json
 
 |image:../images/compatibility_list/fibaro.fgs223.jpg[width=150,align="center"]|Fibaro|FGS-223 Double charge|Micromodule|Le rafraîchissement manuel est requis sur l'instance 1 (Switch S2) pour la remonté de puissance et l'état du S2. Les notification de scènes ne sont pas remontées, elles requièrent le support de la CC Central Scene. | link:++http://www.domadoo.fr/fr/peripheriques/3728-fibaro-micromodule-commutateur-double-z-wave-fgs-223-5902020528661.html++[Acheter^]
-// 271.515.4096_fgs233.double.switch.json
+// 271.515.4096_fgs223.double.switch.json
 
 |image:../images/compatibility_list/fibaro.fgsd102.jpg[width=150,align="center"]|Fibaro|FGSD-002 Smoke Sensor CE|Fumée| _[small]#Piles : 1x3V CR123A#_|link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgsd102_-_Fumees.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/2751-fibaro-detecteur-de-fumee-z-wave-plus-fgsd-002-5902020528265.html++[Acheter^]
 // 271.3074.4098_fgsd002.smoke.sensor.json
