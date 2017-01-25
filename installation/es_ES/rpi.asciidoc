@@ -46,11 +46,14 @@ image::../images/install_humming_7.PNG[]
 
 Únicamente tendrá que insertar la tarjeta SD en su Raspberry pi, conectarlo a la red y a la alimentación y Jeedom comenzará a arrancar (unos 5 minutos).  Una vez haya iniciado,  debería poder verlo en la red.
 
-[CONSEJO]
-Les identifiants SSH sont root/Mjeedom96
-
 [IMPORTANTE]
-Attention si vous avez une carte SD de plus de 4go n'oubliez pas d'étendre la partition avec la commande raspi-config en SSH ou sudo raspi-config si nécessaire
+L'installation se lance automatiquement et vous pouvez la suivre en vous rendant depuis votre navigateur sur l'adresse http://IP_RASPBERRY/. Quand l'installation sera terminée, vous vous retrouverez sur l'interface de connexion Jeedom.
+
+[CONSEJO]
+Les identifiants SSH sont root/Mjeedom96. Néanmoins, vous n'avez pas besoin de vous connecter en SSH pour une installation simple.
+
+[CONSEJO]
+L'installation à partir de l'image netinstall réalise les étapes suivantes à votre place : mise à jour du système et des paquets, extension de la partition de la SD au maximum de la capacité de celle-ci.
 
 [IMPORTANTE]
 Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L'OVERCLOCKER sous peine d'avoir un système instable avec de nombreuses corruptions de carte SD

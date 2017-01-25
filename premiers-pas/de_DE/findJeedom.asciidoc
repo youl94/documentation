@@ -8,7 +8,7 @@ Solution la plus simple (mais ne marche pas dans 100% des cas en fonction de la 
 
 ==== Durch Ihre Internet-Box
 
-Il vous suffit d'aller sur l'interface d'administration de votre box internet et de rechercher un périphérique jeedom, ensuite de récuperer son IP. Enfin vous mettez cette IP dans votre navigateur internet et c'est bon vous êtes sur Jeedom. 
+Il vous suffit d'aller sur l'interface d'administration de votre box internet et de rechercher un périphérique Jeedom, ensuite de récupérer son IP. Enfin vous mettez cette IP dans votre navigateur internet et c'est bon vous êtes sur Jeedom. 
 
 === Erstes Einloggen
 

@@ -2,7 +2,7 @@ Ein Plugin fügt Jeedom Funktionalität hinzu, es gibt Hunderte, manche sind zu 
 
 image::../images/premier-plugin.png[]
 
-Dann klicken Sie einfach auf Markt :
+Il vous suffit ensuite de cliquer sur Market :
 
 image::../images/premier-plugin2.png[]
 

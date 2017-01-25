@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*47* [green]*marques de modules différentes, soit un total de* [red]*262* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*48* [green]*marques de modules différentes, soit un total de* [red]*264* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -343,6 +343,18 @@ _[small]#Piles : 4x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/307
 
 |===
 
+== Ecolink
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+|image:../images/compatibility_list/ecolink.doorwindow.jpg[width=150,align="center"]|Ecolink|Door/Window Sensor|Ouverture| _[small]#Piles : 1x3V CR2#_| 
+// 330.1.2_door.window.sensor.json
+
+
+|===
+
 == Electronicsolutions
 
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
@@ -584,6 +596,9 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/27
 
 |image:../images/compatibility_list/ge.12724.jpg[width=150,align="center"]|Ge|12724 3 Way Dimmer|Micromodule| | 
 // 99.18756.12337_12724.dimmer.json
+
+|image:../images/compatibility_list/ge.12730.jpg[width=150,align="center"]|Ge|12730 Smart Fan Control|Micromodule| | 
+// 99.18756.12340_smart.fan.control.json
 
 
 |===
