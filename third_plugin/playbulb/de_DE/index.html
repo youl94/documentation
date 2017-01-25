@@ -435,7 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_candle">3.1.1. Candle</a></li>
 <li><a href="#_candle_v6">3.1.2. Candle v6</a></li>
-<li><a href="#_color">3.1.3. Color</a></li>
+<li><a href="#_farbe">3.1.3. Farbe</a></li>
 </ul>
 </li>
 </ul>
@@ -539,16 +539,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_candle">3.1.1. Candle</h4>
 <div class="paragraph">
-<p>0x0014: Effects</p>
+<p>0x0014: Effekte</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Value: [saturation][color][mode][00][speed][00]
+<pre>Wert: [saturation][color][mode][00][speed][00]
 
-Parameter  | Value
+Parameter  | Wert
 ------------- | -------------
 saturation | 00-&gt; ff, ff =&gt; low, 00 =&gt; high
-color | color as RGB hex
+Farbe | RGB-Farbe als hex
 mode  | 01 = Fade, 02 = Jump RBG, 03 = Fade RGB, 04 = Candle Effect
 speed | 00-&gt; ff, 00 =&gt; really slow, 01 =&gt; really fast, 02 =&gt; slower
 
@@ -579,12 +579,12 @@ ff000000 | candle color
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Value: [saturation][color][mode][00][speed][00]
+<pre>Wert: [saturation][color][mode][00][speed][00]
 
-Parameter  | Value
+Parameter  | Wert
 ------------- | -------------
 saturation | 00-&gt; ff, ff =&gt; low, 00 =&gt; high
-color | color as RGB hex
+Farbe | RGB-Farbe als hex
 mode  | 00 = Flash, 01 = Pulse, 02 = Rainbow, 03 = Rainbow F, 04 = Candle Effect
 speed | 00-&gt; ff, 00 =&gt; really slow, 01 =&gt; really fast, 02 =&gt; slower
 
@@ -609,18 +609,18 @@ ff000000 | candle color
 </div>
 </div>
 <div class="sect3">
-<h4 id="_color">3.1.3. Color</h4>
+<h4 id="_farbe">3.1.3. Farbe</h4>
 <div class="paragraph">
 <p>0x0016: Effects</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Value: [white][color][mode][00][speed]
+<pre>Wert: [white][color][mode][00][speed]
 
 Parameter | Value
 --------- | -------------
 white     | 00 =&gt; off, ff =&gt; white, 01 -&gt; ff =&gt; saturation of white
-color     | color as RGB hex
+Farbe | RGB-Farbe als hex
 mode      | 00 = Flash, 01 = Pulse, 02 = Rainbow Jump, 03 = Rainbow Fade
 not used  | 00
 speed     | 46 46 -&gt; 01 01 =&gt; Slow to Fast (Flash, Rainbow), 1e 1e -&gt; 01 01 =&gt; Slow to Fast (Pulse)
@@ -644,13 +644,13 @@ speed     | 46 46 -&gt; 01 01 =&gt; Slow to Fast (Flash, Rainbow), 1e 1e -&gt; 0
 <h2 id="_0x0018_get_set_color">4. 0x0018: Get / Set Color</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Value: [white][color]</p>
+<p>Wert: [white][color]</p>
 </div>
 <div class="paragraph">
 <p>Parameter | Value
 --------- | -------------
 white     | 00 &#8658; off, ff &#8658; white, 01 &#8594; ff &#8658; saturation of white
-color     | color as RGB hex</p>
+Farbe | RGB-Farbe als hex</p>
 </div>
 <div class="paragraph">
 <p><mark>#</mark>Example response
@@ -672,13 +672,13 @@ color     | color as RGB hex</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Value: [white][color][mode][00][speed]</p>
+<p>Wert: [white][color][mode][00][speed]</p>
 </div>
 <div class="paragraph">
-<p>Parameter  | Value
+<p>Parameter  | Wert
 ------------- | -------------
 white | 00 &#8658; off, ff &#8658; white, 01&#8594; ff &#8658; saturation of white
-color | color as RGB hex
+Farbe | RGB-Farbe als hex
 mode  | 00 = Flash, 01 = Pulse, 02 = Rainbow Jump, 03 = Rainbow Fade
 speed | 46 46&#8594; 01 01 &#8658; Slow to Fast (Flash, Rainbow), 1e 1e&#8594; 01 01 &#8658; Slow to Fast (Pulse)</p>
 </div>
@@ -692,13 +692,13 @@ speed | 46 46&#8594; 01 01 &#8658; Slow to Fast (Flash, Rainbow), 1e 1e&#8594; 0
 </div>
 </div>
 <div class="paragraph">
-<p>Value: [white][color]</p>
+<p>Wert: [white][color]</p>
 </div>
 <div class="paragraph">
-<p>Parameter  | Value
+<p>Parameter  | Wert
 ------------- | -------------
 white | 00 &#8658; off, ff &#8658; white, 01&#8594; ff &#8658; saturation of white
-color | color as RGB hex</p>
+Farbe | RGB-Farbe als hex</p>
 </div>
 <div class="paragraph">
 <p><mark>#</mark>Example
@@ -723,7 +723,7 @@ Comme la Color sauf les commandes :
 <p>Value: 01[level]</p>
 </div>
 <div class="paragraph">
-<p>Parameter  | Value
+<p>Parameter  | Wert
 ------------- | -------------
 level | 00 &#8594; off, 14 &#8594; max ( + 13 niveaux intermediaires)</p>
 </div>
