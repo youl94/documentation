@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Premiers pas avec Jeedom</title>
+<title>Délestage</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,469 +412,216 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Premiers pas avec Jeedom</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_inscription_sur_le_market">1. Inscription sur le market</a></li>
-<li><a href="#_ajout_de_votre_code_service_pack">2. Ajout de votre code service pack</a></li>
-<li><a href="#_trouver_votre_jeedom_sur_le_réseau">3. Trouver votre Jeedom sur le réseau</a>
+<li><a href="#_délestage">1. Délestage</a></li>
+<li><a href="#_description">2. Description</a></li>
+<li><a href="#_fonctionnement">3. Fonctionnement</a>
 <ul class="sectlevel2">
-<li><a href="#_trouver_jeedom">3.1. Trouver Jeedom</a>
+<li><a href="#_délestage_intelligent">3.1. Délestage intelligent.</a></li>
+<li><a href="#_délestage_hiérarchique">3.2. Délestage hiérarchique</a>
 <ul class="sectlevel3">
-<li><a href="#_par_le_market">3.1.1. Par le market</a></li>
-<li><a href="#_par_votre_box_internet">3.1.2. Par votre box internet</a></li>
+<li><a href="#_délestage_cascadocyclique">3.2.1. Délestage cascadocyclique</a></li>
 </ul>
 </li>
-<li><a href="#_premiere_connexion">3.2. Premiere connexion</a></li>
 </ul>
 </li>
-<li><a href="#_lier_mon_jeedom_à_mon_compte_market">4. Lier mon Jeedom à mon compte market</a></li>
-<li><a href="#_obtenir_mon_url_d_accès_direct">5. Obtenir mon URL d&#8217;accès direct</a></li>
-<li><a href="#_changer_le_mot_de_passe_par_défaut_de_jeedom">6. Changer le mot de passe par défaut de Jeedom</a></li>
-<li><a href="#_créer_mon_premier_objet">7. Créer mon premier objet</a></li>
-<li><a href="#_installer_mon_premier_plugin">8. Installer mon premier plugin</a></li>
-<li><a href="#_support">9. Support</a>
+<li><a href="#_configuration">4. Configuration</a>
 <ul class="sectlevel2">
-<li><a href="#_dans_la_doc">9.1. Dans la doc</a></li>
-<li><a href="#_le_forum">9.2. Le forum</a></li>
-<li><a href="#_les_demandes_de_support_ou_tickets">9.3. Les demandes de support (ou tickets)</a></li>
+<li><a href="#_configuration_générale">4.1. Configuration générale</a>
+<ul class="sectlevel3">
+<li><a href="#_actions_supplémentaires">4.1.1. Actions supplémentaires</a></li>
+<li><a href="#_configuration_avancée">4.1.2. Configuration avancée</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#_faq">5. FAQ</a></li>
+<li><a href="#_troubleshoting">6. Troubleshoting</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_délestage">1. Délestage</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Bienvenue dans cette documentation de premiers pas, celle-ci va vous aider à mettre en service votre Jeedom</p>
+<div class="imageblock" style="text-align: Center">
+<div class="content">
+<img src="../images/delestage_screenshot1.png" alt="delestage">
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Ce guide n&#8217;a pas vocation à se substituer à la documentation complète disponible sur le site Jeedom <a href="https://jeedom.fr/doc">ici</a>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_inscription_sur_le_market">1. Inscription sur le market</h2>
+<h2 id="_description">2. Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>La première chose à faire est de se créer un compte sur le Market pour pouvoir enregistrer votre Jeedom sur celui-ci, cliquez <a href="https://market.jeedom.fr">ici</a> pour commencer</p>
+<p>Plugin permettant de gérer le délestage électrique.
+Le plugin gère 3 types de délestage :</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-market.png" alt="premier market">
+<div class="ulist">
+<ul>
+<li>
+<p>Délestage "intelligent".</p>
+</li>
+<li>
+<p>Délestage hiérarchique.</p>
+</li>
+<li>
+<p>Délestage cascado-cyclique.</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur le bouton "S&#8217;enregistrer" en haut à droite :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-market2.png" alt="premier market2">
-</div>
-</div>
-<div class="paragraph">
-<p>Remplissez les différents champs et validez. Vous tomberez ensuite sur cette page :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-market3.png" alt="premier market3">
-</div>
-</div>
-<div class="paragraph">
-<p>Voila votre compte Market est créé, pour plus de details sur le market cliquez <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-market.html">ici</a></p>
-</div>
+<hr>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ajout_de_votre_code_service_pack">2. Ajout de votre code service pack</h2>
+<h2 id="_fonctionnement">3. Fonctionnement</h2>
 <div class="sectionbody">
+<hr>
+<div class="sect2">
+<h3 id="_délestage_intelligent">3.1. Délestage intelligent.</h3>
 <div class="paragraph">
-<p>Si vous avez acheté une box Jeedom alors vous avez dû recevoir un mail contenant un code pour votre service pack.</p>
+<p>Le délestage intelligent nécessite le plugin Thermostat pour fonctionner.</p>
 </div>
 <div class="paragraph">
-<p>Il est important de le renseigner car ce code vous donne accès à certains plugins gratuitement, ainsi qu&#8217;à des services exclusifs.</p>
+<p>Le plugin classe les thermostats en fonction de leurs températures réelles en fonction des températures de consigne.</p>
 </div>
 <div class="paragraph">
-<p>Si vous achetez un service pack depuis le Market Jeedom vous n&#8217;avez rien à faire, celui-ci vous est automatiquement affecté.</p>
+<p>Ainsi le délestage interviendra en priorité sur les pièces dont l&#8217;écart est le plus faible.
+La gène pour les occupants sera ainsi moins importante.</p>
 </div>
-<div class="paragraph">
-<p>Une fois le code recupéré dans le mail il vous suffit d&#8217;aller sur le <a href="https://market.jeedom.fr">market Jeedom</a> et de vous identifier.</p>
-</div>
-<div class="paragraph">
-<p>Puis allez sur votre page de profil :</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: Center">
 <div class="content">
-<img src="../images/premier-servicepack.png" alt="premier servicepack">
+<img src="../images/smart.png" alt="intelligent">
 </div>
 </div>
-<div class="paragraph">
-<p>Puis cliquez sur l&#8217;onglet "Mes Jeedoms"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-servicepack2.png" alt="premier servicepack2">
-</div>
-</div>
-<div class="paragraph">
-<p>Renseignez votre numéro de service pack et validez :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-servicepack3.png" alt="premier servicepack3">
-</div>
-</div>
-<div class="paragraph">
-<p>Voilà votre service pack est enregistré. Pour plus de details sur le Market cliquez <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-market.html">ici</a></p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû vous être envoyé par email. Si vous n&#8217;avez rien reçu, merci de contacter le magasin où vous avez acheté votre box.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_trouver_votre_jeedom_sur_le_réseau">3. Trouver votre Jeedom sur le réseau</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Une fois Jeedom branché électriquement et connecté à votre réseau local, voici comment se connecter sur celui-ci.</p>
+<hr>
 </div>
 <div class="sect2">
-<h3 id="_trouver_jeedom">3.1. Trouver Jeedom</h3>
-<div class="sect3">
-<h4 id="_par_le_market">3.1.1. Par le market</h4>
+<h3 id="_délestage_hiérarchique">3.2. Délestage hiérarchique</h3>
 <div class="paragraph">
-<p>Solution la plus simple (mais ne marche pas dans 100% des cas en fonction de la configuration de votre accès internet), il faut démarrer la box, attendre environ 10 minutes (attention si vous utilisez une image type netinstallation il faut attendre 30min) et ensuite aller sur <a href="https://www.jeedom.com/market/index.php?v=d&amp;p=find">ici</a> (attention il faut être sur le même réseau que la box Jeedom pour que ça marche)</p>
+<p>Le délestage s&#8217;effectue en mode hiérarchisé sur les x actionneurs. L&#8217;actionneur 1 sera délesté en priorité puis le 2, 3…</p>
+</div>
+<div class="paragraph">
+<p>Les actionneurs seront réenclenchés dans l&#8217;ordre inverse du délestage</p>
+</div>
+<div class="imageblock" style="text-align: Center">
+<div class="content">
+<img src="../images/hierarchique.png" alt="hierarchique">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_par_votre_box_internet">3.1.2. Par votre box internet</h4>
+<h4 id="_délestage_cascadocyclique">3.2.1. Délestage cascadocyclique</h4>
 <div class="paragraph">
-<p>Il vous suffit d&#8217;aller sur l&#8217;interface d&#8217;administration de votre box internet et de rechercher un périphérique Jeedom, ensuite de récupérer son IP. Enfin vous mettez cette IP dans votre navigateur internet et c&#8217;est bon vous êtes sur Jeedom.</p>
+<p>Le délestage s&#8217;effectue en mode rotatif sur les actionneurs définis pour le mode cyclique puis si la puissance est toujours supérieure au seuil, en mode hiérarchisé sur les autres.</p>
+</div>
+<div class="imageblock" style="text-align: Center">
+<div class="content">
+<img src="../images/cascadocyclique.png" alt="cascadocyclique">
+</div>
+</div>
+<hr>
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_configuration">4. Configuration</h2>
+<div class="sectionbody">
+<hr>
 <div class="sect2">
-<h3 id="_premiere_connexion">3.2. Premiere connexion</h3>
+<h3 id="_configuration_générale">4.1. Configuration générale</h3>
 <div class="paragraph">
-<p>Quelque soit la méthode utilisée, vous arrivez ensuite sur la page de login. Par défaut le login et le mot de passe sont "admin".</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-jeedomfinder6.png" alt="premier jeedomfinder6">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_lier_mon_jeedom_à_mon_compte_market">4. Lier mon Jeedom à mon compte market</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Nous allons voir ici comment lier votre Jeedom à votre compte Market, une fois connecté à votre jeedom vous devez aller sur Général → Administration → Configuration</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-linkmarket.png" alt="premier linkmarket">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis cliquez sur "Market et mise à Jour"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-linkmarket2.png" alt="premier linkmarket2">
-</div>
-</div>
-<div class="paragraph">
-<p>Et remplir le champ "Nom d&#8217;utilisateur" et "Mot de passe" en fonction de vos identifants du Market (identifiants du Market et non pas de Jeedom)</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-linkmarket3.png" alt="premier linkmarket3">
-</div>
-</div>
-<div class="paragraph">
-<p>Ensuite cliquez sur "Tester"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-linkmarket4.png" alt="premier linkmarket4">
-</div>
-</div>
-<div class="paragraph">
-<p>Un message devrait vous dire que tout est OK</p>
-</div>
-<div class="paragraph">
-<p>Pour plus de détails sur la page de configuration cliquez <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-administration.html">ici</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_obtenir_mon_url_d_accès_direct">5. Obtenir mon URL d&#8217;accès direct</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Si vous avez un Service Pack, Jeedom vous met à disposition une URL d&#8217;accès direct à votre Jeedom sans que vous ayez à ouvrir les ports sur votre box ou autre.</p>
-</div>
-<div class="paragraph">
-<p>Pour la configurer il vous suffit d&#8217;aller dans Général → Administration → Configuration</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-dns.png" alt="premier dns">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis d&#8217;aller sur la partie "Configuration réseaux"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-dns2.png" alt="premier dns2">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois ici, il vous suffit d&#8217;activer "Utiliser les DNS Jeedom" puis sur la ligne "Gestion" de faire "Rédemarrer" et votre URL apparaitra au niveau de statut HTTP, vous pouvez bien sûr la personnaliser à partir de la page profil du Market</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changer_le_mot_de_passe_par_défaut_de_jeedom">6. Changer le mot de passe par défaut de Jeedom</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Ensuite une des étapes importantes est de changer le mot de passe par défaut de votre compte Jeedom, pour cela cliquez sur Général → Administration → Utilisateurs :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-changeuser.png" alt="premier changeuser">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois dessus vous avez juste à choisir la ligne avec l&#8217;utilisateur "admin" et à cliquer sur changer de mot de passe :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-changeuser2.png" alt="premier changeuser2">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fenêtre va vous demander le mot de passe, attention à bien le retenir sinon vous ne pourrez plus accéder à votre Jeedom</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-changeuser3.png" alt="premier changeuser3">
-</div>
-</div>
-<div class="paragraph">
-<p>Voila vous avez changé le mot de passe du compte admin, pour plus d&#8217;information sur cette page cliquez <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-user.html">ici</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_créer_mon_premier_objet">7. Créer mon premier objet</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Vous allez ici créer votre premier objet, mais d&#8217;abord il faut savoir ce qu&#8217;est un objet, dans Jeedom ça peut être tout et n&#8217;importe quoi mais il est recommandé de le faire en fonction de vos pièces</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Il est possible de définir des relations entre les objets, exemple : le salon appartient à l&#8217;objet rez-de-chaussée qui appartient lui-même à l&#8217;objet maison
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Pour créer un objet rien de plus simple, allez sur Outils → Objets</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-objet.png" alt="premier objet">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis cliquez sur le bouton ajouter :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-objet2.png" alt="premier objet2">
-</div>
-</div>
-<div class="paragraph">
-<p>Jeedom va vous demander le nom de celui-ci :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-objet3.png" alt="premier objet3">
-</div>
-</div>
-<div class="paragraph">
-<p>Validez, voila votre premier objet est créé (facile non ?) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-objet4.png" alt="premier objet4">
-</div>
-</div>
-<div class="paragraph">
-<p>Pour plus d&#8217;informations sur cette partie cliquez <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-object.html">ici</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installer_mon_premier_plugin">8. Installer mon premier plugin</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Un plugin permet d&#8217;ajouter des fonctionnalités à Jeedom, il en existe des centaines, certains peuvent être payants. Pour accéder à la page des plugins aller sur Général → Plugins</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-plugin.png" alt="premier plugin">
-</div>
-</div>
-<div class="paragraph">
-<p>Il vous suffit ensuite de cliquer sur Market :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-plugin2.png" alt="premier plugin2">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous allez ensuite avoir la liste de tous les plugins qu&#8217;il est possible d&#8217;installer.</p>
-</div>
-<div class="paragraph">
-<p>Attention, certains sont officiels et d&#8217;autres non, en cas de souci avec un plugin non officiel l&#8217;équipe Jeedom ne pourra être tenue pour responsable.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-plugin3.png" alt="premier plugin3">
-</div>
-</div>
-<div class="paragraph">
-<p>En cliquant sur un plugin vous obtenez sa fiche :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-plugin4.png" alt="premier plugin4">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous avez ici des boutons pour installer le plugin (la version stable est fortement recommandée) ainsi qu&#8217;une brève description et surtout un lien vers la documentation du plugin. Il est important de consulter cette documentation car beaucoup des problèmes que vous pourriez rencontrer sont expliqués dans celle-ci.</p>
-</div>
-<div class="paragraph">
-<p>Pour plus d&#8217;informations sur cette page cliquez <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-plugin.html">ici</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_support">9. Support</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Nous allons voir ici comment vous pouvez trouver/demander de l&#8217;aide. En cas de question, il est possible dans Jeedom de trouver les réponses à plusieurs endroits :</p>
-</div>
-<div class="sect2">
-<h3 id="_dans_la_doc">9.1. Dans la doc</h3>
-<div class="paragraph">
-<p>Vous trouverez une documentation complète <a href="https://jeedom.fr/doc">ici</a> :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-support1.png" alt="premier support1">
-</div>
-</div>
-<div class="paragraph">
-<p>Celle-ci se décompose en plusieurs catégories : une partie pour le "coeur" de Jeedom, une partie sur les modules (Zwave, mySensors, RFXcom) et une dernière partie pour la documentation des plugins.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_le_forum">9.2. Le forum</h3>
-<div class="paragraph">
-<p>Disponible <a href="https://jeedom.com/forum">ici</a>, le forum est très actif et contient énormément d&#8217;informations. Si vous avez une question, n&#8217;hésitez pas à la poser, vous aurez une réponse en moins d&#8217;une heure (en moyenne).
-Attention, le forum est maintenu par la communauté Jeedom, composée de bénévoles, et non par la société Jeedom.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-support3.png" alt="premier support3">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_les_demandes_de_support_ou_tickets">9.3. Les demandes de support (ou tickets)</h3>
-<div class="paragraph">
-<p>Attention, toute demande de support nécessite obligatoirement d&#8217;avoir un compte sur le Market.</p>
-</div>
-<div class="paragraph">
-<p>Si vous n&#8217;avez pas trouvé de solution à votre problème, vous pouvez en dernier recours faire une demande de support à l&#8217;équipe Jeedom : cette demande passe par un ticket. Il est possible d&#8217;en ouvrir un de plusieurs façons :</p>
+<p>Voici les paramètres à configurer sur le plugin :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Directement à partir de Jeedom (méthode conseillée) : où que vous soyez dans Jeedom, il y a un point d&#8217;exclamation en haut à droite qui permet de faire une demande de support</p>
+<p>Type de délestage : intelligent, hiérarchique ou cascadocyclique</p>
+</li>
+<li>
+<p>Type de compteur : Puissance instantanée ou Ampérage instantané</p>
+</li>
+<li>
+<p>Compteur : sélectionner ici la commande qui renvoie soit la puissance soit l&#8217;ampérage (dans ce cas il sera nécessaire de configurer la tension du réseau)</p>
+</li>
+<li>
+<p>Seuil en Watts : Seuil à partir duquel le déléstage se déclenchera</p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: Center">
 <div class="content">
-<img src="../images/premier-support4.png" alt="premier support4">
+<img src="../images/configuration_generale.png" alt="configuration générale">
 </div>
+</div>
+<hr>
+<div class="sect3">
+<h4 id="_actions_supplémentaires">4.1.1. Actions supplémentaires</h4>
+<div class="paragraph">
+<p>Il est possible de définir des actions complémentaires en plus des actions de délestage.</p>
+</div>
+<div class="paragraph">
+<p>Il est, par exemple, possible d&#8217;envoyer un sms pour prévenir du début et de la fin du délestage.</p>
+</div>
+<div class="imageblock" style="text-align: Center">
+<div class="content">
+<img src="../images/actions_complementaires.png" alt="Actions complémentaires">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="_configuration_avancée">4.1.2. Configuration avancée</h4>
+<div class="paragraph">
+<p>Les paramètres suivants peuvent être réglés:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Si pour une raison ou une autre vous n&#8217;avez pas accès à votre Jeedom, vous pouvez toujours ouvrir un ticket à partir du Market: soit avec le point d&#8217;exclamation en haut à droite, soit en allant sur votre profil (cliquez ensuite sur le bouton "Ouvrir une demande de support")</p>
+<p>Tension du réseau en Volts (220V par défaut)</p>
+</li>
+<li>
+<p>Délai avant réactivation en mins (5 mns par défaut) : délai avant lequel les équipements ne se réactiveront pas (afin d&#8217;éviter les on/off trop répétitifs)</p>
+</li>
+<li>
+<p>Délai minimum entre les relevés en s (10s par défaut) : délai nécessaire entre 2 relevés</p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: Center">
 <div class="content">
-<img src="../images/premier-support5.png" alt="premier support5">
+<img src="../images/configuration_avancee.png" alt="Configuration avancée">
 </div>
 </div>
+<hr>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq">5. FAQ</h2>
+<div class="sectionbody">
+<div class="openblock panel">
+<div class="title">Quels sont les thermostats gérés par le délestage intelligent ?</div><div class="content">
 <div class="paragraph">
-<p>Toute la suite des échanges se fera par mail.</p>
+<p>Pour l&#8217;instant seul le plugin thermostat officiel est géré par le délestage intelligent. Il est cependant possible d&#8217;utiliser les 2 autres modes de délestage avec les autres thermostats.</p>
 </div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshoting">6. Troubleshoting</h2>
+<div class="sectionbody">
+<div class="openblock panel">
+<div class="title">Le délestage ne s&#8217;active pas.</div><div class="content">
 <div class="paragraph">
-<p>Lors de l&#8217;ouverture d&#8217;un ticket, j&#8217;ai une erreur m&#8217;indiquant que j&#8217;ai atteint mon quota:
-En effet, en fonction de votre service pack vous êtes limité à un certain nombre de demandes de support par mois:</p>
+<p>Attention à bien activer le mode "Auto" sur le widget afin d&#8217;activer le délestage.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Community (gratuit) : 2 tickets/mois</p>
-</li>
-<li>
-<p>Power : 10 tickets/mois</p>
-</li>
-<li>
-<p>Pro : 100 tickets/mois</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Vous pouvez retrouver le détail des service packs <a href="https://jeedom.fr/doc/documentation/core/fr_FR/doc-core-service_pack.html">ici</a></p>
 </div>
 </div>
 </div>
