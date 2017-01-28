@@ -430,34 +430,38 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_installation_et_configuration_du_plugin">1.7. Installation et Configuration du plugin</a>
 <ul class="sectlevel3">
-<li><a href="#_paramétrage">1.7.1. Paramétrage</a></li>
-<li><a href="#_ajout_des_commandes">1.7.2. Ajout des commandes</a></li>
+<li><a href="#_aide">1.7.1. Aide</a></li>
+<li><a href="#_paramétrage">1.7.2. Paramétrage</a></li>
+<li><a href="#_ajout_des_commandes">1.7.3. Ajout des commandes</a></li>
+<li><a href="#_modification_de_catégorie_ou_de_modèle_d_ampoule_ou_strip">1.7.4. Modification de catégorie ou de modèle d&#8217;ampoule ou strip</a></li>
 </ul>
 </li>
-<li><a href="#_utilisation_du_widget">1.8. Utilisation du widget</a></li>
-<li><a href="#_exemples_de_scénario">1.9. Exemples de scénario</a>
+<li><a href="#_fonctionnement_du_retour_d_état">1.8. Fonctionnement du retour d&#8217;état</a>
 <ul class="sectlevel3">
-<li><a href="#_scénario_pour_modifier_la_couleur_en_fonction_d_un_bouton_virtuel">1.9.1. Scénario pour modifier la couleur en fonction d&#8217;un bouton virtuel</a></li>
+<li><a href="#_compatibilité_du_retour_d_état">1.8.1. Compatibilité du retour d&#8217;état</a></li>
+<li><a href="#_principe">1.8.2. Principe</a></li>
+<li><a href="#_mise_à_jour_périodique_de_jeedom">1.8.3. Mise à jour périodique de Jeedom</a></li>
+<li><a href="#_mise_à_jour_par_scénario">1.8.4. Mise à jour par scénario</a></li>
 </ul>
 </li>
-<li><a href="#_fonctionnement_du_retour_d_état">1.10. Fonctionnement du retour d&#8217;état</a>
+<li><a href="#_cas_particulier_des_xiaomi_yeelight">1.9. Cas particulier des Xiaomi Yeelight</a>
 <ul class="sectlevel3">
-<li><a href="#_compatibilité_du_retour_d_état">1.10.1. Compatibilité du retour d&#8217;état</a></li>
-<li><a href="#_principe">1.10.2. Principe</a></li>
-<li><a href="#_mise_à_jour_périodique_de_jeedom">1.10.3. Mise à jour périodique de Jeedom</a></li>
-<li><a href="#_mise_à_jour_par_scénario">1.10.4. Mise à jour par scénario</a></li>
-<li><a href="#_récupération_des_informations_de_retour_d_état">1.10.5. Récupération des informations de retour d&#8217;état</a></li>
+<li><a href="#_configuration_de_l_ampoule">1.9.1. Configuration de l&#8217;ampoule</a></li>
+<li><a href="#_mode_scène_xiaomi_yeelight">1.9.2. Mode Scène Xiaomi Yeelight</a></li>
 </ul>
 </li>
-<li><a href="#_xiaomi_yeelight">1.11. Xiaomi Yeelight</a>
-<ul class="sectlevel3">
-<li><a href="#_configuration_de_l_ampoule">1.11.1. Configuration de l&#8217;ampoule</a></li>
-<li><a href="#_mode_scène_xiaomi_yeelight">1.11.2. Mode Scène Xiaomi Yeelight</a></li>
-</ul>
-</li>
-<li><a href="#_faq">1.12. FAQ</a></li>
-<li><a href="#_difficultés">1.13. Difficultés</a></li>
-<li><a href="#_changelog">1.14. Changelog</a></li>
+<li><a href="#_faq">1.10. FAQ</a></li>
+<li><a href="#_quelles_ampoules_peuvent_être_utilisées">1.11. Quelles ampoules peuvent être utilisées ?</a></li>
+<li><a href="#_rien_ne_se_passe">1.12. Rien ne se passe</a></li>
+<li><a href="#_je_ne_sais_pas_configurer_ma_box_internet">1.13. Je ne sais pas configurer ma box internet</a></li>
+<li><a href="#_toutes_les_commandes_ne_sont_pas_créées_lors_d_un_changement_de_modèle_d_ampoule">1.14. Toutes les commandes ne sont pas créées lors d&#8217;un changement de modèle d&#8217;ampoule</a></li>
+<li><a href="#_la_gestion_de_l_intensité_des_ampoules_blanches_mi_light_easybulb_limitlessled_n_est_pas_pratique">1.15. La gestion de l&#8217;intensité des ampoules blanches  Mi.Light/EasyBulb/LimitlessLED n&#8217;est pas pratique</a></li>
+<li><a href="#_la_gestion_de_l_intensité_de_la_couleur_a_quelquefois_des_comportements_imprévuse">1.16. La gestion de l&#8217;intensité de la couleur a quelquefois des comportements imprévuse</a></li>
+<li><a href="#_y_a_t_il_un_retour_d_état">1.17. Y-a-t-il un retour d&#8217;état ?</a></li>
+<li><a href="#_impossible_de_faire_fonctionner_les_ampoules_xiaomi_yeelight">1.18. Impossible de faire fonctionner les ampoules Xiaomi Yeelight</a></li>
+<li><a href="#_comment_obtenir_de_l_aide">1.19. Comment obtenir de l&#8217;aide ?</a></li>
+<li><a href="#_difficultés">1.20. Difficultés</a></li>
+<li><a href="#_changelog">1.21. Changelog</a></li>
 </ul>
 </li>
 </ul>
@@ -471,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_présentation">1.1. Présentation</h3>
 <div class="paragraph">
-<p>Ce plugin permet de gérer de nombreux  bandeau de leds ou ampoules leds pilotés par radiofréquence 2.4 GHz via une box wifi vendue avec le produit. Le plugin dialogue avec la box wifi mais pas directement avec les leds.</p>
+<p>Ce plugin permet de gérer de nombreux bandeaux de leds ou ampoules leds pilotés en wifi ou par radiofréquence 2.4 GHz via une box wifi vendue avec le produit.</p>
 </div>
 <hr>
 </div>
@@ -485,7 +489,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Il existe de nombreux produits compatibles avec le plugin mais de marques très différents ou sans marque.</p>
 </div>
 <div class="paragraph">
-<p>Les produits connus comme compatibles :</p>
+<p>Les produits compatibles :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -493,19 +497,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Ampoules Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>Stgrip-led Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
+<p>Strip-led Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
 </li>
 <li>
 <p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V3.0 à V5.0 : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V6.0 : pas de retour d&#8217;état</p>
-</li>
-<li>
-<p>Contrôleur bandeau led LW12/Lagute : ne gère pas le blanc</p>
-</li>
-<li>
-<p>Contrôleur bandeau led Magic UFO : gère le blanc</p>
+<p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V6.0/iBox1/iBox2 : pas de retour d&#8217;état</p>
 </li>
 <li>
 <p>Ampoules WiFi Xiaomi Yeelight blanches et couleur avec retour d&#8217;état</p>
@@ -513,17 +511,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p>Strip-led WiFi Xiaomi Yeelight couleur avec retour d&#8217;état</p>
 </li>
+<li>
+<p>Plafonnier WiFi Xiaomi Yeelight avec retour d&#8217;état</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Produits pouvant être compatibles :</p>
+<p>Produits pouvant être compatibles et non garantis :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Ceux compatibles avec le logiciel Magic Home de type 1 et 3</p>
+<p>LW12/Lagute : RGB strip-led controlleur : retour d&#8217;état</p>
+</li>
+<li>
+<p>Wifi 320/370 RGB/RGBW strip-led controlleur : retour d’état partiel</p>
+</li>
+<li>
+<p>Magic UFO : RGBW strip-led controlleur, gère le blanc</p>
+</li>
+<li>
+<p>H801 : RGBW strip-led controlleur, pas de retour d’état</p>
+</li>
+<li>
+<p>Arilux AL-C01/02/03/04/10 : RGB/RGBW strip-led controlleur, retour d’état</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Pour ces controlleurs, le protocole d&#8217;échange ne proviennent pas directement du constructeur qui peut donc le modifier à tout moment. Plusieurs versions existent sur le marché qui ne sont pas toutes compatibles avec le plugin.</p>
 </div>
 <div class="paragraph">
 <p>Produits incompatibles et qui ne le seront pas :</p>
@@ -531,10 +547,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>les ampoules ou contrôleurs de bandeau led qui contiennent un récepteur  bluetoooth au lieu d&#8217;un recepteur radiofréquence 2.4 Ghz ou WiFi.</p>
+<p>Les ampoules ou contrôleurs de bandeau led qui contiennent un récepteur bluetoooth au lieu d&#8217;un recepteur radiofréquence 2.4 Ghz ou WiFi.</p>
 </li>
 <li>
-<p>les contrôleurs de bandeau led ou d&#8217;ampoules et les ampoules qui utilisent une connexion WiFi point à point avec l&#8217;application mobile.</p>
+<p>Les contrôleurs de bandeau led ou d&#8217;ampoules et les ampoules qui utilisent une connexion WiFi point à point avec l&#8217;application mobile.</p>
+</li>
+<li>
+<p>Les lampes de chevet et de bureau Yeelight ne sont pas compatibles (par construction).</p>
 </li>
 </ul>
 </div>
@@ -550,7 +569,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Il est conseillé de se renseigner sur le forum pour connaitre la compatibilité d&#8217;un produit peu diffusé.</p>
 </li>
 <li>
-<p>Aller sur le forum de Jeedom ici : <a href="https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840" class="bare">https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840</a></p>
+<p>Aller sur le forum de Jeedom ici : <a href="https://www.jeedom.com/forum/viewtopic.php?f=28&amp;t=24322" class="bare">https://www.jeedom.com/forum/viewtopic.php?f=28&amp;t=24322</a></p>
 </li>
 </ul>
 </div>
@@ -563,7 +582,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>toutes les fonctionnalités sont prises en compte par le plugin.</p>
+<p>Toutes les fonctionnalités sont prises en compte par le plugin.</p>
 </li>
 </ul>
 </div>
@@ -573,17 +592,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>la programmation des modes custom n&#8217;est pas possible, il faut utiliser l&#8217;application fournie avec le contrôleur (Magic Home). Par contre, les modes customs peuvent être déclenchés avec le plugin. Le retour d&#8217;état de l&#8217;intensité n&#8217;est pas géré par le plugin car n&#8217;est pas natif au contrôleur.</p>
+<p>La programmation des modes custom n&#8217;est pas possible, il faut utiliser l&#8217;application fournie avec le contrôleur (Magic Home). Par contre, les modes customs peuvent être déclenchés avec le plugin.</p>
+</li>
+<li>
+<p>Il existe plusieurs versions de LW12 qui peuvent ne pas être compatibles avec le plugin.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Magic UFO :</p>
+<p>Magic UFO et Arilux AL-C01/02/03/04/10 :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>la programmation des modes custom, le mode radio et les timers ne sont pas gérés. Il faut alors utiliser l&#8217;application fournie avec le contrôleur (Magic Home). Par contre, les modes customs peuvent être déclenchés avec le plugin. Le retour d&#8217;état de l&#8217;intensité n&#8217;est pas géré par le plugin car n&#8217;est pas natif au contrôleur.</p>
+<p>La programmation des modes custom, le mode radio et les timers ne sont pas gérés. Il faut utiliser l&#8217;application fournie avec le contrôleur (Magic Home). Par contre, les modes customs peuvent être déclenchés avec le plugin.</p>
+</li>
+<li>
+<p>Il existe différents modèles qui peuvent ne pas être compatibles avec le plugin.</p>
 </li>
 </ul>
 </div>
@@ -593,7 +618,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>les commandes HSV ne sont pas gérées.Flow et scène le sont en créant des commandes avec le code JSON correspondant à l&#8217;effet recherché (voir la documentation de l&#8217;API YeeLight).</p>
+<p>Les commandes HSV ne sont pas gérées. Flow et scène le sont en créant des commandes avec le code JSON correspondant à l&#8217;effet recherché (voir la documentation de l&#8217;API YeeLight).</p>
+</li>
+<li>
+<p>Les lampes de chevet et de bureau ne sont pas compatibles.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Wifi 320/370 :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le retour d&#8217;état des modes scènes n&#8217;est pas géré, seul ON/OFF est géré.</p>
+</li>
+<li>
+<p>Il existe différents modèles qui peuvent ne pas être compatibles avec le plugin.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>H810 :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>les jeux de scène ne sont pas gérés.</p>
+</li>
+<li>
+<p>Il existe différents modèles qui peuvent ne pas être compatibles avec le plugin.</p>
 </li>
 </ul>
 </div>
@@ -603,13 +657,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_installer_les_leds">1.6.1. Installer les leds</h4>
 <div class="paragraph">
-<p>Attention, le plugin est uniquement compatible avec les leds wifi des marques Mi.Light/EasyBulb/LimitlessLED et les ponts (bridge) V3 à V6, le contrôleur de bandeau à leds LW-12, les contrôleurs compatibles Magic UFO ainsi que Les ampoules Xiaomi YeeLight</p>
-</div>
-<div class="paragraph">
-<p>Utiliser la documentation du constructeur et vérifier le fonctionnement avec la télécommande radiofréquence du constructeur. Noter le canal (1 à 4) (inutile pour le contrôleur LW-12 ou les contrôleurs compatibles Magic UFO et les ampoules Xiaomi YeeLight).</p>
-</div>
-<div class="paragraph">
 <p>Télécharger l&#8217;application mobile du constructeur et suivre les indications afin de contrôler les leds avec le mobile.</p>
+</div>
+<div class="paragraph">
+<p>Tant que la lampe n&#8217;est pas contrôlée avec l&#8217;application mobile, le plugin ne pourra pas fonctionner.</p>
 </div>
 <div class="paragraph">
 <p>Consultez l&#8217;aide et les forums du constructeur des lampes.</p>
@@ -618,7 +669,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_configurer_le_routeur">1.6.2. Configurer le routeur</h4>
 <div class="paragraph">
-<p>Si vous utilisez une box domotique aller dans la partie configuration DHCP et modifier l&#8217;attribution de l&#8217;adresse IP du module wifi ou de l&#8217;ampoule pour qu&#8217;elle soit statique. Noter cette adresse. En général elle sera de la forme :</p>
+<p>Il faut configurer le DHCP de votre routeur (généralement fourni par votre fournisseur d&#8217;accès) pour modifier l&#8217;attribution de l&#8217;adresse IP du module wifi ou de l&#8217;ampoule pour qu&#8217;elle soit statique. Noter cette adresse. En général elle sera de la forme :</p>
 </div>
 <div class="paragraph">
 <p>192.168.1.xxx   où xxx correspond à l&#8217;adresse du module wifi (2 à 254)</p>
@@ -630,7 +681,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Après cette modification, vérifier que l&#8217;application mobile contrôle toujours les lampes.</p>
 </div>
 <div class="paragraph">
-<p>Vous pouvez alors passer à la configuration du plugin Wifilight.</p>
+<p>Vous pouvez alors passer à la configuration du plugin wifilightV2.</p>
 </div>
 <hr>
 </div>
@@ -638,9 +689,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_installation_et_configuration_du_plugin">1.7. Installation et Configuration du plugin</h3>
 <div class="sect3">
-<h4 id="_paramétrage">1.7.1. Paramétrage</h4>
+<h4 id="_aide">1.7.1. Aide</h4>
 <div class="paragraph">
-<p>Pour paramétrer un équipement, choisir le menu <strong>Plugins / Objets communicants / Wifilight</strong></p>
+<p>Utiliser l&#8217;icône sous forme de point d&#8217;interrogation pour obtenir une aide sur chaque élément de configuration.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_paramétrage">1.7.2. Paramétrage</h4>
+<div class="paragraph">
+<p>Pour paramétrer un équipement, choisir le menu <strong>Plugins / Objets communicants / wifilightV2</strong></p>
 </div>
 <div class="paragraph">
 <p>Puis cliquer sur le bouton en haut à gauche <strong>Ajouter un module Wifi</strong></p>
@@ -654,26 +711,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Saisir l&#8217;objet parent</p>
 </li>
 <li>
-<p>Choisir la catégorie Lumière</p>
+<p>Choisir la catégorie Lumière (par défaut)</p>
 </li>
 <li>
-<p>Activer et rendre visible</p>
+<p>Activer et rendre visible (par défaut)</p>
 </li>
 <li>
-<p>Saisir l&#8217;adresse IP du module ou de l&#8217;ampoule WiFi</p>
+<p>Saisir l&#8217;adresse IP du module ou de l&#8217;ampoule WiFi (voir la FAQ pour plus d&#8217;explications)</p>
 </li>
 <li>
-<p>Saisir la canal utilisé (ce paramètre est ignoré pour les contrôleurs LW-12 ou compatibles Magic UFO,le pont Mi.Light V6 et les ampoules Xiaomi YeeLight)</p>
+<p>Pour certains périphériques il est demandé de saisir le canal utilisé, créer un équipement wifilightV2 par canal</p>
 </li>
 <li>
-<p>Saisir le type de lampe (Mi.Light RGBW, Mi.Light RGBW pont V6, Mi.Light blanche, Mi.Light Blanche Pont V6, Mi.Light RGBW WW/CW, Pont Mi.Light V6, LW-12, Magic UFO, Xiaomi Yeelight Blanche, Xiaomi Yeelight RGBW, Xiaomi Yeelight bandeau led).
-C&#8217;est indispensable pour créer l&#8217;ensemble des commandes pour le type de lampe ou de pont utilisé</p>
+<p>Pour certains périphériques saisir l&#8217;adresse MAC</p>
 </li>
 <li>
-<p>Saisir le nombre d&#8217;envois de commandes : permet de répéter la commande pour un équipement éloigné en cas de mauvaise transmission</p>
+<p>Saisir la marque ou la catégorie de la lampe, du strip-led ou du pont</p>
 </li>
 <li>
-<p>saisir le délai d&#8217;envoi en cas de répétition</p>
+<p>Saisir le type exact du controlleur, de l&#8217;ampoule ou du strip-led
+ceci est indispensable pour créer les commandes afin de piloter le périphérique</p>
+</li>
+<li>
+<p>Saisir le nombre d&#8217;envois de commandes : permet de répéter la commande pour un équipement éloigné en cas de mauvaise transmission. (1 par défaut). Certaines ampoules ne gèrent pas cette répétition car le plugin s&#8217;assure par retour d&#8217;état de la transmission. Certaines commandes relatives (incrémentations) ne sont pas répétées.</p>
+</li>
+<li>
+<p>saisir le délai d&#8217;envoi en cas de répétition (0 ms par défaut, 100 ms max)</p>
 </li>
 </ul>
 </div>
@@ -687,159 +750,33 @@ C&#8217;est indispensable pour créer l&#8217;ensemble des commandes pour le typ
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ajout_des_commandes">1.7.2. Ajout des commandes</h4>
-<div class="paragraph">
-<p>A la sauvegarde du module, les commandes sont automatiquement créées.</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/fr_FR_Wifilight02.png" alt="fr FR Wifilight02">
-</div>
-</div>
-<div class="paragraph">
-<p>Le nom des commandes peut être modifié. Les commandes automatiquement créées et effacées sont recréées lors d&#8217;une sauvegarde.
-Toutes les commandes sont créées et peuvent alourdir l&#8217;interface, vous pouvez choisir de ne pas les afficher.</p>
-</div>
-<div class="paragraph">
-<p>Pour les autres canaux du même module WiFi, créer un nouveau module WiFi de la même façon et modifier le canal.</p>
-</div>
-<div class="paragraph">
-<p>Pour les Mi.Light/EasyBulb/LimitlessLED, utiliser un équipement avec le canal 0 pour contrôler les 4 canaux en même temps.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_utilisation_du_widget">1.8. Utilisation du widget</h3>
-<div class="paragraph">
-<p>Le widget dans le tableau de bord va permettre de contrôler les leds :</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/fr_FR_Wifilight06.png" alt="fr FR Wifilight06">
-</div>
-</div>
-<div class="paragraph">
-<p>Les widgets sont les widgets standards de Jeedom.
-Pour le widget color, il est possible de télécharger :
- dashboard.action.color.Color_default_no_off
-qui correspond au widget standard mais sans le bouton off.</p>
-</div>
-<div class="paragraph">
-<p>Attention : il n&#8217;y a pas de retour d&#8217;état depuis les Mi.Light. Si l&#8217;éclairage a été modifié par une télécommande radiofréquence, le plugin ne retournera pas l&#8217;information sur le tableau de bord.
-Pour les LW12/Magic UFO le plugin permet d&#8217;obtenir l&#8217;état toutes les minutes. La récupération par scénario est possible. L&#8217;intensité modifiée avec une app sur mobile sans passer par jeedom ne sera pas répercutée car l&#8217;intensité n&#8217;est pas gérée par ces contrôleurs.
-Pour les Xiaomi YeeLight, le plugin permet le retour d&#8217;état toutes les minutes de la couleur, l&#8217;intensité, ON/OFF, la température de couleur.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_exemples_de_scénario">1.9. Exemples de scénario</h3>
-<div class="sect3">
-<h4 id="_scénario_pour_modifier_la_couleur_en_fonction_d_un_bouton_virtuel">1.9.1. Scénario pour modifier la couleur en fonction d&#8217;un bouton virtuel</h4>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/fr_FR_Wifilight07.png" alt="fr FR Wifilight07">
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_fonctionnement_du_retour_d_état">1.10. Fonctionnement du retour d&#8217;état</h3>
-<div class="sect3">
-<h4 id="_compatibilité_du_retour_d_état">1.10.1. Compatibilité du retour d&#8217;état</h4>
-<div class="paragraph">
-<p>Le retour d&#8217;état fonctionne avec les contrôleurs LW12/Lagute, Magic UFO ainsi que les ampoules et bandeau led Xiaomi YeeLight (dans une version future)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_principe">1.10.2. Principe</h4>
-<div class="paragraph">
-<p>Le retour d&#8217;état consiste à ce que Jeedom récupère l&#8217;état du contrôleur si son état a été changé par un autre maitre que Jeedom : appli portable ou télécommande</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_mise_à_jour_périodique_de_jeedom">1.10.3. Mise à jour périodique de Jeedom</h4>
+<h4 id="_ajout_des_commandes">1.7.3. Ajout des commandes</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>LW12/Lagute, Magic UFO, Xiaomi Yeelight : toutes les minutes Jeedom interroge le contrôleur pour connaitre son état et mettre à jour l&#8217;allure des widgets du plugin ( sliders et couleur ). Des informations correspondant à l&#8217;état sont mises à jour et peuvent être interrogées par les scénarios.</p>
+<p>lors de la sauvegarde du module, les commandes sont automatiquement créées.</p>
+</li>
+<li>
+<p>le nom des commandes peut être modifié. Les commandes automatiquement créées et effacées sont recréées lors d&#8217;une sauvegarde.</p>
+</li>
+<li>
+<p>lorsque toutes les commandes sont créées, elles peuvent alourdir l&#8217;interface, il est possible de ne pas les afficher en configurant la commande (roues crantées).</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mise_à_jour_par_scénario">1.10.4. Mise à jour par scénario</h4>
-<div class="paragraph">
-<p>La commande GetState permet de mettre à jour dans un scénario jeedom avec l&#8217;état du contrôleur</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_récupération_des_informations_de_retour_d_état">1.10.5. Récupération des informations de retour d&#8217;état</h4>
-<div class="paragraph">
-<p>Toutes les commandes "Info" du widget et qui contiennent Get ou Etat dans leur nom correspondent à un des états du contrôleur : couleur, vitesse, ON/OFF &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Contrôleurs de type Magic UFO :</p>
-</div>
+<h4 id="_modification_de_catégorie_ou_de_modèle_d_ampoule_ou_strip">1.7.4. Modification de catégorie ou de modèle d&#8217;ampoule ou strip</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>ColorGet : récupère la couleur au format #RGB (#FF00FF)</p>
+<p>supprimer toutes les commandes</p>
 </li>
 <li>
-<p>ModeGet : récupère le mode guirlande</p>
+<p>modifier la catégorie ou le modèle</p>
 </li>
 <li>
-<p>SpeedGet : récupère la vitesse du mode guirlande</p>
-</li>
-<li>
-<p>Etat : récupère si le contrôleur est arrêté  ou en marche &#8594; marche: 1, arrêt :  0</p>
-</li>
-<li>
-<p>SwProgRunGet : récupère si le contrôleur, en mode guirlande, fonctionne ou est en pause &#8594; pause  : 0,  marche : 1</p>
-</li>
-<li>
-<p>WhiteGet : récupère l&#8217;intensité du blanc 0 à 255</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Contrôleurs de type LW12/Lagute :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ColorGet : récupère la couleur #RGB (#FF00FF)</p>
-</li>
-<li>
-<p>ProgGet : récupère le n° du mode guirlande</p>
-</li>
-<li>
-<p>SpeedGet : récupère la vitesse du mode guirlande</p>
-</li>
-<li>
-<p>Etat : récupère si le contrôleur est arrêté  ou en marche &#8594; marche: 1, arrêt :  0</p>
-</li>
-<li>
-<p>SwProgRunGet : récupère si le contrôleur, en mode guirlande, fonctionne ou est en pause &#8594; pause  : 0,  marche : 1</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ampoules et strip-led Xiaomi Yeelight :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ColorGet : récupère la couleur #RGB (#FF00FF) (pour les lampes compatibles)</p>
-</li>
-<li>
-<p>Etat : récupère si le contrôleur est arrêté  ou en marche &#8594; marche: 1, arrêt :  0</p>
-</li>
-<li>
-<p>IntensityGet : résupère l&#8217;intensité</p>
-</li>
-<li>
-<p>KelvinGet : résupéère la température de couleur (pour les lampes compatibles)</p>
+<p>sauvegarder 2 fois</p>
 </li>
 </ul>
 </div>
@@ -847,17 +784,45 @@ Pour les Xiaomi YeeLight, le plugin permet le retour d&#8217;état toutes les mi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_xiaomi_yeelight">1.11. Xiaomi Yeelight</h3>
+<h3 id="_fonctionnement_du_retour_d_état">1.8. Fonctionnement du retour d&#8217;état</h3>
 <div class="sect3">
-<h4 id="_configuration_de_l_ampoule">1.11.1. Configuration de l&#8217;ampoule</h4>
+<h4 id="_compatibilité_du_retour_d_état">1.8.1. Compatibilité du retour d&#8217;état</h4>
+<div class="paragraph">
+<p>Le retour d&#8217;état fonctionne avec les contrôleurs LW12/Lagute, Magic UFO, Arilux et Wifi 3x0 (partiellement) ainsi que les ampoules et bandeau led Xiaomi YeeLight.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_principe">1.8.2. Principe</h4>
+<div class="paragraph">
+<p>Le retour d&#8217;état consiste à ce que Jeedom récupère l&#8217;état du contrôleur si son état a été changé par un autre maitre que Jeedom : appli portable ou télécommande.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mise_à_jour_périodique_de_jeedom">1.8.3. Mise à jour périodique de Jeedom</h4>
+<div class="paragraph">
+<p>LW12/Lagute, Magic UFO, Arilux, Wifi 3x0 et Xiaomi Yeelight : toutes les minutes Jeedom interroge le contrôleur ou l&#8217;ampoule pour connaitre son état et mettre à jour l&#8217;allure des widgets du plugin ( sliders et couleur ). Des informations correspondant à l&#8217;état sont mises à jour et peuvent être interrogées par les scénarios.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mise_à_jour_par_scénario">1.8.4. Mise à jour par scénario</h4>
+<div class="paragraph">
+<p>Les commandes xxxxGet et Etat pouvent être utilisées dans un scénario Jeedom.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cas_particulier_des_xiaomi_yeelight">1.9. Cas particulier des Xiaomi Yeelight</h3>
+<div class="sect3">
+<h4 id="_configuration_de_l_ampoule">1.9.1. Configuration de l&#8217;ampoule</h4>
 <div class="paragraph">
 <p>Il est indispensable d&#8217;activer le mode développeur via l&#8217;application  Xiaomi Yeelight.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mode_scène_xiaomi_yeelight">1.11.2. Mode Scène Xiaomi Yeelight</h4>
+<h4 id="_mode_scène_xiaomi_yeelight">1.9.2. Mode Scène Xiaomi Yeelight</h4>
 <div class="paragraph">
-<p>Il est possible de configurer les modes scène. Plusieurs modes scènes sont préprogrammés mais il est possible d&#8217;ajouter d&#8217;autres modes scène.</p>
+<p>Il est possible de configurer les modes scène. Plusieurs modes scène sont préprogrammés dans le plugin mais il est possible d&#8217;ajouter d&#8217;autres modes scène.</p>
 </div>
 <div class="paragraph">
 <p>Il suffit de respecter certaines conditions :</p>
@@ -868,7 +833,7 @@ Pour les Xiaomi YeeLight, le plugin permet le retour d&#8217;état toutes les mi
 <p>Ajouter une commande wifilight action de type Défaut</p>
 </li>
 <li>
-<p>Son nom interne doit commencer par Scene. Exemples : SceneSoleil - Scene025</p>
+<p>Lui donner un nom (par exemple Scene Clignote)</p>
 </li>
 <li>
 <p>Dans parametres, mettre la commande scène Yeelight, par exemple : "id":1, "method":"set_scene","params":["cf",0,0,"500,1,255,100,1000,1,16776960,70"]</p>
@@ -885,46 +850,66 @@ Pour les Xiaomi YeeLight, le plugin permet le retour d&#8217;état toutes les mi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_faq">1.12. FAQ</h3>
-<div class="openblock panel">
-<div class="title">Quelles ampoules peuvent être utilisées ?</div><div class="content">
+<h3 id="_faq">1.10. FAQ</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_quelles_ampoules_peuvent_être_utilisées">1.11. Quelles ampoules peuvent être utilisées ?</h3>
 <div class="paragraph">
-<p>Les produits connus comme compatibles :</p>
+<p>Il existe de nombreux produits compatibles avec le plugin mais de marques très différents ou sans marque.</p>
+</div>
+<div class="paragraph">
+<p>Les produits compatibles :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Ampoules Mi.Light/EasyBulb/LimitlessLED sur les ponts V3 à V5 : pas de retour d&#8217;état</p>
+<p>Ampoules Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V3 à V5: pas de retour d&#8217;état</p>
+<p>Strip-led Mi.Light/EasyBulb/LimitlessLED : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V6.0</p>
+<p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V3.0 à V5.0 : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>Contrôleur led LW12/Lagute : ne gèrent pas le blanc</p>
+<p>Contrôleur led Mi.Light/EasyBulb/LimitlessLED V6.0/iBox1/iBox2 : pas de retour d&#8217;état</p>
 </li>
 <li>
-<p>Contrôleur led Magic UFO : gère le blanc</p>
+<p>Ampoules WiFi Xiaomi Yeelight blanches et couleur avec retour d&#8217;état</p>
 </li>
 <li>
-<p>Ampoules Xiaomi Yeelight blanches et couleur</p>
+<p>Strip-led WiFi Xiaomi Yeelight couleur avec retour d&#8217;état</p>
 </li>
 <li>
-<p>Contrôleur de led Xiaomi Yeelight couleur</p>
+<p>Plafonnier WiFi Xiaomi Yeelight avec retour d&#8217;état</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Produits pouvant être compatibles :</p>
+<p>Produits pouvant être compatibles et non garantis :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Ceux compatibles avec le logiciel Magic Home de type 1 et 3</p>
+<p>LW12/Lagute : RGB strip-led controlleur : retour d&#8217;état</p>
+</li>
+<li>
+<p>Wifi 320/370 RGB/RGBW strip-led controlleur : retour d’état partiel</p>
+</li>
+<li>
+<p>Magic UFO : RGBW strip-led controlleur, gère le blanc</p>
+</li>
+<li>
+<p>H801 : RGBW strip-led controlleur, pas de retour d’état</p>
+</li>
+<li>
+<p>Arilux AL-C01/02/03/04/10 : RGB/RGBW strip-led controlleur, retour d’état</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Pour ces controlleurs, le protocole d&#8217;échange ne proviennent pas directement du constructeur qui peut donc le modifier à tout moment.</p>
 </div>
 <div class="paragraph">
 <p>Produits incompatibles et qui ne le seront pas :</p>
@@ -932,81 +917,91 @@ Pour les Xiaomi YeeLight, le plugin permet le retour d&#8217;état toutes les mi
 <div class="ulist">
 <ul>
 <li>
-<p>les ampoules ou contrôleurs de bandeau led qui contiennent un récepteur bluetoooth au lieu d&#8217;un recepteur radiofréquence 2.4 Ghz ou WiFi.</p>
+<p>Les ampoules ou contrôleurs de bandeau led qui contiennent un récepteur bluetoooth au lieu d&#8217;un recepteur radiofréquence 2.4 Ghz ou WiFi.</p>
 </li>
 <li>
-<p>les contrôleurs de bandeau led ou d&#8217;ampoules qui utilisent une connexion wifi point à point avec l&#8217;application mobile.</p>
+<p>Les contrôleurs de bandeau led ou d&#8217;ampoules et les ampoules qui utilisent une connexion WiFi point à point avec l&#8217;application mobile.</p>
+</li>
+<li>
+<p>Les lampes de chevet et de bureau Yeelight ne sont pas compatibles (par construction).</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Les ampoules et contrôleurs d&#8217;autres marques ou les clones ne sont pas supportés ou doivent être testés au préalable.</p>
 </div>
 <div class="paragraph">
 <p>Un plugin de test pourra être fourni pour vérifier la compatibilité des leds, contacter l&#8217;auteur via le forum.</p>
 </div>
 </div>
-</div>
-<div class="openblock panel">
-<div class="title">Rien ne se passe</div><div class="content">
+<div class="sect2">
+<h3 id="_rien_ne_se_passe">1.12. Rien ne se passe</h3>
 <div class="paragraph">
 <p>Faire d&#8217;abord fonctionner les lampes avec l&#8217;application mobile fournie par le constructeur.</p>
 </div>
 <div class="paragraph">
-<p>Utiliser le bouton <strong>tester</strong> dans le menu Plugin/Objets Connectés/Wifilight.</p>
+<p>Utiliser le bouton <strong>tester</strong> dans le menu Plugin/Objets Connectés/WifilightV2/commandes.</p>
 </div>
 <div class="paragraph">
-<p>Aucune aide ne sera apportée sans que les lampes soient opérationnelles avec la télécommande ou l&#8217;application du téléphone portable.</p>
+<p>Aucune aide ne sera apportée sans que les lampes soient opérationnelles avec l&#8217;application constructeur des lampes sur un téléphone portable.</p>
+</div>
+<div class="paragraph">
+<p>Il est nécessaire de donner une adresse IP fixe au controlleur ou à la lampe.</p>
 </div>
 </div>
-</div>
-<div class="openblock panel">
-<div class="title">Je ne sais pas configurer ma box internet</div><div class="content">
+<div class="sect2">
+<h3 id="_je_ne_sais_pas_configurer_ma_box_internet">1.13. Je ne sais pas configurer ma box internet</h3>
 <div class="paragraph">
 <p>Aucune aide ne sera apportée sur la box et les notions nécessaires pour configurer le routeur pour attribuer une adresse IP fixe. Consulter les forums de la box.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_toutes_les_commandes_ne_sont_pas_créées_lors_d_un_changement_de_modèle_d_ampoule">1.14. Toutes les commandes ne sont pas créées lors d&#8217;un changement de modèle d&#8217;ampoule</h3>
+<div class="paragraph">
+<p>Sauvegarder 2 fois.</p>
 </div>
-<div class="openblock panel">
-<div class="title">La gestion de l&#8217;intensité des ampoules blanches  Mi.Light/EasyBulb/LimitlessLED n&#8217;est pas pratique</div><div class="content">
+</div>
+<div class="sect2">
+<h3 id="_la_gestion_de_l_intensité_des_ampoules_blanches_mi_light_easybulb_limitlessled_n_est_pas_pratique">1.15. La gestion de l&#8217;intensité des ampoules blanches  Mi.Light/EasyBulb/LimitlessLED n&#8217;est pas pratique</h3>
 <div class="paragraph">
 <p>Le constructeur des leds n&#8217;a pas prévu de pouvoir affecter directement l&#8217;intensité de l&#8217;ampoule. On ne peut qu&#8217;incrémenter ou décrémenter par rapport à la valeur précédente. Le plugin ne fait que reproduire ce fonctionnement. Le curseur qui est proposé est en conséquence capricieux.</p>
 </div>
 </div>
-</div>
-<div class="openblock panel">
-<div class="title">Y-a-t-il un retour d&#8217;état ?</div><div class="content">
+<div class="sect2">
+<h3 id="_la_gestion_de_l_intensité_de_la_couleur_a_quelquefois_des_comportements_imprévuse">1.16. La gestion de l&#8217;intensité de la couleur a quelquefois des comportements imprévuse</h3>
 <div class="paragraph">
-<p>Les ampoules RGBW Mi.Light/EasyBulb/LimitlessLED ne possèdent pas de retour d&#8217;état. Cela signifie que si, par exemple, l&#8217;ampoule est éteinte avec la télécommande ou avec l&#8217;application du téléphone portable, le plugin n&#8217;est pas prévenu. Ainsi Jeedom pourra afficher que la lampe est allumée alors qu&#8217;elle a été éteinte par ailleurs.
+<p>Aucun protocole ne gère l&#8217;intensité de la couleur, bien que généralement, les applications mobiles le fassent. Tant que jeedom gère couleur et intensité, tout se passe bien. Mais si l&#8217;intensité est modifiée par une applciation mobile, les résultats ne sont pas toujours ceux attendus. Le plugin essaye de corriger le souci quand la lampe ou le controlleur possède un retour d&#8217;état.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_y_a_t_il_un_retour_d_état">1.17. Y-a-t-il un retour d&#8217;état ?</h3>
+<div class="paragraph">
+<p>Les ampoules et controlleurs Mi.Light/EasyBulb/LimitlessLED et H801 ne possèdent pas de retour d&#8217;état. Cela signifie que si, par exemple, l&#8217;ampoule est éteinte avec la télécommande ou avec l&#8217;application du téléphone portable, le plugin n&#8217;est pas prévenu. Ainsi Jeedom pourra afficher que la lampe est allumée alors qu&#8217;elle a été éteinte par ailleurs.
 L&#8217;interface utilisateur de Jeedom ne correspondra donc pas à la réalité.
 Un moyen de contourner partiellement ce problème est d&#8217;utiliser des télécommandes connectées à Jeedom, il sera alors possible d&#8217;indiquer au widget l&#8217;action réalisée.</p>
 </div>
 <div class="paragraph">
-<p>Le contrôleur LW-12 et le contrôleur Magic UFO peuvent être interrogés pour connaitre leur état et sont interrogés toutes les minutes, seule l&#8217;intensité n&#8217;est pas répercutée si elle a été modifiée autrement qu&#8217;avec Jeedom.</p>
+<p>Les contrôleurs : LW-12, Magic UFO, Arilux peuvent être interrogés pour connaitre leur état et sont interrogés toutes les minutes.</p>
 </div>
 <div class="paragraph">
 <p>Les ampoules et bandeaux de led Xiaomi Yeelight possèdent un retour d&#8217;état mis à jour toutes les minutes, Jeedom peut interroger leur état dans un scénario.</p>
 </div>
+<div class="paragraph">
+<p>Les contrôleurs Wifi 320/370 possèdent un retour d&#8217;état partiel mis à jour toutes les minutes, Jeedom peut interroger leur état dans un scénario.</p>
 </div>
 </div>
-<div class="openblock panel">
-<div class="title">Impossible de faire fonctionner les ampoules Xiaomi Yeelight</div><div class="content">
+<div class="sect2">
+<h3 id="_impossible_de_faire_fonctionner_les_ampoules_xiaomi_yeelight">1.18. Impossible de faire fonctionner les ampoules Xiaomi Yeelight</h3>
 <div class="paragraph">
 <p>Il est indispensable d&#8217;activer le mode développeur via l&#8217;application  Xiaomi Yeelight.</p>
 </div>
 </div>
-</div>
-<div class="openblock panel">
-<div class="title">Comment obtenir de l&#8217;aide ?</div><div class="content">
+<div class="sect2">
+<h3 id="_comment_obtenir_de_l_aide">1.19. Comment obtenir de l&#8217;aide ?</h3>
 <div class="paragraph">
 <p>Aller sur le forum de Jeedom ici : <a href="https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840" class="bare">https://forum.jeedom.fr/viewtopic.php?f=28&amp;t=2840</a></p>
-</div>
-</div>
 </div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_difficultés">1.13. Difficultés</h3>
+<h3 id="_difficultés">1.20. Difficultés</h3>
 <div class="ulist">
 <div class="title">Erreur lors de l&#8217;envoi de commande / roue crantée sans arrêt / Emission sans arrêt</div>
 <ul>
@@ -1017,12 +1012,12 @@ Un moyen de contourner partiellement ce problème est d&#8217;utiliser des tél�
 <p>&#8594; aller dans chaque équipement et sauvegarder 2 fois</p>
 </li>
 <li>
-<p>&#8594; tester avec un nouvel équipement</p>
+<p>&#8594; tester avec un nouvel équipement si cela persiste</p>
 </li>
 </ul>
 </div>
 <div class="ulist">
-<div class="title">Pont Mi.Light V6 : commande non prise en compte</div>
+<div class="title">Pont Mi.Light IBox1, iBox2, V6 : commande prise en compte aléatoirement</div>
 <ul>
 <li>
 <p>les ordres sont envoyés trop rapidement</p>
@@ -1033,380 +1028,41 @@ Un moyen de contourner partiellement ce problème est d&#8217;utiliser des tél�
 </ul>
 </div>
 <div class="ulist">
-<div class="title">Erreur wifilight.class.php on line xxxx</div>
+<div class="title">Pont Mi.Light IBox1, iBox2, V6 : commande non prise en compte</div>
 <ul>
 <li>
-<p>vérifier l&#8217;existence de la commande "SwOnOffGetxxx".</p>
-</li>
-<li>
-<p>si elle n&#8217;existe pas : resauvegarder 2 fois votre équipement</p>
-</li>
-<li>
-<p>si elle existe : supprimer la commande et resauvegarder 2 fois</p>
-</li>
-<li>
-<p>&#8594; la commande sera recéée avec la bonne configuration</p>
+<p>lors de l&#8217;appairage avec l&#8217;application Mi.Light sur mobile et lors de la configuration de wifilightV2, bien choisir la même télécommande.</p>
 </li>
 </ul>
 </div>
 <div class="ulist">
-<div class="title">LW12 et Magic UFO</div>
+<div class="title">LW12 Magic UFO Arilux Wifi3x0 H801</div>
 <ul>
 <li>
-<p>Les nouvelles fonctionnalités sont expérimentales (retour d&#8217;état)</p>
+<p>de nombreuses versions existents et certaines peuvent être incompatibles avec le plugin. Contacter l&#8217;auteur pour une éventuelle mise à jour.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">les commandes avec slider ont des comportements bizarres</div>
+<ul>
+<li>
+<p>Jeedom ( ver &lt;3.0) utilise des sliders Bootstrap par défaut qui sont bogués. Utiliser des sliders non Bootstrap (LightImg par exemple).</p>
 </li>
 </ul>
 </div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_changelog">1.14. Changelog</h3>
+<h3 id="_changelog">1.21. Changelog</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>4.01 2016-12-14</p>
+<p>1.0 - 2017-01-25</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Amélioration de la communication avec le pont Mi.Light V6</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>4.00 2016-12-05</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Prise en compte du pont Mi.Light V6 et des ampoules RGBW DualWhite RGBWW WW/CW</p>
-</li>
-<li>
-<p>Gestion de l&#8217;ampoule du pont V6</p>
-</li>
-<li>
-<p>Prise en compte des ampoules Xiaomi Yeelight Blanches et RGB</p>
-</li>
-<li>
-<p>Prise en compte du bandeau led  RGBW Xiaomi Yeelight</p>
-</li>
-<li>
-<p>refonte du retour d&#8217;état pour les ponts V3 à V5</p>
-</li>
-<li>
-<p>&#8594; nécessite d&#8217;aller dans l&#8217;équipement milight et de sauvegarder</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3.05 2016-11-19</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Documentation mise à jour</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3.04 2016-11-16</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Correction bogues</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3.03 2016-10-31</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppression des bootstrapswitch</p>
-</li>
-<li>
-<p>Mise aux normes de l&#8217;interface à onglets</p>
-</li>
-<li>
-<p>Amélioration de la rapidité d&#8217;affichage</p>
-</li>
-<li>
-<p>Correction bogues</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3.02 2016-10-25</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppressions log</p>
-</li>
-<li>
-<p>Pas de répétition de commandes lorsqu&#8217;elles nécessitent plusieurs ordres (intensité et température des Mi.Light blanches)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3.01 2016-10-04</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Amélioration compatibilité appli mobile</p>
-</li>
-<li>
-<p>Correction bogues</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>3.0 2016-09-29</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Compatibilité complète LW12/Lagute</p>
-</li>
-<li>
-<p>Compatibilité complète avec contrôleurs compatibles MAGIC UFO</p>
-</li>
-<li>
-<p>Ajout du retour d&#8217;atat</p>
-</li>
-<li>
-<p>Synchronisation du widget color</p>
-</li>
-<li>
-<p>Compatible appli mobile</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.05 2016-07-29</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppression ampoules RGBWW/CW (pas de contrôleur compatible)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.04 2016-02-28</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Correction bogue commande mid</p>
-</li>
-<li>
-<p>Ajout expérimental des ampoules RGBWW/CW</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.03 2016-01-30</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Traduction en anglais : OK</p>
-</li>
-<li>
-<p>Ajout des tooltips d&#8217;aide</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.02 2016-01-30</p>
-<div class="ulist">
-<ul>
-<li>
-<p>correction bogue : canal non pris en compte pour leds blanches</p>
-</li>
-<li>
-<p>Canal 0 : maintenant utilisable</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.01 2016-01-17</p>
-<div class="ulist">
-<ul>
-<li>
-<p>traduction en anglais</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.0 2016-01-10</p>
-<div class="ulist">
-<ul>
-<li>
-<p>plugin compatible avec le contrôleur de bandeau led LW-12</p>
-</li>
-<li>
-<p>le bouton off du widget couleur éteint les leds</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1.04 2015-11-12</p>
-<div class="ulist">
-<ul>
-<li>
-<p>correction bogue dans l&#8217;API : intensité moyenne et max</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1.03 2015-11-11</p>
-<div class="ulist">
-<ul>
-<li>
-<p>correction bogue dans l&#8217;API : intensité moyenne et max</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1.02 2015-11-10</p>
-<div class="ulist">
-<ul>
-<li>
-<p>correction bogue sur le fonctionnement multi-canaux</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1.01 2015-11-07</p>
-<div class="ulist">
-<ul>
-<li>
-<p>correction bogue sur la couleur de température des lampes blanches</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>1.0 2015-10-18</p>
-<div class="ulist">
-<ul>
-<li>
-<p>passage en stable</p>
-</li>
-<li>
-<p>ajout des lampes blanches</p>
-</li>
-<li>
-<p>l&#8217;ajout des commandes pour chaque type de lampe (blanche ou RGBW) est automatique</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.08 - 2015-09-09</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Modifications mineures d&#8217;interface pour suivre les recommandations pour les plugins</p>
-</li>
-<li>
-<p>correction bogue API (merci @diving91)</p>
-</li>
-<li>
-<p>modification du logo (merci à @Aloïs)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.07 - 2015-08-07</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Interface d&#8217;ajout de modules mise au goût du jour</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.06 - 2015-07-07</p>
-<div class="ulist">
-<ul>
-<li>
-<p>possibilité de modifier les widgets</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.05 - 2015-02-19</p>
-<div class="ulist">
-<ul>
-<li>
-<p>le bouton off du widget par défaut éteint les leds sans erreur</p>
-</li>
-<li>
-<p>ajout de nouvelles commandes (couleurs prédéfinies)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.04 - 2014-11-26</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ajout de off</p>
-</li>
-<li>
-<p>correction bogue on</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.03 - 2014-11-26</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ajout de nouvelles commandes (disco)</p>
-</li>
-<li>
-<p>correction bogue choix canal sur lumière blanche</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.02 - 2014-11-25</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ajout de la documentation</p>
-</li>
-<li>
-<p>modification du nom des commandes</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>0.01 - 2014-11-23</p>
-<div class="ulist">
-<ul>
-<li>
-<p>publication de la première version</p>
+<p>Publication de la première version</p>
 </li>
 </ul>
 </div>
