@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*48* [green]*marques de modules différentes, soit un total de* [red]*264* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*48* [green]*marques de modules différentes, soit un total de* [red]*265* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -99,6 +99,9 @@ _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/268
 
 _[small]#Piles : 4x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/2681-aeon-labs-detecteur-multifonction-multisensor-z-wave-plus-gen5-1220000012684.html++[Acheter^]
 // 134.2.74_zw074_multi-sensor.gen5.json
+
+|image:../images/compatibility_list/aeotec.nanodimmer.jpg[width=150,align="center"]|Aeotec|Nano Dimmer (ZW111)|Micromodule| | 
+// 134.259.111_zw111.nano.dimmer.json
 
 |image:../images/compatibility_list/aeotec.nanoswitch.jpg[width=150,align="center"]|Aeotec|Nano Switch (ZW116)|Micromodule| | 
 // 134.259.116_zw116.nano.switch.json
