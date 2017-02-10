@@ -420,8 +420,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_geräte_konfiguration">2. Geräte Konfiguration</a></li>
 <li><a href="#_intégration_dans_un_scénario">3. Intégration dans un scénario</a></li>
 <li><a href="#_fonction_tts">4. Fonction TTS</a></li>
-<li><a href="#_faq">5. FAQ</a></li>
-<li><a href="#_Änderungsprotokoll">6. Änderungsprotokoll</a></li>
+<li><a href="#_ordres_particuliers">5. Ordres particuliers</a></li>
+<li><a href="#_faq">6. FAQ</a></li>
+<li><a href="#_Änderungsprotokoll">7. Änderungsprotokoll</a></li>
 </ul>
 </div>
 </div>
@@ -537,6 +538,16 @@ Les lecteurs s&#8217;activent ou se désactivent automatiquement en fonction de 
 <div class="paragraph">
 <p>Le plugin limite le message à 400 caractères pour le moteur Local et à 100 caractères pour le moteur Online.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ordres_particuliers">5. Ordres particuliers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dans les scénarios, vous avez accès a des commandes particulières :
+	&#8594; 'Ordre' : Permet de demander a jeedom de chercher et de mettre en lecture un artitiste ou un album en fonction d&#8217;un ou plusieurs mots (Attention à l&#8217;orthographe).
+	&#8594; 'Tache' : Permet de réduire la charge de jeedom et du NAS en stoppant la tache programmé (cron).</p>
+</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -552,7 +563,7 @@ Il est possible d&#8217;ajouter une temporisation pour la remise en état du lec
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq">5. FAQ</h2>
+<h2 id="_faq">6. FAQ</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -602,8 +613,12 @@ En voici un extrait :</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_Änderungsprotokoll">6. Änderungsprotokoll</h2>
+<h2 id="_Änderungsprotokoll">7. Änderungsprotokoll</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>24
+Ajout action 'Tache' avec Start/Stop, pour arreter la tache cron et deconnecter le user du Syno.</p>
+</div>
 <div class="paragraph">
 <p>23
 Ajout action 'Ordre' pour ajouter automatiquement un artiste ou un album (bien mettre vos tags de musique à jour)
