@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*48* [green]*marques de modules différentes, soit un total de* [red]*266* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*48* [green]*marques de modules différentes, soit un total de* [red]*267* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -500,6 +500,11 @@ _[small]#Piles : 4x1.5V AA#_| link:++http://www.domadoo.fr/fr/peripheriques/3423
 
 |image:../images/compatibility_list/fibaro.fgk101zw5.jpg[width=150,align="center"]|Fibaro|FGK-101 ZW5 Door Sensor|Ouverture| _[small]#Piles : 1x3.6V ER14250#_|link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgk101_-_Ouverture.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/3608-fibaro-detecteur-d-ouverture-z-wave-avec-entree-contact-sec-blanc-5902020528364.html++[Acheter^]
 // 271.1793.12289_fgk101zw5.door.opening.sensor.json
+
+|image:../images/compatibility_list/fibaro.fgkf601.jpg[width=150,align="center"]|Fibaro|FGKF-601 Keyfob|Télécommande|Télécommande en mode scène non fonctionnelle, fonctionne cependant en association avec d’autres modules 
+
+_[small]#Piles : 1x3V CR2450#_| link:++http://www.domadoo.fr/fr/peripheriques/3994-fibaro-telecommande-porte-cles-z-wave-fibaro-keyfob-fgkf-601-5905279987562.html++[Acheter^]
+// 271.4097.4096_fgkf601.keyfob.json
 
 |image:../images/compatibility_list/fibaro.fgms001.jpg[width=150,align="center"]|Fibaro|FGMS-001 Motion Sensor|Multicapteurs|Par défaut possède une configuration très économique. Lire la documentation pour le configurer correctement 
 
