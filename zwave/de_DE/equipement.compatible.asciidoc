@@ -44,7 +44,7 @@ _[small]#Piles : 4x1.5V AAA#_|
 // 134.2.28_dsb28_hem.g2.json
 
 |image:../images/compatibility_list/aeotec.zw095.jpg[width=150,align="center"]|Aeotec|Home Energy Meter Gen5 (ZW095)|Consommation| | 
-// 134.2.95_zw095_hem_gen5.json
+// 134.2.95_zw095_hem_gen5_1phase.json
 
 |image:../images/compatibility_list/aeotec.keyfob.jpg[width=150,align="center"]|Aeotec|Key Fob (DSA22)|Télécommande|Remplacé dans les boutiques par le keyfob Gen5 
 
