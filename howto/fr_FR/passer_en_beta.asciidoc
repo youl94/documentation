@@ -1,0 +1,46 @@
+= Passer sur la beta de Jeedom et des plugins
+
+[IMPORTANT]
+L'activation des bêtas est très très risquée et vous INTERDIT TOUT ACCES AU SUPPORT. IL faut aussi obligatoirement passer Jeedom en bêta et faire des mises à jour fréquente même s'il n'y a pas de mise à jour proposée. IMPORTANT les bêtas sont souvent instables et peuvent causer de nombreux soucis, il ne faut surtout pas les mettre sur un système de production. EN CAS DE SOUCIS L'EQUIPE JEEDOM NE SERA PAS ET NE POURRA PAS ETRE TENU RESPONSABLE
+
+[NOTE]
+Cette documentation est volontairement pas detaillées pour que l'opération ne soit pas facile, en effet être en beta necessite des compétances aussi bien en informatique qu'en déchiffrage de documentation
+
+== Passer le core en beta
+
+Il faut d'abord passer Jeedom, pour cela verifier que vous êtes bien en mode expert, puis dans l'administration de Jeedom aller dans "Mise à jour et fichier". Puis dans l'onglet github cliquer sur activer :
+
+- Utilisateur ou organisation du dépot pour le core Jeedom : jeedom
+- Nom du dépôt pour le core Jeedom : core
+- Branche pour le core Jeedom : beta
+
+Sauvegarder puis réactuliser la page. Toujours dans la partie "Mises à jour et fichier", dans "Source de mise à jour" selectionner "Github".
+
+Il ne vous reste plus qu'a forcer une mise à jour du core pour passer sur la version beta de jeedom
+
+[IMPORTANT]
+Jeedom ne signale en beta que les mises à jour importante, il faut donc souvent forcer la mise à jour de Jeedom pour avoir la derniere version meme si celui-ci ne vous propose rien
+
+[IMPORTANT]
+Une mise à jour en beta peut completement casser votre Jeedom et le rendre irrecuperable, en cas de soucis vous n'ave AUCUN SUPPORT il faudra vous débrouiller par vous même
+
+[IMPORTANT]
+Le passage de stable -> beta est risqué (nous ne garantisson jamais que celui-ci marche), le passage de beta -> stable est INTERDIT, en effet lors d'une tel opération il est sur à 100% que votre Jeedom sera cassé. Il n'est possible de faire cela que en restaurant un backup, en attendant que votre numéro de version beta sorte en stable. En cas de soucis vous ne benefirez d'AUCUN SUPPORT
+
+== Passer les plugins en beta
+
+Pour cela il faut vous aller sur le market Jeedom puis dans votre profil partie "Mes Jeedoms" cocher la case pour avoir accès aux plugins beta.
+
+Ensuite dans votre Jeedom sur les fiches des plugins vous devriez voir un bouton "installer beta". 
+
+[IMPORTANT]
+Tous plugins beta interdit l'accès complet au support meme si votre probleme ne concerne pas ce plugin
+
+[IMPORTANT]
+Un plugin stable peut ne pas marcher sur un Jeedom beta
+
+[IMPORTANT]
+Un plugin beta NE MARCHE PAS sur un Jeedom stable
+
+[IMPORTANT]
+Toute demande de support portant sur comment passer en beta, ou un soucis avec un composant en beta, ou sur un systeme ayant déja eu un core ou un plugin en beta sera immediatement fermé sans aucune réponse de notre part.
