@@ -1,7 +1,7 @@
 = Liste der kompatiblen Blea-Geräte 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*18* [green]*marques de modules différentes, soit un total de* [red]*44* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*19* [green]*marques de modules différentes, soit un total de* [red]*46* [green]*modules.*
 
 Andere nicht anwesende Module, auf dieser Liste, können kompatibel sein. 
 
@@ -263,6 +263,9 @@ _[small]#Piles : 1x3V CR2032#_|Mode inclusion|
 |image:../images/compatibility_list/color.jpg[width=150,align="center"]|Playbulb|Color|COLOR|Lumières|Portée capricieuse, qui peut justifier un traitement des actions un tout petit peu long. Peut être détecté à la place d'un autre playbulb si c'est le cas changez dans le menu déroulant |Mode inclusion| 
 // 
 
+|image:../images/compatibility_list/garden19.jpg[width=150,align="center"]|Playbulb|Garden v1.9|GARDEN19|Lumières|Portée capricieuse, qui peut justifier un traitement des actions un tout petit peu long. Peut être détecté à la place d'un autre playbulb si c'est le cas changez dans le menu déroulant |Mode inclusion| 
+// 
+
 |image:../images/compatibility_list/garden.jpg[width=150,align="center"]|Playbulb|Garden|GARDEN|Lumières|Portée capricieuse, qui peut justifier un traitement des actions un tout petit peu long. Peut être détecté à la place d'un autre playbulb si c'est le cas changez dans le menu déroulant |Mode inclusion| 
 // 
 
@@ -333,7 +336,7 @@ _[small]#Piles : Batterie#_|Mode inclusion|
 _[small]#Piles : Batterie#_|Mode inclusion| 
 // 
 
-|image:../images/compatibility_list/miband2.jpg[width=150,align="center"]|Xiaomi|Miband2|MIBAND2|Santé|En cours, fonctionne en présece.Selon les firmwares peut ne plus fonctionner. Attention si le bracelet est connecté à votre smartphone il est plus visible en bluetooth 
+|image:../images/compatibility_list/miband2.jpg[width=150,align="center"]|Xiaomi|Miband2|MIBAND2|Santé|Selon les firmwares peut ne plus fonctionner. Attention si le bracelet est connecté à votre smartphone il est plus visible en bluetooth 
 
 _[small]#Piles : Batterie#_|Mode inclusion| 
 // 
@@ -346,6 +349,18 @@ _[small]#Piles : Batterie#_|Mode inclusion|
 |image:../images/compatibility_list/miflora.jpg[width=150,align="center"]|Xiaomi|Miflora|MIFLORA|Capteurs|Capteurs de plantes 
 
 _[small]#Piles : 1x3V CR2032#_|Mode inclusion| 
+// 
+
+
+|===
+
+== Yeelight
+
+[cols=".^3a,.^1s,.^4,.^2,.^2,.^6,.^10,.^2", options="header"]
+|===
+|Bild|Marke|Name|Profil|Typ|Hinweis|Inklusion|Link
+
+|image:../images/compatibility_list/yeelight_bed.jpg[width=150,align="center"]|Yeelight|Bed|YEELIGHT BED|Lumières|Il faut valider l'appairage en appuyant sur le bouton. Si éteint il faut allumer avant de choisir une couleur |Mode inclusion| 
 // 
 
 
