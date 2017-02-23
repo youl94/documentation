@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*48* [green]*marques de modules différentes, soit un total de* [red]*267* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*49* [green]*marques de modules différentes, soit un total de* [red]*269* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -280,6 +280,9 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 
 |image:../images/compatibility_list/devolo.9511.jpg[width=150,align="center"]|Devolo|9511|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
 // 373.2.14_MT02648.devolo.contact.door.json
+
+|image:../images/compatibility_list/devolo.mt02646.jpg[width=150,align="center"]|Devolo|Home Control Smart Metering Plug (MT02646)|Prise| | 
+// 373.1.17_mt02646.plug.json
 
 |image:../images/compatibility_list/develo.scene_switch_2652.jpg[width=150,align="center"]|Devolo|Scene Switch MT 2652|Télécommande| _[small]#Piles : 1x3V CR2032#_| 
 // 373.256.257_scene_switch_2652.json
@@ -610,6 +613,18 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/27
 
 |image:../images/compatibility_list/ge.12730.jpg[width=150,align="center"]|Ge|12730 Smart Fan Control|Micromodule| | 
 // 99.18756.12340_smart.fan.control.json
+
+
+|===
+
+== Gig
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Bild|Marke|Name|Typ|Hinweis|Link
+
+|image:../images/compatibility_list/gig.ct101.jpg[width=150,align="center"]|Gig|CT101 Thermostat Iris|Thermostat| | 
+// 152.25857.12_ct101.thermostat.iris.json
 
 
 |===
