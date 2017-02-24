@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Passer sur la bêta de Jeedom et des plugins</title>
+<title>RFPlayer Plugin</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,164 +412,146 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Passer sur la bêta de Jeedom et des plugins</h1>
+<h1>RFPlayer Plugin</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_passer_le_core_en_bêta">1. Passer le core en bêta</a></li>
-<li><a href="#_passer_les_plugins_en_bêta">2. Passer les plugins en bêta</a></li>
+<li><a href="#_rfplayer_plugin_konfiguration">1. RFPlayer Plugin Konfiguration</a></li>
+<li><a href="#_ajouter_un_module">2. Ajouter un Module</a></li>
+<li><a href="#_module_manquant">3. Module manquant</a></li>
+<li><a href="#_faq">4. FAQ</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-L&#8217;activation des bêtas est très très risquée et vous INTERDIT TOUT ACCES AU SUPPORT. IL faut aussi obligatoirement passer Jeedom en bêta et faire des mises à jour fréquentes même s&#8217;il n&#8217;y a pas de nouvelles mises à jour proposées. IMPORTANT, les versions bêtas sont souvent instables et peuvent causer de nombreux soucis, il ne faut surtout pas les mettre sur un système de production. EN CAS DE SOUCIS, L&#8217;EQUIPE JEEDOM NE SERA PAS ET NE POURRA PAS ETRE TENU RESPONSABLE.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Cette documentation est volontairement peu detaillée pour que l&#8217;opération ne soit pas facile, en effet être en bêta nécessite des compétences aussi bien en informatique qu&#8217;en déchiffrage de logs ou documentation.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Plugin für die Verwendung des RFPLAYER 1000.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_passer_le_core_en_bêta">1. Passer le core en bêta</h2>
+<h2 id="_rfplayer_plugin_konfiguration">1. RFPlayer Plugin Konfiguration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il faut d&#8217;abord passer Jeedom en version bêta. Pour cela, vérifiez que vous êtes bien en mode expert, puis dans l&#8217;administration de Jeedom, aller dans "Mise à jour et fichier". Puis dans l&#8217;onglet github, cliquer sur activer :</p>
+<p>Nach der Installation des Plugin, aktivieren Sie es einfach:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/gestion.png" alt="gestion">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Konfiguration</strong></p>
+</div>
+<div class="paragraph">
+<p>Um das Plugin zu konfigurieren müssen Sie den RFPlayer einfach auf Auto stellen, oder ihn dann wählen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/port.png" alt="port">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ajouter_un_module">2. Ajouter un Module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le RFPlayer est compatible avec de nombreux Modules, c&#8217;est pourquoi le plugin RFPlayer sera en constante evolution pour ajouter le plus de module a la compatibilité Jeedom.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Utilisateur ou organisation du dépot pour le core Jeedom : jeedom</p>
-</li>
-<li>
-<p>Name des Depos für den Jeedom Kern : Kern</p>
-</li>
-<li>
-<p>Zweig für den Jeedom Kern : Beta</p>
+<p>Oregon *</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Speichern und aktualisieren Sie die Seite. Immer im Abschnitt "Updates und Datei", in "Update Quelle"  "Github" auswählen.</p>
+<p>Pour les modules Oregon il suffit tout simplement de cliquer sur "Mode Inclusion", puis soit d&#8217;attendre sont retour d&#8217;état (10sec), soit enlever et remettre la pile.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/oregon.png" alt="oregon">
+</div>
 </div>
 <div class="paragraph">
-<p>Er bleibt Ihnen nur noch eine Aktualisierung des Kerns zu erzwingen, um auf die Jeedom bêta Version überzugehen.</p>
+<p>Le changement de pile, change l&#8217;ID du produit il faut du coup lors du changement de pile faire comme si vous ajouter un nouveau module, puis cliquer sur "Récupérer ID" en face de "Changement de pile". il faut le faire sur le module fraichement détecté ! est choisir le nom du module approprié.</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Jeedom ne signale en bêta que les mises à jour importantes, il vous faudra donc souvent forcer la mise à jour de Jeedom pour avoir la dernière version, même si le Centre de mises à jour ne vous propose rien.
-</td>
-</tr>
-</table>
+<div class="imageblock">
+<div class="content">
+<img src="../images/pile.png" alt="pile">
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Une mise à jour en bêta peut complètement casser votre Jeedom et le rendre irrécupérable, en cas de soucis vous n&#8217;avez AUCUN SUPPORT, il faudra vous débrouiller par vos propres compétences.
-</td>
-</tr>
-</table>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Le passage d&#8217;une version stable à une version bêta est risqué (nous ne garantissons jamais que votre Jeedom continue de fonctionne correctement). Le passage d&#8217;une version bêta à une version stable est INTERDIT, en effet, lors d&#8217;une telle opération, il est sûr à 100% que votre Jeedom sera cassé. Il n&#8217;est pas possible de faire un retour arrière en restaurant un backup d&#8217;une version stable. En cas de soucis, vous ne bénéficierez d&#8217;AUCUN SUPPORT.
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>RTS Somfy *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pour les Volets et Portail Somfy, il suffit simplement de cliquer sur "Mode Inclusion", une fois que le plugin est en Inclusion appuyer 3 secondes sur le petit bouton a l&#8217;arriere de votre telecommande somfy (avant bien selectionner le volet souhaité sur la telecommande). le volet vas monté puis descendre. puis quelque instant plus tard il vas de nouveau monter et descendre. vous n&#8217;avez plus qu&#8217;a sauvegarder.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Actionneur et Info *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pour tout type de protocole lorsque votre module est un actionneur ou une info (interupteur ou info temperature exemple) il suffit d&#8217;utiliser le bouton "Mode Inclusion"</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prise, reception *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Il suffit d&#8217;appuyer sur Ajouter puis de selectionner un equipement proche de votre prise, de la il faut mettre en Learn la prise puis cliquer sur la Commande "Assoc"</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_passer_les_plugins_en_bêta">2. Passer les plugins en bêta</h2>
+<h2 id="_module_manquant">3. Module manquant</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pour cela, il faut vous rendre sur le market Jeedom, puis dans votre profil, partie "Mes Jeedoms", cocher la case pour avoir accès aux plugins en version bêta bêta.</p>
+<p>Il ce peut que le module soit manquant dans ce cas la il faut nous envoyer un petit fichier voici la marche à suivre :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/manquant.png" alt="manquant">
+</div>
 </div>
 <div class="paragraph">
-<p>Ensuite, dans votre Jeedom, sur les fiches des plugins, vous devriez voir un bouton "installer bêta".</p>
+<p>Kopieren Sie einfach den Text am unteren Rand von "Hilfe bei der Integration"</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Tout plugin installé en version bêta interdit l&#8217;accès complet au support, même si votre probleme ne concerne pas ce plugin.
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Dann lösen Sie ein Ticket, indem Sie auf das !-Zeichen ganz oben rechts klicken, wählen Sie dann das RFPlayer Plugin aus.</p>
+</li>
+<li>
+<p>Puis mettre un texte "Gentil" ;), suivi de ce que vous avez copié.</p>
+</li>
+</ul>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Eine Plugin in einer stabilen Version funktioniert möglicherweise nicht auf eine Beta-Version von Jeedom.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Wir werden so schnell wie möglich versuchen (1 pro Woche), alle neuen hinzugefügten Konfigurationen zu versenden.</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Ein Plugin in einer Beta Version FUNKTIONIERT NICHT auf einem stabilen Jeedom.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Sie werden im Änderungsprotokoll vom Plugin über dessen Aktualisierung benachrichtigt.</p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Toute demande de support portant sur comment passer en bêta, ou un souci avec un composant en bêta, ou sur un systeme ayant déja eu un core ou un plugin en bêta, sera immediatement fermé sans aucune réponse de notre part.
-</td>
-</tr>
-</table>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_faq">4. FAQ</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 </div>
