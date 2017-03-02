@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Description</title>
+<title>Plugin Surveillance Equipement</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,36 +412,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>Plugin Surveillance Equipement</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a>
+<li><a href="#_description">1. Description</a></li>
+<li><a href="#_présentation">2. Présentation</a></li>
+<li><a href="#_configuration">3. Configuration</a>
 <ul class="sectlevel2">
-<li><a href="#_xiaomi_home_pour_les_aquara_home_gateway_et_lampes_yeeligt">1.1. Xiaomi Home, pour les Aquara Home Gateway et lampes Yeeligt</a>
-<ul class="sectlevel3">
-<li><a href="#_xiaomi_aquara_home_gateway">1.1.1. Xiaomi Aquara Home Gateway</a></li>
-<li><a href="#_yeelight_wifi">1.1.2. Yeelight Wifi</a></li>
+<li><a href="#_onglet_equipement">3.1. Onglet Equipement</a></li>
+<li><a href="#_onglet_commandes">3.2. Onglet Commandes</a></li>
+<li><a href="#_onglet_données">3.3. Onglet Données</a></li>
+<li><a href="#_fonctionnement">3.4. Fonctionnement</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_configuration">2. Configuration</a>
+<li><a href="#_cas_d_utilisation">4. Cas d&#8217;utilisation</a>
 <ul class="sectlevel2">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a>
-<ul class="sectlevel3">
-<li><a href="#_configuration_de_la_gateway_aquara">2.1.1. Configuration de la gateway Aquara</a></li>
-<li><a href="#_equipements_compatibles">2.1.2. Equipements compatibles</a></li>
-<li><a href="#_configuration_des_lampes_yeelight">2.1.3. Configuration des lampes Yeelight</a></li>
+<li><a href="#_surveiller_la_durée_de_fonctionnement_de_votre_télévison">4.1. Surveiller la durée de fonctionnement de votre télévison</a></li>
+<li><a href="#_surveiller_son_chauffe_eau_avec_la_mesure_de_puissance_de_votre_arrivée_générale_du_logement">4.2. Surveiller son chauffe eau avec la mesure de puissance de votre arrivée générale du logement</a></li>
+<li><a href="#_compter_le_nombre_de_cycles_de_votre_lave_linge">4.3. Compter le nombre de cycles de votre lave linge</a></li>
 </ul>
 </li>
-<li><a href="#_création_des_équipements">2.2. Création des équipements</a>
-<ul class="sectlevel3">
-<li><a href="#_commande_enchainement_des_yeelight">2.2.1. Commande enchainement des Yeelight</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_faq">3. FAQ</a></li>
+<li><a href="#_faq">5. FAQ</a></li>
+<li><a href="#_change_log">6. Change Log</a></li>
 </ul>
 </div>
 </div>
@@ -449,272 +442,848 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_description">1. Description</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_xiaomi_home_pour_les_aquara_home_gateway_et_lampes_yeeligt">1.1. Xiaomi Home, pour les Aquara Home Gateway et lampes Yeeligt</h3>
 <div class="paragraph">
-<p>Une présentation complète du plugin est disponible ici : <a href="https://lunarok-domotique.com/plugins-jeedom/xiaomi-home/">Article de présentation</a></p>
-</div>
-<div class="sect3">
-<h4 id="_xiaomi_aquara_home_gateway">1.1.1. Xiaomi Aquara Home Gateway</h4>
-<div class="paragraph">
-<p>La Xiaomi Aquara Home Gateway permet d&#8217;utiliser différents capteurs Zigbee Xiaomi.</p>
-</div>
-<div class="paragraph">
-<p>Liste des capteurs compatibles :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Gateway : <a href="http://www.gearbest.com/living-appliances/pp_344667.html?lkid=10269386">Gateway</a></p>
-</li>
-<li>
-<p>Capteur de porte : <a href="http://www.gearbest.com/smart-light-bulb/pp_257677.html?lkid=10269970">Capteur porte et fenêtre</a></p>
-</li>
-<li>
-<p>Capteur de mouvement : <a href="http://www.gearbest.com/smart-light-bulb/pp_257678.html?lkid=10269971">Capteur mouvement</a></p>
-</li>
-<li>
-<p>Température / Humidité : <a href="http://www.gearbest.com/living-appliances/pp_344665.html?lkid=10269957">Capteur température</a></p>
-</li>
-<li>
-<p>Interrupteur : <a href="http://www.gearbest.com/smart-light-bulb/pp_257679.html?lkid=10269959">Interrupteur bouton</a></p>
-</li>
-<li>
-<p>Cube : <a href="http://www.gearbest.com/living-appliances/pp_364494.html?lkid=10269960">Magic Cube</a></p>
-</li>
-<li>
-<p>Prise : <a href="http://www.gearbest.com/living-appliances/pp_344666.html?lkid=10269961">Prise</a></p>
-</li>
-<li>
-<p>Interrupteur mural et encastrable (simple et double): <a href="http://s.click.aliexpress.com/e/6AAyZf2">Interrupteurs</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_yeelight_wifi">1.1.2. Yeelight Wifi</h4>
-<div class="paragraph">
-<p>Le plugin permet également d&#8217;utiliser les ampoules et bandeau RGB Yeelight Wifi de Xiaomi</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Yeelight E27 Blanc : <a href="http://www.gearbest.com/smart-light-bulb/pp_278478.html?lkid=10269966">Yeelight Blanc</a></p>
-</li>
-<li>
-<p>Yeelight E27 RGB : <a href="http://www.gearbest.com/smart-lighting/pp_361555.html?lkid=10269964">Yeelight RGB</a></p>
-</li>
-<li>
-<p>Bandeau Yeelight RGB : <a href="http://www.gearbest.com/smart-lighting/pp_424884.html?lkid=10269963">Yeelight Ruban RGB</a></p>
-</li>
-<li>
-<p>Yeelight Ceiling : <a href="http://www.gearbest.com/ceiling-lights/pp_596249.html?lkid=10269966">Yeelight Ceiling</a></p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
+<p>Plugin servant à la surveillance d&#8217;un equipement.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration">2. Configuration</h2>
+<h2 id="_présentation">2. Présentation</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_configuration_du_plugin">2.1. Configuration du plugin</h3>
 <div class="paragraph">
-<p>Le plugin comporte une option de configuration :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Activer un cron pour les Yeelight : permet de s&#8217;assurer qu&#8217;elles restent réveillées (pas nécessaire pour tous les utilisateurs, mais chez certains elles se mettent en veille après quelques minutes)</p>
-</li>
-</ul>
+<p>Ce plugin permet la surveillance d&#8217;un équipement.</p>
 </div>
 <div class="paragraph">
-<p>Il y a un service qui une fois démarré récupère les informations des Aquara Gateway et également les annonces de présence des Yeelight</p>
-</div>
-<div class="sect3">
-<h4 id="_configuration_de_la_gateway_aquara">2.1.1. Configuration de la gateway Aquara</h4>
-<div class="paragraph">
-<p>Une présentation complète de la gamme est disponible ici : <a href="https://lunarok-domotique.com/plugins-jeedom/xiaomi-home-jeedom/aqara-lumi-xiaomi-smart-home-security/">Article de présentation</a></p>
+<p>La surveillance est faite soit à partir d&#8217;une commande d' <strong>Etat</strong> ou d&#8217;une commande de mesure de <strong>puissance</strong>,</p>
 </div>
 <div class="paragraph">
-<p>Il est par contre nécessaire de paramétrer la gateway en mode développeur</p>
+<p>Il permet de connaître un temps de fonctionnement, il gère une commande d&#8217;alarme, fonction d&#8217;un temps de fonctionnement minimun et/ou maximun, d&#8217;une heure prévue d&#8217;arrêt et de marche,</p>
 </div>
 <div class="paragraph">
-<p>Pour cela, il faut ajouter la Gateway dans l&#8217;application Mi Home et être en China Mainland et Chinese (oui du coup des écrans peuvent contenir beaucoup de caractères illisibles à moins de maitriser le mandarin)</p>
+<p>Un code d&#8217;alarme, permettant de connaître la cause de l&#8217;alarme,</p>
 </div>
 <div class="paragraph">
-<p>Ensuite cliquer dessus pour la sélectionner, là cliquer sur les "&#8230;&#8203;" et enfin "about"</p>
+<p>Un compteur de cycle de fonctionnement,</p>
 </div>
 <div class="paragraph">
-<p>Là vous avez un numéro de version, cliquez dessus de facon répéter jusqu&#8217;à un message (oui en chinois ca aide pas :)) et 2 nouvelles options apparaissent</p>
+<p>Un graphique repésentant le temps de fonctionnement,</p>
 </div>
-<div class="paragraph">
-<p>Choisissez la première option (nouvellement apparue) et activer le bouton switch pour qu&#8217;il passe en vert, voilà le mode local est actif et votre gateway est accessible du réseau</p>
-</div>
-<div class="paragraph">
-<p>Information importante : pour pouvoir envoyer des commandes (prise) vers la gateway, vous devez renseigner son mot de passe sur la page équipement. Ce mot de passe est visible sur la page où l&#8217;on active le mode développeur</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_equipements_compatibles">2.1.2. Equipements compatibles</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Gateway : anneau RGB (avec couleur et intensité, pour éteindre il faut absolument mettre l&#8217;intensité à 0), capteur de luminosité, jouer les sons enregistrés (0 à 8, 10 à 13, 20+ correspondent aux sons par défaut dans Mihome, 10000 pour éteindre, 10001 et plus pour les sons personnalisés)</p>
-</li>
-<li>
-<p>Détecteur de mouvement : commande statut de type binaire activée sur mouvement, batterie et voltage</p>
-</li>
-<li>
-<p>Détecteur d&#8217;ouverture : commande statut de type binaire activée sur ouverture, batterie et voltage</p>
-</li>
-<li>
-<p>Capteur température/humidité : commande température, commande humidité, batterie et voltage</p>
-</li>
-<li>
-<p>Bouton Switch : commande statut avec pour valeurs click, double_click, long_click_press, long_click_release, batterie et voltage</p>
-</li>
-<li>
-<p>Prise : commande statut binaire avec on et off, état d&#8217;utilisation et consommation</p>
-</li>
-<li>
-<p>Interrupteur mural : commande statut pour chaque interrupteur (click, double_click) et si double une commande qui donne l&#8217;appui simultané, batterie et voltage</p>
-</li>
-<li>
-<p>Interrupteur encastré : commande statut binaire avec on et off pour chaque interrupteur</p>
-</li>
-<li>
-<p>Cube : commande statut avec pour valeur move, tap_twice, shake_air, alert, flip90, flip180, free_fall et une commande rotate avec la valeur en degré du mouvement, batterie et voltage</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_configuration_des_lampes_yeelight">2.1.3. Configuration des lampes Yeelight</h4>
-<div class="paragraph">
-<p>Une présentation complète de la gamme est disponible ici : <a href="https://lunarok-domotique.com/plugins-jeedom/xiaomi-home-jeedom/yeelight-xiaomi-wifi-lamp/">Article de présentation</a></p>
-</div>
-<div class="paragraph">
-<p>Dans l&#8217;application Yeelight vous devez activer l&#8217;option développeur également</p>
-</div>
-<div class="paragraph">
-<p>C&#8217;est un switch a activé dans les options de chaque ampoule/bandeau</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_création_des_équipements">2.2. Création des équipements</h3>
-<div class="paragraph">
-<p>Les équipements Aquara et Yeelight sont créés automatiquement</p>
-</div>
-<div class="paragraph">
-<p>Pour les capteurs Aquara, c&#8217;est à leur remontée d&#8217;information et heartbeat donc très régulièrement.</p>
-</div>
-<div class="paragraph">
-<p>Pour les interrupteurs et boutons Aquara, il peut être nécessaire de les activer pour avoir la création des commandes (un clic par exemple)</p>
-</div>
-<div class="paragraph">
-<p>Pour les Yeelight, elles sont reconnues par le plugin quand elles s&#8217;annoncent, elles font une annonce par heure et quand elles sont branchées/allumées</p>
-</div>
-<div class="sect3">
-<h4 id="_commande_enchainement_des_yeelight">2.2.1. Commande enchainement des Yeelight</h4>
-<div class="paragraph">
-<p>Pour les Yeelight, une commande spéciale est créée qui a vocation à être utilisée en scénario seulement car on doit envoyer un contenu précis à la commande.</p>
-</div>
-<div class="paragraph">
-<p>C&#8217;est une commande message qui doit avoir par exemple :</p>
-</div>
-<div class="paragraph">
-<p>3 recover rgb,255,0,0,500,100-wait,400-rgb,255,255,0,500,100</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>3 : c&#8217;est un chiffre représentant le nombre de fois que la suite d&#8217;effets doit être appliquée avant de s&#8217;arrêter (0 veut dire illimité)</p>
-</li>
-<li>
-<p>recover : une des 3 options possible (recover = retour à l&#8217;état avant effet, off = s&#8217;eteint ensuite, stay = reste au statut de fin de boucle)</p>
-</li>
-<li>
-<p>le troisième élément est la suite des états avec leur transition, il y en a 4 possible (attention à bien ne pas mettre d&#8217;espaces)</p>
-</li>
-<li>
-<p>hsv : pramètres (hue,saturation,duration=300,brightness=100)</p>
-</li>
-<li>
-<p>rgb : pramètres (red,green,blue,duration=300,brightness=100)</p>
-</li>
-<li>
-<p>temp : pramètres (degrees,duration=300,brightness=100)</p>
-</li>
-<li>
-<p>wait(duration=300)</p>
-<div class="literalblock">
+<div class="imageblock">
 <div class="content">
-<pre>Il faut bien entrer l'enchainement avec des - entre chaque effet. Et pour un enchainement il doit y avoir son nom et tous les paramètres séparés par des virgules</pre>
+<img src="../images/utilisation1-widget.png" alt="utilisation1 widget">
 </div>
 </div>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation2-widget.png" alt="utilisation2 widget">
 </div>
-<hr>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation3-widget.png" alt="utilisation3 widget">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/donnees.png" alt="donnees">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq">3. FAQ</h2>
+<h2 id="_configuration">3. Configuration</h2>
 <div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Quel type de gateway Xiaomi est supporté ?</div><div class="content">
-<div class="paragraph">
-<p>La "Aquara" pour le Zigbee qu&#8217;il faut bien paramétrer en mode développeur pour y accéder localement, pour cela il faut un firmware au moins en 1.4</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">Je n&#8217;arrive pas à passer ma gateway Aquara en mode local ?</div><div class="content">
-<div class="paragraph">
-<p>Sur iOS il semble que ce soit assez capricieux, vous pouvez utiliser un Android en VM</p>
+<div class="sect2">
+<h3 id="_onglet_equipement">3.1. Onglet Equipement</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : Type de la commande qui servira à surveiller l&#8217;equipement , Logique ou Analogique,</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Il faut également bien utilisé Mi Home en anglais et sur China Mainland si on rencontre des problèmes d&#8217;inclusion</p>
+<p>Commande de l&#8217;equipement à surveiller de type "Logique"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/equipement-logique.png" alt="equipement logique">
 </div>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Commande équipement</strong> : Commande d&#8217;etat de l&#8217;équipement à surveiller</p>
+</li>
+<li>
+<p><strong>Temps min de fonctionnement</strong> : Temps de fonctionnement minimun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Temps max de fonctionnement</strong> : Temps de fonctionnement maximun de l&#8217;équipement pour générer une alarme, laisser pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Heure prévue équipement en Arrêt (HHMM)</strong> : heure à laquelle l&#8217;équipement (ie la <strong>Commande equipement</strong>) est prevue d&#8217;etre à OFF, laisser vide pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Heure prévue équipement en Marche (HHMM)</strong> : heure à laquelle l&#8217;équipement (ie <strong>Commande equipement</strong>) est prevue d&#8217;etre à ON, laisser vide pour ne pas générer d&#8217;alarme</p>
+</li>
+</ul>
 </div>
-<div class="openblock panel">
-<div class="title">Une information de mes capteurs ne remonte pas ?</div><div class="content">
 <div class="paragraph">
-<p>Si vous n&#8217;avez pas de commande équivalente créée dans Jeedom, c&#8217;est que l&#8217;API n&#8217;expose pas cette information. Il faut attendre peut être une mise à jour du firmware (exemple les piles ou la charge de la prise)</p>
+<p>Commande de l&#8217;equipement à surveiller de type "Analogique" avec <strong>Compteur Général</strong> coché</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/equipement-analogique-1.png" alt="equipement analogique 1">
 </div>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Commande equipement</strong> : Commande de mesure de puissance de l&#8217;équipement à surveiller ou Commande de mesure de puissance générale</p>
+</li>
+<li>
+<p><strong>Compteur Général</strong> : coché si la <strong>Commande equipement</strong> est une mesure de puissance globale de votre logement</p>
+</li>
+<li>
+<p><strong>Heure de fonctionnement pévu</strong> : obligatoire si <strong>Compteur Général</strong> coché</p>
+</li>
+<li>
+<p><strong>Puissance equipement</strong> : obligatoire si <strong>Compteur Général</strong> coché, doit etre vide dans le cas contraire</p>
+</li>
+<li>
+<p><strong>Temps min de fonctionnement</strong> : Temps de fonctionnement minimun de l&#8217;equipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Temps max de fonctionnement</strong> : Temps de fonctionnement maximun de l&#8217;equipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
+</li>
+</ul>
 </div>
-<div class="openblock panel">
-<div class="title">Combien de capteurs au maximum sur une Gateway Aquara ?</div><div class="content">
 <div class="paragraph">
-<p>Les remontées utilisateurs indiquent 31 capteurs + la Gateway. Au delà il faut supprimer l&#8217;appairage d&#8217;un capteur pour en remettre un. Le plugin supporte plusieurs gateways.</p>
+<p>Commande de l&#8217;equipement à surveiller de type "Analogique" avec <strong>Compteur Général</strong> NON coché</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/equipement-analogique-2.png" alt="equipement analogique 2">
 </div>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Commande equipement</strong> : Commande de mesure de puissance de l&#8217;équipement à surveiller ou Commande de mesure de puissance générale</p>
+</li>
+<li>
+<p><strong>Compteur Général</strong> : NON coché</p>
+</li>
+<li>
+<p><strong>Puissance Mini</strong> : obligatoire si <strong>Compteur Général</strong> NON coché, Puissance mini à l&#8217;arrêt de l&#8217;équipement à surveiller</p>
+</li>
+<li>
+<p><strong>Puissance Maxi</strong> : obligatoire si <strong>Compteur Général</strong> NON coché, Puissance de votre équipement à surveiller au démarrage</p>
+</li>
+<li>
+<p><strong>Temps min de fonctionnement</strong> : Temps de fonctionnement minimun de l&#8217;equipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Temps max de fonctionnement</strong> : Temps de fonctionnement maximun de l&#8217;equipement pour générer une alarme, laisser pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Heure prévue equipement en Arrêt (HHMM)</strong> : heure à laquelle l&#8217;equipement (ie <strong>Commande equipement</strong>) est prevue d&#8217;etre à OFF, laisser pour ne pas générer d&#8217;alarme</p>
+</li>
+<li>
+<p><strong>Heure prévue equipement en Marche (HHMM)</strong> : heure à laquelle l&#8217;equipement (ie <strong>Commande equipement</strong>) est prevue d&#8217;etre à ON,laisser pour ne pas générer d&#8217;alarme</p>
+</li>
+</ul>
 </div>
-<div class="openblock panel">
-<div class="title">Quelles ampoules sont supportées ?</div><div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+il peut y avoir une latence de 5 minutes au déclenchement de l&#8217;alarme sur les paramètres <strong>Heure prévue equipement en Arrêt (HHMM)</strong> et <strong>Heure prévue equipement en Marche (HHMM)</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+la <strong>commande equipement</strong> doit etre de type "info et de sous type "numeric" pour <strong>Type de commande</strong> analogique
+la <strong>commande equipement</strong> doit etre de type "info et de sous type "binary" pour <strong>Type de commande</strong> logique
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Vous ne pouvez créer qu&#8217;un seul équipement à surveiller avec l&#8217;option <strong>Compteur Général</strong>,
+c&#8217;est à dire avec une mesure de puissance global de votre logement.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_onglet_commandes">3.2. Onglet Commandes</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/commandes.png" alt="commandes">
+</div>
+</div>
 <div class="paragraph">
-<p>Les Yeelight Wifi uniquement</p>
+<p>Les commandes sont crées automatiquement à la sauvegarde de l&#8217;equipement, il n&#8217;est pas possible d&#8217;en ajouter, d&#8217;en supprimer.
+Utiliser la case à coché <strong>afficher</strong>, si vous ne souhaitez pas voir certaines commandes sur le widget.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alarme</strong> : status d&#8217;alarme de l&#8217;équipement (1 = ALARME = ON, 0 = OFF)</p>
+</li>
+<li>
+<p><strong>Code Alarme</strong> : somme des codes d&#8217;alarme ayant déclenchée l&#8217;alarme , voir ci dessous les valeurs des codes d&#8217;alarmes</p>
+</li>
+<li>
+<p><strong>Temps Fct (H:M:S)</strong> : Temps de fonctionnement de l&#8217;équipement au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Temps Fct</strong> : Temps de fonctionnement de l&#8217;équipement en seconde</p>
+</li>
+<li>
+<p><strong>Temps Fct Total(H:M:S)</strong> : Temps de fonctionnement de l&#8217;équipement au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Temps Fct Total</strong> : Temps de fonctionnement de l&#8217;équipement en seconde</p>
+</li>
+<li>
+<p><strong>RAZ Tps Fct Total</strong> : remise à zero du temps de fonctionnement total (commande <strong>Temps Fct Total(H:M:S)</strong> et <strong>Temps Fct Total</strong>)</p>
+</li>
+<li>
+<p><strong>Démarré</strong> : heure démarrage de l&#8217;équipement</p>
+</li>
+<li>
+<p><strong>Arreté</strong> : heure d&#8217;arret de l&#8217;équipement</p>
+</li>
+<li>
+<p><strong>Temps Fct</strong> : Temps de fonctionnement de l&#8217;équipement en seconde</p>
+</li>
+<li>
+<p><strong>Temps Fct (H:M:S)</strong> : Temps de fonctionnement de l&#8217;équipement au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Etat</strong> : status de surveillance de l&#8217;équipement (1 = ON, 0 = OFF)</p>
+</li>
+<li>
+<p><strong>Compteur</strong> : nombre de passage de la commande <strong>Etat</strong> de OFF à ON</p>
+</li>
+<li>
+<p><strong>RAZ Compteur</strong> : remise à zero de la commande <strong>Compteur</strong></p>
+</li>
+</ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_onglet_données">3.3. Onglet Données</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/donnees.png" alt="donnees">
 </div>
-<div class="openblock panel">
-<div class="title">Certaines Yeelight ne remontent pas ?</div><div class="content">
+</div>
 <div class="paragraph">
-<p>Les Yeelight Wifi doivent toutes être paramétrées avec le mode développeur pour être joignable sur le réseau local.
-Pour ceci, il vous faut installer l&#8217;application Yeelight (et non pas seulement Mi Home), renseigner votre login /mot de passe, aller dans chaque équipement, accéder aux settings via les ' &#8230;&#8203; ' et activer le 'Developer Mode'.
-Note : Il n&#8217;est pas nécessaire de changer la langue de l&#8217;application.</p>
+<p>Cet onglet fournit une représentation grahique du temps de fonctionnement de l&#8217;équipement,
+il est possble de visualiser ce temps de fonctionnement par jour, semaine, mois (selecteur cumul par jour, cumul par semaine, cumul par mois)</p>
+</div>
+<div class="paragraph">
+<p>Pour cela , il faut historiser la commande <strong>Temps Fct Total</strong>, avec l&#8217;option <strong>Mode de lissage</strong> sur <strong>Aucun</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Ces options sont disponible depuis la roue dentée en face de la commande dans l&#8217;onglet <strong>Commandes</strong>.  </p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_fonctionnement">3.4. Fonctionnement</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Passage de la commande <strong>Etat</strong> à ON :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : "Logique"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lors du passage de <strong>Commande équipment</strong> à ON</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Type de commande</strong> : "Analogique"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si <strong>Compteur Général</strong> est coché,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la <strong>Commande equipement</strong> est superieur ou égal à <strong>Puissance equipement</strong> ET dans l&#8217;heure prevue de fonctionnement definit dans la commande <strong>Heure de fonctionnement prévu</strong> ET que la commande <strong>Etat</strong> est à OFF</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Si <strong>Compteur Général</strong> n&#8217;est pas coché,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la <strong>Commande equipement</strong> est superieur ou égal à <strong>Puissance Max</strong> ET que la commande <strong>Etat</strong> est à OFF</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Passage de la commande <strong>Etat</strong> à OFF :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : "Logique"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lors du passage de <strong>Commande équipment</strong> à OFF</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Type de commande</strong> : "Analogique"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si <strong>Compteur Général</strong> est coché,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la <strong>Commande equipement</strong> est inferieur ou égal à <strong>Puissance equipement</strong> ET que la commande <strong>Etat</strong> est à ON</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Si <strong>Compteur Général</strong> n&#8217;est pas coché,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la <strong>Commande equipement</strong> est superieur ou égal à <strong>Puissance Min</strong> ET que la commande <strong>Etat</strong> est à ON</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Passage de la commande <strong>Alarme</strong> à ON :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : "Logique"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la durée de la commande <strong>Etat</strong> lors du passage de ON à OFF est inferieur ou égal au <strong>Temps min de fonctionnement</strong> (code alarme 2)</p>
+</li>
+<li>
+<p>Si la durée de la commande <strong>Etat</strong> à ON est superieur ou égal au <strong>Temps max de fonctionnement</strong> (code alarme 4)</p>
+</li>
+<li>
+<p>Si la commande <strong>Etat</strong> à ON et l&#8217;heure du systeme est compris entre <strong>Heure prévue equipement en Arrêt (HHMM)</strong> et <strong>Heure prévue equipement en Arrêt (HHMM)</strong> plus 5 min  (code alarme 8)</p>
+</li>
+<li>
+<p>Si la commande <strong>Etat</strong> à OFF et l&#8217;heure du systeme est compris entre <strong>Heure prévue equipement en Marche (HHMM)</strong> et <strong>Heure prévue equipement en Marche (HHMM)</strong> plus 5 min (code alarme 16)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Type de commande</strong> : "Analogique"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si <strong>Compteur Général</strong> est coché,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la commande <strong>Etat</strong> est a OFF depuis <strong>Heure de fonctionement prévue</strong> plus <strong>Temps min de fonctionnement</strong> (code alarme 1)</p>
+</li>
+<li>
+<p>Si la durée de la commande <strong>Etat</strong>, lors du passage de ON à OFF, est inferieur ou égal au <strong>temps min de fonctionnement</strong> (code alarme 2)</p>
+</li>
+<li>
+<p>Si la durée de la commande <strong>Etat</strong> à ON est supérieur ou égal au <strong>temps max de fonctionnement</strong> (code alarme 4)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Si <strong>Compteur Général</strong> n&#8217;est pas coché,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si la durée de la commande <strong>Etat</strong>, lors du passage de ON à OFF, est inferieur ou égal au <strong>Temps min de fonctionnement</strong> (code alarme 2)</p>
+</li>
+<li>
+<p>Si la durée de la commande <strong>Etat</strong> à ON est superieur ou égal au <strong>Temps max de fonctionnement</strong> (code alarme 4)</p>
+</li>
+<li>
+<p>Si la commande <strong>Etat</strong> à ON et l&#8217;heure du systeme est compris entre <strong>Heure prévue equipement en Arrêt (HHMM)</strong> et <strong>Heure prévue equipement en Arrêt (HHMM)</strong> plus 5 min  (code alarme 8)</p>
+</li>
+<li>
+<p>Si la commande <strong>Etat</strong> à OFF et l&#8217;heure du systeme est compris entre <strong>Heure prévue equipement en Marche (HHMM)</strong> et <strong>Heure prévue equipement en Marche (HHMM)</strong> plus 5 min (code alarme 16)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Si la commande <strong>Alarme</strong> est déja à ON , et qu&#8217;une nouvelle conditions d&#8217;alarme est présente , celle-ci n&#8217;est pas remise à jour, seule la commande <strong>Code Alarme</strong> est mise à jour.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Passage de la commande <strong>Alarme</strong> à OFF et remise à zéro de <strong>Code Alarme</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lors du passage de la commande <strong>Etat</strong> de OFF à ON</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Mise à jour des commandes, lors du passage de la commande <strong>Etat</strong> de OFF à ON :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alarme</strong> : passage à OFF</p>
+</li>
+<li>
+<p><strong>Code Alarme</strong> : passage à zéro</p>
+</li>
+<li>
+<p><strong>Tempts Fct (H:M:S)</strong> : '00:00:00'</p>
+</li>
+<li>
+<p><strong>Tempts Fct</strong> : 0 seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct Total(H:M:S)</strong> : pas de changement</p>
+</li>
+<li>
+<p><strong>Tempts Fct Total</strong> : pas de changement</p>
+</li>
+<li>
+<p><strong>Demarré</strong> : heure courante du démarrage</p>
+</li>
+<li>
+<p><strong>Arreté</strong> : '-'</p>
+</li>
+<li>
+<p><strong>Etat</strong> : Passage à ON</p>
+</li>
+<li>
+<p><strong>Compteur</strong> : Incrémenter de 1</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Mise à jour des commandes, lors du passage de la commande <strong>Etat</strong> de ON à OFF :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alarme</strong> : voir ci dessus</p>
+</li>
+<li>
+<p><strong>Code Alarme</strong> : voir ci dessus</p>
+</li>
+<li>
+<p><strong>Tempts Fct (H:M:S)</strong> : heure d&#8217;arret moins heure de démarrage au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct</strong> : heure d&#8217;arret moins heure de démarrage en seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct Total(H:M:S)</strong> : heure d&#8217;arret moins heure de démarrage plus <strong>Tempts Fct Total(H:M:S)</strong> précedent au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct Total</strong> : heure d&#8217;arret moins heure de démarrage plus <strong>Tempts Fct Total</strong> précédent en seconde</p>
+</li>
+<li>
+<p><strong>Demarré</strong> : pas de changement</p>
+</li>
+<li>
+<p><strong>Arreté</strong> : heure courante de l&#8217;arret</p>
+</li>
+<li>
+<p><strong>Etat</strong> : Passage à OFF</p>
+</li>
+<li>
+<p><strong>Compteur</strong> : pas de changement</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Mise à jour des commandes toutes les 5 min :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alarme</strong> : voir ci dessus</p>
+</li>
+<li>
+<p><strong>Code Alarme</strong> : voir ci dessus</p>
+</li>
+<li>
+<p><strong>Tempts Fct</strong> : heure courante moins heure de démarrage en seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct (H:M:S)</strong> : heure courante moins heure de démarrage au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct Total(H:M:S)</strong> : heure courante moins heure de démarrage plus <strong>Tempts Fct Total(H:M:S)</strong> précedent au format Heure:Minute:Seconde</p>
+</li>
+<li>
+<p><strong>Tempts Fct Total</strong> : heure courante moins heure de démarrage plus <strong>Tempts Fct Total</strong> précédent en seconde</p>
+</li>
+<li>
+<p><strong>Demarré</strong> : pas de changement</p>
+</li>
+<li>
+<p><strong>Arreté</strong> : pas de changement</p>
+</li>
+<li>
+<p><strong>Etat</strong> : Pas de changement</p>
+</li>
+<li>
+<p><strong>Compteur</strong> : pas de changement</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cas_d_utilisation">4. Cas d&#8217;utilisation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_surveiller_la_durée_de_fonctionnement_de_votre_télévison">4.1. Surveiller la durée de fonctionnement de votre télévison</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation1-equipement.png" alt="utilisation1 equipement">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : logique</p>
+</li>
+<li>
+<p><strong>Commande equipement</strong> : mettre la commande état de la prise qui commande votre télévision</p>
+</li>
+<li>
+<p><strong>Temps min de fonctionnement</strong> : laisser vide</p>
+</li>
+<li>
+<p><strong>Temps max de fonctionnement</strong> (minutes) : mettre par exemple 400</p>
+</li>
+<li>
+<p><strong>Heure prévue équipement en Arrêt (HHMM)</strong> : mettre par exemple 2300</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cela signifie que la commande <strong>Alarme</strong> passera à 1 au bout de 400 minutes (soit 6 heures et 40 minutes, ça commence à faire beaucoup ;)) ou à 23H00 si la commande <strong>Etat</strong> est toujours à ON (c&#8217;est-à-dire votre TV est toujours allumée).
+Le compteur sera incrémenté à chaque passage à ON de votre commande.</p>
+</div>
+<div class="paragraph">
+<p>Pour un widget personnalisé à l&#8217;equipement, sélectionnez les commandes comme ci-dessous :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation1-commandes.png" alt="utilisation1 commandes">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation1-widget.png" alt="utilisation1 widget">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_surveiller_son_chauffe_eau_avec_la_mesure_de_puissance_de_votre_arrivée_générale_du_logement">4.2. Surveiller son chauffe eau avec la mesure de puissance de votre arrivée générale du logement</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation2-equipement.png" alt="utilisation2 equipement">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : analogique</p>
+</li>
+<li>
+<p><strong>Commande équipement</strong> : mettre la commande de mesure de puissance générale de votre logement</p>
+</li>
+<li>
+<p><strong>Compteur général</strong> : coché</p>
+</li>
+<li>
+<p><strong>Heure de fonctionnement pévu</strong> : mettre l&#8217;heure prévu de mise en route de votre chauffe eau (ex : 2330)</p>
+</li>
+<li>
+<p><strong>Puissance equipement</strong> : mettre la puissance de votre chauffe eau (ex : 2000)</p>
+</li>
+<li>
+<p><strong>Temps min de fonctionnement</strong> (minutes) : mettre par exemple 20</p>
+</li>
+<li>
+<p><strong>Temps max de fonctionnement</strong> (minutes) : mettre par exemple 240</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>cela signifie que la commande <strong>Alarme</strong> passera à ON à 00:10 (23h30+20 minutes) s&#8217;il n&#8217;as pas demarré ou si son temps de fonctionnement est inferieur à 20 minutes ou supérieur à 4 heures.</p>
+</div>
+<div class="paragraph">
+<p>Pour un widget personalisé à l&#8217;equipement, selectionnez les commandes comme ci-dessous :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation2-commandes.png" alt="utilisation2 commandes">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation2-widget.png" alt="utilisation2 widget">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compter_le_nombre_de_cycles_de_votre_lave_linge">4.3. Compter le nombre de cycles de votre lave linge</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation3-equipement.png" alt="utilisation3 equipement">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type de commande</strong> : analogique</p>
+</li>
+<li>
+<p><strong>Commande équipement</strong> : mettre la commande de mesure de puissance du lave linge</p>
+</li>
+<li>
+<p><strong>Compteur général</strong> : non coché</p>
+</li>
+<li>
+<p><strong>Puissance Mini</strong> (Watt) : si votre lave linge consomme environ 5W mini pendant un cyle, mettre 5</p>
+</li>
+<li>
+<p><strong>Puissance Maxi</strong> (Watt) : si votre lave linge consomme environ 100W au démarrage d&#8217;un cyle, mettre 100</p>
+</li>
+<li>
+<p><strong>Temps min de fonctionnement</strong> : laisser vide ou non</p>
+</li>
+<li>
+<p><strong>Temps max de fonctionnement</strong> : laisser vide ou non</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>le compteur sera incrementé de 1, la commande <strong>Etat</strong> passera à ON, si la valeur mesure de puissance est supérieure à 100W,
+le cycle sera considéré comme terminé si la mesure de puissance est inférieure à 5W et la commande <strong>Etat</strong> passera à OFF.</p>
+</div>
+<div class="paragraph">
+<p>Si les valeurs <strong>Temps min de fonctionnement</strong> ou <strong>Temps max de fonctionnement</strong> ne sont pas vides, la commande <strong>Alarme</strong> passera à ON suivant la valeur de la commande <strong>Temps Fct</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Pour un widget personalisé à l&#8217;équipement, selectionner les commandes comme ci-dessous :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation3-commandes.png" alt="utilisation3 commandes">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/utilisation3-widget.png" alt="utilisation3 widget">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq">5. FAQ</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Apres une mise à jour du plugin, il est préférable de faire une sauvegarde de chaque "Surveillance equipement"</p>
+</li>
+<li>
+<p>Pour avoir une représentation graphique du temps de fonctionnement, il faut historiser la commande <strong>Temps Fct Total</strong> avec l&#8217;option <strong>Mode de lissage</strong> sur <strong>Aucun</strong></p>
+</li>
+<li>
+<p>Puissance Mini et Puissance Max ne doivent pas être égale</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>S&#8217;il y a lieu, la FAQ est alimentée par les échanges dans le sujet <a href="https://www.jeedom.com/forum/viewtopic.php?f=28&amp;t=24637">Sujet officiel Surveillance Equipement</a> du forum jeedom.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_change_log">6. Change Log</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Version 1.6 (version en cours)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Correction du bug lors de la remise à zéro	du temps de fonctionnement total</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Version 1.5 (version market : 2017-03-02 08:46:49)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>idem à la 1.4, mise à jour sur le market suite au passage du "robot" qui a fournit une nouvelle version , pas compris ce qu&#8217;il c&#8217;est passé</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Version 1.4 (version market : 2017-02-19 10:10:30)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ajout de la commande <strong>Code Alarme</strong></p>
+</li>
+<li>
+<p>ajout de l&#8217;onglet <strong>Données</strong> pour une visualisation graphique du temps de fonctionnement</p>
+</li>
+<li>
+<p>amélioration du code</p>
+</li>
+<li>
+<p>mise à jour de la documentation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Version 1.3 (version market : 2017-02-10 11:07:08)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ajout des parametres <strong>Heure prévue equipement en Arrêt</strong> et <strong>Heure prévue equipement en Marche</strong></p>
+</li>
+<li>
+<p>Modification affichage <strong>Temps Fct Toatl</strong></p>
+</li>
+<li>
+<p>amélioration du code</p>
+</li>
+<li>
+<p>mise à jour de la documentation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Version 1.2 (version market : 2017-02-03 22:25:59)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Correction d&#8217;un bug sur la génération de la commande <strong>Alarme</strong></p>
+</li>
+<li>
+<p>Amélioration sur la génération de la commande <strong>Alarme</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Version 1.1 (version market : 2017-02-02 22:24:32)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ajout des commandes <strong>Temps Fct Total(H:M:S)</strong>, <strong>Temps Fct Total</strong> et <strong>RAZ Tps Fct Total</strong></p>
+</li>
+<li>
+<p>mise à jour de la documentation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Version 1.0 (version market : 2017-02-01 17:01:23)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Plugin initial</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
