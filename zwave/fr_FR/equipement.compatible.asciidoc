@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*50* [green]*marques de modules différentes, soit un total de* [red]*269* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*270* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -316,6 +316,18 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 
 |image:../images/compatibility_list/domitech.ze27eu.jpg[width=150,align="center"]|Domitech|Smart LED Retrofit Kit ZE27EU|Interrupteur| | link:++http://www.domadoo.fr/fr/peripheriques/3226-domitech-ampoule-led-dimmable-z-wave-zbulb-869166000060.html++[Acheter^]
 // 526.19522.12596_ze27eu.json
+
+
+|===
+
+== Domux
+
+[cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
+|===
+|Image|Marque|Nom|Type|Remarque|Lien
+
+|image:../images/compatibility_list/domux.dx2skz.jpg[width=150,align="center"]|Domux|Wall Plug (DX2SK-Z)|Prise| | 
+// 608.32774.4096_dx2skz_wallplug.json
 
 
 |===
