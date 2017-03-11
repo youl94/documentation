@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Fensterläden Verwaltung</title>
+<title>Description</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,157 +412,56 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Fensterläden Verwaltung</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a></li>
-<li><a href="#_einrichtung">2. Einrichtung</a>
+<li><a href="#_description">1. Description</a>
 <ul class="sectlevel3">
-<li><a href="#_allgemeine_jeedom_konfiguration">2.1. Allgemeine Jeedom Konfiguration</a></li>
-<li><a href="#_définition_de_l_angle_d_exposition_au_soleil">2.2. Définition de l&#8217;angle d&#8217;exposition au soleil</a></li>
-<li><a href="#_conditions_d_exécution">2.3. Conditions d&#8217;exécution</a></li>
-<li><a href="#_actions_d_ouverture_et_de_fermeture">2.4. Actions d&#8217;ouverture et de fermeture</a></li>
+<li><a href="#_ayat">1.1. Ayat</a></li>
 </ul>
 </li>
+<li><a href="#_configuration">2. Configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+</ul>
+</li>
+<li><a href="#_faq">3. FAQ</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_description">1. Description</h2>
 <div class="sectionbody">
+<div class="sect3">
+<h4 id="_ayat">1.1. Ayat</h4>
 <div class="paragraph">
-<p>Dieses Plugin erlaubt es, ihre Fensterläden zu verwalten.
-Celui-ci est entièrement basé sur le plugin Heliotrope qui est un prérequis pour l&#8217;utilisation de ce plugin.</p>
+<p>Ce plugin permet de chercher une sourate, un verset ou un juzz par exemple. Plusieurs versions linguistiques sont disponibles ainsi que de l&#8217;audio.</p>
 </div>
-<div class="paragraph">
-<p>Vous avez la possibilité de fermer vos volets à la tombée de la nuit et de les réouvrir au lever du soleil.
-Vous avez également la possibilité de gérer vos volets pour qu&#8217;ils se ferment si le soleil est dans l&#8217;azimuth de votre fenêtre.</p>
+<hr>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_einrichtung">2. Einrichtung</h2>
+<h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Comme pour tous les plugins, nous allons commencer par créer un groupe de zone avec le bouton Ajouter.
-Après avoir nommé ce groupe, nous allons pouvoir commencer à mettre en place nos zones.</p>
-</div>
 <div class="sect3">
-<h4 id="_allgemeine_jeedom_konfiguration">2.1. Allgemeine Jeedom Konfiguration</h4>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ConfigurationGeneral.jpg" alt="ConfigurationGeneral">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Name : Der Name wurde bereits festgelegt, aber Sie können ihn ändern.</p>
-</li>
-<li>
-<p>Objet parent : ce paramètre permet d&#8217;ajouter l&#8217;équipement dans un objet Jeedom</p>
-</li>
-<li>
-<p>Kategorie : Ordnet das Gerät in eine Kategorie ein.</p>
-</li>
-<li>
-<p>Visible : permet de rendre l&#8217;équipement visible dans le Dashboard</p>
-</li>
-<li>
-<p>Activer : permet d&#8217;activer l&#8217;équipement</p>
-</li>
-<li>
-<p>Jour / Nuit : Activation de la gestion en jour / nuit</p>
-</li>
-<li>
-<p>Position du soleil : Activation de la gestion en fonction de la position du soleil</p>
-</li>
-<li>
-<p>Présence : permet de définir des pauses aléatoires dans la séquence de fermeture des volets de la zone</p>
-</li>
-<li>
-<p>Héliotrope : choisir l&#8217;équipement Héliotrope à prendre en compte pour ce groupe de zone</p>
-</li>
-<li>
-<p>Délai au lever du jour (min) : délai avant (-) ou après (+) à l&#8217;heure du lever du jour</p>
-</li>
-<li>
-<p>Délai à la tombée de la nuit (min) : délai avant (-) ou après (+) à l&#8217;heure de la tombée de la nuit</p>
-</li>
-<li>
-<p>Délais de réévaluation (min) : Délais d&#8217;attente avant réévaluation si les conditions ne sont pas respectées</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_définition_de_l_angle_d_exposition_au_soleil">2.2. Définition de l&#8217;angle d&#8217;exposition au soleil</h4>
+<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
 <div class="paragraph">
-<p>Nous allons maintenant déterminer l&#8217;angle d&#8217;exposition au soleil.
-Cette etape est importante pour le fonctionement de la gestion en fonction de la position du soleil.</p>
+<p>Le plugin ne comporte pas de configuration générale ni par équipement.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ConfigurationMap.jpg" alt="ConfigurationMap">
+<hr>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_faq">3. FAQ</h2>
+<div class="sectionbody">
+<div class="openblock panel">
+<div class="title">Est-ce que le plugin s&#8217;appuie sur des API cloud ?</div><div class="content">
 <div class="paragraph">
-<p>Sur votre fenetre doit apparaitre 3 curseurs.
-Ces 3 curseur vont donc former notre angle
-Le point central doit etre obligatoirement placé au dessus de notre fenetre.
-Les 2 autres vont formé l&#8217;ange et peuvent etre placer n&#8217;importe ou a l&#8217;exterieur de la maison
-Attention toutefoiss a bien respecter la droite et la gauche de notre fenetre en vue de l&#8217;exterieur</p>
+<p>Oui, le plugin s&#8217;appuie sur <a href="https://alquran.cloud/api" class="bare">https://alquran.cloud/api</a></p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_conditions_d_exécution">2.3. Conditions d&#8217;exécution</h4>
-<div class="paragraph">
-<p>Dans nos differentes gestions nous pouvons choisir des conditions
-Toutes les conditions, de la gestion active, doivent etre respecté pour que les actions soit executé</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ConfigurationCondition.jpg" alt="ConfigurationCondition">
-</div>
-</div>
-<div class="paragraph">
-<p>Pour vous aider a la configuration des condition un editeur est ajouté.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ConfigurationConditionEditeur.jpg" alt="ConfigurationConditionEditeur">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ConfigurationConditionEditeur2.jpg" alt="ConfigurationConditionEditeur2">
-</div>
-</div>
-<div class="paragraph">
-<p>Il vous reste 2 champs a configurer</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Choisir sur quel gestion on veut que notre condition soit respecté</p>
-</li>
-<li>
-<p>Choisir pour quel action on veut que notre condition soit respecté</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_actions_d_ouverture_et_de_fermeture">2.4. Actions d&#8217;ouverture et de fermeture</h4>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ConfigurationAction.jpg" alt="ConfigurationAction">
-</div>
-</div>
-<div class="paragraph">
-<p>Choisissez les actions a mener sans oublier de configurer leur valeurs</p>
 </div>
 </div>
 </div>
