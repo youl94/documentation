@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*270* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*271* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -957,6 +957,9 @@ _[small]#Piles : 1xER26500M#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 
 |image:../images/compatibility_list/popp.solar-siren.jpg[width=150,align="center"]|Popp|Solar Powered Outdoor Siren|Sirène| _[small]#Piles : Batterie#_| link:++http://www.domadoo.fr/fr/peripheriques/3180-popp-sirene-exterieure-solaire-z-wave-0019962005107.html++[Acheter^]
 // 340.4.2_popp.solar.siren.json
+
+|image:../images/compatibility_list/popp.zweather.jpg[width=150,align="center"]|Popp|Z-Weather Wind and Weather Sensor|Multicapteurs| _[small]#Piles : Cellule solaire#_| link:++http://www.domadoo.fr/fr/peripheriques/2961-popp-station-meteo-z-wave-z-weather.html++[Acheter^]
+// 340.256.1024_zweather.json
 
 
 |===
