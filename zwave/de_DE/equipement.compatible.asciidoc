@@ -1379,6 +1379,9 @@ _[small]#Piles : Cellule solaire#_| link:++http://www.domadoo.fr/fr/peripherique
 |===
 |Bild|Marke|Name|Typ|Hinweis|Link
 
+|image:../images/compatibility_list/aeotec.zw130.jpg[width=150,align="center"]|Aeotec|WallMote Duo (ZW129)|Télécommande| _[small]#Piles : Batterie#_| 
+// 134.2.129_zw129_wallmote.duo.json
+
 |image:../images/compatibility_list/aeotec.zw130.jpg[width=150,align="center"]|Aeotec|WallMote Quad (ZW130)|Télécommande| _[small]#Piles : Batterie#_| 
 // 134.2.130_zw130_wallmote.quad.json
 
