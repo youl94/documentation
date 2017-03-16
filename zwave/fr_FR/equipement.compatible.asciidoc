@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*271* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*274* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -25,6 +25,12 @@ D'autres modules non présents sur cette liste peuvent être compatibles. Pour u
 
 |image:../images/compatibility_list/aeotec.zw097.jpg[width=150,align="center"]|Aeotec|Dry Contact Sensor Gen5 (ZW097)|Ouverture| _[small]#Piles : 1×3V CR123A#_| 
 // 134.2.97_zw097_dry.contact.sensor.gen5.json
+
+|image:../images/compatibility_list/aeotec.nanoswitch.jpg[width=150,align="center"]|Aeotec|Dual Nano Switch (ZW132)|Micromodule| | 
+// 134.3.132_zw132.dual.nano.switch.json
+
+|image:../images/compatibility_list/aeotec.nanoswitch.jpg[width=150,align="center"]|Aeotec|Dual Nano Switch (ZW140)|Micromodule| | 
+// 134.3.140_zw140.dual.nano.switch.json
 
 |image:../images/compatibility_list/aeotec.garagedoorcontroller.jpg[width=150,align="center"]|Aeotec|Garage Door Controller Gen5 (ZW062)|Porte| |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-aeotec.zw062_garage_door_controller.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/3403-aeon-labs-controleur-de-porte-de-garage-z-wave-gen5.html++[Acheter^]
 // 134.259.62_zw62.garage.door.controller.json
@@ -105,6 +111,9 @@ _[small]#Piles : 4x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/268
 
 |image:../images/compatibility_list/aeotec.nanoswitch.jpg[width=150,align="center"]|Aeotec|Nano Switch (ZW116)|Micromodule| | 
 // 134.259.116_zw116.nano.switch.json
+
+|image:../images/compatibility_list/aeotec.nanoswitch.jpg[width=150,align="center"]|Aeotec|Nano Switch (ZW139)|Micromodule| | 
+// 134.3.139_zw139.nano.switch.json
 
 |image:../images/compatibility_list/aeotec.panicbutton.jpg[width=150,align="center"]|Aeotec|Panic Button (DSA38)|Télécommande| _[small]#Piles : 1x3V CR2450#_|link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-aeotec.panic_button_-_Telecommande.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/278-aeon-labs-telecommande-z-wave-porte-cles-1-bouton.html++[Acheter^]
 // 134.1.38_dsa38_panic.button.json
