@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>OpenALPR - Erkennung von Nummernschilder</title>
+<title>ftpd</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,271 +412,167 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>OpenALPR - Erkennung von Nummernschilder</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a></li>
-<li><a href="#_installation_und_konfiguration">2. Installation und Konfiguration</a>
+<li><a href="#_ftpd">1. ftpd</a>
 <ul class="sectlevel2">
-<li><a href="#_abhängigkeiten_installation">2.1. Abhängigkeiten Installation</a></li>
-<li><a href="#_konfiguration_des_plugins_und_seine_abhängigkeiten">2.2. Konfiguration des Plugins und seine Abhängigkeiten</a></li>
-</ul>
-</li>
-<li><a href="#_einrichten_von_geräten_und_befehlen">3. Einrichten von Geräten und Befehlen</a>
+<li><a href="#_présentation">1.1. Présentation</a>
 <ul class="sectlevel3">
-<li><a href="#_groupe_de_plaques">3.1. Groupe de plaques</a></li>
-<li><a href="#_plaques_d_imatriculation">3.2. Plaques d&#8217;imatriculation</a></li>
+<li><a href="#_installation_configuration">1.1.1. Installation/Configuration</a></li>
+<li><a href="#_fonctionnement">1.1.2. Fonctionnement :</a></li>
+<li><a href="#_informations_visibles">1.1.3. Informations visibles :</a></li>
 </ul>
 </li>
-<li><a href="#_faq">4. FAQ</a></li>
+<li><a href="#_configuration">1.2. Configuration</a></li>
+<li><a href="#_faq">1.3. FAQ</a></li>
+<li><a href="#_changelog">1.4. Changelog</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Plugin, um kontinuierlich Kennzeichen mit der Kamera zu erkennen</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  Vorsicht mit dem Einsatz dieses Plugins,
-nur Behörden dürfen (einschließlich Regierungen)
-die öffentlichen Straße filmen.
-Privatpersonen dürfen nur innerhalb von ihrem Eigentum filmen.
-Sie dürfen die Straße nicht filmen, auch nicht um die Sicherheit
-ihres Fahrzeugs zu gewährleisten, das vor ihrem Wohnsitz abgestellt wurde.</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installation_und_konfiguration">2. Installation und Konfiguration</h2>
+<h2 id="_ftpd">1. ftpd</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_abhängigkeiten_installation">2.1. Abhängigkeiten Installation</h3>
+<h3 id="_présentation">1.1. Présentation</h3>
 <div class="paragraph">
-<p>Pour facilité la mise en place des dépendance, jeedom vas gérer seul l’installation et la compilation du logiciel OpenALPR.</p>
+<p>Ce plugin permet de creer un serveur ftp qui notifiera jeedom lorsqu&#8217;un fichier est déposé.
+Très utile pour les cameras IP qui peuvent sur détection de mouvement envoyer un fichier par ftp.</p>
 </div>
-<div class="paragraph">
-<p>Dans la cadre réservé aux dépendances, vous allez avoir le statut de l’installation. Nous avons aussi la possibilité de consulté le log d’installation en temps réel.</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/Installation_dependance.jpg" alt="Installation dependance">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_konfiguration_des_plugins_und_seine_abhängigkeiten">2.2. Konfiguration des Plugins und seine Abhängigkeiten</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/openalpr_screenshot_configuration.jpg" alt="openalpr screenshot configuration">
-</div>
-</div>
-<div class="paragraph">
-<p>Les paramettre de configuration général sont:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Création automatique de plaque inconnue: Permet a jeedom de créer une commande pour les plaque non reconue</p>
-</li>
-<li>
-<p>Activer le Snapshot: Permet de déterminer si on veut des snapshot des détécton</p>
-</li>
-<li>
-<p>Choisir l&#8217;emplacement par defaut des snapshot</p>
-</li>
-<li>
-<p>Choisir les commandes d&#8217;alerte (mail, slack&#8230;&#8203;) separer par des &amp;&amp;</p>
-</li>
-<li>
-<p>Choisir le nombre d&#8217;images envoyé</p>
-</li>
-<li>
-<p>Personnalisé les paramettre par defaut de OpenAlpr</p>
-</li>
-<li>
-<p>state_id_img_size_percent</p>
-</li>
-<li>
-<p>ocr_img_size_percent</p>
-</li>
-<li>
-<p>Calibrage de votre camera améliore la précision de la détection dans les cas où des plaques d&#8217;immatriculation sont capturés à un angle raide (Utilisez l&#8217;utilitaire openalpr-utils-calibration pour calibrer votre camera fixe pour ajuster un angle )</p>
-</li>
-<li>
-<p>La détection ignorera plaques qui sont trop grands. Ceci est une bonne technique de l&#8217;efficacité à utiliser si les plaques vont être à une distance fixe de la caméra (par exemple, vous ne verrez jamais plaques qui remplissent la totalité de l&#8217;image</p>
-</li>
-<li>
-<p>Augmentation détection d&#8217;itération est le pourcentage que le cadre de LBP augmente chaque itération. Il doit être supérieur à 1,0. Une valeur de 1,01 signifie augmentation de 1%, 1,10 augmentation de 10% de chaque fois. Ainsi, une augmentation de 1% serait ~ 10x plus lent que 10% à traiter, mais il a une plus grande chance de l&#8217;atterrissage directement sur la plaque et d&#8217;obtenir une détection forte</p>
-</li>
-<li>
-<p>La force minimale de détection détermine comment assurer l&#8217;algorithme de détection doit être avant de signaler qu&#8217;une région de la plaque existe. Techniquement, cela correspond à LBP voisins les plus proches (par exemple, combien de détectives sont regroupés autour de la même zone). Par exemple, 2 = très indulgent, 9 = très stricte</p>
-</li>
-<li>
-<p>La détection n&#8217;a pas nécessairement besoin d&#8217;une image de très haute résolution pour détecter les plaques. En utilisant une image d&#8217;entrée plus petit doit encore trouver les plaques et le fera plus rapidement. Peaufiner les valeurs de max_detection_input va redimensionner l&#8217;image d&#8217;entrée si elle est plus grande que ces tailles (exprimées en pixels</p>
-</li>
-<li>
-<p>Technique utilisée pour trouver des régions de plaque d&#8217;immatriculation d&#8217;une image. La valeur peut être réglée sur les résultats doivent correspondre un textpattern de post-traitement si un modèle est disponible.</p>
-</li>
-<li>
-<p>Contourne la détection de la plaque. Si elle est positionnée à 1, la bibliothèque suppose que chaque zone prévue est une zone de la plaque susceptible.</p>
-</li>
-<li>
-<p>OpenALPR peut balayer la même image plusieurs fois avec randomisation différent. Mettre ce paramètre à une valeur plus grande que 1 peut augmenter la précision, mais augmentera le temps de traitement linéaire</p>
-</li>
-<li>
-<p>OpenALPR détecte les cultures de plaque à contraste élevé et utilise une technique de détection de bord alternatif. Mettre cette option à 0.0 classerait toutes les images comme contraste élevé, la mise à 1.0 classerait pas d&#8217;images comme contraste élevé.</p>
-</li>
-<li>
-<p>max_plate_angle_degrees</p>
-</li>
-<li>
-<p>ocr_min_font_point</p>
-</li>
-<li>
-<p>Minimum de confiance OCR à considérer(%)</p>
-</li>
-<li>
-<p>Tout caractère OCR inférieur à ce parametre sera ignorée.</p>
-</li>
-<li>
-<p>Mode Débug</p>
-</li>
-<li>
-<p>Ajouter une camera : Permet d’ajouter une camera</p>
-</li>
-<li>
-<p>Resau jeedom: Permet de déterminer sur quel jeedom l’analyse va se faire</p>
-</li>
-<li>
-<p>Plugin source camera: determine la maniere de configurer une camera</p>
-</li>
-<li>
-<p>Url de la Camera: adresse du flux de votre camera</p>
-</li>
-<li>
-<p>Login de connexion a la Camera</p>
-</li>
-<li>
-<p>Passwort der Kamera</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Nous pouvons voir le status de configuration et d’activation d’OpenALPR dans le cadre "Démon"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/Status_Demon.jpg" alt="Status Demon">
-</div>
-</div>
-<div class="paragraph">
-<p>Si tous les voyant sont au vert, nous pouvons passée a la suite</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_einrichten_von_geräten_und_befehlen">3. Einrichten von Geräten und Befehlen</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_groupe_de_plaques">3.1. Groupe de plaques</h4>
-<div class="paragraph">
-<p>Dans un premier temps, il faut créer un nouvelle groupe  et le nommé.
-Comme dans tous les plugins Jeedom vous avez un bouton ajouté un equipement sur la gauche de votre fenetre.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/Configuration_equipement.jpg" alt="Configuration equipement">
-</div>
-</div>
-<div class="paragraph">
-<p>Ce nouvelle équipement a besoin d&#8217;être paramétré.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nom du groupe : Le nom a déjà été paramétrée mais vous avez la possibilité de la changer</p>
-</li>
-<li>
-<p>Objet parent : Ce paramétré permet d&#8217;ajouter l&#8217;équipement dans un objet Jeedom</p>
-</li>
-<li>
-<p>Catégorie : Déclare l&#8217;équipement dans une catégorie</p>
-</li>
-<li>
-<p>Visible : Permet de rendre l&#8217;équipement visible dans le Dashboard</p>
-</li>
-<li>
-<p>Activer : Permet d&#8217;activer l&#8217;équipement</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Le groupe "Plaques détectées inconnu" ce créer automatiquement des qu’une plaque a ete détécté et qu’elle n’existe pas sous jeedom.
-Pour créer votre groupe et comme partout sur jeedom vous avez le bouton "Ajouter" sur la gauche de votre écran.</p>
+<img src="../images/ftpd_screenshot3.jpg" alt="ftpd screenshot3">
 </div>
 </div>
 <div class="sect3">
-<h4 id="_plaques_d_imatriculation">3.2. Plaques d&#8217;imatriculation</h4>
+<h4 id="_installation_configuration">1.1.1. Installation/Configuration</h4>
 <div class="paragraph">
-<p>Maintenant que votre équipement est crée et configurée, on vas pouvoir y ajouter des commandes.
-Le groupe "Plaques détectées inconnu" ce créer automatiquement des qu’une plaque a ete détécté et qu’elle n’existe pas sous jeedom.
-Pour créer votre groupe et comme partout sur jeedom vous avez le bouton "Ajouter" sur la gauche de votre écran.</p>
+<p>Nous allons configurer le plugin. Pour se faire, cliquer sur <strong>Plugin / Gestion des plugins</strong>. Puis trouver <strong>ftpd</strong>.</p>
 </div>
-<div class="paragraph">
-<p>Beispielkonfiguration</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/Configuration_commande.jpg" alt="Configuration commande">
+<img src="../images/ftpd_screenshot1.jpg" alt="ftpd screenshot1">
 </div>
+</div>
+<div class="paragraph">
+<p>Il faut définir certains paramètres global au plugin :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Nom : Donner un nom a votre plaque de manière a la retrouve facilement dans Jeedom</p>
+<p>Port ftpd : Port sur lequel le daemon écoutera pour les fichiers.</p>
 </li>
 <li>
-<p>Numero de la plaque: Numero de la plaque (sans les tirets) (il est possible de remplacé des caractere par de ** en cas de flotte avec de plaque qui se suive</p>
-<div class="literalblock">
+<p>Local IP : Adresse ip d&#8217;écoute du daemon. Il est préférable de laisser 0.0.0.0.</p>
+</li>
+<li>
+<p>IP Autorisées : Liste les IPs autorisées à déposer des fichiers.</p>
+<div class="paragraph">
+<p>Format : liste séparé par virgule sans espace. La liste peut contenir des ips (192.168.1.1), des masques ( (192.168.1.0/32) ou des plages (192.168.1.1-192.168.1.12).</p>
+</div>
+</li>
+<li>
+<p>Chemin des enregistrements : Chemin dans lequel les fichiers seront stockés.</p>
+</li>
+<li>
+<p>Debug daemon : Permet d&#8217;activer le debug du daemon ftpd.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Et pour finir, cliquer sur Sauvegarder.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fonctionnement">1.1.2. Fonctionnement :</h4>
+<div class="paragraph">
+<p>Le plugin créera automatiquement les équipements une fois qu&#8217;ils auront envoyé un fichier.</p>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<pre> AX**
-AX123**
-AX**WW
-123
-**123WW
-**WW</pre>
+<img src="../images/ftpd_screenshot6.jpg" alt="ftpd screenshot6">
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_informations_visibles">1.1.3. Informations visibles :</h4>
+<div class="ulist horizontal">
+<ul class="horizontal">
+<li>
+<p><strong>Etat</strong> : état du ftpd. C&#8217;est une commande de type info binary. Elle est active durant 10 secondes sur reception de fichier.</p>
 </li>
 <li>
-<p>Historiser: Tres utiles si vous voulez visualiser sur le panel les entée</p>
-</li>
-<li>
-<p>Afficher: si vous voulez que la plaque apparaisse sur le dashbord</p>
-</li>
-<li>
-<p>Déplacer: ce bouton permet de déplacer une plaque d’un groupe a un autre</p>
-</li>
-<li>
-<p>Enfin pensez sauvegarder.</p>
+<p><strong>lastfilename</strong> : Nom de la dernière capture reçue.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuration">1.2. Configuration</h3>
 <div class="paragraph">
-<p>Unresolved directive in index.asciidoc - include::faq.asciidoc[]</p>
+<p>Nous allons maintenant paramétrer l&#8217;équipement. Pour se faire, cliquer sur <strong>Plugins / Sécurité / Ftpd</strong></p>
+</div>
+<div class="paragraph">
+<p>Puis définir les caractèristiques :
+- Objet parent
+- Catégorie (optionnelle)
+- Activer (coché par défaut)
+- Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)
+- Nombre max de fichier : Nombre de fichier maximum conservés.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/ftpd_screenshot2.jpg" alt="ftpd screenshot2">
+</div>
+</div>
+<div class="paragraph">
+<p>Et pour finir, cliquer sur Sauvegarder</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_faq">1.3. FAQ</h3>
+<div class="openblock panel">
+<div class="title">Pourquoi le plugin est gratuit ?</div><div class="content">
+<div class="paragraph">
+<p>Ce plugin est gratuit pour que chacun puisse en profiter simplement. Si vous souhaitez tout de même faire un don au développeur du plugin, utilisez le lien suivant.
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=C7MF4WU7SWNKG">Faire un don au développeur du plugin</a></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">J&#8217;aimerai remonter des erreurs/modifications directement dans le code ?</div><div class="content">
+<div class="paragraph">
+<p>C&#8217;est tout à fait possible via <a href="https://github.com/guenneguezt/plugin-ftpd">github</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changelog">1.4. Changelog</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Detail complet des mises à jour sur <a href="https://github.com/guenneguezt/plugin-ftpd/commits/master">Historique Commit</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">1.0</dt>
+<dd>
+<p>Première version bêta.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
