@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*274* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*276* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -685,6 +685,12 @@ _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/27
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
+
+|image:../images/compatibility_list/520.512.9_scene-controller-1.jpg[width=150,align="center"]|Hank|Scene Controller 1|Contrôleur portable| _[small]#Piles : 2x1.5V AAA#_| 
+// 520.512.9_scene-controller-1.json
+
+|image:../images/compatibility_list/520.512.11_scene-controller-4.jpg[width=150,align="center"]|Hank|Scene Controller 4|Contrôleur portable| _[small]#Piles : 2x1.5V AAA#_| 
+// 520.512.11_scene-controller-4.json
 
 
 |===
