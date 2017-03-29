@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Description</title>
+<title>Wasser-Heizung Verwaltung</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,29 +412,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>Wasser-Heizung Verwaltung</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a>
-<ul class="sectlevel3">
-<li><a href="#_check_nagios_run_nagios_checks_in_jeedom">1.1. Check Nagios, run Nagios checks in Jeedom</a></li>
-</ul>
-</li>
-<li><a href="#_settings">2. Settings</a>
-<ul class="sectlevel3">
-<li><a href="#_the_plugin_configuration">2.1. The plugin configuration</a></li>
-</ul>
-</li>
-<li><a href="#_cas_d_usage">3. Cas d&#8217;usage</a>
-<ul class="sectlevel3">
-<li><a href="#_use_cases_examples_of_implementation">3.1. Use cases, examples of implementation</a></li>
-</ul>
-</li>
-<li><a href="#_faq">4. FAQ</a></li>
-<li><a href="#_troubleshoting">5. Troubleshoting</a></li>
-<li><a href="#_changelog">6. Changelog</a>
-<ul class="sectlevel3">
-<li><a href="#_version_1">6.1. Version 1</a></li>
+<li><a href="#_beschreibung">1. Beschreibung</a></li>
+<li><a href="#_einrichtung">2. Einrichtung</a>
+<ul class="sectlevel2">
+<li><a href="#_allgemeine_jeedom_konfiguration">2.1. Allgemeine Jeedom Konfiguration</a></li>
 </ul>
 </li>
 </ul>
@@ -442,321 +427,67 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_description">1. Description</h2>
+<h2 id="_beschreibung">1. Beschreibung</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_check_nagios_run_nagios_checks_in_jeedom">1.1. Check Nagios, run Nagios checks in Jeedom</h4>
 <div class="paragraph">
-<p>This plugin allows to get the result of Nagios checks. Nagios is a monitoring software with scripts that cover a very wide range of uses.</p>
-</div>
-<div class="paragraph">
-<p>Scripts can be executed locally or via SSH (via check_by_ssh)</p>
-</div>
-<div class="paragraph">
-<p>On peut par exemple récupérer l&#8217;état de disques durs, d&#8217;un RAID, de services &#8230;&#8203;</p>
-</div>
-<hr>
+<p>Dieses Plugin, ermöglicht es Ihren Warmwasserbereiter zu verwalten.
+Es wird die Zeit geschätzt, die für ein vollständiges Heizen Ihres Warmwasserspeichers notwendig ist.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_settings">2. Settings</h2>
+<h2 id="_einrichtung">2. Einrichtung</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_the_plugin_configuration">2.1. The plugin configuration</h4>
 <div class="paragraph">
-<p>The plugin does not have general configuration.</p>
+<p>Wie mit allen Jeedom Plugins werden wir mit der Erstellung eines Wecker Gerätes beginnen.
+Nachdem wir es einen Namen gegeben haben, können wir es parametrieren.</p>
 </div>
-<div class="sect4">
-<h5 id="_configuration_équipement">Configuration équipement</h5>
-<div class="paragraph">
-<p>Need to add a 'unit' equipment to supervise (understand IP, server&#8230;&#8203;)</p>
+<div class="sect2">
+<h3 id="_allgemeine_jeedom_konfiguration">2.1. Allgemeine Jeedom Konfiguration</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ConfigurationGeneral.jpg" alt="ConfigurationGeneral">
 </div>
-<div class="paragraph">
-<p>Pour superviser un équipement distant il faut remplir les options de l&#8217;équipement suivantes (uniquement les distants) :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Adresse IP</p>
+<p>Name : Der Name wurde bereits festgelegt, aber Sie können ihn ändern.</p>
 </li>
 <li>
-<p>Port SSH</p>
+<p>Eltern Objekt : Dieser Parameter ermöglicht das hinzufügen von Geräten in einem Jeedom-Objekt.</p>
 </li>
 <li>
-<p>Identifiant</p>
+<p>Kategorie : Ordnet das Gerät in eine Kategorie ein.</p>
 </li>
 <li>
-<p>Emplacement de la clef (uniquement les connexions par clef SSH sont supportées)</p>
+<p>Sichtbar : Erlaubt das Gerät auf den Armaturenbrett sichtbar zu machen.</p>
 </li>
 <li>
-<p>Chemin des check Nagios sur la cible (en local ils sont intégrés)</p>
+<p>Aktivieren : Erlaubt das Gerät zu aktivieren.</p>
+</li>
+<li>
+<p>Kapazität  (Liter) : Geben Sie das Volumen vom Warmwasserbereiter ein.</p>
+</li>
+<li>
+<p>Leistung des Warmwasserbereiters (Watt) : Geben Sie die Leistung Ihres Warmwasserbereiter ein.</p>
+</li>
+<li>
+<p>Gewünschte Temperatur (°C) : Geben Sie die zu erreichende Temperatur ein.</p>
+</li>
+<li>
+<p>Selectioner une commande ou estimer la temperature actuel de l&#8217;eau : Indiquer la temperature au moment de la chauffe ou choisisez un objet jeedom représantant la valeur</p>
+</li>
+<li>
+<p>Start des Heizens konfigurieren : Startzeit vom Warmwasserbereiter, im cron Format.</p>
+</li>
+<li>
+<p>Aktivierungsbefehl Warmwasserbereiter : An Befehl auswählen für ihren Warmwasserbereiter</p>
+</li>
+<li>
+<p>Deaktivierungsbefehl Warmwasserbereiter : Aus Befehl auswählen für ihren Warmwasserbereiter</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Pour tous les équipements si on souhaite avoir des notifications, il faut remplir l&#8217;option de notification.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_configuration_commandes">Configuration commandes</h5>
-<div class="paragraph">
-<p>Ensuite on ajoute une commande par élément à supervisier (état RAID, mysql, logs &#8230;&#8203;) qui corresponderont chacune à une commande à lancer (un check_***)</p>
-</div>
-<div class="paragraph">
-<p>Chaque commande permet de paramétrer sa fréquence (5mn, 15mn ou 30mn)</p>
-</div>
-<div class="paragraph">
-<p>Si la case du nombre de check avant notification n&#8217;est pas rempli, il n&#8217;y a pas de notification pour cette commande. Pour la remplir on saisit le nombre de check en erreur de suite avant notification</p>
-</div>
-<div class="paragraph">
-<p>On peut sélectionner si la commande est à éxécuter par SSH (dans ce cas, les options de l&#8217;équipement doivent être saisies)</p>
-</div>
-<div class="paragraph">
-<p>On peut également avoir que le check soit éxécuter avec sudo</p>
-</div>
-<div class="paragraph">
-<p>Dans la case commande on saisit le nom du check à lancer</p>
-</div>
-<div class="paragraph">
-<p>Dans la case des options on saisit les options de ce check (voir les exemples)</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_résultat_de_commande_dans_un_scénario">Résultat de commande dans un scénario</h5>
-<div class="paragraph">
-<p>Il est possible de récupérer la sortie Label du check dans un scénario en utilisant en bloc code :</p>
-</div>
-<div class="paragraph">
-<p>$status = $cmd&#8594;getConfiguration('status');</p>
-</div>
-<div class="paragraph">
-<p>Par exemple comme sur ce screenshot.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/nagioschecks_screenshot2.png" alt="Exemple execCmd avec options">
-</div>
-</div>
-<hr>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_cas_d_usage">3. Cas d&#8217;usage</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_use_cases_examples_of_implementation">3.1. Use cases, examples of implementation</h4>
-<div class="paragraph">
-<p>Here are some usage examples.</p>
-</div>
-<div class="sect4">
-<h5 id="_vérification_du_log_d_erreurs_web">Vérification du log d&#8217;erreurs Web</h5>
-<div class="paragraph">
-<p>La commande est : check_log</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -F /usr/share/nginx/www/jeedom/log/nginx-error.log -O /tmp/nginx.tmp -q ?</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_du_log_cron_execution_de_jeedom">Vérification du log cron_execution de Jeedom</h5>
-<div class="paragraph">
-<p>La commande est : check_log</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -F /usr/share/nginx/www/jeedom/log/cron_execution -O /tmp/cron_exec.tmp -q PHP</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_la_présence_d_un_fichier_de_sauvegarde_récent">Vérification de la présence d&#8217;un fichier de sauvegarde récent</h5>
-<div class="paragraph">
-<p>La commande est : check_backup.sh</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -D /usr/share/nginx/www/jeedom/backup</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_l_uptime">Vérification de l&#8217;uptime</h5>
-<div class="paragraph">
-<p>La commande est : check_uptime.pl</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -c 30</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_la_mémoire">Vérification de la mémoire</h5>
-<div class="paragraph">
-<p>La commande est : check_mem</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : aucun</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_l_utilisation_cpu">Vérification de l&#8217;utilisation CPU</h5>
-<div class="paragraph">
-<p>La commande est : check_load</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -w 5,5,5 -c 10,10,10</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_checking_for_the_presence_of_a_service">Checking for the presence of a service</h5>
-<div class="paragraph">
-<p>Un des checks à disposition est check_procs. Un usage basique est de lui donner le nombre de process qui doivent être existant et le label à chercher.</p>
-</div>
-<div class="paragraph">
-<p>Here are some usage examples.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/check_procs.png" alt="Conf procs">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans cet exemple, le service ne remontera qu&#8217;en warning, donc visible sur le widget mais sans remontée automatique d&#8217;alerte par Jeedom (mais biensur, c&#8217;est faisable avec un scénario)</p>
-</div>
-<div class="paragraph">
-<p>Comme pour tout check, pour plus de possibilités et d&#8217;arguments, n&#8217;hésitez pas à passer la commande ""/usr/lib/nagios/plugins/check_procs -h" pour avoir l&#8217;aide</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_du_raid_d_un_serveur_distant">Vérification du RAID d&#8217;un serveur distant</h5>
-<div class="paragraph">
-<p>Un exemple avec l&#8217;utilisation d&#8217;un check distant et un utilisant sudo</p>
-</div>
-<div class="paragraph">
-<p>Voici l&#8217;exemple en image :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/check_disks.png" alt="Conf procs">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans cet exemple, il y a deux check différents :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le premier vérifie l&#8217;état SMART de chaque disque (en utilisant sudo en même temps)</p>
-</li>
-<li>
-<p>le deuxième vérifie l&#8217;état global du RAID logiciel</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ces deux checks ont été copiés dans un répertoire du serveur qui les éxécute, sans que nagios-plugins soit installé dessus</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_d_un_nas_synology">Vérification d&#8217;un NAS Synology</h5>
-<div class="paragraph">
-<p>Par défaut, le paquet nagios-plugins n&#8217;a pas de check pour les NAS Synology. Mais comme dit, on peut ajouter tout script au format Nagios (le format Nagios n&#8217;impose pas un langage mais une norme de sortie 0/1/2/3 suivant OK/WARN/CRIT/UNK)</p>
-</div>
-<div class="paragraph">
-<p>Exemple, le script disponible ici :</p>
-</div>
-<div class="paragraph">
-<p><a href="https://exchange.nagios.org/directory/Plugins/Network-and-Systems-Management/Others/Synology-status/details" class="bare">https://exchange.nagios.org/directory/Plugins/Network-and-Systems-Management/Others/Synology-status/details</a></p>
-</div>
-<div class="paragraph">
-<p>On le télécharge, on le copie dans le répertoire de /usr/lib/nagios/plugins/ de notre Jeedom (via WinSCP par exemple) sans oublier de le rendre éxécutable (chmod +x)</p>
-</div>
-<div class="paragraph">
-<p>Il faut également install snmp : sudo apt-get install snmp</p>
-</div>
-<div class="paragraph">
-<p>Essayer ensuite en SSH la commande :</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/usr/lib/nagios/plugins/check_snmp_synology -2 public -h adresse_syno -v</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>En remplacant -2 par la version SNMP, public par la communauté et biensur adresse_syno par l&#8217;adresse du NAS</p>
-</div>
-<div class="paragraph">
-<p>Dans l&#8217;équipement on ajoute une commande et on saisit :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le nom souhaité</p>
-</li>
-<li>
-<p>on ne coche ni sudo ni ssh</p>
-</li>
-<li>
-<p>check_snmp_synology dans la boite check</p>
-</li>
-<li>
-<p>pour les options : -2 public -h adresse_syno (comme plus haut mettre les valeurs qu&#8217;il faut)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Comme pour tout check, pour plus de possibilités et d&#8217;arguments, n&#8217;hésitez pas à passer la commande ""/usr/lib/nagios/plugins/check_snmp_synology -h" pour avoir l&#8217;aide</p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
-<div class="sectionbody">
-<div class="olist panel">
-<ol class="panel">
-<li>
-<p>Is the plugin relies on third-party API?</p>
-</li>
-</ol>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Non, le plugin éxécute des commandes locales ou par SSH.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshoting">5. Troubleshoting</h2>
-<div class="sectionbody">
-<div class="olist panel">
-<ol class="panel">
-<li>
-<p>I don&#8217;t have any information going back</p>
-</li>
-</ol>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="paragraph">
-<p>Il faut bien créer un équipement et remplir les informations de la commande qu&#8217;on souhaite utiliser.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_version_1">6.1. Version 1</h4>
-<div class="paragraph">
-<p>Creation of the plugin</p>
 </div>
 </div>
 </div>
