@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>Plugin groupe</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,338 +415,148 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
-<ul class="sectlevel3">
-<li><a href="#_check_nagios_éxécuter_des_checks_nagios_dans_jeedom">1.1. Check Nagios, éxécuter des checks Nagios dans Jeedom</a></li>
+<li><a href="#_plugin_groupe">1. Plugin groupe</a>
+<ul class="sectlevel2">
+<li><a href="#_présentation">1.1. Présentation</a></li>
+<li><a href="#_installation_configuration">1.2. Installation/Configuration</a></li>
+<li><a href="#_changelog">1.3. Changelog</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
-<ul class="sectlevel3">
-<li><a href="#_plugin_konfiguration">2.1. Plugin Konfiguration</a></li>
-</ul>
-</li>
-<li><a href="#_anwendungsfall">3. Anwendungsfall</a>
-<ul class="sectlevel3">
-<li><a href="#_cas_d_usage_exemples_d_implémentation">3.1. Cas d&#8217;usage, exemples d&#8217;implémentation</a></li>
-</ul>
-</li>
-<li><a href="#_faq">4. FAQ</a></li>
-<li><a href="#_fehlersuche">5. Fehlersuche</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_plugin_groupe">1. Plugin groupe</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_check_nagios_éxécuter_des_checks_nagios_dans_jeedom">1.1. Check Nagios, éxécuter des checks Nagios dans Jeedom</h4>
+<div class="sect2">
+<h3 id="_présentation">1.1. Présentation</h3>
 <div class="paragraph">
-<p>Ce plugin permet d&#8217;obtenir le résultat de checks Nagios. Nagios est un logiciel de supervision disposant de scripts qui couvrent un très large domaine d&#8217;utilisations.</p>
-</div>
-<div class="paragraph">
-<p>Les scripts peuvent être éxécutés en local ou via SSH (via check_by_ssh)</p>
-</div>
-<div class="paragraph">
-<p>On peut par exemple récupérer l&#8217;état de disques durs, d&#8217;un RAID, de services &#8230;&#8203;</p>
+<p>Ce plugin permet de connaître l&#8217;état d&#8217;un groupe de commande et d&#8217;afficher le widget dans les différentes vues avec icônes personnalisables</p>
 </div>
 <hr>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_plugin_konfiguration">2.1. Plugin Konfiguration</h4>
+<div class="sect2">
+<h3 id="_installation_configuration">1.2. Installation/Configuration</h3>
 <div class="paragraph">
-<p>Das Plugin enthält keine allgemeine Konfiguration.</p>
+<p>Il faut télécharger le plugin sur le market.</p>
 </div>
-<div class="sect4">
-<h5 id="_configuration_équipement">Configuration équipement</h5>
-<div class="paragraph">
-<p>Il faut ajouter un équipement par "unité" à superviser (comprendre pi, serveur &#8230;&#8203;)</p>
-</div>
-<div class="paragraph">
-<p>Pour superviser un équipement distant il faut remplir les options de l&#8217;équipement suivantes (uniquement les distants) :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Adresse IP</p>
-</li>
-<li>
-<p>Port SSH</p>
-</li>
-<li>
-<p>Identifiant</p>
-</li>
-<li>
-<p>Emplacement de la clef (uniquement les connexions par clef SSH sont supportées)</p>
-</li>
-<li>
-<p>Chemin des check Nagios sur la cible (en local ils sont intégrés)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_configuration_commandes">Configuration commandes</h5>
-<div class="paragraph">
-<p>Ensuite on ajoute une commande par élément à supervisier (état RAID, mysql, logs &#8230;&#8203;) qui corresponderont chacune à une commande à lancer (un check_***)</p>
-</div>
-<div class="paragraph">
-<p>Chaque commande permet de paramétrer sa fréquence (5mn, 15mn ou 30mn)</p>
-</div>
-<div class="paragraph">
-<p>On peut sélectionner si la commande est à éxécuter par SSH (dans ce cas, les options de l&#8217;équipement doivent être saisies)</p>
-</div>
-<div class="paragraph">
-<p>On peut également avoir que le check soit éxécuter avec sudo</p>
-</div>
-<div class="paragraph">
-<p>On peut également sélectionne la création automatique de commandes liées qui donnent le retour d&#8217;affichage, le résultat et les métriques</p>
-</div>
-<div class="paragraph">
-<p>Dans la case commande on saisit le nom du check à lancer</p>
-</div>
-<div class="paragraph">
-<p>Dans la case des options on saisit les options de ce check (voir les exemples)</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_action_sur_résultat_ou_notification">Action sur résultat ou notification</h5>
-<div class="paragraph">
-<p>C&#8217;est standard dans le core de Jeedom désormais. Il suffit d&#8217;aller dans les options avancées de chaque commande souhaitée et on peut définir des actions (messages ou activations, comme on veut) sur valeur pendant un certain temps</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_résultat_de_commande_dans_un_scénario">Résultat de commande dans un scénario</h5>
-<div class="paragraph">
-<p>Il est possible de récupérer la sortie Label du check dans un scénario en utilisant en bloc code :</p>
-</div>
-<div class="paragraph">
-<p>$status = $cmd&#8594;getConfiguration('status');</p>
-</div>
-<div class="paragraph">
-<p>Par exemple comme sur ce screenshot.</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/nagioschecks_screenshot2.png" alt="Exemple execCmd avec options">
+<img src="../images/groupe_icon.png" alt="groupe icon">
 </div>
+</div>
+<div class="paragraph">
+<p>Après l&#8217;avoir activer il faut ensuite aller dans Plugins/Monitoring/Groupe</p>
+</div>
+<div class="paragraph">
+<p>Créer un nouvel équipement en cliquant sur le<br></p>
+</div>
+<div class="paragraph">
+<p>Ensuite il faut activer l&#8217;équipement</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/groupe4.png" alt="groupe4">
+</div>
+</div>
+<div class="paragraph">
+<p>Ensuite le configurer</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/groupe5.png" alt="groupe5">
+</div>
+</div>
+<div class="paragraph">
+<p>-Ajouter un équipement: Permet de sélectionner les commandes d&#8217;état</p>
+</div>
+<div class="paragraph">
+<p>-Icone ON : Icône qui apparaîtra quand au moins 1 commande sera active</p>
+</div>
+<div class="paragraph">
+<p>-Icone Off : Icône qui apparaîtra quand tous les équipements seront inactives</p>
+</div>
+<div class="paragraph">
+<p>-Ensuite possibilité de teser les différentes commandes</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/groupe6.png" alt="groupe6">
+</div>
+</div>
+<div class="paragraph">
+<p>-Et les utiliser dans les scénarios</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/groupe7.png" alt="groupe7">
+</div>
+</div>
+<div class="paragraph">
+<p>-Nombre off: nombre d&#8217;équipement inactif</p>
+</div>
+<div class="paragraph">
+<p>-Nombre on: nombre d&#8217;équipement actif</p>
+</div>
+<div class="paragraph">
+<p>-Etat: Etat du widget (1 = 1 ou plusieurs actifs et = = tous inactifs)</p>
+</div>
+<div class="paragraph">
+<p>Screenshot sur le dashboard:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/light.png" alt="light">
+</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/volets.png" alt="volets">
+</div>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/alerte.png" alt="alerte">
+</div>
+</div>
+<div class="paragraph">
+<p>Le widget se met à jour dés qu&#8217;il y a un changement d&#8217;état.</p>
+</div>
+<div class="paragraph">
+<p>On peut donc imaginer l&#8217;utiliser pour n&#8217;importe quelle commande.</p>
 </div>
 <hr>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_anwendungsfall">3. Anwendungsfall</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_cas_d_usage_exemples_d_implémentation">3.1. Cas d&#8217;usage, exemples d&#8217;implémentation</h4>
-<div class="paragraph">
-<p>Voici quelques exemples d&#8217;utilisation.</p>
-</div>
-<div class="sect4">
-<h5 id="_vérification_du_log_d_erreurs_web">Vérification du log d&#8217;erreurs Web</h5>
-<div class="paragraph">
-<p>La commande est : check_log</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -F /usr/share/nginx/www/jeedom/log/nginx-error.log -O /tmp/nginx.tmp -q ?</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_du_log_cron_execution_de_jeedom">Vérification du log cron_execution de Jeedom</h5>
-<div class="paragraph">
-<p>La commande est : check_log</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -F /usr/share/nginx/www/jeedom/log/cron_execution -O /tmp/cron_exec.tmp -q PHP</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_des_logs_plugins">Vérification des logs plugins</h5>
-<div class="paragraph">
-<p>La commande est : /check_logserror.sh</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -D /usr/share/nginx/www/jeedom/log</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_la_sauvegarde_market">Vérification de la sauvegarde Market</h5>
-<div class="paragraph">
-<p>La commande est : /check_cloudbackup.php</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple :</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_la_présence_d_un_fichier_de_sauvegarde_récent">Vérification de la présence d&#8217;un fichier de sauvegarde récent</h5>
-<div class="paragraph">
-<p>La commande est : /check_backup.sh</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -D /usr/share/nginx/www/jeedom/backup</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_l_uptime">Vérification de l&#8217;uptime</h5>
-<div class="paragraph">
-<p>La commande est : /check_uptime.pl</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -c 30</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_la_mémoire">Vérification de la mémoire</h5>
-<div class="paragraph">
-<p>La commande est : check_mem</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : aucun</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_l_utilisation_cpu">Vérification de l&#8217;utilisation CPU</h5>
-<div class="paragraph">
-<p>La commande est : check_load</p>
-</div>
-<div class="paragraph">
-<p>Les arguments par exemple : -w 5,5,5 -c 10,10,10</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_de_la_présence_d_un_service">Vérification de la présence d&#8217;un service</h5>
-<div class="paragraph">
-<p>Un des checks à disposition est check_procs. Un usage basique est de lui donner le nombre de process qui doivent être existant et le label à chercher.</p>
-</div>
-<div class="paragraph">
-<p>Voici quelques exemples de configuration :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/check_procs.png" alt="Conf procs">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans cet exemple, le service ne remontera qu&#8217;en warning, donc visible sur le widget mais sans remontée automatique d&#8217;alerte par Jeedom (mais biensur, c&#8217;est faisable avec un scénario)</p>
-</div>
-<div class="paragraph">
-<p>Comme pour tout check, pour plus de possibilités et d&#8217;arguments, n&#8217;hésitez pas à passer la commande ""/usr/lib/nagios/plugins/check_procs -h" pour avoir l&#8217;aide</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_du_raid_d_un_serveur_distant">Vérification du RAID d&#8217;un serveur distant</h5>
-<div class="paragraph">
-<p>Un exemple avec l&#8217;utilisation d&#8217;un check distant et un utilisant sudo</p>
-</div>
-<div class="paragraph">
-<p>Voici l&#8217;exemple en image :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/check_disks.png" alt="Conf procs">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans cet exemple, il y a deux check différents :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le premier vérifie l&#8217;état SMART de chaque disque (en utilisant sudo en même temps)</p>
-</li>
-<li>
-<p>le deuxième vérifie l&#8217;état global du RAID logiciel</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ces deux checks ont été copiés dans un répertoire du serveur qui les éxécute, sans que nagios-plugins soit installé dessus</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_vérification_d_un_nas_synology">Vérification d&#8217;un NAS Synology</h5>
-<div class="paragraph">
-<p>Par défaut, le paquet nagios-plugins n&#8217;a pas de check pour les NAS Synology. Mais comme dit, on peut ajouter tout script au format Nagios (le format Nagios n&#8217;impose pas un langage mais une norme de sortie 0/1/2/3 suivant OK/WARN/CRIT/UNK)</p>
-</div>
-<div class="paragraph">
-<p>Exemple, le script disponible ici :</p>
-</div>
-<div class="paragraph">
-<p><a href="https://exchange.nagios.org/directory/Plugins/Network-and-Systems-Management/Others/Synology-status/details" class="bare">https://exchange.nagios.org/directory/Plugins/Network-and-Systems-Management/Others/Synology-status/details</a></p>
-</div>
-<div class="paragraph">
-<p>On le télécharge, on le copie dans le répertoire de /usr/lib/nagios/plugins/ de notre Jeedom (via WinSCP par exemple) sans oublier de le rendre éxécutable (chmod +x)</p>
-</div>
-<div class="paragraph">
-<p>Il faut également install snmp : sudo apt-get install snmp</p>
-</div>
-<div class="paragraph">
-<p>Essayer ensuite en SSH la commande :</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/usr/lib/nagios/plugins/check_snmp_synology -2 public -h adresse_syno -v</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>En remplacant -2 par la version SNMP, public par la communauté et biensur adresse_syno par l&#8217;adresse du NAS</p>
-</div>
-<div class="paragraph">
-<p>Dans l&#8217;équipement on ajoute une commande et on saisit :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>le nom souhaité</p>
-</li>
-<li>
-<p>on ne coche ni sudo ni ssh</p>
-</li>
-<li>
-<p>check_snmp_synology dans la boite check</p>
-</li>
-<li>
-<p>pour les options : -2 public -h adresse_syno (comme plus haut mettre les valeurs qu&#8217;il faut)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Comme pour tout check, pour plus de possibilités et d&#8217;arguments, n&#8217;hésitez pas à passer la commande ""/usr/lib/nagios/plugins/check_snmp_synology -h" pour avoir l&#8217;aide</p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Stützt sich das Plugin auf APIs Dritter ?</div><div class="content">
-<div class="paragraph">
-<p>Non, le plugin éxécute des commandes locales ou par SSH.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_fehlersuche">5. Fehlersuche</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Ich bekomme keine Informationen, die zurückreichen</div><div class="content">
-<div class="paragraph">
-<p>Il faut bien créer un équipement et remplir les informations de la commande qu&#8217;on souhaite utiliser.</p>
-</div>
+<div class="sect2">
+<h3 id="_changelog">1.3. Changelog</h3>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+27.03.2017
+</td>
+<td class="hdlist2">
+<p>Ajout de commandes d&#8217;état. Préparation pour l&#8217;ajout de commande Action. Nettoyage du code.Refonte graphique de l&#8217;équipement. Maj doc</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+20.03.2017
+</td>
+<td class="hdlist2">
+<p>Correction pour le mode personnalisé.Passage en stable.Possibilité d&#8217;inverser les commandes</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+19.03.2017
+</td>
+<td class="hdlist2">
+<p>Mise à disposition du plugin sur le market en bétâ</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
