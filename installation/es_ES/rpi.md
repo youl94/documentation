@@ -1,0 +1,60 @@
+Aquí encontrarás la documentación paso a paso para instalar Jeedom en una Raspberry pi 1 o 2
+
+El nombre de la imagen Jeedom puede ser diferente al de las fotos usadas en esta documentación
+
+Paso 1: Instalación de Win32diskimager
+======================================
+
+Debe descargar el software win32diskimage [aquí](http://sourceforge.net/projects/win32diskimager/) e instalarlo en su PC
+
+Paso 2: Descarga de la imagen de Jeedom
+=======================================
+
+Vous devez aller [ici](https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog), puis dans le dossier Images récuperer l’image Raspberry…netinstall.zip
+
+![](../images/install_humming_1.PNG)
+
+Paso 3: Descompresión de la imagen de Jeedom
+============================================
+
+Descomprimir la imagen de Jeedom (si no tienes con que descomprimir puede instalar winrar desde el link: <http://www.clubic.com/telecharger-fiche9632-winrar.html> [winrar]), usted obtendrá:
+
+imagen::../images/install\_humming\_2.PNG[]
+
+imagen::../images/install\_humming\_8.PNG[]
+
+Paso 4: Grabación de la imagen en la tarjeta SD
+===============================================
+
+Introduzca la tarjeta SD en su ordenador y ejecute el programa win32diskimager:
+
+imagen::../images/install\_humming\_3.PNG[]
+
+Vérifier que dans "Device" c’est bien votre carte SD qui est sélectionnée puis cliquez sur l’icône Dossier pour indiquer le chemin de l’image téléchargée et decompressée (étape 2 et 3) :
+
+![](../images/install_humming_4.PNG)
+
+Haga clic en el botón "Write" para grabar la imagen y confirme la siguiente advertencia:
+
+![](../images/install_humming_5.PNG)
+
+Puede seguir el progreso de grabación de la imagen (unos 10 minutos aproximadamente):
+
+![](../images/install_humming_6.PNG)
+
+Una vez terminado aparecerá el siguiente mensaje:
+
+![](../images/install_humming_7.PNG)
+
+Únicamente tendrá que insertar la tarjeta SD en su Raspberry pi, conectarlo a la red y a la alimentación y Jeedom comenzará a arrancar (unos 5 minutos). Una vez haya iniciado, debería poder verlo en la red.
+
+L’installation se lance automatiquement et vous pouvez la suivre en vous rendant depuis votre navigateur sur l’adresse <http://IP_RASPBERRY/>. Quand l’installation sera terminée, vous vous retrouverez sur l’interface de connexion Jeedom.
+
+Les identifiants SSH sont root/Mjeedom96. Néanmoins, vous n’avez pas besoin de vous connecter en SSH pour une installation simple.
+
+L’installation à partir de l’image netinstall réalise les étapes suivantes à votre place : mise à jour du système et des paquets, extension de la partition de la SD au maximum de la capacité de celle-ci.
+
+Si vous êtes sur rpi2 IL NE FAUT SURTOUT PAS L’OVERCLOCKER sous peine d’avoir un système instable avec de nombreuses corruptions de carte SD
+
+Ensuite vous pouvez suivre la documentation [Premier pas avec Jeedom](https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html)
+

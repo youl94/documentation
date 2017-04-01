@@ -1,0 +1,33 @@
+Mehrere Video-Tutorials wurden erstellt, die die wichtigsten Merkmale von Jeedom zeigen, um die Benutzung zu erleichtern und den Benutzer mit der Software vertraut zu machen.
+
+Hier ist die Liste der verfügbaren Tutorials :
+
+-   [Jeedom Lektion \#1 : Erster Start](https://www.youtube.com/watch?v=UTECRBGEUtI)
+
+-   [Jeedom Lektion \#2 : Erste Schritte mit Jeedom (Object, Markt, Plugin, Module)](https://www.youtube.com/watch?v=2LU1neNvbus)
+
+-   [Tuto Jeedom \#3 : Jeedom, les Widget, Mails et Scénarios](https://www.youtube.com/watch?v=OJn33XbpiH8)
+
+-   [Tuto Jeedom \#4 : Jeedom, Utilisation du plugin Agenda](https://www.youtube.com/watch?v=EBuvIabg3Cc)
+
+-   [Tuto Jeedom \#5 : Les scripts dans Jeedom à l’aide du plugin Script](https://www.youtube.com/watch?v=FRbQILAogX0)
+
+-   [Jeedom Lektion \#6 : Szenarien in Jeedom mit dem Wetter-Plugin](https://www.youtube.com/watch?v=w0ErP3wyEoA)
+
+-   [Jeedom Lektion \#7 : Einführung in das Energie-Plugin](https://www.youtube.com/watch?v=DZfA_DxqbNs)
+
+-   [Tuto Jeedom \#8 : Découverte du Mode Plan](https://www.youtube.com/watch?v=2IkXF6CBCAE)
+
+-   [Tuto Jeedom \#9 : Plugin DataTransfert, les Backups Auto et Dropbox](https://www.youtube.com/watch?v=wLOfJygFc8k)
+
+-   [Jeedom Lektion \#10 : Jeedom sprechen lassen(Android)](https://www.youtube.com/watch?v=3Pc3VJFWHo4)
+
+-   [Jeedom Lektion \#11 : Vorstellung einer Standard-Installation](https://www.youtube.com/watch?v=hW1d1FvkmSs)
+
+-   [Jeedom Lektion \#12 : Thermostat-Plugin entdecken](https://www.youtube.com/watch?v=T21gqp1SQK0)
+
+-   [Jeedom Lektion \#13 : Alarm-Plugin entdecken](https://www.youtube.com/watch?v=JjnWeU614gc)
+
+-   [Jeedom Lektion \#14 : Interaktion entdecken](https://www.youtube.com/watch?v=Z8SHo_Xwk0Q)
+
+
