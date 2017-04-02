@@ -31,6 +31,14 @@ $(function(){
 		generateDocSite(DOC_CONFIG[$(this).attr('data-key')]);
 	})
 
+
+	$('#in_search').keydown(function (e) {
+		if (e.keyCode == 13) {
+			var search = $(this).val();
+			 window.open('https://github.com/search?l=AsciiDoc&q=org%3Ajeedom+path%3Adoc%2F'+$('#sel_language').val()+'+'+encodeURI(search)+'&type=Code&utf8=%E2%9C%93','_blank');
+		}
+	});
+
 });
 
 
