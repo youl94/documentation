@@ -136,10 +136,10 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-544375170"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1645371110"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-544375170" class="accordion-body collapse in">
+            <div id="namespace-1645371110" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
@@ -375,105 +375,105 @@ Warning: Missing argument 1 for phpDocumentor\Descriptor\Collection::get(), call
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5791   34052944  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5791   34053072  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5796   34053520  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5796   34054120  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5550   34046176  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5550   34046304  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5553   34046752  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5553   34047352  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
 
 Notice: Undefined variable: index in /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php on line 74
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5791   34052944  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5791   34053072  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5796   34053520  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5796   34054120  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5550   34046176  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5550   34046304  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5553   34046752  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5553   34047352  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
 
 Notice: Undefined variable: index in /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php on line 78
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5791   34052944  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5791   34053072  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5796   34053520  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5796   34054120  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5550   34046176  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5550   34046304  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5553   34046752  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5553   34047352  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
                             </article>
         </div>
@@ -504,105 +504,105 @@ Warning: Missing argument 1 for phpDocumentor\Descriptor\Collection::get(), call
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5817   34069328  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5817   34069456  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5822   34069904  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5823   34070504  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5578   34062560  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5578   34062688  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5582   34063136  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5583   34063736  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
 
 Notice: Undefined variable: index in /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php on line 74
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5817   34069328  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5817   34069456  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5822   34069904  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5823   34070504  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5578   34062560  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5578   34062688  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5582   34063136  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5583   34063736  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
 
 Notice: Undefined variable: index in /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php on line 78
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5817   34069328  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5817   34069456  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5822   34069904  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5823   34070504  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5578   34062560  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5578   34062688  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5582   34063136  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5583   34063736  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
                             </article>
         </div>
@@ -633,105 +633,105 @@ Warning: Missing argument 1 for phpDocumentor\Descriptor\Collection::get(), call
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5843   34085712  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5843   34085840  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5847   34086288  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5847   34086888  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5604   34078944  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5604   34079072  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5611   34079520  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5611   34080120  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
 
 Notice: Undefined variable: index in /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php on line 74
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5843   34085712  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5843   34085840  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5847   34086288  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5847   34086888  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5604   34078944  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5604   34079072  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5611   34079520  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5611   34080120  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
 
 Notice: Undefined variable: index in /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php on line 78
 
 Call Stack:
     0.0003     235800   1. {main}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:0
-    0.0006     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
-    0.2404    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
-    0.2483    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
-    0.2485    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
-    0.2487    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
-    0.2488    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
-    0.2497    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   12.8318   29115208   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
-   12.8454   29118432  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
-   14.1476   30981808  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-   14.1477   30981904  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1477   30982432  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
-   14.1634   31000792  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
-   15.3784   35249344  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
-   15.3788   35249696  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
-   21.5053   33831480  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-   21.5059   33846216  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
-   21.5059   33862840  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
-   21.5060   33864272  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33864272  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5060   33864800  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
-   21.5060   33866008  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
-   21.5060   33866008  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
-   21.5609   34027104  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
-   21.5609   34027232  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5843   34085712  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
-   21.5843   34085840  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
-   21.5847   34086288  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
-   21.5847   34086888  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
+    0.0007     237408   2. require_once('/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc') /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php:14
+    0.3003    4050896   3. phpDocumentor\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/bin/phpdoc:24
+    0.3078    4150672   4. Symfony\Component\Console\Application->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Application.php:183
+    0.3080    4151664   5. Symfony\Component\Console\Application->doRun() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:122
+    0.3082    4152440   6. Symfony\Component\Console\Application->doRunCommand() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:191
+    0.3083    4152952   7. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/symfony/console/Application.php:846
+    0.3091    4159024   8. phpDocumentor\Command\Project\RunCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.0903   29110616   9. Symfony\Component\Console\Command\Command->run() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Command/Project/RunCommand.php:275
+   12.0907   29113848  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() /home/travis/build/jeedom/core/vendor/symfony/console/Command/Command.php:267
+   12.8898   30977232  11. phpDocumentor\Console\Output\Output->writeTimedLog() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+   12.8899   30977328  12. call_user_func_array:{/home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59}() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8899   30977856  13. phpDocumentor\Transformer\Transformer->execute() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Console/Output/Output.php:59
+   12.8917   30996232  14. phpDocumentor\Transformer\Transformer->transformProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:141
+   13.7385   35253376  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:275
+   13.7387   35253728  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php:312
+   18.4543   33824712  17. Twig_Environment->render() /home/travis/build/jeedom/core/vendor/phpdocumentor/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+   18.4550   33839448  18. Twig_Template->render() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Environment.php:362
+   18.4550   33856072  19. Twig_Template->display() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:411
+   18.4552   33857504  20. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33857504  21. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.4552   33858032  22. Twig_Template->display() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:26
+   18.4552   33859240  23. Twig_Template->displayWithErrorHandling() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:403
+   18.4552   33859240  24. __TwigTemplate_cded6d2750862356d7ee2b82d798e26f498bc2f9eed9c51fbf8ab1559c989515->doDisplay() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:432
+   18.5326   34020336  25. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/26/26a6e81152ab5c66e8050f836950bef2d5f71c85ca8f7c9b1c259c5d6822e6a6.php:312
+   18.5326   34020464  26. __TwigTemplate_3287b9790c92e16f883cae0f8098f2a0ff71aea6aa022e81564604190a486529->block_content() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5604   34078944  27. Twig_Template->displayBlock() /tmp/phpdoc-twig-cache/a0/a0cef060c19bcb1edef214afd66a7f5dc1c2eeb41a42cfd24d14788d46af43cf.php:826
+   18.5604   34079072  28. __TwigTemplate_01307005cc47fd4b0a11a98284531f12724849b2da3c7eab312e46d9373c845d->block_property() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:215
+   18.5611   34079520  29. Twig_Template->getAttribute() /tmp/phpdoc-twig-cache/d3/d30939df8afbe428aa46006a4c09643eb528a8475f189cedae26655a72e7473d.php:73
+   18.5611   34080120  30. phpDocumentor\Descriptor\Collection->get() /home/travis/build/jeedom/core/vendor/twig/twig/lib/Twig/Template.php:672
 
                             </article>
         </div>
@@ -1647,7 +1647,7 @@ getter first if defined. If not defined, we&#039;ll use the reflection API.</em>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on April 3rd, 2017 at 12:24.
+                    on April 3rd, 2017 at 22:14.
                 </section>
             </section>
         </section>
