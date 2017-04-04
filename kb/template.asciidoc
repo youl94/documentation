@@ -1,0 +1,11 @@
+= #titre#
+
+== Symptome
+
+== Analyse
+
+== Résolution
+
+== Version applicable
+
+== Voir aussi
