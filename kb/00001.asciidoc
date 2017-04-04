@@ -8,7 +8,7 @@ Lors de l'achat d'un plugin sur le market vous obtenez l'erreur : "Got Http resp
 
 == Résolution
 
-Le mieux est de tester avec un autre navigateur et/ou sur un autre poste
+Il faut tester avec un autre navigateur et/ou sur un autre poste
 
 == Version applicable
 
