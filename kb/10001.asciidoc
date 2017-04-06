@@ -1,0 +1,17 @@
+= Plus d'image camera sur l'app Mobile
+
+== Symptome
+
+Plus d'image camera sur l'app mobile alors que quelque heure plus tard cela fonctionné
+
+== Analyse
+
+== Résolution
+
+Re-sauvegarder les cameras sur le Jeedom.
+
+== Version applicable
+
+Tous
+
+== Voir aussi
