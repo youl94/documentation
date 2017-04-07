@@ -35,7 +35,7 @@ The rest of exchanges will be by email.
 Lors de l'ouverture d'un ticket, j'ai une erreur m'indiquant que j'ai atteint mon quota:
 En effet, en fonction de votre service pack vous êtes limité à un certain nombre de demandes de support par mois:
 
-- Community (free) : 2 tickets/month
+- Community (gratuit) : 2 tickets/mois (sur plugins payant uniquement)
 - Power : 10 tickets/month
 - Pro : 100 tickets/month
 

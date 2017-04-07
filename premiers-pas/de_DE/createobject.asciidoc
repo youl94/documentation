@@ -5,8 +5,6 @@ Il est possible de définir des relations entre les objets, exemple : le salon 
 
 Pour créer un objet rien de plus simple, allez sur Outils → Objets
 
-image::../images/premier-objet.png[]
-
 Klicken Sie dann auf die Schaltfläche Hinzufügen :
 
 image::../images/premier-objet2.png[]
