@@ -563,7 +563,19 @@ Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû
 <div class="sect3">
 <h4 id="_vom_markt">3.1.1. Vom Markt</h4>
 <div class="paragraph">
-<p>Solution la plus simple (mais ne marche pas dans 100% des cas en fonction de la configuration de votre accès internet), il faut démarrer la box, attendre environ 10 minutes (attention si vous utilisez une image type netinstallation il faut attendre 30min) et ensuite aller sur <a href="https://www.jeedom.com/market/index.php?v=d&amp;p=find">ici</a> (attention il faut être sur le même réseau que la box Jeedom pour que ça marche)</p>
+<p>Solution la plus simple (mais ne marche pas dans 100% des cas en fonction de la configuration de votre accès internet), il faut démarrer la box, attendre environ 10 minutes (attention si vous utilisez une image type netinstallation il faut attendre 30min) et ensuite aller <a href="https://www.jeedom.com/market/index.php?v=d&amp;p=find">ici</a> (attention il faut être sur le même réseau que la box Jeedom pour que ça marche)</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+En fonction de votre box ADSL cette fonctionalité peut ne pas marcher, si c&#8217;est le cas rien de grave il vous suffit de vous connecter à votre box ADSL et de trouver l&#8217;IP de jeedom dans celle-ci. Cette étape ne fait rien d&#8217;autre que de vous donner l&#8217;ip local de votre Jeedom, ce n&#8217;est pas a ce moment la que l&#8217;ajout de votre Jeedom à votre compte market est fait.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -592,21 +604,11 @@ Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû
 <div class="paragraph">
 <p>Nous allons voir ici comment lier votre Jeedom à votre compte Market, une fois connecté à votre jeedom vous devez aller sur Général → Administration → Configuration</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-linkmarket.png" alt="premier linkmarket">
-</div>
+<div class="paragraph">
+<p>Puis cliquez sur "Mise à jour de jeedom"</p>
 </div>
 <div class="paragraph">
-<p>Klicken Sie dann auf "Market und Updates"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-linkmarket2.png" alt="premier linkmarket2">
-</div>
-</div>
-<div class="paragraph">
-<p>Et remplir le champ "Nom d&#8217;utilisateur" et "Mot de passe" en fonction de vos identifants du Market (identifiants du Market et non pas de Jeedom)</p>
+<p>Et remplir le champ "Nom d&#8217;utilisateur" et "Mot de passe" (sur la droite) en fonction de vos identifants du Market (identifiants du Market et non pas de Jeedom)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -625,7 +627,7 @@ Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû
 <p>Eine Nachricht müsste Ihnen sagen, dass alles OK ist</p>
 </div>
 <div class="paragraph">
-<p>Für ausführliche Informationen der Konfigurationsseite klicken Sie <a href="https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-administration.html">hier</a></p>
+<p>Pour plus de détails sur la page de configuration cliquez <a href="https://jeedom.github.io/documentation/core/fr_FR/administration.html">ici</a></p>
 </div>
 </div>
 </div>
@@ -638,11 +640,6 @@ Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû
 <div class="paragraph">
 <p>Um sie zu konfigurieren, genügt es auf  Einstellungen → Konfiguration zu gehen</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-dns.png" alt="premier dns">
-</div>
-</div>
 <div class="paragraph">
 <p>Dann gehen Sie zum Teil  "Netzwerkkonfiguration"</p>
 </div>
@@ -654,6 +651,18 @@ Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû
 <div class="paragraph">
 <p>Une fois ici, il vous suffit d&#8217;activer "Utiliser les DNS Jeedom" puis sur la ligne "Gestion" de faire "Rédemarrer" et votre URL apparaitra au niveau de statut HTTP, vous pouvez bien sûr la personnaliser à partir de la page profil du Market</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Si vous venez de lier votre Jeedom à votre compte Market il faut attendre 24 à 48h avant de pouvoir utiliser le service DNS
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -661,11 +670,6 @@ Si vous avez acheté une box officielle Jeedom, le numéro de service pack a dû
 <div class="sectionbody">
 <div class="paragraph">
 <p>Einer der wichtigsten Schritte ist dann, das Standardpasswort Ihres Jeedom Kontos zu ändern, dafür klicken Sie auf Allgemein  → Konfiguration  → Benutzer :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-changeuser.png" alt="premier changeuser">
-</div>
 </div>
 <div class="paragraph">
 <p>Erst einmal müssen Sie nur die Zeile mit dem Benutzer "admin" wählen und auf Passwort ändern klicken :</p>
@@ -709,11 +713,6 @@ Il est possible de définir des relations entre les objets, exemple : le salon 
 <div class="paragraph">
 <p>Pour créer un objet rien de plus simple, allez sur Outils → Objets</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-objet.png" alt="premier objet">
-</div>
-</div>
 <div class="paragraph">
 <p>Klicken Sie dann auf die Schaltfläche Hinzufügen :</p>
 </div>
@@ -747,12 +746,7 @@ Il est possible de définir des relations entre les objets, exemple : le salon 
 <h2 id="_mein_erstes_plugin_installieren">8. Mein erstes Plugin Installieren</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Ein Plugin fügt Jeedom Funktionalität hinzu, es gibt Hunderte, manche sind zu bezahlen. Für den Zugriff auf die Plugin Seite gehen sie auf  Allgemein → Plugins</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/premier-plugin.png" alt="premier plugin">
-</div>
+<p>Un plugin permet d&#8217;ajouter des fonctionnalités à Jeedom, il en existe des centaines, certains peuvent être payants. Pour accéder à la page des plugins aller sur Plugins → Gestion des plugins</p>
 </div>
 <div class="paragraph">
 <p>Il vous suffit ensuite de cliquer sur Market :</p>
@@ -881,7 +875,7 @@ En effet, en fonction de votre service pack vous êtes limité à un certain nom
 <div class="ulist">
 <ul>
 <li>
-<p>Gemeinschaft (kostenfrei) : 2 Tickets/Monat</p>
+<p>Community (gratuit) : 2 tickets/mois (sur plugins payant uniquement)</p>
 </li>
 <li>
 <p>Power : 10 Tickets/Monat</p>
