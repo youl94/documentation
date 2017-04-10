@@ -1,0 +1,21 @@
+= Problème de restauration de backup
+
+== Symptome
+
+Impossible de restaurer un backup, celle-ci fini toujours pas une erreur de décompression
+
+== Analyse
+
+Le problème peut etre du à 2 origines : 
+
+- Soucis dans le nom du backup, avant la 3.X si il y a un espace dans le nom de backup alors la restauration ne peut marcher
+- Vous avez uploadé le backup dans jeedom par l'interface web mais celui-ci est trop gros et l'upload est partiel
+
+== Résolution
+
+- Supprimer l'espace dans le nom de backup
+- Uploadé le backup par sftp (avec le logiciel winscp par exemple), a mettre dans /var/www/html/backup
+
+== Version applicable
+
+== Voir aussi
