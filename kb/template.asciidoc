@@ -1,6 +1,6 @@
 = #titre#
 
-== Symptome
+== Symptôme
 
 == Analyse
 
