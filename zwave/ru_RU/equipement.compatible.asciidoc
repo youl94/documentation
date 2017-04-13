@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*276* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*277* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -996,6 +996,9 @@ _[small]#Piles : 1xER26500M#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
+
+|image:../images/compatibility_list/qubino.zmnhwd1.jpg[width=150,align="center"]|Qubino|Variateur RGBW|RGBW| | link:++http://www.domadoo.fr/fr/peripheriques/3990-qubino-micromodule-variateur-rgbw-z-wave.html++[Acheter^]
+// 345.1.84_zmnhwd1_flush_rgbw_dimmer.json
 
 |image:../images/compatibility_list/qubino.zmnhaa2.jpg[width=150,align="center"]|Qubino|ZMNHAA2 Simple Charge|Micromodule|Remplacé par ZMNHAD1 | link:++http://www.domadoo.fr/fr/peripheriques/3060-qubino-micromodule-commutateur-1-relai-et-consometre-z-wave-zmnhad1-3830062070102.html++[Acheter^]
 // 345.2.2_zmnhaa2.flush.1.relay.json
