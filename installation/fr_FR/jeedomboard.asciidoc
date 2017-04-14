@@ -6,7 +6,6 @@ Le nom de l'image Jeedom peut être différent de celui des captures faites dans
 
 === Etape 1 : Installation de Etcher
 
-
 Vous devez télécharger le logicel Etcher link:https://etcher.io/[ici] puis l'installer sur votre pc
 
 === Etape 2 : Récupération de l'image de Jeedom
