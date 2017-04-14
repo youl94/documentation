@@ -419,7 +419,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_matériels">1. Matériels</a></li>
 <li><a href="#_sur_raspberry_pi_1_et_2_mini">2. Sur Raspberry pi 1 et 2 (mini)</a>
 <ul class="sectlevel2">
-<li><a href="#_etape_1_installation_de_win32diskimager">2.1. Etape 1 : Installation de win32diskimager</a></li>
+<li><a href="#_etape_1_installation_de_etcher">2.1. Etape 1 : Installation de Etcher</a></li>
 <li><a href="#_etape_2_récupération_de_l_image_de_jeedom">2.2. Etape 2 : Récupération de l&#8217;image de Jeedom</a></li>
 <li><a href="#_etape_3_décompression_de_l_image_de_jeedom">2.3. Etape 3 : Décompression de l&#8217;image de Jeedom</a></li>
 <li><a href="#_etape_4_gravure_de_l_image_sur_la_carte_sd">2.4. Etape 4 : Gravure de l&#8217;image sur la carte SD</a></li>
@@ -427,7 +427,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_sur_jeedomboard_hummingboard_mini">3. Sur Jeedomboard (hummingboard,mini+)</a>
 <ul class="sectlevel2">
-<li><a href="#_etape_1_installation_de_win32diskimager_2">3.1. Etape 1 : Installation de win32diskimager</a></li>
+<li><a href="#_etape_1_installation_de_etcher_2">3.1. Etape 1 : Installation de Etcher</a></li>
 <li><a href="#_etape_2_récupération_de_l_image_de_jeedom_2">3.2. Etape 2 : Récupération de l&#8217;image de Jeedom</a></li>
 <li><a href="#_etape_3_décompression_de_l_image_de_jeedom_2">3.3. Etape 3 : Décompression de l&#8217;image de Jeedom</a></li>
 <li><a href="#_etape_4_gravure_de_l_image_sur_la_carte_sd_2">3.4. Etape 4 : Gravure de l&#8217;image sur la carte SD</a></li>
@@ -611,9 +611,9 @@ Le nom de l&#8217;image Jeedom peut être différent de celui des captures faite
 </table>
 </div>
 <div class="sect2">
-<h3 id="_etape_1_installation_de_win32diskimager">2.1. Etape 1 : Installation de win32diskimager</h3>
+<h3 id="_etape_1_installation_de_etcher">2.1. Etape 1 : Installation de Etcher</h3>
 <div class="paragraph">
-<p>Vous devez télécharger le logicel win32diskimager <a href="http://sourceforge.net/projects/win32diskimager/">ici</a> puis l&#8217;installer sur votre pc</p>
+<p>Vous devez télécharger le logicel Etcher <a href="https://etcher.io/">ici</a> puis l&#8217;installer sur votre pc</p>
 </div>
 </div>
 <div class="sect2">
@@ -646,44 +646,7 @@ Le nom de l&#8217;image Jeedom peut être différent de celui des captures faite
 <div class="sect2">
 <h3 id="_etape_4_gravure_de_l_image_sur_la_carte_sd">2.4. Etape 4 : Gravure de l&#8217;image sur la carte SD</h3>
 <div class="paragraph">
-<p>Insérer votre carte SD dans votre ordinateur puis lancer le logiciel win32diskimager :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_3.PNG" alt="install humming 3">
-</div>
-</div>
-<div class="paragraph">
-<p>Vérifier que dans "Device" c&#8217;est bien votre carte SD qui est sélectionnée puis cliquez sur l&#8217;icône Dossier pour indiquer le chemin de l&#8217;image téléchargée et decompressée (étape 2 et 3) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_4.PNG" alt="install humming 4">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur "Write" pour écrire l&#8217;image, validez l&#8217;avertissement :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_5.PNG" alt="install humming 5">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous pouvez suivre l&#8217;avancement de l&#8217;écriture de l&#8217;image (une dizaine de minutes) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_6.PNG" alt="install humming 6">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois ceci terminé vous aurez ce message :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_7.PNG" alt="install humming 7">
-</div>
+<p>Insérer votre carte SD dans votre ordinateur puis lancer le logiciel Ether, donner lui le chemin de l&#8217;image, le chemin de la carte SD et cliquez sur "flash". Le logiciel va graver la carte SD et verifier la gravure</p>
 </div>
 <div class="paragraph">
 <p>Vous n&#8217;avez plus qu&#8217;à mettre la carte SD dans le Raspberry pi, à brancher le réseau et l&#8217;alimentation, votre Jeedom va démarrer (5 min) et vous devriez le voir sur le réseau.</p>
@@ -744,15 +707,15 @@ Le nom de l&#8217;image Jeedom peut être différent de celui des captures faite
 </table>
 </div>
 <div class="sect2">
-<h3 id="_etape_1_installation_de_win32diskimager_2">3.1. Etape 1 : Installation de win32diskimager</h3>
+<h3 id="_etape_1_installation_de_etcher_2">3.1. Etape 1 : Installation de Etcher</h3>
 <div class="paragraph">
-<p>Vous devez télécharger le logicel win32diskimager <a href="http://sourceforge.net/projects/win32diskimager/">ici</a> puis l&#8217;installer sur votre pc</p>
+<p>Vous devez télécharger le logicel Etcher <a href="https://etcher.io/">ici</a> puis l&#8217;installer sur votre pc</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_etape_2_récupération_de_l_image_de_jeedom_2">3.2. Etape 2 : Récupération de l&#8217;image de Jeedom</h3>
 <div class="paragraph">
-<p>Vous devez aller <a href="https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog">ici</a>, puis dans le dossier Images récuperer l&#8217;image jeedom-jeeboard-<strong>.rar ou Jeedomboard__Debian_Jessie</strong>.rar</p>
+<p>Vous devez aller <a href="https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog">ici</a>, puis dans le dossier Images récuperer l&#8217;image jeedom-jeeboard-*.rar ou Jeedomboard__Debian_Jessie*.rar</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -779,44 +742,7 @@ Le nom de l&#8217;image Jeedom peut être différent de celui des captures faite
 <div class="sect2">
 <h3 id="_etape_4_gravure_de_l_image_sur_la_carte_sd_2">3.4. Etape 4 : Gravure de l&#8217;image sur la carte SD</h3>
 <div class="paragraph">
-<p>Insérer votre carte SD dans votre ordinateur puis lancer le logiciel win32diskimager :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_3.PNG" alt="install humming 3">
-</div>
-</div>
-<div class="paragraph">
-<p>Vérifier que dans "device" c&#8217;est bien votre carte SD qui est sélectionnée puis cliquez sur l&#8217;icône dossier pour indiquer le chemin de l&#8217;image téléchargée et decompressée (étape 2 et 3) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_4.PNG" alt="install humming 4">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur "Write" pour écrire l&#8217;image, validez l&#8217;avertissement :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_5.PNG" alt="install humming 5">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous pouvez suivre l&#8217;avancement de l&#8217;écriture de l&#8217;image (une dizaine de minutes) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_6.PNG" alt="install humming 6">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois ceci terminé vous aurez ce message :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_7.PNG" alt="install humming 7">
-</div>
+<p>Insérer votre carte SD dans votre ordinateur puis lancer le logiciel Ether, donner lui le chemin de l&#8217;image, le chemin de la carte SD et cliquez sur "flash". Le logiciel va graver la carte SD et verifier la gravure</p>
 </div>
 <div class="paragraph">
 <p>Vous n&#8217;avez plus qu&#8217;à mettre la carte SD dans la Jeedomboard (ou Hummingboard), à brancher le réseau et l&#8217;alimentation, votre Jeedom va démarrer (5 min) et vous devriez le voir sur le réseau.</p>
