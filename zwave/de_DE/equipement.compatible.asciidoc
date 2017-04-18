@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*277* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*283* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -334,6 +334,24 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
 |===
 |Bild|Marke|Name|Typ|Hinweis|Link
+
+|image:../images/compatibility_list/domux.dx1caz.jpg[width=150,align="center"]|Domux|CO Sensor (DX1CA-Z)|CO| _[small]#Piles : 1x3V CR17335#_| 
+// 608.32773.4096_dx1caz_co_sensor.json
+
+|image:../images/compatibility_list/domux.dx1dsz.jpg[width=150,align="center"]|Domux|Door Sensor (DX1DS-Z)|Ouverture| _[small]#Piles : 2x1.5V LR03#_| 
+// 608.360.360_dx1dsz_door_sensor.json
+
+|image:../images/compatibility_list/domux.dx1wlz.jpg[width=150,align="center"]|Domux|Flood Sensor (DX1WL-Z)|Fuite| _[small]#Piles : 2x1.5V LR03#_| 
+// 608.32772.4096_dx1wlz_flood_sensor.json
+
+|image:../images/compatibility_list/domux.dx1cgz.jpg[width=150,align="center"]|Domux|Gaz Sensor (DX1CG-Z)|Gaz| | 
+// 608.32771.4096_dx1cgz_gaz_sensor.json
+
+|image:../images/compatibility_list/domux.dx1msz.jpg[width=150,align="center"]|Domux|Motion Sensor (DX1MS-Z)|Multicapteurs| _[small]#Piles : 1x3V CR17335#_| 
+// 608.32769.4096_dx1msz_motion_sensor.json
+
+|image:../images/compatibility_list/domux.dx1htz.jpg[width=150,align="center"]|Domux|Temperature & Humidity Sensor (DX1HT-Z)|Multicapteurs| _[small]#Piles : 1x3V CR2450#_| 
+// 608.32775.4096_dx1htz_2in1_sensor.json
 
 |image:../images/compatibility_list/domux.dx2skz.jpg[width=150,align="center"]|Domux|Wall Plug (DX2SK-Z)|Prise| | 
 // 608.32774.4096_dx2skz_wallplug.json
