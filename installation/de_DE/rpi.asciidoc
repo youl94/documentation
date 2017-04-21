@@ -23,7 +23,7 @@ image::../images/install_humming_8.PNG[]
 
 === Schritt 4 : Das Abbild auf die SD-Karte brennen
 
-Insérer votre carte SD dans votre ordinateur puis lancer le logiciel Ether, donner lui le chemin de l'image, le chemin de la carte SD et cliquez sur "flash". Le logiciel va graver la carte SD et verifier la gravure 
+Insérer votre carte SD dans votre ordinateur puis lancez le logiciel Ether, donnez lui le chemin de l'image, le chemin de la carte SD et cliquez sur "flash". Le logiciel va graver la carte SD et verifier la gravure 
 
 Sie müssen nur die SD-Karte in den Raspberry-Pi stecken, sobald sie das Board mit Strom und dem Netzwerk verbinden, wird Ihre Jeedom (5 min) starten und Sie sollten ihn im Netzwerk sehen.
 

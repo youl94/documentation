@@ -3,7 +3,8 @@
 |Hardware|Zustand|Bemerkungen
 |Jeedomboard|Stabil|
 |Hummingboard|Stabil|
-|Odroid C2|Release-Kandidat|
+|Odroid C2|Stable|
+|Smart|Stable|
 |RPI1|Stabil|
 |RPI2|nicht offiziell/Stabil|
 |RPI3|Non officiel/Stable|Attention si vous utilisez un Razberry le wifi/bluetooth ne pourra marcher

@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*284* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*285* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -818,6 +818,9 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 
 |image:../images/compatibility_list/mco.home.mh8-fc.jpg[width=150,align="center"]|Mco|Thermostat MH8-FC-EU|Thermostat| | link:++http://www.domadoo.fr/fr/peripheriques/3735-mcohome-thermostat-pour-ventilo-convecteur-a-2-tubes-z-wave-mh8-fc-4251295700212.html++[Acheter^]
 // 351.2049.12546_mco.home.mh8-fc.thermostat.json
+
+|image:../images/compatibility_list/mco.home.mh8-fc.jpg[width=150,align="center"]|Mco|Thermostat MH8-FC4-EU|Thermostat| | link:++http://www.domadoo.fr/fr/peripheriques/3736-mcohome-thermostat-pour-ventilo-convecteur-a-2-tubes-z-wave-mh8-fc-4251295700205.html++[Acheter^]
+// 351.2050.12546_mco.home.mh8-fc4.thermostat.json
 
 
 |===
