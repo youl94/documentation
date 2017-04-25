@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*285* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*286* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -556,7 +556,7 @@ _[small]#Piles : 1x3V CR123A#_|link:++https://jeedom.fr/doc/documentation/zwave-
 |image:../images/compatibility_list/fibaro.fgms001zw5.jpg[width=150,align="center"]|Fibaro|FGMS-001-ZW5 Motion Sensor ZWave+|Multicapteurs|Par défaut possède une configuration très économique. Lire la documentation pour le configurer correctement. Faire les associations à jeedom pour les groupes 1, 4 et 5 
 
 _[small]#Piles : 1x3V CR123A#_|link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgms001ZW5_-_Motion.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/3422-fibaro-detecteur-de-mouvement-multifonctions-z-wave-fgms-001-5902020528579.html++[Acheter^]
-// 271.2049.4097_fgms001.motion.sensor.plus.json
+// 271.2049.12289_fgms001.motion.sensor.plus.json
 
 |image:../images/compatibility_list/fibaro.fgr222.jpg[width=150,align="center"]|Fibaro|FGR-222 Volet roulant|Volets|Nouveau nom du module FGR-221 |link:++https://jeedom.fr/doc/documentation/zwave-modules/fr_FR/doc-zwave-modules-fibaro.fgr222_-_Volets.html++[Documentation^] link:++http://www.domadoo.fr/fr/peripheriques/3250-fibaro-micromodule-pour-volet-roulant-z-wave-fgr-222.html++[Acheter^]
 // 271.770.4096_fgr222.roller.shutter.controller.json
@@ -577,7 +577,7 @@ _[small]#Piles : 1x3V CR123A#_|link:++https://jeedom.fr/doc/documentation/zwave-
 // 271.1024.260_fgs211.switch.3kw.json
 
 |image:../images/compatibility_list/fibaro.fgs212.jpg[width=150,align="center"]|Fibaro|FGS-212 Simple Charge|Micromodule|Remplace le FGS-211 | link:++http://www.domadoo.fr/fr/peripheriques/2862-fibaro-micromodule-commutateur-z-wave-fgs-212-5902020528272.html++[Acheter^]
-// 271.1026.4098_fgs212.simple.relay.json
+// 271.1026.12290_fgs212.simple.relay.json
 
 |image:../images/compatibility_list/fibaro.fgs213.jpg[width=150,align="center"]|Fibaro|FGS-213 Switch|Micromodule|Les notification de scènes ne sont pas remontées, elles requièrent le support de la CC Central Scene | link:++http://www.domadoo.fr/fr/peripheriques/3727-fibaro-micromodule-commutateur-z-wave-fgs-213-5902020528722.html++[Acheter^]
 // 271.1027.4096_fgs213.switch.json
@@ -987,6 +987,9 @@ _[small]#Piles : 1xER26500M#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 
 |image:../images/compatibility_list/popp.009303.jpg[width=150,align="center"]|Popp|009303 Z-Wave Plus Battery Wall Controller|Télécommande| _[small]#Piles : 1x3V CR2032#_| link:++http://www.domadoo.fr/fr/peripheriques/3074-popp-controleur-mural-sans-fil-z-wave.html++[Acheter^]
 // 340.256.257_009303_wall_controller.json
+
+|image:../images/compatibility_list/popp.009402.smoke-detector.jpg[width=150,align="center"]|Popp|10-Year Smoke Detector (009402)|Fumée| _[small]#Piles : 1x1/2AA ER#_| link:++http://www.domadoo.fr/fr/peripheriques/3636-popp-detecteur-de-fumee-z-wave-avec-autonomie-10-ans-0019962009402.html++[Acheter^]
+// 340.4.4_popp.smoke.sensor.json
 
 ||Popp|KFOB-C|Télécommande| _[small]#Piles : 1x3V CR2032#_| link:++http://www.domadoo.fr/fr/peripheriques/3071-popp-telecommande-porte-cles-4-boutons-z-wave-0019962009204.html++[Acheter^]
 // 340.256.259_key.fob.json
