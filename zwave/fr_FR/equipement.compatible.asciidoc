@@ -831,7 +831,7 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
 
-|image:../images/compatibility_list/shenzen_neo.nas-ds01z.jpg[width=150,align="center"]|Neocoolcam|Door Sensor|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
+|image:../images/compatibility_list/shenzen_neo.nas-ds01z.jpg[width=150,align="center"]|Neocoolcam|Door Sensor|Ouverture| _[small]#Piles : 1x3V CR14250#_| 
 // 600.3.4226_nas-ds01z.json
 
 |image:../images/compatibility_list/shenzen_neo.nas-pd01z.jpg[width=150,align="center"]|Neocoolcam|PIR Sensor|Multicapteurs| _[small]#Piles : 1x3V CR123A#_| 

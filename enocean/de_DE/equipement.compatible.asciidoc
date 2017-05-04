@@ -1,9 +1,21 @@
 = Liste der kompatiblen EnOcean-Geräte 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*14* [green]*marques de modules différentes, soit un total de* [red]*65* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*15* [green]*marques de modules différentes, soit un total de* [red]*66* [green]*modules.*
 
 Andere nicht anwesende Module, auf dieser Liste, können kompatibel sein. 
+
+== Altecon
+
+[cols=".^3a,.^1s,.^4,.^2,.^2,.^6,.^10,.^2", options="header"]
+|===
+|Bild|Marke|Name|Profil|Typ|Hinweis|Inklusion|Link
+
+|image:../images/compatibility_list/a5-11-02_altecon_regulateur_de_climatisation.jpg[width=150,align="center"]|Altecon|Régulateur de climatisaton/chauffage|A5-11-02|Régulateur| |Inclusion auto puis mettre le module en position jour et placer l'aimant| 
+// 
+
+
+|===
 
 == Eltako
 
