@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Plugin Surveillance Equipement</title>
+<title>Plugin SPEEDTEST</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,912 +412,95 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Plugin Surveillance Equipement</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a></li>
-<li><a href="#_présentation">2. Présentation</a></li>
-<li><a href="#_configuration">3. Configuration</a>
+<li><a href="#_plugin_speedtest">1. Plugin SPEEDTEST</a>
 <ul class="sectlevel2">
-<li><a href="#_onglet_equipement">3.1. Onglet Equipement</a></li>
-<li><a href="#_onglet_commandes">3.2. Onglet Commandes</a></li>
-<li><a href="#_onglet_données">3.3. Onglet Données</a></li>
-<li><a href="#_fonctionnement">3.4. Fonctionnement</a></li>
-<li><a href="#_codes_alarme">3.5. Codes alarme</a></li>
+<li><a href="#_présentation">1.1. Présentation</a></li>
+<li><a href="#_installation_configuration">1.2. Installation/Configuration</a></li>
+<li><a href="#_changelog">1.3. Changelog</a></li>
 </ul>
 </li>
-<li><a href="#_cas_d_utilisation">4. Cas d&#8217;utilisation</a>
-<ul class="sectlevel2">
-<li><a href="#_surveiller_la_durée_de_fonctionnement_de_votre_télévison">4.1. Surveiller la durée de fonctionnement de votre télévison</a></li>
-<li><a href="#_surveiller_son_chauffe_eau_avec_la_mesure_de_puissance_de_l_arrivée_générale_de_votre_logement">4.2. Surveiller son chauffe-eau avec la mesure de puissance de l&#8217;arrivée générale de votre logement</a></li>
-<li><a href="#_compter_le_nombre_de_cycles_de_votre_lave_linge">4.3. Compter le nombre de cycles de votre lave-linge</a></li>
-</ul>
-</li>
-<li><a href="#_faq">5. FAQ</a></li>
-<li><a href="#_changelog">6. Changelog</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_description">1. Description</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Plugin servant à la surveillance d&#8217;un équipement.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_présentation">2. Présentation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Ce plugin permet la surveillance d&#8217;un équipement.</p>
-</div>
-<div class="paragraph">
-<p>La surveillance est faite à partir d&#8217;une commande d' <strong>Etat</strong> ou d&#8217;une commande de mesure de <strong>puissance</strong>,</p>
-</div>
-<div class="paragraph">
-<p>Il permet de connaître un temps de fonctionnement, il gère une commande d&#8217;alarme, en fonction d&#8217;un temps de fonctionnement minimun et/ou maximun, d&#8217;une heure prévue d&#8217;arrêt et de marche,</p>
-</div>
-<div class="paragraph">
-<p>Le temps de fonctionnement minimun et/ou maximun, l' heure prévue d&#8217;arrêt et de marche peuvent être paramétrés hebdomadairement,</p>
-</div>
-<div class="paragraph">
-<p>Un code d&#8217;alarme, permettant de connaître la cause de l&#8217;alarme,</p>
-</div>
-<div class="paragraph">
-<p>Un compteur de cycle de fonctionnement,</p>
-</div>
-<div class="paragraph">
-<p>Un graphique repésentant le temps de fonctionnement,</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation1-widget.png" alt="utilisation1 widget">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation2-widget.png" alt="utilisation2 widget">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation3-widget.png" alt="utilisation3 widget">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/donnees.png" alt="donnees">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_configuration">3. Configuration</h2>
+<h2 id="_plugin_speedtest">1. Plugin SPEEDTEST</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_onglet_equipement">3.1. Onglet Equipement</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : Type de la commande qui servira à surveiller l&#8217;équipement , Logique ou Analogique,</p>
-</li>
-</ul>
+<h3 id="_présentation">1.1. Présentation</h3>
+<div class="paragraph">
+<p>Ce plugin permet de vérifier l&#8217;état de sa connexion internet et Afficher un widget configurable</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_installation_configuration">1.2. Installation/Configuration</h3>
+<div class="paragraph">
+<p>Il faut télécharger le plugin sur le market.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/speedtest_icon.png" alt="speedtest icon">
+</div>
 </div>
 <div class="paragraph">
-<p>Commande de l&#8217;équipement à surveiller de type "Logique"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/equipement-logique.png" alt="equipement logique">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Commande équipement</strong> : Commande d&#8217;état de l&#8217;équipement à surveiller</p>
-</li>
-<li>
-<p><strong>Temps min de fonctionnement</strong> : Temps de fonctionnement minimun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Temps max de fonctionnement</strong> : Temps de fonctionnement maximun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Heure prévue équipement en Arrêt (HHMM)</strong> : heure à laquelle l&#8217;équipement (ie la <strong>Commande equipement</strong>) est prévu d&#8217;être à OFF, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Heure prévue équipement en Marche (HHMM)</strong> : heure à laquelle l&#8217;équipement (ie <strong>Commande equipement</strong>) est prévu d&#8217;être à ON, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-</ul>
+<p>Après l&#8217;avoir activer et si les dépendances sont ok,  il faut ensuite aller dans Plugins/Monitoring/speedtest</p>
 </div>
 <div class="paragraph">
-<p>Commande de l&#8217;équipement à surveiller de type "Analogique" avec <strong>Compteur Général</strong> coché</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/equipement-analogique-1.png" alt="equipement analogique 1">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Commande équipement</strong> : Commande de mesure de puissance de l&#8217;équipement à surveiller ou Commande de mesure de puissance générale</p>
-</li>
-<li>
-<p><strong>Compteur Général</strong> : coché si la <strong>Commande équipement</strong> est une mesure de puissance globale de votre logement</p>
-</li>
-<li>
-<p><strong>Heure de fonctionnement pévu</strong> : obligatoire si <strong>Compteur Général</strong> coché</p>
-</li>
-<li>
-<p><strong>Puissance équipement</strong> : obligatoire si <strong>Compteur Général</strong> coché, doit être vide dans le cas contraire</p>
-</li>
-<li>
-<p><strong>Temps min de fonctionnement</strong> : Temps de fonctionnement minimun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Temps max de fonctionnement</strong> : Temps de fonctionnement maximun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-</ul>
+<p>Il faut activer l’équipement</p>
 </div>
 <div class="paragraph">
-<p>Commande de l&#8217;équipement à surveiller de type "Analogique" avec <strong>Compteur Général</strong> NON coché</p>
+<p>Possiblilité de le configurer</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/equipement-analogique-2.png" alt="equipement analogique 2">
+<img src="../images/speed2.png" alt="speed2">
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Commande équipement</strong> : Commande de mesure de puissance de l&#8217;équipement à surveiller ou Commande de mesure de puissance générale</p>
-</li>
-<li>
-<p><strong>Compteur Général</strong> : NON coché</p>
-</li>
-<li>
-<p><strong>Puissance Mini</strong> : obligatoire si <strong>Compteur Général</strong> NON coché, Puissance mini à l&#8217;arrêt de l&#8217;équipement à surveiller</p>
-</li>
-<li>
-<p><strong>Puissance Maxi</strong> : obligatoire si <strong>Compteur Général</strong> NON coché, Puissance de votre équipement à surveiller au démarrage</p>
-</li>
-<li>
-<p><strong>Temps min de fonctionnement</strong> : Temps de fonctionnement minimun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Temps max de fonctionnement</strong> : Temps de fonctionnement maximun de l&#8217;équipement pour générer une alarme, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Heure prévue équipement en Arrêt (HHMM)</strong> : heure à laquelle l&#8217;équipement (ie <strong>Commande équipement</strong>) est prévu d&#8217;être à OFF, laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Heure prévue équipement en Marche (HHMM)</strong> : heure à laquelle l&#8217;équipement (ie <strong>Commande équipement</strong>) est prévu d&#8217;être à ON,laisser vide pour ne pas générer d&#8217;alarme</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>-Activer cron :  Permet de lancer le test selon le cron défini</p>
 </div>
-<div class="admonitionblock note">
+<div class="paragraph">
+<p>-Possibilité de tester et paramétrer les différentes commandes</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/speed3.png" alt="speed3">
+</div>
+</div>
+<div class="paragraph">
+<p>-Et les utiliser dans les scénarios</p>
+</div>
+<div class="paragraph">
+<p>Screenshot sur le dashboard:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/speed1.png" alt="speed1">
+</div>
+</div>
+<div class="paragraph">
+<p>Le widget se met à jour dés qu&#8217;il y a un changement d&#8217;état.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_changelog">1.3. Changelog</h3>
+<div class="hdlist">
 <table>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<td class="hdlist1">
+01.05.2017
 </td>
-<td class="content">
-il peut y avoir une latence de 5 minutes au déclenchement de l&#8217;alarme sur les paramètres <strong>Heure prévue équipement en Arrêt (HHMM)</strong> et <strong>Heure prévue équipement en Marche (HHMM)</strong>
+<td class="hdlist2">
+<p>Beta sur le market</p>
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-la <strong>commande équipement</strong> doit être de type "info et de sous type "numeric" pour un <strong>Type de commande</strong> analogique, la <strong>commande équipement</strong> doit être de type "info et de sous type "binary" pour un <strong>Type de commande</strong> logique
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Vous ne pouvez créer qu&#8217;un seul équipement à surveiller avec l&#8217;option <strong>Compteur Général</strong>,
-c&#8217;est à dire avec une mesure de puissance globale de votre logement.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_onglet_commandes">3.2. Onglet Commandes</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/commandes.png" alt="commandes">
-</div>
-</div>
-<div class="paragraph">
-<p>Les commandes sont crées automatiquement à la sauvegarde de l&#8217;équipement, il n&#8217;est pas possible d&#8217;en ajouter, d&#8217;en supprimer.
-Utiliser la case à cocher <strong>afficher</strong>, si vous ne souhaitez pas voir certaines commandes sur le widget.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alarme</strong> : statut d&#8217;alarme de l&#8217;équipement (1 = ALARME = ON, 0 = OFF)</p>
-</li>
-<li>
-<p><strong>Code Alarme</strong> : somme des codes d&#8217;alarme ayant déclenchés l&#8217;alarme , voir ci-dessous les valeurs des codes d&#8217;alarme</p>
-</li>
-<li>
-<p><strong>Temps Fct (H:M:S)</strong> : Temps de fonctionnement de l&#8217;équipement au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Temps Fct</strong> : Temps de fonctionnement de l&#8217;équipement en secondes</p>
-</li>
-<li>
-<p><strong>Temps Fct Total(H:M:S)</strong> : Temps de fonctionnement de l&#8217;équipement au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Temps Fct Total</strong> : Temps de fonctionnement de l&#8217;équipement en secondes</p>
-</li>
-<li>
-<p><strong>RAZ Tps Fct Total</strong> : remise à zero du temps de fonctionnement total (commande <strong>Temps Fct Total(H:M:S)</strong> et <strong>Temps Fct Total</strong>)</p>
-</li>
-<li>
-<p><strong>Démarré</strong> : heure démarrage de l&#8217;équipement</p>
-</li>
-<li>
-<p><strong>Arreté</strong> : heure d&#8217;arrêt de l&#8217;équipement</p>
-</li>
-<li>
-<p><strong>Temps Fct</strong> : Temps de fonctionnement de l&#8217;équipement en secondes</p>
-</li>
-<li>
-<p><strong>Temps Fct (H:M:S)</strong> : Temps de fonctionnement de l&#8217;équipement au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Etat</strong> : statut de surveillance de l&#8217;équipement (1 = ON, 0 = OFF)</p>
-</li>
-<li>
-<p><strong>Compteur</strong> : nombre de passage de la commande <strong>Etat</strong> de OFF à ON</p>
-</li>
-<li>
-<p><strong>RAZ Compteur</strong> : remise à zéro de la commande <strong>Compteur</strong></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_onglet_données">3.3. Onglet Données</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/donnees.png" alt="donnees">
-</div>
-</div>
-<div class="paragraph">
-<p>Cet onglet fournit une représentation grahique du temps de fonctionnement de l&#8217;équipement,
-il est possble de visualiser ce temps de fonctionnement par jour, semaine, mois (sélecteur cumul par jour, cumul par semaine, cumul par mois)</p>
-</div>
-<div class="paragraph">
-<p>Pour cela , la commande <strong>Temps Fct Total</strong> doit être historisée avec l&#8217;option <strong>Mode de lissage</strong> sur <strong>Aucun</strong>.
-Ces options sont disponible depuis la roue dentée en face de la commande dans l&#8217;onglet <strong>Commandes</strong>.  </p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_fonctionnement">3.4. Fonctionnement</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Passage de la commande <strong>Etat</strong> à ON :</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : "Logique"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>lors du passage de <strong>Commande équipment</strong> à ON</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Type de commande</strong> : "Analogique"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si <strong>Compteur Général</strong> est coché,</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la <strong>Commande équipement</strong> est supérieure ou égale à <strong>Puissance équipement</strong> ET dans l&#8217;heure prévue de fonctionnement défini dans la commande <strong>Heure de fonctionnement prévu</strong> ET que la commande <strong>Etat</strong> est à OFF</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Si <strong>Compteur Général</strong> n&#8217;est pas coché,</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la <strong>Commande équipement</strong> est supérieur ou égal à <strong>Puissance Max</strong> ET que la commande <strong>Etat</strong> est à OFF</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Passage de la commande <strong>Etat</strong> à OFF :</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : "Logique"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>lors du passage de <strong>Commande équipment</strong> à OFF</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Type de commande</strong> : "Analogique"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si <strong>Compteur Général</strong> est coché,</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la <strong>Commande équipement</strong> est inférieure ou égale à <strong>Puissance équipement</strong> ET que la commande <strong>Etat</strong> est à ON</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Si <strong>Compteur Général</strong> n&#8217;est pas coché,</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la <strong>Commande équipement</strong> est supérieure ou égale à <strong>Puissance Min</strong> ET que la commande <strong>Etat</strong> est à ON</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Passage de la commande <strong>Alarme</strong> à ON :</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : "Logique"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la durée de la commande <strong>Etat</strong> lors du passage de ON à OFF est inférieure ou égale au <strong>Temps min de fonctionnement</strong> (code alarme 2)</p>
-</li>
-<li>
-<p>Si la durée de la commande <strong>Etat</strong> à ON est supérieure ou égale au <strong>Temps max de fonctionnement</strong> (code alarme 4)</p>
-</li>
-<li>
-<p>Si la commande <strong>Etat</strong> à ON et l&#8217;heure du système est comprise entre <strong>Heure prévue équipement en Arrêt (HHMM)</strong> et <strong>Heure prévue équipement en Arrêt (HHMM)</strong> plus 5 min  (code alarme 8)</p>
-</li>
-<li>
-<p>Si la commande <strong>Etat</strong> à OFF et l&#8217;heure du système est comprise entre <strong>Heure prévue équipement en Marche (HHMM)</strong> et <strong>Heure prévue équipement en Marche (HHMM)</strong> plus 5 min (code alarme 16)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Type de commande</strong> : "Analogique"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si <strong>Compteur Général</strong> est coché,</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la commande <strong>Etat</strong> est a OFF depuis <strong>Heure de fonctionnement prévue</strong> plus <strong>Temps min de fonctionnement</strong> (code alarme 1)</p>
-</li>
-<li>
-<p>Si la durée de la commande <strong>Etat</strong>, lors du passage de ON à OFF, est inférieure ou égale au <strong>temps min de fonctionnement</strong> (code alarme 2)</p>
-</li>
-<li>
-<p>Si la durée de la commande <strong>Etat</strong> à ON est supérieure ou égale au <strong>temps max de fonctionnement</strong> (code alarme 4)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Si <strong>Compteur Général</strong> n&#8217;est pas coché,</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Si la durée de la commande <strong>Etat</strong>, lors du passage de ON à OFF, est inférieure ou égale au <strong>Temps min de fonctionnement</strong> (code alarme 2)</p>
-</li>
-<li>
-<p>Si la durée de la commande <strong>Etat</strong> à ON est supérieure ou égale au <strong>Temps max de fonctionnement</strong> (code alarme 4)</p>
-</li>
-<li>
-<p>Si la commande <strong>Etat</strong> à ON et l&#8217;heure du système est comprise entre <strong>Heure prévue equipement en Arrêt (HHMM)</strong> et <strong>Heure prévue équipement en Arrêt (HHMM)</strong> plus 5 min  (code alarme 8)</p>
-</li>
-<li>
-<p>Si la commande <strong>Etat</strong> à OFF et l&#8217;heure du système est comprise entre <strong>Heure prévue équipement en Marche (HHMM)</strong> et <strong>Heure prévue équipement en Marche (HHMM)</strong> plus 5 min (code alarme 16)</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Si la commande <strong>Alarme</strong> est déja à ON , et qu&#8217;une nouvelle condition d&#8217;alarme est présente , celle-ci n&#8217;est pas remise à jour, seule la commande <strong>Code Alarme</strong> est mise à jour.
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Passage de la commande <strong>Alarme</strong> à OFF et remise à zéro de <strong>Code Alarme</strong>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>lors du passage de la commande <strong>Etat</strong> de OFF à ON</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Mise à jour des commandes, lors du passage de la commande <strong>Etat</strong> de OFF à ON :</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alarme</strong> : passage à OFF</p>
-</li>
-<li>
-<p><strong>Code Alarme</strong> : passage à zéro</p>
-</li>
-<li>
-<p><strong>Tempts Fct (H:M:S)</strong> : '00:00:00'</p>
-</li>
-<li>
-<p><strong>Tempts Fct</strong> : 0 seconde</p>
-</li>
-<li>
-<p><strong>Tempts Fct Total(H:M:S)</strong> : pas de changement</p>
-</li>
-<li>
-<p><strong>Tempts Fct Total</strong> : pas de changement</p>
-</li>
-<li>
-<p><strong>Demarré</strong> : heure courante du démarrage</p>
-</li>
-<li>
-<p><strong>Arreté</strong> : '-'</p>
-</li>
-<li>
-<p><strong>Etat</strong> : Passage à ON</p>
-</li>
-<li>
-<p><strong>Compteur</strong> : Incrémenter de 1</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Mise à jour des commandes, lors du passage de la commande <strong>Etat</strong> de ON à OFF :</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alarme</strong> : voir ci-dessus</p>
-</li>
-<li>
-<p><strong>Code Alarme</strong> : voir ci-dessus</p>
-</li>
-<li>
-<p><strong>Tempts Fct (H:M:S)</strong> : heure d&#8217;arrêt moins heure de démarrage au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Tempts Fct</strong> : heure d&#8217;arrêt moins heure de démarrage en secondes</p>
-</li>
-<li>
-<p><strong>Tempts Fct Total(H:M:S)</strong> : heure d&#8217;arrêt moins heure de démarrage plus <strong>Tempts Fct Total(H:M:S)</strong> précédent au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Tempts Fct Total</strong> : heure d&#8217;arrêt moins heure de démarrage plus <strong>Tempts Fct Total</strong> précédent en secondes</p>
-</li>
-<li>
-<p><strong>Démarré</strong> : pas de changement</p>
-</li>
-<li>
-<p><strong>Arrêté</strong> : heure courante de l&#8217;arrêt</p>
-</li>
-<li>
-<p><strong>Etat</strong> : Passage à OFF</p>
-</li>
-<li>
-<p><strong>Compteur</strong> : pas de changement</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Mise à jour des commandes toutes les 5 min :</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alarme</strong> : voir ci-dessus</p>
-</li>
-<li>
-<p><strong>Code Alarme</strong> : voir ci-dessus</p>
-</li>
-<li>
-<p><strong>Tempts Fct</strong> : heure courante moins heure de démarrage en secondes</p>
-</li>
-<li>
-<p><strong>Tempts Fct (H:M:S)</strong> : heure courante moins heure de démarrage au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Tempts Fct Total(H:M:S)</strong> : heure courante moins heure de démarrage plus <strong>Tempts Fct Total(H:M:S)</strong> précédent au format Heure:Minute:Seconde</p>
-</li>
-<li>
-<p><strong>Tempts Fct Total</strong> : heure courante moins heure de démarrage plus <strong>Tempts Fct Total</strong> précédent en secondes</p>
-</li>
-<li>
-<p><strong>Démarré</strong> : pas de changement</p>
-</li>
-<li>
-<p><strong>Arrêté</strong> : pas de changement</p>
-</li>
-<li>
-<p><strong>Etat</strong> : Pas de changement</p>
-</li>
-<li>
-<p><strong>Compteur</strong> : pas de changement</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_codes_alarme">3.5. Codes alarme</h3>
-<div class="paragraph">
-<p>Ci dessous la liste des codes d&#8217;alarme en fonction du/des alarme(s)</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/codes_alarme.png" alt="codes alarme">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_cas_d_utilisation">4. Cas d&#8217;utilisation</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_surveiller_la_durée_de_fonctionnement_de_votre_télévison">4.1. Surveiller la durée de fonctionnement de votre télévison</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation1-equipement.png" alt="utilisation1 equipement">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : logique</p>
-</li>
-<li>
-<p><strong>Commande équipement</strong> : mettre la commande état de la prise qui commande votre télévision</p>
-</li>
-<li>
-<p><strong>Temps min de fonctionnement</strong> : laisser vide</p>
-</li>
-<li>
-<p><strong>Temps max de fonctionnement</strong> (minutes) : mettre par exemple 400</p>
-</li>
-<li>
-<p><strong>Heure prévue équipement en Arrêt (HHMM)</strong> : mettre par exemple 2300</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Cela signifie que la commande <strong>Alarme</strong> passera à 1 au bout de 400 minutes (soit 6 heures et 40 minutes, cela commence à faire beaucoup ;)) ou à 23H00 si la commande <strong>Etat</strong> est toujours à ON (c&#8217;est à dire votre TV est toujours allumée).
-Le compteur sera incrémenté à chaque passage à ON de votre commande.</p>
-</div>
-<div class="paragraph">
-<p>Pour un widget personnalisé à l&#8217;équipement, sélectionnez les commandes comme ci-dessous :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation1-commandes.png" alt="utilisation1 commandes">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation1-widget.png" alt="utilisation1 widget">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_surveiller_son_chauffe_eau_avec_la_mesure_de_puissance_de_l_arrivée_générale_de_votre_logement">4.2. Surveiller son chauffe-eau avec la mesure de puissance de l&#8217;arrivée générale de votre logement</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation2-equipement.png" alt="utilisation2 equipement">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : analogique</p>
-</li>
-<li>
-<p><strong>Commande équipement</strong> : mettre la commande de mesure de puissance générale de votre logement</p>
-</li>
-<li>
-<p><strong>Compteur général</strong> : coché</p>
-</li>
-<li>
-<p><strong>Heure de fonctionnement pévu</strong> : mettre l&#8217;heure prévue de mise en route de votre chauffe-eau (ex : 2330)</p>
-</li>
-<li>
-<p><strong>Puissance équipement</strong> : mettre la puissance de votre chauffe-eau (ex : 2000)</p>
-</li>
-<li>
-<p><strong>Temps min de fonctionnement</strong> (minutes) : mettre par exemple 20</p>
-</li>
-<li>
-<p><strong>Temps max de fonctionnement</strong> (minutes) : mettre par exemple 240</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>cela signifie que la commande <strong>Alarme</strong> passera à ON à 00:10 (23h30+20 minutes) si l&#8217;équipement n&#8217;a pas demarré ou si son temps de fonctionnement est inférieur à 20 minutes ou supérieur à 4 heures.</p>
-</div>
-<div class="paragraph">
-<p>Pour un widget personalisé à l&#8217;équipement, selectionnez les commandes comme ci-dessous :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation2-commandes.png" alt="utilisation2 commandes">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation2-widget.png" alt="utilisation2 widget">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_compter_le_nombre_de_cycles_de_votre_lave_linge">4.3. Compter le nombre de cycles de votre lave-linge</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation3-equipement.png" alt="utilisation3 equipement">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type de commande</strong> : analogique</p>
-</li>
-<li>
-<p><strong>Commande équipement</strong> : mettre la commande de mesure de puissance du lave-linge</p>
-</li>
-<li>
-<p><strong>Compteur général</strong> : non coché</p>
-</li>
-<li>
-<p><strong>Puissance Mini</strong> (Watt) : si votre lave-linge consomme environ 5W mini pendant un cyle, mettre 5</p>
-</li>
-<li>
-<p><strong>Puissance Maxi</strong> (Watt) : si votre lave-linge consomme environ 100W au démarrage d&#8217;un cyle, mettre 100</p>
-</li>
-<li>
-<p><strong>Temps min de fonctionnement</strong> : laisser vide ou non</p>
-</li>
-<li>
-<p><strong>Temps max de fonctionnement</strong> : laisser vide ou non</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>le compteur sera incrémenté de 1, la commande <strong>Etat</strong> passera à ON, si la valeur mesure de puissance est supérieure à 100W,
-le cycle sera considéré comme terminé si la mesure de puissance est inférieure à 5W et la commande <strong>Etat</strong> passera à OFF.</p>
-</div>
-<div class="paragraph">
-<p>Si les champs <strong>Temps min de fonctionnement</strong> ou <strong>Temps max de fonctionnement</strong> ne sont pas vides, la commande <strong>Alarme</strong> passera à ON suivant la valeur de la commande <strong>Temps Fct</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Pour un widget personalisé à l&#8217;équipement, selectionner les commandes comme ci-dessous :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation3-commandes.png" alt="utilisation3 commandes">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/utilisation3-widget.png" alt="utilisation3 widget">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">5. FAQ</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Après une mise à jour du plugin, il est préférable de faire une sauvegarde de chaque "Surveillance équipement"</p>
-</li>
-<li>
-<p>Pour avoir une représentation graphique du temps de fonctionnement, il faut historiser la commande <strong>Etat</strong> avec l&#8217;option <strong>Mode de lissage</strong> sur <strong>Aucun</strong></p>
-</li>
-<li>
-<p>les valeurs des commandes <strong>Puissance Mini</strong> et <strong>Puissance Max</strong> ne doivent pas être égales</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>S&#8217;il y a lieu, la FAQ est alimentée par les échanges dans le sujet <a href="https://www.jeedom.com/forum/viewtopic.php?f=28&amp;t=24637">Sujet officiel Surveillance Equipement</a> du forum Jeedom.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_changelog">6. Changelog</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Version 1.7 (version en developpement)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Correction du bug lors de la remise à zéro	du temps de fonctionnement total</p>
-</li>
-<li>
-<p>Amélioration du code</p>
-</li>
-<li>
-<p>mise à jour de la documentation</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.6 (version market : 2017-04-30 15:41:14)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ajout d&#8217;un calendrier hebdomadaire</p>
-</li>
-<li>
-<p>Amélioration du code</p>
-</li>
-<li>
-<p>mise à jour de la documentation</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.5 (version market : 2017-03-02 08:46:49)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>idem à la 1.4, mise à jour sur le market suite au passage du "robot" qui a fournit une nouvelle version , pas compris ce qu&#8217;il s&#8217;est passé</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.4 (version market : 2017-02-19 10:10:30)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ajout de la commande <strong>Code Alarme</strong></p>
-</li>
-<li>
-<p>ajout de l&#8217;onglet <strong>Données</strong> pour une visualisation graphique du temps de fonctionnement</p>
-</li>
-<li>
-<p>amélioration du code</p>
-</li>
-<li>
-<p>mise à jour de la documentation</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.3 (version market : 2017-02-10 11:07:08)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>ajout des paramètres <strong>Heure prévue équipement en Arrêt</strong> et <strong>Heure prévue équipement en Marche</strong></p>
-</li>
-<li>
-<p>Modification affichage <strong>Temps Fct Total</strong></p>
-</li>
-<li>
-<p>amélioration du code</p>
-</li>
-<li>
-<p>mise à jour de la documentation</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.2 (version market : 2017-02-03 22:25:59)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Correction d&#8217;un bug sur la génération de la commande <strong>Alarme</strong></p>
-</li>
-<li>
-<p>Amélioration sur la génération de la commande <strong>Alarme</strong></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.1 (version market : 2017-02-02 22:24:32)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ajout des commandes <strong>Temps Fct Total(H:M:S)</strong>, <strong>Temps Fct Total</strong> et <strong>RAZ Tps Fct Total</strong></p>
-</li>
-<li>
-<p>mise à jour de la documentation</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Version 1.0 (version market : 2017-02-01 17:01:23)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Plugin initial</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 </div>
