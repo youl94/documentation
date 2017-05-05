@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Trucs et astuces sur VMware</title>
+<title>Problème de restauration de backup</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,503 +412,70 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Trucs et astuces sur VMware</h1>
+<h1>Problème de restauration de backup</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_lizenz_hinzufügen">1. Lizenz hinzufügen</a></li>
-<li><a href="#_monter_un_datastore_nfs_avec_un_synology">2. Monter un datastore NFS avec un Synology</a>
-<ul class="sectlevel2">
-<li><a href="#_synology_konfiguration">2.1. Synology Konfiguration</a></li>
-<li><a href="#_esxi_konfiguration">2.2. ESXi Konfiguration</a></li>
-</ul>
-</li>
-<li><a href="#_ajout_du_plugin_vaai_synology_pour_montage_nfs">3. Ajout du plugin VAAI Synology pour montage NFS</a></li>
-<li><a href="#_installer_mettre_à_jour_l_esxi_embedded_host_client">4. Installer/Mettre à jour l&#8217;ESXi Embedded Host Client</a></li>
-<li><a href="#_installation_du_client_lourd">5. Installation du client lourd</a></li>
-<li><a href="#_mise_à_jour_de_l_esxi">6. Mise à jour de l&#8217;ESXi</a></li>
-<li><a href="#_ntp_konfiguration">7. NTP Konfiguration</a></li>
-<li><a href="#_accès_extérieur_à_l_esxi">8. Accès extérieur à l&#8217;ESXi</a></li>
-<li><a href="#_certificat_ssl">9. Certificat SSL</a></li>
+<li><a href="#_symptôme">1. Symptôme</a></li>
+<li><a href="#_analyse">2. Analyse</a></li>
+<li><a href="#_résolution">3. Résolution</a></li>
+<li><a href="#_version_applicable">4. Version applicable</a></li>
+<li><a href="#_voir_aussi">5. Voir aussi</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_symptôme">1. Symptôme</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pas vraiment un howto ici mais plus un recueil de trucs et astuces sur VMware</p>
+<p>Impossible de restaurer un backup, celui-ci finit toujours par une erreur de décompression</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_lizenz_hinzufügen">1. Lizenz hinzufügen</h2>
+<h2 id="_analyse">2. Analyse</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Une fois connecté sur l&#8217;interface web (IP_ESXI/ui) il faut aller sur "Gérer" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips.PNG" alt="vmware.tips">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis sur "Attribution de licence" et cliquer sur "Attribuer une licence"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips2.PNG" alt="vmware.tips2">
-</div>
-</div>
-<div class="paragraph">
-<p>Et rentrer votre clef de licence</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips3.PNG" alt="vmware.tips3">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Pour rappel, si vous ne le faites pas votre ESXi risque de ne plus fonctionner au bout de 60 jours
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_monter_un_datastore_nfs_avec_un_synology">2. Monter un datastore NFS avec un Synology</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>On va voir ici comment monter un partage NFS depuis un Synology sur VMware. Cela permet par exemple de mettre les machines virtuelles sur le Synology (qui peut avoir plus de place que l&#8217;ESXi) ou d&#8217;envoyer les backups des machines sur le Synology</p>
-</div>
-<div class="sect2">
-<h3 id="_synology_konfiguration">2.1. Synology Konfiguration</h3>
-<div class="paragraph">
-<p>Il faut aller sur le panneau de configuration puis "Services de fichiers" et cocher la case "Activer NFS" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips4.PNG" alt="vmware.tips4">
-</div>
-</div>
-<div class="paragraph">
-<p>Ensuite il faut cliquer sur "Dossier partagé", puis choisir le dossier à partager (ici Backup), cliquer sur modifier puis "Autorisation NFS" et enfin sur créer (ici j&#8217;en ai déja une, votre liste à vous devrait être vide) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips5.PNG" alt="vmware.tips5">
-</div>
-</div>
-<div class="paragraph">
-<p>Ensuite vous mettez l&#8217;IP de votre ESXi et dans "Squash" vous mettez "Mappage de tous les utilisateurs sur admin" puis vous validez :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips6.PNG" alt="vmware.tips6">
-</div>
-</div>
-<div class="paragraph">
-<p>Il faut ensuite recupérer le chemin du partage (ici /volume2/Backup) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips7.PNG" alt="vmware.tips7">
-</div>
-</div>
-<div class="paragraph">
-<p>Voilà c&#8217;est fini du coté Synology, on va maintenant passer coté ESXi</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_esxi_konfiguration">2.2. ESXi Konfiguration</h3>
-<div class="paragraph">
-<p>Il faut aller sur "Stockage" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips8.PNG" alt="vmware.tips8">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis cliquer sur "Nouvelle banque de données" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips9.PNG" alt="vmware.tips9">
-</div>
-</div>
-<div class="paragraph">
-<p>Là vous selectionnez "Monter une banque de données NFS" puis faites suivant :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips10.PNG" alt="vmware.tips10">
-</div>
-</div>
-<div class="paragraph">
-<p>Entrez le nom du datastore à créer (attention à éviter les espaces et caractères spéciaux), mettez l&#8217;IP de notre Synology et mettez le chemin du partage (voir au-dessus) et enfin validez :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips11.PNG" alt="vmware.tips11">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur terminer :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips12.PNG" alt="vmware.tips12">
-</div>
-</div>
-<div class="paragraph">
-<p>Et voilà votre nouveau datastore devrait apparaitre (sinon cliquez sur "Actualiser").</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ajout_du_plugin_vaai_synology_pour_montage_nfs">3. Ajout du plugin VAAI Synology pour montage NFS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>L&#8217;ajout de ce plugin permet d&#8217;activer l&#8217;accélération matérielle sur les montages NFS (pour explication voir <a href="http://www.virtual-sddc.ovh/exploiter-les-vaai-nfs-avec-un-nas-synology/">ici</a>)</p>
-</div>
-<div class="paragraph">
-<p>Pour voir si vous l&#8217;avez, il faut se connecter avec le client lourd (j&#8217;ai pas trouvé l&#8217;info sur le client web) et aller dans configuration &#8594; stockage :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips13.PNG" alt="vmware.tips13">
-</div>
-</div>
-<div class="paragraph">
-<p>La mise en place est assez simple, d&#8217;abord il faut activer le service SSH de l&#8217;ESXi (sur l&#8217;interface web il faut aller dans action &#8658; services &#8658; Activer Secure Shell), puis se connecter en SSH dessus (les identifiants sont les mêmes que pour accéder à l&#8217;interface). Ensuite il vous suffit de faire :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli software vib install -v https://global.download.synology.com/download/Tools/NFSVAAIPlugin/1.0-0001/VMware_ESXi/esx-nfsplugin.vib -f</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Vous devez avoir :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips14.PNG" alt="vmware.tips14">
-</div>
-</div>
-<div class="paragraph">
-<p>Il faut ensuite redemarrer l&#8217;ESXi, pour vérifier que c&#8217;est ok il faut ensuite retourner avec le client lourd dans configuration &#8594; stockage :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips15.PNG" alt="vmware.tips15">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installer_mettre_à_jour_l_esxi_embedded_host_client">4. Installer/Mettre à jour l&#8217;ESXi Embedded Host Client</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>ESXi Embedded Host Client est une interface web (en HTML5) de l&#8217;ESXi qui permet dans 95% des cas de se passer du client lourd. Elle est présente par défaut dans la version 6.0 update 2, mais en version 1.0, il est vivement conseillé de la mettre à jour.</p>
-</div>
-<div class="paragraph">
-<p>Vous trouverez toutes les information <a href="https://labs.vmware.com/flings/esxi-embedded-host-client">ici</a></p>
-</div>
-<div class="paragraph">
-<p>Pour voir si vous disposez de l&#8217;interface web, il suffit d&#8217;aller avec votre navigateur sur IP_ESXI/ui si vous n&#8217;avez rien il faut l&#8217;installer, il faut d&#8217;abord se connecter en SSH sur l&#8217;ESXI puis faire :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli software vib install -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-latest.vib</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Si vous l&#8217;avez déjà, pour la mettre à jour il faut faire :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli software vib update -v http://download3.vmware.com/software/vmw-tools/esxui/esxui-signed-latest.vib</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_installation_du_client_lourd">5. Installation du client lourd</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cette partie est facultative si vous n&#8217;avez pas besoin de gérer l&#8217;USB.</p>
-</div>
-<div class="paragraph">
-<p>Il vous faut aller, avec votre navigateur internet, sur l&#8217;IP de l&#8217;ESXi puis cliquer sur le lien "Download vSphere Client for Windows" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.createvm.PNG" alt="vmware.createvm">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois téléchargé il vous suffit de lancer l&#8217;installation (je passe volontairement sur cette partie car il suffit de tout valider).</p>
-</div>
-<div class="paragraph">
-<p>Ensuite lancez VMware vSphere Client, vous devez avoir :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.createvm1.PNG" alt="vmware.createvm1">
-</div>
-</div>
-<div class="paragraph">
-<p>Vous avez juste à rentrer l&#8217;IP de votre ESXi, le nom d&#8217;utilisateur et le mot de passe et vous voila connecté dessus :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.createvm2.PNG" alt="vmware.createvm2">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_mise_à_jour_de_l_esxi">6. Mise à jour de l&#8217;ESXi</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>La procédure est assez facile, il faut tout d&#8217;abord recupérer le patch en allant <a href="https://my.vmware.com/group/vmware/patch#search">ici</a> (il vous faudra sûrement vous connecter avec votre compte VMware). Sur la liste "Select a Product" mettez "ESXi (Embedded and Installable)", en face laisser la dernière version de VMware et faites "Search". Puis télécharger le patch voulu (en général le dernier). Le build number (le premier numéro pas celui commencant par KB) vous donne la version du patch que vous pouvez comparer avec votre build number.</p>
-</div>
-<div class="paragraph">
-<p>Ensuite transférez le zip sur un de vos datastores et faites :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli software vib update -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Remplacer bien le chemin et le nom du zip en fonction de votre configuration
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Attention à bien mettre le chemin complet vers le zip sinon ça ne marche pas
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>La commande au-dessus ne met à jour que les vib qui en ont besoin mais vous pouvez forcer l&#8217;installation de tous les vib du package (donc attention cela peux faire un downgrade) en faisant :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli software vib install -d /vmfs/volumes/576c8ab3-fdf64d2f-091b-b8aeedeb87fb/ESXi600-201605001.zip</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ntp_konfiguration">7. NTP Konfiguration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Par défaut l&#8217;ESXi n&#8217;utilise pas le NTP ce qui fait qu&#8217;il n&#8217;est pas à l&#8217;heure et que les VMs ne sont pas à l&#8217;heure, pour corriger c&#8217;est très simple. Il faut aller à partir de la version web sur Gérer &#8594; Système &#8594; Date et heure, là vous cliquez sur "Modifier les paramètres" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips16.PNG" alt="vmware.tips16">
-</div>
-</div>
-<div class="paragraph">
-<p>Et dans la case "Serveur NTP" il faut mettre : 0.debian.pool.n, 1.debian.pool.n, 2.debian.pool.n, 3.debian.pool.n, time.nist.gov</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips17.PNG" alt="vmware.tips17">
-</div>
-</div>
-<div class="paragraph">
-<p>Ensuite dans Actions &#8594; Service NTP &#8594; Strategie cliquez sur "Démarrer et arrêter avec l&#8217;hôte" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips18.PNG" alt="vmware.tips18">
-</div>
-</div>
-<div class="paragraph">
-<p>Toujours dans Actions &#8594; Service NTP cliquez sur "Démarrer"</p>
-</div>
-<div class="paragraph">
-<p>Voilà votre ESXi devrait prendre la bonne heure tout seul maintenant.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_accès_extérieur_à_l_esxi">8. Accès extérieur à l&#8217;ESXi</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Pour accéder à l&#8217;ESXi de l&#8217;extérieur il vous faut :</p>
+<p>Le problème peut être dû à 2 origines :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ouvrir le port 443 vers le 443 de l&#8217;ESXi</p>
+<p>Soucis dans le nom du backup, avant la 3.X s&#8217;il y a un espace dans le nom de backup alors la restauration ne peut pas marcher</p>
 </li>
 <li>
-<p>ouvrir le port 902 vers le 902 de l&#8217;ESXi</p>
+<p>Vous avez téléchargé le backup dans jeedom par l&#8217;interface Web mais celui-ci est trop gros et le téléchargement est partiel</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Et voilà c&#8217;est tout. Petite astuce si vous avez un NAS Synology vous pouvez faire (attention à bien suivre) :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ouvrir le 443 vers le 5001 du NAS Synology</p>
-</li>
-<li>
-<p>ouvrir le 80 vers le 80 du NAS (utile juste pour générer les certificats let&#8217;s encrypt)</p>
-</li>
-<li>
-<p>ouvrir le port 902 vers le 902 de l&#8217;ESXi</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ensuite sur le NAS dans le panneau de configuration puis portail d&#8217;application et proxy inversé (attention il faut absolument DSM 6) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips19.PNG" alt="vmware.tips19">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur créer et mettre :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/vmware.tips20.PNG" alt="vmware.tips20">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans "Nom d&#8217;hôte" (au niveau de la source) il faut mettre le DNS voulu (par exemple monesxi.mondsn.synology.me) et dans "Nom d&#8217;hôte" (au niveau de la destination) il faut mettre l&#8217;IP de l&#8217;ESXi</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Vous pouvez faire aussi la même chose pour accéder à jeedom mais en mettant cette fois l&#8217;IP de jeedom (de la vm si vous êtes en virtualisé) et le port 80
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Une fois que vous avez fait cela et si votre DNS pointe correctement sur le NAS vous pouvez générer un certificat SSL valide gratuitement avec Let&#8217;s encrypt, en allant dans Sécruité &#8658; certificat et en faisant ajouter. Ensuite n&#8217;oubliez pas de cliquer sur configurer pour l&#8217;affecter à votre proxy inversé
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Ensuite pour accéder à votre ESXi il vous suffit avec votre navigateur d&#8217;aller sur votre DNS ou IP externe en ajoutant /ui à la fin et c&#8217;est bon.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Si vous passez par le reverse proxy du NAS la console en mode web des VMs ne fonctionne pas (car cela passe par du websocket), en revanche si vous passez par VMware Remote Console tout devrait être ok (cela passe par le port 902)
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Il existe aussi une application Vmware Watchlist sur Android pour avoir accès à l&#8217;ESXi ainsi qu&#8217;aux consoles des VMs
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_certificat_ssl">9. Certificat SSL</h2>
+<h2 id="_résolution">3. Résolution</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Il est possible d&#8217;importer les certificats de vmware directement dans votre pc pour ne plus avoir l&#8217;alerte.</p>
-</div>
-<div class="paragraph">
-<p>Dans l&#8217;ordre il faut :</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>avoir une url (dns) d&#8217;accès a votre esxi, ici on va prendre esxi1.lan</p>
+<p>Supprimer l&#8217;espace dans le nom de backup</p>
 </li>
 <li>
-<p>configurer le nom de votre esxi, en ssh dessus faire :</p>
+<p>Télécharger le backup par SFTP (avec le logiciel WinSCP par exemple), à mettre dans /var/www/html/backup</p>
 </li>
 </ul>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli system hostname set --host=esxi1</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>configurer le fqdn :</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>esxcli system hostname set --fqdn=esxi1.lan</pre>
+<div class="sect1">
+<h2 id="_version_applicable">4. Version applicable</h2>
+<div class="sectionbody">
+
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Récuperer le certificat racine de l&#8217;esxi, il est dans /etc/vmware/ssl/castore.pem</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Sur poste faite clic droit puis installer le certificat , le mettre dans "Autorité de certification racines de confiance"</p>
-</div>
+<div class="sect1">
+<h2 id="_voir_aussi">5. Voir aussi</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 </div>

@@ -429,6 +429,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mise_à_jour_de_l_esxi">6. Mise à jour de l&#8217;ESXi</a></li>
 <li><a href="#_configuration_du_ntp">7. Configuration du NTP</a></li>
 <li><a href="#_accès_extérieur_à_l_esxi">8. Accès extérieur à l&#8217;ESXi</a></li>
+<li><a href="#_certificat_ssl">9. Certificat SSL</a></li>
 </ul>
 </div>
 </div>
@@ -859,6 +860,54 @@ Il existe aussi une application Vmware Watchlist sur Android pour avoir accès �
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_certificat_ssl">9. Certificat SSL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il est possible d&#8217;importer les certificats de vmware directement dans votre pc pour ne plus avoir l&#8217;alerte.</p>
+</div>
+<div class="paragraph">
+<p>Dans l&#8217;ordre il faut :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>avoir une url (dns) d&#8217;accès a votre esxi, ici on va prendre esxi1.lan</p>
+</li>
+<li>
+<p>configurer le nom de votre esxi, en ssh dessus faire :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>esxcli system hostname set --host=esxi1</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>configurer le fqdn :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>esxcli system hostname set --fqdn=esxi1.lan</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Récuperer le certificat racine de l&#8217;esxi, il est dans /etc/vmware/ssl/castore.pem</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Sur poste faite clic droit puis installer le certificat , le mettre dans "Autorité de certification racines de confiance"</p>
 </div>
 </div>
 </div>
