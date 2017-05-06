@@ -1,11 +1,11 @@
 = #titre#
 
-== Symptôme
+== Symptome
 
 == Analyse
 
-== Résolution
+== Lösung
 
-== Version applicable
+== Anwendbare Version
 
-== Voir aussi
+== Siehe auch

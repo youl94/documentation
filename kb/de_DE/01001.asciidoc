@@ -1,17 +1,17 @@
-= Plus d'image caméra sur l'app Mobile
+= Mehr Kamera-Bilder auf der mobilen App
 
-== Symptôme
+== Symptome
 
-Plus d'image caméra sur l'app mobile alors que quelques heures plus tard cela fonctionne
+Mehr Kamera-Bilder auf der mobilen App, während es einige Stunden später funktioniert
 
 == Analyse
 
-== Résolution
+== Lösung
 
-Re-sauvegarder les caméras sur le Jeedom.
+Speichern Sie die Kameras erneut auf Ihr Jeedom. 
 
-== Versions applicables
+== Anwendbare Version
 
-Toutes
+Alle
 
-== Voir aussi
+== Siehe auch

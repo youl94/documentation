@@ -1,8 +1,8 @@
-= Erreur backup samba
+= Samba Backup Fehler
 
-== Symptôme
+== Symptome
 
-Lors d'un backup samba l'erreur suivante apparait : 
+Während einer Samba Sicherung erscheint folgende Fehlermeldung : 
 
 ----
 Error on shell exec, return value : 1. Details : Array ( [0] => session setup failed: NT_STATUS_LOGON_FAILURE )
@@ -11,14 +11,14 @@ Error on shell exec, return value : 1. Details : Array ( [0] => session setup fa
 
 == Analyse
 
-Si il n'y a pas d'erreur dans le nom d'utilisateur et le mot de passe (attention il faut absolument un nom d'utilisateur et un mot de passe). Alors le soucis vient peut etre de caractères spéciaux dans le mot de passe
+Wenn es keinen Fehler im Benutzernamen und Passwort gibt (Achtung,  es bedarf unbedingt einen Benutzernamen und ein Passwort). Dann kann das Problem von einem speziellen Charakter im Passwort kommt.
 
-== Résolution
+== Lösung
 
-Changer le mot de passe en ne mettant que des lettre/chiffre et aucun caracteres spéciaux (accent, signe, ponctuation ou espace)
+Ändern Sie das Passwort, indem Sie nur Buchstaben/Zahlen und keine Sonderzeichen (Akzent, Sonderzeichen, Satzzeichen oder Leerzeichen) eingeben.
 
-== Version applicable
+== anwendbare Version
 
-Toute
+Alle
 
-== Voir aussi
+== Siehe auch

@@ -1,21 +1,21 @@
-= Problème de restauration de backup
+= Backup Wiederherstellungs Probleme
 
-== Symptôme
+== Symptome
 
-Impossible de restaurer un backup, celui-ci finit toujours par une erreur de décompression
+Es kann kein Backup wiederhergestellt werden, es endet immer mit einem Dekompression Fehler.
 
 == Analyse
 
-Le problème peut être dû à 2 origines : 
+Das Problem kann 2 Ursachen haben : 
 
-- Soucis dans le nom du backup, avant la 3.X s'il y a un espace dans le nom de backup alors la restauration ne peut pas marcher
-- Vous avez téléchargé le backup dans jeedom par l'interface Web mais celui-ci est trop gros et le téléchargement est partiel
+- Problem im Namen der Sicherung, wenn vor dem 3.X ein Leerzeichen im Backup-Namen ist, dann kann die Wiederherstellung nicht gehen.
+- Sie haben das Backup in Jeedom durch die Web-Schnittstelle geladen, aber dieses ist zu groß und der Download ist nicht vollständig.
 
-== Résolution
+== Lösung
 
-- Supprimer l'espace dans le nom de backup
-- Télécharger le backup par SFTP (avec le logiciel WinSCP par exemple), à mettre dans /var/www/html/backup
+- Entfernen Sie das Leerzeichen in dem Backup-Namen 
+- Laden Sie das Backup mit SFTP (zum Beispiel mit der WinSCP Software), speichern in /var/www/html/backup
 
-== Version applicable
+== Anwendbare Version
 
-== Voir aussi
+== Siehe auch
