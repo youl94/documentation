@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Problème de restauration de backup</title>
+<title>Backup Wiederherstellungs Probleme</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,24 +412,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Problème de restauration de backup</h1>
+<h1>Backup Wiederherstellungs Probleme</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_symptôme">1. Symptôme</a></li>
+<li><a href="#_symptome">1. Symptome</a></li>
 <li><a href="#_analyse">2. Analyse</a></li>
-<li><a href="#_résolution">3. Résolution</a></li>
-<li><a href="#_version_applicable">4. Version applicable</a></li>
-<li><a href="#_voir_aussi">5. Voir aussi</a></li>
+<li><a href="#_lösung">3. Lösung</a></li>
+<li><a href="#_anwendbare_version">4. Anwendbare Version</a></li>
+<li><a href="#_siehe_auch">5. Siehe auch</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_symptôme">1. Symptôme</h2>
+<h2 id="_symptome">1. Symptome</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Impossible de restaurer un backup, celui-ci finit toujours par une erreur de décompression</p>
+<p>Es kann kein Backup wiederhergestellt werden, es endet immer mit einem Dekompression Fehler.</p>
 </div>
 </div>
 </div>
@@ -437,43 +437,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_analyse">2. Analyse</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Le problème peut être dû à 2 origines :</p>
+<p>Das Problem kann 2 Ursachen haben :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Soucis dans le nom du backup, avant la 3.X s&#8217;il y a un espace dans le nom de backup alors la restauration ne peut pas marcher</p>
+<p>Problem im Namen der Sicherung, wenn vor dem 3.X ein Leerzeichen im Backup-Namen ist, dann kann die Wiederherstellung nicht gehen.</p>
 </li>
 <li>
-<p>Vous avez téléchargé le backup dans jeedom par l&#8217;interface Web mais celui-ci est trop gros et le téléchargement est partiel</p>
+<p>Sie haben das Backup in Jeedom durch die Web-Schnittstelle geladen, aber dieses ist zu groß und der Download ist nicht vollständig.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_résolution">3. Résolution</h2>
+<h2 id="_lösung">3. Lösung</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Supprimer l&#8217;espace dans le nom de backup</p>
+<p>Entfernen Sie das Leerzeichen in dem Backup-Namen</p>
 </li>
 <li>
-<p>Télécharger le backup par SFTP (avec le logiciel WinSCP par exemple), à mettre dans /var/www/html/backup</p>
+<p>Laden Sie das Backup mit SFTP (zum Beispiel mit der WinSCP Software), speichern in /var/www/html/backup</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_version_applicable">4. Version applicable</h2>
+<h2 id="_anwendbare_version">4. Anwendbare Version</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_voir_aussi">5. Voir aussi</h2>
+<h2 id="_siehe_auch">5. Siehe auch</h2>
 <div class="sectionbody">
 
 </div>
