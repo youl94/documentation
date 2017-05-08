@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Plugin SPEEDTEST</title>
+<title>Plugin Graphs</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,7 +415,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_plugin_speedtest">1. Plugin SPEEDTEST</a>
+<li><a href="#_plugin_graphs">1. Plugin Graphs</a>
 <ul class="sectlevel2">
 <li><a href="#_présentation">1.1. Présentation</a></li>
 <li><a href="#_installation_configuration">1.2. Installation/Configuration</a></li>
@@ -427,12 +427,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_plugin_speedtest">1. Plugin SPEEDTEST</h2>
+<h2 id="_plugin_graphs">1. Plugin Graphs</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_présentation">1.1. Présentation</h3>
 <div class="paragraph">
-<p>Ce plugin permet de vérifier l&#8217;état de sa connexion internet et Afficher un widget configurable</p>
+<p>Ce plugin permet de générer des graphiques des sondes Netatmo</p>
 </div>
 <hr>
 </div>
@@ -443,52 +443,51 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/speedtest_icon.png" alt="speedtest icon">
+<img src="../images/graphs_icon.png" alt="graphs icon">
 </div>
 </div>
 <div class="paragraph">
-<p>Après l&#8217;avoir activer et si les dépendances sont ok,  il faut ensuite aller dans Plugins/Monitoring/speedtest</p>
+<p>Après l&#8217;avoir activer il faut ensuite aller dans Plugins/Gestions des plugins et cliquer sur l&#8217;icône du plugin</p>
 </div>
 <div class="paragraph">
-<p>Il faut activer l’équipement</p>
-</div>
-<div class="paragraph">
-<p>Possiblilité de le configurer</p>
+<p>Remplir les champs selon vos informations et sauvegarder.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/speed2.png" alt="speed2">
+<img src="../images/config_netatmo.png" alt="config netatmo">
 </div>
 </div>
 <div class="paragraph">
-<p>-Activer cron :  Permet de lancer le test selon le cron défini</p>
+<p>Cocher activer le panel et enregistrer.</p>
 </div>
 <div class="paragraph">
-<p>-Possibilité de tester et paramétrer les différentes commandes</p>
+<p>Pour voir les informations.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/speed3.png" alt="speed3">
+<img src="../images/netatmo1.png" alt="netatmo1">
 </div>
 </div>
 <div class="paragraph">
-<p>Screenshot sur le dashboard:</p>
+<p>Et ainsi visualiser les données Netatmo sous forme de graphique</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/speed1.png" alt="speed1">
+<img src="../images/netatmo_screen.png" alt="netatmo screen">
 </div>
 </div>
-<div class="paragraph">
-<p>ou</p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="../images/speedtest.png" alt="speedtest">
-</div>
-</div>
-<div class="paragraph">
-<p>Le widget se met à jour dés qu&#8217;il y a un changement d&#8217;état.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Le thème du graph est celui que vous avez choisi dans votre profil.
+Le plugin ne crée pas de commandes.
+</td>
+</tr>
+</table>
 </div>
 <hr>
 </div>
@@ -498,18 +497,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <table>
 <tr>
 <td class="hdlist1">
-02.05.2017
+05.05.2017
 </td>
 <td class="hdlist2">
-<p>Passage en stable.</p>
-</td>
-</tr>
-<tr>
-<td class="hdlist1">
-01.05.2017
-</td>
-<td class="hdlist2">
-<p>Beta sur le market.</p>
+<p>Mise à jour et dispo sur le market</p>
 </td>
 </tr>
 </table>
