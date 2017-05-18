@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*289* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*292* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -151,6 +151,16 @@ _[small]#Piles : 4x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/268
 |image:../images/compatibility_list/aeotec.zw075.jpg[width=150,align="center"]|Aeotec|Smart Switch Gen5 (ZW075)|Prise| | link:++http://www.domadoo.fr/fr/peripheriques/2594-aeon-labs-module-prise-commutateur-z-wave-plus-avec-mesure-d-energie-gen5-1220000012578.html++[Acheter^]
 // 134.259.75_zw075_switch.json
 
+|image:../images/compatibility_list/aeotec.zw129.jpg[width=150,align="center"]|Aeotec|WallMote Duo (ZW129)|Télécommande|Partiellement compatible: Fonctionne en association directe seulement  
+
+_[small]#Piles : Batterie#_| 
+// 134.2.129_zw129_wallmote.duo.json
+
+|image:../images/compatibility_list/aeotec.zw130.jpg[width=150,align="center"]|Aeotec|WallMote Quad (ZW130)|Télécommande|Partiellement compatible: Fonctionne en association directe seulement  
+
+_[small]#Piles : Batterie#_| 
+// 134.2.130_zw130_wallmote.quad.json
+
 |image:../images/compatibility_list/aeotec.dsb45.jpg[width=150,align="center"]|Aeotec|Water Sensor (DSB45)|Fuite|Paramètre 121 doit être forcé a 4113 
 
 _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/3182-aeon-labs-capteur-d-eau-z-wave-1220000012486.html++[Acheter^]
@@ -293,7 +303,7 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 |image:../images/compatibility_list/devolo.9511.jpg[width=150,align="center"]|Devolo|9511|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
 // 373.2.14_MT02648.devolo.contact.door.json
 
-|image:../images/compatibility_list/devolo.mt02646.jpg[width=150,align="center"]|Devolo|Home Control Smart Metering Plug (MT02646)|Prise| | 
+|image:../images/compatibility_list/devolo.mt02646.jpg[width=150,align="center"]|Devolo|Metering Plug (MT02646)|Prise| | 
 // 373.1.17_mt02646.plug.json
 
 |image:../images/compatibility_list/develo.scene_switch_2652.jpg[width=150,align="center"]|Devolo|Scene Switch MT 2652|Télécommande| _[small]#Piles : 1x3V CR2032#_| 
@@ -842,6 +852,9 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 
 |image:../images/compatibility_list/shenzen_neo.nas-pd01z.jpg[width=150,align="center"]|Neocoolcam|PIR Sensor|Multicapteurs| _[small]#Piles : 1x3V CR123A#_| 
 // 600.3.131_nas-pd01z.json
+
+||Neocoolcam|Smart Power Plug NAS-WR01ZE|Prise| | 
+// 600.3.4231_nas.wr01ze.power.plug.json
 
 
 |===
@@ -1433,12 +1446,6 @@ _[small]#Piles : Cellule solaire#_| link:++http://www.domadoo.fr/fr/peripherique
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
 
-|image:../images/compatibility_list/aeotec.zw130.jpg[width=150,align="center"]|Aeotec|WallMote Duo (ZW129)|Télécommande| _[small]#Piles : Batterie#_| 
-// 134.2.129_zw129_wallmote.duo.json
-
-|image:../images/compatibility_list/aeotec.zw130.jpg[width=150,align="center"]|Aeotec|WallMote Quad (ZW130)|Télécommande| _[small]#Piles : Batterie#_| 
-// 134.2.130_zw130_wallmote.quad.json
-
 |image:../images/compatibility_list/everspring.sf812.jpg[width=150,align="center"]|Everspring|SF812|Fumée| _[small]#Piles : 1x9V#_| link:++http://www.domadoo.fr/fr/peripheriques/848-everspring-detecteur-de-fumee-z-wave-sf812-3700946500219.html++[Acheter^]
 // 96.13.1_sf812.smoke.alarm.json
 
@@ -1464,9 +1471,6 @@ _[small]#Piles : 1X ER14250 3,6V#_| link:++http://www.domadoo.fr/fr/peripherique
 
 ||Neocoolcam|Flood Sensor|Fuite| | 
 // 600.3.4229_nas.ws02z.json
-
-||Neocoolcam|Smart Power Plug NAS-WR01ZE|Prise| | 
-// 600.3.4231_nas.wr01ze.power.plug.json
 
 |image:../images/compatibility_list/vitrum.zwe060.jpg[width=150,align="center"]|Vitrum|ZWE060 6 boutons|Interrupteur| | 
 // 266.5120.26112_vitrum.vitrum.zwe060.json
