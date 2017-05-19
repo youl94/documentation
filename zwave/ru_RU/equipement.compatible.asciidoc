@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*292* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*296* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -300,14 +300,26 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 |===
 |Image|Marque|Nom|Type|Remarque|Lien
 
-|image:../images/compatibility_list/devolo.9511.jpg[width=150,align="center"]|Devolo|9511|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
-// 373.2.14_MT02648.devolo.contact.door.json
+|image:../images/compatibility_list/devolo.mt02648.jpg[width=150,align="center"]|Devolo|Door/Window Contact MT02648|Ouverture| _[small]#Piles : 1x3V CR123A#_| 
+// 373.2.14_mt02648.contact.door.json
+
+|image:../images/compatibility_list/develo.mt2653.jpg[width=150,align="center"]|Devolo|Keyfob (MT2653)|Télécommande| _[small]#Piles : 1x3V CR2032#_| 
+// 373.256.258_mt2653.keyfob.json
 
 |image:../images/compatibility_list/devolo.mt02646.jpg[width=150,align="center"]|Devolo|Metering Plug (MT02646)|Prise| | 
-// 373.1.17_mt02646.plug.json
+// 373.1.17_mt02646.metering.plug.json
+
+|image:../images/compatibility_list/devolo.mt02647.jpg[width=150,align="center"]|Devolo|Motion Sensor MT02647|Multicapteurs| _[small]#Piles : 1x3V CR123A#_| 
+// 373.2.13_mt02647.motion.sensor.json
 
 |image:../images/compatibility_list/develo.scene_switch_2652.jpg[width=150,align="center"]|Devolo|Scene Switch MT 2652|Télécommande| _[small]#Piles : 1x3V CR2032#_| 
-// 373.256.257_scene_switch_2652.json
+// 373.256.257_mt2652.scene_switch.json
+
+|image:../images/compatibility_list/devolo.mt02758.jpg[width=150,align="center"]|Devolo|Siren MT02758|Sirène|Sélection du son présentement non supporté | 
+// 373.4.10_mt02758.siren.json
+
+|image:../images/compatibility_list/devolo.mt02792.jpg[width=150,align="center"]|Devolo|Smart Metering Plug (MT02792)|Prise| | 
+// 373.1.18_mt02792.metering.plug.json
 
 
 |===
