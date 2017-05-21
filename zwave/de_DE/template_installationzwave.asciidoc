@@ -1,5 +1,5 @@
 :icons:
-=== Installation du plugin Z-wave
+=== Anlage des Z-wave plugin
 
 {nbsp} +
 

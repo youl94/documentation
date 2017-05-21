@@ -4,7 +4,7 @@ Hier ist die Liste der verfügbaren Tutorials :
 
 * https://www.youtube.com/watch?v=UTECRBGEUtI[Jeedom Lektion #1 :  Erster Start]
 * https://www.youtube.com/watch?v=2LU1neNvbus[Jeedom Lektion #2 : Erste Schritte mit Jeedom (Object, Markt, Plugin, Module)]
-* https://www.youtube.com/watch?v=OJn33XbpiH8[Tuto Jeedom #3 : Jeedom, les Widget, Mails et Scénarios]
+* https://www.youtube.com/watch?v=OJn33XbpiH8[Tuto Jeedom #3 : Jeedom, das Widget, Mail und Szenario
 * https://www.youtube.com/watch?v=EBuvIabg3Cc[Tuto Jeedom #4 : Jeedom, Utilisation du plugin Agenda]
 * https://www.youtube.com/watch?v=FRbQILAogX0[Tuto Jeedom #5 : Les scripts dans Jeedom à l'aide du plugin Script]
 * https://www.youtube.com/watch?v=w0ErP3wyEoA[Jeedom Lektion #6 : Szenarien in Jeedom mit dem  Wetter-Plugin]

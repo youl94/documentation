@@ -1,5 +1,5 @@
 :icons:
-==== Visuel Alternatif
+==== Alternative Seh
 
 {nbsp} +
 
@@ -11,7 +11,7 @@ image::../images/plugin/inclusion1.jpg[width=556]
 
 {nbsp} +
 
-Une fois sur cette page, vous allez trouver une bouton "Mode Inclusion", il suffit de cliquer dessus pour passer en mode inclusion :
+Einmal auf dieser Seite werden Sie einen Knopf finden "Weise Einschließung", es genügt, darauf zu klicken, um in der Weise Einschließung zu verbringen:
 
 {nbsp} +
 
@@ -19,7 +19,7 @@ image::../images/plugin/bouton_inclusion.jpg[width=256]
 
 {nbsp} +
 
-Après avoir cliqué sur « Mode inclusion », un message apparait pour vous rappeler que vous êtes dans ce mode.
+Nachdem man auf "Weise Einschließung" geklickt hat, eine apparait Nachricht, um Sie zu erinnern, dass Sie in dieser Weise sind.
 
 {nbsp} +
 
@@ -27,8 +27,8 @@ image::../images/plugin/inclusion3.jpg[width=756]
 
 {nbsp} +
 
-Une fois l’inclusion en cours, un message apparait , il faut donc patienter le temps que Jeedom intègre le module.
-La configuration des commandes se fait automatiquement une fois le module reconnu par Jeedom.
+Einmal die aktuelle Einschließung, eine apparait Nachricht, muss man sich also Zeit gedulden, als Jeedom den Modul integriert.
+Die Gestalt der Bestellungen macht sich einmal den von Jeedom erkannten Modul automatisch.
 
 {nbsp} +
 
@@ -38,7 +38,7 @@ image::../images/plugin/inclusion4.jpg[width=756]
 
 [icon="../images/plugin/tip.png"]
 [TIP]
-Il est préférable d’effectuer une exclusion avant une inclusion. Pour effectuer l’exclusion, rien de bien compliqué,
-il suffit de cliquer sur « Mode exclusion » et d'exclure le module, un message apparaitra vous confirmant l’exclusion du module.
+Es ist besser, einen Ausschluss vor einer Einschließung auszuführen. Um den Ausschluss, Kleinigkeit des gut Komplizierten auszuführen,
+es genügt, auf "Weise Ausschluss" zu klicken und den Modul auszuschließen, eine Nachricht Ihnen den Ausschluss des Moduls bestätigende erschien.
 
 {nbsp} +
