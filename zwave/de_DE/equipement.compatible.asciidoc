@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*296* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*297* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -395,6 +395,9 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 
 |image:../images/compatibility_list/duwi.duro-2000.jpg[width=150,align="center"]|Duwi|Interrupteur Variateur Duro 2000|Interrupteur|Il faut activer le polling pour avoir une remonté d'état | link:++http://www.domadoo.fr/fr/peripheriques/758-duwi-interrupteur-variateur-duro-2000-z-wave-4008297054580.html++[Acheter^]
 // 100.5002.0_duro.2000.json
+
+|image:../images/compatibility_list/duwi.5443.jpg[width=150,align="center"]|Duwi|Wireless Flush Mounted Switch (5443)|Télécommande| _[small]#Piles : 2x1.5V LR61#_| 
+// 100.20482.0_wireless.flush.mounted.switch.json
 
 |image:../images/compatibility_list/duwi.rzwfb.jpg[width=150,align="center"]|Duwi|Wireless remote control 10-channel|Télécommande|Remplacé par la Z-WAVE.ME RC2 
 
