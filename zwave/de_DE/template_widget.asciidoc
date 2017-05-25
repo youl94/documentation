@@ -1,5 +1,5 @@
 :icons:
-==== Alternative Seh
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -11,7 +11,7 @@ image::../images/plugin/inclusion1.jpg[width=556]
 
 {nbsp} +
 
-Einmal auf dieser Seite werden Sie einen Knopf finden "Weise Einschließung", es genügt, darauf zu klicken, um in der Weise Einschließung zu verbringen:
+Einmal auf dieser Seite, finden Sie die "Inklusions Modus" Schaltfläche, klicken Sie einfach drauf um in den Inklusions Modus zu wechseln :
 
 {nbsp} +
 
@@ -19,7 +19,7 @@ image::../images/plugin/bouton_inclusion.jpg[width=256]
 
 {nbsp} +
 
-Nachdem man auf "Weise Einschließung" geklickt hat, eine apparait Nachricht, um Sie zu erinnern, dass Sie in dieser Weise sind.
+Nach einem Klick auf « Inklusions Modus », erscheint eine Meldung, die Sie daran erinnert, dass Sie in diesem Modus sind.
 
 {nbsp} +
 
@@ -27,8 +27,8 @@ image::../images/plugin/inclusion3.jpg[width=756]
 
 {nbsp} +
 
-Einmal die aktuelle Einschließung, eine apparait Nachricht, muss man sich also Zeit gedulden, als Jeedom den Modul integriert.
-Die Gestalt der Bestellungen macht sich einmal den von Jeedom erkannten Modul automatisch.
+Sobald die Inklusion läuft, wird eine Meldung angezeigt, das es notwendig ist zu warten, während Jeedom das Modul integriert.
+Die Befehls Konfiguration erfolgt automatisch, sobald Jeedom das Modul erkannt hat.
 
 {nbsp} +
 
@@ -38,7 +38,7 @@ image::../images/plugin/inclusion4.jpg[width=756]
 
 [icon="../images/plugin/tip.png"]
 [TIP]
-Es ist besser, einen Ausschluss vor einer Einschließung auszuführen. Um den Ausschluss, Kleinigkeit des gut Komplizierten auszuführen,
-es genügt, auf "Weise Ausschluss" zu klicken und den Modul auszuschließen, eine Nachricht Ihnen den Ausschluss des Moduls bestätigende erschien.
+Am besten ist es eine Exklusion vor der Inklusion zu machen. Die Exclusion ist nicht kompliziert durchzuführen,
+klicken Sie einfach auf « Exklusions Modus » um das Modul zu entfernen, es erscheint eine Nachricht, die das Entfernen des Moduls bestätigt.
 
 {nbsp} +
