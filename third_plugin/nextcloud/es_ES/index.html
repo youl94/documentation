@@ -417,7 +417,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_description">1. Description</a>
 <ul class="sectlevel3">
-<li><a href="#_ayat">1.1. Ayat</a></li>
+<li><a href="#_nextcloud">1.1. Nextcloud</a></li>
 </ul>
 </li>
 <li><a href="#_configuration">2. Configuration</a>
@@ -434,9 +434,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_description">1. Description</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_ayat">1.1. Ayat</h4>
+<h4 id="_nextcloud">1.1. Nextcloud</h4>
 <div class="paragraph">
-<p>Ce plugin permet de chercher une sourate, un verset ou un juzz par exemple. Plusieurs versions récitées sont disponibles ainsi que de l&#8217;audio francais.</p>
+<p>Ce plugin permet de connecter Jeedom avec Nextcloud</p>
 </div>
 <hr>
 </div>
@@ -451,19 +451,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Le plugin ne comporte pas de configuration générale.</p>
 </div>
 <div class="paragraph">
-<p>Par équipement vous devez choisir le récitateur pour la version arabe</p>
-</div>
-<div class="paragraph">
-<p>La version francophone est unique, il n&#8217;y a donc pas de choix</p>
-</div>
-<div class="paragraph">
-<p>La page de configuration donne aussi pour indication 2 URL Jeedom auquelles sont disponibles les MP3 francais et arabe des sélections en cours</p>
-</div>
-<div class="paragraph">
-<p>Cette URL permet de lancer la lecture dans Squeezebox Player par exemple</p>
-</div>
-<div class="paragraph">
-<p>Une commande de lecture peut être indiqué aussi sur la page, elle servira aux commandes lecture de l&#8217;équipement (prevu pour Squeezebox)</p>
+<p>Par équipement vous devez indiquer l&#8217;adresse Nextcloud, l&#8217;utilisateur et le mot de passe. Vous choisissez aussi les fonctionnalités Nextcloud a créer (actuellement seul webdav est dispo)</p>
 </div>
 <hr>
 </div>
@@ -475,7 +463,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="openblock panel">
 <div class="title">Est-ce que le plugin s&#8217;appuie sur des API cloud ?</div><div class="content">
 <div class="paragraph">
-<p>Oui, le plugin s&#8217;appuie sur <a href="https://alquran.cloud/api" class="bare">https://alquran.cloud/api</a></p>
+<p>Le plugin communique avec une/des instance(s) Nextcloud. Donc cela dépend d&#8217;où se trouve l&#8217;instance ciblée.</p>
 </div>
 </div>
 </div>
