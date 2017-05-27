@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*297* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*299* [green]*modules.*
 
 D'autres modules non présents sur cette liste peuvent être compatibles. Pour une demande de compatibilité : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Cliquez-ici^]
 
@@ -375,11 +375,17 @@ _[small]#Piles : 1x3V CR2#_| link:++http://www.domadoo.fr/fr/peripheriques/842-e
 |image:../images/compatibility_list/domux.dx1msz.jpg[width=150,align="center"]|Domux|Motion Sensor (DX1MS-Z)|Multicapteurs| _[small]#Piles : 1x3V CR17335#_| 
 // 608.32769.4096_dx1msz_motion_sensor.json
 
+|image:../images/compatibility_list/domux.dx2skz.jpg[width=150,align="center"]|Domux|Smart Metering Plug (DX2SK-Z)|Prise| | 
+// 608.32774.4096_dx2skz_wallplug.json
+
+|image:../images/compatibility_list/domux.dx2skz.jpg[width=150,align="center"]|Domux|Smart Plug (DX2SK-Z)|Prise| | 
+// 608.32776.4096_dx2skz_wallplug.json
+
+|image:../images/compatibility_list/domux.dx1saz.jpg[width=150,align="center"]|Domux|Smart Smoke Sensor (DX1SA-Z)|Fumée| _[small]#Piles : 1x3V CR123A#_| 
+// 608.32770.4096_dx1saz_smoke_sensor.json
+
 |image:../images/compatibility_list/domux.dx1htz.jpg[width=150,align="center"]|Domux|Temperature & Humidity Sensor (DX1HT-Z)|Multicapteurs| _[small]#Piles : 1x3V CR2450#_| 
 // 608.32775.4096_dx1htz_2in1_sensor.json
-
-|image:../images/compatibility_list/domux.dx2skz.jpg[width=150,align="center"]|Domux|Wall Plug (DX2SK-Z)|Prise| | 
-// 608.32774.4096_dx2skz_wallplug.json
 
 
 |===
