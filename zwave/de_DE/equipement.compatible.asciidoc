@@ -1,7 +1,7 @@
 = Liste des equipements Z-Wave compatibles 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*303* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*51* [green]*marques de modules différentes, soit un total de* [red]*304* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -856,6 +856,9 @@ _[small]#Piles : 2x1.5V AAA#_|link:++https://jeedom.fr/doc/documentation/zwave-m
 |===
 |Bild|Marke|Name|Typ|Hinweis|Link
 
+|image:../images/compatibility_list/mcohome.mh9co2.jpg[width=150,align="center"]|Mco|CO2 Monitor (MH9-CO2-WD)|Multicapteurs| | link:++http://www.domadoo.fr/fr/peripheriques/3734-mcohome-capteur-d-humidite-temperature-et-co2-avec-ecran-z-wave-mh9-co2-4251295700229.html++[Acheter^]
+// 351.2309.513_c02.monitor.json
+
 |image:../images/compatibility_list/mco.mhp210.jpg[width=150,align="center"]|Mco|MH-P210 Mini Energy Dimmer|Micromodule|Vendu sous la marque Zipato | link:++http://www.domadoo.fr/fr/peripheriques/3577-zipato-mini-micromodule-variateur-z-wave-3858890732733.html++[Acheter^]
 // 351.8458.4866_mh.p210.dimmer.json
 
@@ -1274,7 +1277,7 @@ _[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/315
 
 |image:../images/compatibility_list/vision.zd2301.jpg[width=150,align="center"]|Vision Security|ZD2301 Multisensor 4in1|Ouverture|Vendu aussi sous la marque Zipato. 
 
-_[small]#Piles : 2x1.5V AAA#_| link:++http://www.domadoo.fr/fr/peripheriques/3823-zipato-detecteur-z-wave-plus-4-en-1-3858890732153.html++[Acheter^]
+_[small]#Piles : 1x3V CR14250#_| link:++http://www.domadoo.fr/fr/peripheriques/3823-zipato-detecteur-z-wave-plus-4-en-1-3858890732153.html++[Acheter^]
 // 265.8223.7968_zd2301.multisensor.4in1.json
 
 |image:../images/compatibility_list/vision.zg8101.jpg[width=150,align="center"]|Vision Security|ZG8101|Ouverture| _[small]#Piles : 1x3V CR123A#_| link:++http://www.domadoo.fr/fr/peripheriques/2434-vision-security-detecteur-de-porte-de-garage-z-wave-zg8101-0696859123412.html.html++[Acheter^]
