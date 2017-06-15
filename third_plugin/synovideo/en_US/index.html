@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>Synoaudio</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,464 +412,175 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>Synoaudio</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
-<ul class="sectlevel2">
-<li><a href="#_apc_usv_apc_usv_Überwachung">1.1. APC-USV, APC USV Überwachung</a></li>
-</ul>
-</li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
-<ul class="sectlevel2">
-<li><a href="#_plugin_konfiguration">2.1. Plugin Konfiguration</a>
-<ul class="sectlevel3">
-<li><a href="#_allgemeine_konfiguration">2.1.1. Allgemeine Konfiguration</a></li>
-<li><a href="#_konfiguration_von_geräten">2.1.2. Konfiguration von Geräten</a></li>
-<li><a href="#_verwendung">2.1.3. Verwendung</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_konfiguration_einer_netzwerk_usv">3. Konfiguration einer Netzwerk USV</a>
-<ul class="sectlevel2">
-<li><a href="#_konfiguration_einer_usv_die_nicht_mit_jeedom_verbunden_ist">3.1. Konfiguration einer USV, die nicht mit Jeedom verbunden ist</a>
-<ul class="sectlevel3">
-<li><a href="#_apcupsd_installation">3.1.1. Apcupsd Installation</a></li>
-<li><a href="#_konfiguration_der_Überwachungsadresse">3.1.2. Konfiguration der Überwachungsadresse</a></li>
-<li><a href="#_konfiguration_in_jeedom">3.1.3. Konfiguration in Jeedom</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_faq">4. FAQ</a></li>
-<li><a href="#_fehlersuche">5. Fehlersuche</a></li>
-<li><a href="#_ereignisse">6. Ereignisse</a></li>
-<li><a href="#_Änderungsprotokoll">7. Änderungsprotokoll</a>
-<ul class="sectlevel3">
-<li><a href="#_version_2017_06_15">7.1. Version 2017-06-15</a></li>
-<li><a href="#_version_1_1">7.2. Version 1.1</a></li>
-<li><a href="#_version_1">7.3. Version 1</a></li>
-</ul>
-</li>
+<li><a href="#_configuration_du_plugin">1. Configuration du plugin</a></li>
+<li><a href="#_configuration_des_équipements">2. Configuration des équipements</a></li>
+<li><a href="#_intégration_dans_un_scénario">3. Intégration dans un scénario</a></li>
+<li><a href="#_ordres_particuliers">4. Ordres particuliers</a></li>
+<li><a href="#_faq">5. FAQ</a></li>
+<li><a href="#_changelog">6. Changelog</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_apc_usv_apc_usv_Überwachung">1.1. APC-USV, APC USV Überwachung</h3>
 <div class="paragraph">
-<p>Dieses Plugin ermöglicht es, Informationen von der APC USV zu bekommen und ebenfalls über ihre Ereignisse gewarnt zu werden.</p>
+<p>Le plugin Synoaudio permet de se connecter à votre nas et de contrôler Audio Station ainsi que vos lecteurs compatibles. Il va vous permettre de voir l&#8217;état d&#8217;un lecteur et d&#8217;effectuer des actions dessus (lecture, pause, suivant, précédent, volume, choix d&#8217;une playlist&#8230;&#8203;)</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_du_plugin">1. Configuration du plugin</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Il utilise apcupsd en dépendance (installer pendant l&#8217;activation du plugin) et permet de gérer un onduleur APC en USB ou distant.</p>
-</div>
-<div class="paragraph">
-<p>Die bereitgestellten Informationen sind :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Last : die % Last der USV bezogen auf seine Leistung</p>
-</li>
-<li>
-<p>Batterie : die % der Batterieladung der USV</p>
-</li>
-<li>
-<p>Courant Entrant : la tension du courant d&#8217;alimentation de l&#8217;onduleur</p>
-</li>
-<li>
-<p>Modell : das USV Modell</p>
-</li>
-<li>
-<p>Status : der Status der USV</p>
-</li>
-<li>
-<p>Batterielaufzeit : verfügbare Backup-Zeit</p>
-</li>
-<li>
-<p>Batterie Spannung : Batterie Spannung</p>
-</li>
-<li>
-<p>Evènement : tout évènement détecté par le service apcupsd qui est transmit en push à Jeedom</p>
-</li>
-</ul>
+<p>Après téléchargement du plugin, il faut activer celui-ci:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/apcups1.png" alt="Image du produit">
+<img src="../images/synovideo.png" alt="synovideo">
 </div>
 </div>
 <div class="paragraph">
-<p>Sie können APC USV-Anlagen zum Beispiel über diesen Link finden :</p>
+<p>Renseignez l&#8217;adresse IP ou DNS et le port de votre nas hébergeant Synology VideoStation, l&#8217;utilisateur et le mot de passe pour se connecter. Le mode sécurisé permet de passer les requêtes en https (Verifier que le port soit bien le port https). Dans un premier temps vous devrez sauvegarder et ensuite vous pourrez lancer une découverte des lecteurs compatibles avec VideoStation.(Veillez à ce que vos lecteurs soient allumés pour qu&#8217;ils soient découverts)</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://amzn.to/2hWtxJ4">Onduleur APC 400 prises FR</a></p>
-</li>
-</ul>
-</div>
-<hr>
+<div class="paragraph">
+<p>Ensuite rendez-vous dans l&#8217;onglet du plugin pour affecter un objet(pièce) à vos lecteurs et sauvegardez.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
+<h2 id="_configuration_des_équipements">2. Configuration des équipements</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_plugin_konfiguration">2.1. Plugin Konfiguration</h3>
-<div class="sect3">
-<h4 id="_allgemeine_konfiguration">2.1.1. Allgemeine Konfiguration</h4>
 <div class="paragraph">
-<p>Das Plugin enthält keine allgemeine Konfiguration.</p>
-</div>
-<div class="paragraph">
-<p>A noter que lorsque le plugin est activé, il effectue deux actions :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Installation et configuration de apcupsd pour gérer un onduleur USB</p>
-</li>
-<li>
-<p>Création d&#8217;un équipement pour déclarer l&#8217;onduleur USB créé</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_konfiguration_von_geräten">2.1.2. Konfiguration von Geräten</h4>
-<div class="paragraph">
-<p>Comme indiqué plus haut, un premier équipement est créé à l&#8217;activation. Il est fonctionnel pour un onduleur USB local.</p>
-</div>
-<div class="paragraph">
-<p>Vous pouvez ajouter d&#8217;autres équipements si vous disposez d&#8217;autres onduleurs sur le réseau par exemple.</p>
-</div>
-<div class="paragraph">
-<p>Das Plugin ist in der Kategorie Monitoring.</p>
+<p>La configuration des players est accessible à partir du menu plugin :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/apcups2.png" alt="Image du produit">
+<img src="../images/synovideo1.png" alt="synovideo1">
 </div>
 </div>
 <div class="paragraph">
-<p>Parameter</p>
+<p>Voilà à quoi ressemble la page du plugin (ici avec déjà 1 player) :</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/synovideo2.png" alt="synovideo2">
+</div>
 </div>
 <div class="paragraph">
-<p>Das Gerät verfügt über 3 Parameter :</p>
+<p>Affectez un objet (pièce) à vos lecteurs (si ce n&#8217;est pas fait en automatique), une couleur (si besoin) et le type d&#8217;affichage. Ensuite ,sauvegardez.
+La fonction 'nettoyage plugin' permet de supprimer les vignettes des films et des séries, elle est accessible depuis le panneau du plugin et par une commande.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Adresse : die Verbindungsadresse, um die APC-Informationen zu erhalten (Standard 127.0.0.1)</p>
-</li>
-<li>
-<p>Port : Port des empfangsbereiten Apcupsd Dienstes (Standard 3551)</p>
-</li>
-<li>
-<p>Leistung : die Leistung der USV (notwendig, um Zugriff zum Verbrauch zu haben)</p>
-</li>
-</ul>
+<div class="imageblock">
+<div class="content">
+<img src="../images/synovideo3.png" alt="synovideo3">
 </div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Les lecteurs s&#8217;activent ou se désactivent automatiquement en fonction de leur disponibilités, la tuile se grise et devient inerte.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_intégration_dans_un_scénario">3. Intégration dans un scénario</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Attention : il faut bien saisir une adresse ip et pas un nom pour l&#8217;adresse, celle ci est utilisée pour identifier qui émet un event en push</p>
+<p>Toutes les actions sont disponibles via scénario, exemple :</p>
 </div>
-<div class="paragraph">
-<p>Pour la puissance, elle est facilement identifiable dans le nom du modèle (Back-Up 550 USB par exemple, 550 est la puissance)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_verwendung">2.1.3. Verwendung</h4>
-<div class="paragraph">
-<p>L&#8217;équipement dispose d&#8217;un widget associé pour le tableau de bord.</p>
-</div>
-<div class="paragraph">
-<p>La consommation est disponible pour être intégrée dans le plugin Energie par exemple via un calcul entre la charge et la puissance de l&#8217;onduleur.</p>
-</div>
-<div class="paragraph">
-<p>L&#8217;information event sera utile pour déclencher des scénarios, ainsi que le statut.</p>
-</div>
-<div class="paragraph">
-<p>La durée de batterie peut être un bon complément dans les scénarios déclenchés sur statut par exemple.</p>
-</div>
-<hr>
+<div class="imageblock">
+<div class="content">
+<img src="../images/synovideo4.png" alt="synovideo4">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konfiguration_einer_netzwerk_usv">3. Konfiguration einer Netzwerk USV</h2>
+<h2 id="_ordres_particuliers">4. Ordres particuliers</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_konfiguration_einer_usv_die_nicht_mit_jeedom_verbunden_ist">3.1. Konfiguration einer USV, die nicht mit Jeedom verbunden ist</h3>
-<div class="sect3">
-<h4 id="_apcupsd_installation">3.1.1. Apcupsd Installation</h4>
 <div class="paragraph">
-<p>Apcupsd muss natürlich installiert sein, über dieses wird abgefragt</p>
-</div>
-<div class="paragraph">
-<p>Deshalb installieren Sie es über die entsprechende Methode für Ihr System</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_konfiguration_der_Überwachungsadresse">3.1.2. Konfiguration der Überwachungsadresse</h4>
-<div class="paragraph">
-<p>In der Datei /etc/apcupsd/apcupsd.conf müssen Sie den NISIP-Parameter prüfen, damit es wirklich die Adresse des Gerätes in dem Netzwerk und nicht 127.0.0.1 ist (das nicht abrufbar wäre).</p>
-</div>
-<div class="paragraph">
-<p>NISIP 192.168.0.100</p>
-</div>
-<div class="sect4">
-<h5 id="_Änderung_von_apccontrol_um_den_push_zu_aktivieren">Änderung von apccontrol, um den push zu aktivieren</h5>
-<div class="paragraph">
-<p>In der Datei /etc/apcupsd/apccontrol, müssen Sie am Anfang eine Zeile hinzufügen, um Jeedom auf ein Ereignis zu rufen.</p>
-</div>
-<div class="paragraph">
-<p>Die Kopie, die auf Jeedom vorhanden ist.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_konfiguration_in_jeedom">3.1.3. Konfiguration in Jeedom</h4>
-<div class="paragraph">
-<p>Jetzt ist dort nur noch, ein Gerät hinzuzufügen und die Adresse einzugeben, die Sie in der Konfiguration eingetragen haben.</p>
-</div>
-<hr>
-</div>
+<p>Dans les scénarios, vous avez accès a des commandes particulières :
+	&#8594; 'Ordre' : Permet de demander a jeedom de chercher et de mettre en lecture un film ou une serie en fonction d&#8217;un ou plusieurs mots (Attention à l&#8217;orthographe).
+	&#8594; 'Tache' : Permet de réduire la charge de jeedom et du NAS en stoppant la tache programmé (cron).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq">4. FAQ</h2>
+<h2 id="_faq">5. FAQ</h2>
 <div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Stützt sich das Plugin auf APIs Dritter ?</div><div class="content">
-<div class="paragraph">
-<p>Das Plugin benutzt apcupsd, um Informationen zurück zugewinnen.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Lenteur de jeedom et/ou du Nas depuis que le plugin est installé </dt>
+<dd>
+<p>Le plugin fait des appels réguliers au nas pour remonter toutes les informations utiles. Il est possible de modifier le paramètre de la tache planifiée, Général &#8594; Administration &#8594; Moteur de tâches et sur la tâche synoaudio, pull : changer la valeur dans la colonne Démon (Valeur en secondes, c&#8217;est l&#8217;intervalle entre deux taches).</p>
+</dd>
+<dt class="hdlist1">J&#8217;ai configurer mon plugin mais j&#8217;ai l&#8217;erreur "200 : SyntaxError: Unexpected end of input" </dt>
+<dd>
+<p>C&#8217;est une erreur générique, il faut aller dans l&#8217;onglet logs de Jeedom pour avoir plus de détail.
+Plusieurs pistes peuvent être explorer :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Vérifier que votre utilisateur / mot de passe soient corrects,</p>
+</li>
+<li>
+<p>Vérifier les droits de votre utilisateur sur votre nas . l&#8217;utilisateur doit avoir tous les droits dans VideoStation.</p>
+</li>
+</ul>
 </div>
+</dd>
+<dt class="hdlist1">Les panels sont long à s&#8217;afficher </dt>
+<dd>
+<p>Lors de la premiere execution, le panel va chercher toutes les vignettes des Films et des séries. Il faut un certain temps pour les charger.</p>
+</dd>
+<dt class="hdlist1">Le panel de recherche est lent </dt>
+<dd>
+<p>L&#8217;affichage du panel se fait une fois toutes les recherche de vidéo terminé films, series, vidéo perso et enregistrement TV.</p>
+</dd>
+</dl>
 </div>
-</div>
-<hr>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_fehlersuche">5. Fehlersuche</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Ich bekomme keine Informationen, die zurückreichen</div><div class="content">
-<div class="paragraph">
-<p>Il faut bien créer un équipement et remplir les informations.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ereignisse">6. Ereignisse</h2>
+<h2 id="_changelog">6. Changelog</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Hier ist die Liste der Ereignisse, die die APC USV senden kann.</p>
+<p>A venir
+X Mise en lecture dans un nouvel onglet
+X Action secondaire
+X Panel de liste des films, serie et &#8230;&#8203;</p>
 </div>
-<div class="openblock panel">
-<div class="title">annoyme</div><div class="content">
 <div class="paragraph">
-<p>When a shutdown is scheduled, and the time specified on the ANNOYME directive in the apcupsd.conf file expires, this event is generated.</p>
+<p>0.3
+Correction pour les lecteurs ne prenant pas en charge le changement de volume
+Ajout des temps pour lors de la lecture</p>
 </div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">changeme</div><div class="content">
 <div class="paragraph">
-<p>When apcupsd detects that the mains are on, but the battery is not functioning correctly, this event is generated. It is repeated every x hours.</p>
+<p>0.2
+Prise en charge HTTPS
+Changement des limites d&#8217;affichage Panel de liste à 10000, Panel recherche à 100 par type
+Liste Alphabétique : Ajout Classement par lettre
+Résolution problème de mise en lecture
+Click sur la vignette pour avoir les infos
+Correction vignette sur le dashboard
+Ajout bouton pour volume
+Remplacement barre volume par Positionnement dans le film</p>
 </div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">commfailure</div><div class="content">
 <div class="paragraph">
-<p>This event is generated each time the communications line with the computer is severed. This event is not detected on dumb signaling UPSes.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">commok</div><div class="content">
-<div class="paragraph">
-<p>After a commfailure event is issued, when the communications to the computer is re-established, this event will be generated.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">doreboot</div><div class="content">
-<div class="paragraph">
-<p>This event is depreciated and should not be used.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">doshutdown</div><div class="content">
-<div class="paragraph">
-<p>When the UPS is running on batteries and one of the limits expires (time, run, load), this event is generated to cause the machine to shutdown.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">emergency</div><div class="content">
-<div class="paragraph">
-<p>Called for an emergency system shutdown. (What triggers such a shutdown is unclear&#8230;&#8203;) After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">failing</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the UPS is running on batteries and the battery power is exhausted. The event following this one will be a shutdown.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">loadlimit</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the battery charge is below the low limit specified in the apcupsd.conf file. After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">powerout</div><div class="content">
-<div class="paragraph">
-<p>This event is generated immediately when apcupsd detects that the UPS has switched to batteries. It may be due to a short powerfailure, an automatic selftest of the UPS, or a longer powerfailure.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">onbattery</div><div class="content">
-<div class="paragraph">
-<p>This event is generated 5 or 6 seconds after an initial powerfailure is detected. It means that apcupsd definitely considers the UPS to be on batteries. The onset of this event can be delayed by the ONBATTERYDELAY apcupsd.conf configuration directive.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">offbattery</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the mains return only if the onbattery event has been generated.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">mainsback</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the mains power returns after a powerout condition. The shutdown event may or may not have been generated depending on the parameters you have defined and the length of the power outage.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">remotedown</div><div class="content">
-<div class="paragraph">
-<p>This event is generated on a slave machine when it detects either that the master has shutdown, or that a onbattery situation exists and the communications line has been severed.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">runlimit</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the MINUTES value defined in the apcupsd.conf file expires while in a power fail condition. The MINUTES is the remaining runtime as internally calculated by the UPS and monitored by apcupsd. After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">timeout</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the TIMEOUT value defined in the apcupsd.conf file expires while in a power fail condition. It indicates that the total time in a power failure has been exceeded and the machine should be shutdown. After completing this event, apcupsd will immediately initiate a doshutdown event.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">startselftest</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when apcupsd detects a self test by the UPS. Normally due to the 6 second onbattery delay default time, self test events are not detected.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">endselftest</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when the end of a self test is detected.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">battdetach</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when apcupsd detects that the UPS battery has been disconnected.</p>
-</div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">battattach</div><div class="content">
-<div class="paragraph">
-<p>This event is generated when apcupsd detects that the UPS battery has been reconnected after a battdetach event.</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_Änderungsprotokoll">7. Änderungsprotokoll</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_version_2017_06_15">7.1. Version 2017-06-15</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Fonctionnalités</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ajout de la remonté du niveau de batterie de l&#8217;onduleur dans la page "Batteries" de Jeedom</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Améliorations</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Refonte du système de lecture des valeurs de l&#8217;onduleur</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Bug Fixes</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Correction d&#8217;un bug de remonté des events</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_version_1_1">7.2. Version 1.1</h4>
-<div class="paragraph">
-<p>Die Umstellung auf das Abhängigkeitssystem 2.0</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_version_1">7.3. Version 1</h4>
-<div class="paragraph">
-<p>Erstellung des Plugins</p>
-</div>
+<p>0.1
+Première version bêta</p>
 </div>
 </div>
 </div>
