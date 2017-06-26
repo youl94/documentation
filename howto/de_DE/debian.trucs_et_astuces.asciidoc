@@ -70,4 +70,11 @@ apt-get dist-upgrade
 ----
 
 [IMPORTANT]
-Stretch n'est pas une version stable de Debian, en cas de soucis l'équipe Jeedom pourra refuser toute demande de support
+Si vous passez de jessie à Stretch sans refaire l'installation de Jeedom il faut desactiver le private tmp d'apache sinon Jeedom ne marchera pas : 
+
+----
+rm /etc/systemd/system/multi-user.target.wants/apache2.service
+cp /lib/systemd/system/apache2.service /etc/systemd/system/multi-user.target.wants/
+sed -i 's/PrivateTmp=true/PrivateTmp=false/g' /etc/systemd/system/multi-user.target.wants/apache2.service
+----
+

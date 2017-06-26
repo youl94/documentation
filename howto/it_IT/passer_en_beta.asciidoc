@@ -28,7 +28,7 @@ Le passage d'une version stable à une version bêta est risqué (nous ne garant
 
 == Passer les plugins en bêta
 
-Pour cela, il faut vous rendre sur le market Jeedom, puis dans votre profil, partie "Mes Jeedoms", cocher la case pour avoir accès aux plugins en version bêta bêta.
+Pour cela, il faut vous rendre sur le market Jeedom, puis dans votre profil, partie "Mon Profil", cocher la case pour avoir accès aux plugins en version bêta.
 
 Ensuite, dans votre Jeedom, sur les fiches des plugins, vous devriez voir un bouton "installer bêta".
 
