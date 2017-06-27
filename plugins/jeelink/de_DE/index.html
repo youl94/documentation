@@ -417,11 +417,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_jeelink">1. Jeelink</a>
 <ul class="sectlevel2">
-<li><a href="#_description">1.1. Description</a></li>
+<li><a href="#_beschreibung">1.1. Beschreibung</a></li>
 </ul>
 </li>
 <li><a href="#_principe_de_fonctionnement">2. Principe de fonctionnement</a></li>
-<li><a href="#_configuration_du_plugin">3. Configuration du plugin</a></li>
+<li><a href="#_plugin_konfiguration">3. Plugin Konfiguration</a></li>
 <li><a href="#_configuration_des_jeedoms_cibles">4. Configuration des Jeedoms Cibles</a></li>
 <li><a href="#_affectiation_des_équipements">5. Affectiation des équipements</a></li>
 <li><a href="#_les_équipements_mes_jeelinks">6. Les équipements "Mes jeelinks"</a>
@@ -429,7 +429,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_modification_du_jeedom_source_d_un_jeelink">6.1. Modification du Jeedom Source d&#8217;un JeeLink</a></li>
 <li><a href="#_migration_ancien_mode_esclave">6.2. Migration ancien mode Esclave</a></li>
 <li><a href="#_faq">6.3. FAQ</a></li>
-<li><a href="#_changelog">6.4. Changelog</a></li>
+<li><a href="#_Änderungsprotokoll">6.4. Änderungsprotokoll</a></li>
 </ul>
 </li>
 </ul>
@@ -440,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_jeelink">1. Jeelink</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_description">1.1. Description</h3>
+<h3 id="_beschreibung">1.1. Beschreibung</h3>
 <div class="paragraph">
 <p>Plugin servant à lier 2 Jeedoms</p>
 </div>
@@ -451,12 +451,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_principe_de_fonctionnement">2. Principe de fonctionnement</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Le Plugin <em>Jeedom Link</em> permet la remontée d&#8217;équipement d&#8217;un Jeedom sur un autre.</p>
+<p>Le plugin <em>Jeedom Link</em> (aussi appelé jeelink) permet la remontée d&#8217;un ou plusieurs équipement(s) d&#8217;un Jeedom sur un autre.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/jeelink1.png" alt="jeelink1">
 </div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Il faut que le plugin soit installé sur les tous les Jeedoms, Source et Cible.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -465,12 +477,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Pour une bonne compréhension, il est important d&#8217;apréhender les termes suivants :<br>
+Pour une bonne compréhension, il est important d&#8217;appréhender les quelques termes suivants :<br>
 <br>
-<strong>Jeedom Source</strong> : serveur Jeedom sur lequel est présent les équipements à remonter sur le <strong>Jeedom Cible</strong><br>
+<strong>Jeedom Source</strong> : serveur Jeedom sur lequel sont présents les équipements à remonter sur le <strong>Jeedom Cible</strong><br>
 <br>
 <strong>Jeedom Cible</strong> : serveur Jeedom qui recevra les équipements remontés par le(s) <strong>Jeedom(s) Source(s)</strong><br>
-Le <strong>Jeedom Cible</strong> centralisera ces équipements et ceux de tous les <strong>Jeedom(s) Source(s)</strong> configuré(s).<br>
+Le <strong>Jeedom Cible</strong> centralisera ces équipements et ceux de tous le(s) <strong>Jeedom(s) Source(s)</strong> configuré(s).<br>
 <br>
 <strong>Affectation</strong> : configuration effectuée côté du <strong>Jeedom Source</strong> pour inclure les équipements qui seront remontés sur le <strong>Jeedom Cible</strong>
 </td>
@@ -496,10 +508,10 @@ Pour une meilleure lecture et compréhension de ce tutoriel :<br>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration_du_plugin">3. Configuration du plugin</h2>
+<h2 id="_plugin_konfiguration">3. Plugin Konfiguration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Après installation il vous suffit d&#8217;activer le plugin, celui-ci ne nécessite aucune configuration.</p>
+<p>Après installation, il vous suffit d&#8217;activer le plugin. Celui-ci ne nécessite aucune configuration spécifique.</p>
 </div>
 </div>
 </div>
@@ -527,7 +539,7 @@ Pour une meilleure lecture et compréhension de ce tutoriel :<br>
 <p>La clé API du <strong>Jeedom Cible</strong>.</p>
 </li>
 <li>
-<p>indiquer si la communication est interne ou externe (c&#8217;est utilisé pour le retour d&#8217;informations, du <strong>Jeedom Source</strong> vers le <strong>Jeedom Source</strong>).
+<p>Indiquer si la communication est interne ou externe (utilisée pour le retour d&#8217;informations, du <strong>Jeedom Source</strong> vers le <strong>Jeedom Cible</strong>).
 Et sauvegarder la configuration.</p>
 </li>
 </ul>
@@ -544,19 +556,7 @@ Et sauvegarder la configuration.</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Il faut ABSOLUMENT que les configurations réseaux de tous les Jeedoms soient OK sinon le plugin ne fonctionnera pas.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Il faut que le plugin soit installé sur les tous les Jeedoms.
+Il faut <strong>ABSOLUMENT</strong> que les configurations réseaux de tous les Jeedoms (Source et Cible) soient OK sinon le plugin ne fonctionnera pas.
 </td>
 </tr>
 </table>
@@ -616,7 +616,7 @@ La suppression de l&#8217;équipement sur la page de configuration des <strong>J
 <h2 id="_les_équipements_mes_jeelinks">6. Les équipements "Mes jeelinks"</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Après avoir rafraîchit la page <em>Mes JeeLinks</em> du <strong>Jeedom Cible</strong>, vous devez constater la création automatique de l&#8217;équipement :</p>
+<p>Après avoir rafraîchi la page <em>Mes JeeLinks</em> du <strong>Jeedom Cible</strong>, vous devez constater la création automatique de l&#8217;équipement :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -643,7 +643,7 @@ Mais aussi</p>
 <div class="sect2">
 <h3 id="_modification_du_jeedom_source_d_un_jeelink">6.1. Modification du Jeedom Source d&#8217;un JeeLink</h3>
 <div class="paragraph">
-<p>Les 3 paramètres suivants vous permettent de changer le Jeedom source comme par exemple lors du remplacement d&#8217;un Jeedom sans perdre les données (historique par exemple). Pour cela, il vous suffit de mettre la nouvelle adresse et clef API du Jeedom Source et de changer les identifiants de l&#8217;équipement et des commandes (vous les trouverez dans la configuration avancée de ceux-ci en cliquant sur la roue crantée).</p>
+<p>Les 3 paramètres suivants vous permettent de changer le Jeedom Source, par exemple lors du remplacement d&#8217;un Jeedom sans perdre les données (historique par exemple). Pour cela, il vous suffit de mettre la nouvelle adresse et clef API du Jeedom Source et de changer les identifiants de l&#8217;équipement et des commandes (vous les trouverez dans la configuration avancée de ceux-ci en cliquant sur la roue crantée).</p>
 </div>
 <div class="ulist">
 <ul>
@@ -662,7 +662,7 @@ Mais aussi</p>
 <div class="sect2">
 <h3 id="_migration_ancien_mode_esclave">6.2. Migration ancien mode Esclave</h3>
 <div class="paragraph">
-<p>Un tutoriel est disponible, <a href="https://github.com/jeedom/doc-howto/blob/master/doc/fr_FR/jeelink.migration.asciidoc">ici</a> précisant la procédure à suivre pour effectuer la migration d&#8217;un Jeedom Esclave vers le nouveau mode de fonctionnement Jeedom Link.</p>
+<p>Un tutoriel est disponible, <a href="https://jeedom.github.io/documentation/howto/fr_FR/jeelink.migration.html">ici</a> précisant la procédure à suivre pour effectuer la migration d&#8217;un Jeedom Esclave vers le nouveau mode de fonctionnement Jeedom Link.</p>
 </div>
 <hr>
 </div>
@@ -674,7 +674,7 @@ Mais aussi</p>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_changelog">6.4. Changelog</h3>
+<h3 id="_Änderungsprotokoll">6.4. Änderungsprotokoll</h3>
 <div class="paragraph">
 <p>2016-09-13 19:06:10
 Kategorie Auswahl hinzugefügt</p>
