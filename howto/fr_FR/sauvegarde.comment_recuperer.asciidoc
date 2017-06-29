@@ -20,10 +20,10 @@ Pour se connecter à votre box, il suffit de renseigner les champs d'information
 
 image::../images/restore-filezilla01.jpg[align="center"]
 
-Hôte : Adresse IP de Jeedom (sftp:// est rajouté automatiquement)
-Identifiant : jeedom
-Mot de passe : Mjeedom96
-Port : 22
+* Hôte : Adresse IP de Jeedom (sftp:// est rajouté automatiquement)
+* Identifiant : jeedom
+* Mot de passe : Mjeedom96
+* Port : 22
 
 Puis de cliquer sur "Connexion rapide"
 
