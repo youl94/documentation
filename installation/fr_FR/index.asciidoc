@@ -15,5 +15,5 @@ include::synology.asciidoc[]
 include::docker.asciidoc[]
 
 '''
-== Autre
+== Autre/DIY
 include::other.asciidoc[]
