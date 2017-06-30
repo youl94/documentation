@@ -8,13 +8,13 @@ La procédure va permettre de se connecter en SFTP à votre box afin d'aller ré
 Attention, afin que cette procédure fonctionne, il est nécessaire que le serveur ssh de la box soit toujours fonctionnel. 
 
 
-== 1. Installation de Filezilla
+== Installation de Filezilla
 
 Filezilla est un logiciel gratuit et disponible sur toutes les plateformes. Il permet de transférer des fichiers via différents protocoles (FTP, FTPS, SFTP...)
 Il est téléchargeable via ce lien : https://filezilla-project.org/download.php?type=client
 
 
-== 2. Connexion à la box
+== Connexion à la box
 
 Pour se connecter à votre box, il suffit de renseigner les champs d'information en haut de la fenetre Filezilla :
 
@@ -27,7 +27,7 @@ image::../images/restore-filezilla01.jpg[align="center"]
 
 Puis de cliquer sur "Connexion rapide"
 
-== 3. Navigation vers le répertoire de sauvegarde
+== Navigation vers le répertoire de sauvegarde
 
 Une fois la connexion établie, il est néssaire de se rendre dans le répertoire de sauvegarde de Jeedom.
 
@@ -40,7 +40,7 @@ Le chemin d'accès se rentre dans la partie site distant.
 
 image::../images/restore-filezilla02.jpg[align="center"]
 
-== 4. Téléchargement du backup
+== Téléchargement du backup
 
 Sur la liste des backups, en faisant un clic droit, il est possible de lancer le téléchargement du backup.
 
