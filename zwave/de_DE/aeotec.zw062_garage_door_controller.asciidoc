@@ -1,5 +1,5 @@
 :icons:
-== Aeotec Contrôleur de porte de garage
+== Aeotec Garagentorsteuerung 
 
 {nbsp} +
 

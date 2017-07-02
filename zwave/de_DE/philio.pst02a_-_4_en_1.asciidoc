@@ -1,5 +1,5 @@
 :icons:
-== Philio PST02 A - 4 en 1
+== Philio PST02 A - 4 in 1
 
 {nbsp} +
 
@@ -51,7 +51,7 @@ Un contrôleur Z-Wave (télécommande, dongle ...) est nécessaire afin d'intég
 * Autoprotection
 * Indication de batterie faible
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

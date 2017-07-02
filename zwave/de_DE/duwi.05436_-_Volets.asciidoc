@@ -1,4 +1,4 @@
-== DUWI 05436 "Volet roulant"
+== DUWI 05436 "Rolladen"
 
 {nbsp} +
 
@@ -41,7 +41,7 @@ Attention: ce module n'envoie pas son état au contrôleur z-wave lorsque l'util
 
 {nbsp} +
 
-* Montée / descente
+* Auf / Ab
 * Un fil commun qui sera commuté sur montée ou descente
 * Nécessite le neutre pour fonctionner
 * Protection par fusible

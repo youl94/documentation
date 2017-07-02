@@ -2,7 +2,7 @@ Nous allons voir ici comment lier votre Jeedom à votre compte Market, une fois 
 
 Puis cliquez sur "Mise à jour et fichier"
 
-Et remplir le champ "Nom d'utilisateur" et "Mot de passe" (sur la droite) en fonction de vos identifants du Market (identifiants du Market et non pas de Jeedom)
+Und die Felder „Benutzernamen“ und "Passwort" (auf der Rechte) gemäß Ihrer Market Anmeldedaten ausfüllen (die IDs des Marktes und nicht von Jeedom)
 
 image::../images/premier-linkmarket3.png[]
 

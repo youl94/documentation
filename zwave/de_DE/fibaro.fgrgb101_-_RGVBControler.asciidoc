@@ -1,5 +1,5 @@
 :icons:
-== Fibaro RGVB Controler - FGRGB-101
+== Fibaro RGBW Controller - FGRGB-101
 
 {nbsp} +
 
@@ -45,7 +45,7 @@ Le micromodule Z-Wave Fibaro FGRGB-101 permet, au choix, de commander des éclai
 * Simulation lumineuse précédemment programmée
 * Funktion AN/AUS und Variationen
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

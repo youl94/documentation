@@ -39,13 +39,13 @@ Chaque bouton permet de contrôler deux dispositifs ou scènes grâce à la gest
 
 {nbsp} +
 
-* Télécommande porte-clés
+`* Fernbedienung Tür-Schlüssel
 * Contrôleur principal ou secondaire
 * Ultra compacte et ultra design
 * 4 boutons configurables
 * Gère jusqu'à 8 périphériques/scènes
 * Volet de protection coulissant
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

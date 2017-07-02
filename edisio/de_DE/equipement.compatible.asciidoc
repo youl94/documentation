@@ -1,4 +1,4 @@
-= Liste des équipements compatible Edisio
+= Liste der  Edisio-kompatiblen Geräte
 
 [cols="3*", options="header"] 
 |===

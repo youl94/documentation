@@ -10,12 +10,12 @@ Celle-ci se décompose en plusieurs catégories : une partie pour le "coeur" de
 
 === Das Forum
 
-Disponible link:https://jeedom.com/forum[ici], le forum est très actif et contient énormément d'informations. Si vous avez une question, n'hésitez pas à la poser, vous aurez une réponse en moins d'une heure (en moyenne).
+Erhältlich link:https://jeedom.com/forum[hier], das Forum ist sehr aktiv und hat viele Informationen. Wenn Sie eine Frage haben, zögern Sie nicht zu fragen, Sie werden eine Antwort in weniger als einer Stunde (im Durchschnitt) haben.
 Attention, le forum est maintenu par la communauté Jeedom, composée de bénévoles, et non par la société Jeedom.
 
 image::../images/premier-support3.png[]
 
-=== Les demandes de support (ou tickets)
+=== Supportanfragen (oder Ticket)
 
 [IMPORTANT]
 Attention, toute demande de support nécessite obligatoirement d'avoir un compte sur le Market.

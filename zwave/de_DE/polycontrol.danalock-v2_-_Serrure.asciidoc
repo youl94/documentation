@@ -44,7 +44,7 @@ Vous recevrez un signal sonore au cas ou le niveau de chargement des piles est t
 
 Le Danalock est une serrure intelligente qui se monte sur presque toutes les portes en quelques minutes.
 
-*Facile à installer
+* Einfache Installation
 *
 
 Installez l'application Danalock sur votre téléphone en quelques secondes.
@@ -94,7 +94,7 @@ Danalock allie l'élégance et le minimalisme du design scandinave - avec une lu
 * Différentes possibilités de réglage pour la fermeture et l'ouverture
 * Partage d'accès : donnez l'accès à votre femme de ménage ou à un ami pendant une période limitée
 * Calibration automatique
-* Facile à installer
+* Einfache Installation
 * Fonctionnement avec des piles
 * Compatible avec iOS (iPhone 4s ou une version ultérieure), mais aussi Android (à partir de 4.4).
 

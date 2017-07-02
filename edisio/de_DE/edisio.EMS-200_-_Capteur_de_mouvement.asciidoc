@@ -1,4 +1,4 @@
-= Edisio EMS-200 "Capteur de mouvement"
+= Edisio EMS-200 "Bewegungssensor"
 
 * *Das Modul*
 
@@ -20,7 +20,7 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 * Ultra compact 
 * Signal transmis instantanément lors d'une détection
 * Auto-protection à l'arrachage
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 * Montage au mur par des vis ou par double face
 * Informations sur le niveau de la batterie
 
@@ -102,7 +102,7 @@ image::../images/ems200/ems200.informations.jpg[Commandes,align="center"]
 * Batterie : Indique l'état de la batterie des modules à piles
 * Status : Retourne le status du module
 
-== Visuel alternatif
+== visuelle Alternative
 
 image::../images/ems200/ems200.vue-alternative.jpg[align="center"]
 

@@ -1,4 +1,4 @@
-= Edisio EMV-400 "Volet roulant"
+= Edisio EMV-400 "Rolladen"
 
 * *Das Modul*
 

@@ -20,7 +20,7 @@ La procédure de restauration de la carte microSD peut-être utile pour restaure
 fournie par l'équipe voir https://www.jeedom.fr/doc/documentation/installation/fr_FR/doc-installation.html[ici]. 
 
 
-== Sauvegarde/Restauration de Jeedom
+== Sicherung/Wiederherstellen von Jeedom
 
 Afin de gérer et paramétrer les sauvegardes, il faut se rendre dans le menu _Général > Administration > Sauvegardes_.
 

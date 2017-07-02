@@ -1,4 +1,4 @@
-= Installation de VMware sur un NUC Intel (gen6)
+= Vmware Installation auf einem Intel-nuc (Gen6)
 
 Voici un tuto pour installer VMware sur un Intel NUC (gen6). Nous verrons par la suite comment ajouter Jeedom dessus
 

@@ -1,4 +1,4 @@
-= Edisio EMV-400 "Eclairage"
+= Edisio EMV-400 "Beleuchtung"
 
 * *Das Modul*
 
@@ -33,7 +33,7 @@ Le neutre est nécessaire que pour le mode "Volet"
 * Micromodule bidirectionnel
 * Niveau de batterie faible de l'émetteur
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 == Technische Daten
 

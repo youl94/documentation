@@ -1,5 +1,5 @@
 :icons:
-== Secure SES 302 "Température"
+== Secure SES 302 "Temperatur"
 
 {nbsp} +
 

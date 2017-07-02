@@ -1,4 +1,4 @@
-== Fibaro FGR-222 "Volet roulant"
+== Fibaro FGR-222 "Rolladen"
 
 {nbsp} +
 
@@ -50,7 +50,7 @@ Note : Ce module nécessite le neutre pour fonctionner.
 * Mise à jour sans fil avec la box Fibaro Home Center 2
 * Testfunktion der Z-Wave-Netzabdeckung
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 
 {nbsp} +
@@ -139,7 +139,7 @@ image::../images/fibaro.fgrm222/commandes2.jpg[Commandes,align="center"]
 * Up : C'est la commande qui permet d'ouvrir complétement le volet
 * Down : C'est la commande qui permet de fermer complétement le volet
 * Rafraîchir : C'est la commande qui permet de redemander la position du volet
-* Puissance : Commande permettant d'avoir la consommation du module
+* Puissance : Befehl, um den Verbrauch des Moduls zu bekommen
 * Consommation : Commande permettant de connaître la puissance instantanée utilisée par le module
 * STOP : Commande pour stopper le mouvement du volet
 * STOP BSO : Commande pour stopper le mouvement (en mode lamelle orientable)

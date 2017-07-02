@@ -33,7 +33,7 @@ L’apprentissage de la prise avec son contrôleur nécessite seulement quelqu
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

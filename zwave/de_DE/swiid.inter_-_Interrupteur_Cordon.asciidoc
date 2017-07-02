@@ -27,7 +27,7 @@ SwiidInter est le premier interrupteur sur cordon dans l'environnement domotique
 et discret pour être comparable à un interrupteur sur cordon ordinaire.
 
 Il peut être utilisé à la fois manuellement comme n'importe quel interrupteur sur cordon ordinaire et à distance via un
-contrôleur Z-Wave.
+Z-Wave Controller.
 
 L'interrupteur SwiidInter offre également des possibilités d'association et ce à double sens.
 Ainsi, il peut être actionné automatiquement par un autre périphérique Z-Wave du même réseau, comme par exemple

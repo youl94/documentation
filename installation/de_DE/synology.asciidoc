@@ -10,14 +10,14 @@ Cliquez sur tous, puis installez le paquet Docker
 
 image::../images/install_synology_2.PNG[]
 
-Attendez jusqu'à ce que l'installation soit finie : 
+Warten Sie, bis die Installation abgeschlossen ist : 
 
 image::../images/install_synology_3.PNG[]
 
 [WICHTIG]
 Pour avoir accès au paquet Docker, il faut absolument avoir DSM 5.2 et un NAS compatible
 
-=== Etape 2 : Récupération et installation des images Jeedom
+=== Schritt 2: Wiederherstellen und die Installation des Jeedom Abbilds
 
 Il faut Docker pour faire tourner Jeedom, le premier un docker Mysql qui contiendra la base de données et un 2ème qui contient Jeedom
 

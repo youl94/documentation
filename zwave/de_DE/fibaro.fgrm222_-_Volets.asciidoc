@@ -1,4 +1,4 @@
-== Fibaro FGRM-222 "Volet roulant"
+== Fibaro FGRM-222 "Rolladen"
 
 {nbsp} +
 
@@ -50,7 +50,7 @@ Note : Ce module nécessite le neutre pour fonctionner.
 * Mise à jour sans fil avec la box Fibaro Home Center 2
 * Testfunktion der Z-Wave-Netzabdeckung
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 
 {nbsp} +

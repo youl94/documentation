@@ -1,5 +1,5 @@
 :icons:
-== MCO MH-S412 Double
+== MCO MH-S412 2-Tasten
 
 {nbsp} +
 
@@ -167,7 +167,7 @@ image::../images/mco.mhs412/groupe.jpg[Groupe]
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
 1) les boutons tactiles ont un halo de couleur bleu lorsque la charge est pilotée
 

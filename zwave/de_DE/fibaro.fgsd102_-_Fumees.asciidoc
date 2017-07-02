@@ -1,5 +1,5 @@
 :icons:
-== Fibaro FGSD-002 "Smoke Sensor 2"
+== Fibaro FGSD-002 "Rauch-Sensor 2"
 
 {nbsp} +
 

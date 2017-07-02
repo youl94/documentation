@@ -49,7 +49,7 @@ Chaque module Z-Wave fonctionne comme un répéteur sans fil avec les autres mod
 * Détection automatique de la charge
 * Protégé contre les surcharges
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

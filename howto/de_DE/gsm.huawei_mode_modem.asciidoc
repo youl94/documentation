@@ -5,7 +5,7 @@ Dans 90% des cas il n'est pas nécessaire de forcer les clef GSM en mode GSM seu
 [IMPORTANT]
 Dieses Tutorial wurde auf Windows 10 gemacht.
 
-== Installation des drivers
+== Installation von Treibern
 
 Une fois la clef connecter à un PC Windows 10 vous devez avoir un nouveau lecteur CD-ROM il faut double cliquer dessus et installer le logiciel proposé (il n'y a rien à changer faites juste suivant tout le long).
 

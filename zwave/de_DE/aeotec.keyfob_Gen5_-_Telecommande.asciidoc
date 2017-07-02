@@ -43,7 +43,7 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 
 `* Fernbedienung Tür-Schlüssel
 * Contrôleur principal ou secondaire
-* Ultra compacte et ultra design
+* Ultra-kompakt und ultra-Design
 * 4 boutons configurables
 * Gère jusqu'à 8 périphériques/scènes
 * Volet de protection coulissant
@@ -52,7 +52,7 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 * Intègre la puce Z-Wave série 500
 * Communication 250% plus rapide comparée à des périphériques Z-Wave standard 
 * Optimierung der Antenne, Reichweite 100 Meter
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 
@@ -79,7 +79,7 @@ Et parce que la télécommande porte-clés Keyfob Gen5 fait partie de la gamme G
 
 * Marque : Aeotec
 * Name : ZW088 Key Fob Gen5
-* Fabricant ID : 134
+* Hersteller-ID : 134
 * Produkttyp : 1
 * Produkt-ID : 88
 

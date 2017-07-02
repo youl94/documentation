@@ -1,5 +1,5 @@
 :icons:
-== Greenwave PowerNode - 6 prises
+== Greenwave PowerNode (Funksteckdose) - 6 Steckdosen
 
 {nbsp} +
 
@@ -36,7 +36,7 @@ La multiprise PowerNode est équipée d'une protection contre les surintensités
 Cette multiprise est idéale pour contrôler des appareils multimédia dans un meuble de télévision ou pour piloter du matériel informatique situé dans un bureau et ainsi éviter d'avoir à utiliser 6 prises Z-Wave individuelles.
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 

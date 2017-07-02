@@ -1,4 +1,4 @@
-= EmonCMS avec Jeedom
+= EmonCMS mit Jeedom
 
 EmonCMS est une application PHP de supervision de l'énergie (Emon : Energy Monitor)
 

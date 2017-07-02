@@ -1,5 +1,5 @@
 :icons:
-== Fibaro Détecteur d'ouverture - FGK-101
+== Fibaro Tür-/Fenster Sensor - FGK-101
 
 {nbsp} +
 
@@ -40,7 +40,7 @@ déjà un réseau existant.
 
 {nbsp} +
 
-=== Fonctions
+=== Funktionen
 
 {nbsp} +
 
@@ -51,7 +51,7 @@ déjà un réseau existant.
 * 1 entrée filaire sans potentiel
 * 1 entrée analogique 1-Wire (pour connecter une sonde de température DS18B20)
 * Très petit, dimensions réduites
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

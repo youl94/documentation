@@ -4,7 +4,7 @@ Attention nous partons ici du principe que vous maitrisez déjà docker
 Um Jeedom zu entdecken, können Sie es auch in einem Docker-Container arbeiten lassen :
 
 [IMPORTANT]
-Prérequis : Avoir une machine ou une VM tournant sous Linux
+Voraussetzung : Mit einer Maschine oder einer unter Linux arbeitender VM 
 
 === Schritt 1 : Docker installieren 
 

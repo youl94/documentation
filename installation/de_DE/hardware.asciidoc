@@ -2,7 +2,7 @@ Jeedom kann auf verschiedenen Hardware-Komponenten installiert werden:
 
 - Ein Raspberry Pi 1 oder 2
 - Ein Jeeboard (hummingboard) i1, i2 und i4
-- un NAS Synology
+- Eine Synology NAS
 - Jedes Linux-System (Debian-basierte bevorzugt)
 
 Sie können auch eine fertige Box mit vorinstalliertem Jeedom, die zusätzlich ein Service Pack (plus Support und Service) und verfügbare Plugins verwenden: 

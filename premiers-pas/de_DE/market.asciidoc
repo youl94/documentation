@@ -10,4 +10,4 @@ Füllen Sie die verschiedenen Felder aus und bestätigen sie. Sie werden danach 
 
 image::../images/premier-market3.png[]
 
-Voila votre compte Market est créé, pour plus de details sur le market cliquez link:https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-market.html[ici]
+Ihr Markt Konto wurde geschaffen, für mehr Einzelheiten über den Markt klicken sie link:https://www.jeedom.fr/doc/documentation/core/fr_FR/doc-core-market.html[hier]

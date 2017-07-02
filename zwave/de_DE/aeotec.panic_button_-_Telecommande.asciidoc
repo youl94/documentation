@@ -42,8 +42,8 @@ Cette télécommande peut également être utilisée comme un bouton d'urgence o
 {nbsp} +
 
 `* Fernbedienung Tür-Schlüssel
-* Contrôleur principal ou secondaire
-* Ultra compacte et ultra design
+* primär oder sekundär Controller
+* Ultra-kompakt und ultra-Design
 * 1 bouton configurable
 * Gère jusqu'à 2 périphériques/scènes
 * Peut être utilisé comme un bouton d'urgence/panique
@@ -197,7 +197,7 @@ image::../images/aeotec.panicbutton/groupe.jpg[Groupe]
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
 Pour utiliser ce module en télécommande il faut procéder comme suit :
 

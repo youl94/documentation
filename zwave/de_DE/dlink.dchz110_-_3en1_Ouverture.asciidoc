@@ -1,5 +1,5 @@
 :icons:
-== D-Link DCH-Z110 - "3 en 1 Ouverture"
+== D-Link DCH-Z110 - "3 in 1 Tür/Fenster Sensor"
 
 {nbsp} +
 
@@ -65,7 +65,7 @@ image::../images/dlink.dchz110/caracteristiques_techniques.jpg[width=850,align="
 * Marque : D-Link
 * Modèle : DCH-Z110 Détecteur d’ouverture de porte et de fenêtre mydlink™ Home
 * Hersteller : FIBARO Systems
-* Fabricant ID : 264 [0x0108]
+* Hersteller-ID : 264 [0x0108]
 * Produkttyp : 2 [0x0002]
 * Produkt-ID : 14 [0x000e]
 

@@ -1,7 +1,7 @@
 = Liste der kompatiblen Blea-Geräte 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*19* [green]*marques de modules différentes, soit un total de* [red]*46* [green]*modules.*
+[green]*Derzeit ist Jeedom kompatibel mit* [red]*19* [green]*Marken mit verschiedenen Modulen, d.h. insgesamt* [red]*46* [green]*Modulen.*
 
 Andere nicht anwesende Module, auf dieser Liste, können kompatibel sein. 
 

@@ -1,5 +1,5 @@
 :icons:
-== Fibaro Motion Sensor - FGMS-001
+== Fibaro Bewegungssensor - FGMS-001
 
 {nbsp} +
 

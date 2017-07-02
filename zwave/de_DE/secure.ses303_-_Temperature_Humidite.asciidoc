@@ -1,5 +1,5 @@
 :icons:
-== Secure SES 303 "Température/Humidité"
+== Secure SES 303 "Temperatur/Feuchtigkeit"
 
 {nbsp} +
 

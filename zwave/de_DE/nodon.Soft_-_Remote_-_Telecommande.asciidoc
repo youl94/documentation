@@ -1,5 +1,5 @@
 :icons:
-== Nodon Télécommande - Soft Remote
+== Nodon Fernbedienung - Soft Remote
 
 {nbsp} +
 

@@ -1,4 +1,4 @@
-= Trucs et astuces sur VMware
+= Tipps und Tricks für VMware
 
 Pas vraiment un howto ici mais plus un recueil de trucs et astuces sur VMware
 

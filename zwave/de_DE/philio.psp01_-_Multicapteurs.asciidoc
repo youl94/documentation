@@ -61,7 +61,7 @@ si vous avez déjà un réseau existant.
 * Autoprotection
 * Indication de batterie faible
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

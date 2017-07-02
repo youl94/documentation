@@ -1,5 +1,5 @@
 :icons:
-== Everspring Miniplug On/Off - AN180-6
+== Everspring Steckdosenmodul On/Off - AN180-6
 
 {nbsp} +
 
@@ -29,7 +29,7 @@ jusqu'à 1500W (résistance), 800W (incandescence), 200W (moteur, fluorescent, L
 
 La Mini Prise On/Off est un appareil compatible Z-Wave™ qui est destiné pour fonctionner avec tous les
  réseaux compatibles Z-Wave™. Elle peut être contrôlée par une télécommande, un logiciel PC, ou n'importe quel
- contrôleur Z-Wave de votre réseau.
+ Z-Wave-Controller in Ihrem Netzwerk.
 
 {nbsp} +
 

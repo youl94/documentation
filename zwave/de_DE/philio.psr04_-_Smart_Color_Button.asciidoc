@@ -54,7 +54,7 @@ Il utilise la dernière puce Z-Wave série 500, offrant une augmentation de la p
 * Longue durée de vie de la batterie (6 mois par charge)
 * Support magnétique
 * LED d'indication RGBW
-* Facile à installer
+* Einfache Installation
 
 {nbsp} +
 

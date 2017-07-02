@@ -42,7 +42,7 @@ Il est compatible avec tout type de lampes supportant la variation ou non. En pl
 * Funktion AN/AUS und Variationen
 * Utilisation en mode 2 fils (neutre pas nécessaire)
 * Intègre la puce Z-Wave série 500
-* Communication 250% plus rapide comparé à des périphériques Z-Wave standard 
+* Kommunikation 250 % schneller im Vergleich zu standard-Z-Wave-Geräten 
 * Détection automatique de la charge
 * Protégé contre les surcharges
 * Compatible avec tous les contrôleurs Z-Wave et Z-Wave+
@@ -54,7 +54,7 @@ Il est compatible avec tout type de lampes supportant la variation ou non. En pl
 * Détecte automatiquement les défauts de câblage, température élevée, ampoule grillée, les surtensions et les surcharges
 * Optionen der erweiterten Konfiguration
 * Petit, discret et esthétique
-* Facilité d'utilisation et d'installation
+* Einfache Bedienung und Installation
 
 {nbsp} +
 

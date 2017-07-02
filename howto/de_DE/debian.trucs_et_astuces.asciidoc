@@ -8,7 +8,7 @@ Hier sind einige nützliche Pakete, die auf eine unberührte Installation nachin
 apt-get install -y vim fail2ban
 ----
 
-Si vous êtes sur VMware : 
+Wenn Sie auf VMware sind : 
 
 ----
 apt-get install -y open-vm-tools
