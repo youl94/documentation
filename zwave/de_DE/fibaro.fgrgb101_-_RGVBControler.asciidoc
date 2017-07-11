@@ -105,7 +105,7 @@ image::../images/fibaro.fgrgb101/configuration.png[Plugin Zwave,align="center"]
 
 {nbsp} +
 
-==== Commandes
+==== Befehle
 
 
 Nachdem das Modul erkannt wurde, werden die zugeordneten Modul-Befehle verfügbar sein.

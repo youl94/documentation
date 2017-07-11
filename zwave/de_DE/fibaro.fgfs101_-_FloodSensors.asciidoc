@@ -1,5 +1,5 @@
 :icons:
-== Fibaro FGFS-101 "Flood Sensor"
+== Fibaro FGFS-101 "Überflutungssensor"
 
 {nbsp} +
 

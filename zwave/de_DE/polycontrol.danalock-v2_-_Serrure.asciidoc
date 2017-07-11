@@ -107,7 +107,7 @@ Danalock allie l'élégance et le minimalisme du design scandinave - avec une lu
 {nbsp} +
 
 * Alimentation : 4 piles 3V CR123
-* Versions : V2
+* Version : V2
 * Matériau : Aluminium massif anodisé
 * Communication : Bluetooth et Z-Wave
 * Dimensions : 79 mm x 49 mm (diamètre x hauteur)

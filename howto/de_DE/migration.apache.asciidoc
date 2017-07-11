@@ -1,6 +1,6 @@
 = Migration von nginx zu Apache
 
-== Pourquoi ?
+== Warum?
 
 - Apache va devenir petit à petit la norme avec Jeedom
 - Permet d'avoir les dernières mises à jour de sécurité au niveau de l'accès aux fichiers (grâce au .htaccess) lors des mises à jour de Jeedom

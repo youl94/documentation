@@ -120,7 +120,7 @@ image::../images/secure.ses303/commandes.jpg[Commandes]
 
 * Température : c'est la commande de mesure de la température
 * Humidité : c'est la commande de mesure de l'humidité
-* Batterie : c'est la commande batterie
+* Batterie: Dies ist der Batterie-Befehl
 
 Plusieurs températures nons visibles sont aussi disponibles et seront utiles si vous avez raccordé des sondes externes
 
