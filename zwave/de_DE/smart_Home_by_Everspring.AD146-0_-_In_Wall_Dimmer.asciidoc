@@ -189,11 +189,11 @@ image::../images/smarthomebyeverspring.AD146-0/groupe.jpg[Groupe]
 A minima Jeedom devrait se retrouver dans le groupe 1
 {nbsp} +
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
@@ -201,7 +201,7 @@ A minima Jeedom devrait se retrouver dans le groupe 1
 {nbsp} +
 
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 

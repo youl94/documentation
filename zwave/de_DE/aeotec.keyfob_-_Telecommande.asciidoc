@@ -218,7 +218,7 @@ Pour utiliser ce module en télécommande il faut procéder comme suit :
 * 4 : Réveiller la télécommande et s'assurer que le changement à été pris en compte
 * 5 : Changer le mode de focntionnement de la télécommande en restant appuyer sur les deux boutons au dos pendant 3 secondes.
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

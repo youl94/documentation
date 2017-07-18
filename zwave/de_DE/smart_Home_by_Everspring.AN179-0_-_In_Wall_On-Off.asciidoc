@@ -169,7 +169,7 @@ image::../images/smarthomebyeverspring.AN179-0/config1.jpg[Config1,align="center
 
 {nbsp} +
 
-Ce module possède 2 groupes d'association.
+Dieses Modul hat 2 Assoziationsgruppen.
 
 {nbsp} +
 

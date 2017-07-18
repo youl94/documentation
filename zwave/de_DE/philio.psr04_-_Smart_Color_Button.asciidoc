@@ -224,12 +224,12 @@ Pour utiliser ce module en télécommande il faut procéder comme suit :
 
 En effet ce type de module n'est pas fait pour interagir directement avec une box mais directement avec d'autres modules. Cependant en rajoutant Jeedom au groupe 2, cela permet de recevoir la position du bouton et donc de s'en servir pour contrôller un scénario (régler un volume par exemple)
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
 
-Pour réveiller ce module il y a une seule et unique façon de procéder :
+Um dieses Modul zu wecken, gibt es eine einzige Verfahrensweise :
 
 * mettre le module en position basse et appuyer sur le bouton
 

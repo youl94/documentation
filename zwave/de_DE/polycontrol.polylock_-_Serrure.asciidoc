@@ -210,12 +210,12 @@ Sinon (forcément 5) on ouvre la porte à clé et 2 minutes après on la referme
 
 {nbsp} +
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 

@@ -191,7 +191,7 @@ image::../images/secure.ses302/widget1.jpg[width=350,align="center"]
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

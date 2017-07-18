@@ -213,7 +213,7 @@ Si vous voulez exclure/inclure le module sans démonter votre interrupteur, vous
 
 {nbsp} +
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 

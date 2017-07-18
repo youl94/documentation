@@ -195,11 +195,11 @@ Ce groupe est généralement utilisé pour reporter des informations de la Smart
 A minima Jeedom devrait se retrouver dans le groupe 1
 {nbsp} +
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
@@ -207,7 +207,7 @@ A minima Jeedom devrait se retrouver dans le groupe 1
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

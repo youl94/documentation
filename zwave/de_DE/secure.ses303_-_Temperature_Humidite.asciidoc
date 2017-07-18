@@ -182,11 +182,11 @@ image::../images/secure.ses303/groupe.jpg[Groupe]
 
 {nbsp} +
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -194,7 +194,7 @@ image::../images/secure.ses303/widget1.jpg[width=350,align="center"]
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

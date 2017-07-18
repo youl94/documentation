@@ -203,7 +203,7 @@ Ce module est très capricieux sur les wakeup et nécessite une très forte prox
 
 {nbsp} +
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -211,7 +211,7 @@ image::../images/fibaro.fgk101-DS18B20/vuewidget.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

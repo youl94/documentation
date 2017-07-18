@@ -225,7 +225,7 @@ Pour réveiller ce module il y a une seule et unique façon de procéder :
 
 
 [panel,primary]
-.J'ai l'impression que le module ne se réveille pas.
+.Ich habe den Eindruck, daß das Modul nicht aufwacht.
 --
 Ce module se réveille en restant appuyer 3 secondes sur le bouton LEARN.
 --

@@ -155,7 +155,7 @@ image::../images/philio.psp01/commandes.jpg[Commandes,align="center"]
 * Température : c'est la commande qui permet de remonter la température
 * Luminosité : c'est la commande qui permet de remonter la luminosité
 * Sabotage : c'est la commande sabotage (elle est déclenchée en cas d'arrachement)
-* Batterie : c'est la commande batterie
+* Batterie: Dies ist der Batterie-Befehl
 
 {nbsp} +
 
@@ -229,12 +229,12 @@ image::../images/philio.psp01/groupe.jpg[Groupe]
 {nbsp} +
 
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 

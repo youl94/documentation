@@ -186,7 +186,7 @@ A minima Jeedom devrait se retrouver dans le groupe 1
 * Le retour d'état ne peut pas être configuré en dessous de 3 secondes.
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

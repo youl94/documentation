@@ -169,12 +169,12 @@ Ce module possède cinq groupes d'association, seul le cinquième est indispensa
 image::../images/fibaro.fgrgb101/groupes.png[Groupe]
 
 
-=== Bon à savoir
+=== Gut zu wissen
 
 
-==== Spécificités
+==== Spezifikationen
 
-Utilisation des capteurs 0-10V.
+Benutzung der 0-10V Sensoren. 
 
 {nbsp} +
 

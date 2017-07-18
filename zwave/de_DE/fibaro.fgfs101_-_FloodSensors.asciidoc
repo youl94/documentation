@@ -204,7 +204,7 @@ image::../images/fibaro.fgfs101/groupe.jpg[Groupe]
 
 {nbsp} +
 
-=== Bon à savoir
+=== Gut zu wissen
 Alimenté par l'extérieur ce module permet de faire office de répéteur Z-wave (information non confirmée actuellement)
 
 Le cablage pour une alimentation extérieure.

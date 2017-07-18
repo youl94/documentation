@@ -209,16 +209,16 @@ image::../images/aeotec.minimote/groupe.jpg[Groupe]
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
 
-Pour réveiller ce module il y a une seule et unique façon de procéder :
+Um dieses Modul zu wecken, gibt es eine einzige Verfahrensweise :
 
-* rester appuyé 3 secondes sur le bouton LEARN
+* Bleiben Sie 3 Sekunden lang auf der LERN-Taste
 
 {nbsp} +
 

@@ -177,18 +177,18 @@ image::../images/everspring.AD147-6/groupe.jpg[Groupe]
 A minima Jeedom devrait se retrouver dans le groupe 1
 {nbsp} +
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
 * Le retour d'état ne peut pas être configuré en dessous de 3 secondes.
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

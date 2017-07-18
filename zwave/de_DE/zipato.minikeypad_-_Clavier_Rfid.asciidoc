@@ -249,7 +249,7 @@ Le keypad lit les codes/badges de deux manières :
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
