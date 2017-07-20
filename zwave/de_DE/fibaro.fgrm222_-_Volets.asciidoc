@@ -218,7 +218,7 @@ image::../images/fibaro.fgrm222/groupe.jpg[Groupe]
 {nbsp} +
 
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
@@ -244,7 +244,7 @@ Pour que le retour d'état fonctionne dans Jeedom, il est nécessaire de forcer 
 
 {nbsp} +
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -254,7 +254,7 @@ image::../images/fibaro.fgrm222/vuewidget.jpg[width=250,align="center"]
 {nbsp} +
 
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

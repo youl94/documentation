@@ -211,7 +211,7 @@ image::../images/greenwave.powernode/groupe.jpg[Groupe]
 
 {nbsp} +
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
@@ -261,7 +261,7 @@ Vous pouvez remettre à zéro votre compteur de consommation en cliquant sur ce 
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

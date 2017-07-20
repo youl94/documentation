@@ -203,7 +203,7 @@ Si vous passez par le reverse proxy du NAS la console en mode web des VMs ne fon
 Il existe aussi une application Vmware Watchlist sur Android pour avoir accès à l'ESXi ainsi qu'aux consoles des VMs
 
 
-== Certificat SSL
+== SSL-Zertifikat
 
 Il est possible d'importer les certificats de vmware directement dans votre pc pour ne plus avoir l'alerte. 
 

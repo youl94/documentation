@@ -236,7 +236,7 @@ image::../images/philio.pst02a/vuewidget.jpg[width=300,align="center"]
 {nbsp} +
 
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
@@ -254,7 +254,7 @@ Pour réveiller ce module il y a une seule et unique façon de procéder :
 
 
 [panel,primary]
-.J'ai l'impression que le module ne se réveille pas.
+.Ich habe den Eindruck, daß das Modul nicht aufwacht.
 --
 Ce module se réveille en appuyant sur son bouton tamper.
 --

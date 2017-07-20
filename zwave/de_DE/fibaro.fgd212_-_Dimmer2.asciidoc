@@ -221,7 +221,7 @@ image::../images/fibaro.fgd212/vuewidget.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

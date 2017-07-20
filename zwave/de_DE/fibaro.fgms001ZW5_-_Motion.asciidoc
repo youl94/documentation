@@ -238,12 +238,12 @@ Les noms des groupes de la version Z-Wave+ sont les suivant:
 {nbsp} +
 
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
@@ -257,7 +257,7 @@ selon vos souhaits, et de bien le réveiller pour que la config soit prise en co
 {nbsp} +
 
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -267,12 +267,12 @@ image::../images/fibaro.fgms001zw5/vuewidget.jpg[width=300,align="center"]
 {nbsp} +
 
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
 
-Pour réveiller ce module il y a une seule et unique façon de procéder :
+Um dieses Modul zu wecken, gibt es eine einzige Verfahrensweise :
 
 * appuyer 3 fois sur le bouton d'inclusion (la lumière s'allume en bleue). Même si la lumière
 s'allume, il peut être nécessaire de le faire plusieurs fois de suite (2 ou 3)

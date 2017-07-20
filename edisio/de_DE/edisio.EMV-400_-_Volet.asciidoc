@@ -200,7 +200,7 @@ C'est fait, votre Jeedom est à présent associé et sa commande "E" remplace d�
 *** Dans les 10 sec, appuyez sur une des touches "C" du nouvel émetteur à associer, un bip sonore en continu signale l'association de la sortie 1.
 *** Dans les 10 sec, appuyez à nouveau sur "Tester" de la commande "E" dans Jeedom, pour valider l'association, le bip sonore s'arrête.
 
-** Sortie 2 :
+** 2 Ausgang :
 *** Appuyez 2x sur "Tester" de la commande "E" dans Jeedom, double bip sonore (court en répétition) signale la programmation de la sortie 2 activée.
 *** Dans les 10 sec, appuyez sur une des touches "C" du nouvel émetteur à associer, un bip sonore en continu signale l'association de la sortie 2.
 *** Dans les 10 sec, appuyez à nouveau sur "Tester" de la commande "E" dans Jeedom, pour valider l'association, le bip sonore s'arrête.

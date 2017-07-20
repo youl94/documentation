@@ -228,12 +228,12 @@ image::../images/fibaro.fgms001/groupe.jpg[Groupe]
 {nbsp} +
 
 
-=== Bon à savoir
+=== Gut zu wissen
 
 {nbsp} +
 
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
@@ -247,7 +247,7 @@ selon vos souhaits, et de bien le réveiller pour que la config soit prise en co
 {nbsp} +
 
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -257,7 +257,7 @@ image::../images/fibaro.fgms001/vuewidget.jpg[width=300,align="center"]
 {nbsp} +
 
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
@@ -276,7 +276,7 @@ s'allume, il peut être nécessaire de le faire plusieurs fois de suite (2 ou 3)
 
 
 [panel,primary]
-.J'ai l'impression que le module ne se réveille pas.
+.Ich habe den Eindruck, daß das Modul nicht aufwacht.
 --
 Ce module se réveille en appuyant 3 fois sur son bouton d'inclusion.
 --

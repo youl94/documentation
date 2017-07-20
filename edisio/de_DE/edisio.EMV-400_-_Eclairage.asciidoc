@@ -195,7 +195,7 @@ Nous en avons parlé au début de cette documentation. Dans le cas, de modules d
 C'est fait, votre Jeedom est à présent associé et sa commande "E" remplace désormais le bouton "R" du récepteur.
 
 * Associer un nouvel émetteur à un récepteur avec Jeedom déjà associé :
-** Sortie 1 : 
+** 1 Ausgang : 
 *** Appuyez 1x sur "Tester" la commande "E" dans Jeedom, simple bip sonore (court en répétition) signale la programmation de la sortie 1 activée.
 *** Dans les 10 sec, appuyez sur une des touches "C" du nouvel émetteur à associer, un bip sonore en continu signale l'association de la sortie 1.
 *** Dans les 10 sec, appuyez à nouveau sur "Tester" de la commande "E" dans Jeedom, pour valider l'association, le bip sonore s'arrête.

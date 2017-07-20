@@ -248,7 +248,7 @@ si vous utilisez cette commande en déclencheur de scénario.
 {nbsp} +
 
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -258,7 +258,7 @@ image::../images/philio.psp01/vuewidget.jpg[width=300,align="center"]
 {nbsp} +
 
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 

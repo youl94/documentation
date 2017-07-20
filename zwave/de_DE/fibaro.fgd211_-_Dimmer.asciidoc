@@ -207,7 +207,7 @@ image::../images/fibaro.fgd211/groupe.jpg[Groupe]
 
 {nbsp} +
 
-==== Spécificités
+==== Spezifikationen
 
 {nbsp} +
 
@@ -222,7 +222,7 @@ d'interrupteur bi stable)
 
 {nbsp} +
 
-==== Visuel alternatif
+==== Visuelle Alternative
 
 {nbsp} +
 
@@ -230,7 +230,7 @@ image::../images/fibaro.fgd211/vuewidget.jpg[width=200,align="center"]
 
 {nbsp} +
 
-=== Wakeup
+=== Wakeup (Aufweckzeit)
 
 {nbsp} +
 
