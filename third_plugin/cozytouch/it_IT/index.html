@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Plex</title>
+<title>Cozytouch</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,177 +412,135 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
+<h1>Cozytouch</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_plex">1. Plex</a></li>
-<li><a href="#_description">Description</a>
-<ul class="sectlevel2">
-<li><a href="#_configuration_du_serveur_plex">1.1. Configuration du serveur Plex</a></li>
-<li><a href="#_configuration_des_clients_plex">1.2. Configuration des clients Plex</a></li>
-<li><a href="#_utilisation_du_widget">1.3. Utilisation du widget</a></li>
-</ul>
-</li>
+<li><a href="#_configuration_du_plugin">1. Configuration du plugin</a></li>
+<li><a href="#_recupération_des_informations_de_connexion">2. Recupération des informations de connexion</a></li>
+<li><a href="#_configuration_des_équipements">3. Configuration des équipements</a></li>
+<li><a href="#_widget">4. Widget</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_plex">1. Plex</h2>
+<div id="preamble">
 <div class="sectionbody">
-
-</div>
-</div>
-<h1 id="_description" class="sect0">Description</h1>
 <div class="paragraph">
-<p>Contrôler vos clients plex grâce a votre domotique.
-Créer des réveil, musical grâce a l&#8217;association de plex et de jeedom.</p>
+<p>Plugin permettant de piloter les radiateurs Cozytouch à travers le bridge Cozytouch</p>
 </div>
-<div class="paragraph">
-<p>Qu&#8217;est ce que PLEX?
-Plex organise vidéo, musique et photos à partir de bibliothèques de médias personnels et les cours d&#8217;eau pour les téléviseurs intelligents, des boîtes en streaming et les appareils mobiles. Il est un système de lecteur multimédia et suite logicielle composée de plusieurs applications de lecture pour les interfaces utilisateur.</p>
 </div>
-<hr>
-<div class="sect2">
-<h3 id="_configuration_du_serveur_plex">1.1. Configuration du serveur Plex</h3>
-<div class="paragraph">
-<p>The first thing is to connect Jeedom to the plex server.</p>
 </div>
+<div class="sect1">
+<h2 id="_configuration_du_plugin">1. Configuration du plugin</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Right after activation, we have the fields to set up the server.</p>
+<p>Une fois le plugin installé, il vous faut renseigner vos informations de connexion Cozytouch :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/plex_screenshot_configuration3.jpg" alt="plex screenshot configuration3">
+<img src="../images/cozytouch2.png" alt="cozytouch2">
 </div>
-</div>
-<div class="paragraph">
-<p>Remplisser donc bien les 3 champs</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Adresse ip du serveur</p>
+<p><strong>Nom d&#8217;utilisateur</strong> : nom d&#8217;utilisateur de votre compte Cozytouch</p>
 </li>
 <li>
-<p>Le port de connexion</p>
+<p><strong>Mot de passe</strong> : mot de passe de votre compte Cozytouch</p>
 </li>
 <li>
-<p>Son nom, attention de bien respecter la casse de se parametre</p>
+<p><strong>Synchroniser</strong> : permet de synchroniser Jeedom avec votre compte Cozytouch pour découvrir automatiquement vos radiateur Cozytouch. A faire après avoir sauvegardé les paramètres précedent.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recupération_des_informations_de_connexion">2. Recupération des informations de connexion</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Pour connaitre les informations liée a votre installation Plex je vous conseill d&#8217;ouvrir la page de configuration de votre server Plex</p>
+<p>Les radiateurs Cozytouch ne sont pas pilotable directement.
+En effet, le protocole permettant d&#8217;envoyer directement des commandes au radiateur est le IO Home Control (protocole fermé)
+Toutefois, Cozytouch offre la possibilité de passer par un bridge pour pouvoir controler ces radiateurs.
+Une application sur smartphone a été développer. Celle-ci envoie les commandes à un serveur Cozytouch.
+Ensuite, le bridge va requeter ce serveur Cozytouch pour connaitre les commandes qu&#8217;il doit envoyer aux radiateurs.</p>
+</div>
+<div class="paragraph">
+<p>Pour intégrer vos radiateurs dans jeedom, vous devez posséder le bridge Cozytouch et un compte créé à travers l&#8217;application sur smartphone.
+Ensuite, avec l&#8217;application Cozytouch sur smartphone, vous devez avoir créé l&#8217;ensemble de vos radiateurs et les avoir associés au bridge</p>
+</div>
+<div class="paragraph">
+<p>Une ces identifiants créés, il ne vous reste plus qu&#8217;a les renseigner dans la configuration du plugin et à cliquer sur synchroniser.
+Jeedom va alors créer tous vos équipements précédemment créés dans l&#8217;application sur smartphone</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration_des_équipements">3. Configuration des équipements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La configuration des équipements Cozytouch est accessible à partir du menu plugin :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/plex_screenshot_ServeurConfiguration.jpg" alt="plex screenshot ServeurConfiguration">
+<img src="../images/cozytouch3.png" alt="cozytouch3">
 </div>
 </div>
 <div class="paragraph">
-<p>Nota:</p>
-</div>
-<div class="paragraph">
-<p>Des indicateur de demon sont egalement présente sur cette page de configuration.
-Le demon permet de scruter l&#8217;etat de media en cours et determine si une pause et etablie sur le player.</p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_configuration_des_clients_plex">1.2. Configuration des clients Plex</h3>
-<div class="paragraph">
-<p>We&#8217;re going on the plex setting page : Plugins &gt; Multimedia &gt; Plex
-Once on this page we will be able to access our clients already set up, or add one.</p>
+<p>Voilà à quoi ressemble la page du plugin Cozytouch (ici avec déjà 1 équipement) :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/plex_screenshot_configuration1.jpg" alt="plex screenshot configuration1">
+<img src="../images/cozytouch4.png" alt="cozytouch4">
 </div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Comme à beaucoup d&#8217;endroits sur Jeedom, placer la souris tout à gauche permet de faire apparaître un menu d&#8217;accès rapide (vous pouvez à partir de votre profil le laisser toujours visible).
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Jeedom creer un équipement par "place" initialement créée dans l&#8217;application Cozytouch sur smartphone.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Vous l&#8217;aurez deviné, pour ajouté un client, il suffit de cliquer sur le bouton "Ajouter" et de nomer l&#8217;equipement dans la fenetre qui va apparaitre</p>
+<p>Une fois que vous cliquez sur un équipement vous obtenez :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/plex_screenshot_configuration2.jpg" alt="plex screenshot configuration2">
+<img src="../images/cozytouch5.png" alt="cozytouch5">
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_widget">4. Widget</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Commencer par personnalisé les paramettre général (activer, visisble, parent)
-N&#8217;oublier pas d&#8217;activer l&#8217;option "Heartbeat" pour que le demon serveille votre client.</p>
-</div>
-<div class="paragraph">
-<p>Dans la partie configuration, le plugin detecte automatiquement tous les client compatible (Aujourd&#8217;hui teste Rasplex et plex <strong>home theater.
-Vos clients doivent imperativement etre lancer et connecte au serveur plex</strong></p>
-</div>
-<div class="paragraph">
-<p>Ajouté un increment pour le volume.</p>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_utilisation_du_widget">1.3. Utilisation du widget</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plex_screenshot_widget_principal.jpg" alt="plex screenshot widget principal">
-</div>
-</div>
-<div class="paragraph">
-<p>The main screen of the widget allows the basic function</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Jump back</p>
-</li>
-<li>
-<p>Front flip</p>
-</li>
-<li>
-<p>Reculer</p>
-</li>
-<li>
-<p>Avancer</p>
-</li>
-<li>
-<p>Affichage du menu</p>
-</li>
-<li>
-<p>Lecture / Pause</p>
-</li>
-<li>
-<p>Stop</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Mais aussi de choisir le media en cliquant sur les affiche arrier
-Il permet egalment d&#8217;acceder aux diferents menus</p>
+<p>Voici le widget sur le dashboard, ici la partie présence :</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/plex_screenshot_widget_Télécommande.jpg" alt="plex screenshot widget Télécommande">
+<img src="../images/cozytouch6.png" alt="cozytouch6">
 </div>
 </div>
-<div class="paragraph">
-<p>A droite la télécommande qui permet de naviger directemetn sur votre ecran</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plex_screenshot_widget_Liste.jpg" alt="plex screenshot widget Liste">
-</div>
-</div>
-<div class="paragraph">
-<p>Le menu de gauche permet des selectioner une librairie et leur media associé.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/plex_screenshot_widget_Detail.jpg" alt="plex screenshot widget Detail">
-</div>
-</div>
-<div class="paragraph">
-<p>Mais aussi le detail du media</p>
 </div>
 </div>
 </div>
