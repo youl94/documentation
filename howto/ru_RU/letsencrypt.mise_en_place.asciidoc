@@ -99,9 +99,40 @@ Le renouvellement se fait avec la commande :
 Vous recevez un mail automatiquement à l'arrivée à échéance du certificat qui vous rappellera de passer la commande
 
 === Methode automatique
-C'est quand même mieux quand c'est automatique. Le petit script ci-dessous est à schéduler dans le crontab tous les X jours. Il vérifie l'expiration du certificat et le renouvelle automatiquement si necessaire.
+C'est quand même mieux quand c'est automatique. Pour ce faire voici les étapes à suivre.
+
+Créer un fichier, son emplacement est libre
+----
+nano /bin/certletsencryptrenew.sh
+----
+
+Saisir les lignes ci-dessous dans le fichier créé précedemment. Le copier/coller fonctionne via putty.
+Ce script vérifie l'expiration du certificat et le renouvelle automatiquement si la date d'expiration est à moins de 30 jours.
 ----
 curl -L -o /usr/local/sbin/le-renew http://do.co/le-renew
 chmod +x /usr/local/sbin/le-renew
 le-renew domaine.fr
+----
+
+Sauvegarder le fichier puis quitter l'editeur de texte (nano)
+----
+ctrl+o -> Entrée     (permet de sauvegarder)
+ctrl+x -> Entrée     (permet de quitter)
+----
+
+Maintenant, on va éditer la crontab, il faut être connecté en root
+----
+crontab -e
+----
+
+On ajoute la ligne suivante /!\ Attention à bien adapter le chemin vers le script. 
+Pour comprendre la planification 0 5 * * 1, allez voir ici et ajustez la à votre besoin si nécessaire : https://crontab.guru/#0_5_*_*_1
+----
+0 5 * * 1 /bin/certletsencryptrenew.sh
+----
+
+Sauvegarder le fichier puis quitter l'éditeur de texte
+----
+ctrl+o -> Entrée
+ctrl+x -> Entrée
 ----
