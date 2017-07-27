@@ -605,13 +605,60 @@ ssl_session_timeout 5m;</pre>
 <div class="sect2">
 <h3 id="_methode_automatique">4.1. Methode automatique</h3>
 <div class="paragraph">
-<p>C&#8217;est quand même mieux quand c&#8217;est automatique. Le petit script ci-dessous est à schéduler dans le crontab tous les X jours. Il vérifie l&#8217;expiration du certificat et le renouvelle automatiquement si necessaire.</p>
+<p>C&#8217;est quand même mieux quand c&#8217;est automatique. Pour ce faire voici les étapes à suivre.</p>
+</div>
+<div class="paragraph">
+<p>Créer un fichier, son emplacement est libre</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>nano /bin/certletsencryptrenew.sh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Saisir les lignes ci-dessous dans le fichier créé précedemment. Le copier/coller fonctionne via putty.
+Ce script vérifie l&#8217;expiration du certificat et le renouvelle automatiquement si la date d&#8217;expiration est à moins de 30 jours.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>curl -L -o /usr/local/sbin/le-renew http://do.co/le-renew
 chmod +x /usr/local/sbin/le-renew
 le-renew domaine.fr</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sauvegarder le fichier puis quitter l&#8217;editeur de texte (nano)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ctrl+o -&gt; Entrée     (permet de sauvegarder)
+ctrl+x -&gt; Entrée     (permet de quitter)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Maintenant, on va éditer la crontab, il faut être connecté en root</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>crontab -e</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On ajoute la ligne suivante /!\ Attention à bien adapter le chemin vers le script.
+Pour comprendre la planification 0 5 * * 1, allez voir ici et ajustez la à votre besoin si nécessaire : <a href="https://crontab.guru/#0_5_*_*_1" class="bare">https://crontab.guru/#0_5_*_*_1</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>0 5 * * 1 /bin/certletsencryptrenew.sh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sauvegarder le fichier puis quitter l&#8217;éditeur de texte</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ctrl+o -&gt; Entrée
+ctrl+x -&gt; Entrée</pre>
 </div>
 </div>
 </div>
