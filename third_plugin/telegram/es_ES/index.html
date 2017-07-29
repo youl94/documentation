@@ -445,13 +445,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Vous pouvez l&#8217;utiliser pour envoyer des messages depuis et vers Jeedom.</p>
 </div>
 <div class="paragraph">
-<p>Telegram accepte les pièces jointes également (pour le plugin Camera par exemple)</p>
+<p>Telegram accepte les pièces jointes également (pour le plugin Camera par exemple).</p>
 </div>
 <div class="paragraph">
-<p>Il est également possible dans un message de spécifier en option "tts" ou "geoloc" pour un message</p>
+<p>Il est également possible dans un message de spécifier en option "tts" ou "geoloc" pour un message.</p>
 </div>
 <div class="paragraph">
-<p>Le plugin accepte également la fonction "ask" de Jeedom et fournira un clavier spécifique avec des touches pré-remplies des réponses</p>
+<p>Le plugin accepte également la fonction "ask" de Jeedom et fournira un clavier spécifique avec des touches pré-remplies contenant les réponses.</p>
 </div>
 <hr>
 </div>
@@ -466,10 +466,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Le plugin ne comporte pas de configuration générale.</p>
 </div>
 <div class="paragraph">
-<p>Sur la page santé, un test pour vérifier le https en connexion externe est fait. Il n&#8217;est pas possible en l&#8217;état d&#8217;utiliser un certificat autosigné.</p>
+<p>Sur la page santé, un test pour vérifier le https en connexion externe est fait. Il n&#8217;est pas possible en l&#8217;état d&#8217;utiliser un certificat auto signé.</p>
 </div>
 <div class="paragraph">
-<p>Un certificat letsencrypt fonctionne (en ayant bien paramétrer le certificat de chaine également)</p>
+<p>Un certificat letsencrypt fonctionne (en ayant bien paramétré le certificat de chaine également)</p>
 </div>
 </div>
 <div class="sect3">
@@ -512,7 +512,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_envoyer_des_messages">2.3. Envoyer des messages</h4>
 <div class="paragraph">
-<p>Les commandes actions permettent d&#8217;envoyer des messages. Il est possible de fournir des options pour les messages</p>
+<p>Les commandes actions permettent d&#8217;envoyer des messages. Il est possible de fournir des options pour les messages (dans la zone option, sous la forme option="valeur")</p>
 </div>
 <div class="ulist">
 <ul>
@@ -529,15 +529,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>message : permet d&#8217;envoyer un message dans le même ordre</p>
 </li>
 <li>
-<p>notify : valeur binaire pour que la notif soit silencieuse (0) ou avec son/vibrationn (1)</p>
+<p>disable_notification : valeur binaire pour que la notif soit silencieuse (1) ou avec son/vibrationn (0)</p>
 </li>
 <li>
-<p>parse_mode : format du message envoyé (correspon à l&#8217;option de conf équipement), valeurs possibles : '', HTML, Markdown</p>
+<p>parse_mode : format du message envoyé (correspond à l&#8217;option de conf équipement), valeurs possibles : '', HTML, Markdown</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Exemple : tts=/fichier.ogg message=detection file=/screen1.png,/screen2.png notify=0</p>
+<p>Exemple : tts=/fichier.ogg file=/screen1.png,/screen2.png notify=0</p>
 </div>
 <div class="paragraph">
 <p>Toutes les pièces jointes ajoutées à une commande action sont envoyées avec un type détecté par rapport à leur extension :</p>
@@ -554,7 +554,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>images en extensions "gif,jpeg,jpg,png"</p>
 </li>
 <li>
-<p>le reste est envoyé en tant que document joint</p>
+<p>les autres type sont envoyés en tant que pièce jointe</p>
 </li>
 </ul>
 </div>
@@ -603,6 +603,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Le 'ask' sur tous les destinataires ne marche pas</div><div class="content">
 <div class="paragraph">
 <p>C&#8217;est normal, il ne peut pas fonctionner car Telegram ne sait pas reconnaître l&#8217;utilisateur à qui on a envoyé la question de celui qui répond, il faut utiliser les groupes pour cela</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Mon utilisateur telegram n&#8217;arrive pas à communiquer avec Jeedom / Les messages n&#8217;arrivent pas dans Jeedom</div><div class="content">
+<div class="paragraph">
+<p>Merci de vérifier que vous avez bien paramétré un username dans votre profil telegram. Regarder le menu options ou settings via le menu sandwich (les 3 barres horizontales les unes sur les autres)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Set_Username_Telegram.png" alt="Set Username Telegram">
+</div>
 </div>
 </div>
 </div>
