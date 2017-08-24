@@ -425,26 +425,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_step_4_burning_the_image_on_the_sd_card">2.4. Step 4 : Burning the image on the SD card</a></li>
 </ul>
 </li>
-<li><a href="#_on_synology">3. On Synology</a>
+<li><a href="#_sur_jeedomboard_hummingboard_mini_via_un_script">3. Sur Jeedomboard (hummingboard,mini+ via un script)</a></li>
+<li><a href="#_on_synology">4. On Synology</a>
 <ul class="sectlevel2">
-<li><a href="#_step_1_installation_of_docker">3.1. Step 1 : Installation of Docker</a></li>
-<li><a href="#_etape_2_récupération_et_installation_des_images_jeedom">3.2. Etape 2 : Récupération et installation des images Jeedom</a>
+<li><a href="#_step_1_installation_of_docker">4.1. Step 1 : Installation of Docker</a></li>
+<li><a href="#_etape_2_récupération_et_installation_des_images_jeedom">4.2. Etape 2 : Récupération et installation des images Jeedom</a>
 <ul class="sectlevel3">
-<li><a href="#_mysql">3.2.1. MYSQL</a></li>
-<li><a href="#_jeedom">3.2.2. Jeedom</a></li>
+<li><a href="#_mysql">4.2.1. MYSQL</a></li>
+<li><a href="#_jeedom">4.2.2. Jeedom</a></li>
 </ul>
 </li>
-<li><a href="#_step_3_jeedom_s_configuration">3.3. Step 3 : Jeedom&#8217;s configuration</a></li>
+<li><a href="#_step_3_jeedom_s_configuration">4.3. Step 3 : Jeedom&#8217;s configuration</a></li>
 </ul>
 </li>
-<li><a href="#_docker">4. Docker</a>
+<li><a href="#_docker">5. Docker</a>
 <ul class="sectlevel2">
-<li><a href="#_step_1_installation_of_docker_2">4.1. Step 1 : Installation of Docker</a></li>
-<li><a href="#_etape_2_installation_d_une_image_mysql">4.2. Etape 2 : Installation d&#8217;une image mysql</a></li>
-<li><a href="#_etape_3_installation_d_une_image_jeedom">4.3. Etape 3 : Installation d&#8217;une image Jeedom</a></li>
+<li><a href="#_step_1_installation_of_docker_2">5.1. Step 1 : Installation of Docker</a></li>
+<li><a href="#_etape_2_installation_d_une_image_mysql">5.2. Etape 2 : Installation d&#8217;une image mysql</a></li>
+<li><a href="#_etape_3_installation_d_une_image_jeedom">5.3. Etape 3 : Installation d&#8217;une image Jeedom</a></li>
 </ul>
 </li>
-<li><a href="#_autre_diy">5. Autre/DIY</a></li>
+<li><a href="#_others_diy">6. Others/DIY</a></li>
 </ul>
 </div>
 </div>
@@ -634,13 +635,22 @@ SSH username/password are jeedom/Mjeedom96
 </div>
 </div>
 <div class="sect1">
-<h2 id="_on_synology">3. On Synology</h2>
+<h2 id="_sur_jeedomboard_hummingboard_mini_via_un_script">3. Sur Jeedomboard (hummingboard,mini+ via un script)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unresolved directive in index.asciidoc - include::Miniplushumingboard.asciidoc[]</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_on_synology">4. On Synology</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Here is the step by step documentation to install Jeedom on Synology (DSM 5.2 minimum).</p>
 </div>
 <div class="sect2">
-<h3 id="_step_1_installation_of_docker">3.1. Step 1 : Installation of Docker</h3>
+<h3 id="_step_1_installation_of_docker">4.1. Step 1 : Installation of Docker</h3>
 <div class="paragraph">
 <p>Go to packages center :</p>
 </div>
@@ -679,7 +689,7 @@ Pour avoir accès au paquet Docker, il faut absolument avoir DSM 5.2 et un NAS c
 </div>
 </div>
 <div class="sect2">
-<h3 id="_etape_2_récupération_et_installation_des_images_jeedom">3.2. Etape 2 : Récupération et installation des images Jeedom</h3>
+<h3 id="_etape_2_récupération_et_installation_des_images_jeedom">4.2. Etape 2 : Récupération et installation des images Jeedom</h3>
 <div class="paragraph">
 <p>Il faut Docker pour faire tourner Jeedom, le premier un docker Mysql qui contiendra la base de données et un 2ème qui contient Jeedom</p>
 </div>
@@ -692,7 +702,7 @@ Pour avoir accès au paquet Docker, il faut absolument avoir DSM 5.2 et un NAS c
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mysql">3.2.1. MYSQL</h4>
+<h4 id="_mysql">4.2.1. MYSQL</h4>
 <div class="paragraph">
 <p>Click "Register" :</p>
 </div>
@@ -778,7 +788,7 @@ Pour avoir accès au paquet Docker, il faut absolument avoir DSM 5.2 et un NAS c
 </div>
 </div>
 <div class="sect3">
-<h4 id="_jeedom">3.2.2. Jeedom</h4>
+<h4 id="_jeedom">4.2.2. Jeedom</h4>
 <div class="paragraph">
 <p>Click "Register" :</p>
 </div>
@@ -876,7 +886,7 @@ Pour avoir accès au paquet Docker, il faut absolument avoir DSM 5.2 et un NAS c
 </div>
 </div>
 <div class="sect2">
-<h3 id="_step_3_jeedom_s_configuration">3.3. Step 3 : Jeedom&#8217;s configuration</h3>
+<h3 id="_step_3_jeedom_s_configuration">4.3. Step 3 : Jeedom&#8217;s configuration</h3>
 <div class="paragraph">
 <p>Il vous faut maintenant installer Jeedom, c&#8217;est très simple, allez sur IP_NAS:9080</p>
 </div>
@@ -924,7 +934,7 @@ Si vous voulez un accès SSH, il vous faut dans les ports rediriger un port loca
 </div>
 </div>
 <div class="sect1">
-<h2 id="_docker">4. Docker</h2>
+<h2 id="_docker">5. Docker</h2>
 <div class="sectionbody">
 <div class="admonitionblock important">
 <table>
@@ -954,7 +964,7 @@ Prérequis : Avoir une machine ou une VM tournant sous Linux
 </table>
 </div>
 <div class="sect2">
-<h3 id="_step_1_installation_of_docker_2">4.1. Step 1 : Installation of Docker</h3>
+<h3 id="_step_1_installation_of_docker_2">5.1. Step 1 : Installation of Docker</h3>
 <div class="paragraph">
 <p>docker is now available on all recent distributions. To install on a distribution</p>
 </div>
@@ -986,7 +996,7 @@ $ apt-get install docker.io</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_etape_2_installation_d_une_image_mysql">4.2. Etape 2 : Installation d&#8217;une image mysql</h3>
+<h3 id="_etape_2_installation_d_une_image_mysql">5.2. Etape 2 : Installation d&#8217;une image mysql</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1033,7 +1043,7 @@ Vous pouvez aussi installer mysql directement sur la machine hôte, dans ce cas 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_etape_3_installation_d_une_image_jeedom">4.3. Etape 3 : Installation d&#8217;une image Jeedom</h3>
+<h3 id="_etape_3_installation_d_une_image_jeedom">5.3. Etape 3 : Installation d&#8217;une image Jeedom</h3>
 <div class="paragraph">
 <p>Installation de l&#8217;image :</p>
 </div>
@@ -1094,7 +1104,7 @@ Pour le nom de l&#8217;hote MySql il faut mettre jeedom-mysql
 </div>
 </div>
 <div class="sect1">
-<h2 id="_autre_diy">5. Autre/DIY</h2>
+<h2 id="_others_diy">6. Others/DIY</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You will find here the documentation to install Jeedom on most linux systems (tested and approved on the Debian distribution)</p>
