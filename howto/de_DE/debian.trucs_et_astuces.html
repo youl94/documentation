@@ -433,7 +433,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>apt-get install -y vim fail2ban</pre>
+<pre>apt-get install -y vim fail2ban net-tools dos2unix</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -452,7 +452,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre>rm -rf /root/.bashrc
-wget https://raw.githubusercontent.com/jeedom/core/stable/install/bashrc -O /root/.bashrc</pre>
+wget https://raw.githubusercontent.com/jeedom/core/stable/install/bashrc -O /root/.bashrc
+dos2unix /root/.bashrc</pre>
 </div>
 </div>
 </div>

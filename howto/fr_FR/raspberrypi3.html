@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Installation de Jeedom</title>
+<title>Objectif</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,120 +412,79 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Installation de Jeedom</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_matériels">1. Matériels</a></li>
-<li><a href="#_sur_jeedomboard_hummingboard_mini">2. Sur Jeedomboard (hummingboard,mini+)</a>
-<ul class="sectlevel2">
-<li><a href="#_etape_1_installation_de_etcher">2.1. Etape 1 : Installation de Etcher</a></li>
-<li><a href="#_etape_2_récupération_de_l_image_de_jeedom">2.2. Etape 2 : Récupération de l&#8217;image de Jeedom</a></li>
-<li><a href="#_etape_3_décompression_de_l_image_de_jeedom">2.3. Etape 3 : Décompression de l&#8217;image de Jeedom</a></li>
-<li><a href="#_etape_4_gravure_de_l_image_sur_la_carte_sd">2.4. Etape 4 : Gravure de l&#8217;image sur la carte SD</a></li>
-</ul>
-</li>
-<li><a href="#_sur_jeedomboard_hummingboard_mini_via_un_script">3. Sur Jeedomboard (hummingboard,mini+ via un script)</a></li>
-<li><a href="#_sur_synology">4. Sur Synology</a>
-<ul class="sectlevel2">
-<li><a href="#_etape_1_installation_de_docker">4.1. Etape 1 : Installation de Docker</a></li>
-<li><a href="#_etape_2_récupération_et_installation_des_images_jeedom">4.2. Etape 2 : Récupération et installation des images Jeedom</a>
-<ul class="sectlevel3">
-<li><a href="#_mysql">4.2.1. MYSQL</a></li>
-<li><a href="#_jeedom">4.2.2. Jeedom</a></li>
-</ul>
-</li>
-<li><a href="#_etape_3_configuration_de_jeedom">4.3. Etape 3 : Configuration de Jeedom</a></li>
-</ul>
-</li>
-<li><a href="#_docker">5. Docker</a>
-<ul class="sectlevel2">
-<li><a href="#_etape_1_installation_de_docker_2">5.1. Etape 1 : Installation de docker</a></li>
-<li><a href="#_etape_2_installation_d_une_image_mysql">5.2. Etape 2 : Installation d&#8217;une image mysql</a></li>
-<li><a href="#_etape_3_installation_d_une_image_jeedom">5.3. Etape 3 : Installation d&#8217;une image Jeedom</a></li>
-</ul>
-</li>
-<li><a href="#_autre_diy">6. Autre/DIY</a></li>
-<li><a href="#_pi_sur_une_carte_sd">7. PI/ Sur une carte SD</a></li>
+<li><a href="#_objectif">1. Objectif</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_matériels">1. Matériels</h2>
+<h2 id="_objectif">1. Objectif</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jeedom peut être installé sur différents composants hardware :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>un Raspberry pi 2 ou 3</p>
-</li>
-<li>
-<p>un NAS Synology</p>
-</li>
-<li>
-<p>tout système Linux basé sur Debian</p>
-</li>
-</ul>
+<p>Vous trouverez ici la documentation pour installer Jeedom sur un raspberry PI 3 <strong>sans carte SD.</strong></p>
 </div>
 <div class="paragraph">
-<p>Vous pouvez aussi acheter une box toute faite avec Jeedom de préinstallé qui contient en plus un service pack (plus de support et service) et des plugins offerts :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.domadoo.fr/fr/box-domotique/3959-jeedom-controleur-domotique-jeedom-smart-z-wave.html">Jeedom Smart Z-Wave+</a></p>
-</li>
-<li>
-<p><a href="https://www.domadoo.fr/fr/box-domotique/4043-jeedom-controleur-domotique-jeedom-smart-z-wave-et-interface-rfxcom.html">Jeedom Smart Z-Wave+ et RFXCOM</a></p>
-</li>
-<li>
-<p><a href="https://www.domadoo.fr/fr/box-domotique/4041-jeedom-controleur-domotique-jeedom-smart-enocean.html">Jeedom Smart EnOcean</a></p>
-</li>
-<li>
-<p><a href="https://www.domadoo.fr/fr/box-domotique/4044-jeedom-controleur-domotique-jeedom-smart-enocean-et-interface-rfxcom.html">Jeedom Smart EnOcean et RFXCOM</a></p>
-</li>
-</ul>
+<p>Le PI3 offre en effet la possibilité de booter directement sur un périphérique USB et donc de vous affranchir de la carte SD parfois génératrice de problémes (corruption).</p>
 </div>
 <div class="paragraph">
-<p>Voici 1 configurations "type" pour bien débuter avec Jeedom en Z-Wave :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Raspberry pi 3 :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Un raspberry+casing ~ 50 €</p>
-</li>
-<li>
-<p>Une clef Aeon Gen 5 ~ 60 €</p>
-</li>
-<li>
-<p>Une micro carte SD ~ 7 €</p>
-</li>
-<li>
-<p>Alimentation USB ~ 8 €</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
+<p><strong>La procédure d&#8217;installation est strictement identique à celle sur une SD, mais il faudra s&#8217;assurer de posséder un Firmware à jour.</strong></p>
 </div>
 <div class="paragraph">
-<p>Soit un total de 125 € pour une box domotique open source avec une maîtrise complète de son installation.</p>
+<p>Pour cela ouvrez une connexion SSH. (si vous ne savez pas comment faire, regarder installation sur SD : <a href="https://jeedom.github.io/documentation/installation/fr_FR/index.html">Ici</a> )</p>
 </div>
-<div class="admonitionblock tip">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>vcgencmd otp_dump | grep 17:</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Vous devez obtenir en retour :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>17:3020000a</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Si c&#8217;est le cas, votre PI3 est correctement configuré pour booter sur l&#8217;USB. Si il ne trouve rien, il démarrera normalement sur une carte SD.</p>
+</div>
+<div class="paragraph">
+<p>Si le retour est différent, vous devez simplement effectuer une mise à jour.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo apt-get update; sudo apt-get install rpi-update</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>puis</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo rpi-update</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Puis reboot du PI3</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo reboot</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Il est possible d&#8217;ajouter ou de changer par un Rfxcom, ou une clef enOcean.
+<div class="paragraph">
+<p>Pour éviter les problèmes de puissance, optez pour un disque SSD MSATA à faible consommation.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -537,686 +496,15 @@ Il est possible d&#8217;ajouter ou de changer par un Rfxcom, ou une clef enOcean
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Jeedom est un logiciel qui est et restera open source, son utilisation est entièrement gratuite et ne dépend pas d&#8217;un cloud ou d&#8217;un abonnement. Cependant certains plugins qui permettent d&#8217;augmenter les capacités de Jeedom ou son utilisation peuvent être payants <strong>et peuvent avoir besoin d&#8217;une connexion internet</strong>. Vous pouvez retrouver la liste des plugins <a href="http://market.jeedom.fr/index.php?v=d&amp;p=market&amp;type=plugin">ici</a>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Service pack ? Quézako ? Vous pouvez voir <a href="https://blog.jeedom.fr/?p=1215">ici</a> les avantages des service packs
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sur_jeedomboard_hummingboard_mini">2. Sur Jeedomboard (hummingboard,mini+)</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Vous trouverez ici la documentation pas à pas pour installer Jeedom sur les Jeedomboard (ou Hummingboard).</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Le nom de l&#8217;image Jeedom peut être différent de celui des captures faites dans cette documentation
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_etape_1_installation_de_etcher">2.1. Etape 1 : Installation de Etcher</h3>
-<div class="paragraph">
-<p>Vous devez télécharger le logicel Etcher <a href="https://etcher.io/">ici</a> puis l&#8217;installer sur votre pc</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_2_récupération_de_l_image_de_jeedom">2.2. Etape 2 : Récupération de l&#8217;image de Jeedom</h3>
-<div class="paragraph">
-<p>Vous devez aller <a href="https://www.amazon.fr/clouddrive/share/OwYXPEKiIMdsGhkFeI3eUQ0VcvTEBq0qxQevlXPvPIy/folder/IT3WZ3N0RqGzaLBnBo0qog">ici</a>, puis dans le dossier Images récuperer l&#8217;image jeedom-jeeboard-*.rar ou Jeedomboard__Debian_Jessie*.rar</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_1.PNG" alt="install humming 1">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_3_décompression_de_l_image_de_jeedom">2.3. Etape 3 : Décompression de l&#8217;image de Jeedom</h3>
-<div class="paragraph">
-<p>Décompresser l&#8217;image de Jeedom (si vous n&#8217;avez rien pour le décompresser vous pouvez installer <a href="http://www.clubic.com/telecharger-fiche9632-winrar.html">winrar</a>), vous devez obtenir :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_2.PNG" alt="install humming 2">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_humming_8.PNG" alt="install humming 8">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_4_gravure_de_l_image_sur_la_carte_sd">2.4. Etape 4 : Gravure de l&#8217;image sur la carte SD</h3>
-<div class="paragraph">
-<p>Insérer votre carte SD dans votre ordinateur puis lancer le logiciel Ether, donner lui le chemin de l&#8217;image, le chemin de la carte SD et cliquez sur "flash". Le logiciel va graver la carte SD et verifier la gravure</p>
-</div>
-<div class="paragraph">
-<p>Vous n&#8217;avez plus qu&#8217;à mettre la carte SD dans la Jeedomboard (ou Hummingboard), à brancher le réseau et l&#8217;alimentation, votre Jeedom va démarrer (5 min) et vous devriez le voir sur le réseau.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Les identifiants SSH sont jeedom/Mjeedom96
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Pour la suite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sur_jeedomboard_hummingboard_mini_via_un_script">3. Sur Jeedomboard (hummingboard,mini+ via un script)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved directive in index.asciidoc - include::Miniplushumingboard.asciidoc[]</p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sur_synology">4. Sur Synology</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Vous trouverez ici la documentation pas à pas pour installer Jeedom un Synology (DSM 5.2 minimum).</p>
-</div>
-<div class="sect2">
-<h3 id="_etape_1_installation_de_docker">4.1. Etape 1 : Installation de Docker</h3>
-<div class="paragraph">
-<p>Aller sur le centre des paquets :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_1.PNG" alt="install synology 1">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur tous, puis installez le paquet Docker</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_2.PNG" alt="install synology 2">
-</div>
-</div>
-<div class="paragraph">
-<p>Attendez jusqu&#8217;à ce que l&#8217;installation soit finie :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_3.PNG" alt="install synology 3">
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Pour avoir accès au paquet Docker, il faut absolument avoir DSM 5.2 et un NAS compatible
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_2_récupération_et_installation_des_images_jeedom">4.2. Etape 2 : Récupération et installation des images Jeedom</h3>
-<div class="paragraph">
-<p>Il faut Docker pour faire tourner Jeedom, le premier un docker Mysql qui contiendra la base de données et un 2ème qui contient Jeedom</p>
-</div>
-<div class="paragraph">
-<p>Lancez l&#8217;application Docker :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_4.PNG" alt="install synology 4">
-</div>
-</div>
-<div class="sect3">
-<h4 id="_mysql">4.2.1. MYSQL</h4>
-<div class="paragraph">
-<p>Cliquez sur "Registre" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_5.PNG" alt="install synology 5">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans le champ de recherche tapez "mysql", selectionnez mysql et cliquez sur télécharger :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_15.PNG" alt="install synology 15">
-</div>
-</div>
-<div class="paragraph">
-<p>Validez ensuite la demande de version, le mieux étant de prendre la version latest :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_14.PNG" alt="install synology 14">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peut prendre plusieurs dizaines de minutes) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_16.PNG" alt="install synology 16">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois terminé, cliquez sur l&#8217;image puis lancer :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_17.PNG" alt="install synology 17">
-</div>
-</div>
-<div class="paragraph">
-<p>Donnez un nom à votre mysql ainsi qu&#8217;un port local redirigé vers le port 3306 du conteneur, puis faites suivant :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_18.PNG" alt="install synology 18">
-</div>
-</div>
-<div class="paragraph">
-<p>Faites suivant :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_19.PNG" alt="install synology 19">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur "Paramètres avancés" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_34.PNG" alt="install synology 34">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis sur "Ajouter un dossier", et là, mettez le dossier voulu côté Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers de la base de données) et /var/lib/mysql côté conteneur (attention à bien décocher "Lecture seule")</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_32.PNG" alt="install synology 32">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur "Environnement" puis "Ajoutez une variable" et mettant dans "Variable" : "MYSQL_ROOT_PASSWORD" et dans valeur mettez le mot de passe de BDD voulu (il servira plus tard). Puis validez :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_33.PNG" alt="install synology 33">
-</div>
-</div>
-<div class="paragraph">
-<p>Cochez "Exécuter ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_jeedom">4.2.2. Jeedom</h4>
-<div class="paragraph">
-<p>Cliquez sur "Registre" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_5.PNG" alt="install synology 5">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans le champ de recherche, tapez "jeedom", sélectionnez jeedom/jeedom et cliquez sur télécharger :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_20.PNG" alt="install synology 20">
-</div>
-</div>
-<div class="paragraph">
-<p>Validez ensuite la demande de version, le mieux étant de prendre la dernière.</p>
-</div>
-<div class="paragraph">
-<p>Cliquez ensuite sur image, ici vous pouvez suivre l&#8217;avancement du téléchargement (peut prendre plusieurs dizaines de minutes) :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_21.PNG" alt="install synology 21">
-</div>
-</div>
-<div class="paragraph">
-<p>Une fois terminé, cliquez sur l&#8217;image puis lancer :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_22.PNG" alt="install synology 22">
-</div>
-</div>
-<div class="paragraph">
-<p>Donnez un nom à votre jeedom ainsi qu&#8217;un port local redirigé vers le port 80 (ici 9080) et un vers le 22 (ici 9022) du conteneur, puis faites suivant :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_23.PNG" alt="install synology 23">
-</div>
-</div>
-<div class="paragraph">
-<p>Faites suivant :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_24.PNG" alt="install synology 24">
-</div>
-</div>
-<div class="paragraph">
-<p>Cliquez sur "Paramètres avancés"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_25.PNG" alt="install synology 25">
-</div>
-</div>
-<div class="paragraph">
-<p>Puis sur "Ajouter un dossier"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_26.PNG" alt="install synology 26">
-</div>
-</div>
-<div class="paragraph">
-<p>Choisissez un dossier sur votre Synology (c&#8217;est dans ce dossier qu&#8217;il y aura tous les fichiers jeedom), attention à bien décocher "Lecture seule"</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_27.PNG" alt="install synology 27">
-</div>
-</div>
-<div class="paragraph">
-<p>Dans chemin d&#8217;accès, mettez /var/www/jeedom puis cliquez sur "Environnement" :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_28.PNG" alt="install synology 28">
-</div>
-</div>
-<div class="paragraph">
-<p>Cochez "Exécuter le conteneur à l&#8217;aide de privilèges élevés" puis validez le tout :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_29.PNG" alt="install synology 29">
-</div>
-</div>
-<div class="paragraph">
-<p>Cochez "Exécuter ce conteneur lorsque l&#8217;assistant a terminé" puis cliquez sur "Appliquer".</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_3_configuration_de_jeedom">4.3. Etape 3 : Configuration de Jeedom</h3>
-<div class="paragraph">
-<p>Il vous faut maintenant installer Jeedom, c&#8217;est très simple, allez sur IP_NAS:9080</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_31.PNG" alt="install synology 31">
-</div>
-</div>
-<div class="paragraph">
-<p>Remplissez les champs en fonction de votre configuration (configuration du docker mysql installé précédemment) et validez.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-L&#8217;addresse IP de la BDD est l&#8217;addresse IP du NAS, le port est celui redirigé du docker Mysql, le mot de passe est celui mis dans le docker Mysql. Le nom d&#8217;utilisateur est root et le nom de la base celui que vous voulez (conseillé Jeedom)
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_synology_30.PNG" alt="install synology 30">
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Si vous voulez un accès SSH, il vous faut dans les ports rediriger un port local vers le port 22 du conteneur, les identifiants SSH sont root/jeedom. Vous pouvez changer le mot de passe en initialisant la variable d&#8217;environement ROOT_PASSWORD à la valeur du mot de passe voulu.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Ensuite, vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docker">5. Docker</h2>
-<div class="sectionbody">
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Attention nous partons ici du principe que vous maitrisez déjà docker
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Pour découvrir Jeedom vous pouvez aussi le faire tourner dans un conteneur Docker :</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Prérequis : Avoir une machine ou une VM tournant sous Linux
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_etape_1_installation_de_docker_2">5.1. Etape 1 : Installation de docker</h3>
-<div class="paragraph">
-<p>docker est maintenant disponible sur toutes les distributions récentes. Pour l&#8217;installer sur une distribution</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>à base de rpm</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ yum install docker</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>à base de deb</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ apt-get update
-$ apt-get install docker
-$ apt-get install docker.io</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_2_installation_d_une_image_mysql">5.2. Etape 2 : Installation d&#8217;une image mysql</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Vous pouvez aussi installer mysql directement sur la machine hôte, dans ce cas il faut sauter cette étape.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>J&#8217;utilise <a href="https://hub.docker.com/_/mysql/">celle-ci</a>. Pour l&#8217;installer :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>docker pull mysql:latest</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Puis la lancer :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo docker run --name jeedom-mysql -v /opt/jeedom/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=your-mysql-password -d mysql:latest</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Avec :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>jeedom-mysql : le nom du conteneur mysql</p>
-</li>
-<li>
-<p>/opt/jeedom/mysql : le dossier de l&#8217;hote ou l&#8217;on doit stoker les données de MySql</p>
-</li>
-<li>
-<p>your-mysql-password : le mot de passe root de l&#8217;instance MySql</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_etape_3_installation_d_une_image_jeedom">5.3. Etape 3 : Installation d&#8217;une image Jeedom</h3>
-<div class="paragraph">
-<p>Installation de l&#8217;image :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>docker pull jeedom/jeedom</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Puis lancez la :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo docker run --name jeedom-server --link jeedom-mysql:mysql --privileged -v /your/jeedom/path:/var/www/html -e ROOT_PASSWORD=your-root-password -p 9080:80 -p 9022:22 jeedom/jeedom</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Avec :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>jeedom-server : nom du docker jeedom voulu</p>
-</li>
-<li>
-<p>/your/jeedom/path : répertoire où les données de Jeedom sont mise sur l&#8217;hôte</p>
-</li>
-<li>
-<p>your-root-password : mot de passe root pour accéder à Jeedom en SSH</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Il vous faut ensuite installer Jeedom en allant sur : IP_DOCKER:9080 et entrer les informations de connexion vers mysql :</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/install_other.PNG" alt="install other">
-</div>
-</div>
-<div class="paragraph">
-<p>Pour la suite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Pour le nom de l&#8217;hote MySql il faut mettre jeedom-mysql
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_autre_diy">6. Autre/DIY</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Vous trouverez ici la documentation pour installer Jeedom sur la plupart des systèmes linux (testée et approuvée sur la distribution Debian)</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Debian 8 est la distribution officiellement supportée, l&#8217;utilisation d&#8217;une autre distribution est à proscrire au risque d&#8217;obtenir comme réponse du support de devoir restaurer votre Jeedom sur une image officielle.
-Si vous ne maitriser pas un minimum les environnements Linux, nous vous conseillons de partir sur une image officielle (OVF) ou l&#8217;utilisation d&#8217;une Mini+ ou Smart (disponible prochainement).
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Connectez-vous en SSH à votre système et faites :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>wget https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
-chmod +x install.sh
-./install.sh</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Il vous suffit ensuite d&#8217;aller sur IP_MACHINE_JEEDOM</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Les identifiants par défaut sont admin/admin
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Les arguments suivants sont utilisables :
--w = dossier webserver
--z = installation dependances z-wave
--m = mot de passe root mysql désiré
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>./install.sh -w /var/www/html -z -m Jeedom</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_pi_sur_une_carte_sd">7. PI/ Sur une carte SD</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Vous trouverez ici la documentation pour installer Jeedom sur un raspberry PI <strong>avec une carte SD.</strong></p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Debian 8 (jessie) est la distribution officiellement supportée, l&#8217;utilisation d&#8217;une autre distribution est à proscrire au risque d&#8217;obtenir comme réponse du support de devoir restaurer votre Jeedom sur une image officielle.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Strecht (Debian 9) n&#8217;est pas supportée pour le moment. Elle le sera en version 3.1</p>
+<p>Vous pouvez désormais installer Jeedom en suivant exactement la même procédure qu&#8217;avec une carte SD. <a href="https://jeedom.github.io/documentation/installation/fr_FR/index.html">Ici</a></p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>1/ Télécharger le dernière image "lite", c&#8217;est à dire sans interface graphique</strong>
-<a href="https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-07-05/2017-07-05-raspbian-jessie-lite.zip">Ici</a></p>
-</div>
-<div class="paragraph">
-<p><strong>2/ Décompresser l&#8217;image avec winrar</strong>
-<a href="http://www.win-rar.com">Ici</a></p>
-</div>
-<div class="paragraph">
-<p><strong>3/ Graver cette image sur une SD avec etcher par exemple</strong>
-<a href="https://etcher.io/">ici</a></p>
+<p><strong>Il faut ensuite prendre en compte les remarques suivantes :</strong></p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1226,162 +514,80 @@ Debian 8 (jessie) est la distribution officiellement supportée, l&#8217;utilisa
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Pour des raisons de sécurité, l&#8217;accès SSH n&#8217;est plus activé par défaut sur cette distribution. Il faut donc l&#8217;activer</p>
+<p>Les modifications suivantes sont le fruit de problémes rencontrés par les utilisateurs. Vous devez les adapter à votre cas.
+Le support Jeedom n&#8217;intervient pas pour des problémes liés à votre configuration.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><strong>4/ Activer un accès SSH</strong></p>
+<p><span class="underline"><strong>1/ Si vous rencontrez des problèmes de swap, il faut le modifier.</strong></span></p>
 </div>
 <div class="paragraph">
-<p>Il faut créer sur la partition boot (la seule accessible sous windows) un fihier ssh vide.
-Il suffit de faire un clic droit : nouveau / document texte et le renommer en"ssh" <strong>sans aucune extension</strong></p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Sous windows, dans l&#8217;explorateur il faut donc vérifier votre paramétrage dans affichage / options / modifier les options de dossiers et de recherche /</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ExtensionFichier.PNG" alt="ExtensionFichier">
-</div>
-</div>
-<div class="paragraph">
-<p><strong>5/ Démarrer le PI</strong></p>
-</div>
-<div class="paragraph">
-<p>Insérer votre carte SD, brancher le cable réseau, brancher l&#8217;alimentation.</p>
-</div>
-<div class="paragraph">
-<p><strong>6/ Se connecter en SSH</strong></p>
-</div>
-<div class="paragraph">
-<p><span class="underline">Identifier votre Pi sur le réseau</span></p>
-</div>
-<div class="paragraph">
-<p>Il faut connaitre l&#8217;adresse Ip de votre PI. Plusieurs solutions :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Consulter la configuration DHCP dans votre routeur</p>
-</li>
-<li>
-<p>Utiliser un scanner de port type "angyipscanner" <a href="http://angryip.org/download/#windows">ici</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="underline">Etablir la connexion</span></p>
-</div>
-<div class="paragraph">
-<p>Ensuite utiliser par exemple putty pour établir votre connexion
-<a href="http://www.putty.org/">Ici</a></p>
-</div>
-<div class="paragraph">
-<p>Rentrer l&#8217;adresse de Ip de votre PI (ici 192.168.0.10) et cliquez sur open. Accepter le message par défaut relatif à la sécurité lors de la première connexion.</p>
-</div>
-<div class="paragraph">
-<p>Connectez-vous avec les identifiants <strong>pi / raspberry</strong></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/putty.png" alt="putty">
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Si vous choisissez d&#8217;ouvrir votre port 22 sur l&#8217;extérieur, vous devez impérativement modifier votre mot de passe utilisateur et root !!!!
-(commande passwd et sudo passwd)</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>7/ Lancer le script d&#8217;installation jeedom</strong></p>
+<p><strong>Augmenter sa taille</strong> :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wget https://raw.githubusercontent.com/jeedom/core/stable/install/install.sh
-
-chmod +x install.sh
-
-sudo ./install.sh</pre>
+<pre class="highlight"><code>sudo nano /etc/dphys-swapfile</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p><strong>Le mot de passe sudo est également raspberry</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>En fonction de votre débit internet, l&#8217;installation peut prendre de 45 à 90 minutes. Vous ne devez surtout pas interrompre le processus avant la fin. A défaut, il faudra reprendre la totalité de la procédure.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Il vous suffit ensuite d&#8217;aller sur IP_MACHINE_JEEDOM</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Les identifiants par défaut sont admin/admin
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Les arguments suivants sont utilisables :
--w = dossier webserver
--z = installation dependances z-wave
--m = mot de passe root mysql désiré
-</td>
-</tr>
-</table>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>./install.sh -w /var/www/html -z -m Jeedom</pre>
+<pre class="highlight"><code>CONF_SWAPSIZE=100</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Ensuite vous pouvez suivre la documentation <a href="https://www.jeedom.fr/doc/documentation/premiers-pas/fr_FR/doc-premiers-pas.html">Premier pas avec Jeedom</a></p>
+<p>Changer la valeur de  CONF_SWAPSIZE pour 1024 par exemple, puis reboot.</p>
+</div>
+<div class="paragraph">
+<p><strong>Changer la valeur d&#8217;appel au swap.</strong></p>
+</div>
+<div class="paragraph">
+<p>Par défaut, le système appelle le swap losqu&#8217;il reste moins de 40% de Ram.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo nano /etc/sysctl.conf</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ajouter la ligne :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>vm.swappiness = 10</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pour demander au Pi de n&#8217;appeler le swap que lorqu&#8217;il lui reste 10% de mémoire disponible (soit 100 MO de Ram disponible). Puis reboot.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline"><strong>Désactiver le bluetooth intégré car incompatible avec la carte GPIO zwave.me</strong></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo nano /boot/config.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ajouter la ligne</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>dtoverlay=pi3-disable-bt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Faire un arrêt propre</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo halt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Débrancher rebrancher (pas de sudo reboot !).</p>
 </div>
 </div>
 </div>
