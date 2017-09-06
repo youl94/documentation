@@ -5,7 +5,7 @@
 Hier sind einige nützliche Pakete, die auf eine unberührte Installation nachinstalliert werden können :  
 
 ----
-apt-get install -y vim fail2ban
+apt-get install -y vim fail2ban net-tools dos2unix
 ----
 
 Wenn Sie auf VMware sind : 
@@ -19,6 +19,7 @@ apt-get install -y open-vm-tools
 ----
 rm -rf /root/.bashrc
 wget https://raw.githubusercontent.com/jeedom/core/stable/install/bashrc -O /root/.bashrc
+dos2unix /root/.bashrc
 ----
 
 == Eine root Verbindung in SSH erlauben 
