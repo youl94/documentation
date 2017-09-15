@@ -420,7 +420,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_eine_farbige_bashrc_hinzufügen">2. Eine farbige bashrc hinzufügen</a></li>
 <li><a href="#_eine_root_verbindung_in_ssh_erlauben">3. Eine root Verbindung in SSH erlauben</a></li>
 <li><a href="#_monter_un_partage_samba">4. Monter un partage Samba</a></li>
-<li><a href="#_umstellung_von_jessie_in_stretch">5. Umstellung von Jessie in Stretch</a></li>
+<li><a href="#_umstellung_von_jessie_in_stretch">5. Umstellung von Jessie in Stretch</a>
+<ul class="sectlevel2">
+<li><a href="#_private_tmp">5.1. Private Tmp</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -544,6 +548,8 @@ Vous devez changer les TODO pour user et password par rapport à votre configura
 apt-get dist-upgrade</pre>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_private_tmp">5.1. Private Tmp</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -561,6 +567,7 @@ Si vous passez de jessie à Stretch sans refaire l&#8217;installation de Jeedom 
 <pre>rm /etc/systemd/system/multi-user.target.wants/apache2.service
 cp /lib/systemd/system/apache2.service /etc/systemd/system/multi-user.target.wants/
 sed -i 's/PrivateTmp=true/PrivateTmp=false/g' /etc/systemd/system/multi-user.target.wants/apache2.service</pre>
+</div>
 </div>
 </div>
 </div>
