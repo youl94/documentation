@@ -42,7 +42,7 @@ login Debian / mot de passe debian
 le mot de passe root est debian
 ====
 
-1/ Configuration du swap sur la Mini+ car inactif par défaut
+1/ Configuration du swap sur la Mini+ car inactif par défaut avec cette distribution.
 
 Connectez-vous en SSH à votre système et faites : 
 ----
@@ -77,7 +77,7 @@ sudo ./install.sh
 
 
 ====
-*La durée d'installation varie de 45 à 90 minutes*. 
+*La durée d'installation varie de 60 à 120 minutes*. 
 Vous ne devez pas interrompre cette procédure. A défaut il faut tout reprendre. Il est vivement conseiller de rebooter à la fin de l'installation.
 ====
 
