@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Délestage</title>
+<title>DomoGeek</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,213 +415,68 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_délestage">1. Délestage</a></li>
-<li><a href="#_description">2. Description</a></li>
-<li><a href="#_fonctionnement">3. Fonctionnement</a>
+<li><a href="#_domogeek">1. DomoGeek</a>
 <ul class="sectlevel2">
-<li><a href="#_délestage_intelligent">3.1. Délestage intelligent.</a></li>
-<li><a href="#_délestage_hiérarchique">3.2. Délestage hiérarchique</a>
-<ul class="sectlevel3">
-<li><a href="#_délestage_cascadocyclique">3.2.1. Délestage cascadocyclique</a></li>
+<li><a href="#_description">1.1. Description</a></li>
+<li><a href="#_configuration">1.2. Configuration</a></li>
+<li><a href="#_faq">1.3. FAQ</a></li>
+<li><a href="#_changelog">1.4. Changelog</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_configuration">4. Configuration</a>
-<ul class="sectlevel2">
-<li><a href="#_allgemeine_konfiguration">4.1. Allgemeine Konfiguration</a>
-<ul class="sectlevel3">
-<li><a href="#_actions_supplémentaires">4.1.1. Actions supplémentaires</a></li>
-<li><a href="#_configuration_avancée">4.1.2. Configuration avancée</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_faq">5. FAQ</a></li>
-<li><a href="#_troubleshoting">6. Troubleshoting</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_délestage">1. Délestage</h2>
+<h2 id="_domogeek">1. DomoGeek</h2>
 <div class="sectionbody">
-<div class="imageblock" style="text-align: Center">
-<div class="content">
-<img src="../images/delestage_screenshot1.png" alt="delestage">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_description">2. Description</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Plugin permettant de gérer le délestage électrique.
-Le plugin gère 3 types de délestage :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Délestage "intelligent".</p>
-</li>
-<li>
-<p>Délestage hiérarchique.</p>
-</li>
-<li>
-<p>Délestage cascado-cyclique.</p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_fonctionnement">3. Fonctionnement</h2>
-<div class="sectionbody">
-<hr>
 <div class="sect2">
-<h3 id="_délestage_intelligent">3.1. Délestage intelligent.</h3>
+<h3 id="_description">1.1. Description</h3>
 <div class="paragraph">
-<p>Le délestage intelligent nécessite le plugin Thermostat pour fonctionner.</p>
+<p>Plugin pour récuperer les informations du site DomoGeek.</p>
 </div>
 <div class="paragraph">
-<p>Le plugin classe les thermostats en fonction de leurs températures réelles en fonction des températures de consigne.</p>
+<p><span class="image"><img src="../images/domogeek_screenshot1.png" alt="domogeek_screenshot1"></span></p>
 </div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_configuration">1.2. Configuration</h3>
 <div class="paragraph">
-<p>Ainsi le délestage interviendra en priorité sur les pièces dont l&#8217;écart est le plus faible.
-La gène pour les occupants sera ainsi moins importante.</p>
+<p>La configuration se fait dans le plugin Domogeek.</p>
 </div>
-<div class="imageblock" style="text-align: Center">
+<div class="imageblock">
 <div class="content">
-<img src="../images/smart.png" alt="intelligent">
+<img src="../images/domogeek1.png" alt="domogeek1">
 </div>
 </div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_délestage_hiérarchique">3.2. Délestage hiérarchique</h3>
-<div class="paragraph">
-<p>Le délestage s&#8217;effectue en mode hiérarchisé sur les x actionneurs. L&#8217;actionneur 1 sera délesté en priorité puis le 2, 3…</p>
-</div>
-<div class="paragraph">
-<p>Les actionneurs seront réenclenchés dans l&#8217;ordre inverse du délestage</p>
-</div>
-<div class="imageblock" style="text-align: Center">
-<div class="content">
-<img src="../images/hierarchique.png" alt="hierarchique">
-</div>
-</div>
-<div class="sect3">
-<h4 id="_délestage_cascadocyclique">3.2.1. Délestage cascadocyclique</h4>
-<div class="paragraph">
-<p>Le délestage s&#8217;effectue en mode rotatif sur les actionneurs définis pour le mode cyclique puis si la puissance est toujours supérieure au seuil, en mode hiérarchisé sur les autres.</p>
-</div>
-<div class="imageblock" style="text-align: Center">
-<div class="content">
-<img src="../images/cascadocyclique.png" alt="cascadocyclique">
-</div>
-</div>
-<hr>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_configuration">4. Configuration</h2>
-<div class="sectionbody">
-<hr>
-<div class="sect2">
-<h3 id="_allgemeine_konfiguration">4.1. Allgemeine Konfiguration</h3>
-<div class="paragraph">
-<p>Voici les paramètres à configurer sur le plugin :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Type de délestage : intelligent, hiérarchique ou cascadocyclique</p>
-</li>
-<li>
-<p>Type de compteur : Puissance instantanée ou Ampérage instantané</p>
-</li>
-<li>
-<p>Compteur : sélectionner ici la commande qui renvoie soit la puissance soit l&#8217;ampérage (dans ce cas il sera nécessaire de configurer la tension du réseau)</p>
-</li>
-<li>
-<p>Seuil en Watts : Seuil à partir duquel le déléstage se déclenchera</p>
-</li>
-</ul>
-</div>
-<div class="imageblock" style="text-align: Center">
-<div class="content">
-<img src="../images/configuration_generale.png" alt="configuration générale">
-</div>
-</div>
-<hr>
-<div class="sect3">
-<h4 id="_actions_supplémentaires">4.1.1. Actions supplémentaires</h4>
-<div class="paragraph">
-<p>Il est possible de définir des actions complémentaires en plus des actions de délestage.</p>
-</div>
-<div class="paragraph">
-<p>Il est, par exemple, possible d&#8217;envoyer un sms pour prévenir du début et de la fin du délestage.</p>
-</div>
-<div class="imageblock" style="text-align: Center">
-<div class="content">
-<img src="../images/actions_complementaires.png" alt="Actions complémentaires">
-</div>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="_configuration_avancée">4.1.2. Configuration avancée</h4>
-<div class="paragraph">
-<p>Les paramètres suivants peuvent être réglés:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Tension du réseau en Volts (220V par défaut)</p>
-</li>
-<li>
-<p>Délai avant réactivation en mins (5 mns par défaut) : délai avant lequel les équipements ne se réactiveront pas (afin d&#8217;éviter les on/off trop répétitifs)</p>
-</li>
-<li>
-<p>Délai minimum entre les relevés en s (10s par défaut) : délai nécessaire entre 2 relevés</p>
-</li>
-</ul>
-</div>
-<div class="imageblock" style="text-align: Center">
-<div class="content">
-<img src="../images/configuration_avancee.png" alt="Configuration avancée">
-</div>
-</div>
-<hr>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">5. FAQ</h2>
-<div class="sectionbody">
+<h3 id="_faq">1.3. FAQ</h3>
 <div class="openblock panel">
-<div class="title">Quels sont les thermostats gérés par le délestage intelligent ?</div><div class="content">
+<div class="title">Quelle est la fréquence de rafraîchissement</div><div class="content">
 <div class="paragraph">
-<p>Pour l&#8217;instant seul le plugin thermostat officiel est géré par le délestage intelligent. Il est cependant possible d&#8217;utiliser les 2 autres modes de délestage avec les autres thermostats.</p>
+<p>Le système récupère les informations toutes les 2 heures.</p>
 </div>
 </div>
 </div>
 <hr>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshoting">6. Troubleshoting</h2>
-<div class="sectionbody">
-<div class="openblock panel">
-<div class="title">Le délestage ne s&#8217;active pas.</div><div class="content">
-<div class="paragraph">
-<p>Attention à bien activer le mode "Auto" sur le widget afin d&#8217;activer le délestage.</p>
-</div>
+<div class="sect2">
+<h3 id="_changelog">1.4. Changelog</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>V1.2 : Ajout Saison, saint du jour et saint du lendemain</p>
+</li>
+<li>
+<p>V1.1 : Ajout EJT et Adresse IP</p>
+</li>
+<li>
+<p>V1 : Première release</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
