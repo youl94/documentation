@@ -6,8 +6,8 @@ Jeedom ne supporte que Debian Jessie (stable) et Stretch (beta). Toute autre ver
 |Nom|Etat|Remarques
 |PHP 5.5 ou moins| Non supporté|
 |PHP 5.6| Stable|
-|PHP 7.X| Beta|
+|PHP 7.X| Stable|
 |Mysql 5.5/5.6| Stable|
 |Mysql 5.7|Beta|
-|MariaBD|Non officiel/Stable|
+|MariaBD|Stable|
 |===
