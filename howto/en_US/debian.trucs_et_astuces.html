@@ -564,9 +564,9 @@ Si vous passez de jessie à Stretch sans refaire l&#8217;installation de Jeedom 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rm /etc/systemd/system/multi-user.target.wants/apache2.service
-cp /lib/systemd/system/apache2.service /etc/systemd/system/multi-user.target.wants/
-sed -i 's/PrivateTmp=true/PrivateTmp=false/g' /etc/systemd/system/multi-user.target.wants/apache2.service</pre>
+<pre>mkdir /etc/systemd/system/apache2.service.d
+echo -e "[Service]\nPrivateTmp=no" &gt; /etc/systemd/system/apache2.service.d/privatetmp.conf
+systemctl daemon-reload</pre>
 </div>
 </div>
 </div>
