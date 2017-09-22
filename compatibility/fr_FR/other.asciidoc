@@ -1,16 +1,3 @@
-= Liste de compatibilité Jeedom
-
-== Matériels
-include::hardware.asciidoc[]
-
-'''
-== Images
-include::images.asciidoc[]
-
-'''
-== Logiciel
-include::software.asciidoc[]
-
 == Clef USB/Module d'extension
 Contrôleur ENOCEAN : 
 
@@ -45,23 +32,23 @@ Contrôleur Z-WAVE :
 
 '''
 == Modules Zwave
-Vous trouverez la liste https://jeedom.github.io/documentation/zwave/fr_FR/equipement.compatible.html[ici]
+Vous trouverez la liste https://github.com/jeedom/documentation/blob/master/zwave/fr_FR/equipement.compatible.asciidoc[ici]
 
 '''
 == Modules EnOcean
-Vous trouverez la liste https://jeedom.github.io/documentation/enocean/fr_FR/equipement.compatible.html[ici]
+Vous trouverez la liste https://github.com/jeedom/documentation/blob/master/enocean/fr_FR/equipement.compatible.asciidoc[ici]
 
 '''
 == Modules Edisio
-Vous trouverez la liste https://jeedom.github.io/documentation/edisio/fr_FR/-equipement.compatible.html[ici]
+Vous trouverez la liste https://github.com/jeedom/documentation/blob/master/edisio/fr_FR/equipement.compatible.asciidoc[ici]
 
 '''
 == Modules RFXcom
-Vous trouverez la liste https://jeedom.github.io/documentation/rfxcom/fr_FR/equipement.compatible.html[ici]
+Vous trouverez la liste https://github.com/jeedom/documentation/blob/master/rfxcom/fr_FR/equipement.compatible.asciidoc[ici]
 
 '''
 == Caméras
-Vous trouverez la liste https://jeedom.github.io/documentation/camera/fr_FR/equipement.compatible.html[ici]
+Vous trouverez la liste https://github.com/jeedom/documentation/blob/master/camera/fr_FR/equipement.compatible.asciidoc[ici]
 
 == Plateforme matérielle recommandée
 
@@ -70,7 +57,3 @@ L'équipe jeedom vous recommande (en fonction de votre budget) :
 - Jeedom Smart (tout est préinstallé, vous n'avez rien à faire)
 - Odroid C2 (meilleur rapport performance/prix)
 - Intel Nuc gen6 (des performances extrêmes, voir la catégorie tuto pour le choix dans les differents modèles et l'installation)
-
-== Hardware Loïc
-
-include::hardwareloic.asciidoc[]
