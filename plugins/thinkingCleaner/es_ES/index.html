@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>PhilipsHue</title>
+<title>ThinkingCleaner</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,214 +412,76 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>PhilipsHue</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_plugin_konfiguration">1. Plugin Konfiguration</a></li>
-<li><a href="#_geräte_konfiguration">2. Geräte Konfiguration</a></li>
-<li><a href="#_le_groupe_0_toute_les_lampes">3. Le groupe 0 (Toute les lampes)</a></li>
-<li><a href="#_tansition">4. Tansition</a></li>
-<li><a href="#_animation">5. Animation</a></li>
-<li><a href="#_faq">6. FAQ</a></li>
-<li><a href="#_Änderungsprotokoll">7. Änderungsprotokoll</a>
+<li><a href="#_thinkingcleaner">1. ThinkingCleaner</a>
 <ul class="sectlevel2">
-<li><a href="#_28_03_2017">7.1. 28/03/2017</a></li>
-<li><a href="#_21_21_2017">7.2. 21/21/2017</a></li>
+<li><a href="#_description">1.1. Description</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Plugin pour commander les lampes Philips Hue.</p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_plugin_konfiguration">1. Plugin Konfiguration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Après téléchargement du plugin, il vous faudra renseigner l&#8217;adresse IP de votre pont hue, si ce n&#8217;est pas déja fait par le système de découverte automatique.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_geräte_konfiguration">2. Geräte Konfiguration</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Vous aurez toujours un équipement "Toutes les lampes" qui correspond en faite au groupe 0 qui existe tout le temps
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Hier finden sie die ganze Konfiguration Ihrer Geräte:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Nom de l&#8217;équipement Hue</strong> : nom de votre équipement Hue,</p>
-</li>
-<li>
-<p><strong>Objet parent</strong> : indique l&#8217;objet parent auquel appartient l&#8217;équipement,</p>
-</li>
-<li>
-<p><strong>Catégorie</strong> : les catégories de l&#8217;équipement (il peut appartenir à plusieurs catégories),</p>
-</li>
-<li>
-<p><strong>Activer</strong> : permet de rendre votre équipement actif,</p>
-</li>
-<li>
-<p><strong>Visible</strong> : rend votre équipement visible sur le dashboard,</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>En-dessous vous retrouvez la liste des commandes :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Nom</strong> : le nom affiché sur le dashboard,</p>
-</li>
-<li>
-<p><strong>Configuration avancé</strong> : permet d&#8217;afficher la fenetre de configuration avancée de la commande,</p>
-</li>
-<li>
-<p><strong>Options</strong> : vous permet d&#8217;afficher ou de masquer certaines commandes et/ou d&#8217;en historiser</p>
-</li>
-<li>
-<p><strong>Tester</strong> : permet de tester la commande</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_le_groupe_0_toute_les_lampes">3. Le groupe 0 (Toute les lampes)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Le groupe 0 est un peu particulier car il ne peut être supprimé ou modifié, il pilote forcement toute les lampes et c&#8217;est aussi lui qui porte les scénes.</p>
-</div>
-<div class="paragraph">
-<p>En effet vous pouvez faire des "scenes" sur les Philips Hue. Celle-ci doivent absolument être faite à partir de l&#8217;application mobile (impossible de les faire dans Jeedom). Et suite à l&#8217;ajout d&#8217;une scene vous devez absolument synchroniser Jeedom avec le bon (en resauvegardant simple la configuration du plugin)</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tansition">4. Tansition</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Commande un peu particulier qui doit être utilisée dans un scénario, elle permet de dire la transistion entre l&#8217;état actuel et la prochaine commande doit durée X secondes.</p>
-</div>
-<div class="paragraph">
-<p>Par exemple le matin vous pouvez vouloir simuler le levé du soleil en 3 minutes. Dans votre scénario vous avez donc juste à appeller la commande transition et en parametre mettre 180, ensuite appeller la commande couleur vers la couleur voulu.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_animation">5. Animation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Les animations sont des enchainements de transition, actuellement il existe :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>sunrise : pour simuler un levé de soleil. Il peut prendre en parametre :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>duration : pour definir la durée, par defaut 720s, ex pour 5min il faut mettre : duration=300</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>sunrise : pour simuler un couché de soleil. Il peut prendre en parametre :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>duration : pour definir la durée, par defaut 720s, ex pour 5min il faut mettre : duration=300</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">6. FAQ</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">J&#8217;ai l&#8217;impression qu&#8217;il y a un décalage sur certaine couleur entre ce que je demande et la couleur de l&#8217;ampoule.</dt>
-<dd>
-<p>Il semble que la grille de couleur des ampoules aient un offset, nous cherchons comment corriger</p>
-</dd>
-</dl>
-</div>
-<hr>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Quelle est la fréquence de rafraîchissement ?</dt>
-<dd>
-<p>Le systeme recupère les informations toutes les 2s.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_Änderungsprotokoll">7. Änderungsprotokoll</h2>
+<h2 id="_thinkingcleaner">1. ThinkingCleaner</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_28_03_2017">7.1. 28/03/2017</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Ajout d&#8217;animation (levé et couché de soleil), attention toute les lampes ne sont pas forcement compatible</p>
-</li>
-</ul>
+<h3 id="_description">1.1. Description</h3>
+<div class="paragraph">
+<p>Plugin permettant de controller les aspirateurs Roomba à l&#8217;aide du module Thinking Cleaner.
+Les fonctions disponibles sont :
+- Clean
+- Spot
+- Max
+- Dock
+- Stop
+- Find Me</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/thinkingCleaner_screenshot1.png" alt="thinkingCleaner_screenshot1"></span></p>
+</div>
+<div class="paragraph">
+<p>"
+=== Configuration
+Une fois le plugin installé, il vous suffit de sauvegarder le plugin dans Général &#8594; Plugins &#8594; thinkingCleaner.
+Les roombas seront automatiquement detéctés sur le réseau et ajoutés.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez ensuite vous rendre de le plugin afin de changer la pièce dans laquelle se trouve le roomba.</p>
+</div>
+<div class="paragraph">
+<p>"
+=== Utilisation
+6 fonctions sont disponibles dans le widget :
+- Clean : lance un nettoyage
+- Spot : lance un nettoyage ciblé sur une zone
+- Max : lance un nettoyage jusqu&#8217;à épuisement de la batterie
+- Dock : demande au roomba de retourner sur sa base
+- Stop : arrete le roomba
+- Find Me :  demande au roomba de sonner</p>
+</div>
+<div class="paragraph">
+<p>2 informations sont disponibles :
+- Le niveau de charge de la batterie
+- Le statut du roomba</p>
+</div>
+<div class="paragraph">
+<p>"
+=== FAQ</p>
+</div>
+<div class="openblock panel">
+<div class="title">Quelle est la fréquence de rafraichissement des informations</div><div class="content">
+<div class="paragraph">
+<p>Le systeme recupère les informations toutes les 5 minutes.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_21_21_2017">7.2. 21/21/2017</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Support du hue motion</p>
-</li>
-<li>
-<p>Support du hue tap</p>
-</li>
-<li>
-<p>Correction des scènes</p>
-</li>
-<li>
-<p>Correction du décalage des couleurs</p>
-</li>
-<li>
-<p>Ajout des images des modules</p>
-</li>
-<li>
-<p>Support de plus de modules</p>
-</li>
-<li>
-<p>Ajout de la gestion de la température des couleurs</p>
-</li>
-</ul>
+</div>
+<div class="paragraph">
+<p>"
+=== Changelog
+* V0.1 : Première release</p>
 </div>
 </div>
 </div>
