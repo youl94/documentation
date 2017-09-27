@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Description</title>
+<title>Monitoring</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,14 +415,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_description">1. Description</a>
+<li><a href="#_monitoring">1. Monitoring</a>
 <ul class="sectlevel2">
-<li><a href="#_mi_flora">1.1. Mi Flora</a></li>
+<li><a href="#_introduction">1.1. Introduction</a>
+<ul class="sectlevel3">
+<li><a href="#_compatibilité">1.1.1. Compatibilité :</a></li>
+<li><a href="#_données_visibles_sur_le_dashboard">1.1.2. Données visibles sur le Dashboard :</a></li>
 </ul>
 </li>
-<li><a href="#_configuration">2. Configuration</a>
-<ul class="sectlevel2">
-<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_installation_configuration">1.2. Installation/Configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_choix_déporté">1.2.1. Choix déporté</a></li>
+</ul>
+</li>
+<li><a href="#_coloration_des_valeurs">1.3. Coloration des valeurs</a></li>
+<li><a href="#_logging">1.4. Logging</a></li>
+<li><a href="#_scenarii_samples">1.5. Scenarii samples</a>
+<ul class="sectlevel3">
+<li><a href="#_scénario_pour_recevoir_un_mail_en_cas_de_dépassement_de_température">1.5.1. Scénario pour recevoir un mail en cas de dépassement de température</a></li>
+<li><a href="#_scénario_pour_recevoir_un_mail_en_cas_de_connexion_ssh_ko_en_mode_déporté">1.5.2. Scénario pour recevoir un mail en cas de connexion SSH KO en mode déporté</a></li>
+</ul>
+</li>
+<li><a href="#_action_redémarrage_et_extinction_de_l_équipemnt">1.6. Action redémarrage et extinction de l&#8217;équipemnt</a>
+<ul class="sectlevel3">
+<li><a href="#_local_mode">1.6.1. Local mode</a></li>
+<li><a href="#_remote_mode">1.6.2. Remote mode</a></li>
+</ul>
+</li>
+<li><a href="#_quelques_captures">1.7. Quelques captures</a></li>
+<li><a href="#_faq">1.8. FAQ</a></li>
+<li><a href="#_changelog">1.9. Changelog</a></li>
 </ul>
 </li>
 </ul>
@@ -430,139 +452,434 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_description">1. Description</h2>
+<h2 id="_monitoring">1. Monitoring</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_mi_flora">1.1. Mi Flora</h3>
+<h3 id="_introduction">1.1. Introduction</h3>
 <div class="paragraph">
-<p>Plugin permettant de récupérer l&#8217;horoscope via une petite phrase tous les jours.</p>
+<p>Ce plugin permet de récupérer des données système et de les afficher sur le Dashboard.</p>
 </div>
 <div class="paragraph">
-<p>Ceci peut-être très pratique afin de donner l&#8217;horoscope du jour à une personne (via une caméra Netatmo par exemple) par TTS tous les jours.</p>
+<p>Initialement, ce plugin a été créé pour monitorer seulement Jeedom Mini et Jeedom Mini+. Mais pour répondre à une forte demande, il a été rendu compatible avec un Jeedom installé sur une VM (Machine Virtuelle) ou un NAS Synology ou etc&#8230;&#8203;</p>
 </div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_configuration">2. Configuration</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_configuration_du_plugin">2.1. Configuration du plugin</h3>
+<div class="sect3">
+<h4 id="_compatibilité">1.1.1. Compatibilité :</h4>
 <div class="paragraph">
-<p>La partie configuration du plugin permet:</p>
+<p>A ma connaissance, voici une liste non exhautive des hardware/distribution compatible:</p>
 </div>
-<div class="openblock">
-<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>de choisir la frequence d&#8217;actualisation de l&#8217;horoscope</p>
+<p>Jeedom Mini, Mini+ (surement la Center/Pro)</p>
+</li>
+<li>
+<p>Raspberry Pi</p>
+</li>
+<li>
+<p>Cubieboard</p>
+</li>
+<li>
+<p>Banana Pi</p>
+</li>
+<li>
+<p>Machine Virtuelle (VM)</p>
+</li>
+<li>
+<p>NAS Synology</p>
+</li>
+<li>
+<p>Linux (devrait être compatible avec beaucoup de distribution Linux)</p>
+</li>
+<li>
+<p>Distributions spécifiques : OpenELEC, LibreElec, RasPlex et OSMC</p>
 </li>
 </ul>
 </div>
-<hr>
-<div class="paragraph">
-<p>== FAQ</p>
 </div>
+<div class="sect3">
+<h4 id="_données_visibles_sur_le_dashboard">1.1.2. Données visibles sur le Dashboard :</h4>
+<div class="ulist horizontal">
+<ul class="horizontal">
+<li>
+<p><strong>Distribution</strong> : Nom et version du système d&#8217;exploitation Linux, architecture 32 ou 64 bits, et le type microprocesseur</p>
+</li>
+<li>
+<p><strong>Démarré depuis uptime</strong> : informe depuis combien de temps Jeedom est démarré</p>
+</li>
+<li>
+<p><strong>Charge système</strong> : Load average (plus d&#8217;information voir FAQ)</p>
+</li>
+<li>
+<p><strong>Mémoire</strong> : mémoire vive total et utilisée</p>
+</li>
+<li>
+<p><strong>Réseau</strong> : taux en MiB des données transmises et reçues</p>
+</li>
+<li>
+<p><strong>Espace disque total et utilisé</strong> : l&#8217;espace disque de la carte SD ou du disque dur pour les VM et NAS Synology</p>
+</li>
+<li>
+<p><strong>CPU</strong> : nombre de cœur, la fréquence associée et la température (température seulement si compatible)</p>
+</li>
+<li>
+<p><strong>Commandes personnalisées</strong> : permet de saisir des commandes personnalisées est d&#8217;afficher/historiser les résultats</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="paragraph">
-<p>Le plugin n&#8217;utilise que du PHP  pour aller chercher les informations (après découpage) sur un site d&#8217;astrologie.</p>
-</div>
-<div class="openblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
+<img src="../images/Monitoring.png" alt="Monitoring">
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_configuration">1.2. Installation/Configuration</h3>
+<div class="paragraph">
+<p>We now set up an equipment. To do this, click on <strong>Plugins/Jeedom Box/Monitoring</strong></p>
+</div>
+<div class="paragraph">
+<p>Then click on the button at the top left "Add Equipment".</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring1.png" alt="Monitoring1">
+</div>
+</div>
+<div class="paragraph">
+<p>Then enter the equipment name (eg Jeedom Mini).</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring2.png" alt="Monitoring2">
+</div>
+</div>
+<div class="paragraph">
+<p>Puis définir :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Objet parent</p>
+</li>
+<li>
+<p>Catégorie (optionnelle)</p>
+</li>
+<li>
+<p>Activer (à cocher, sinon l’équipement ne sera pas utilisable)</p>
+</li>
+<li>
+<p>Visible (optionel si vous ne désirez pas le rendre visible sur le Dashboard)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring3.png" alt="Monitoring3">
+</div>
+</div>
+<div class="paragraph">
+<p>Et sélectionner si Jeedom est local ou déporté</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring9.png" alt="Monitoring9">
+</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Local
+</td>
+<td class="hdlist2">
+<p>permet de surveiller le Jeedom sur lequel est installé le plugin (localement)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Déporté
+</td>
+<td class="hdlist2">
+<p>permet de monitorer un Jeedom distant (installé sur une autre machine)</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_choix_déporté">1.2.1. Choix déporté</h4>
+<div class="paragraph">
+<p>Après avoir sélectionné ce mode, 4 champs supplémentaires s&#8217;affichent :</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Adresse IP
+</td>
+<td class="hdlist2">
+<p>saisir l&#8217;adresse IP de la machine distante</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Port SSH
+</td>
+<td class="hdlist2">
+<p>saisir le numéro du port SSH (par défaut il s&#8217;agit du port 22)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Identifiant
+</td>
+<td class="hdlist2">
+<p>saisir le nom d&#8217;utilisateur qui sera utilisé pour lancer les commandes Linux</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Mot de passe
+</td>
+<td class="hdlist2">
+<p>saisir le mot de passe qui est associé au nom d&#8217;utilisateur</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring4.png" alt="Monitoring4">
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Vous devez choisir un identifiant avec les droits nécessaires pour lancer les commandes (en général le login "root").
+Pour un NAS Synology, il faut utiliser le login disposant des droits administrateur.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_coloration_des_valeurs">1.3. Coloration des valeurs</h3>
+<div class="paragraph">
+<p>Pour mettre en avant des valeurs, il est possible de coloriser certaines valeurs.</p>
+</div>
+<div class="paragraph">
+<p>Les valeurs doivent correspondre à une valeur visible sur le Dashboard. Exemple : 55°C, 12% etc&#8230;&#8203; Il faudra saisir seulement la valeur chiffré, sans le signe %, °C etc&#8230;&#8203;</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring5.png" alt="Monitoring5">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_logging">1.4. Logging</h3>
+<div class="paragraph">
+<p>Pour certaines valeurs, il est possible d&#8217;activer "historiser" pour représenter, par une courbe, les variations de différentes valeurs.</p>
+</div>
+<div class="paragraph">
+<p>Historiser est possible pour :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Charge système (Load average)</p>
+</li>
+<li>
+<p>Mémoire libre (pourcentage)</p>
+</li>
+<li>
+<p>Espace disque libre (porcentage)</p>
+</li>
+<li>
+<p>Température CPU (seulement avec Jeedom Mini)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring6.png" alt="Monitoring6">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scenarii_samples">1.5. Scenarii samples</h3>
+<div class="sect3">
+<h4 id="_scénario_pour_recevoir_un_mail_en_cas_de_dépassement_de_température">1.5.1. Scénario pour recevoir un mail en cas de dépassement de température</h4>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring7.png" alt="Monitoring7">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- Nom du scénario : 333
+- Mode du scénario : provoke
+    - Evènement : #[Bureau][Raspberry Pi][Température CPU]#
 
+    SI #[Bureau][Raspberry Pi][Température CPU]#&gt;55
+    THEN
+     #[Appart][TestMail][Jeedom]# - Options : Array
+    (
+        [title] =&gt; Test - Jeedom
+        [message] =&gt; Température dépassé : #[Bureau][Raspberry Pi][Température CPU]#
+    )
+
+    ELSE</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Ne connaissant pas exactement l&#8217;heure d&#8217;actualisation du site internet, il est préférable de le faire tôt dans la matinée.</p>
 </div>
-<div class="openblock">
+<div class="sect3">
+<h4 id="_scénario_pour_recevoir_un_mail_en_cas_de_connexion_ssh_ko_en_mode_déporté">1.5.2. Scénario pour recevoir un mail en cas de connexion SSH KO en mode déporté</h4>
+<div class="listingblock">
 <div class="content">
+<pre>- Nom du scénario : 333
+- Mode du scénario : provoke
+    - Event : #1198#
+    IF #[Bureau][LVM][Statut cnx SSH]#="KO"
+    THEN
+     #[Appart][TestMail][Jeedom]# - Options : Array
+    (
+        [title] =&gt; Test - Jeedom
+        [message] =&gt; Connexion SSH KO de LVM
+    )
+    ELSE</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_action_redémarrage_et_extinction_de_l_équipemnt">1.6. Action redémarrage et extinction de l&#8217;équipemnt</h3>
+<div class="sect3">
+<h4 id="_local_mode">1.6.1. Local mode</h4>
+<div class="paragraph">
+<p>Il est nécessaire de donner les droits à l&#8217;utilisateur "www-data" de lancer les commandes "reboot" et "poweroff". Pour ce faire, deux méthodes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit donner les droits "root" à l&#8217;utilisateur "www-data" (solution préconisée par Jeedom)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo su -
+echo "www-data ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>soit donner à l&#8217;utilisateur "www-data" les droits "root" seulement pour les commandes "reboot" et "poweroff"</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo su -
+echo "www-data ALL=NOPASSWD:/sbin/reboot" | (EDITOR="tee -a" visudo) &amp;&amp; echo "www-data ALL=NOPASSWD:/sbin/poweroff" | (EDITOR="tee -a" visudo)</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_remote_mode">1.6.2. Remote mode</h4>
+<div class="paragraph">
+<p>Il suffit, lors de la configuration de l&#8217;équipement, de choisir un identifiant et mot de passe SSH avec suffisamment de droit pour lancer les deux commandes "reboot" et "poweroff"</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quelques_captures">1.7. Quelques captures</h3>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/Monitoring8.png" alt="Monitoring8">
+</div>
+</div>
 <hr>
-<div class="paragraph">
-<p>== Change log</p>
 </div>
-<div class="paragraph">
-<p>Versions 1.0 &#8230;&#8203; 1.04 : 18 Decembre 2016 - 19 Decembre 2016</p>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
+<div class="sect2">
+<h3 id="_faq">1.8. FAQ</h3>
+<div class="olist panel">
+<ol class="panel">
 <li>
-<p>Version intiales du plugin.</p>
+<p>What is the refresh rate of the information?</p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Version 1.05: 19 Decembre 2016</p>
+</ol>
 </div>
 <div class="openblock">
 <div class="content">
+<div class="paragraph">
+<p>Le plugin actualise les informations toutes les 15min (00, 15, 30 et 45).</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Quelle est la signification de Charge système (Load average) ?</div><div class="content">
+<div class="paragraph">
+<p>Pour plus d&#8217;information : <a href="http://fr.wikipedia.org/wiki/Load_average">Wikipédia</a></p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Est-il possible de Monitorer VMware ESXi ?</div><div class="content">
+<div class="paragraph">
+<p>A ce jour non, ESXi n&#8217;utilise pas les commandes linux classiques. Si une forte demande se fait ressentir, pourquoi pas&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">Pendant la mise à jour du plugin, j&#8217;obtiens une erreur :</div><div class="content">
+<div class="paragraph">
+<p>cat: /sys/devices/platform/sunxi-i2c.0/i2c-0/0-0034/temp1_input: No such file or directory
+Si vous avez Jeedom Cubieboard. Ne pas tenir compte de cette erreur, elle permet de capter la température du Banana Pi (qui est reconnu comme un Cubieboard).
+Aucun problème sur le fonctionnement du plugin</p>
+</div>
+</div>
+</div>
+<div class="openblock panel">
+<div class="title">J&#8217;obtiens des erreurs dans cron_execution lors de la récupération de la température CPU</div><div class="content">
+<div class="paragraph">
+<p>Comme par exemple  : cat: /sys/devices/virtual/thermal/thermal_zone0/temp: Aucun fichier ou dossier de ce type
+Votre équipement est certainement incompatible pour récupérer cette donnée. Pour éviter les logs d&#8217;erreurs, il suffit de décocher : "afficher" sur la commande "Température CPU" de votre équipement.
+Et pour une prise en compte immédiate, il faut effectuer 2 sauvegardes de la configuration.</p>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_changelog">1.9. Changelog</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Mise à jour du widget</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Version 1.04: 18 Decembre 2016</p>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Mise à jour de l&#8217;horoscope apres chaque enregistrement de l&#8217;equipement</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Version 1.03: 18 Decembre 2016</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Suppression de la classe bootstrap</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Version 1.02: 18 Decembre 2016</p>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Actualisation de l&#8217;horoscope apres la creation de l&#8217;equipement</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Version 1.0: 18 Decembre 2016</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Supporte les 12 signes du zodiaque.</p>
+<p>20-09-2017 : ajout compatibilité Edgerouter et suppression info.xml</p>
 </li>
 <li>
-<p>Premiere publication du plugin</p>
+<p>06-05-2017 : ajout de la possibilité de cocher (ou pas) "Afficher" sur la ligne "Température CPU"</p>
+</li>
+<li>
+<p>24-04-2017 : fixe erreur dans les logs pour la température CPU</p>
+</li>
+<li>
+<p>11-12-2016 : fixe Chrome version 55
+-Fixed bug with the Advanced view</p>
+</li>
+<li>
+<p>delete bootstrapdwitch
+'''</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
 </div>
 </div>
 </div>
