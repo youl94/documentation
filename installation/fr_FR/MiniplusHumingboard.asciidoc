@@ -35,7 +35,7 @@ Vous n'avez plus qu'à mettre la carte SD dans la Mini + à brancher le réseau 
 Ouvrez une console SSH avec putty par exemmple.
 [TIP]
 ====
-login Debian / mot de passe debian
+login debian / mot de passe debian
 ====
 [TIP]
 ====
