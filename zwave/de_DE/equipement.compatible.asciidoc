@@ -1,7 +1,7 @@
 = Liste der Z-Wave-kompatible Geräte 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*52* [green]*marques de modules différentes, soit un total de* [red]*335* [green]*modules.*
+[green]*Derzeit ist Jeedom kompatibel mit* [red]*52* [green]*Marken mit verschiedenen Modulen, d.h. insgesamt* [red]*335* [green]*Modulen.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
