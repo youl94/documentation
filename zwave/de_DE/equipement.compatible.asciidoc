@@ -11,16 +11,16 @@ Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel se
 |===
 |Bild|Marke|Name|Typ|Hinweis|Link
 
-|image:../images/compatibility_list/aeotec.doorwindow.jpg[width=150,align="center"]|Aeotec|Door/Window Sensor (DSB04100)|Ouverture| | link:++http://www.domadoo.fr/fr/peripheriques/2340-aeon-labs-detecteur-d-ouverture-z-wave-g2-1220000011830.html++[Acheter^]
+|image:../images/compatibility_list/aeotec.doorwindow.jpg[width=150,align="center"]|Aeotec|Tür/Fenster Sensor (DSB04100)|Öffnung| | link:++http://www.domadoo.fr/fr/peripheriques/2340-aeon-labs-detecteur-d-ouverture-z-wave-g2-1220000011830.html++[kaufen^]
 // 134.2.4_dsb04100_door.window.sensor.json
 
-|image:../images/compatibility_list/aeotec.doorwindow.jpg[width=150,align="center"]|Aeotec|Door/Window Sensor 2nd Edition (DSB29)|Ouverture| | link:++http://www.domadoo.fr/fr/peripheriques/2340-aeon-labs-detecteur-d-ouverture-z-wave-g2-1220000011830.html++[Acheter^]
+|image:../images/compatibility_list/aeotec.doorwindow.jpg[width=150,align="center"]|Aeotec|Tür/Fenster Sensor 2. Auflage (DSB29)|Öffnung| | link:++http://www.domadoo.fr/fr/peripheriques/2340-aeon-labs-detecteur-d-ouverture-z-wave-g2-1220000011830.html++[kaufen^]
 // 134.2.29_dsb29_door.window.sensor.json
 
-|image:../images/compatibility_list/aeotec.doorwindow6.jpg[width=150,align="center"]|Aeotec|Door/Window Sensor 6 (ZW112)|Ouverture| | link:++http://www.domadoo.fr/fr/peripheriques/3579-aeon-labs-capteur-pour-porte-et-fenetre-z-wave-dw-sensor-6-1220000013162.html++[Acheter^]
+|image:../images/compatibility_list/aeotec.doorwindow6.jpg[width=150,align="center"]|Aeotec|Tür/Fenster Sensor 6 (ZW112)|Öffnung| | link:++http://www.domadoo.fr/fr/peripheriques/3579-aeon-labs-capteur-pour-porte-et-fenetre-z-wave-dw-sensor-6-1220000013162.html++[kaufen^]
 // 134.2.112_zw112_door.window.sensor6.json
 
-|image:../images/compatibility_list/aeotec.zw120doorwindow.jpg[width=150,align="center"]|Aeotec|Door/Window Sensor Gen5 (ZW120)|Ouverture| | 
+|image:../images/compatibility_list/aeotec.zw120doorwindow.jpg[width=150,align="center"]|Aeotec|Tür/Fenster Sensor Gen5 (ZW120)|Öffnung| | 
 // 134.2.120_zw120_door.window.sensor.gen5.json
 
 |image:../images/compatibility_list/aeotec.zw097.jpg[width=150,align="center"]|Aeotec|Dry Contact Sensor Gen5 (ZW097)|Ouverture| | 
