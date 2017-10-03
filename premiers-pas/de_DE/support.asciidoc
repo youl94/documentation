@@ -1,4 +1,4 @@
-Nous allons voir ici comment vous pouvez trouver/demander de l'aide. En cas de question, il est possible dans Jeedom de trouver les réponses à plusieurs endroits :
+Wir werden sehen, wie Sie Hilfe finden/suchen können. Wenn Sie Fragen haben, ist es möglich, in Jeedom die Antworten an mehreren Stellen zu finden :
 
 === In der doc
 
@@ -6,7 +6,7 @@ Sie finden eine komplette Dokumentation link:https://jeedom.fr/doc[hier] :
 
 image::../images/premier-support1.png[]
 
-Celle-ci se décompose en plusieurs catégories : une partie pour le "coeur" de Jeedom, une partie sur les modules (Zwave, mySensors, RFXcom) et une dernière partie pour la documentation des plugins.
+Es ist in verschiedene Kategorien unterteilt : ein Teil für den Jeedom "Kern", ein Teil für die Module (Zwave, mySensors, RFXcom) und ein letzter Teil für die Dokumentation der Plugins.
 
 === Das Forum
 
@@ -18,7 +18,7 @@ image::../images/premier-support3.png[]
 === Supportanfragen (oder Ticket)
 
 [IMPORTANT]
-Attention, toute demande de support nécessite obligatoirement d'avoir un compte sur le Market.
+Achtung, jede Bitte um Unterstützung, erfordert unbedingt auf dem Markt ein Konto zu haben. 
 
 Wenn sie keine Lösung für Ihr Problem gefunden haben, können sie als letzten Ausweg, eine Unterstützungsbitte der Jeedom Mannschaft machen : Diese Bitte erfordert ein Ticket. Es ist möglich, ein Ticket auf mehrerer Weisen zu öffnen : 
 
@@ -26,17 +26,17 @@ Wenn sie keine Lösung für Ihr Problem gefunden haben, können sie als letzten 
 
 image::../images/premier-support4.png[]
 
-- Si pour une raison ou une autre vous n'avez pas accès à votre Jeedom, vous pouvez toujours ouvrir un ticket à partir du Market: soit avec le point d'exclamation en haut à droite, soit en allant sur votre profil (cliquez ensuite sur le bouton "Ouvrir une demande de support")
+- Wenn Sie aus irgendeinem Grund nicht über Zugriff auf Ihr Jeedom haben, können Sie immer ein Ticket vom Markt aus öffnen : entweder mit dem Ausrufezeichen in der oberen rechten Ecke oder in Ihrem Profil (auf die "Öffnen Sie eine Supportanfrage" -Taste klicken)
 
 image::../images/premier-support5.png[]
 
 Jedweder Schriftwechsel erfolgt per E-Mail
 
-Lors de l'ouverture d'un ticket, j'ai une erreur m'indiquant que j'ai atteint mon quota:
-En effet, en fonction de votre service pack vous êtes limité à un certain nombre de demandes de support par mois:
+Bei der Öffnung des Tickets wurde ein Fehler angezeigt, dass ich meine Quote erreicht habe:
+Je nach Ihrem Service Pack sind Sie nämlich auf eine gewisse Anzahl der Bitten um Unterstützung pro Monat beschränkt : 
 
-- Community (gratuit) : 2 tickets/mois (sur plugins payant uniquement)
+- Community (kostenlos) : 2 Tickets/Monat (nur bei bezahlten Plugins)
 - Power : 10 Tickets/Monat
 - Pro : 100 Tickets/Monat
 
-Vous pouvez retrouver le détail des service packs link:https://jeedom.fr/doc/documentation/core/fr_FR/doc-core-service_pack.html[ici]
+Sie können die Details der Service Packs link:https://jeedom.fr/doc/documentation/core/fr_FR/doc-core-service_pack.html[hier] finden.

@@ -1478,7 +1478,7 @@ Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel se
 
 |===
 
-== Non compatible pour le moment
+== Im Moment nicht kompatibel
 
 [cols=".^3a,.^1s,.^6,.^2,.^10,.^3", options="header"]
 |===
@@ -1516,4 +1516,4 @@ Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel se
 
 
 [NOTE]
-Cette liste est basee sur des retours utilisateurs, l'équipe Jeedom ne peut donc garantir que tous les modules de cette liste sont 100% fonctionnels
+Diese Liste basiert auf Benutzer Feedback, das Jeedom Team kann also nicht garantieren, dass alle Module dieser Liste 100% funktiontüchtig sind.
