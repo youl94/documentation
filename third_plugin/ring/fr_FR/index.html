@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3.dev">
-<title>Beschreibung</title>
+<title>Description</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -415,146 +415,63 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_beschreibung">1. Beschreibung</a>
+<li><a href="#_description">1. Description</a>
 <ul class="sectlevel3">
-<li><a href="#_informations_sur_le_jour_pour_obtenir_les_renseignements_sur_le_type_de_jour_en_cours">1.1. Informations sur le Jour, pour obtenir les renseignements sur le type de jour en cours</a></li>
+<li><a href="#_ring_vidéophone_connecté">1.1. Ring, vidéophone connecté</a></li>
 </ul>
 </li>
-<li><a href="#_konfiguration">2. Konfiguration</a>
+<li><a href="#_configuration">2. Configuration</a>
 <ul class="sectlevel3">
-<li><a href="#_plugin_konfiguration">2.1. Plugin Konfiguration</a></li>
+<li><a href="#_configuration_du_plugin">2.1. Configuration du plugin</a></li>
+<li><a href="#_configuration_des_équipements">2.2. Configuration des équipements</a></li>
 </ul>
 </li>
 <li><a href="#_faq">3. FAQ</a></li>
-<li><a href="#_Änderungsprotokoll">4. Änderungsprotokoll</a>
-<ul class="sectlevel3">
-<li><a href="#_version_octobre_2017">4.1. Version octobre 2017</a></li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_beschreibung">1. Beschreibung</h2>
+<h2 id="_description">1. Description</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_informations_sur_le_jour_pour_obtenir_les_renseignements_sur_le_type_de_jour_en_cours">1.1. Informations sur le Jour, pour obtenir les renseignements sur le type de jour en cours</h4>
+<h4 id="_ring_vidéophone_connecté">1.1. Ring, vidéophone connecté</h4>
 <div class="paragraph">
-<p>Ce plugin permet d&#8217;obtenir plusieurs types d&#8217;équipements qui apportent leurs informations :</p>
-</div>
-<div class="paragraph">
-<p>Jour fériés</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>jour férié en cours (1 ou 0)</p>
-</li>
-<li>
-<p>nombre de jours avant le prochain jour férié</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Informations diverses</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>saison actuelle ('Winter', 'Spring', 'Summer', 'Fall')</p>
-</li>
-<li>
-<p>nombre de jours avant la prochaine saison</p>
-</li>
-<li>
-<p>week-end en cours (1 ou 0)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Vacances scolaires</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vacances en cours (1 ou 0)</p>
-</li>
-<li>
-<p>label vacances (tel que défini dans le calendrier fourni)</p>
-</li>
-<li>
-<p>nombre de jours avant les prochaines vacances</p>
-</li>
-<li>
-<p>nombre de jours avant la fin des prochaines vacances</p>
-</li>
-<li>
-<p>label prochaines vacances</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Lune</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>phase de la lune (valeur de 0 à 1, 0 et 1 étant nouvelle lune, la pleine lune 0.5)</p>
-</li>
-<li>
-<p>age de la lune (en jours)</p>
-</li>
-<li>
-<p>luminosité</p>
-</li>
-<li>
-<p>distance</p>
-</li>
-<li>
-<p>nom de la phase</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Calendrier personnalisé</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>event en cours (1 ou 0)</p>
-</li>
-<li>
-<p>label event (tel que défini dans le calendrier fourni)</p>
-</li>
-<li>
-<p>nombre de jours avant le prochain event</p>
-</li>
-<li>
-<p>nombre de jours avant la fin du prochain event</p>
-</li>
-<li>
-<p>label prochain event</p>
-</li>
-</ul>
+<p>Ce plugin permet d&#8217;interconnecter Jeedom avec vos équipements Ring.com</p>
 </div>
 <hr>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konfiguration">2. Konfiguration</h2>
+<h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="_plugin_konfiguration">2.1. Plugin Konfiguration</h4>
+<h4 id="_configuration_du_plugin">2.1. Configuration du plugin</h4>
 <div class="paragraph">
-<p>Das Plugin enthält keine allgemeine Konfiguration.</p>
+<p>Il faut saisir votre compte Ring.com sur la page de configuration</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_des_équipements">2.2. Configuration des équipements</h4>
+<div class="paragraph">
+<p>Les équipements sont créés automatiquement à partir du compte Ring.com</p>
 </div>
 <div class="paragraph">
-<p>Sur l&#8217;équipement il faut configurer le type et la localisation si elle est nécessaire</p>
+<p>Seuls les portiers sont créés et utilisés dans Jeedom, ils possèdent 3 commandes infos :</p>
 </div>
-<div class="paragraph">
-<p>Pour le calendrier personnalisé, un champ permet de remplir le chemin, ce fichier doit être local au format ics, le calendrier doit contenir des evenements de type "jours entiers" avec un début et une fin. Par exemple un calendrier de congés, vacances scolaires non pris en charge en standard, jours fériés etc</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mouvement : qui remonte les évènements de mouvement (les mêmes ques les notifs de l&#8217;application)</p>
+</li>
+<li>
+<p>Sonnerie : quand quelqu&#8217;un sonne (pareil, les mêmes que l&#8217;appli)</p>
+</li>
+<li>
+<p>Batterie : qui donne le statut de la batterie (celui ci est aussi remonter pour la page batterie)</p>
+</li>
+</ul>
 </div>
 <hr>
 </div>
@@ -564,32 +481,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_faq">3. FAQ</h2>
 <div class="sectionbody">
 <div class="openblock panel">
-<div class="title">Stützt sich das Plugin auf APIs Dritter ?</div><div class="content">
+<div class="title">Est-ce que le plugin s&#8217;appuie sur des API cloud ?</div><div class="content">
 <div class="paragraph">
-<p>Non, y compris les calendriers des vacances scolaires sont inclus en local.</p>
+<p>Oui le plugin utilise les API non officielles de Ring.com</p>
 </div>
-</div>
-</div>
-<div class="openblock panel">
-<div class="title">Est-ce que je peux récupérer un calendrier depuis une instance Nextcloud ?</div><div class="content">
-<div class="paragraph">
-<p>Pas directement dans le plugin, mais via ce genre de commande oui :</p>
-</div>
-<div class="paragraph">
-<p>wget --output-document ./calendar.ics --auth-no-challenge --http-user=USER --http-password="PASSWORD" "http://IP:PORT/remote.php/dav/calendars/USER/Kalender?export"</p>
-</div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_Änderungsprotokoll">4. Änderungsprotokoll</h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="_version_octobre_2017">4.1. Version octobre 2017</h4>
-<div class="paragraph">
-<p>Refonte complète avec passage sur différents types d&#8217;équipements</p>
 </div>
 </div>
 </div>
