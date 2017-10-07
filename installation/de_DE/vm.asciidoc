@@ -5,7 +5,7 @@ Si vous voulez découvrir Jeedom sans risque, vous pouvez aussi le virtualiser s
 Vous devez télécharger le logicel Virtual Box 
 http://download.virtualbox.org/virtualbox/5.1.28/VirtualBox-5.1.28-117968-Win.exe[ICI]
 
-=== Etape 2 : Téléchargement d'une image Debian strecht - netinstall
+=== Schritt 2 : Herunterladen eines Debian strecht-netinstall Abbildes
 
 Télécharger une image minimaliste debian 9 Strecht https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.1.0-amd64-netinst.iso[Ici] 
 
@@ -14,7 +14,7 @@ http://download.virtualbox.org/virtualbox/5.1.28/Oracle_VM_VirtualBox_Extension_
 
 
 
-=== Etape 3 : Configuration de l'environnement de la VM
+=== Schritt 3 : VM-Umgebung Konfiguration 
 
 Cliquez sur nouvelle et renseignez les champs comme ci dessous :
 
@@ -46,7 +46,7 @@ image::../images/VirtualBox3.png[]
 * Cliquez sur OK
 *Cliquez sur démarrer
 
-=== Etape 5 : Installation de debian 9
+=== Schritt 5 : Debian 9 installieren 
 C'est du classique ...
 
 image::../images/VirtualBox4.png[]
@@ -58,7 +58,7 @@ image::../images/VirtualBox5.png[]
 
 * Pour Grub, pas d'inquiétude, le secteur de démarrage est celui de la VM, pas celui de votre PC. Aucun risque de casser quoi que ce soit.
 
-=== Etape 6 : Installation de jeedom
+=== Schritt 6 : Jeedom installieren 
 * Lancez votre VM
 * Identifiez-vous avec l'utilisateur et le mot de passe choisis pendant l'installation
 * Passer en root
@@ -81,7 +81,7 @@ chmod +x install.sh
 
 * et laissez faire...
 
-=== Etape 7 : Lancement de jeedom
+=== Schritt 7 : Jeedom starten 
 * Pour connaitre l'adresse Ip Lan de la VM
 
 [source,]

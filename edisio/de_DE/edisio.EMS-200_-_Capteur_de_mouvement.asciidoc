@@ -17,7 +17,7 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 == Funktionen
 
 * Détecte les mouvements, même dans le noir complet
-* Ultra compact 
+* Ultra-kompakt 
 * Signal transmis instantanément lors d'une détection
 * Auto-protection à l'arrachage
 * Einfache Bedienung und Installation
@@ -27,18 +27,18 @@ Grâce à son angle de vision étendu et sa portée, il permet de sécuriser un 
 == Technische Daten
 
 * Type de module : Emetteur Edisio
-* Alimentation : 3VDC (Pile Lithium ER14250)
-* Fréquence : 868,3 MHz
+* Stromversorgung : 3VDC (Lithium Batterie ER14250)
+* Frequenz : 868,3 MHz
 * Betriebstemperatur : 0°C bis 45°C
 * Reichweite im freien Feld : 100M
  * Portée de détection : 6M
-* Dimensions : 25x79x19mm
-* Degré de protection : IP20
+* Abmessungen : 25x79x19 mm
+* Schutzgrad : IP20
 * Utilisation : En intérieur
 
 == Moduldaten
 
-* Marque : Edisio Smart Home
+* Marke : Edisio Smart Home
 * Name : EMS-200
 
 == Hauptkonfiguration
@@ -111,7 +111,7 @@ image::../images/ems200/ems200.vue-alternative.jpg[align="center"]
 Comment piloter un récepteur Z-Wave?::
 Avec le plugin Scénario de Jeedom.
 
-Comment puis-je avoir le même visuel ?::
-Avec le plugin Widgets de Jeedom.
+Wie kann ich die selben Ansicht haben ?::
+Mit dem Jeedom Plugin Widget.
 
 #_@Jamsta_#
