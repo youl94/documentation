@@ -1,7 +1,7 @@
 = Liste der Z-Wave-kompatible Geräte 
 :linkattrs:
 
-[green]*Actuellement Jeedom est compatible avec* [red]*52* [green]*marques de modules différentes, soit un total de* [red]*336* [green]*modules.*
+[green]*Actuellement Jeedom est compatible avec* [red]*52* [green]*marques de modules différentes, soit un total de* [red]*338* [green]*modules.*
 
 Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel sein. Für eine Bitte um Kompatibilität : link:++https://www.jeedom.fr/forum/viewtopic.php?f=100&t=8607++[Hier klicken^]
 
@@ -1001,6 +1001,9 @@ Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel se
 |image:../images/compatibility_list/polycontrol.danalock.jpg[width=150,align="center"]|Polycontrol|Danalock V2 BTZE|Serrure|Inclusion en mode sécurisé | link:++http://www.domadoo.fr/fr/peripheriques/3175-danalock-serrure-connectee-bluetooth-et-z-wave-modele-circulaire-5712560000264.html++[Acheter^]
 // 270.8.2_danalock.v2.json
 
+|image:../images/compatibility_list/polycontrol.danalock.jpg[width=150,align="center"]|Polycontrol|Danalock V3 BTZE|Serrure|Inclusion en mode sécurisé | link:++http://www.domadoo.fr/fr/peripheriques/4197-danalock-serrure-connectee-bluetooth-et-z-wave-danalock-v3-5712560000462.html++[Acheter^]
+// 270.9.1_danalock.v3.json
+
 |image:../images/compatibility_list/polycontrol.danalock.jpg[width=150,align="center"]|Polycontrol|Danalock|Serrure|Inclusion en mode sécurisé | 
 // 270.3.2_danalock.json
 
@@ -1378,6 +1381,9 @@ Weitere Module, die nicht auf dieser Liste vorhanden sind, können kompatibel se
 
 |image:../images/compatibility_list/zipato.minikeypad.jpg[width=150,align="center"]|Zipato|Mini Keypad RFID|Clavier RFID|Le badge utilisé ne remonte pas. | link:++http://www.domadoo.fr/fr/peripheriques/2470-zipato-clavier-a-code-et-rfid-z-wave-3858890730579.html++[Acheter^]
 // 305.24881.17665_mini.keypad.json
+
+|image:../images/compatibility_list/shenzen_neo.nas-pd01z.jpg[width=150,align="center"]|Zipato|PIR Sensor|Multicapteurs| | link:++http://www.domadoo.fr/fr/peripheriques/4160-zipato-capteur-de-mouvement-pir-z-wave-3858890733341.html++[Acheter^]
+// 305.3.4227_nas-pd01z.json
 
 |image:../images/compatibility_list/zipato.dx1saz.jpg[width=150,align="center"]|Zipato|Smart Smoke Sensor (HS1SA-Z)|Fumée| | link:++http://www.domadoo.fr/fr/peripheriques/4149-zipato-capteur-de-fumee-z-wave--3858890733594.html++[Acheter^]
 // 305.32770.4096_hs1saz_smoke_sensor.json
