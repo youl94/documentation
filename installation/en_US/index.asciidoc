@@ -24,4 +24,4 @@ include::other.asciidoc[]
 
 '''
 == PI/ Sur une carte SD
-include::raspberrypi.asciidoc[]
+include::rpi.asciidoc[]
